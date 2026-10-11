@@ -201,24 +201,17 @@ rules:
     entity_b_flags: [cataract_any]
     evidence_level: B
     direction: risk_up
-    rationale: 美国成人队列显示铅暴露与白内障手术风险升高相关（NHANES 同库证据）。
-    recommendation: 血铅升高人群建议评估晶体状态并控制暴露来源。
+    rationale: 骨铅蓄积（胫骨/髌骨）与美国男性年龄相关性白内障风险升高相关（JAMA 2004 队列）；注意 NHANES 血铅为当前暴露标志物，可能低估终身蓄积效应。
+    recommendation: 铅暴露人群建议评估晶体状态并控制暴露来源。
     citations:
       - source_type: literature
-        ref: "10.1016/j.ijheh.2016.07.012"
+        ref: "10.1001/jama.292.22.2750"  # JAMA 2004: accumulated bone lead & age-related cataract (cohort, positive)
 
-  - id: r15_cadmium_x_cataract
-    severity: medium
-    risk_type: heavy_metal_toxicity
-    entity_a_flags: [cadmium_exposure]
-    entity_b_flags: [cataract_any]
-    evidence_level: B
-    direction: risk_up
-    rationale: 同一美国成人队列显示镉暴露与白内障手术风险相关（氧化/晶体蛋白损伤机制）。
-    recommendation: 镉暴露人群建议评估晶体状态并控制暴露来源。
-    citations:
-      - source_type: literature
-        ref: "10.1016/j.ijheh.2016.07.012"
+  # r15_cadmium_x_cataract REVOKED (A1 decision 2026-10-11):
+  # Sole evidence (IJHEH 2016, DOI 10.1016/j.ijheh.2016.07.012) reports OR≈0.97
+  # for blood cadmium — null association with cataract surgery.
+  # No positive evidence exists for this biomarker-outcome pair; rule must not stand.
+  # cadmium_exposure flag remains in registry for coverage reporting but carries no rule.
 
   # ===== vascular_perfusion / air =====
   - id: r16_pm25_x_glaucoma_iop_cdr

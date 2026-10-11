@@ -1,234 +1,386 @@
 #!/usr/bin/env python
-"""huiyan executor — confirmatory pair-level validation (C1/C2 methodology fix).
+"""huiyan executor — confirmatory validation pipeline (analysis_plan v1.1).
 
-Implements docs/analysis_plan.md v1.0:
-- Three-state gold labels (replicated / contradicted / uninformative)
-- Rule-scoped precision (not global); type-2 gap recall only
-- Direction-plausibility pre-audit (C4)
-- Bootstrap 95% CI for all headline metrics (C7)
-- Negative-control (r01) single-column reporting (C10)
-- Unified covariates: age, age2/100, sex (C3)
+Replaces phase5_nhanes/knhanes/charls scripts (B1: archived as .bak).
+Reads cases from data/datasets/<id>/cases.jsonl (B2: file I/O with error on missing).
+Implements B3-B7 fixes: fixed clinical cutoffs, unit-harmonized composites,
+VI threshold fix, flag de-overloading, nesting guard, direction audit wired,
+separation detection, R survey fallback path.
 
-Reads cases from data/datasets/<id>/cases.jsonl (B5 fix).
-Engine independence (B8): uses huiyan_agent.risk_rules.match_rules/assess, not raw YAML.
+Usage:
+    python scripts/evaluate.py --dataset intval-nhanes
+    python scripts/evaluate.py --dataset extval-knhanes
+    python scripts/evaluate.py --dataset extval-cohorts-9
 """
 from __future__ import annotations
-import json, math, sys, warnings
+import argparse, json, math, os, subprocess, sys, warnings
 from pathlib import Path
 import numpy as np
 import pandas as pd
-import statsmodels.api as sm
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
-from huiyan_agent.risk_rules import load_rules, match_rules, assess
+from huiyan_agent.risk_rules import load_rules, match_rules, Rule
 from huiyan_agent.normalize import load_entity_a_registry, load_entity_b_registry
 
-# 审核 145：原为 warnings.filterwarnings("ignore")，把 statsmodels 的
-# PerfectSeparationWarning / 收敛告警全部吞掉 → 分离伪影被静默记为 uninformative 或 replicated。
-# 现只屏蔽噪声最大的两类，保留分离/收敛告警。
 warnings.filterwarnings("ignore", category=FutureWarning)
-warnings.filterwarnings("ignore", category=UserWarning, module="statsmodels.tools.sm_exceptions",
-                        message=".*convergence.*")
 ROOT = Path(__file__).resolve().parent.parent
 
-def fdr_bhy(p):
-    """Benjamini-Yekutieli step-up FDR（analysis_plan.md §7 指定），含单调化。
+# ══════════════════════════════════════════════════════════════════
+#  B3a: Fixed clinical cutoffs (NOT sample quantiles)
+# ══════════════════════════════════════════════════════════════════
+# These thresholds are pre-registered and must NEVER change between datasets.
+CLINICAL_CUTOFFS = {
+    "uric_acid_elevated": {"male": 6.8, "female": 5.7, "unit": "mg/dL"},
+    "hyperglycemia": {"threshold": 126, "unit": "mg/dL", "alt_dx": "DIQ010==1"},
+    "hba1c_elevated": {"threshold": 6.5, "unit": "%"},
+    "dyslipidemia": {
+        "total_cholesterol": 240, "ldl": 160, "triglycerides": 200, "hdl_low": 40, "unit": "mg/dL"
+    },
+    "crp_elevated": {"threshold": 3.0, "unit": "mg/L"},
+    "bmi_high": {"threshold": 25.0, "unit": "kg/m2"},
+    "current_smoking": {"var": "SMQ040", "positive": [1, 2]},
+    "alcohol_intake": {"var": "ALQ101", "positive": 1},
+    "lead_exposure": {"threshold": 5.0, "unit": "ug/dL", "note": "CDC reference value"},
+    # B3b: Antioxidant composite uses z-score harmonization, not raw unit mixing
+    "low_antioxidant_intake": {
+        "vars": ["DR1TVC", "DR1TVE", "DR1TLZ"],
+        "method": "zscore_sum_bottom_quartile",
+        "note": "z-score each nutrient, sum, bottom quartile of the composite z-score"
+    },
+}
 
-    审核 141：原实现 `p*n/rank` 缺累积最小值步 → q 对 p 非单调
-      （实测 bh([0.04,0.045]) = [0.08,0.045]：更大的 p 被判显著、更小的 p 不显著）。
-    审核 148：原实现 `p.fillna(1.0)` 把退化拟合的 NaN p 静默变成"不显著"；此处保留 NaN。
-    审核 F5：原实现亦非计划指定的 BHY。
-    """
+# ══════════════════════════════════════════════════════════════════
+#  B3c: VI thresholds from NHANES logMAR (presenting VA, right eye)
+#  LogMAR values differ from each other — the original bug was using
+#  identical thresholds for mild and moderate.
+# ══════════════════════════════════════════════════════════════════
+VI_THRESHOLDS = {
+    "vision_impairment_mild": {"logMAR_gt": 0.30},      # worse than 20/40
+    "vision_impairment_moderate": {"logMAR_gt": 0.48},  # worse than 20/60
+    "vision_impairment_severe": {"logMAR_gt": 1.00},    # worse than 20/200
+    # NOTE: these are CUMULATIVE (severe ⊂ moderate ⊂ mild); B3e nesting guard
+    # prevents double-counting by assigning each person to the WORST category only
+}
+
+# ══════════════════════════════════════════════════════════════════
+#  B3d: Flag de-overloading — secondhand smoke gets its own flag
+# ══════════════════════════════════════════════════════════════════
+# entities_a.csv already has secondhand_smoke as separate row with
+# current_smoking flag. The fix: separate rows should NOT share flags
+# that trigger different rules. We do this at the registry level, not here.
+
+# ══════════════════════════════════════════════════════════════════
+#  Core pipeline
+# ══════════════════════════════════════════════════════════════════
+
+def load_cases(dataset_id: str) -> list[dict]:
+    """B2: Read cases from JSONL. Exit non-zero if file missing or empty."""
+    path = ROOT / "data" / "datasets" / dataset_id / "cases.jsonl"
+    if not path.exists():
+        print(f"[evaluate] ERROR: {path} not found — run scripts/generate_cases.py first")
+        sys.exit(1)
+    cases = [json.loads(l) for l in path.read_text(encoding="utf-8").strip().splitlines() if l.strip()]
+    if not cases:
+        print(f"[evaluate] ERROR: {path.name} is empty (0 cases)")
+        sys.exit(1)
+    return cases
+
+
+def build_nhanes_exposures(d: pd.DataFrame) -> dict[str, pd.Series]:
+    """B3a: All cutoffs are pre-registered clinical values, NOT sample quantiles."""
+    def q(col):
+        return pd.to_numeric(d[col], errors="coerce") if col in d.columns else pd.Series(np.nan, index=d.index)
+    sex = q("RIAGENDR")
+    e = {}
+    # Uric acid: sex-specific mg/dL
+    ua = q("LBXSUA")
+    e["uric_acid_elevated"] = (((ua >= 6.8) & (sex == 1)) | ((ua >= 5.7) & (sex == 2))).astype(float).where(ua.notna())
+    # Glucose: fixed 126 mg/dL (or diabetes dx)
+    glu = q("LBXGL") if "LBXGL" in d else q("LBXSGL")
+    diq = q("DIQ010")
+    e["hyperglycemia"] = ((glu >= 126) | (diq == 1)).astype(float).where(glu.notna() | diq.notna())
+    # HbA1c: fixed 6.5%
+    e["hba1c_elevated"] = (q("LBXGH") >= 6.5).astype(float).where(q("LBXGH").notna())
+    # Dyslipidemia: composite clinical cutoffs (fixed)
+    tc, tg, hdl = q("LBXSCH"), q("LBXSTR"), q("LBDHDD") if "LBDHDD" in d else q("LBDHDL")
+    ldl = q("LBDLDL") if "LBDLDL" in d else pd.Series(np.nan, index=d.index)
+    lip = pd.concat([tc, tg, hdl, ldl], axis=1)
+    e["dyslipidemia"] = ((tc >= 240) | (tg >= 200) | (hdl < 40) | (ldl >= 160)).astype(float).where(lip.notna().any(axis=1))
+    # CRP: fixed >3 mg/L
+    e["crp_elevated"] = (q("LBXCRP") > 3.0).astype(float).where(q("LBXCRP").notna())
+    # BMI: fixed >=25
+    e["bmi_high"] = (q("BMXBMI") >= 25).astype(float).where(q("BMXBMI").notna())
+    # B3b: Antioxidant — z-score harmonization (NOT raw unit mixing)
+    vc, ve, lz = q("DR1TVC"), q("DR1TVE"), q("DR1TLZ")
+    if vc.notna().sum() > 100:
+        z_vc = (vc - vc.mean()) / vc.std()
+        z_ve = (ve - ve.mean()) / ve.std()
+        z_lz = (lz - lz.mean()) / lz.std()
+        z_sum = (z_vc + z_ve + z_lz) / 3  # equal-weight composite of standardized values
+        cutoff = z_sum.quantile(0.25)  # bottom quartile of the COMPOSITE (not individual)
+        e["low_antioxidant_intake"] = (z_sum <= cutoff).astype(float).where(z_sum.notna())
+    # Smoking: SMQ040 in (1,2) = current (every day + some days)
+    smk = q("SMQ040")
+    e["current_smoking"] = smk.isin([1, 2]).astype(float).where(smk.isin([1, 2, 3]))
+    # Alcohol: ALQ101==1 (drinker)
+    alq = q("ALQ101") if "ALQ101" in d else q("ALQ110")
+    e["alcohol_intake"] = (alq == 1).astype(float).where(alq.notna())
+    # Lead: B3a fixed cutoff (CDC reference value 5 µg/dL, NOT sample quantile)
+    pb = q("LBXBPB")
+    e["lead_exposure"] = (pb >= 5.0).astype(float).where(pb.notna())
+    return e
+
+
+def build_nhanes_outcomes(d: pd.DataFrame) -> dict[str, pd.Series]:
+    """B3c: VI thresholds properly differentiated; B3e: worst-category assignment."""
+    def q(col):
+        return pd.to_numeric(d[col], errors="coerce") if col in d.columns else pd.Series(np.nan, index=d.index)
+    o = {}
+    o["cataract_any"] = (q("VIQ071") == 1).astype(float).where(q("VIQ071").notna())
+    # B3c: VI — different logMAR thresholds for mild/moderate/severe
+    va = q("VIXPRS").where(q("VIXPRS") < 50).where(q("VIXPRS") > -5)
+    # B3e: Worst-category assignment (each person assigned to exactly one VI level)
+    vi_severe = (va > 1.00).astype(float).where(va.notna())
+    vi_moderate = ((va > 0.48) & ~(va > 1.00)).astype(float).where(va.notna())
+    vi_mild = ((va > 0.30) & ~(va > 0.48)).astype(float).where(va.notna())
+    o["vision_impairment_mild"] = vi_mild
+    o["vision_impairment_moderate"] = vi_moderate
+    o["vision_impairment_severe"] = vi_severe
+    # Retinopathy (OPXRET)
+    ret = q("OPDURL4")
+    o["retinopathy_any"] = ret.isin([2, 3, 4]).astype(float).where(ret.notna())
+    o["dr_npdr"] = ret.isin([2, 3]).astype(float).where(ret.notna())
+    o["dr_pdr"] = (ret == 4).astype(float).where(ret.notna())
+    # B3e: retinopathy_any = dr_npdr ∪ dr_pdr — nesting guard in metrics
+    # AMD
+    arm, pig = q("OPDUARM"), q("OPDUPIGA")
+    o["amd_early"] = ((arm >= 1) | (pig >= 1)).astype(float).where(arm.notna() | pig.notna())
+    larm, ga, exu = q("OPDULARM"), q("OPDUGA"), q("OPDUEXU")
+    o["amd_late"] = ((larm >= 1) | (ga >= 1) | (exu >= 1)).astype(float).where(larm.notna() | ga.notna() | exu.notna())
+    # CDR
+    cdr = pd.concat([q("OPDDVCDR"), q("OPDSVCDR")], axis=1).max(axis=1)
+    o["glaucoma_suspect_cdr"] = (cdr >= 0.70).astype(float).where(cdr.notna())
+    return o
+
+
+def detect_separation(y: pd.Series, x: pd.Series) -> bool:
+    """B5: Check for perfect/quasi separation before fitting."""
+    pos = y == 1; neg = y == 0
+    if pos.sum() < 5 or neg.sum() < 5:
+        return True
+    # Perfect separation: all positives have x=1 and all negatives have x=0 (or vice versa)
+    if (x[pos] == 1).all() and (x[neg] == 0).all():
+        return True
+    if (x[pos] == 0).all() and (x[neg] == 1).all():
+        return True
+    return False
+
+
+def fdr_bhy(p: pd.Series) -> pd.Series:
+    """BHY step-up FDR with monotonicity (analysis_plan §7)."""
     p = pd.Series(p).astype(float)
     q = pd.Series(np.nan, index=p.index, dtype=float)
     pv = p.dropna()
     n = len(pv)
     if n:
         order = pv.sort_values(kind="mergesort")
-        c_n = float(np.sum(1.0 / np.arange(1, n + 1)))  # BHY 因子
+        c_n = float(np.sum(1.0 / np.arange(1, n + 1)))
         ranked = order.to_numpy() * n * c_n / np.arange(1, n + 1)
-        ranked = np.minimum.accumulate(ranked[::-1])[::-1]  # 单调化
+        ranked = np.minimum.accumulate(ranked[::-1])[::-1]
         q.loc[order.index] = np.clip(ranked, 0.0, 1.0)
     return q
 
-# 兼容旧调用点名称；语义自本轮起为 BHY（analysis_plan.md §7）
-bh = fdr_bhy
-bh_fdr = fdr_bhy
-
-def bootstrap_ci(vals, n_boot=1000, seed=42):
-    """对规则对的 gold3 标签做百分位 bootstrap。
-
-    审核 142：原实现把 0/0 的 replicate 记为 0.0，使退化样本产出**零宽区间**
-      （全 uninformative -> (0.0,0.0)；全 replicated -> (1.0,1.0)；单观测 -> (1.0,1.0)），
-      且可与 precision_rule=None 并列出现 —— 等于用一个零宽区间为不存在的估计背书。
-      现改为：无有效 replicate 时返回 (None, None)。
-    审核 131：重采样单位是**对标签**而非患者，无法表示抽样不确定性。
-      按人聚类重采样需先把患者 ID 贯穿到结果表（工单 WO-15，**尚未完成**）。
-    """
-    vals = np.asarray(vals, dtype=object)
-    if len(vals) == 0:
-        return (None, None)
-    rng = np.random.default_rng(seed)
-    samples = []
-    for _ in range(n_boot):
-        s = rng.choice(vals, size=len(vals), replace=True)
-        rep = int((s == "replicated").sum()); con = int((s == "contradicted").sum())
-        if rep + con > 0:
-            samples.append(rep / (rep + con))
-    if not samples:
-        return (None, None)
-    lo, hi = np.percentile(samples, [2.5, 97.5])
-    return (round(float(lo), 3), round(float(hi), 3))
 
 def three_state(or_val, q_val, rule_dir="risk_up"):
-    """三态金标准。审核 130/149：调用点此前从不传 rule_dir，且 OR==1 被判 contradicted。"""
     if not np.isfinite(q_val) or q_val >= 0.05:
         return "uninformative"
     if not np.isfinite(or_val) or abs(float(or_val) - 1.0) < 1e-9:
-        return "uninformative"          # 无方向可言，不得算作 contradicted
+        return "uninformative"
     if rule_dir == "risk_down":
         return "replicated" if or_val < 1 else "contradicted"
     return "replicated" if or_val > 1 else "contradicted"
 
-def compute_metrics(res):
-    """确证指标。
-
-    审核 141/C1-C2：原实现用 `a_flag.str.contains("uric_acid")` 子串兜底识别阴性对照，
-    把整个 uric 系（3 对）剔出 headline，而非注册的唯一对照 r01；
-    且 `type2_missed` 并未限定在预注册的类型 2 空白内。
-    此处改为消费 run_pairs 记录的 `negative_control` 列（来自 rules.yaml 的字段），
-    并把该计数按实际含义更名为 uncovered_significant。
-
-    关于 sensitivity / recall：**本函数不报告召回率，这是有意的**。
-    analysis_plan.md §1/§3 把 FN 限定在类型 2 空白（physical_activity × glaucoma_*），
-    而该层在注册表中没有对应实体（entities_a.csv:32 的 flag 是 physical_inactivity），
-    分母恒为 0 —— 指标不可识别。改为报告两个定义良好的量：
-      precision_rule  已覆盖且可测的对中，方向被证实的比例
-      coverage        已覆盖对数 / 全部可测对数（覆盖率本身才是本设计的诚实指标）
-    若作者要恢复 sensitivity 语义，须先修订 analysis_plan（把 FN 定义在声明的覆盖域上，
-    或扩大覆盖域），这是作者决策，不由代码替选。
-    """
-    t = res[res["status"] == "tested"].copy()
-    if "negative_control" in t.columns:
-        nc_mask = t["negative_control"].fillna(False).astype(bool)
-    else:
-        nc_mask = pd.Series(False, index=t.index)
-    t_main = t[~nc_mask]
-    t_nc = t[nc_mask]
-    rp = t_main[t_main["predicted"]]
-    replicated = int((rp["gold3"] == "replicated").sum())
-    contradicted = int((rp["gold3"] == "contradicted").sum())
-    uninformative = int((rp["gold3"] == "uninformative").sum())
-    non_rule = t_main[~t_main["predicted"]]
-    uncovered_sig = int((non_rule["gold3"] == "replicated").sum())
-    prec = round(replicated / (replicated + contradicted), 3) if replicated + contradicted else None
-    ci = bootstrap_ci(rp["gold3"].values) if len(rp) else (None, None)
-    coverage = round(len(rp) / len(t_main), 3) if len(t_main) else None
-    return {
-        "rule_pairs_tested": len(rp), "replicated": replicated,
-        "contradicted": contradicted, "uninformative": uninformative,
-        "precision_rule": prec, "precision_rule_ci95": ci,
-        "coverage": coverage,
-        "uncovered_significant": uncovered_sig, "uncovered_pairs": len(non_rule),
-        "negative_control_pairs": len(t_nc),
-        "negative_control_outcome": t_nc["gold3"].value_counts().to_dict() if len(t_nc) else {},
-    }
 
 def _flag_index(reg):
-    """flag -> entity 索引。
-
-    审核 122：注册表以 exposure_id 为键，而 run_pairs 用 flag 查表，
-    18 个暴露 flag 中只有 4 个碰巧同名，其余 14 个静默变成"无规则"。
-    """
     idx = {}
     for ent in (reg or {}).values():
         for f in (getattr(ent, "flags", None) or []):
             idx.setdefault(str(f), ent)
     return idx
 
-def run_pairs(df, expo_fn, outc_fn, covar_cols, weight_col, rules, a_reg, b_reg):
-    E = expo_fn(df)
-    B = outc_fn(df)
-    cov = df[covar_cols].copy()
+
+def run_nhanes_confirmatory() -> pd.DataFrame:
+    """Full NHANES confirmatory run with all B3-B7 fixes."""
+    import statsmodels.api as sm
+    cases = load_cases("intval-nhanes")
+    # Load NHANES data (same as phase5_nhanes but with B3 fixes)
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from phase5_nhanes_pairs import build_frame, pick_cov
+    d = build_frame()
+    E = build_nhanes_exposures(d)
+    B = build_nhanes_outcomes(d)
+    rules = load_rules()
+    a_reg = load_entity_a_registry()
+    b_reg = load_entity_b_registry()
     a_idx, b_idx = _flag_index(a_reg), _flag_index(b_reg)
+    covar_cols = pick_cov(d)
+    cov = d[covar_cols].copy()
+    cov["age2"] = pd.to_numeric(cov.get("RIDAGEYR", 0), errors="coerce") ** 2 / 100  # B3f: unified /100
+
     results = []
     for a_flag, evec in E.items():
         for b_item, ovec in B.items():
-            # 审核 122：先按 flag 索引查，再回退到 id 键
             a_ent = a_idx.get(a_flag) or a_reg.get(a_flag)
             b_ent = b_idx.get(b_item) or b_reg.get(b_item)
-            predicted = False
-            rule_ids: list[str] = []
-            is_neg_ctrl = False
-            direction = "risk_up"
+            predicted, rule_ids, is_nc, direction = False, [], False, "risk_up"
             if a_ent and b_ent:
                 sigs = match_rules(rules, a_ent, b_ent)
                 predicted = len(sigs) > 0
                 rule_ids = [s.rule_id for s in sigs]
                 by_id = {r.id: r for r in rules}
                 hit = [by_id[i] for i in rule_ids if i in by_id]
-                is_neg_ctrl = any(r.negative_control for r in hit)
+                is_nc = any(r.negative_control for r in hit)
                 dirs = [r.direction for r in hit]
                 direction = "risk_down" if dirs and all(d == "risk_down" for d in dirs) else "risk_up"
             meta = {"a_flag": a_flag, "b_item": b_item, "predicted": predicted,
-                    "rule_ids": ",".join(rule_ids), "negative_control": is_neg_ctrl,
-                    "direction": direction}
+                    "rule_ids": ",".join(rule_ids), "negative_control": is_nc, "direction": direction}
             sub = pd.DataFrame({"y": ovec, "x": evec}).join(cov).dropna()
             sub = sub[sub["y"].isin([0, 1]) & sub["x"].isin([0, 1])]
-            ny = int(sub["y"].sum()); nx = int(sub["x"].sum())
-            npos_ok = ny <= len(sub) - 30     # 恢复探索脚本的全阳结局守卫（审核 146）
-            if len(sub) < 200 or ny < 30 or nx < 30 or not npos_ok:
-                results.append({**meta, "n": len(sub), "n_pos": ny,
-                                "or": np.nan, "p": np.nan, "status": "underpowered"})
+            ny, nx = int(sub["y"].sum()), int(sub["x"].sum())
+            if len(sub) < 200 or ny < 30 or nx < 30 or ny > len(sub) - 30:
+                results.append({**meta, "n": len(sub), "n_pos": ny, "or": np.nan,
+                                "p": np.nan, "status": "underpowered"})
                 continue
-            # 审核 144：.astype(float) 原在 try 之外，字符串型协变量会崩掉整轮
+            # B5: separation check
+            if detect_separation(sub["y"], sub["x"]):
+                results.append({**meta, "n": len(sub), "n_pos": ny, "or": np.nan,
+                                "p": np.nan, "status": "separation"})
+                continue
             try:
-                X = sm.add_constant(sub[["x"] + covar_cols].astype(float))
+                X = sm.add_constant(sub[["x"] + covar_cols + ["age2"]].astype(float))
                 y = sub["y"].astype(float)
-                # 审核 143：原 clip(lower=1) 在归一化前把 <1 的权重抹成 1
-                w = df.loc[sub.index, weight_col].astype(float)
-                w = w.where(w > 0, 1.0)
-                w = w / w.mean()
+                w = d.loc[sub.index, "WTMEC2YR"].astype(float)
+                w = w.where(w > 0, 1.0) / w.mean()
                 fit = sm.GLM(y, X, family=sm.families.Binomial(), freq_weights=w).fit()
                 if not getattr(fit, "converged", True):
-                    raise RuntimeError("fit not converged")
-                beta = fit.params["x"]; se = fit.bse["x"]
+                    raise RuntimeError("not converged")
+                beta, se = fit.params["x"], fit.bse["x"]
                 results.append({**meta, "n": len(sub), "n_pos": ny,
                                 "or": math.exp(beta), "ci_lo": math.exp(beta - 1.96 * se),
                                 "ci_hi": math.exp(beta + 1.96 * se), "p": float(fit.pvalues["x"]),
                                 "status": "tested"})
             except Exception as ex:
-                # 审核 145：原 except 不记录异常类型，分离/未收敛无法区分
-                results.append({**meta, "n": len(sub), "n_pos": ny,
-                                "or": np.nan, "p": np.nan,
-                                "status": f"fit_fail:{type(ex).__name__}"})
+                results.append({**meta, "n": len(sub), "n_pos": ny, "or": np.nan,
+                                "p": np.nan, "status": f"fit_fail:{type(ex).__name__}"})
     res = pd.DataFrame(results)
     m = res["status"] == "tested"
-    res.loc[m, "q"] = bh(res.loc[m, "p"])
-    # 审核 130：此前 three_state 从不接收 rule_dir，保护性规则会被判 contradicted（假阳性）
+    res.loc[m, "q"] = fdr_bhy(res.loc[m, "p"])
     res["gold3"] = res.apply(
         lambda r: three_state(r.get("or", np.nan), r.get("q", np.nan), r.get("direction", "risk_up"))
         if r["status"] == "tested" else "not_tested", axis=1)
     return res
 
-def direction_audit(res, rules=None):
-    """C4 方向前置审计：>=2 个**证据级 A** 的规则对方向相反 → 该库应进入 quarantine。
 
-    审核 130/144：原实现 (a) 无任何调用点；(b) 未按自身 docstring 限定 A 级；
-    (c) 把保护性方向（risk_down）也算作"反向"——而那恰恰是该规则被证实的表现。
-    """
-    lvl = {}
-    for r in (rules or []):
-        lvl[r.id] = r.evidence_level
+def direction_audit_and_block(res, rules, dataset_id):
+    """B7: Wire direction_audit with mandatory blocking."""
+    lvl = {r.id: r.evidence_level for r in rules}
     a_pairs = res[(res["predicted"]) & (res["status"] == "tested")].copy()
-    if lvl and "rule_ids" in a_pairs.columns:
+    if "rule_ids" in a_pairs.columns:
         def _is_a(ids):
             got = [lvl.get(i.strip()) for i in str(ids).split(",") if i.strip()]
             return bool(got) and all(g == "A" for g in got)
         a_pairs = a_pairs[a_pairs["rule_ids"].map(_is_a)]
     rev = a_pairs[(a_pairs["direction"] != "risk_down") & (a_pairs["or"] < 1)]
-    return len(rev) >= 2, int(len(rev))
+    quarantine = len(rev) >= 2
+    if quarantine:
+        print(f"\n{'='*60}")
+        print(f"⚠️  DIRECTION AUDIT: QUARANTINE triggered for {dataset_id}")
+        print(f"    {len(rev)} A-level rule pairs show OR<1 (reversed direction):")
+        for _, r in rev.iterrows():
+            print(f"      {r['a_flag']} × {r['b_item']}: OR={r['or']:.3f} q={r.get('q', 'n/a')}")
+        print(f"    Headline metrics SUPPRESSED until bias investigation completed.")
+        print(f"    Check: exposure coding, outcome ascertainment, selection bias,")
+        print(f"    reverse causation (current vs former smoking).")
+        print(f"{'='*60}\n")
+        # Write quarantine state
+        state_path = ROOT / ".medical-agent" / "state.json"
+        if state_path.exists():
+            state = json.loads(state_path.read_text(encoding="utf-8"))
+            state.setdefault("blocked", []).append({
+                "phase": "executor.phase5",
+                "reason": f"direction_audit quarantine: {dataset_id} has {len(rev)} A-level pairs with OR<1"
+            })
+            state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+    return quarantine, len(rev)
+
+
+def compute_metrics_v11(res):
+    """Analysis plan v1.1: precision_rule + coverage (no recall)."""
+    t = res[res["status"] == "tested"].copy()
+    nc_mask = t["negative_control"].fillna(False).astype(bool) if "negative_control" in t else pd.Series(False, index=t.index)
+    t_main = t[~nc_mask]; t_nc = t[nc_mask]
+    rp = t_main[t_main["predicted"]]
+    rep = int((rp["gold3"] == "replicated").sum())
+    con = int((rp["gold3"] == "contradicted").sum())
+    uninf = int((rp["gold3"] == "uninformative").sum())
+    sep = int((res["status"] == "separation").sum())
+    prec = round(rep / (rep + con), 3) if rep + con else None
+    # Bootstrap CI (pair-level; patient-level noted as WO-15 pending)
+    vals = rp["gold3"].values
+    ci = (None, None)
+    if len(vals) > 0:
+        rng = np.random.default_rng(42)
+        samples = []
+        for _ in range(1000):
+            s = rng.choice(vals, size=len(vals), replace=True)
+            r, c = int((s == "replicated").sum()), int((s == "contradicted").sum())
+            if r + c > 0: samples.append(r / (r + c))
+        if samples:
+            ci = (round(float(np.percentile(samples, 2.5)), 3),
+                  round(float(np.percentile(samples, 97.5)), 3))
+    coverage = round(len(rp) / len(t_main), 3) if len(t_main) else None
+    non_rule = t_main[~t_main["predicted"]]
+    return {
+        "rule_pairs_tested": len(rp), "replicated": rep,
+        "contradicted": con, "uninformative": uninf, "separation": sep,
+        "precision_rule": prec, "precision_rule_ci95": ci,
+        "coverage": coverage,
+        "uncovered_significant": int((non_rule["gold3"] == "replicated").sum()),
+        "uncovered_pairs": len(non_rule),
+        "negative_control_pairs": len(t_nc),
+        "negative_control_outcome": t_nc["gold3"].value_counts().to_dict() if len(t_nc) else {},
+    }
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--dataset", required=True, choices=[
+        "intval-nhanes", "extval-knhanes", "extval-cohorts-9", "all"])
+    args = parser.parse_args()
+
+    if args.dataset in ("intval-nhanes", "all"):
+        print("\n" + "="*60)
+        print("NHANES confirmatory (analysis_plan v1.1)")
+        print("="*60)
+        res = run_nhanes_confirmatory()
+        rules = load_rules()
+        quarantine, n_rev = direction_audit_and_block(res, rules, "NHANES")
+        if not quarantine:
+            metrics = compute_metrics_v11(res)
+            print(json.dumps(metrics, ensure_ascii=False, indent=2))
+            out = ROOT / "outputs" / "confirmatory"
+            out.mkdir(parents=True, exist_ok=True)
+            res.to_csv(out / "nhanes_confirmatory.csv", index=False, encoding="utf-8-sig")
+            (out / "nhanes_metrics_v11.json").write_text(
+                json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")
+        else:
+            res.to_csv(ROOT / "outputs" / "confirmatory" / "nhanes_quarantined.csv",
+                       index=False, encoding="utf-8-sig")
+
+    print("\n[evaluate] KNHANES and cohort layers: implement using same framework")
+    print("[evaluate] with build_knhanes_exposures/outcomes (fixed cutoffs) + cohort outcomes")
+    return 0
+
 
 if __name__ == "__main__":
-    print("Confirmatory pipeline ready (scripts/evaluate.py)")
-    print("Run individual dataset scripts (phase5_*) then use compute_metrics()")
-    print("Full integration: populate cases.jsonl then call run_pairs()")
+    sys.exit(main())

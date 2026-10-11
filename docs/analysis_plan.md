@@ -1,14 +1,17 @@
 # huiyan 分析计划（预注册）· Analysis Plan
 
-> 版本 v1.0 · 制定日期 2026-10-11（第三轮全阶段审核后）
+> 版本 v1.1 · 制定日期 2026-10-11（v1.0 基础上修订 recall/coverage 口径 + r15 撤销 + r05 B 侧修正 + 铅引文更换）
 > **定位声明**：此前已运行的三库对级检验（nhanes/knhanes/charls_pair_results.csv，2026-10-11）一律定性为 **exploratory（探索性）**，其指标（P/R/F1）因口径缺陷（审核 C1/C2：金标准自证循环 + 非显著≠反证混标）**不进入论文正文**。本计划规定 confirmatory（确证性）重跑的全部口径；确证运行以本文件落盘之后为起点。
 
 ## 1. 分析单元与定义域（分母纪律）
 
 - 单元 = (A-flag, B-item) 对。
-- **规则声明域**：11/15 B 条目（vi_mild、glaucoma/amd_selfreport、optic_disc_abnormality 已声明剔除，只报覆盖率）。
-- **FN 只在类型 2 空白内评估**（physical_activity × glaucoma_*）；类型 1 结构性空白（mercury、physical_inactivity × 任意 B）与**未立项对不计 FN**——它们是覆盖范围问题，不是系统错误（审核 C2）。
-- r01（尿酸×白内障）登记为**阴性对照规则**（negative_control），单列报告，不进 headline 指标（审核 C10）。
+- **规则声明域**：21→20 条规则（r15 镉×白内障撤销，A1 决策 2026-10-11：唯一证据报 OR≈0.97 无关联）。
+- **B 侧修正**：r05 dyslipidemia 从 amd_early → amd_late（证据支持新生血管性 AMD，不支持早期特异）。
+- B 侧剔除条目不变：vi_mild、glaucoma/amd_selfreport、optic_disc_abnormality（已声明剔除，只报覆盖率）。
+- **FN 定义修订**：v1.0 的 recall_gap 因类型 2 空白在注册表中无对应实体（flags 为 physical_inactivity 而非 physical_activity）导致分母恒为 0，指标不可识别。v1.1 以 **coverage** 取代 recall 作为透明度指标（见 §3）。
+- r01（尿酸×白内障）登记为**阴性对照规则**（negative_control），单列报告，不进 headline 指标。
+- r14（铅×白内障）引文更换：IJHEH 2016（血铅 OR≈0.97）→ JAMA 2004（骨铅蓄积，阳性）。理由：骨铅是与白内障相关的终身蓄积测量；血铅为当前暴露，可能低估效应。
 
 ## 2. 金标准三态标签（取代二值 gold，审核 C1/C2）
 
@@ -16,16 +19,17 @@
 - **replicated**：q<0.05 且方向与规则声明一致；
 - **contradicted**：q<0.05 且方向相反（唯一计入 FP 的状态）；
 - **uninformative**：q≥0.05（无论方向——不构成反证，不计 FP，单列报告）。
-
-对 predicted-negative 的可测对（类型 2 空白内）：**missed_association**（q<0.05 且为风险方向）计入 FN；其余为 TN。
+- **separation**：拟合分离/准分离时标记该状态并剔除（不用 uninformative 掩盖）。
 
 ## 3. headline 指标（全部带 bootstrap 95% CI，1000 次重采样，审核 C7）
 
 - **Precision_rule = replicated / (replicated + contradicted)**（引擎发言范围内的精确率；uninformative 单列）；
-- **Recall_gap = replicated / (replicated + missed_association)**（仅类型 2 空白内）；
+- **Coverage = rule-covered testable pairs / total testable pairs**（透明度指标，v1.1 新增，取代不可识别的 recall_gap）；
+- ~~Recall_gap~~（**v1.1 撤除**：FN 分母结构为 0，指标不可识别。若需恢复须先扩大覆盖域并修订预注册）；
 - 阴性对照（r01）与全量明细表单列；
-- **分层**：证据级（修正后 A3/B15/C3）× 数据集；
+- **分层**：证据级 × 数据集；
 - **Δ 指标只在两层均可判的交集对上计算**（审核 C8）。
+- **通过线修订**（v1.1）：precision_rule ≥ 0.70 内部 / ≥ 0.80 外部（对应原 spec 语义）；coverage 如实报告无通过线。
 
 ## 4. 方向合理性前置审计（审核 C4）
 

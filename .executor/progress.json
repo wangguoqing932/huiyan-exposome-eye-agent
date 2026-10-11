@@ -22,12 +22,12 @@
       "reason": "verify_rule_citations 17/21 pass; 4 authentic_only (mechanism-level citations); A1 partially resolved",
       "severity_fixes": "B13 r03 medium/r04 low; C11 r01 inflammation; C12 r18 A→B",
       "citations_verified": true,
-      "rules_yaml_sha256": "bafb327e298397182567278b944ca0aa97614f99319ab5337066a21dce034d82",
+      "rules_yaml_sha256": "b6a1e510c4ee2e05c27ef87ea2ce694a9290902b9da5eeec5cdc62b0b0e7cadf",
       "citations_report": "outputs/citation_verification_report.json",
-      "verified_count": 24,
+      "verified_count": 23,
       "report_ok_count": 0,
       "db_ok_count": 0,
-      "rule_count": 21,
+      "rule_count": 20,
       "degraded_mode": false
     },
     "phase4": {
