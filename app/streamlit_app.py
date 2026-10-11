@@ -254,10 +254,10 @@ def render_risk_hero(risk_level: str, confidence: float, n_signals: int,
     icon = {"high": "⚠️", "medium": "⚡", "low": "✅", "unknown": "❓"}.get(risk_level, "❓")
 
     recommendation = {
-        "high": "强烈建议规避该暴露；临床随访 + 生物监测",
-        "medium": "建议减少暴露；必要时进一步评估",
-        "low": "目前证据不足以提示显著风险",
-        "unknown": "证据不足，建议持续关注研究进展",
+        "high": "高风险 — 建议优先干预该暴露并转诊眼科评估",
+        "medium": "中等风险 — 建议加强监测，并在眼科随访时一并评估",
+        "low": "低风险 — 已评估该组合，现有规则未提示显著风险",
+        "unknown": "未评估 — 本系统未覆盖该组合，不能据此判断无风险",
     }.get(risk_level, "")
 
     st.markdown(f"""
@@ -641,7 +641,7 @@ def screening_tab(use_real_llm: bool, use_lightrag: bool, top_k: int) -> None:
             a_reg = load_entity_a_registry()
             a_options = {f"{r.entity_a_id}: {r.primary_name}": r.entity_a_id for r in a_reg.values()}
             a_label = st.selectbox("选择 暴露组（代谢-营养-生活方式-环境）", options=list(a_options.keys()),
-                                   help="40 个候选", label_visibility="collapsed",
+                                   help="41 个候选", label_visibility="collapsed",
                                    key="screen_a")
             a_id = a_options[a_label]
         except Exception as e:
@@ -668,8 +668,7 @@ def screening_tab(use_real_llm: bool, use_lightrag: bool, top_k: int) -> None:
 
     # Patient factors
     with st.expander("🏥 患者因素（可选，影响规则触发）", expanded=False):
-        pf_options = ["ivf_patient", "occupational_exposure", "liver_disease",
-                      "CYP_slow_metabolizer", "low_selenium", "low_zinc"]
+        pf_options = ["diabetes", "hypertension", "chronic_kidney_disease", "elderly"]
         patient_factors = st.multiselect("适用的患者因素", pf_options, default=[], key="screen_pf")
 
     # Run button
@@ -814,7 +813,7 @@ def main() -> None:
     # ─── Sidebar (applies to Screening tab; Chat has its own inline controls) ───
     with st.sidebar:
         st.header("⚙️ 配置（风险评估 tab）")
-        use_real_llm = st.toggle("使用真实 LLM (DeepSeek + GPT-4)", value=True,
+        use_real_llm = st.toggle("使用真实 LLM (DeepSeek)", value=True,
                                   help="关闭则用 stub LLM（仅规则引擎）")
         use_lightrag = st.toggle("使用 LightRAG 检索", value=True,
                                   help="关闭则用 EvidenceStore 关键词检索")
