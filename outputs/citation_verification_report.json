@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-11T20:56:26",
-  "rules_yaml_sha256": "a9953524bec1ebde9065dcebd816cd6cf7e73a5bb04a7e943646b870b5549bb9",
+  "generated_at": "2026-10-11T22:47:49",
+  "rules_yaml_sha256": "39ab186e5c5c1416a7ee2e9417ee1a0dd2000eccf623cbd7e046acfe81eac4fc",
   "rule_count": 20,
   "patient_factor_rule_count": 4,
   "rules_added": false,
@@ -58,7 +58,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "domain-relaxed (a+mech+family, generic title) | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "domain-relaxed (a+mech+family, generic title) | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -72,20 +72,6 @@
               "year": "2024",
               "doi": "10.1038/s41420-024-01900-z",
               "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "Uric acid–driven NLRP3 inflammasome activation triggers lens epithelial cell senescence and cataract formation",
-              "authors": [
-                "Lin",
-                "Wang",
-                "Sato"
-              ],
-              "journal": "Cell Death Discovery",
-              "year": "2024",
-              "doi": "10.1038/s41420-024-01900-z",
-              "pmid": "",
-              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -137,7 +123,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Systematic review directly examines hyperglycemia as a risk factor for cataract in type 2 diabetes. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:Systematic review directly links hyperglycemia to cataract risk in type 2 diabetes. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -151,20 +137,6 @@
               "year": "2018",
               "doi": "10.1002/dmrr.3073",
               "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "A systematic review of risk factors for cataract in type 2 diabetes",
-              "authors": [
-                "Drinkwater",
-                "Davis",
-                "Davis"
-              ],
-              "journal": "Diabetes/Metabolism Research and Reviews",
-              "year": "2018",
-              "doi": "10.1002/dmrr.3073",
-              "pmid": "",
-              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -214,7 +186,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Title directly addresses glycemic control and variability in diabetic retinopathy. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:Reviews glycemic control and variability effects on diabetic retinopathy, directly supporting HbA1c-retinopathy link. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -350,7 +322,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Case-control study directly links dyslipidemia to neovascular (late) AMD, matching rule's exposure and disease stage. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Case-control study directly links dyslipidemia to neovascular (late) AMD, matching rule exposure and outcome. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -411,7 +383,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Meta-analysis directly links CRP exposure to age-related macular degeneration risk. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Meta-analysis directly links elevated CRP to age-related macular degeneration risk. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -655,7 +627,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Title directly matches Mediterranean diet and advanced AMD incidence. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:The title directly links Mediterranean diet to advanced AMD incidence, matching the rule. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -669,20 +641,6 @@
               "year": "2019",
               "doi": "10.1016/j.ophtha.2018.08.006",
               "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "Mediterranean Diet and Incidence of Advanced Age-Related Macular Degeneration: The EYE-RISK Consortium.",
-              "authors": [
-                "Merle",
-                "Colijn",
-                "Cougnard-Grégoire"
-              ],
-              "journal": "Ophthalmology",
-              "year": "2019",
-              "doi": "10.1016/j.ophtha.2018.08.006",
-              "pmid": "",
-              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -721,7 +679,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "domain-relaxed (a+mech+family, generic title) | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "domain-relaxed (a+mech+family, generic title) | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -735,20 +693,6 @@
               "year": "2015",
               "doi": "10.3945/ajcn.115.111047",
               "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "Adherence to a Mediterranean diet, genetic susceptibility, and progression to advanced macular degeneration: a prospective cohort study.",
-              "authors": [
-                "Merle",
-                "Silver",
-                "Rosner"
-              ],
-              "journal": "The American journal of clinical nutrition",
-              "year": "2015",
-              "doi": "10.3945/ajcn.115.111047",
-              "pmid": "",
-              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -799,7 +743,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Systematic review confirms smoking causally affects multiple diseases, likely including cataract. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Systematic review confirms smoking causally affects multiple diseases, likely including cataract via oxidative stress. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -812,6 +756,19 @@
               "year": "2022",
               "doi": "10.1016/j.ebiom.2022.104154",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Appraising the causal role of smoking in multiple diseases: A systematic review and meta-analysis of Mendelian randomization studies",
+              "authors": [
+                "Larsson",
+                "Burgess"
+              ],
+              "journal": "eBioMedicine",
+              "year": "2022",
+              "doi": "10.1016/j.ebiom.2022.104154",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -862,7 +819,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Meta-analysis of AMD risk factors directly evaluates smoking as a risk factor for late AMD. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Meta-analysis of AMD risk factors directly evaluates smoking as a risk factor for late AMD. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -876,6 +833,20 @@
               "year": "2025",
               "doi": "10.1097/MD.0000000000041599",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Risk factors for age-related macular degeneration: Updated systematic review and meta-analysis",
+              "authors": [
+                "Babaker",
+                "Alzimami",
+                "Ameer"
+              ],
+              "journal": "Medicine",
+              "year": "2025",
+              "doi": "10.1097/MD.0000000000041599",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -927,7 +898,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Study directly examines alcohol intake and cataract extraction risk, matching rule exposure and outcome. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:Studies cataract extraction risk directly related to alcohol consumption exposure. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -941,20 +912,6 @@
               "year": "2007",
               "doi": "10.1016/j.ophtha.2006.07.046",
               "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "Alcohol consumption and risk of cataract extraction: a prospective cohort study of women.",
-              "authors": [
-                "Lindblad",
-                "Håkansson",
-                "Philipson"
-              ],
-              "journal": "Ophthalmology",
-              "year": "2007",
-              "doi": "10.1016/J.OPHTHA.2006.07.046",
-              "pmid": "",
-              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1069,7 +1026,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Cohort study directly links accumulated bone lead exposure to age-related cataract risk in men. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Directly studies accumulated lead exposure and age-related cataract risk in men. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1131,7 +1088,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:PM2.5 directly triggers ocular hypertension and glaucoma via pyroptosis, matching rule mechanism. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:PM2.5 directly triggers ocular hypertension and glaucoma via pyroptosis, matching rule mechanism. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1145,20 +1102,6 @@
               "year": "2021",
               "doi": "10.1186/s12989-021-00403-4",
               "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "Airborne particulate matter (PM2.5) triggers ocular hypertension and glaucoma through pyroptosis",
-              "authors": [
-                "Li",
-                "Xing",
-                "Zhou"
-              ],
-              "journal": "Particle and Fibre Toxicology",
-              "year": "2021",
-              "doi": "10.1186/s12989-021-00403-4",
-              "pmid": "",
-              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1210,7 +1153,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Meta-analysis directly links ambient air pollution (PM2.5) to age-related macular degeneration. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Meta-analysis directly links ambient air pollution (PM2.5) to age-related macular degeneration. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1224,6 +1167,20 @@
               "year": "2024",
               "doi": "10.1186/s12886-024-03465-y",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Association between ambient air pollution and age-related macular degeneration: a meta-analysis",
+              "authors": [
+                "Wu",
+                "Zhang",
+                "Xu"
+              ],
+              "journal": "BMC Ophthalmology",
+              "year": "2024",
+              "doi": "10.1186/s12886-024-03465-y",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1275,7 +1232,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Title directly links sun exposure to nuclear cataract risk. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Sun exposure directly linked to nuclear cataract risk, supporting UV exposure causing cataract. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1289,6 +1246,20 @@
               "year": "2003",
               "doi": "10.1097/01.ede.0000086881.84657.98",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Sun Exposure as a Risk Factor for Nuclear Cataract",
+              "authors": [
+                "Neale",
+                "Purdie",
+                "Hirst"
+              ],
+              "journal": "Epidemiology",
+              "year": "2003",
+              "doi": "10.1097/01.ede.0000086881.84657.98",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1402,7 +1373,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Prospective cohort directly links dietary inflammatory index to diabetic retinopathy in diabetes. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:Prospective cohort directly links dietary inflammatory index to diabetic retinopathy in diabetes. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1416,20 +1387,6 @@
               "year": "2025",
               "doi": "10.1016/j.jnha.2025.100694",
               "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "Association of standard dietary inflammatory index with diabetic retinopathy in diabetes: A prospective cohort study",
-              "authors": [
-                "Xu",
-                "Jiang",
-                "Zhang"
-              ],
-              "journal": "The Journal of Nutrition, Health & Aging",
-              "year": "2025",
-              "doi": "10.1016/j.jnha.2025.100694",
-              "pmid": "",
-              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1482,7 +1439,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Prospective study directly links smoking and urinary cotinine to visual impairment incidence. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Prospective study directly links smoking (urinary cotinine) to visual impairment incidence. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1548,7 +1505,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Prospective cohort directly links air pollution and visual impairment, matching rule exposure and outcome. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Prospective cohort directly links air pollution and visual impairment, matching rule exposure and outcome. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1562,6 +1519,20 @@
               "year": "2024",
               "doi": "10.1186/s12889-024-20853-7",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Residential greenness, air pollution and visual impairment: a prospective cohort study",
+              "authors": [
+                "Yan",
+                "Zhang",
+                "Yu"
+              ],
+              "journal": "BMC Public Health",
+              "year": "2024",
+              "doi": "10.1186/s12889-024-20853-7",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1582,12 +1553,5 @@
         }
       ]
     }
-  ],
-  "reproducibility": {
-    "model": "deepseek/deepseek-v4.1-flash",
-    "temperature": 0.0,
-    "max_tokens": 2048,
-    "llm_enabled": true,
-    "note": "LLM relevance check uses temperature=0.0; non-determinism may still occur due to API-side batching; for fully deterministic verification, disable LLM (llm_enabled=false) and use keyword-only mode"
-  }
+  ]
 }
