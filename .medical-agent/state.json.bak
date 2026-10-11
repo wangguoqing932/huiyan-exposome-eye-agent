@@ -61,6 +61,11 @@
       "date": "2026-10-11",
       "event": "planner.phase3 batch-1 delivered (authorized scope): architecture confirmed (rule+KG+LLM, 5 increments); rules 18 registered + 2 observation + Hg abstention cases, 7 mechanisms covered, each with DOI citation; risk register Top-10 -> PHASE3_Methodology_Recommendation.md",
       "skill": "medical-agent-planner"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase3 batch-1 v2 (adjudication applied): r19 registered C-level; PA-glaucoma -> evidence-gap type2; two-type abstention metrics; r02/r03/r06 citations fixed to claim-matching + study-design gate added to executor spec; r04 VEGF mechanism cite + downgraded C; r16 pinned to iop+CDR; dedup semantics plan-2; vision rules r20/r21 (option A); A4/B14/C3",
+      "skill": "medical-agent-planner"
     }
   ]
 }
