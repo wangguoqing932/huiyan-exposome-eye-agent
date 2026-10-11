@@ -100,7 +100,7 @@ def load_rules(path: str | Path | None = None) -> list[Rule]:
         path = Path(__file__).resolve().parents[2] / "configs" / "rules.yaml"
     path = Path(path)
     if not path.exists():
-        return []
+        raise FileNotFoundError(f"rules.yaml not found at {path}")
     raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     mech = set(canonical_mechanisms())
     rules: list[Rule] = []

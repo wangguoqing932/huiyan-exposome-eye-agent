@@ -44,7 +44,9 @@ def load_entity_a_registry(path: str | Path | None = None) -> dict[str, EntityA]
     if cache_key in _A_CACHE:
         return _A_CACHE[cache_key]
     registry: dict[str, EntityA] = {}
-    if p.exists():
+    if not p.exists():
+        raise FileNotFoundError(f"Registry CSV not found: {p}")
+    if True:
         with p.open("r", encoding="utf-8-sig", newline="") as fh:
             for row in csv.DictReader(fh):
                 fid = (row.get("exposure_id") or row.get("entity_a_id") or "").strip()
@@ -70,7 +72,9 @@ def load_entity_b_registry(path: str | Path | None = None) -> dict[str, EntityB]
     if cache_key in _B_CACHE:
         return _B_CACHE[cache_key]
     registry: dict[str, EntityB] = {}
-    if p.exists():
+    if not p.exists():
+        raise FileNotFoundError(f"Registry CSV not found: {p}")
+    if True:
         with p.open("r", encoding="utf-8-sig", newline="") as fh:
             for row in csv.DictReader(fh):
                 bid = (row.get("entity_b_id") or row.get("disease_id") or "").strip()

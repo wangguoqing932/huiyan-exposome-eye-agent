@@ -43,6 +43,8 @@ class EvidenceStore:
         if path is None:
             path = _PROJECT_ROOT / "data" / "seed" / "evidence_chunks.jsonl"
         self.path = Path(path)
+        if not self.path.exists():
+            raise FileNotFoundError(f"Evidence file not found: {self.path}")
         self.chunks: list[EvidenceChunk] = []
         if self.path.exists():
             for line in self.path.read_text(encoding="utf-8").splitlines():
