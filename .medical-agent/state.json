@@ -10,18 +10,29 @@
     "planner.phase0",
     "planner.phase1",
     "planner.phase2",
+    "planner.phase3",
+    "planner.phase4",
     "planner.phase4_5",
-    "executor.phase3",
-    "executor.phase5"
+    "executor.phase0",
+    "executor.phase1"
   ],
-  "in_progress": "executor.phase4",
-  "blocked": [],
+  "in_progress": "executor.phase2",
+  "blocked": [
+    {
+      "phase": "executor.phase3",
+      "reason": "verify_rule_citations gate NOT yet run on rules.yaml (audit A1); severity/level mapping fixes pending"
+    },
+    {
+      "phase": "executor.phase5",
+      "reason": "exploratory runs only; metrics retracted (audit C1/C2 gold-standard invalid; B7 sens 0.154/0.167 << 0.70); confirmatory rerun governed by docs/analysis_plan.md v1.0"
+    }
+  ],
   "artifacts": {
     "config": ".planner.config.json",
     "plan_md": "PLAN.md",
     "executor_progress": ".executor/progress.json",
     "writer_progress": ".writer/progress.json",
-    "latest_validation": "",
+    "latest_validation": "outputs/exploratory/nhanes_pair_results.csv",
     "latest_manuscript": ""
   },
   "history": [
@@ -84,6 +95,16 @@
       "date": "2026-10-11",
       "event": "phase5 NHANES+KNHANES pair-level runs complete: NHANES F1=0.154 (101 pairs), KNHANES F1=0.154 (39 pairs, cross-country zero degradation); gap table written; cohort layer + baselines + LightRAG pending",
       "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "phase5 three layers now real: NHANES F1=0.154 / KNHANES F1=0.154 / CHARLS 0-4 rule pairs replicate (cohort layer 1/9). CHARLS bugs fixed: age from birth-year ba002_1, labeled-categorical codes, gender coding",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "AUDIT R3 (49-item full-stage review) accepted: retracted executor.phase3/phase5 completions (gates not run / metrics invalid); state aligned to disk truth; exploratory outputs quarantined to outputs/exploratory/; pre-registered docs/analysis_plan.md v1.0 BEFORE any further validation runs",
+      "skill": "medical-agent"
     }
   ]
 }

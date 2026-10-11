@@ -21,7 +21,7 @@
     "a": {
       "name": "exposure",
       "chinese_name": "暴露组（代谢-营养-生活方式-环境）",
-      "target_count": 40,
+      "target_count": 41,
       "registry_source": "各库原始变量字典（NHANES 生化 BIOPRO / 膳食 DR1TOT-DR2TOT / 毒物检测模块；KNHANES 官方变量字典 3.4 血液-3.10 眼科-4.x 营养 / 空气污染模块；CHARLS biomarkers.dta；HRS VBS 静脉血）+ GBD 2021 55+ 暴露-结局数据 + 暴露组（exposome）文献框架",
       "example_flags": [
         "uric_acid_elevated",

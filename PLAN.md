@@ -183,7 +183,7 @@ exposure_id,exposure_name,aliases,category,active_mechanisms,flags,evidence_sour
 5. **Level E**：病例报告
 
 **PubMed 检索词模板**：
-- `("{{direction_keyword_en}" OR variants) AND (warfarin, statin, ...)`
+- `(exposom* OR "risk factor*") AND (cataract OR glaucoma OR "macular degeneration" OR retinopathy)`（本项目检索式）
 - 中文文献：CNKI / 万方（手工补 20–30 篇）
 
 ---

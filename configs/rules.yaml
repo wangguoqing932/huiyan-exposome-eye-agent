@@ -21,11 +21,12 @@ rules:
   # ===== oxidative_stress =====
   - id: r01_uric_acid_x_cataract
     severity: low
-    risk_type: oxidative_stress
+    risk_type: inflammation_immune   # C11 fix: citation mechanism is NLRP3 inflammasome
     entity_a_flags: [uric_acid_elevated]
     entity_b_flags: [cataract_any]
     evidence_level: C
     direction: risk_up
+    negative_control: true   # C10 fix (analysis_plan §1): group's own bi-cohort work shows non-independent association; single-column reporting, excluded from headline metrics
     rationale: 尿酸驱动 NLRP3 炎症小体激活，诱发晶状体上皮细胞衰老与白内障形成（机制级证据）。
     recommendation: 高尿酸血症人群建议评估晶状体状态并定期复查视力。
     citations:
@@ -46,7 +47,7 @@ rules:
         ref: "10.1002/dmrr.3073"
 
   - id: r03_hba1c_x_retinopathy_any
-    severity: high
+    severity: medium   # B13 fix: evidence B -> medium
     risk_type: glycation_metabolic
     entity_a_flags: [hba1c_elevated]
     entity_b_flags: [retinopathy_any]
@@ -59,7 +60,7 @@ rules:
         ref: "10.1007/s13300-017-0345-5"
 
   - id: r04_hba1c_x_dr_pdr
-    severity: high
+    severity: low   # B13 fix: evidence C -> low (highest clinical label must not rest on weakest evidence)
     risk_type: vascular_perfusion
     entity_a_flags: [hba1c_elevated]
     entity_b_flags: [dr_pdr]
@@ -70,6 +71,8 @@ rules:
     citations:
       - source_type: literature
         ref: "10.3390/ijms26114992"
+      - source_type: literature
+        ref: "10.1002/kjm2.70200"  # Glycemic control & DR progression (PubMed verified)
 
   - id: r05_dyslipidemia_x_amd_early
     severity: medium
@@ -135,6 +138,8 @@ rules:
     citations:
       - source_type: literature
         ref: "10.1016/j.ophtha.2018.09.032"
+      - source_type: literature
+        ref: "10.3945/ajcn.115.111047"  # MedDiet, genetic susceptibility & progression to advanced AMD (AJCN 2015)
 
   - id: r10_smoking_x_cataract
     severity: high
@@ -174,6 +179,8 @@ rules:
     citations:
       - source_type: literature
         ref: "10.1111/ceo.13892"
+      - source_type: literature
+        ref: "10.1016/j.ophtha.2006.07.046"  # Alcohol consumption & risk of cataract extraction (Ophthalmology 2007 cohort)
 
   - id: r13_bmi_x_cataract
     severity: high
@@ -244,17 +251,19 @@ rules:
 
   # ===== photochemical_uv =====
   - id: r18_uv_x_cataract
-    severity: high
+    severity: medium   # C12 fix: single narrative review -> evidence B, not A
     risk_type: photochemical_uv
     entity_a_flags: [uv_exposure]
     entity_b_flags: [cataract_any]
-    evidence_level: A
+    evidence_level: B   # C12 fix: JAMA 2025 is a narrative clinical review; A requires guideline or >=2 high-quality metas
     direction: risk_up
     rationale: 紫外线/日照暴露是皮质性与核性白内障的确立危险因素（光化学晶体蛋白损伤）。
     recommendation: 户外强日照人群建议佩戴防紫外线眼镜。
     citations:
       - source_type: literature
         ref: "10.1001/jama.2025.1597"
+      - source_type: literature
+        ref: "10.1097/01.ede.0000086881.84657.98"  # Sun exposure as risk factor for nuclear cataract (Epidemiology 2003)
 
   # ===== inflammation_immune / diet (adjudicated r19, C-level) =====
   - id: r19_proinflam_diet_x_dr_npdr

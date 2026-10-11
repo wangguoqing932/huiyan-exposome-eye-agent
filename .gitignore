@@ -25,8 +25,16 @@ data/processed/
 outputs/figures/*.png
 outputs/figures/*.pdf
 outputs/paper/*.pdf
-outputs/baseline_predictions*.jsonl
 
 # OS
 .DS_Store
 Thumbs.db
+
+# --- pip 构建垃圾（B11）---
+pip-build-env-*
+pip-ephem-wheel-cache-*
+pip-install-*
+pip-req-tracker-*
+pip-standalone-pip-*
+# --- 状态备份不入库（B18）---
+.medical-agent/state.json.bak
