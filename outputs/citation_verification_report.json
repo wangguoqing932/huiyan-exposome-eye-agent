@@ -1582,5 +1582,12 @@
         }
       ]
     }
-  ]
+  ],
+  "reproducibility": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "temperature": 0.0,
+    "max_tokens": 2048,
+    "llm_enabled": true,
+    "note": "LLM relevance check uses temperature=0.0; non-determinism may still occur due to API-side batching; for fully deterministic verification, disable LLM (llm_enabled=false) and use keyword-only mode"
+  }
 }

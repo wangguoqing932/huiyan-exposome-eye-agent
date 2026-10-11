@@ -6,7 +6,7 @@ This project reuses the methodology skeleton of **TongYuan** (FDI screening, *Nu
 
 ## Project Status
 
-📋 **In planning.** This project was scaffolded by the `medical-agent-planner` skill. The PLAN.md, README.md, pyproject.toml, schemas, and rule YAML templates are in place; the coding agent should now execute Phase 0 → Phase 8 per [PLAN.md](PLAN.md).
+📋 **In execution (executor phase 3).** This project was scaffolded by the `medical-agent-planner` skill. The PLAN.md, README.md, pyproject.toml, schemas, and rule YAML templates are in place; the coding agent should now execute Phase 0 → Phase 8 per [PLAN.md](PLAN.md).
 
 ## Quick Navigation
 
@@ -87,7 +87,7 @@ python scripts/build_evidence_base.py
 
 # 2. Fetch real evidence (needs NCBI + LLM keys in .env)
 python scripts/fetch_pubmed.py --max-pairs 40
-python scripts/build_real_evidence.py
+python scripts/scripts/build_evidence_base.py
 
 # 3. Build validation sets + run baselines + evaluate
 python scripts/generate_cases.py --target 400

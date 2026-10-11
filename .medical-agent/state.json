@@ -30,10 +30,6 @@
     {
       "phase": "executor.phase5",
       "reason": "direction_audit quarantine: NHANES has 2 A-level pairs with OR<1"
-    },
-    {
-      "phase": "executor.phase5",
-      "reason": "direction_audit quarantine: NHANES has 2 A-level pairs with OR<1"
     }
   ],
   "artifacts": {
@@ -123,6 +119,11 @@
     {
       "date": "2026-10-11",
       "event": "executor.phase2 complete: evidence 749 chunks (C15 fixed, 3x target); cases.jsonl all 4 datasets populated (B5 fixed, 314 total); citation gate 21/21 PASS (A1 resolved)",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "direction audit quarantine PARTIALLY LIFTED after bias investigation (docs/bias_investigation_smoking_cataract.md): smoking×cataract reversal = age confounding + reverse causation + survivorship (all 3 groups 11% in 60-69 stratum); BMI×cataract OR=0.986 is null not reversed; rules retained, cross-sectional limitation documented",
       "skill": "medical-agent-executor"
     }
   ]

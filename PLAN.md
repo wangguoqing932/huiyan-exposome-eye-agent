@@ -86,7 +86,7 @@
 
 ### 1.1 一句话定位
 
-**慧眼 是elderly的暴露组×眼病可解释风险筛查：代谢-营养-生活方式-环境四域暴露（含组合/交互）与主要眼病的关联筛查（规则引擎+知识图谱+LLM 仲裁混合系统），跨库跨国多源验证决策支持系统**：通过oxidative_stress, glycation_metabolic, inflammation_immune, vascular_perfusion, endocrine_hormonal, heavy_metal_toxicity, photochemical_uv机制规则 + 图组织证据检索，在 40+ 暴露组（代谢-营养-生活方式-环境） × 15+ 主要致盲眼病 的所有组合上，提供可追溯、可解释的安全性/推荐性分级报告。
+**慧眼 是elderly的暴露组×眼病可解释风险筛查：代谢-营养-生活方式-环境四域暴露（含组合/交互）与主要眼病的关联筛查（规则引擎+知识图谱+LLM 仲裁混合系统），跨库跨国多源验证决策支持系统**：通过oxidative_stress, glycation_metabolic, inflammation_immune, vascular_perfusion, endocrine_hormonal, heavy_metal_toxicity, photochemical_uv机制规则 + 图组织证据检索，在 40+ 暴露组（代谢-营养-生活方式-环境） × 15+ 主要致盲眼病 的声明的覆盖域内组合（20 条规则覆盖约 54/615 对）上，提供可追溯、可解释的安全性/推荐性分级报告。
 
 ### 1.2 与参考项目的差异（防 Salami-Slicing）
 
@@ -97,18 +97,18 @@
 | 相互作用类型 | FDI | oxidative_stress, glycation_metabolic, inflammation_immune, vascular_perfusion, endocrine_hormonal, heavy_metal_toxicity, photochemical_uv |
 | 规则数 | 15 | 12 |
 | 数据源 | 本项目不使用（FDA/USDA/LiverTox 为 TongYuan 遗留） | NHANES 1999-2008 本地原始库（生化/膳食/毒物 + VIX 客观视力 / OPXRET 视网膜分级 / VIQ 眼病问卷）[local_confirmed], KNHANES 1998-2024 本地 Rdata 全集 + 官方变量字典（眼科检查模块，1,686 眼科变量）[local_confirmed], 9 大老龄队列原始库（CHARLS/HRS/ELSA/SHARE/KLoSA/LASI/MHAS/CRELES/CLHLS）[local_confirmed], GBD 视觉库（GBD 2023 近视力丧失 / 2023 盲与视力损害 / 2021 55+ 暴露-结局）[local_confirmed] |
-| 文化/临床故事 | 药食同源 + 全球化营养学 | 多库跨文化验证：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（独立国家）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差；首个可解释的暴露组×眼病风险筛查 agent（暴露→机制→眼病→证据等级 全链溯源） |
+| 文化/临床故事 | 药食同源 + 全球化营养学 | 多库跨文化验证：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（独立国家）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差；可解释的暴露组×眼病风险筛查 agent（暴露→机制→眼病→证据等级 链路溯源；全链溯源声明因 G10 证据过滤缺陷暂时撤回） |
 | 目标期刊 | Nutrients | Ophthalmology（IF 8+ 档候选；Phase 2 期刊适配检查后最终锁定） |
 | 患者人群 | general + high-risk subgroups | diabetic, hypertensive, rural_china, multi_country |
 
-**审稿人最可能问的差异化问题**：与已有暴露组×眼病可解释风险筛查：代谢-营养-生活方式-环境四域暴露（含组合/交互）与主要眼病的关联筛查（规则引擎+知识图谱+LLM 仲裁混合系统），跨库跨国多源验证工作有何不同？ → 答案：多库跨文化验证：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（独立国家）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差；首个可解释的暴露组×眼病风险筛查 agent（暴露→机制→眼病→证据等级 全链溯源）
+**审稿人最可能问的差异化问题**：与已有暴露组×眼病可解释风险筛查：代谢-营养-生活方式-环境四域暴露（含组合/交互）与主要眼病的关联筛查（规则引擎+知识图谱+LLM 仲裁混合系统），跨库跨国多源验证工作有何不同？ → 答案：多库跨文化验证：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（独立国家）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差；可解释的暴露组×眼病风险筛查 agent（暴露→机制→眼病→证据等级 链路溯源；全链溯源声明因 G10 证据过滤缺陷暂时撤回）
 
 ### 1.3 核心创新点（Highlights 草案）
 
 1. 首个针对该 A×B 组合的系统化筛查工具
 2. 12+ 条确定性规则，覆盖多类机制
 3. 规则 + 图检索的混合架构，可解释、非黑箱
-4. 多库跨文化验证：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（独立国家）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差；首个可解释的暴露组×眼病风险筛查 agent（暴露→机制→眼病→证据等级 全链溯源）
+4. 多库跨文化验证：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（独立国家）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差；可解释的暴露组×眼病风险筛查 agent（暴露→机制→眼病→证据等级 链路溯源；全链溯源声明因 G10 证据过滤缺陷暂时撤回）
 5. 多数据集验证（开发 → 内部验证 → 外部验证 + 泛化落差，v3.0）
 
 ---

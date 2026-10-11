@@ -1,5 +1,5 @@
 # 慧眼 huiyan rule engine configuration — Phase 3 v2 (adjudicated 2026-10-11).
-# 20 rules: evidence A3 / B14 / C3; 7 mechanisms all covered (r15 revoked, r05 B→C pending D4).
+# 20 rules: evidence A3 / B13 / C4; 7 mechanisms all covered (r15 revoked, r05 B→C pending D4).
 # Flag taxonomy matches `flags` columns in data/seed/entities_a.csv & entities_b.csv.
 # Author adjudication discipline (2026-10-11):
 #   1) risk_type MUST come from the 7-mechanism list (config interaction_mechanisms).

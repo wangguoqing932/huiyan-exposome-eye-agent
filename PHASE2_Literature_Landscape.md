@@ -145,7 +145,7 @@
 | 3 | glaucoma_selfreport | ✓ VIQ | ✓ DH3_lt / DH3_dg | ✓ 4/9：HRS·KLoSA（glaucoma）/ LASI（glaucome+glaucoma）/ CHARLS（da037） |
 | 4 | glaucoma_iop_elevated | ✗（无 IOP） | ✓ E_Gr_p / E_Gl_p（2008-12）、E_Pr_1 / E_Pl_1（2017-19） | ✗ |
 | 5 | glaucoma_suspect_cdr | ✓ OPDDVCDR / OPDSVCDR（2005-08） | ✓ E_Grv / E_Grh / E_Glv / E_Glh | ✗ |
-| 6 | amd_selfreport | ✓ VIQ | ✓ E_VS_ELY/LATE/WET/DRY | ✓ 1/9：HRS（ashamd） |
+| 6 | amd_selfreport | ✗（NHANES 无自报条目；用 amd_early/amd_late 分级替代） | ✓ E_VS_ELY/LATE/WET/DRY | ✓ 1/9：HRS（ashamd） |
 | 7 | amd_early | ✓ OPDUARM / OPDUPIGA | ✓ E_AMD_ELY | ✗ |
 | 8 | amd_late | ✓ OPDULARM / OPDUGA / OPDUEXU | ✓ E_AMD_LATE / WET / DRY | ✗ |
 | 9 | retinopathy_any | ✓ OPDURET（222 列病灶域） | ✓ E_DRP | ✗ |
