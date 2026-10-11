@@ -1,0 +1,8 @@
+﻿dataset,metric,value,ci_lo,ci_hi,methodology,phase
+NHANES,precision,0.154,,,binary_gold(v1),exploratory
+NHANES,recall,0.154,,,binary_gold(v1),exploratory
+NHANES,F1,0.154,,,binary_gold(v1),exploratory
+KNHANES,precision,0.143,,,binary_gold(v1),exploratory
+KNHANES,recall,0.167,,,binary_gold(v1),exploratory
+KNHANES,F1,0.154,,,binary_gold(v1),exploratory
+CHARLS,precision,0.0,,,binary_gold(v1),exploratory

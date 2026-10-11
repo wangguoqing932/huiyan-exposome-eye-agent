@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-from enum import StrEnum
+from enum import Enum
 from typing import Any
 
 from pydantic import BaseModel, Field
 
 
-class RiskLevel(StrEnum):
+class RiskLevel(str, Enum):   # Py3.10 兼容（StrEnum 为 Python 3.11+）
     HIGH = "high"
     MEDIUM = "medium"
     LOW = "low"
@@ -38,15 +38,15 @@ class EntityA(BaseModel):
 
 
 class EntityB(BaseModel):
-    """Entity B registry record (e.g., Drug)."""
+    """Entity B registry record (eye disease item)."""
     entity_b_id: str
     generic_name: str
     aliases: list[str] = Field(default_factory=list)
-    drug_class: str = ""
+    category: str = ""
     flags: list[str] = Field(default_factory=list)
-    metabolic_pathways: list[str] = Field(default_factory=list)
-    transporter_substrates: list[str] = Field(default_factory=list)
-    narrow_therapeutic_index: bool = False
+    pathology: list[str] = Field(default_factory=list)
+    grading_source: list[str] = Field(default_factory=list)
+    judged_in: bool = False
     label_source: str = ""
 
 
@@ -98,8 +98,8 @@ class RiskAssessment(BaseModel):
     risk_level: RiskLevel
     risk_types: list[str] = Field(default_factory=list)
     signals: list[RiskSignal] = Field(default_factory=list)
-    confidence: str = "low"
-    confidence_score: float = 0.0
+    confidence: float = 0.0        # 数值置信度 [0,1]（streamlit 契约: float(confidence)）
+    confidence_score: float = 0.0  # 同 confidence（语义别名，供评估脚本使用）
 
 
 class SafetyReport(BaseModel):

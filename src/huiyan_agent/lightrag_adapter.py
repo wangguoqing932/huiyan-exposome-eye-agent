@@ -25,7 +25,6 @@ Architecture:
 from __future__ import annotations
 
 import asyncio
-import concurrent.futures
 import os
 from typing import Any
 
@@ -46,7 +45,7 @@ class LightRAGAdapter:
 
         adapter = LightRAGAdapter(working_dir="data/processed/lightrag_index")
         adapter.insert_chunks(["evidence text 1", "evidence text 2", ...])
-        answer = adapter.query("what is the effect of PM2.5 on COPD?", mode="hybrid")
+        answer = adapter.query("咖啡因对青光眼患者眼压有什么影响？", mode="hybrid")
     """
 
     def __init__(
@@ -55,7 +54,12 @@ class LightRAGAdapter:
         chat_client: LLMClient | None = None,
         embed_client: ArkVisionEmbedding | None = None,
         language: str = "Chinese",
+        llm_max_async: int = 3,
+        embed_max_async: int = 4,
     ) -> None:
+        # 批量构建安全阀参数（防网关限流打断长跑）
+        self.llm_max_async = llm_max_async
+        self.embed_max_async = embed_max_async
         # lazy import: lightrag-hku is a heavy dep; keep import error informative
         try:
             from lightrag import LightRAG, QueryParam  # type: ignore
@@ -83,7 +87,38 @@ class LightRAGAdapter:
         self.chat = chat_client or LLMClient(provider="deepseek")
         self.embed = embed_client or ArkVisionEmbedding()
 
-        # build llm_model_func (async, LightRAG protocol)
+        # build llm_model_func (async, LightRAG protocol) — with retry/backoff
+        # so a transient gateway 429/5xx never aborts a long bulk build.
+        import asyncio as _asyncio
+        import re as _re
+
+        FORMAT_SUFFIX = (
+            "\n\n[输出格式强制要求] 严格按系统提示规定的记录分隔符格式输出实体/关系记录"
+            "（记录字段之间用 <|> 分隔，不要使用 <|#|> 或其他变体，不要用 markdown 代码块包裹）；"
+            "即使输入是条款、说明书条文或题录，也必须抽取其中的物质、药物、食物、疾病、机构、"
+            "方法等实体；确实无任何实体时才输出 <|COMPLETE|>。"
+        )
+
+        def _normalize_extraction(text: str) -> str:
+            """模型输出归一化（Phase 4 实战修正）：① 分隔符变体；② 剥围栏；
+            ③ 丢弃截断尾行；④ 有实体记录但缺 <|COMPLETE|> 结尾标记时自动补齐——
+            缺标记会触发 gleaning 续写循环（每文档浪费 4-5 次调用）且首响应记录
+            被判不完整而归零（Phase 4 首跑实测 119/126 输出无标记 → 批次实体近零）。"""
+            if not text:
+                return text
+            t = _re.sub(r"^```[a-zA-Z]*\s*|\s*```$", "", text.strip())
+            t = t.replace("<|#|>", "<|>")
+            t = _re.sub(r"<\|\s*\|\s*>", "<|>", t)  # 容忍空格变体
+            # 截断尾行修复：最后一行是不完整记录（无换行且以 entity/relationship 开头）→ 丢弃
+            lines = t.split("\n")
+            if lines and _re.match(r"^(entity|relationship)<\|>", lines[-1].strip()) \
+                    and lines[-1].strip().count("<|>") < 2:
+                t = "\n".join(lines[:-1])
+            # 补全完成标记：有记录但模型忘了写 <|COMPLETE|>
+            if "<|COMPLETE|>" not in t and _re.search(r"^(entity|relationship)<\|>", t, _re.MULTILINE):
+                t = t.rstrip() + "\n<|COMPLETE|>"
+            return t
+
         async def llm_model_func(
             prompt: str,
             system_prompt: str | None = None,
@@ -98,16 +133,40 @@ class LightRAGAdapter:
                     "Extract up to 10 high-level keywords from the text. "
                     "Return comma-separated keywords only, no prose."
                 )
-            resp = self.chat.complete(prompt=prompt, system=sys_p)
-            return resp.text
+            # FORMAT_SUFFIX 已撤（2026-10-08 实测）：追加在 LightRAG 格式示例之后
+            # 会扰乱模型的 few-shot 结构遵循，COMPLETE-only 率升至 89%；
+            # 改为仅依赖无条件输出归一化（记录补标记/分隔符变体/截断修复）。
+            is_extraction = "<|>" in (prompt or "") and not keyword_extraction
+            call_sys = sys_p
+            last_err: Exception | None = None
+            for attempt in range(4):
+                try:
+                    resp = await _asyncio.to_thread(
+                        self.chat.complete, prompt=prompt, system=call_sys
+                    )
+                    out = resp.text
+                    if is_extraction:
+                        out = _normalize_extraction(out)
+                    return out
+                except Exception as e:  # 429/5xx/网络抖动 → 指数退避重试
+                    last_err = e
+                    await _asyncio.sleep(2 ** attempt)
+            raise RuntimeError(f"llm_model_func failed after retries: {last_err}")
 
         # build embedding_func wrapped in EmbeddingFunc with attrs.
         # LightRAG expects a numpy array (it calls .size on the result), so we
         # convert the list-of-lists to np.asarray before returning.
         async def _embed_async(texts: list[str]):
             import numpy as np  # local import; numpy is a LightRAG dep
-            vecs = self.embed.embed(texts)
-            return np.asarray(vecs, dtype=np.float32)
+            last_err: Exception | None = None
+            for attempt in range(4):
+                try:
+                    vecs = await _asyncio.to_thread(self.embed.embed, texts)
+                    return np.asarray(vecs, dtype=np.float32)
+                except Exception as e:
+                    last_err = e
+                    await _asyncio.sleep(2 ** attempt)
+            raise RuntimeError(f"embed failed after retries: {last_err}")
 
         embedding_func = EmbeddingFunc(
             embedding_dim=self.embed.embedding_dim,
@@ -121,8 +180,16 @@ class LightRAGAdapter:
             llm_model_name=self.chat.model,
             embedding_func=embedding_func,
             addon_params={"language": language},
+            # 批量构建安全阀：低并发防网关 429 打断长跑（链路成本高，宁慢勿断）
+            llm_model_max_async=self.llm_max_async,
+            embedding_func_max_async=self.embed_max_async,
         )
         self._initialized = False
+
+    @property
+    def available(self) -> bool:
+        """UI/App 契约：适配器是否可用于查询（构建成功即 True；查询期失败由调用方捕获）。"""
+        return getattr(self, "rag", None) is not None
 
     # ------------------------------------------------------------------ #
     # loop-safe coroutine runner (works in CLI AND inside Streamlit's loop)
@@ -136,8 +203,8 @@ class LightRAGAdapter:
     # running loop that we must NOT call run_until_complete on).
     def _start_loop_thread(self):
         import queue
-        self._call_q: "queue.Queue" = queue.Queue()
-        self._result_q: "queue.Queue" = queue.Queue()
+        self._call_q: queue.Queue = queue.Queue()
+        self._result_q: queue.Queue = queue.Queue()
 
         def _loop_runner():
             loop = asyncio.new_event_loop()
@@ -187,11 +254,47 @@ class LightRAGAdapter:
         self._ensure_init()
         self._run(self.rag.ainsert(text))
 
+    def _expand_bilingual(self, question: str) -> str:
+        """注册表双语扩展（F5 审计：抽取实体中英混合命名空间，中文查询对英文节点失配）。
+        命中任一别名即追加该实体的全部语言变体；无命中原样返回。"""
+        if getattr(self, "_bimap_cache", None) is None:
+            variants = []
+            try:
+                from .normalize import load_entity_a_registry, load_entity_b_registry
+                for loader in (load_entity_a_registry, load_entity_b_registry):
+                    for rec in loader().values():
+                        vs = [getattr(rec, "primary_name", "") or getattr(rec, "generic_name", "")]
+                        vs += list(getattr(rec, "aliases", []) or [])[:4]
+                        vs = [v.strip() for v in vs if v and len(v.strip()) >= 2]
+                        if len(vs) >= 2:
+                            variants.append(vs)
+                self._bimap_cache = variants
+            except Exception:
+                self._bimap_cache = []
+        extra = []
+        ql = question.lower()
+        for vs in self._bimap_cache:
+            if any(v.lower() in ql for v in vs):
+                extra.extend(v for v in vs if v not in extra)
+        return question + " " + " ".join(extra[:12]) if extra else question
+
     def query(self, question: str, mode: str = "hybrid") -> str:
-        """Query the index. mode in {local, global, hybrid, naive, mix}."""
+        """Query the index. mode in {local, global, hybrid, naive, mix}.
+
+        韧性（Phase 4 实测）：hybrid/local 依赖 keyword-LLM 偶发空输出会传播为
+        空检索结果——空响应时自动原模式重试一次，再降级 naive（纯向量，稳定）。
+        查询前做注册表双语扩展（命名空间桥接）。"""
+        question = self._expand_bilingual(question)
         self._ensure_init()
-        param = self._QueryParam(mode=mode)
-        return self._run(self.rag.aquery(question, param=param))
+        param = self._QueryParam(mode=mode, enable_rerank=False)
+        result = self._run(self.rag.aquery(question, param=param))
+        if not (result or "").strip():
+            param = self._QueryParam(mode=mode)
+            result = self._run(self.rag.aquery(question, param=param))
+        if not (result or "").strip() and mode != "naive":
+            param = self._QueryParam(mode="naive")
+            result = self._run(self.rag.aquery(question, param=param))
+        return result or ""
 
     def stats(self) -> dict:
         """Return a small stats dict for phase4 progress.json + Streamlit Overview."""

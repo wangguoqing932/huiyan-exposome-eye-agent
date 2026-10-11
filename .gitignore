@@ -38,3 +38,4 @@ pip-req-tracker-*
 pip-standalone-pip-*
 # --- 状态备份不入库（B18）---
 .medical-agent/state.json.bak
+pip-unpack-*

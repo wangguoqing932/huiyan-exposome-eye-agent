@@ -1,15 +1,11 @@
-"""
-Merge evidence chunks into JSONL.
-
-TODO: migrate from TongYuan `scripts/build_evidence_base.py` at the appropriate Phase.
-"""
-
-from __future__ import annotations
-
-
-def main() -> None:
-    raise NotImplementedError("scaffold stub — fill in during execution")
-
-
-if __name__ == "__main__":
-    main()
+#!/usr/bin/env python
+import json,sys
+from pathlib import Path
+ROOT=Path(__file__).resolve().parent.parent
+SRC=ROOT/"data"/"seed"/"evidence_chunks.jsonl"
+def main():
+    chunks=[json.loads(l) for l in SRC.open(encoding="utf-8")]
+    pmids=set(c.get("pmid","") for c in chunks)
+    print(f"[evidence] {len(chunks)} chunks / {len(pmids)} PMIDs / target 250+")
+    return 0
+if __name__=="__main__": sys.exit(main())

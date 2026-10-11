@@ -1,0 +1,4 @@
+﻿dataset,pairs_tested,rule_pairs_tested,TP,FP,FN,TN,precision,recall,F1,phase,methodology
+NHANES,101,13,2,11,11,77,0.154,0.154,0.154,exploratory,"binary_gold(v1, superseded by analysis_plan v1.0)"
+KNHANES,39,7,1,6,5,27,0.143,0.167,0.154,exploratory,"binary_gold(v1, superseded by analysis_plan v1.0)"
+CHARLS,14,4,0,4,0,10,0.0,,,exploratory,"binary_gold(v1, superseded by analysis_plan v1.0)"

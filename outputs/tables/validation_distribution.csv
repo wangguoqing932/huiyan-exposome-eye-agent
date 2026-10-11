@@ -1,0 +1,4 @@
+﻿dataset,total_pairs,tested,underpowered,rule_pairs
+NHANES,110,101,9,15
+KNHANES,56,39,17,9
+CHARLS,14,14,0,4

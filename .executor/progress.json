@@ -1,0 +1,40 @@
+{
+  "phases": {
+    "phase0": {
+      "status": "complete",
+      "note": "git+venv+deps (P0 batch)"
+    },
+    "phase1": {
+      "status": "complete",
+      "entity_a_count": 41,
+      "entity_b_count": 15,
+      "note": "B9: build scripts now reproducible"
+    },
+    "phase2": {
+      "status": "in_progress",
+      "evidence_chunks": 36,
+      "target": 250,
+      "cases_populated": 0,
+      "note": "B5: cases.jsonl all 0; C15: evidence 14% of target"
+    },
+    "phase3": {
+      "status": "blocked",
+      "reason": "verify_rule_citations 17/21 pass; 4 authentic_only (mechanism-level citations); A1 partially resolved",
+      "severity_fixes": "B13 r03 medium/r04 low; C11 r01 inflammation; C12 r18 A→B"
+    },
+    "phase4": {
+      "status": "not_started",
+      "note": "LightRAG deps installed; index not built"
+    },
+    "phase5": {
+      "status": "exploratory_only",
+      "note": "3 datasets run with binary gold (superseded); confirmatory rerun per analysis_plan v1.0 pending",
+      "nhanes_pairs": 101,
+      "knhanes_pairs": 39,
+      "charls_pairs": 14
+    },
+    "phase6": {
+      "status": "not_started"
+    }
+  }
+}

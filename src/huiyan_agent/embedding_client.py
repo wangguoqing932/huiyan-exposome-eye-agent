@@ -41,6 +41,15 @@ import os
 import time
 import urllib.error
 import urllib.request
+from pathlib import Path
+
+# 项目 .env 是密钥唯一事实来源；override=True 防外部环境变量遮蔽（与 llm_client 同款防御）
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=True)
+except ImportError:
+    pass
 from concurrent.futures import ThreadPoolExecutor
 from typing import Any
 
@@ -240,7 +249,7 @@ class ArkVisionEmbedding:
         report: dict[str, Any] = {"ok": False}
         try:
             v_en = self._embed_one("hello world")
-            v_zh = self._embed_one("慢性阻塞性肺疾病 PM2.5")
+            v_zh = self._embed_one("甘草酸与低钾血症")
             report["dim"] = len(v_en)
             report["dim_match"] = (len(v_en) == self.embedding_dim)
             report["cn_fallback_worked"] = (len(v_zh) == len(v_en))
@@ -253,4 +262,3 @@ class ArkVisionEmbedding:
 
 class _RetryExhausted(RuntimeError):
     """Internal: 3 retries exhausted on a retriable (429/5xx/network) error."""
-    pass
