@@ -1,0 +1,131 @@
+【第三轮待修清单 · 区块 2/2】文档一致性 + 已确认修好项
+================================================================
+格式: 编号 | 内容 | 位置 | 改法
+================================================================
+
+---- D. 文档与配置一致性 ----
+
+D1 | rules.yaml 头部计数又过期了
+   位置: configs/rules.yaml:2
+   现状: 写 "21 rules: evidence A3 / B15 / C3"，实际是 20 rules / A3 / B14 / C3
+         （r15 撤销后未同步；我上一轮刚修成 A3/B15/C3，撤销 r15 后又变错）
+   改法: 改为 "20 rules: evidence A3 / B14 / C3"
+   验收: 头部数字与 yaml 实际内容一致；建议在 load_rules 里加一致性断言
+
+D2 | "每条规则需第二源"的纪律与实际严重不符
+   位置: configs/rules.yaml:6
+   现状: 纪律要求每条规则有第二源 DOI；实际 17/20 条只有一条引用
+         （3 条有两条：r07、r18、r09 一类）
+   改法: 二选一 —— (1) 为 17 条补第二源（工作量大，需逐条找文献）
+                    (2) 删掉该纪律声明，改为"引用数不作硬性要求，但须覆盖 claim 类型"
+   验收: 纪律文本与实际相符
+
+D3 | §10 仍断言 precision_rule 等价于原 sens/spec 规格
+   位置: docs/analysis_plan.md 第 10 节
+   现状: 写 "precision_rule<=0.70 内部 /<=0.80 外部 对应原 spec 语义——
+         换算关系在确证报告中显式给出"
+   问题: 原规格是 sens 与 spec 两个指标；新口径只有一个 precision_rule 加一个
+         coverage，且 coverage 无通过线。等价性不成立，而且"确证报告"目前不存在
+         （NHANES 被隔离，没产出任何 headline 指标）
+   改法: 删掉等价性断言，直接声明新口径下只考核 precision_rule（与 coverage 如实报告）；
+         或补上 sens/spec 在四格表下的换算定义
+   验收: §10 不再声称等价，或给出可验算的换算公式
+
+D4 | r05 的证据级与其证据类型不符
+   位置: configs/rules.yaml 的 r05_dyslipidemia_x_amd_late
+   现状: evidence_level = B，但唯一引用是 2025 年单篇病例对照
+         （10.62347/QJPQ2923, Int J Clin Exp Pathol，
+          "Association between dyslipidemia and neovascular AMD: a case-control study"）
+   问题: 按 PLAN.md 已对齐的定义，Level B = 系统综述与 meta 分析；
+         单篇病例对照属 Level C。且该刊的收录状态建议单独核一次
+   改法: 降为 C；若坚持 B 需换成 meta 分析
+   注意: 该规则由 B 降 C 后 severity 须同步为 low（加载期校验会强制这一点）
+
+D5 | 覆盖率感知只是搬了位置，没有接线（增量 3 仍未实现）
+   位置: data/seed/entities_b.csv + src/huiyan_agent/normalize.py:91
+   现状: 新增的 nhanes_judgeable / knhanes_judgeable / cohort_judgeable 三列
+         在 src/、scripts/、tests/ 中被引用 0 处；
+         而旧的 judged_in 散文列仍在 5 处被读（normalize.py:91、schemas.py:49、
+         build_entity_b_registry.py:9），且对 15 行仍全部解析为 False
+   改法: 让指标分母消费 *_judgeable（不可判的结局不进 P/R 分母，只报覆盖率）；
+         或明确删掉旧 judged_in 列以免两套并存
+   验收: 改动 *_judgeable 会改变指标分母（可用单测证明）
+
+D6 | provenance 仍不可复现
+   位置: data/seed/evidence_chunks.jsonl（524 块）
+   现状: 全库只有 2 个唯一 provenance 值，最常见仍是常量
+         "PubMed efetch 2026-10-11 huiyan phase2"
+         无检索式、无参数、无版本
+   改法: 每条写入 检索式 / 数据库 / 检索日期 / 命中序号
+   验收: provenance 唯一值数量与检索批次对应，可据此重跑
+
+D7 | 仍有 3 组重复 PMID（6 块）
+   现状: 从 6 组 12 块降到 3 组 6 块，部分完成
+   改法: 按 (pmid, text 前 80 字) 去重，或保留最长片段
+   验收: 重复 PMID 组数为 0（同一文献仅保留一条）
+
+D8 | 三份文档未更新
+   位置: PLAN.md（最后写入 19:10，早于本轮修复提交）
+         README.md（15:10）
+         docs/data_sources.md（15:10，仍 43 字节模板）
+   待改: PLAN.md:89 "首个 / 全链溯源"、"所有组合"（实际 615 对中 561 对无规则）；
+         :100/:104/:111 "三层独立验证 / 4 个数据集全部存活"；
+         :31 "17 篇/5y" 算术不自洽；:71 "505 篇均为影像 DL"；
+         :267 "gap<=0.10 为优" 无引用无推导；:269-271 专家评估 n=8x3 无数据
+         README.md:75 机器路径 C:/Users/heyb1/...；:49,63,66,69 调用不存在的
+         setup_environment.py；:90 build_real_evidence.py；:55 extras 与 pyproject 不符
+         data_sources.md 按 PLAN 第 8 节规格逐条写
+   另:  H4 跨文档矛盾仍在 —— PHASE2_Literature_Landscape.md:145,148 标
+         glaucoma_selfreport / amd_selfreport 为 NHANES "VIQ 可判"，
+         而 entities_b.csv 写 "NHANES: 无自报条目"
+
+D9 | configs/settings.example.yaml 仍缺失
+   现状: prompts.yaml 已补（189 B），settings.example.yaml 没有
+   改法: 补一份（键名与 .env / config 对齐，值留空）
+
+D10 | 引用门的可复现性仍未验证
+   现状: 现在报 overall=pass、20/20、所有失败类别全 0
+   问题: 我上一轮实测同一份规则内容两次运行给出 4 条 vs 6 条失败；
+         本轮无法验证是否已修（需重跑 LLM 门）
+   改法: 固定模型与温度并记录到报告；连跑两次比对结果是否一致
+   验收: 同一 sha256 连跑两次，rules_pass 数值相同
+
+================================================================
+---- E. 已确认修好，不要重做（校准用）----
+================================================================
+
+E1  | A1 r14/r15 —— r15 已撤销；r14 引用换成 JAMA 2004
+      "Accumulated Lead Exposure and Risk of Age-Related Cataract in Men"
+      (Schaumberg)。Crossref 核实为真，主题正确，
+      且 rationale 明确写出"血铅为当前暴露标志物，可能低估效应"。
+      （我上一轮怀疑它引错成外周动脉疾病论文，是我错了）
+E2  | 其余 5 条新引用全部真实且主题对得上：IOVS 2017(HbA1c→PDR)、
+      Ophthalmology 2007(酒精×白内障)、OEM 2006 + Epidemiology 2003(日照×白内障)
+      —— 零伪造
+E3  | A2 伦理文档 —— IRB x2 与知情同意 x2 已删，现存 4 份正当
+E4  | A3 analysis_plan v1.1 —— 明确披露修订理由；旧三库结果定性为 exploratory；
+      compute_metrics_v11 里 coverage 已落地
+E5  | B2 load_cases —— 真读 cases.jsonl，缺失或为空即 sys.exit(1)
+E6  | B3a 切点 —— 尿酸/血糖/HbA1c/血脂/BMI 改固定临床值；
+      血铅改用 CDC 5 ug/dL（不再是样本分位数）
+E7  | B3b 抗氧化 —— 改 z 分数合成（不再量纲混算）；但见 A2/A7
+E8  | B3c/B3e VI —— 改互斥最差档（不再父子同计）；但变量本身见 A5
+E9  | B5 分离检测 —— detect_separation 已实现并在拟合前拦截
+E10 | B7 接线 —— 真的会阻断并写 state.json.blocked[]；但触发条件见 A1
+E11 | E2 fail-hard —— 实测 load_rules(不存在) 抛 FileNotFoundError
+E12 | E4 0 字节清理 —— 已清完（仅剩 .gitkeep 与 tests/__init__.py，均正当）
+E13 | 我上一轮的引擎修复全部保留且正确：
+      fdr_bhy（含单调化与 BHY 因子）、three_state（带 rule_dir 与 OR==1 边界）、
+      _flag_index（flag→entity 索引）、权重不 clip、全阳结局守卫、异常类型记录
+E14 | D2 证据去重部分完成（6 组 12 块 → 3 组 6 块）；剩余见 D7
+E15 | D1 新布尔列已写入 entities_b.csv（10/15、12/15、3/15 为真）；接线见 D5
+
+================================================================
+附: 修复顺序建议
+================================================================
+第 1 步: A1（改一行，解除隔离）→ 重跑 NHANES，确认不再隔离
+第 2 步: A2 A3 A4 A6（模块与变量名/单位，都在 evaluate.py 一个文件里）
+第 3 步: A5（VIXPRS 查 codebook，可能要翻 NHANES 文档）
+第 4 步: B1（KNHANES/CHARLS），否则项目头号卖点仍是空的
+第 5 步: C1-C4（产物与状态），让交付物与自己 v1.1 的计划一致
+第 6 步: D 组（文档与一致性），可并行

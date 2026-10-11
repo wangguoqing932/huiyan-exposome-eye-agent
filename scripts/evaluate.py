@@ -21,6 +21,26 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from huiyan_agent.risk_rules import load_rules, match_rules, Rule
 from huiyan_agent.normalize import load_entity_a_registry, load_entity_b_registry
+import csv
+
+
+def get_judgeable_b_items(dataset_key: str = "nhanes") -> set[str]:
+    """D5: Read boolean judgeable columns from entities_b.csv.
+    
+    Returns the set of entity_b_ids that are judgeable in the given dataset.
+    Items not in this set are excluded from P/R/F1 denominators (coverage only).
+    """
+    b_path = ROOT / "data" / "seed" / "entities_b.csv"
+    if not b_path.exists():
+        return set()
+    col = f"{dataset_key}_judgeable"
+    judgeable = set()
+    with b_path.open(encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f):
+            if row.get(col, "").strip().lower() == "true":
+                judgeable.add(row.get("entity_b_id", "").strip())
+    return judgeable
+
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 ROOT = Path(__file__).resolve().parent.parent
@@ -350,6 +370,13 @@ def direction_audit_and_block(res, rules, dataset_id):
 def compute_metrics_v11(res):
     """Analysis plan v1.1: precision_rule + coverage (no recall)."""
     t = res[res["status"] == "tested"].copy()
+    # D5: filter out non-judgeable B items from metrics denominator
+    judgeable = get_judgeable_b_items("nhanes")
+    if judgeable:
+        before = len(t)
+        t = t[t["b_item"].isin(judgeable)]
+        if before > len(t):
+            print(f"[metrics] D5: excluded {before - len(t)} non-judgeable pairs from denominator")
     nc_mask = t["negative_control"].fillna(False).astype(bool) if "negative_control" in t else pd.Series(False, index=t.index)
     t_main = t[~nc_mask]; t_nc = t[nc_mask]
     rp = t_main[t_main["predicted"]]

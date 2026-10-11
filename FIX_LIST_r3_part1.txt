@@ -1,0 +1,154 @@
+【第三轮待修清单 · 区块 1/2】让数字可用的前置项
+================================================================
+背景: 这轮修复后 evaluate.py 已能运行，但数据层有 5 个变量级缺陷，
+      会导致暴露错分或结局无效；另有 1 个隔离条件写错，挡住了全部输出。
+格式: 编号 | 内容 | 位置 | 改法 | 验收
+================================================================
+
+---- A. 数据与变量层（这几条不修，跑出来的数字不能用）----
+
+A1 | 隔离条件写错 —— 【这条是我上一轮写的，责任在我】
+   位置: scripts/evaluate.py:326
+   现状: rev = a_pairs[(a_pairs["direction"] != "risk_down") & (a_pairs["or"] < 1)]
+         只判 OR<1，不判显著性
+   实测: current_smoking x cataract_any  OR=0.698  q=0.802  gold3=uninformative
+         bmi_high       x cataract_any  OR=0.986  q=1.000  gold3=uninformative
+         两个都是"无信息"，却被当成"方向反转"，整个 NHANES 层被隔离
+   改法: 改为以三态标签为准 —— rev = a_pairs[a_pairs["gold3"] == "contradicted"]
+         即必须同时满足 q<0.05 且 OR<1
+   验收: 重跑后 NHANES 不应被隔离（按现有数据）；或隔离理由必须是真 contradicted
+
+A2 | DR1TVE 在 NHANES 2005-08 的 DR1TOT 里不存在
+   位置: scripts/evaluate.py:114（vc, ve, lz = q("DR1TVC"), q("DR1TVE"), q("DR1TLZ")）
+   实测: DR1TOT_D/E 只有 DR1TVC 与 DR1TLZ，没有 DR1TVE
+         → z_ve 全 NaN → z_sum 全 NaN → low_antioxidant_intake 全 NaN
+         → r08 的 n=0，且被报成 underpowered 而不是报错
+   改法: 两选一 ——
+         (1) 改用 VITAEC 模块的血清标志物（该模块已在 FILES 里却从未使用）:
+             LBXVIA(维生素A) / LBXVIE(维生素E) / LBXLUZ(叶黄素+玉米黄质) / LBXBEC(β-胡萝卜素)
+         (2) 只用 DR1TVC + DR1TLZ 两成分，并在 rationale 里限定为"维C+类胡萝卜素"
+   验收: low_antioxidant_intake 的 n > 0；暴露率落在合理区间
+
+A3 | FILES 漏载三个模块，导致两个暴露被截断
+   位置: scripts/evaluate.py:219-224
+   现状: FILES 无 DIQ / HDL / TRIGLY，但这三个 XPT 都在原始目录里
+   后果: (a) q("DIQ010") 全 NaN → hyperglycemia 丢掉"已诊断糖尿病"分支
+              （服药控制良好的糖尿病人被错分为非暴露）
+         (b) q("LBDHDD")/q("LBDHDL")/q("LBDLDL") 全 NaN
+              → dyslipidemia 只剩 (TC>=240)|(TG>=200)
+              → 丢掉低 HDL 与高 LDL 两个分支（最常见的两类血脂异常）
+   改法: FILES 加 "DIQ": ("DIQ", True)、"HDL": ("HDL", True)、"TRIGLY": ("TRIGLY", True)
+         注意 LDL 在 TRIGLY_D.XPT 里（LBDLDL），HDL 在 HDL_D.XPT 里（LBDHDD）
+   验收: dyslipidemia 暴露率明显高于现在的水平；hyperglycemia 含 DIQ010==1 的人
+
+A4 | LBXCRP 单位错：mg/L 的阈值套在 mg/dL 的变量上
+   位置: scripts/evaluate.py:110（注释写 "fixed >3 mg/L"）
+   实测: 2005-06 中位 0.12、90 分位 0.89；2007-08 中位 0.16、90 分位 0.92
+         → 该变量的单位是 mg/dL（0.12 mg/dL = 1.2 mg/L，符合 hs-CRP 常识）
+         → >3.0 只命中 1.1%–1.2%，而 >0.3 命中 29.4%–31.6%
+   改法: 阈值改为 0.3（mg/dL 口径），或先显式换算再比较，并加单位断言
+   验收: crp_elevated 暴露率约 30%，而不是 1%
+
+A5 | VIXPRS 不是 logMAR，VI 结局无效
+   位置: scripts/evaluate.py:141-148
+   实测: VIXPRS 非空 1992，范围 [-14.25, 88]，中位 -1.25
+         分档: (-5,0]=57.6%  (0,0.3]=4.7%  (0.3,0.48]=0.0%  (0.48,1]=8.4%
+               (1,50]=17.5%  (50,100]=2.3%（88 疑为哨兵值）
+   问题: (a) logMAR 不可能是 -14.25；量纲/语义不明
+         (b) (0.3,0.48] 档恰好 0 人 → mild 恒为 0
+         (c) (1.0,50] 占 17.5% → "重度视力障碍"17.5% 不可能（真实 <1%）
+         (d) .where(> -5) 把 57.6% 的正常视力样本滤掉，造出偏样本
+   改法: 先查 NHANES 2005-08 视力模块（VIX_D/VIX_E）codebook 确认 VIXPRS 语义；
+         确认前把 r20/r21 的结局与一切 VI 相关数字标记为无效
+   验收: 给出 VI 各档的文献可比患病率；确认 VIXPRS 的真实定义与量表
+
+A6 | DMDEDU2 / DMDEDU3 拼错，教育协变量被静默丢弃
+   位置: scripts/evaluate.py:252
+   现状: 代码找 DMDEDU2 / DMDEDU3；DEMO_D.XPT 里的正确名字是 DMDEDUC2 / DMDEDUC3
+   改法: 改正变量名
+   验收: covar_cols 里出现教育变量
+
+A7 | 抗氧化切点仍是样本分位数，与函数 docstring 自相矛盾
+   位置: scripts/evaluate.py:120（cutoff = z_sum.quantile(0.25)）
+         对比 :90 的 docstring "All cutoffs are pre-registered clinical values, NOT sample quantiles"
+   改法: 二选一 ——
+         (1) z 复合没有临床切点，就保留分位数，但把 docstring 与注释改成如实说明
+         (2) 改用有临床依据的绝对切点（需先定成分与单位）
+   验收: 注释与实现一致；若保留分位数，须在处理里声明为相对暴露
+
+A8 | 加变量存在性断言，防止再出现"整列静默变 NaN"
+   位置: scripts/evaluate.py（build_nhanes_exposures/outcomes 入口）
+   问题: q() 对不存在的列返回全 NaN 而不报错（A2/A3/A6 都是这么漏过去的）
+   改法: 在这两个函数入口对必需列做一次存在性检查，缺失即 raise 并列出缺哪些
+   验收: 故意删掉 DR1TVC 后运行，必须报错而不是产出 n=0 的 underpowered
+
+================================================================
+---- B. 管线覆盖与统计 ----
+================================================================
+
+B1 | KNHANES / CHARLS 未实现，但 main() 返回 0
+   位置: scripts/evaluate.py:417-418（print 占位后 return 0）
+   问题: --dataset 有四个选项，--dataset all 也只跑 NHANES；
+         这是 WO-25 里已指出的"静默成功"模式
+   改法: 实现两层运行器（build_knhanes_exposures/outcomes 等）；
+         未实现前对 --dataset extval-* 与 all 必须非零退出
+   验收: --dataset all 要么真跑三层，要么非零退出并说明缺什么
+
+B2 | svyglm / strata / PSU 仍未实现，且未声明局限
+   位置: scripts/evaluate.py:297（freq_weights 归一化）
+   问题: analysis_plan §6 要求 R survey 为确证标准，并规定降级路径必须
+         "报告 design-effect 无法校正的局限，并显著标注"——全文没有这句话
+   改法: 实现 R 路径；或至少按 §6 写出局限声明并置于输出顶部
+   验收: 输出里能找到 design-effect 局限声明；或真的用了 svyglm
+
+B3 | 分类协变量未做哑变量编码
+   位置: scripts/evaluate.py:293
+   问题: RIDRETH1（种族 1-5）与教育以单个连续变量进入模型
+   改法: 加 pd.get_dummies(drop_first=True)，或改用 patsy 公式
+   验收: 设计矩阵里 RIDRETH1 展开为多列
+
+B4 | state.json 的 blocked[] 每次运行都追加，不去重
+   位置: scripts/evaluate.py:342
+   问题: 重复运行会在 blocked 里堆叠同一条记录
+   改法: 追加前按 (phase, reason) 去重
+   验收: 连跑两次后 blocked 长度不变
+
+B5 | 准分离未处理
+   位置: scripts/evaluate.py:166（detect_separation）
+   现状: 只识别完美分离；准分离仍会产出极小 p + 荒谬 OR
+   改法: 补 Firth 惩罚回归，或对准分离加标记并剔除
+   验收: 构造准分离数据时该对被标记，而不是产出 replicated
+
+================================================================
+---- C. 产物与状态（三项全部原封未动）----
+================================================================
+
+C1 | performance_by_dataset.csv 未更新，且与计划直接矛盾
+   位置: outputs/tables/performance_by_dataset.csv（仍是 414 B / 18:21）
+   问题: (a) 表头仍是 dataset,metric,value,ci_lo,ci_hi,methodology,phase
+             应为 dataset_id,dataset_role,method,metric,mean,std,n_cases,n_seeds
+         (b) ci_lo / ci_hi 全空
+         (c) 缺 gap_ 前缀行（gap 须建在 sensitivity_high 上）
+         (d) 装的还是 binary_gold(v1)、phase=exploratory 的旧数字 ——
+             而 analysis_plan v1.1 明令这批"不进入论文正文"
+   改法: 先决定用新口径还是保留旧数字；若保留旧数字必须标注 superseded
+   验收: 表头逐字匹配 validation_protocols.md:156；不含被计划排除的口径
+
+C2 | baseline_predictions.jsonl 仍是占位
+   位置: outputs/baseline_predictions.jsonl（仍 {"status":"pending"}）
+   需求: 4 基线 x 5 seeds [11,22,33,44,55] x 4 数据集
+   前提: lightrag / full_system 需要先构建 LightRAG 索引（data/processed/lightrag_index/ 不存在）
+
+C3 | 图件 source_data 仍是占位
+   位置: outputs/figures/source_data/figure{1-5}_data.csv（各 38 B，内容 placeholder,pending,confirmatory_run）
+
+C4 | progress.json 三处自相矛盾
+   位置: .executor/progress.json
+   问题: (a) phase2 写 evidence_chunks=36, cases_populated=0
+             —— 实际 524 块 / 314 cases
+         (b) phase3 写 status=blocked, reason="17/21 pass; 4 authentic_only"
+             —— 同一对象内 rule_count=20, verified_count=23 说明已通过
+         (c) phase5 写 "confirmatory rerun per analysis_plan v1.0 pending"
+             —— 实际已按 v1.1 跑过（产出 nhanes_quarantined.csv）
+   改法: 三处按磁盘真实情况重写；phase5 的状态要反映"因隔离未产出指标"这一事实
+   验收: progress.json 的每个字段都能在磁盘上找到对应产物
