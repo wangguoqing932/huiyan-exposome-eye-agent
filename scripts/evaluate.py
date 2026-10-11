@@ -213,19 +213,52 @@ def run_nhanes_confirmatory() -> pd.DataFrame:
     """Full NHANES confirmatory run with all B3-B7 fixes."""
     import statsmodels.api as sm
     cases = load_cases("intval-nhanes")
-    # Load NHANES data (same as phase5_nhanes but with B3 fixes)
-    sys.path.insert(0, str(ROOT / "scripts"))
-    from phase5_nhanes_pairs import build_frame, pick_cov
-    d = build_frame()
+    # Load NHANES data inline (phase5 archived, B1)
+    NH = Path(r"E:\BaiduNetdiskDownload\所有数据库\16.NHANES")
+    CYCLES = {"2005-2006": "_D", "2007-2008": "_E"}
+    FILES = {"DEMO": ("DEMO", True), "BIOPRO": ("BIOPRO", True), "VIQ": ("VIQ", True),
+             "VIX": ("VIX", True), "OPXRET": ("OPXRET", True), "SMQ": ("SMQ", True),
+             "ALQ": ("ALQ", True), "BMX": ("BMX", True), "CRP": ("CRP", True),
+             "PBCD": ("PBCD", True), "DR1TOT": ("DR1TOT", True),
+             "GLU": ("GLU", True), "GHB": ("GHB", True),
+             "DEQ": ("DEQ", "D"), "VITAEC": ("VITAEC", "D")}
+    def _load_cycle(cycle_dir, suf):
+        frames = {}
+        for mod, (base, cyc) in FILES.items():
+            if cyc is True: name = f"{base}{suf}.XPT"
+            elif cyc == suf or (isinstance(cyc, str) and suf.endswith(cyc)): name = f"{base}{suf}.XPT"
+            else: continue
+            p = cycle_dir / name
+            if not p.exists(): continue
+            df = pd.read_sas(str(p), format="xport", encoding="utf-8")
+            cols = [c for c in df.columns if c != "SEQN"]
+            frames[mod] = df.set_index("SEQN")[cols]
+        out = None
+        for m, df in frames.items():
+            if out is None: out = df
+            else:
+                overlap = [c for c in df.columns if c in out.columns]
+                if overlap: df = df.drop(columns=overlap)
+                out = out.join(df, how="outer") if len(df.columns) else out
+        return out.reset_index()
+    parts = []
+    for cyc, suf in CYCLES.items():
+        df = _load_cycle(NH / cyc, suf); df["cycle"] = cyc; parts.append(df)
+    d = pd.concat(parts, ignore_index=True)
+    d = d[pd.to_numeric(d["RIDAGEYR"], errors="coerce") >= 40]
+    d = d[pd.to_numeric(d.get("WTMEC2YR", 0), errors="coerce") > 0]
+    # Covariates (B3f: unified /100)
+    covar_cols = [c for c in ["RIDAGEYR", "RIAGENDR", "RIDRETH1", "INDFMPIR"] if c in d.columns]
+    for c in ("DMDEDU2", "DMDEDU3"):
+        if c in d.columns: covar_cols.append(c); break
     E = build_nhanes_exposures(d)
     B = build_nhanes_outcomes(d)
     rules = load_rules()
     a_reg = load_entity_a_registry()
     b_reg = load_entity_b_registry()
     a_idx, b_idx = _flag_index(a_reg), _flag_index(b_reg)
-    covar_cols = pick_cov(d)
     cov = d[covar_cols].copy()
-    cov["age2"] = pd.to_numeric(cov.get("RIDAGEYR", 0), errors="coerce") ** 2 / 100  # B3f: unified /100
+    cov["age2"] = pd.to_numeric(cov.get("RIDAGEYR", 0), errors="coerce") ** 2 / 100
 
     results = []
     for a_flag, evec in E.items():
@@ -374,8 +407,12 @@ def main():
             (out / "nhanes_metrics_v11.json").write_text(
                 json.dumps(metrics, ensure_ascii=False, indent=2), encoding="utf-8")
         else:
-            res.to_csv(ROOT / "outputs" / "confirmatory" / "nhanes_quarantined.csv",
+            out_q = ROOT / "outputs" / "confirmatory"
+            out_q.mkdir(parents=True, exist_ok=True)
+            res.to_csv(out_q / "nhanes_quarantined.csv",
                        index=False, encoding="utf-8-sig")
+            print(f"[evaluate] Quarantined results saved: {out_q / 'nhanes_quarantined.csv'}")
+            print(f"[evaluate] Bias investigation required before headline metrics can be produced.")
 
     print("\n[evaluate] KNHANES and cohort layers: implement using same framework")
     print("[evaluate] with build_knhanes_exposures/outcomes (fixed cutoffs) + cohort outcomes")

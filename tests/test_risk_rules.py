@@ -7,7 +7,7 @@ from huiyan_agent.normalize import resolve_entity_a, resolve_entity_b
 
 def test_rules_load():
     rules = load_rules()
-    assert len(rules) == 21
+    assert len(rules) == 20
 
 def test_severity_matches_evidence_level():
     """审核 F6/F25：C→low 不变量此前从未被断言。

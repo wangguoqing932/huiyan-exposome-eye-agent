@@ -26,6 +26,14 @@
     {
       "phase": "executor.phase5",
       "reason": "exploratory runs only; metrics retracted (audit C1/C2 gold-standard invalid; B7 sens 0.154/0.167 << 0.70); confirmatory rerun governed by docs/analysis_plan.md v1.0"
+    },
+    {
+      "phase": "executor.phase5",
+      "reason": "direction_audit quarantine: NHANES has 2 A-level pairs with OR<1"
+    },
+    {
+      "phase": "executor.phase5",
+      "reason": "direction_audit quarantine: NHANES has 2 A-level pairs with OR<1"
     }
   ],
   "artifacts": {
