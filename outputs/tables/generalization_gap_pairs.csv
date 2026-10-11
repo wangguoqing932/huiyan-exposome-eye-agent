@@ -1,0 +1,8 @@
+﻿a,b,level,kn_or,kn_gold,nh_or,nh_gold
+hyperglycemia,cataract_any,B,1.158416729089397,gold_negative,1.506315171084272,gold_positive
+hba1c_elevated,retinopathy_any,B,27.160045491021034,gold_positive,5.901719000073457,gold_positive
+dyslipidemia,amd_early,B,0.7177226778678678,gold_negative,0.8419145229201069,gold_negative
+current_smoking,cataract_any,A,0.971379435822877,gold_negative,0.7043657990389971,gold_negative
+current_smoking,amd_late,A,3.0316289199704847,gold_negative,,not_tested
+bmi_high,cataract_any,A,1.1907088265096335,gold_negative,0.9297925446274644,gold_negative
+current_smoking,vision_impairment_moderate,B,0.32466883128170315,gold_negative,1.0216811459027848,gold_negative

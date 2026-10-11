@@ -5,13 +5,14 @@
     "chinese_name": "慧眼",
     "created_date": "2026-10-11"
   },
-  "lifecycle_stage": "planner",
+  "lifecycle_stage": "executor",
   "completed": [
     "planner.phase0",
     "planner.phase1",
-    "planner.phase2"
+    "planner.phase2",
+    "planner.phase4_5"
   ],
-  "in_progress": "planner.phase3",
+  "in_progress": "executor.phase1",
   "blocked": [],
   "artifacts": {
     "config": ".planner.config.json",
@@ -66,6 +67,11 @@
       "date": "2026-10-11",
       "event": "planner.phase3 batch-1 v2 (adjudication applied): r19 registered C-level; PA-glaucoma -> evidence-gap type2; two-type abstention metrics; r02/r03/r06 citations fixed to claim-matching + study-design gate added to executor spec; r04 VEGF mechanism cite + downgraded C; r16 pinned to iop+CDR; dedup semantics plan-2; vision rules r20/r21 (option A); A4/B14/C3",
       "skill": "medical-agent-planner"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase4 scaffold + phase4.5 ethics emitted + PLAN SSX merged (TBD/{{}} cleared, 3/3 PASS); executor started: registries 40A/15B, rules.yaml 21 (A4/B14/C3), rationale with study-design gate, evidence 36 chunks (30 PMIDs); venv building",
+      "skill": "medical-agent-executor"
     }
   ]
 }

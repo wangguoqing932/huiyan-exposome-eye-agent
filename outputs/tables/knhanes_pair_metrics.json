@@ -1,0 +1,18 @@
+{
+  "dataset": "KNHANES-2008-21(40+)",
+  "pairs_tested": 39,
+  "pairs_underpowered": 17,
+  "rule_pairs_tested": 7,
+  "TP": 1,
+  "FP": 6,
+  "FN": 5,
+  "TN": 27,
+  "precision": 0.143,
+  "recall": 0.167,
+  "F1": 0.154,
+  "notes": [
+    "covariates age/sex only (edu/PIR not in converted frames - documented)",
+    "alcohol/diet/metals/PM2.5/vitD pairs not testable this pass (var drift or not merged)",
+    "VA severity ladder deferred (E_Cr_1 graded 1-6, codebook pending) -> VI(any) only"
+  ]
+}
