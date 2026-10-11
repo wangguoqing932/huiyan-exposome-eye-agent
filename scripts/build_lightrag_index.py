@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 os.environ.setdefault("PYTHONUTF8", "1")
-os.environ.setdefault("LIGHTRAG_WORKING_DIR", str(ROOT / "data/processed/lightrag_index_core"))
+os.environ.setdefault("LIGHTRAG_WORKING_DIR", str(ROOT / "data/processed/lightrag_index"))
 
 from dotenv import load_dotenv
 load_dotenv(ROOT / ".env")
@@ -43,15 +43,12 @@ def prepare_core_chunks() -> tuple[list[str], list[str], list[str]]:
     filtered = [c for c in chunks if len(c.get("text", "")) >= 300]
     garbage_count = len(chunks) - len(filtered)
 
-    # A2: Core set = rule evidence + competitor/review
-    core = []
-    for c in filtered:
-        tags = c.get("tags", "")
-        linked = c.get("linked_rules", "").strip()
-        if linked or "competitor" in tags or "review" in tags or "atlas" in tags:
-            core.append(c)
+    # A2 revised: Build FULL index (515 chunks after garbage filter), not just core 30.
+    # User decision 2026-10-11: 30-chunk core was too small for a meaningful KG.
+    # 91% of probe chunks contain relevant eye/exposure content.
+    core = filtered
 
-    print(f"[build] {len(chunks)} total → {garbage_count} garbage removed → {len(core)} core chunks")
+    print(f"[build] {len(chunks)} total → {garbage_count} garbage removed → {len(core)} chunks for full index")
 
     # B3: Inject entity annotations from rules (B4 short IDs handled)
     annotated = 0
