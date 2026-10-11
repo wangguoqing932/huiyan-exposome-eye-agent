@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-11T18:03:07",
-  "rules_yaml_sha256": "4be1e091530b0d554fffd24853ac11fed6b70db996327ec99082c7c645d54752",
+  "generated_at": "2026-10-11T20:11:57",
+  "rules_yaml_sha256": "bafb327e298397182567278b944ca0aa97614f99319ab5337066a21dce034d82",
   "rule_count": 21,
   "patient_factor_rule_count": 4,
   "rules_added": false,
@@ -9,16 +9,16 @@
   "network_enabled": true,
   "mode": "strict",
   "degraded_mode": false,
-  "overall": "fail",
+  "overall": "pass",
   "summary": {
-    "rules_pass": 17,
-    "rules_fail": 4,
+    "rules_pass": 21,
+    "rules_fail": 0,
     "rules_total": 21,
     "by_status": {
-      "verified": 21,
+      "verified": 24,
       "report_ok": 0,
       "db_ok": 0,
-      "authentic_only": 4,
+      "authentic_only": 0,
       "needs_identifier": 0,
       "unverified": 0,
       "retracted": 0,
@@ -123,7 +123,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Systematic review of cataract risk factors in type 2 diabetes directly addresses hyperglycemia as a relevant risk factor. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Systematic review directly examines hyperglycemia as a risk factor for cataract in type 2 diabetes. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -186,7 +186,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Title directly addresses glycemic control/variability and diabetic retinopathy, supporting HbA1c-retinopathy link. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Reviews glycemic control and variability effects on diabetic retinopathy, directly supporting HbA1c-retinopathy link. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -198,6 +198,18 @@
               "year": "2017",
               "doi": "10.1007/s13300-017-0345-5",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "The Role of Glycemic Control and Variability in Diabetic Retinopathy",
+              "authors": [
+                "Chatziralli"
+              ],
+              "journal": "Diabetes Therapy",
+              "year": "2017",
+              "doi": "10.1007/s13300-017-0345-5",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -225,121 +237,69 @@
       "entity_b_flags": [
         "dr_pdr"
       ],
-      "pass": false,
+      "pass": true,
       "citations": [
         {
           "raw": {
             "source_type": "literature",
-            "ref": "10.3390/ijms26114992"
-          },
-          "status": "authentic_only",
-          "meta": {
-            "title": "VEGF in Diabetic Retinopathy and Age-Related Macular Degeneration",
-            "authors": [
-              "Callan",
-              "Heckman",
-              "Tah"
-            ],
-            "journal": "International Journal of Molecular Sciences",
-            "year": "2025",
-            "doi": "10.3390/ijms26114992",
-            "pmid": "https://pubmed.ncbi.nlm.nih.gov/40507802",
-            "abstract": ""
-          },
-          "relevance": false,
-          "reason": "llm:Paper reviews VEGF in DR/AMD, not direct evidence linking elevated HbA1c to proliferative DR. | kuku sources: ['crossref', 'openalex']",
-          "declared_source_type": "literature",
-          "sources": {
-            "crossref": {
-              "title": "VEGF in Diabetic Retinopathy and Age-Related Macular Degeneration",
-              "authors": [
-                "Callan",
-                "Heckman",
-                "Tah"
-              ],
-              "journal": "International Journal of Molecular Sciences",
-              "year": "2025",
-              "doi": "10.3390/ijms26114992",
-              "pmid": null,
-              "abstract": ""
-            },
-            "openalex": {
-              "title": "VEGF in Diabetic Retinopathy and Age-Related Macular Degeneration",
-              "authors": [
-                "Callan",
-                "Heckman",
-                "Tah"
-              ],
-              "journal": "",
-              "year": "2025",
-              "doi": "10.3390/ijms26114992",
-              "pmid": "https://pubmed.ncbi.nlm.nih.gov/40507802",
-              "is_retracted": false,
-              "abstract": ""
-            }
-          }
-        },
-        {
-          "raw": {
-            "source_type": "literature",
-            "ref": "10.1002/kjm2.70200"
+            "ref": "10.1167/iovs.17-22804"
           },
           "status": "verified",
           "meta": {
-            "title": "Glycemic Control, Animal Protein Intake, and the Risk of Diabetic Retinopathy Progression Among Patients With Type 2 Diabetes",
+            "title": "Mitochondrial Haplogroups Modify the Effect of Diabetes Duration and HbA<sub>1c</sub> on Proliferative Diabetic Retinopathy Risk in Patients With Type 2 Diabetes",
             "authors": [
-              "Wu",
-              "Hsu",
-              "Tsai"
+              "Mitchell",
+              "Neininger",
+              "Bruce"
             ],
-            "journal": "The Kaohsiung Journal of Medical Sciences",
-            "year": "2026",
-            "doi": "10.1002/kjm2.70200",
-            "pmid": "https://pubmed.ncbi.nlm.nih.gov/41954281",
+            "journal": "Investigative Opthalmology &amp; Visual Science",
+            "year": "2017",
+            "doi": "10.1167/iovs.17-22804",
+            "pmid": "https://pubmed.ncbi.nlm.nih.gov/29288266",
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Glycemic control, a proxy for HbA1c, is studied with diabetic retinopathy progression, supporting hyperglycemia-driven DR/PDR risk. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:Reports HbA1c and diabetes duration modifying proliferative diabetic retinopathy risk, directly linking exposure to outcome. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
-              "title": "Glycemic Control, Animal Protein Intake, and the Risk of Diabetic Retinopathy Progression Among Patients With Type 2 Diabetes",
+              "title": "Mitochondrial Haplogroups Modify the Effect of Diabetes Duration and HbA<sub>1c</sub> on Proliferative Diabetic Retinopathy Risk in Patients With Type 2 Diabetes",
               "authors": [
-                "Wu",
-                "Hsu",
-                "Tsai"
+                "Mitchell",
+                "Neininger",
+                "Bruce"
               ],
-              "journal": "The Kaohsiung Journal of Medical Sciences",
-              "year": "2026",
-              "doi": "10.1002/kjm2.70200",
+              "journal": "Investigative Opthalmology &amp; Visual Science",
+              "year": "2017",
+              "doi": "10.1167/iovs.17-22804",
               "pmid": null,
               "abstract": ""
             },
             "semantic_scholar": {
-              "title": "Glycemic Control, Animal Protein Intake, and the Risk of Diabetic Retinopathy Progression Among Patients With Type 2 Diabetes",
+              "title": "Mitochondrial Haplogroups Modify the Effect of Diabetes Duration and HbA1c on Proliferative Diabetic Retinopathy Risk in Patients With Type 2 Diabetes",
               "authors": [
-                "Wu",
-                "Hsu",
-                "Tsai"
+                "Mitchell",
+                "Neininger",
+                "Bruce"
               ],
-              "journal": "The Kaohsiung Journal of Medical Sciences",
-              "year": "2026",
-              "doi": "10.1002/kjm2.70200",
+              "journal": "Investigative Ophthalmology & Visual Science",
+              "year": "2017",
+              "doi": "10.1167/iovs.17-22804",
               "pmid": "",
               "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
-              "title": "Glycemic Control, Animal Protein Intake, and the Risk of Diabetic Retinopathy Progression Among Patients With Type 2 Diabetes",
+              "title": "Mitochondrial Haplogroups Modify the Effect of Diabetes Duration and HbA1c on Proliferative Diabetic Retinopathy Risk in Patients With Type 2 Diabetes",
               "authors": [
-                "Wu",
-                "Hsu",
-                "Tsai"
+                "Mitchell",
+                "Neininger",
+                "Bruce"
               ],
               "journal": "",
-              "year": "2026",
-              "doi": "10.1002/kjm2.70200",
-              "pmid": "https://pubmed.ncbi.nlm.nih.gov/41954281",
+              "year": "2017",
+              "doi": "10.1167/iovs.17-22804",
+              "pmid": "https://pubmed.ncbi.nlm.nih.gov/29288266",
               "is_retracted": false,
               "abstract": ""
             }
@@ -348,63 +308,71 @@
       ]
     },
     {
-      "id": "r05_dyslipidemia_x_amd_early",
+      "id": "r05_dyslipidemia_x_amd_late",
       "risk_type": "oxidative_stress",
       "entity_a_flags": [
         "dyslipidemia"
       ],
       "entity_b_flags": [
-        "amd_early"
+        "amd_late"
       ],
       "pass": true,
       "citations": [
         {
           "raw": {
             "source_type": "literature",
-            "ref": "10.1097/MD.0000000000041599"
+            "ref": "10.62347/QJPQ2923"
           },
           "status": "verified",
           "meta": {
-            "title": "Risk factors for age-related macular degeneration: Updated systematic review and meta-analysis",
+            "title": "Association between dyslipidemia and neovascular age-related macular degeneration: a case-control study",
             "authors": [
-              "Babaker",
-              "Alzimami",
-              "Al Ameer"
+              "Yao"
             ],
-            "journal": "Medicine",
+            "journal": "International Journal of Clinical and Experimental Pathology",
             "year": "2025",
-            "doi": "10.1097/MD.0000000000041599",
-            "pmid": "https://pubmed.ncbi.nlm.nih.gov/39993131",
+            "doi": "10.62347/QJPQ2923",
+            "pmid": "https://pubmed.ncbi.nlm.nih.gov/40519319",
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Updated meta-analysis of AMD risk factors likely directly evaluates dyslipidemia and early AMD association. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Case-control study directly links dyslipidemia to neovascular (late) AMD, matching rule's exposure and disease stage. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
-              "title": "Risk factors for age-related macular degeneration: Updated systematic review and meta-analysis",
+              "title": "Association between dyslipidemia and neovascular age-related macular degeneration: a case-control study",
               "authors": [
-                "Babaker",
-                "Alzimami",
-                "Al Ameer"
+                "Yao"
               ],
-              "journal": "Medicine",
+              "journal": "International Journal of Clinical and Experimental Pathology",
               "year": "2025",
-              "doi": "10.1097/MD.0000000000041599",
+              "doi": "10.62347/QJPQ2923",
               "pmid": null,
               "abstract": ""
             },
-            "openalex": {
-              "title": "Risk factors for age-related macular degeneration: Updated systematic review and meta-analysis",
+            "semantic_scholar": {
+              "title": "Association between dyslipidemia and neovascular age-related macular degeneration: a case-control study.",
               "authors": [
-                "Babaker",
-                "Alzimami",
-                "Ameer"
+                "Yao",
+                "Liu",
+                "Zheng"
+              ],
+              "journal": "International journal of clinical and experimental pathology",
+              "year": "2025",
+              "doi": "10.62347/qjpq2923",
+              "pmid": "",
+              "is_retracted": false,
+              "abstract": ""
+            },
+            "openalex": {
+              "title": "Association between dyslipidemia and neovascular age-related macular degeneration: a case-control study",
+              "authors": [
+                "Yao"
               ],
               "journal": "",
               "year": "2025",
-              "doi": "10.1097/md.0000000000041599",
-              "pmid": "https://pubmed.ncbi.nlm.nih.gov/39993131",
+              "doi": "10.62347/qjpq2923",
+              "pmid": "https://pubmed.ncbi.nlm.nih.gov/40519319",
               "is_retracted": false,
               "abstract": ""
             }
@@ -443,7 +411,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:The paper is a meta-analysis directly assessing the association between C-reactive protein and age-related macular degeneration. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Meta-analysis directly links CRP exposure to age-related macular degeneration risk. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -457,6 +425,20 @@
               "year": "2011",
               "doi": "10.1016/j.survophthal.2010.08.007",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "A review and meta-analysis of the association between C-reactive protein and age-related macular degeneration.",
+              "authors": [
+                "Hong",
+                "Tan",
+                "Mitchell"
+              ],
+              "journal": "Survey of ophthalmology",
+              "year": "2011",
+              "doi": "10.1016/j.survophthal.2010.08.007",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -491,64 +473,130 @@
         {
           "raw": {
             "source_type": "literature",
-            "ref": "10.3390/ijms241512014"
+            "ref": "10.3390/nu9030307"
           },
           "status": "verified",
           "meta": {
-            "title": "Vitamin D and Diabetic Retinopathy",
+            "title": "The Association between Vitamin D Deficiency and Diabetic Retinopathy in Type 2 Diabetes: A Meta-Analysis of Observational Studies",
             "authors": [
-              "Gverović Antunica",
-              "Znaor",
-              "Ivanković"
+              "Luo",
+              "Gao",
+              "Qin"
             ],
-            "journal": "International Journal of Molecular Sciences",
-            "year": "2023",
-            "doi": "10.3390/ijms241512014",
-            "pmid": "https://pubmed.ncbi.nlm.nih.gov/37569392",
+            "journal": "Nutrients",
+            "year": "2017",
+            "doi": "10.3390/nu9030307",
+            "pmid": "https://pubmed.ncbi.nlm.nih.gov/28335514",
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Title directly addresses vitamin D and diabetic retinopathy, matching exposure and target eye disease. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:Meta-analysis directly links vitamin D deficiency to diabetic retinopathy in type 2 diabetes. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
-              "title": "Vitamin D and Diabetic Retinopathy",
+              "title": "The Association between Vitamin D Deficiency and Diabetic Retinopathy in Type 2 Diabetes: A Meta-Analysis of Observational Studies",
               "authors": [
-                "Gverović Antunica",
-                "Znaor",
-                "Ivanković"
+                "Luo",
+                "Gao",
+                "Qin"
               ],
-              "journal": "International Journal of Molecular Sciences",
-              "year": "2023",
-              "doi": "10.3390/ijms241512014",
+              "journal": "Nutrients",
+              "year": "2017",
+              "doi": "10.3390/nu9030307",
               "pmid": null,
               "abstract": ""
             },
             "semantic_scholar": {
-              "title": "Vitamin D and Diabetic Retinopathy",
+              "title": "The Association between Vitamin D Deficiency and Diabetic Retinopathy in Type 2 Diabetes: A Meta-Analysis of Observational Studies",
               "authors": [
-                "Antunica",
-                "Znaor",
-                "Ivanković"
+                "Luo",
+                "Gao",
+                "Qin"
               ],
-              "journal": "International Journal of Molecular Sciences",
-              "year": "2023",
-              "doi": "10.3390/ijms241512014",
+              "journal": "Nutrients",
+              "year": "2017",
+              "doi": "10.3390/nu9030307",
               "pmid": "",
               "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
-              "title": "Vitamin D and Diabetic Retinopathy",
+              "title": "The Association between Vitamin D Deficiency and Diabetic Retinopathy in Type 2 Diabetes: A Meta-Analysis of Observational Studies",
               "authors": [
-                "Antunica",
-                "Znaor",
-                "Ivanković"
+                "Luo",
+                "Gao",
+                "Qin"
               ],
               "journal": "",
-              "year": "2023",
-              "doi": "10.3390/ijms241512014",
-              "pmid": "https://pubmed.ncbi.nlm.nih.gov/37569392",
+              "year": "2017",
+              "doi": "10.3390/nu9030307",
+              "pmid": "https://pubmed.ncbi.nlm.nih.gov/28335514",
+              "is_retracted": false,
+              "abstract": ""
+            }
+          }
+        },
+        {
+          "raw": {
+            "source_type": "literature",
+            "ref": "10.1016/j.jcjo.2017.09.026"
+          },
+          "status": "verified",
+          "meta": {
+            "title": "Relationship between vitamin D deficiency and diabetic retinopathy: a meta-analysis",
+            "authors": [
+              "Zhang",
+              "Upala",
+              "Sanguankeo"
+            ],
+            "journal": "Canadian Journal of Ophthalmology",
+            "year": "2017",
+            "doi": "10.1016/j.jcjo.2017.09.026",
+            "pmid": "",
+            "abstract": ""
+          },
+          "relevance": true,
+          "reason": "llm:Meta-analysis directly links vitamin D deficiency to diabetic retinopathy. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "declared_source_type": "literature",
+          "sources": {
+            "crossref": {
+              "title": "Relationship between vitamin D deficiency and diabetic retinopathy: a meta-analysis",
+              "authors": [
+                "Zhang",
+                "Upala",
+                "Sanguankeo"
+              ],
+              "journal": "Canadian Journal of Ophthalmology",
+              "year": "2017",
+              "doi": "10.1016/j.jcjo.2017.09.026",
+              "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Relationship between vitamin D deficiency and diabetic retinopathy: a meta-analysis.",
+              "authors": [
+                "Zhang",
+                "Upala",
+                "Sanguankeo"
+              ],
+              "journal": "Canadian journal of ophthalmology. Journal canadien d'ophtalmologie",
+              "year": "2017",
+              "doi": "10.1016/j.jcjo.2017.09.026",
+              "pmid": "",
+              "is_retracted": false,
+              "abstract": ""
+            },
+            "openalex": {
+              "title": "Relationship between vitamin D deficiency and diabetic retinopathy: a meta-analysis",
+              "authors": [
+                "Zhang",
+                "Upala",
+                "Sanguankeo"
+              ],
+              "journal": "",
+              "year": "2017",
+              "doi": "10.1016/j.jcjo.2017.09.026",
+              "pmid": "",
               "is_retracted": false,
               "abstract": ""
             }
@@ -627,65 +675,55 @@
       "entity_b_flags": [
         "amd_late"
       ],
-      "pass": false,
+      "pass": true,
       "citations": [
         {
           "raw": {
             "source_type": "literature",
-            "ref": "10.1016/j.ophtha.2018.09.032"
+            "ref": "10.1016/j.ophtha.2018.08.006"
           },
-          "status": "authentic_only",
+          "status": "verified",
           "meta": {
-            "title": "Mediterranean Diet and Age-Related Macular Degeneration: Is It Time to Attempt Dietary Modification?",
+            "title": "Mediterranean Diet and Incidence of Advanced Age-Related Macular Degeneration",
             "authors": [
-              "Hogg",
-              "Woodside"
+              "Merle",
+              "Colijn",
+              "Cougnard-Grégoire"
             ],
             "journal": "Ophthalmology",
             "year": "2019",
-            "doi": "10.1016/j.ophtha.2018.09.032",
-            "pmid": "https://pubmed.ncbi.nlm.nih.gov/30803514",
+            "doi": "10.1016/j.ophtha.2018.08.006",
+            "pmid": "https://pubmed.ncbi.nlm.nih.gov/30114418",
             "abstract": ""
           },
-          "relevance": false,
-          "reason": "llm:Likely editorial/commentary without abstract; no original data directly linking Mediterranean diet to late AMD. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "relevance": true,
+          "reason": "llm:Title directly matches Mediterranean diet and advanced AMD incidence. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
-              "title": "Mediterranean Diet and Age-Related Macular Degeneration: Is It Time to Attempt Dietary Modification?",
+              "title": "Mediterranean Diet and Incidence of Advanced Age-Related Macular Degeneration",
               "authors": [
-                "Hogg",
-                "Woodside"
+                "Merle",
+                "Colijn",
+                "Cougnard-Grégoire"
               ],
               "journal": "Ophthalmology",
               "year": "2019",
-              "doi": "10.1016/j.ophtha.2018.09.032",
+              "doi": "10.1016/j.ophtha.2018.08.006",
               "pmid": null,
               "abstract": ""
             },
-            "semantic_scholar": {
-              "title": "Mediterranean Diet and Age-Related Macular Degeneration: Is It Time to Attempt Dietary Modification?",
-              "authors": [
-                "Hogg",
-                "Woodside"
-              ],
-              "journal": "Ophthalmology",
-              "year": "2019",
-              "doi": "10.1016/j.ophtha.2018.09.032",
-              "pmid": "",
-              "is_retracted": false,
-              "abstract": ""
-            },
             "openalex": {
-              "title": "Mediterranean Diet and Age-Related Macular Degeneration: Is It Time to Attempt Dietary Modification?",
+              "title": "Mediterranean Diet and Incidence of Advanced Age-Related Macular Degeneration",
               "authors": [
-                "Hogg",
-                "Woodside"
+                "Merle",
+                "Merle",
+                "Colijn"
               ],
               "journal": "",
-              "year": "2019",
-              "doi": "10.1016/j.ophtha.2018.09.032",
-              "pmid": "https://pubmed.ncbi.nlm.nih.gov/30803514",
+              "year": "2018",
+              "doi": "10.1016/j.ophtha.2018.08.006",
+              "pmid": "https://pubmed.ncbi.nlm.nih.gov/30114418",
               "is_retracted": false,
               "abstract": ""
             }
@@ -775,7 +813,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:MR systematic review on smoking's causal role in multiple diseases includes cataract, supporting smoking as causal risk factor. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:MR meta-analysis confirms smoking causally affects multiple diseases, likely including cataract. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -838,7 +876,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Systematic review/meta-analysis of AMD risk factors likely directly evaluates smoking as a risk factor for AMD/late AMD. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Meta-analysis of AMD risk factors directly evaluates smoking as a risk factor for late AMD. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -881,70 +919,8 @@
       "entity_b_flags": [
         "cataract_any"
       ],
-      "pass": false,
+      "pass": true,
       "citations": [
-        {
-          "raw": {
-            "source_type": "literature",
-            "ref": "10.1111/ceo.13892"
-          },
-          "status": "authentic_only",
-          "meta": {
-            "title": "Cataract and systemic disease: A review",
-            "authors": [
-              "Ang",
-              "Afshari"
-            ],
-            "journal": "Clinical &amp; Experimental Ophthalmology",
-            "year": "2021",
-            "doi": "10.1111/ceo.13892",
-            "pmid": "https://pubmed.ncbi.nlm.nih.gov/33426783",
-            "abstract": ""
-          },
-          "relevance": false,
-          "reason": "llm:Title reviews systemic disease broadly; no abstract confirms direct alcohol-specific cataract evidence. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
-          "declared_source_type": "literature",
-          "sources": {
-            "crossref": {
-              "title": "Cataract and systemic disease: A review",
-              "authors": [
-                "Ang",
-                "Afshari"
-              ],
-              "journal": "Clinical &amp; Experimental Ophthalmology",
-              "year": "2021",
-              "doi": "10.1111/ceo.13892",
-              "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "Cataract and systemic disease: A review",
-              "authors": [
-                "Ang",
-                "Afshari"
-              ],
-              "journal": "Clinical & Experimental Ophthalmology",
-              "year": "2021",
-              "doi": "10.1111/ceo.13892",
-              "pmid": "",
-              "is_retracted": false,
-              "abstract": ""
-            },
-            "openalex": {
-              "title": "Cataract and systemic disease: A review",
-              "authors": [
-                "Ang",
-                "Afshari"
-              ],
-              "journal": "",
-              "year": "2021",
-              "doi": "10.1111/ceo.13892",
-              "pmid": "https://pubmed.ncbi.nlm.nih.gov/33426783",
-              "is_retracted": false,
-              "abstract": ""
-            }
-          }
-        },
         {
           "raw": {
             "source_type": "literature",
@@ -965,7 +941,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Title directly examines alcohol consumption and cataract extraction risk, providing direct evidence for the rule. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Studies alcohol consumption directly with cataract extraction risk, matching exposure and outcome. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1030,7 +1006,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Prospective cohort meta-analysis directly links higher BMI to increased age-related cataract risk, supporting the rule. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:Meta-analysis of prospective cohorts directly links higher BMI to increased age-related cataract risk. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1044,20 +1020,6 @@
               "year": "2014",
               "doi": "10.1371/journal.pone.0089923",
               "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "Body Mass Index and Risk of Age-Related Cataract: A Meta-Analysis of Prospective Cohort Studies",
-              "authors": [
-                "Ye",
-                "Lou",
-                "He"
-              ],
-              "journal": "PLoS ONE",
-              "year": "2014",
-              "doi": "10.1371/journal.pone.0089923",
-              "pmid": "",
-              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1109,7 +1071,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Title directly reports lead exposure and cataract surgery risk in U.S. adults. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
+          "reason": "llm:NHANES cohort directly links lead exposure to cataract surgery risk in U.S. adults. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1123,20 +1085,6 @@
               "year": "2016",
               "doi": "10.1016/j.ijheh.2016.07.012",
               "pmid": null,
-              "abstract": ""
-            },
-            "semantic_scholar": {
-              "title": "Cadmium and Lead Exposure and Risk of Cataract Surgery in U.S. Adults",
-              "authors": [
-                "Wang",
-                "Schaumberg",
-                "Park"
-              ],
-              "journal": "International journal of hygiene and environmental health",
-              "year": "2016",
-              "doi": "10.1016/j.ijheh.2016.07.012",
-              "pmid": "",
-              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1188,7 +1136,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Title directly links cadmium exposure to cataract surgery risk in U.S. adults. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:The paper directly studies cadmium exposure and cataract surgery risk in U.S. adults. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1254,7 +1202,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:PM2.5 directly triggers ocular hypertension and glaucoma via pyroptosis, matching rule exposure and eye disease mechanism. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:PM2.5 directly triggers ocular hypertension and glaucoma via pyroptosis, matching rule mechanism. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1319,7 +1267,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Meta-analysis directly evaluates ambient air pollution and AMD, supporting PM2.5-related inflammation/oxidative risk. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Meta-analysis directly links ambient air pollution (PM2.5) to age-related macular degeneration. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1333,6 +1281,20 @@
               "year": "2024",
               "doi": "10.1186/s12886-024-03465-y",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Association between ambient air pollution and age-related macular degeneration: a meta-analysis",
+              "authors": [
+                "Wu",
+                "Zhang",
+                "Xu"
+              ],
+              "journal": "BMC Ophthalmology",
+              "year": "2024",
+              "doi": "10.1186/s12886-024-03465-y",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1362,60 +1324,8 @@
       "entity_b_flags": [
         "cataract_any"
       ],
-      "pass": false,
+      "pass": true,
       "citations": [
-        {
-          "raw": {
-            "source_type": "literature",
-            "ref": "10.1001/jama.2025.1597"
-          },
-          "status": "authentic_only",
-          "meta": {
-            "title": "Cataracts",
-            "authors": [
-              "Chen",
-              "Woreta",
-              "Chang"
-            ],
-            "journal": "JAMA",
-            "year": "2025",
-            "doi": "10.1001/jama.2025.1597",
-            "pmid": "https://pubmed.ncbi.nlm.nih.gov/40227658",
-            "abstract": ""
-          },
-          "relevance": false,
-          "reason": "llm:Title/abstract lacks any data or mention of UV exposure; cannot provide direct evidence. | kuku sources: ['crossref', 'openalex']",
-          "declared_source_type": "literature",
-          "sources": {
-            "crossref": {
-              "title": "Cataracts",
-              "authors": [
-                "Chen",
-                "Woreta",
-                "Chang"
-              ],
-              "journal": "JAMA",
-              "year": "2025",
-              "doi": "10.1001/jama.2025.1597",
-              "pmid": null,
-              "abstract": ""
-            },
-            "openalex": {
-              "title": "Cataracts",
-              "authors": [
-                "Chen",
-                "Woreta",
-                "Chang"
-              ],
-              "journal": "",
-              "year": "2025",
-              "doi": "10.1001/jama.2025.1597",
-              "pmid": "https://pubmed.ncbi.nlm.nih.gov/40227658",
-              "is_retracted": false,
-              "abstract": ""
-            }
-          }
-        },
         {
           "raw": {
             "source_type": "literature",
@@ -1436,7 +1346,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Sun exposure is directly identified as a risk factor for nuclear cataract, supporting the rule mechanism. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Title directly links sun exposure to nuclear cataract risk. | kuku sources: ['crossref', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1463,6 +1373,55 @@
               "year": "2003",
               "doi": "10.1097/01.ede.0000086881.84657.98",
               "pmid": "https://pubmed.ncbi.nlm.nih.gov/14569187",
+              "is_retracted": false,
+              "abstract": ""
+            }
+          }
+        },
+        {
+          "raw": {
+            "source_type": "literature",
+            "ref": "10.1136/oem.2005.022343"
+          },
+          "status": "verified",
+          "meta": {
+            "title": "Occupational sunlight exposure, polymorphism of glutathione S-transferase M1, and senile cataract risk: Table 1",
+            "authors": [
+              "Saadat",
+              "Farvardin-Jahromi"
+            ],
+            "journal": "Occupational and Environmental Medicine",
+            "year": "2006",
+            "doi": "10.1136/oem.2005.022343",
+            "pmid": "https://pubmed.ncbi.nlm.nih.gov/16551760",
+            "abstract": ""
+          },
+          "relevance": true,
+          "reason": "llm:Occupational sunlight exposure and senile cataract risk directly supports UV exposure causing cataract. | kuku sources: ['crossref', 'openalex']",
+          "declared_source_type": "literature",
+          "sources": {
+            "crossref": {
+              "title": "Occupational sunlight exposure, polymorphism of glutathione S-transferase M1, and senile cataract risk: Table 1",
+              "authors": [
+                "Saadat",
+                "Farvardin-Jahromi"
+              ],
+              "journal": "Occupational and Environmental Medicine",
+              "year": "2006",
+              "doi": "10.1136/oem.2005.022343",
+              "pmid": null,
+              "abstract": ""
+            },
+            "openalex": {
+              "title": "Occupational sunlight exposure, polymorphism of glutathione S-transferase M1, and senile cataract risk: Table 1",
+              "authors": [
+                "Saadat",
+                "Farvardin"
+              ],
+              "journal": "",
+              "year": "2006",
+              "doi": "10.1136/oem.2005.022343",
+              "pmid": "https://pubmed.ncbi.nlm.nih.gov/16551760",
               "is_retracted": false,
               "abstract": ""
             }
@@ -1501,7 +1460,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Prospective cohort directly links dietary inflammatory index to diabetic retinopathy. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Prospective cohort directly links dietary inflammatory index to diabetic retinopathy in diabetes. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1515,6 +1474,20 @@
               "year": "2025",
               "doi": "10.1016/j.jnha.2025.100694",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Association of standard dietary inflammatory index with diabetic retinopathy in diabetes: A prospective cohort study",
+              "authors": [
+                "Xu",
+                "Jiang",
+                "Zhang"
+              ],
+              "journal": "The Journal of Nutrition, Health & Aging",
+              "year": "2025",
+              "doi": "10.1016/j.jnha.2025.100694",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1567,7 +1540,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Smoking and urinary cotinine predicted visual impairment incidence, supporting smoking-related oxidative stress and vision loss risk. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Prospective study links smoking and urinary cotinine to visual impairment incidence. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1581,6 +1554,20 @@
               "year": "2021",
               "doi": "10.1038/s41598-020-79865-z",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Smoking, urinary cotinine levels and incidence of visual impairment",
+              "authors": [
+                "Han",
+                "Chang",
+                "Shin"
+              ],
+              "journal": "Scientific Reports",
+              "year": "2021",
+              "doi": "10.1038/s41598-020-79865-z",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {
@@ -1633,7 +1620,7 @@
             "abstract": ""
           },
           "relevance": true,
-          "reason": "llm:Prospective cohort directly links air pollution exposure to visual impairment, matching rule exposure and eye outcome. | kuku sources: ['crossref', 'openalex']",
+          "reason": "llm:Prospective cohort directly links air pollution and visual impairment, matching rule exposure and outcome. | kuku sources: ['crossref', 'semantic_scholar', 'openalex']",
           "declared_source_type": "literature",
           "sources": {
             "crossref": {
@@ -1647,6 +1634,20 @@
               "year": "2024",
               "doi": "10.1186/s12889-024-20853-7",
               "pmid": null,
+              "abstract": ""
+            },
+            "semantic_scholar": {
+              "title": "Residential greenness, air pollution and visual impairment: a prospective cohort study",
+              "authors": [
+                "Yan",
+                "Zhang",
+                "Yu"
+              ],
+              "journal": "BMC Public Health",
+              "year": "2024",
+              "doi": "10.1186/s12889-024-20853-7",
+              "pmid": "",
+              "is_retracted": false,
               "abstract": ""
             },
             "openalex": {

@@ -9,7 +9,11 @@
     置信度   = 规则强度(≤0.5) + 同级规则一致(≤0.2) + 证据支持(≤0.3)
 
 引擎零域逻辑：所有领域内容（flags、rationale、citations）都在 rules.yaml，
-由 Phase 3 按文献逐条落定。无规则命中 → LOW（TongYuan 惯例：no-signal = LOW）。
+由 Phase 3 按文献逐条落定。
+
+无规则命中 → UNKNOWN（弃权）。**不得报为 LOW** —— 「未评估」不等于「无相互作用」。
+（审核 97：原实现沿用 TongYuan 的 no-signal = LOW 惯例，使 561/615 个未覆盖组合
+被渲染为「低风险 — 目前证据未见显著相互作用」，属肯定性的虚假安心。）
 """
 from __future__ import annotations
 
@@ -26,6 +30,39 @@ SEVERITY_STRENGTH: dict[str, float] = {"high": 0.5, "medium": 0.3, "low": 0.1}
 # 监管标签类来源在置信度中计双倍（methodology_skeleton: FDA/regulatory counts double）
 _DOUBLE_SOURCE_MARKERS = ("fda", "dailymed", "setid", "label", "nmpa", "ema", "guideline")
 
+# 证据级 → 严重度的唯一纪律（rule_rationale.md:4）：A→high / B→medium / C→low
+_EVIDENCE_TO_SEVERITY: dict[str, str] = {"A": "high", "B": "medium", "C": "low"}
+
+_MECHANISMS_FALLBACK: tuple[str, ...] = (
+    "oxidative_stress",
+    "glycation_metabolic",
+    "inflammation_immune",
+    "vascular_perfusion",
+    "endocrine_hormonal",
+    "heavy_metal_toxicity",
+    "photochemical_uv",
+)
+
+
+def canonical_mechanisms() -> tuple[str, ...]:
+    """7 机制清单的唯一真相源。
+
+    优先读 `.planner.config.json` 的 `interaction_mechanisms`；缺失时回退到内置常量。
+    （审核 F6：此前 rules.yaml:5 指向 config 的该键，但引擎不读它，
+    导致引擎与验证脚本各用一条真相源，漂移时无人报错。）
+    """
+    import json
+
+    cfg = Path(__file__).resolve().parents[2] / ".planner.config.json"
+    try:
+        data = json.loads(cfg.read_text(encoding="utf-8"))
+        mech = data.get("interaction_mechanisms")
+        if isinstance(mech, list) and mech:
+            return tuple(str(m) for m in mech)
+    except Exception:
+        pass
+    return _MECHANISMS_FALLBACK
+
 
 @dataclass
 class Rule:
@@ -34,6 +71,9 @@ class Rule:
     id: str
     severity: str  # high | medium | low
     risk_type: str
+    evidence_level: str = "C"       # A | B | C（加载期校验与 severity 一致）
+    direction: str = "risk_up"      # risk_up | risk_down（risk_down = 保护性关联）
+    negative_control: bool = False  # 已知阴性对照：不得进 headline 指标
     entity_a_flags: list[str] = field(default_factory=list)
     entity_b_flags: list[str] = field(default_factory=list)
     patient_factors: list[str] = field(default_factory=list)  # 命中即上调一级
@@ -62,15 +102,40 @@ def load_rules(path: str | Path | None = None) -> list[Rule]:
     if not path.exists():
         return []
     raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    mech = set(canonical_mechanisms())
     rules: list[Rule] = []
     for item in raw.get("rules", []) or []:
         if not isinstance(item, dict) or not item.get("id"):
             continue
+
+        # ── 加载期校验（审核 F6/F13/F25：此前全部只在 match 期或根本不校验）──
+        rid = str(item["id"])
+        severity = str(item.get("severity", "")).strip().lower()
+        if severity not in ("high", "medium", "low"):
+            raise ValueError(f"{rid}: 非法 severity={severity!r}（应为 high|medium|low）")
+        level = str(item.get("evidence_level", "")).strip().upper()
+        if level not in _EVIDENCE_TO_SEVERITY:
+            raise ValueError(f"{rid}: 非法 evidence_level={level!r}（应为 A|B|C）")
+        if _EVIDENCE_TO_SEVERITY[level] != severity:
+            raise ValueError(
+                f"{rid}: severity={severity!r} 与 evidence_level={level!r} 不符"
+                "（纪律：A→high / B→medium / C→low）"
+            )
+        rtype = str(item.get("risk_type", "")).strip()
+        if rtype not in mech:
+            raise ValueError(f"{rid}: risk_type={rtype!r} 不在 7 机制清单内 {sorted(mech)}")
+        direction = str(item.get("direction", "risk_up")).strip()
+        if direction not in ("risk_up", "risk_down"):
+            raise ValueError(f"{rid}: 非法 direction={direction!r}（应为 risk_up|risk_down）")
+
         rules.append(
             Rule(
-                id=str(item["id"]),
-                severity=str(item.get("severity", "low")).lower(),
-                risk_type=str(item.get("risk_type", "unclassified")),
+                id=rid,
+                severity=severity,
+                risk_type=rtype,
+                evidence_level=level,
+                direction=direction,
+                negative_control=bool(item.get("negative_control", False)),
                 entity_a_flags=[str(f) for f in item.get("entity_a_flags", []) or []],
                 entity_b_flags=[str(f) for f in item.get("entity_b_flags", []) or []],
                 patient_factors=[str(f) for f in item.get("patient_factors", []) or []],
@@ -126,6 +191,14 @@ def match_rules(
                 c if isinstance(c, str) else str(c.get("ref", "")) for c in rule.citations
             ]
 
+        protective = rule.direction == "risk_down"
+        if protective:
+            # 审核 98/128：保护性规则（如 r09 地中海饮食×晚期 AMD）此前被当作普通风险信号，
+            # 在报告层渲染成「中等风险 — 建议限量、错时服用」，方向完全颠倒。
+            matched_terms.setdefault("direction", []).append("risk_down（保护性关联）")
+        if rule.negative_control:
+            matched_terms.setdefault("negative_control", []).append("true（已知阴性对照，不进 headline 指标）")
+
         signals.append(
             RiskSignal(
                 rule_id=rule.id,
@@ -134,6 +207,7 @@ def match_rules(
                 rationale=rule.rationale,
                 recommendation=rule.recommendation,
                 matched_terms=matched_terms,
+                protective=protective,
             )
         )
     return signals
@@ -182,15 +256,23 @@ def assess(
       证据支持  ≤ 0.3  — 每独立可溯源来源 +0.10（监管类 +0.20）；无信号时为 0
     """
     evidence_chunks = evidence_chunks or []
-    if not signals:
+
+    # 保护性信号不参与风险等级（审核 98/128）
+    risk_signals = [s for s in signals if not getattr(s, "protective", False)]
+
+    if not risk_signals:
+        # 无规则命中，或命中的全是保护性关联 → 弃权。
+        # 审核 97：此前返回 RiskLevel.LOW，使未覆盖组合被渲染为
+        # 「低风险 — 目前证据未见显著相互作用」（肯定性的虚假安心）。
         return RiskAssessment(
-            risk_level=RiskLevel.LOW,
-            risk_types=[],
-            signals=[],
+            risk_level=RiskLevel.UNKNOWN,
+            risk_types=sorted({s.risk_type for s in signals}),
+            signals=signals,
             confidence=0.0,
             confidence_score=0.0,
         )
 
+    signals = risk_signals
     top_level = max((s.risk_level for s in signals), key=lambda lv: RISK_ORDER[lv])
     strength = SEVERITY_STRENGTH.get(top_level.value, 0.1)
     n_same = sum(1 for s in signals if s.risk_level == top_level)

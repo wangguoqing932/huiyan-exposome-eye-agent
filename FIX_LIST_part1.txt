@@ -1,0 +1,104 @@
+【待修清单 · 区块 1/2】需要你决策的 + 确证管线重写
+================================================================
+说明: 只列**尚未修复**的项。已修 21 项不在此列。
+      格式: 编号 | 内容 | 位置 | 做法或卡点
+================================================================
+
+---- A. 必须你先决策，我不能替你选（3 条）----
+
+A1 | r14/r15 铅镉规则方向错误
+   位置: configs/rules.yaml:199-223
+   问题: 两条规则的唯一引用对 blood lead 与 blood cadmium 报告
+         OR=0.97 / 0.97（无关联），而实现操作化的正是这两个标志物；
+         只有尿镉阳性。r14 的 rationale 却写"铅暴露风险升高"
+   选项: (1) 撤销这两条规则
+         (2) 换成以血铅/血镉为暴露且结果阳性的研究
+   卡点: 我不编造引用，需你选
+
+A2 | 伦理文档与实际研究不符
+   位置: docs/IRB_Protocol_Summary.md / .en.md, Informed_Consent.md / .en.md
+   问题: config 声明 irb_needed=false，却发了 2 份 IRB + 2 份知情同意；
+         内容描述"单中心 EMR 60 例 / 已获 IRB 批准 / 4 位专家 / 毒理数据源"
+         这些研究都没做过（实际是公开数据库二次分析、3 位专家）
+   选项: (1) 删除这四个文件  (2) 改 config 为需要 IRB 并补齐内容
+   卡点: 影响投稿包，需你点头
+
+A3 | Recall / sensitivity 口径（预注册须修订）
+   位置: docs/analysis_plan.md 第 1 / 3 / 10 节
+   问题: FN 限定在类型 2 空白（physical_activity × glaucoma_*），
+         而该层在注册表里没有对应实体（flags 实为 physical_inactivity），
+         分母恒为 0 → 指标不可识别
+   已做: evaluate.py 改为报 precision_rule + coverage，
+         并在 docstring 写明"不报告召回率，这是有意的"
+   待做: 你要么把 FN 定义到声明的覆盖域、要么扩大覆盖域；
+         预注册文本须相应修订 —— 这是科学决策，不由代码替选
+
+================================================================
+---- B. 确证管线（最大一块，建议整体重写而非打补丁）----
+================================================================
+
+B1 | 三个 phase5 脚本同时固化四处错误，建议归档不再使用
+   位置: scripts/phase5_nhanes_pairs.py / phase5_knhanes_pairs.py / phase5_charls_pairs.py
+   问题: 错误分母（FN 覆盖非立项对）+ 错误切点（样本内分位数）
+         + 坏 BH（已修）+ 错误协变量处理（丢掉了 dummies 与全阳守卫）
+   做法: 以 docs/analysis_plan.md 为唯一规格重写；骨架用已修好的 evaluate.py
+         （它的三态、规则域精确率、bootstrap、引擎 import 都是真的）
+
+B2 | cases.jsonl 真读真写
+   位置: scripts/generate_cases.py, scripts/evaluate.py
+   现状: 四个 cases.jsonl 全为 0 字节；evaluate.py 完全无文件 I/O
+         （"Reads cases from ..." 只存在于 docstring）
+   验收: 删掉任一 cases.jsonl 后运行 evaluate.py 必须非零退出并指明文件名
+
+B3 | 暴露操作化六项（都在 phase5 里）
+   B3a 样本内分位数切点 → 改固定临床切点
+       phase5_nhanes_pairs.py:95,101-102
+       现: low_antioxidant 用 quantile(0.25)、lead/cadmium 用 quantile(0.75)
+       → 按定义保证 25% 患病率，是相对构造，跨库不可比
+   B3b 抗氧化复合单位混算
+       phase5_nhanes_pairs.py:92-95
+       现: 维C(mg)/维E(mg)/叶黄素(ug) 直接取算术平均
+       → 叶黄素占均值约 94.5%，该 flag 实际测的是叶黄素
+   B3c VI mild 与 moderate 是同一个变量
+       phase5_nhanes_pairs.py:118-120
+       实测: 11/11 个暴露下 n、阳性数、OR 六位小数完全相同
+       → logMAR 阈值映射有误，或量表离散；修正或删掉一档
+   B3d flag 超载
+       data/seed/entities_a.csv:26-28,40
+       现: current_smoking 一个 flag 承载 4 个暴露，含 secondhand_smoke 与 pack_years
+       → 从不吸烟的被动吸烟者、已戒烟者会触发 r10（high / A 级）
+   B3e 结局嵌套未落纸
+       data/seed/entities_b.csv
+       现: retinopathy_any = dr_npdr ∪ dr_pdr 精确成立；VI 三档单调嵌套；
+           而 r20/r21 同时列 moderate 与 severe → 单规则内重复计分
+       做法: 增 derived_from 列，指标层禁止父子同计
+   B3f 跨层口径不统一（三处）
+       暴露切点: NHANES 分位数 vs KNHANES 固定临床值
+       协变量集: evaluate.py 无 age^2 / 无 dummies（phase5 反而更全）
+       age^2 缩放: NHANES 用 /1000，另两层用 /100，计划写 /100
+
+B4 | bootstrap 按人聚类重采样
+   位置: evaluate.py 的 bootstrap_ci
+   现状: 重采样的是"对标签"而非患者，无法表示抽样不确定性
+   已做: 0/0 不再伪造零宽区间（全 uninformative → (None, None)）
+   待做: 把患者 ID 贯穿到结果表并按人聚类
+   另注: 全 replicated 仍给 (1.0, 1.0)，这是百分位法在边界上的固有性质，
+         要修需换 BCa 或 Wilson 区间
+
+B5 | 分离 / 准分离处理
+   位置: evaluate.py run_pairs 的拟合段
+   已做: 移除全局警告压制、加 fit.converged 检查、except 记录异常类型
+   待做: 完美分离时用 Firth 或标 separation 状态并剔除
+         现会静默变成 uninformative（或准分离时伪 replicated）
+
+B6 | svyglm 与分层
+   位置: 全仓库无 svyglm / survey / strata / PSU 代码
+   计划: analysis_plan 第 6 节要求 R survey 为确证标准，并给出降级路径
+   待做: 实现 R 路径；或按第 6 节明确声明"未校正 design effect"的局限
+   现状: mean-1 freq_weights ≈ 未加权 SE，df_resid = n，77 倍 SE 差异被归一化掩盖
+
+B7 | direction_audit 接线并强制阻断
+   位置: evaluate.py 的 direction_audit
+   已做: 限定证据级 A；保护性方向不再计入"反向"
+   待做: 它从未被调用；返回 True 时须中止 headline 产出并写 state.blocked
+   背景: 现有 NHANES 数据恰有 2 个 A 级对 OR<1，隔离条件已满足却从未执行

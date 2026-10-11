@@ -79,9 +79,25 @@ def outc(d):
     o["glaucoma_selfreport"] = (glc == 1).astype(float).where(glc.notna())
     return o
 
-def bh(p):
-    p = p.fillna(1.0)
-    return (p * len(p) / p.rank(method="first")).clip(upper=1.0)
+def fdr_bhy(p):
+    """Benjamini-Yekutieli step-up FDR（analysis_plan.md §7），含单调化。
+
+    审核 141：原 `p*n/rank` 缺累积最小值步 → q 非单调；审核 F5：原非 BHY；
+    审核 148：原 `fillna(1.0)` 掩盖退化拟合的 NaN p。
+    """
+    p = pd.Series(p).astype(float)
+    q = pd.Series(np.nan, index=p.index, dtype=float)
+    pv = p.dropna()
+    n = len(pv)
+    if n:
+        order = pv.sort_values(kind="mergesort")
+        c_n = float(np.sum(1.0 / np.arange(1, n + 1)))
+        ranked = order.to_numpy() * n * c_n / np.arange(1, n + 1)
+        ranked = np.minimum.accumulate(ranked[::-1])[::-1]
+        q.loc[order.index] = np.clip(ranked, 0.0, 1.0)
+    return q
+
+bh = fdr_bhy  # 兼容旧调用点名称
 
 def main() -> int:
     d = build()

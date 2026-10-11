@@ -96,7 +96,7 @@
 | 实体 B | drug | 主要致盲眼病 |
 | 相互作用类型 | FDI | oxidative_stress, glycation_metabolic, inflammation_immune, vascular_perfusion, endocrine_hormonal, heavy_metal_toxicity, photochemical_uv |
 | 规则数 | 15 | 12 |
-| 数据源 | FDA + USDA + LiverTox | NHANES 1999-2008 本地原始库（生化/膳食/毒物 + VIX 客观视力 / OPXRET 视网膜分级 / VIQ 眼病问卷）[local_confirmed], KNHANES 1998-2024 本地 Rdata 全集 + 官方变量字典（眼科检查模块，1,686 眼科变量）[local_confirmed], 9 大老龄队列原始库（CHARLS/HRS/ELSA/SHARE/KLoSA/LASI/MHAS/CRELES/CLHLS）[local_confirmed], GBD 视觉库（GBD 2023 近视力丧失 / 2023 盲与视力损害 / 2021 55+ 暴露-结局）[local_confirmed] |
+| 数据源 | 本项目不使用（FDA/USDA/LiverTox 为 TongYuan 遗留） | NHANES 1999-2008 本地原始库（生化/膳食/毒物 + VIX 客观视力 / OPXRET 视网膜分级 / VIQ 眼病问卷）[local_confirmed], KNHANES 1998-2024 本地 Rdata 全集 + 官方变量字典（眼科检查模块，1,686 眼科变量）[local_confirmed], 9 大老龄队列原始库（CHARLS/HRS/ELSA/SHARE/KLoSA/LASI/MHAS/CRELES/CLHLS）[local_confirmed], GBD 视觉库（GBD 2023 近视力丧失 / 2023 盲与视力损害 / 2021 55+ 暴露-结局）[local_confirmed] |
 | 文化/临床故事 | 药食同源 + 全球化营养学 | 多库跨文化验证：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（独立国家）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差；首个可解释的暴露组×眼病风险筛查 agent（暴露→机制→眼病→证据等级 全链溯源） |
 | 目标期刊 | Nutrients | Ophthalmology（IF 8+ 档候选；Phase 2 期刊适配检查后最终锁定） |
 | 患者人群 | general + high-risk subgroups | diabetic, hypertensive, rural_china, multi_country |
@@ -176,11 +176,15 @@ exposure_id,exposure_name,aliases,category,active_mechanisms,flags,evidence_sour
 **结构**（`data/seed/evidence_chunks.jsonl`）：复用 TongYuan `EvidenceChunk` schema。
 
 **来源优先级**：
-1. **Level A**（最高）：监管标签（FDA / NMPA）
-2. **Level B**：LiverTox / NCCIH / EFSA
-3. **Level C**：PubMed RCT 与系统综述
-4. **Level D**：体外 PK 研究
-5. **Level E**：病例报告
+1. **Level A**（最高）：监管标签 / 指南（FDA / NMPA / AAO PPP 等）
+2. **Level B**：系统综述与 meta 分析
+3. **Level C**：原创研究（队列 / RCT / 机制研究）
+4. **Level D**：体外 / 动物研究
+5. **Level E**：机制推断与竞品文献
+
+> 审核 102：以上为 `src/huiyan_agent/evidence_store.py:21` **实际使用**的定义（检索权重 A5/B4/C3/D2/E1）。
+> 截至本版：`configs/rules.yaml` 的 25 条引用中**没有一条是指南**——Level A 的 3 条规则
+> （r10/r11/r13）实际都由系统综述 / meta 分析支撑；Level D 从未使用。修订前正文的定义与此不一致。
 
 **PubMed 检索词模板**：
 - `(exposom* OR "risk factor*") AND (cataract OR glaucoma OR "macular degeneration" OR retinopathy)`（本项目检索式）
@@ -188,22 +192,24 @@ exposure_id,exposure_name,aliases,category,active_mechanisms,flags,evidence_sour
 
 ---
 
-## 4. 规则引擎设计（12 条候选规则）
+## 4. 规则引擎设计（21 条规则，见 `configs/rules.yaml`）
 
-> 风格与 TongYuan `configs/rules.yaml` 完全一致，YAML 配置，引擎代码零改动。
+> 风格沿用 TongYuan `configs/rules.yaml`；但**引擎并非零改动**：暴露×眼病域需要
+> `direction`（保护性关联）、`negative_control`（阴性对照）与 `evidence_level`（加载期校验）
+> 三个字段，均在 `src/huiyan_agent/risk_rules.py` 中新增。
 
 ### 4.1 规则列表（草稿，需 Phase 2 后最终确定）
 
 | # | 规则 ID | 严重度 | 机制 | 触发条件 |
 |---:|---|---|---|---|
-| 1 | cyp3a4_inhibition | high | pharmacokinetic | entity_a: cyp3a4_inhibitor × entity_b: cyp3a4_substrate |
+| 1 | r10_smoking_x_cataract | high | oxidative_stress | entity_a: current_smoking × entity_b: cataract_any |
 | ... | | | | |
 
 （完整规则见 `configs/rules.yaml` 与 `docs/rule_rationale.md`）
 
 ### 4.2 患者因素规则
 
-- `liver_disease`：与 hepatotoxic 实体叠加升级
+- `diabetes` / `hypertension` / `chronic_kidney_disease`：命中即上调一级（见 `configs/rules.yaml` 的 `patient_factor_rules`）
 - `elderly`：≥ 65 岁，high 风险信号维持
 - ...
 
@@ -392,7 +398,7 @@ exposure_id,exposure_name,aliases,category,active_mechanisms,flags,evidence_sour
 - [ ] **T1.3** 构建 `data/seed/evidence_chunks.jsonl`（250+ 条证据）
   - **Subagent C1（Explore）**：PubMed E-utilities 检索
   - **Subagent C2（Explore）**：FDA DailyMed 抓取
-  - **Subagent C3（Explore）**：LiverTox / NCCIH 抓取
+  - **Subagent C3（Explore）**：证据库抓取（PubMed efetch 已落地；指南/监管源**尚未抓取**）
   - verify: 证据级别分布合理；至少 50 条 Level A/B
 
 ### Phase 2：规则引擎（预计 3 天）

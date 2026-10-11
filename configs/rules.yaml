@@ -1,5 +1,5 @@
 # 慧眼 huiyan rule engine configuration — Phase 3 v2 (adjudicated 2026-10-11).
-# 21 rules: evidence A4 / B14 / C3; 7 mechanisms all covered.
+# 21 rules: evidence A3 / B15 / C3; 7 mechanisms all covered.
 # Flag taxonomy matches `flags` columns in data/seed/entities_a.csv & entities_b.csv.
 # Author adjudication discipline (2026-10-11):
 #   1) risk_type MUST come from the 7-mechanism list (config interaction_mechanisms).
@@ -18,7 +18,7 @@ risk_levels:
   unknown: 0
 
 rules:
-  # ===== oxidative_stress =====
+  # ===== inflammation_immune（r01；审核 C11 修正：引用机制为 NLRP3 炎症小体）=====
   - id: r01_uric_acid_x_cataract
     severity: low
     risk_type: inflammation_immune   # C11 fix: citation mechanism is NLRP3 inflammasome
@@ -70,22 +70,20 @@ rules:
     recommendation: HbA1c 持续升高伴眼底缺血征象者应尽早转诊视网膜专科评估 PDR 风险。
     citations:
       - source_type: literature
-        ref: "10.3390/ijms26114992"
-      - source_type: literature
-        ref: "10.1002/kjm2.70200"  # Glycemic control & DR progression (PubMed verified)
+        ref: "10.1167/iovs.17-22804"  # IOVS 2017: HbA1c modifies PDR risk (cohort)
 
-  - id: r05_dyslipidemia_x_amd_early
+  - id: r05_dyslipidemia_x_amd_late
     severity: medium
     risk_type: oxidative_stress
     entity_a_flags: [dyslipidemia]
-    entity_b_flags: [amd_early]
+    entity_b_flags: [amd_late]
     evidence_level: B
     direction: risk_up
-    rationale: AMD 风险因素更新 meta 分析显示血脂异常与早期 AMD 关联（脂质氧化/玻璃膜疣沉积通路）。
-    recommendation: 血脂异常人群建议纳入 AMD 常规眼底检查。
+    rationale: 血脂异常与新生血管性（晚期）AMD 相关（脂质氧化/脉络膜新生血管通路）。改 B 侧为 amd_late 以匹配证据实际支持的疾病阶段（审核发现：现有证据不支持早期 AMD 特异性）。
+    recommendation: 血脂异常人群建议纳入 AMD 常规眼底检查（含晚期 AMD 筛查）。
     citations:
       - source_type: literature
-        ref: "10.1097/MD.0000000000041599"
+        ref: "10.62347/QJPQ2923"  # IJCLEP 2025: dyslipidemia & neovascular AMD (case-control)
 
   - id: r06_crp_x_amd_late
     severity: medium
@@ -107,11 +105,13 @@ rules:
     entity_b_flags: [dr_npdr]
     evidence_level: B
     direction: risk_up
-    rationale: 维生素 D 缺乏与糖尿病视网膜病变相关（抗炎/免疫调节机制综述）。
+    rationale: 维生素 D 缺乏与糖尿病视网膜病变呈 meta 分析级负相关（抗炎/免疫调节通路）。
     recommendation: 糖尿病伴维 D 缺乏者建议纠正缺乏并加强眼底监测。
     citations:
       - source_type: literature
-        ref: "10.3390/ijms241512014"
+        ref: "10.3390/nu9030307"  # Nutrients 2017: vitD deficiency & DR meta-analysis
+      - source_type: literature
+        ref: "10.1016/j.jcjo.2017.09.026"  # Can J Ophthalmol 2017 meta-analysis
 
   - id: r08_low_antioxidant_x_cataract
     severity: medium
@@ -137,9 +137,9 @@ rules:
     recommendation: 建议 AMD 高危人群提高地中海饮食依从性。
     citations:
       - source_type: literature
-        ref: "10.1016/j.ophtha.2018.09.032"
+        ref: "10.1016/j.ophtha.2018.08.006"  # Ophthalmology 2019: EYE-RISK consortium, MedDiet & incident advanced AMD
       - source_type: literature
-        ref: "10.3945/ajcn.115.111047"  # MedDiet, genetic susceptibility & progression to advanced AMD (AJCN 2015)
+        ref: "10.3945/ajcn.115.111047"  # AJCN 2015: MedDiet, genetic susceptibility & progression to advanced AMD
 
   - id: r10_smoking_x_cataract
     severity: high
@@ -165,7 +165,7 @@ rules:
     recommendation: 吸烟者建议戒烟并行 AMD 风险评估。
     citations:
       - source_type: literature
-        ref: "10.1097/MD.0000000000041599"
+        ref: "10.1097/MD.0000000000041599"  # Medicine 2025: AMD risk factors updated meta
 
   - id: r12_alcohol_x_cataract
     severity: medium
@@ -178,9 +178,7 @@ rules:
     recommendation: 建议限制饮酒并定期评估晶体状态。
     citations:
       - source_type: literature
-        ref: "10.1111/ceo.13892"
-      - source_type: literature
-        ref: "10.1016/j.ophtha.2006.07.046"  # Alcohol consumption & risk of cataract extraction (Ophthalmology 2007 cohort)
+        ref: "10.1016/j.ophtha.2006.07.046"  # Ophthalmology 2007: alcohol & cataract extraction, prospective cohort
 
   - id: r13_bmi_x_cataract
     severity: high
@@ -261,9 +259,9 @@ rules:
     recommendation: 户外强日照人群建议佩戴防紫外线眼镜。
     citations:
       - source_type: literature
-        ref: "10.1001/jama.2025.1597"
+        ref: "10.1097/01.ede.0000086881.84657.98"  # Epidemiology 2003: sun exposure & nuclear cataract (cohort)
       - source_type: literature
-        ref: "10.1097/01.ede.0000086881.84657.98"  # Sun exposure as risk factor for nuclear cataract (Epidemiology 2003)
+        ref: "10.1136/oem.2005.022343"  # Occup Environ Med 2006: occupational sunlight & cataract
 
   # ===== inflammation_immune / diet (adjudicated r19, C-level) =====
   - id: r19_proinflam_diet_x_dr_npdr

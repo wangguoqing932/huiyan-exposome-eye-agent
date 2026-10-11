@@ -44,7 +44,7 @@ panels:
             duration_ms: 2300
             output: "M (medium)"
           - lane: LLM Arbiter
-            label: "GPT-4 top-10% escalation"
+            label: "第二客户端升档（最高严重度档）"
             duration_ms: 1800
             output: "H (high, confidence 0.83)"
         arrows:
@@ -69,7 +69,7 @@ panels:
     y_axis: phase
     stacks: [rule_engine, lightrag_kg, llm_arbiter]
     annotations:
-      - "Median across n=200 Phase 3 cases"
+      - "Median across intval-nhanes cases (n 以 .executor/progress.json 为准)"
 
   - id: panel_c_path_diversity
     role: supporting
@@ -174,8 +174,8 @@ legend:
   font_size_pt: 7
   items:
     - "Swim-lane colors correspond to architectural layers (per Figure 1)"
-    - "Durations are median across n=200 Phase 3 retrospective cases"
-    - "GPT-4 escalation triggers only on top-10% high-severity cases"
+    - "Durations are median across intval-nhanes cases (n 以 .executor/progress.json 为准)"
+    - "第二客户端升档仅作用于最高严重度档位（DualLLMClient；未配置 GPT 端点）"
 
 accessibility:
   alt_text: >-

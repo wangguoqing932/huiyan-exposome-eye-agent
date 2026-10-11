@@ -92,6 +92,7 @@ class RiskSignal(BaseModel):
     rationale: str
     recommendation: str
     matched_terms: dict[str, list[str]] = Field(default_factory=dict)
+    protective: bool = False  # True = 该规则声明 direction: risk_down（保护性关联），不参与风险等级
 
 
 class RiskAssessment(BaseModel):

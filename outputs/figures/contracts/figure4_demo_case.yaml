@@ -72,7 +72,7 @@ panels:
     visual_elements:
       - type: horizontal_flow
         nodes: [rules, top_k_evidence, llm_arbiter, risk_level, recommendation]
-        annotations: ["3 signals", "5 chunks", "DeepSeek primary / GPT-4 if high", "HIGH", "avoid exposure + biomonitoring"]
+        annotations: ["3 signals", "5 chunks", "DeepSeek primary / second client if high", "HIGH", "avoid exposure + biomonitoring"]
 
 backend:
   value: python
@@ -158,7 +158,7 @@ legend:
   font_size_pt: 7
   items:
     - "Levels: A=regulatory, B=meta-analysis, C=original study, D=in vitro/animal, E=mechanism inference"
-    - "Case selection: representative high-risk case from Phase 3 retrospective set"
+    - "Case selection: representative high-risk case from the internal validation set (intval-nhanes)"
 
 accessibility:
   alt_text: >-

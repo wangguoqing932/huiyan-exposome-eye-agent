@@ -39,13 +39,13 @@ panels:
         to: "Normalization"
       - type: box
         label: "Rule Engine (YAML)"
-        annotation: "22 deterministic rules"
+        annotation: "21 deterministic rules"
       - type: box
         label: "LightRAG retrieval"
         annotation: "risk-guided, top-k"
       - type: box
         label: "LLM Arbiter"
-        annotation: "DeepSeek + GPT-4"
+        annotation: "DeepSeek 主客户端（+DualLLMClient 第二客户端）"
       - type: box
         label: "Structured Report"
         position: right
@@ -162,9 +162,9 @@ legend:
   position: below
   font_size_pt: 7
   items:
-    - "Rule layer: 22 deterministic rules in configs/rules.yaml"
+    - "Rule layer: 21 deterministic rules in configs/rules.yaml"
     - "KG layer: LightRAG graph over evidence chunks"
-    - "Arbiter layer: DeepSeek primary, GPT-4 for top-10% high-risk pairs"
+    - "Arbiter layer: DeepSeek 主客户端 + DualLLMClient 第二客户端（未配置 GPT 端点）"
 
 # ─────────────────────────────────────────────────────────────
 # ACCESSIBILITY

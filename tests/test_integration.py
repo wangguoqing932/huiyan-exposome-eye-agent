@@ -21,13 +21,18 @@ def test_full_pipeline():
     assert result.risk_level.value in ("low","medium","high")
 
 def test_abstention():
+    """审核 97：无规则覆盖必须弃权（UNKNOWN），不得报 LOW。
+
+    此前本测试断言 == "low"，把「未评估」固化成「无相互作用」。
+    """
     from huiyan_agent.normalize import resolve_entity_a, resolve_entity_b
     from huiyan_agent.risk_rules import load_rules, match_rules, assess
     rules = load_rules()
     a = resolve_entity_a("blood_mercury")
     b = resolve_entity_b("cataract_any")
-    if a and b:
-        sigs = match_rules(rules, a, b)
-        r = assess(sigs)
-        assert r.risk_level.value == "low"
-        assert r.confidence == 0.0
+    assert a and b, "注册表解析失败，弃权测试不成立"
+    sigs = match_rules(rules, a, b)
+    assert sigs == [], "汞×白内障不应命中任何规则（类型 1 结构性空白）"
+    r = assess(sigs)
+    assert r.risk_level.value == "unknown", "无规则覆盖必须返回 unknown（弃权）"
+    assert r.confidence == 0.0

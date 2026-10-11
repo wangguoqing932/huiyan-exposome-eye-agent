@@ -9,16 +9,26 @@ def test_rules_load():
     rules = load_rules()
     assert len(rules) == 21
 
-def test_severity_c_low():
+def test_severity_matches_evidence_level():
+    """审核 F6/F25：C→low 不变量此前从未被断言。
+
+    原测试以 `hasattr(r, "_data")` 为门槛，而 Rule 没有 `_data` 属性，循环体永不执行。
+    """
+    from huiyan_agent.risk_rules import _EVIDENCE_TO_SEVERITY
     rules = load_rules()
+    assert rules, "rules.yaml 未加载到规则"
     for r in rules:
-        if hasattr(r, "_data") and r._data.get("evidence_level") == "C":
-            assert r.severity == "low", f"{r.id}: C should be low"
+        assert r.direction in ("risk_up", "risk_down"), r.id
+        assert r.severity == _EVIDENCE_TO_SEVERITY[r.evidence_level], (
+            f"{r.id}: severity={r.severity} 与 evidence_level={r.evidence_level} 不符"
+        )
 
 def test_mechanism_coverage():
-    rules = load_rules()
-    mech = set(r.risk_type for r in rules)
-    assert len(mech) >= 7
+    """7 机制：既要求全覆盖，也要求**不越界**（原测试只数个数）。"""
+    from huiyan_agent.risk_rules import canonical_mechanisms
+    mech = set(canonical_mechanisms())
+    used = set(r.risk_type for r in load_rules())
+    assert used == mech, f"未覆盖: {sorted(mech - used)}；越界: {sorted(used - mech)}"
 
 def test_smoking_amd():
     a = resolve_entity_a("current_smoking")

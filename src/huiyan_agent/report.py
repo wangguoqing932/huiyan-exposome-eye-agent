@@ -1,19 +1,24 @@
-"""report — 慧眼结构化筛查报告生成（markdown，FDI 域原生）。
+"""report — 慧眼结构化筛查报告生成（markdown，暴露×眼病域）。
 
 报告对象为 SafetyReport.report_text；所有分级标签、免责声明均为暴露×眼病
-相互作用域原生文案（与 app/streamlit_app.py 的 RISK_COLORS 分级一致）。
+相互作用域文案（与 app/streamlit_app.py 的 RISK_COLORS 分级一致）。
 """
 from __future__ import annotations
 
 from .schemas import EvidenceChunk, RiskAssessment, RiskLevel
 
-# 分级 → 中文标签（FDI 语境：规避 / 限量错时 / 未见显著 / 证据不足）
+# 分级 → 中文标签（暴露×眼病语境）
+# 审核 109：原文案继承自食物-药物相互作用（FDI）骨架，对 HbA1c / BMI / PM2.5 / UV
+# 等暴露无意义（「限量、错时服用」「咨询临床药师」），已替换为域内可读文案。
 LEVEL_LABELS: dict[RiskLevel, str] = {
-    RiskLevel.HIGH: "高风险 — 建议规避该组合并咨询眼科/临床药师",
-    RiskLevel.MEDIUM: "中等风险 — 建议限量、错时服用并加强监测",
-    RiskLevel.LOW: "低风险 — 目前证据未见显著相互作用",
-    RiskLevel.UNKNOWN: "证据不足 — 建议关注后续研究并随访",
+    RiskLevel.HIGH: "高风险 — 建议优先干预该暴露并转诊眼科评估",
+    RiskLevel.MEDIUM: "中等风险 — 建议加强监测，并在眼科随访时一并评估",
+    RiskLevel.LOW: "低风险 — 已评估该组合，现有规则未提示显著风险",
+    RiskLevel.UNKNOWN: "未评估 — 本系统未覆盖该组合，不能据此判断无风险",
 }
+
+# 全部命中信号均为保护性关联时的标签（审核 98/128）
+_PROTECTIVE_LABEL = "保护性关联 — 现有证据提示该暴露与更低风险相关（非风险信号）"
 
 _DISCLAIMER = (
     "本报告为说明书/指南/文献证据的可解释筛查输出，仅供临床决策支持，"
@@ -41,7 +46,10 @@ def build_report(
     registered: tuple[bool, bool] = (True, True),
 ) -> str:
     """组装 markdown 筛查报告。registered=(A是否在册, B是否在册)。"""
-    level_label = LEVEL_LABELS[assessment.risk_level]
+    all_protective = bool(assessment.signals) and all(
+        getattr(s, "protective", False) for s in assessment.signals
+    )
+    level_label = _PROTECTIVE_LABEL if all_protective else LEVEL_LABELS[assessment.risk_level]
     factors = "、".join(patient_factors) if patient_factors else "无"
 
     lines: list[str] = []
@@ -66,11 +74,15 @@ def build_report(
     # ── 触发规则 ──
     lines.append(f"## 触发规则（{len(assessment.signals)} 条）")
     if not assessment.signals:
-        lines.append("未触发任何规则：当前规则库在该暴露×眼病组合上无可识别的相互作用机制。")
+        lines.append(
+            "**本系统未覆盖该组合**：规则库中没有针对该暴露×眼病组合的规则，"
+            "因此**没有做任何评估**——这不等于「无相互作用」，也不等于低风险。"
+        )
     else:
         order = {"high": 0, "medium": 1, "low": 2, "unknown": 3}
         for sig in sorted(assessment.signals, key=lambda s: order.get(s.risk_level.value, 9)):
-            lines.append(f"### [{sig.risk_level.value.upper()}] `{sig.rule_id}` · {sig.risk_type}")
+            tag = "保护性" if getattr(sig, "protective", False) else sig.risk_level.value.upper()
+            lines.append(f"### [{tag}] `{sig.rule_id}` · {sig.risk_type}")
             lines.append(f"- **依据**: {sig.rationale}")
             if sig.recommendation:
                 lines.append(f"- **建议**: {sig.recommendation}")
