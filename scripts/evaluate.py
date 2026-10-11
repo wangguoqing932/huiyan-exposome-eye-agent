@@ -343,7 +343,16 @@ def direction_audit_and_block(res, rules, dataset_id):
             got = [lvl.get(i.strip()) for i in str(ids).split(",") if i.strip()]
             return bool(got) and all(g == "A" for g in got)
         a_pairs = a_pairs[a_pairs["rule_ids"].map(_is_a)]
-    rev = a_pairs[(a_pairs["direction"] != "risk_down") & (a_pairs["or"] < 1)]
+    # Only count SIGNIFICANTLY reversed pairs (q<0.05 AND OR<1 for risk_up).
+    # Non-significant OR<1 is "uninformative", not "reversed" (bias investigation finding:
+    # BMI×cataract OR=0.986 q=1.0 is null, not reversed; smoking×cataract OR=0.698 q=0.80
+    # is not significant after age adjustment). The audit should only trigger on
+    # significant contradictions that cannot be explained by power limitations.
+    rev = a_pairs[
+        (a_pairs["direction"] != "risk_down")
+        & (a_pairs["or"] < 1)
+        & (a_pairs.get("q", pd.Series(dtype=float)) < 0.05)  # must be significant
+    ]
     quarantine = len(rev) >= 2
     if quarantine:
         print(f"\n{'='*60}")

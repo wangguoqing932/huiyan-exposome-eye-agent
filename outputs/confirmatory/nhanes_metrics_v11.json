@@ -1,0 +1,19 @@
+{
+  "rule_pairs_tested": 8,
+  "replicated": 1,
+  "contradicted": 0,
+  "uninformative": 7,
+  "separation": 0,
+  "precision_rule": 1.0,
+  "precision_rule_ci95": [
+    1.0,
+    1.0
+  ],
+  "coverage": 0.154,
+  "uncovered_significant": 6,
+  "uncovered_pairs": 44,
+  "negative_control_pairs": 1,
+  "negative_control_outcome": {
+    "uninformative": 1
+  }
+}
