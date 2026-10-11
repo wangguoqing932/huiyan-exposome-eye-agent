@@ -1,0 +1,12 @@
+{
+  "id": "intval-nhanes",
+  "role": "internal_validation",
+  "source_type": "public_database",
+  "source_ref": "NHANES 1999-2008 本地原始库（5 周期；暴露：生化+膳食+毒物；结局：VIX 客观视力 / OPXRET 视网膜分级 / VIQ 自报白内障-青光眼-AMD）",
+  "expected_size": 400,
+  "ground_truth_method": "database_outcome",
+  "independence_axis": "source",
+  "enabled": true,
+  "notes": "分析单元=暴露x眼病 对(pair) 叠加人群层关联; 预测目标=agent 风险等级是否与库内实际关联一致; case 定义=该暴露指标(连续变量按四分位或临床切点)与眼病结局的加权 logistic 回归 OR 显著且方向与规则一致; 阳性阴性=约 400 对,含中性对以评特异度; 本集角色=内部验证,出内部性能 灵敏度/特异度/F1",
+  "created_date": "2026-10-11"
+}

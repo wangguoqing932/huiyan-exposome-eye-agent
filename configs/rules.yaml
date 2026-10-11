@@ -1,0 +1,321 @@
+# 慧眼 huiyan rule engine configuration — Phase 3 v2 (adjudicated 2026-10-11).
+# 21 rules: evidence A4 / B14 / C3; 7 mechanisms all covered.
+# Flag taxonomy matches `flags` columns in data/seed/entities_a.csv & entities_b.csv.
+# Author adjudication discipline (2026-10-11):
+#   1) risk_type MUST come from the 7-mechanism list (config interaction_mechanisms).
+#   2) every rule needs a SECOND-source DOI at executor phase3 (verify_rule_citations, dual-source).
+#   3) study-design gate: citations are classified (guideline/meta/cohort/mechanism/prevalence/genetic/surgery-mgmt)
+#      and must match the rule claim type — prevalence/surgery-mgmt/genetic-only citations are rejected.
+#   4) nested-outcome semantics = plan-2: multi-flag rules allowed; report takes max(severity) with
+#      most-specific-first display; pair-level metrics count each (A,B) pair independently.
+#   5) abstention metrics evaluated ONLY on type-2 gaps (physical_activity x glaucoma_*);
+#      type-1 gaps (mercury_exposure, physical_inactivity x any B) report coverage only.
+
+risk_levels:
+  high: 3
+  medium: 2
+  low: 1
+  unknown: 0
+
+rules:
+  # ===== oxidative_stress =====
+  - id: r01_uric_acid_x_cataract
+    severity: low
+    risk_type: oxidative_stress
+    entity_a_flags: [uric_acid_elevated]
+    entity_b_flags: [cataract_any]
+    evidence_level: C
+    direction: risk_up
+    rationale: 尿酸驱动 NLRP3 炎症小体激活，诱发晶状体上皮细胞衰老与白内障形成（机制级证据）。
+    recommendation: 高尿酸血症人群建议评估晶状体状态并定期复查视力。
+    citations:
+      - source_type: literature
+        ref: "10.1038/s41420-024-01900-z"
+
+  - id: r02_hyperglycemia_x_cataract
+    severity: medium
+    risk_type: glycation_metabolic
+    entity_a_flags: [hyperglycemia]
+    entity_b_flags: [cataract_any]
+    evidence_level: B
+    direction: risk_up
+    rationale: 2 型糖尿病人群的白内障风险因素系统综述显示高血糖状态与晶体混浊发生/进展相关（山梨醇通路与糖基化）。
+    recommendation: 糖尿病/高血糖人群应定期接受白内障筛查。
+    citations:
+      - source_type: literature
+        ref: "10.1002/dmrr.3073"
+
+  - id: r03_hba1c_x_retinopathy_any
+    severity: high
+    risk_type: glycation_metabolic
+    entity_a_flags: [hba1c_elevated]
+    entity_b_flags: [retinopathy_any]
+    evidence_level: B
+    direction: risk_up
+    rationale: 血糖控制水平与 DR 发生和进展密切相关（DCCT/UKPDS 传统；血糖控制与变异综述）。
+    recommendation: HbA1c 升高者应按糖尿病视网膜病变指南定期眼底检查。
+    citations:
+      - source_type: literature
+        ref: "10.1007/s13300-017-0345-5"
+
+  - id: r04_hba1c_x_dr_pdr
+    severity: high
+    risk_type: vascular_perfusion
+    entity_a_flags: [hba1c_elevated]
+    entity_b_flags: [dr_pdr]
+    evidence_level: C
+    direction: risk_up
+    rationale: 持续高血糖致视网膜缺血缺氧，上调 VEGF 介导新生血管形成，驱动增生性 DR（机制综述；关联级二源待补）。
+    recommendation: HbA1c 持续升高伴眼底缺血征象者应尽早转诊视网膜专科评估 PDR 风险。
+    citations:
+      - source_type: literature
+        ref: "10.3390/ijms26114992"
+
+  - id: r05_dyslipidemia_x_amd_early
+    severity: medium
+    risk_type: oxidative_stress
+    entity_a_flags: [dyslipidemia]
+    entity_b_flags: [amd_early]
+    evidence_level: B
+    direction: risk_up
+    rationale: AMD 风险因素更新 meta 分析显示血脂异常与早期 AMD 关联（脂质氧化/玻璃膜疣沉积通路）。
+    recommendation: 血脂异常人群建议纳入 AMD 常规眼底检查。
+    citations:
+      - source_type: literature
+        ref: "10.1097/MD.0000000000041599"
+
+  - id: r06_crp_x_amd_late
+    severity: medium
+    risk_type: inflammation_immune
+    entity_a_flags: [crp_elevated]
+    entity_b_flags: [amd_late]
+    evidence_level: B
+    direction: risk_up
+    rationale: 血清 CRP 与 AMD 的 meta 分析显示全身炎症与晚期 AMD 风险升高相关。
+    recommendation: CRP 持续升高者建议关注黄斑健康（Amsler/眼底检查）。
+    citations:
+      - source_type: literature
+        ref: "10.1016/j.survophthal.2010.08.007"
+
+  - id: r07_vitamind_x_dr_npdr
+    severity: medium
+    risk_type: endocrine_hormonal
+    entity_a_flags: [vitamin_d_deficiency]
+    entity_b_flags: [dr_npdr]
+    evidence_level: B
+    direction: risk_up
+    rationale: 维生素 D 缺乏与糖尿病视网膜病变相关（抗炎/免疫调节机制综述）。
+    recommendation: 糖尿病伴维 D 缺乏者建议纠正缺乏并加强眼底监测。
+    citations:
+      - source_type: literature
+        ref: "10.3390/ijms241512014"
+
+  - id: r08_low_antioxidant_x_cataract
+    severity: medium
+    risk_type: oxidative_stress
+    entity_a_flags: [low_antioxidant_intake]
+    entity_b_flags: [cataract_any]
+    evidence_level: B
+    direction: risk_up
+    rationale: 抗氧化营养素（维C/维E/类胡萝卜素）摄入不足增加晶体氧化损伤与白内障风险。
+    recommendation: 膳食抗氧化摄入不足者建议调整膳食结构并评估晶体状态。
+    citations:
+      - source_type: literature
+        ref: "10.3109/10715762.2013.777155"
+
+  - id: r09_mediterranean_diet_x_amd_late
+    severity: medium
+    risk_type: oxidative_stress
+    entity_a_flags: [mediterranean_diet]
+    entity_b_flags: [amd_late]
+    evidence_level: B
+    direction: risk_down
+    rationale: 地中海饮食依从性与晚期 AMD 进展风险下降相关（Ophthalmology 队列证据）。
+    recommendation: 建议 AMD 高危人群提高地中海饮食依从性。
+    citations:
+      - source_type: literature
+        ref: "10.1016/j.ophtha.2018.09.032"
+
+  - id: r10_smoking_x_cataract
+    severity: high
+    risk_type: oxidative_stress
+    entity_a_flags: [current_smoking]
+    entity_b_flags: [cataract_any]
+    evidence_level: A
+    direction: risk_up
+    rationale: 吸烟为白内障确立因果危险因素（MR 系统综述确认因果角色）。
+    recommendation: 现在吸烟者建议戒烟并定期白内障筛查。
+    citations:
+      - source_type: literature
+        ref: "10.1016/j.ebiom.2022.104154"
+
+  - id: r11_smoking_x_amd_late
+    severity: high
+    risk_type: oxidative_stress
+    entity_a_flags: [current_smoking]
+    entity_b_flags: [amd_late]
+    evidence_level: A
+    direction: risk_up
+    rationale: 吸烟是晚期 AMD 的确立危险因素（AMD 风险因素 meta 分析）。
+    recommendation: 吸烟者建议戒烟并行 AMD 风险评估。
+    citations:
+      - source_type: literature
+        ref: "10.1097/MD.0000000000041599"
+
+  - id: r12_alcohol_x_cataract
+    severity: medium
+    risk_type: oxidative_stress
+    entity_a_flags: [alcohol_intake]
+    entity_b_flags: [cataract_any]
+    evidence_level: B
+    direction: risk_up
+    rationale: 饮酒与白内障风险相关（白内障与全身病综述；剂量-反应关系待验证库检验）。
+    recommendation: 建议限制饮酒并定期评估晶体状态。
+    citations:
+      - source_type: literature
+        ref: "10.1111/ceo.13892"
+
+  - id: r13_bmi_x_cataract
+    severity: high
+    risk_type: glycation_metabolic
+    entity_a_flags: [bmi_high]
+    entity_b_flags: [cataract_any]
+    evidence_level: A
+    direction: risk_up
+    rationale: BMI 与年龄相关性白内障呈前瞻队列 meta 级正向关联（代谢/炎症通路）。
+    recommendation: 超重/肥胖人群建议体重管理并纳入白内障筛查。
+    citations:
+      - source_type: literature
+        ref: "10.1371/journal.pone.0089923"
+
+  # ===== heavy_metal_toxicity =====
+  - id: r14_lead_x_cataract
+    severity: medium
+    risk_type: heavy_metal_toxicity
+    entity_a_flags: [lead_exposure]
+    entity_b_flags: [cataract_any]
+    evidence_level: B
+    direction: risk_up
+    rationale: 美国成人队列显示铅暴露与白内障手术风险升高相关（NHANES 同库证据）。
+    recommendation: 血铅升高人群建议评估晶体状态并控制暴露来源。
+    citations:
+      - source_type: literature
+        ref: "10.1016/j.ijheh.2016.07.012"
+
+  - id: r15_cadmium_x_cataract
+    severity: medium
+    risk_type: heavy_metal_toxicity
+    entity_a_flags: [cadmium_exposure]
+    entity_b_flags: [cataract_any]
+    evidence_level: B
+    direction: risk_up
+    rationale: 同一美国成人队列显示镉暴露与白内障手术风险相关（氧化/晶体蛋白损伤机制）。
+    recommendation: 镉暴露人群建议评估晶体状态并控制暴露来源。
+    citations:
+      - source_type: literature
+        ref: "10.1016/j.ijheh.2016.07.012"
+
+  # ===== vascular_perfusion / air =====
+  - id: r16_pm25_x_glaucoma_iop_cdr
+    severity: medium
+    risk_type: vascular_perfusion
+    entity_a_flags: [pm25_exposure]
+    entity_b_flags: [glaucoma_iop_elevated, glaucoma_suspect_cdr]
+    evidence_level: B
+    direction: risk_up
+    rationale: PM2.5 经焦亡通路触发眼压升高与青光眼样视盘改变（机制证据；对应 B 侧为客观 IOP/CDR 条目）。
+    recommendation: 高 PM2.5 暴露人群建议监测眼压与视盘形态。
+    citations:
+      - source_type: literature
+        ref: "10.1186/s12989-021-00403-4"
+
+  - id: r17_pm25_x_amd_early
+    severity: medium
+    risk_type: inflammation_immune
+    entity_a_flags: [pm25_exposure]
+    entity_b_flags: [amd_early]
+    evidence_level: B
+    direction: risk_up
+    rationale: 环境空气污染与 AMD 的 meta 分析显示正向关联（系统性炎症/氧化通路）。
+    recommendation: 高污染暴露人群建议关注黄斑健康。
+    citations:
+      - source_type: literature
+        ref: "10.1186/s12886-024-03465-y"
+
+  # ===== photochemical_uv =====
+  - id: r18_uv_x_cataract
+    severity: high
+    risk_type: photochemical_uv
+    entity_a_flags: [uv_exposure]
+    entity_b_flags: [cataract_any]
+    evidence_level: A
+    direction: risk_up
+    rationale: 紫外线/日照暴露是皮质性与核性白内障的确立危险因素（光化学晶体蛋白损伤）。
+    recommendation: 户外强日照人群建议佩戴防紫外线眼镜。
+    citations:
+      - source_type: literature
+        ref: "10.1001/jama.2025.1597"
+
+  # ===== inflammation_immune / diet (adjudicated r19, C-level) =====
+  - id: r19_proinflam_diet_x_dr_npdr
+    severity: low
+    risk_type: inflammation_immune
+    entity_a_flags: [pro_inflammatory_diet]
+    entity_b_flags: [dr_npdr]
+    evidence_level: C
+    direction: risk_up
+    rationale: 膳食炎症指数与糖尿病视网膜病变相关（新题、证据量少；结果按证据级分层报告）。
+    recommendation: 糖尿病人群建议降低促炎饮食指数（减少加工肉/含糖饮料）。
+    citations:
+      - source_type: literature
+        ref: "10.1016/j.jnha.2025.100694"
+
+  # ===== vision impairment ladder (adjudication-4 option A) =====
+  - id: r20_smoking_x_vi_mod_severe
+    severity: medium
+    risk_type: oxidative_stress
+    entity_a_flags: [current_smoking]
+    entity_b_flags: [vision_impairment_moderate, vision_impairment_severe]
+    evidence_level: B
+    direction: risk_up
+    rationale: 吸烟（尿可替宁客观标志）与视力障碍发病相关（前瞻证据；severity 映射按原文 VI 定义核对）。
+    recommendation: 吸烟者建议戒烟并定期视力检查。
+    citations:
+      - source_type: literature
+        ref: "10.1038/s41598-020-79865-z"
+
+  - id: r21_pm25_x_vi_mod_severe
+    severity: medium
+    risk_type: vascular_perfusion
+    entity_a_flags: [pm25_exposure]
+    entity_b_flags: [vision_impairment_moderate, vision_impairment_severe]
+    evidence_level: B
+    direction: risk_up
+    rationale: 空气污染与视力障碍前瞻队列关联（绿地缓冲效应同文报告）。
+    recommendation: 高污染暴露人群建议定期视力评估。
+    citations:
+      - source_type: literature
+        ref: "10.1186/s12889-024-20853-7"
+
+# ===== Patient factor escalation rules (population subgroups) =====
+patient_factor_rules:
+  diabetes:
+    severity: high
+    matching_entity_a_flags: [hyperglycemia, hba1c_elevated]
+    matching_entity_b_flags: [retinopathy_any, dr_npdr, dr_pdr, cataract_any]
+    rationale: 糖尿病放大代谢类暴露对眼病的效应，规则输出上调一级。
+  hypertension:
+    severity: medium
+    matching_entity_a_flags: [pm25_exposure, dyslipidemia]
+    matching_entity_b_flags: [retinopathy_any, glaucoma_iop_elevated, glaucoma_suspect_cdr]
+    rationale: 高血压叠加血管灌注类暴露的视网膜/视盘风险。
+  chronic_kidney_disease:
+    severity: medium
+    matching_entity_a_flags: [uric_acid_elevated, lead_exposure, cadmium_exposure]
+    matching_entity_b_flags: [cataract_any, retinopathy_any]
+    rationale: 肾功能不全降低重金属/尿酸清除，放大暴露效应。
+  elderly:
+    severity: low
+    matching_entity_a_flags: []
+    matching_entity_b_flags: [cataract_any, amd_early, amd_late, vision_impairment_moderate, vision_impairment_severe]
+    rationale: 高龄放大年龄相关性眼病的暴露易感性。

@@ -1,0 +1,529 @@
+# 探针全标题清单（2026-10-11）
+# 探针D: ("environment-wide association"[tiab] OR "exposome-wide association"[tiab])  (n=228)
+# 探针E: exposome*[tiab] AND (eye[tiab] OR ocular[tiab] OR ophthalmic[tiab] OR vision[tiab] OR cataract*[tiab] OR glaucoma*[tiab] OR "macular degeneration"[tiab] OR "diabetic retinopathy"[tiab] OR "visual impairment"[tiab] OR "eye disease*"[tiab])  (n=44)
+# 探针F: (eye[tiab] OR ocular[tiab] OR ophthalmic[tiab] OR cataract*[tiab] OR glaucoma*[tiab] OR "macular degeneration"[tiab] OR "diabetic retinopathy"[tiab] OR "visual impairment"[tiab]) AND (risk prediction[tiab] OR prediction model[tiab] OR risk score[tiab]) AND (exposure*[tiab] OR environmental[tiab] OR lifestyle[tiab] OR metabolic[tiab])  (n=211)
+# 探针G: (eye[tiab] OR ocular[tiab] OR ophthalmic[tiab] OR cataract*[tiab] OR glaucoma*[tiab] OR "macular degeneration"[tiab] OR "diabetic retinopathy"[tiab] OR "visual impairment"[tiab]) AND (explainable[tiab] OR interpretable[tiab] OR rule-based[tiab] OR knowledge graph[tiab]) AND (exposure*[tiab] OR environmental[tiab] OR lifestyle[tiab])  (n=33)
+
+## 探针D 全标题
+42827112	2026	J Expo Sci Environ Epidemiol	Putting place into the exposome for human health. Comment on: 'Applying geographic information systems data linkages for an exposome-wide association study in the Personalized Environment and Genes Study'.	10.1038/s41370-026-00980-6
+42811779	2026	Alzheimers Dement	Exposome-wide association study and predictive risk score for incident Alzheimer's disease and related dementias.	10.1002/alz.71842
+42800676	2026	Asia Pac J Ophthalmol (Phila)	Risk factors of primary angle-closure glaucoma: An exposome-wide association study in the China Kadoorie Biobank.	10.1016/j.apjo.2026.100378
+42779169	2026	Brain Behav	Identifying Modifiable Factors and Their Joint Effect on Amyotrophic Lateral Sclerosis: A Prospective Cohort Study in the UK Biobank.	10.1002/brb3.71771
+42755098	2026	Eur J Prev Cardiol	Gene-environment interactions shape cytokine-mediated inflammation and cardiovascular risk.	10.1093/eurjpc/zwag435
+42736266	2026	Nat Commun	Column switching liquid chromatography dual mass spectrometry system for simultaneous untargeted metabolomics and targeted exposomics.	10.1038/s41467-026-76696-w
+42708724	2026	Anal Chem	Fast and Scalable Sample Preparation for Integrated Metabolome and Exposome-Wide Association Studies (MWAS/ExWAS).	10.1021/acs.analchem.6c03820
+42685600	2026	J Hazard Mater	Urinary biomarkers of emerging contaminants in relation to prevalent Parkinson's disease: An exploratory mixture and network toxicology study.	10.1016/j.jhazmat.2026.143462
+42660570	2026	Atherosclerosis	Mapping the modifiable exposome for ischemic stroke: association, causality, and preventive potential.	10.1016/j.atherosclerosis.2026.120693
+42658646	2026	Ann Work Expo Health	The occupational exposome and new-onset COPD: longitudinal analyses of two European cohorts.	10.1093/annweh/wxag065
+42656286	2026	Front Endocrinol (Lausanne)	The distribution of neonicotinoids and their metabolites in paired semen and urine samples and associations with male reproductive hormones.	10.3389/fendo.2026.1829662
+42607053	2026	PLoS One	Changes in multidrug-resistant Enterobacteriaceae features among patients in the emergency room during the COVID-19 Omicron variant pandemic.	10.1371/journal.pone.0355725
+42578605	2026	Int J Stroke	Factors associated with the presence, and longitudinal progression of, perivascular spaces: An exposome-wide analysis in the UK Biobank.	10.1177/17474930261479041
+42546188	2026	Proc Natl Acad Sci U S A	Mapping the exposome-microbiota-host axis for prenatal origins of infant health.	10.1073/pnas.2600701123
+42542102	2026	Environ Int	Exploring the exposome and unexplained variance in epigenetic ageing - Insights from a longitudinal twin study in adolescence and early adulthood.	10.1016/j.envint.2026.110430
+42531931	2026	J Hazard Mater	Geospatial-based neighborhood hazards and asthma in adults: Interaction with social vulnerability.	10.1016/j.jhazmat.2026.143083
+42462646	2027	Talanta	A novel targeted high-throughput workflow for serum chemical mixture profiling in population exposome-wide association studies.	10.1016/j.talanta.2026.130275
+42456504	2026	Environ Res	Corrigendum to "Revisiting the modifiable areal unit problem in the era of exposome-wide association studies: Assessing the performance of the CDC/ATSDR social vulnerability index at privacy-protecting spatial scales" [Environ. Res. (2026) 124912].	10.1016/j.envres.2026.125174
+42430891	2026	Environ Res	Corrigendum to "Revisiting the modifiable areal unit problem in the era of exposome-wide association studies: Assessing the performance of the CDC/ATSDR social vulnerability index at privacy-protecting spatial scales" [Environ. Res. (2026) 124912].	10.1016/j.envres.2026.125146
+42347379	2026	Toxics	Environmental Toxicant Exposure and Height Among Children and Adolescents.	10.3390/toxics14060481
+42257425	2026	Future Sci OA	Exposure to environmental toxicants and obstructive sleep apnea: a cross-sectional study.	10.1080/20565623.2026.2682474
+42229029	2026	Environ Int	Early life social and environmental exposures and all-cause hospital visits among children under five in southern Mozambique.	10.1016/j.envint.2026.110331
+42218929	2026	Environ Res	Revisiting the modifiable areal unit problem in the era of exposome-wide association studies: Assessing the performance of the CDC/ATSDR social vulnerability index at privacy-protecting spatial scales.	10.1016/j.envres.2026.124912
+42210260	2026	Environ Health	Relevance and challenges of exposome studies for environmental health research.	10.1186/s12940-026-01299-3
+42200542	2026	Environ Sci Technol	Vision for Exposomics-Scale Investigation: A Heuristic for Exposure-Wide Association Studies (ExWAS).	10.1021/acs.est.6c02553
+42157265	2026	Hum Genomics	The diabetes exposome: interplay of environmental and genetic determinants in diabetes.	10.1186/s40246-026-00987-y
+42140570	2026	Food Chem Toxicol	An exposome-wide association study on association between environmental toxicants and accelerated aging.	10.1016/j.fct.2026.116150
+42119379	2026	Ecotoxicol Environ Saf	Characterizing the impact of the environmental exposome on the oral microbiome and its role in mortality: An exposome-wide association study.	10.1016/j.ecoenv.2026.120226
+42090372	2026	PLoS One	Multilevel exposure to adversity across the life course and biological implications among urban postpartum women: A cohort study protocol.	10.1371/journal.pone.0348413
+42000579	2026	Environ Int	Early-life lipid programming: Environmental and biological drivers of neonatal cholesterol.	10.1016/j.envint.2026.110238
+41949820	2026	FASEB J	Exposure to Environmental Pollutants and Nonalcoholic Fatty Liver Disease: A Cross-Sectional Study.	10.1096/fj.202503029R
+41927563	2026	Sci Data	Personalized Environment and Genes Study (PEGS) Dataset-a resource for genomic, exposomic, and geospatial data.	10.1038/s41597-026-07011-x
+41867195	2026	medRxiv	Exploring the exposome and unexplained variance in biological ageing - insights from a longitudinal twin study in adolescence and early adulthood.	10.64898/2026.03.03.26347499
+41851348	2026	Nat Med	An atlas of exposome-phenome associations in health and disease risk.	10.1038/s41591-026-04266-0
+41734627	2026	Ecotoxicol Environ Saf	Environmental toxicant exposure and diabetes risk: An exposome-wide association study integrating mixture effects and molecular mechanisms.	10.1016/j.ecoenv.2026.119923
+41706454	2026	JAMA Netw Open	A Geographically Sensitive Neighborhood Exposome-Wide Association Study for Breast Cancer Survival.	10.1001/jamanetworkopen.2025.58256
+41692841	2026	Diabetologia	Geospatial clustering of type 1 diabetes in Sweden: a cohort study based on all residential locations from birth to diagnosis.	10.1007/s00125-026-06675-9
+41691951	2026	Environ Int	Computational standards and tools for exposome-wide association studies linking the human exposome with health outcomes.	10.1016/j.envint.2026.110117
+41627246	2026	Environ Sci Technol	Impact of Outdoor Environmental Exposome on Depressive Symptoms Among Children Aged 9-14 in China.	10.1021/acs.est.5c10618
+41524973	2026	Int J Biometeorol	An exposome-wide association study of hyperuricemia through a rural cohort study and to predict risk factors.	10.1007/s00484-025-03069-1
+41481468	2026	Proc Natl Acad Sci U S A	Identifying direct risk factors in UK Biobank via simultaneous Bayesian-frequentist model-averaged hypothesis testing using Doublethink.	10.1073/pnas.2514138122
+41421134	2026	Ecotoxicol Environ Saf	Exposome-wide association study of environmental toxicant exposure and insulin resistance: Findings from US National Health and Nutrition Examination Survey.	10.1016/j.ecoenv.2025.119594
+41407117	2026	J Affect Disord	Modifiable determinants of physical, mental and social well-being in Chinese adolescents: a national environment-wide association study.	10.1016/j.jad.2025.120879
+41389509	2026	Ecotoxicol Environ Saf	The association of environmental toxicants exposure with cardiovascular disease risk: A comprehensive analysis from population to molecular mechanism.	10.1016/j.ecoenv.2025.119562
+41380607	2026	Ecotoxicol Environ Saf	Exposome-wide association study of environmental toxicants and periodontitis among United States adults.	10.1016/j.ecoenv.2025.119544
+41329425	2025	J Autism Dev Disord	A Data-Driven Investigation of Environmental Correlates Associated With the Lived Experience of Autistic People.	10.1007/s10803-025-07127-w
+41295327	2025	Metabolites	Multiclass Assays for Measuring Environmental Chemical Mixture Exposure: Analytical Methodologies and Applications in Exposomics Research.	10.3390/metabo15110742
+41281807	2025	Exposome	Oculomics meets exposomics: a roadmap for applying multi-modal ocular biomarkers in precision environmental health research.	10.1093/exposome/osaf013
+41277303	2025	Clin Transplant	The Exposome Era in Kidney Transplantation: A New Frontier in Graft Outcomes and Precision Medicine.	10.1111/ctr.70384
+41204383	2025	Environ Microbiome	Perennial Kernza cropping promotes rhizosphere microbiome stability and endophyte recruitment compared to annual wheat.	10.1186/s40793-025-00794-3
+41107685	2025	Environ Geochem Health	Association of environmental factors and biological metrics with lung health: an environment-wide association study.	10.1007/s10653-025-02776-3
+41101673	2025	Environ Res	Exposome-wide associations and polyexposure risks of workplace chemical exposures on adult asthma: The Personalized Environment and Genes Study (PEGS).	10.1016/j.envres.2025.123137
+41071047	2025	Environ Sci Technol	Quantitative Exposomics Targeting over 200 Toxicants and Key Biomarkers at the Picomolar Level.	10.1021/acs.est.5c04458
+41061880	2025	Environ Res	Natural and built environments and heart failure risk: An exposome-wide analysis in the UK Biobank.	10.1016/j.envres.2025.123031
+41014650	2026	Talanta	Evaluating human serum for trace levels of lipophilic organic chemicals: A novel GC-(Q)Orbitrap methodology.	10.1016/j.talanta.2025.128897
+41001512	2025	medRxiv	An Exposome-Wide Interaction Study to Identify Hidden Environmental Factors Affecting Susceptible Populations: Application to Chemical-Social Vulnerability Interactions on Cognitive Function.	10.1101/2025.09.17.25335908
+40907863	2025	Environ Pollut	Associations of environmental toxicant exposure with adult sleep problems and the mediating roles of inflammation.	10.1016/j.envpol.2025.127061
+40902250	2025	Ecotoxicol Environ Saf	Environment-wide association study of cardiovascular-kidney-metabolic syndrome based on NHANES 2013-2016.	10.1016/j.ecoenv.2025.118993
+40854305	2025	JMIR Form Res	External Exposome Factors and Adverse Heart Failure Outcomes in the OneFlorida+ Network: Retrospective Cohort Study.	10.2196/71595
+40805232	2025	Cancers (Basel)	The Exposome Perspective: Environmental and Infectious Agents as Drivers of Cancer Disparities in Low- and Middle-Income Countries.	10.3390/cancers17152537
+40749540	2025	Environ Int	An exposomics analysis of 125 biomarkers of exposure to food contaminants and biomarkers of oxidative stress: a randomized cross-over chrononutrition trial of healthy adults.	10.1016/j.envint.2025.109682
+40729312	2025	PLoS One	Neighborhood environment and incident diabetes, a neighborhood environment-wide association study ('NE-WAS'): Results from the Hispanic Community Health Study/Study of Latinos (HCHS/SOL).	10.1371/journal.pone.0329282
+40580709	2025	Environ Int	Meet-in-the-middle meets multi-omics identifying molecular signatures of environmental drivers of childhood overweight.	10.1016/j.envint.2025.109630
+40472759	2025	Environ Int	Using mixture and exposome methods to assess the associations and interactions of chemical biomarkers with semen parameters.	10.1016/j.envint.2025.109568
+40440800	2025	J Autoimmun	Integrated analysis of polygenic and environmental risk scores for late-onset systemic lupus erythematosus.	10.1016/j.jaut.2025.103441
+40436089	2025	Environ Pollut	Exposome-wide association study of sex-steroid hormones in the U.S. general population: evaluation of complex mixture effects.	10.1016/j.envpol.2025.126533
+42358242	2025	Exposome	Determinants of body mass index during early life: findings from an exposome-wide association study with follow-up replication and Mendelian randomization analyses.	10.1093/exposome/osaf004
+40307849	2025	Hum Genomics	Advancing translational exposomics: bridging genome, exposome and personalized medicine.	10.1186/s40246-025-00761-6
+40298850	2025	Can J Cardiol	Modifiable Risk Factors and Attributable Burden of Cardiac Arrest: An Exposome-wide and Mendelian Randomization Analysis.	10.1016/j.cjca.2025.02.027
+40262223	2025	Cancer Epidemiol	Identifying environmental factors and biological metrics associated with cancer prevalence and mortality: An environment-wide association study.	10.1016/j.canep.2025.102828
+40206033	2025	Biol Psychiatry Glob Open Sci	Exposome-Wide Gene-By-Environment Interaction Study of Psychotic Experiences in the UK Biobank.	10.1016/j.bpsgos.2025.100460
+40154148	2025	Int J Hyg Environ Health	Assessing the impact of per- and polyfluoroalkyl substances on pregnancy loss: An environmental-wide association study in Northwest China.	10.1016/j.ijheh.2025.114568
+40137527	2025	Toxics	Associations of Environmental Pollutant Mixtures and Red Blood Cell Folate Concentrations: A Mixture Analysis of the U.S. Adult Population Based on NHANES Data, 2007-2016.	10.3390/toxics13030200
+40114240	2025	Child Adolesc Psychiatry Ment Health	The developmental trajectories and modifiable factors of adolescents' subjective well-being from late adolescence to early adulthood.	10.1186/s13034-025-00881-w
+40080444	2025	Anal Chem	High-Throughput Solid Phase Extraction for Targeted and Nontargeted Exposomics.	10.1021/acs.analchem.4c06177
+39979906	2025	BMC Public Health	Multifaceted environmental factors linked to metabolic dysfunction-associated fatty liver disease: an environment-wide association study.	10.1186/s12889-025-21930-1
+39939416	2025	Anal Bioanal Chem	Risk of serum circulating environmental chemical residues to esophageal squamous cell carcinoma: a nested case-control metabolome-wide association study.	10.1007/s00216-025-05784-5
+39938123	2025	Aging (Albany NY)	Exposome-wide association study of environmental chemical exposures and epigenetic aging in the national health and nutrition examination survey.	10.18632/aging.206201
+39937451	2025	Anal Chem	Novel Method for Simultaneously Untargeted Metabolome and Targeted Exposome Analysis in One Injection.	10.1021/acs.analchem.4c05565
+39926246	2025	Exposome	Exposome-wide association study of cognition among older adults in the National Health and Nutrition Examination Survey.	10.1093/exposome/osaf002
+39917825	2025	Psychol Med	Mapping the exposome of mental health: exposome-wide association study of mental health outcomes among UK Biobank participants.	10.1017/S0033291724003015
+39894157	2025	Environ Pollut	Environment-wide association study of cardiovascular and all-cause mortality: Analysis of the National Health and Nutrition Examination Survey, 1999-2018.	10.1016/j.envpol.2025.125770
+39879932	2025	Chemosphere	Environment-wide association study of five per- and polyfluoroalkyl substance (PFASs) exposure pathways in Korean adolescents from the Korean National Environmental Health Survey (2018-2020).	10.1016/j.chemosphere.2025.144161
+39828196	2025	Environ Res	Exposome-wide association study of thyroid function using U.S. National Health and Nutrition Examination Survey data.	10.1016/j.envres.2025.120884
+39540306	2025	Circulation	A Proteomics-Based Approach for Prediction of Different Cardiovascular Diseases and Dementia.	10.1161/CIRCULATIONAHA.124.070454
+39492609	2025	Cancer	Pesticides and prostate cancer incidence and mortality: An environment-wide association study.	10.1002/cncr.35572
+39464493	2024	NPP Digit Psychiatry Neurosci	Probing the digital exposome: associations of social media use patterns with youth mental health.	10.1038/s44277-024-00006-9
+39463098	2025	Am J Hum Biol	Contaminant Exposure Profiles Demonstrate Similar Physiological Effects Across Environments Despite Unique Profile Composition in Formosa, Argentina, and Connecticut, USA.	10.1002/ajhb.24178
+39457408	2024	Genes (Basel)	Nongenetic and Genetic Factors Associated with White Matter Brain Aging: Exposome-Wide and Genome-Wide Association Study.	10.3390/genes15101285
+39404063	2024	CNS Neurosci Ther	Identifying modifiable factors associated with neuroimaging markers of brain health.	10.1111/cns.70057
+39271740	2024	Sci Rep	Differential effects of environmental exposures on clinically relevant endophenotypes between sexes.	10.1038/s41598-024-72180-x
+39240788	2024	Environ Health Perspect	Exposome-Wide Ranking to Uncover Environmental Chemicals Associated with Dyslipidemia: A Panel Study in Healthy Older Chinese Adults from the BAPE Study.	10.1289/EHP13864
+39230330	2024	Environ Health Perspect	Seminar: Functional Exposomics and Mechanisms of Toxicity-Insights from Model Systems and NAMs.	10.1289/EHP13120
+39146990	2024	Chemosphere	Healthy lifestyles ameliorate an increased risk of periodontitis associated with polycyclic aromatic hydrocarbons.	10.1016/j.chemosphere.2024.143086
+39103390	2024	NPJ Aging	Shared whole environmental etiology between Alzheimer's disease and age-related macular degeneration.	10.1038/s41514-024-00162-4
+39072041	2024	medRxiv	Exposome-wide association study of cognition among older adults in the National Health and Nutrition Examination Survey.	10.1101/2024.07.19.24310725
+39053901	2024	Environ Sci Technol	Exposome Profiling of Environmental Pollutants in Seminal Plasma and Novel Associations with Semen Parameters.	10.1021/acs.est.3c10314
+39028628	2024	Environ Health Perspect	Association between Personal Abiotic Airborne Exposures and Body Composition Changes among Healthy Adults (60-69 Years Old): A Combined Exposome-Wide and Lipidome Mediation Approach from the China BAPE Study.	10.1289/EHP13865
+39024416	2025	Eur J Prev Cardiol	An atlas on multitudinous risk factors associated with incident hypertension: comprehensive exposome-wide association and wide-angled genetic analyses.	10.1093/eurjpc/zwae236
+39018056	2024	JAMA Psychiatry	Classification of Suicide Attempt Risk Using Environmental and Lifestyle Factors in 3 Large Youth Cohorts.	10.1001/jamapsychiatry.2024.1887
+38958973	2024	JAMA Netw Open	Environmental Toxicant Exposure and Depressive Symptoms.	10.1001/jamanetworkopen.2024.20259
+38945193	2024	Environ Pollut	Adverse impact of phthalate and polycyclic aromatic hydrocarbon mixtures on birth outcomes: A metabolome Exposome-Wide association study.	10.1016/j.envpol.2024.124460
+38939392	2024	JACC Adv	Prenatal Urban Environment and Blood Pressure Trajectories From Childhood to Early Adulthood.	10.1016/j.jacadv.2023.100808
+38889167	2024	Environ Health Perspect	Exposome-Wide Association Study of Body Mass Index Using a Novel Meta-Analytical Approach for Random Forest Models.	10.1289/EHP13393
+38822946	2024	Geroscience	Identifying modifiable factors and their joint effect on brain health: an exposome-wide association study.	10.1007/s11357-024-01224-x
+38615759	2024	Sci Total Environ	Association of the external environmental exposome and obesity: A comprehensive nationwide study in 2019 among Chinese children and adolescents.	10.1016/j.scitotenv.2024.172233
+38482639	2024	Epigenomics	Toward a more holistic approach to the study of exposures and child outcomes.	10.2217/epi-2023-0424
+38450326	2024	Exposome	Questionnaire-based exposome-wide association studies for common diseases in the Personalized Environment and Genes Study.	10.1093/exposome/osae002
+40771300	2024	Informatics (MDPI)	Exploring the Relation between Contextual Social Determinants of Health and COVID-19 Occurrence and Hospitalization.	10.3390/informatics11010004
+38425336	2024	Exposome	Interactive data sharing for multiple questionnaire-based exposome-wide association studies and exposome correlations in the Personalized Environment and Genes Study.	10.1093/exposome/osae003
+38374597	2024	Se Pu	[Risk analysis of serum chemical residues for metabolic associated fatty liver disease based on exposome-lipidome wide association study].	10.3724/SP.J.1123.2023.12014
+38374591	2024	Se Pu	[New advances in exposomics-analysis methods and research paradigms based on chromatography-mass spectrometry].	10.3724/SP.J.1123.2023.12001
+38344436	2024	Exposome	Decoding the exposome: data science methodologies and implications in exposome-wide association studies (ExWASs).	10.1093/exposome/osae001
+38219897	2024	Environ Pollut	Urban environment during pregnancy and lung function, wheezing, and asthma in school-age children. The generation R study.	10.1016/j.envpol.2024.123345
+37827628	2023	Anal Chim Acta	Comparing the sensitivity of a low- and a high-resolution mass spectrometry approach for xenobiotic trace analysis: An exposome-type case study.	10.1016/j.aca.2023.341740
+37748711	2023	Diabetes Res Clin Pract	An environment-wide association study for the identification of non-invasive factors for type 2 diabetes mellitus: Analysis based on the Henan Rural Cohort study.	10.1016/j.diabres.2023.110917
+37741568	2023	Environ Res	Environment-wide association study to identify exposure pathways of bisphenol A in Korean children and adolescents: Korean National Environmental Health Survey (KoNEHS) 2018-2020.	10.1016/j.envres.2023.117187
+37701484	2023	Ann Occup Environ Med	Environment-wide association study of elevated liver enzymes: results from the Korean National Environmental Health Survey 2018-2022.	10.35371/aoem.2023.35.e27
+37690219	2023	Environ Int	Association of maternal metals exposure, metabolites and birth outcomes in newborns: A prospective cohort study.	10.1016/j.envint.2023.108183
+37557043	2023	J Hazard Mater	Outdoor environmental exposome and the burden of tuberculosis: Findings from nearly two million adults in northwestern China.	10.1016/j.jhazmat.2023.132222
+37229681	2023	Recenti Prog Med	[Exposome: from definition to future challenges.].	10.1701/4042.40227
+37204501	2024	Eur Child Adolesc Psychiatry	Modifiable factors associated with cognitive performance in Chinese adolescents: a national environment-wide association study.	10.1007/s00787-023-02229-1
+37204309	2023	Elife	Environment- and epigenome-wide association study of obesity in 'Children of 1997' birth cohort.	10.7554/eLife.82377
+37089437	2023	Exposome	A spatial and contextual exposome-wide association study and polyexposomic score of COVID-19 hospitalization.	10.1093/exposome/osad005
+36913779	2023	Environ Int	Modelling socioeconomic position as a driver of the exposome in the first 18 months of life of the NINFEA birth cohort children.	10.1016/j.envint.2023.107864
+36785842	2023	Environ Adv	Identifying environmental risk factors for post-acute sequelae of SARS-CoV-2 infection: An EHR-based cohort study from the recover program.	10.1016/j.envadv.2023.100352
+36716893	2023	Sci Total Environ	An external exposome-wide association study of opioid use disorder diagnosed during pregnancy in Florida.	10.1016/j.scitotenv.2023.161842
+36699871	2022	Front Public Health	An exposome connectivity paradigm for the mechanistic assessment of the effects of prenatal and early life exposure to metals on neurodevelopment.	10.3389/fpubh.2022.871218
+36584956	2023	Sci Total Environ	Historical biomonitoring of pollution trends in the North Pacific using archived samples from the Continuous Plankton Recorder Survey.	10.1016/j.scitotenv.2022.161222
+36471295	2022	BMC Public Health	Population-wide measures due to the COVID-19 pandemic and exposome changes in the general population of Cyprus in March-May 2020.	10.1186/s12889-022-14468-z
+36383734	2023	Diabetes Care	Questionnaire-Based Polyexposure Assessment Outperforms Polygenic Scores for Classification of Type 2 Diabetes in a Multiancestry Cohort.	10.2337/dc22-0295
+37816105	2023		Applying an Exposome-wide Association Study (ExWAS) Approach to Latino Cancer Disparities.	10.1007/978-3-031-14436-3_2
+36348440	2022	Hum Genomics	A review on the application of the exposome paradigm to unveil the environmental determinants of age-related diseases.	10.1186/s40246-022-00428-6
+36263067	2022	medRxiv	Identifying Contextual and Spatial Risk Factors for Post-Acute Sequelae of SARS-CoV-2 Infection: An EHR-based Cohort Study from the RECOVER Program.	10.1101/2022.10.13.22281010
+35857297	2022	JAMA Psychiatry	Nongenetic Factors Associated With Psychotic Experiences Among UK Biobank Participants: Exposome-Wide Analysis and Mendelian Randomization Analysis.	10.1001/jamapsychiatry.2022.1655
+35790874	2023	Mol Psychiatry	Environmental neuroscience linking exposome to brain structure and function underlying cognition and behavior.	10.1038/s41380-022-01669-6
+35691679	2022	Anal Chim Acta	Quantifying up to 90 polyphenols simultaneously in human bio-fluids by LC-MS/MS.	10.1016/j.aca.2022.339977
+35614137	2022	Sci Rep	An exposome-wide association study on body mass index in adolescents using the National Health and Nutrition Examination Survey (NHANES) 2003-2004 and 2013-2014 data.	10.1038/s41598-022-12459-z
+35605674	2022	Environ Res	Questionnaire-based exposome-wide association studies (ExWAS) reveal expected and novel risk factors associated with cardiovascular outcomes in the Personalized Environment and Genes Study.	10.1016/j.envres.2022.113463
+35550507	2022	Nat Commun	Next-generation biomonitoring of the early-life chemical exposome in neonatal and infant development.	10.1038/s41467-022-30204-y
+35487468	2022	Environ Pollut	A review of practical statistical methods used in epidemiological studies to estimate the health effects of multi-pollutant mixture.	10.1016/j.envpol.2022.119356
+35018869	2022	J Cereb Blood Flow Metab	Validation of external and internal exposome of the findings associated to cerebral small vessel disease: A Mendelian randomization study.	10.1177/0271678X221074223
+35004129	2022	Curr Pollut Rep	Operationalizing the Exposome Using Passive Silicone Samplers.	10.1007/s40726-021-00211-6
+34950191	2021	Front Genet	Exposome-wide Association Study for Metabolic Syndrome.	10.3389/fgene.2021.783930
+34825528	2022	Hepatol Commun	High-Resolution Exposomics and Metabolomics Reveals Specific Associations in Cholestatic Liver Diseases.	10.1002/hep4.1871
+34525388	2021	Environ Int	The exposome in practice: an exploratory panel study of biomarkers of air pollutant exposure in Chinese people aged 60-69 years (China BAPE Study).	10.1016/j.envint.2021.106866
+34127788	2022	J Expo Sci Environ Epidemiol	Expanding the environmental scope: an environment-wide association study for mental well-being.	10.1038/s41370-021-00346-0
+34077897	2021	Environ Pollut	Early life multiple exposures and child cognitive function: A multi-centric birth cohort study in six European countries.	10.1016/j.envpol.2021.117404
+34039744	2022	Sex Transm Infect	Systematic identification and replication of factors associated with human papillomavirus vaccine initiation among adolescents in the United States using an environment-wide association study approach.	10.1136/sextrans-2021-054976
+33828161	2021	Sci Rep	Gaussian graphical modeling of the serum exposome and metabolome reveals interactions between environmental chemicals and endogenous metabolites.	10.1038/s41598-021-87070-9
+33774494	2021	Environ Int	Performance of approaches relying on multidimensional intermediary data to decipher causal relationships between the exposome and health: A simulation study under various causal structures.	10.1016/j.envint.2021.106509
+33716031	2021	Environ Res	Neurodevelopmental exposome: The effect of in utero co-exposure to heavy metals and phthalates on child neurodevelopment.	10.1016/j.envres.2021.110949
+33525356	2021	Int J Environ Res Public Health	The Exposome Approach to Decipher the Role of Multiple Environmental and Lifestyle Determinants in Asthma.	10.3390/ijerph18031138
+33450687	2021	Sci Total Environ	An external exposome-wide association study of COVID-19 mortality in the United States.	10.1016/j.scitotenv.2020.144832
+33422710	2021	Sci Total Environ	Prenatal exposure to a wide range of environmental chemicals and child behaviour between 3 and 7 years of age - An exposome-based approach in 5 European cohorts.	10.1016/j.scitotenv.2020.144115
+33247093	2020	Nat Commun	A systematic comprehensive longitudinal evaluation of dietary factors associated with acute myocardial infarction and fatal coronary heart disease.	10.1038/s41467-020-19888-2
+33198349	2020	J Clin Med	Diabetic Retinopathy Environment-Wide Association Study (EWAS) in NHANES 2005-2008.	10.3390/jcm9113643
+33160974	2021	Environ Res	Profile of exposures and lung function in adults with asthma: An exposome approach in the EGEA study.	10.1016/j.envres.2020.110422
+33128820	2021	Int J Cancer	Association between anthropometry and lifestyle factors and risk of B-cell lymphoma: An exposome-wide analysis.	10.1002/ijc.33369
+33099541	2020	Neuroepidemiology	Early-Life Factors and Risk of Multiple Sclerosis: An MR-EWAS.	10.1159/000508229
+32854059	2020	Environ Int	Multiple environmental exposures in early-life and allergy-related outcomes in childhood.	10.1016/j.envint.2020.106038
+32841636	2020	Environ Res	Environment-wide association study on childhood obesity in the U.S.	10.1016/j.envres.2020.110109
+32830427	2020	Autism Res	Environment-Wide Association Study (E(n) WAS) of Prenatal and Perinatal Factors Associated With Autistic Traits: A Population-Based Study.	10.1002/aur.2372
+32628126	2020	Clin J Am Soc Nephrol	Environment-Wide Association Study of CKD.	10.2215/CJN.06780619
+32543423	2020	Health Place	Residential neighborhood features associated with objectively measured walking near home: Revisiting walkability using the Automatic Context Measurement Tool (ACMT).	10.1016/j.healthplace.2020.102332
+32438643	2020	Nutrients	Metabolites, Nutrients, and Lifestyle Factors in Relation to Coffee Consumption: An Environment-Wide Association Study.	10.3390/nu12051470
+32413622	2020	Environ Int	An external exposome-wide association study of hypertensive disorders of pregnancy.	10.1016/j.envint.2020.105797
+32179316	2020	Environ Int	Using methylome data to inform exposome-health association studies: An application to the identification of environmental drivers of child body mass index.	10.1016/j.envint.2020.105622
+32167557	2020	Int J Epidemiol	Association between the pregnancy exposome and fetal growth.	10.1093/ije/dyaa017
+32105887	2020	Environ Res	Design and methodology challenges of environment-wide association studies: A systematic review.	10.1016/j.envres.2020.109275
+32077039	2020	Hormones (Athens)	Environment-wide association study to comprehensively test and validate associations between nutrition and lifestyle factors and testosterone deficiency: NHANES 1988-1994 and 1999-2004.	10.1007/s42000-020-00179-w
+31980846	2020	Diabetologia	Childhood type 1 diabetes: an environment-wide association study across England.	10.1007/s00125-020-05087-7
+31921293	2019	Front Genet	CLARITE Facilitates the Quality Control and Analysis Process for EWAS of Metabolic-Related Traits.	10.3389/fgene.2019.01240
+31892107	2019	Int J Environ Res Public Health	Mapping the Human Exposome to Uncover the Causes of Breast Cancer.	10.3390/ijerph17010189
+31872233	2020	Int J Epidemiol	Determinants of physical, mental and social well-being: a longitudinal environment-wide association study.	10.1093/ije/dyz238
+31561052	2019	Environ Res	Lifelong exposure to multiple stressors through different environmental pathways for European populations.	10.1016/j.envres.2019.108744
+31543064	2019	J Toxicol Environ Health B Crit Rev	An overview of the current progress, challenges, and prospects of human biomonitoring and exposome studies.	10.1080/10937404.2019.1661588
+31488269	2019	J Am Coll Cardiol	Early-Life Environmental Exposures and Blood Pressure in Children.	10.1016/j.jacc.2019.06.069
+31179170	2019	PeerJ	Application of the urban exposome framework using drinking water and quality of life indicators: a proof-of-concept study in Limassol, Cyprus.	10.7717/peerj.6851
+31107669	2020	IEEE J Biomed Health Inform	A Precision Environment-Wide Association Study of Hypertension via Supervised Cadre Models.	10.1109/JBHI.2019.2918070
+31009264	2019	Environ Health Perspect	Influence of the Urban Exposome on Birth Weight.	10.1289/EHP3971
+30737192	2019	Lancet Planet Health	Early-life exposome and lung function in children in Europe: an analysis of data from the longitudinal, population-based HELIX cohort.	10.1016/S2542-5196(19)30010-5
+30583854	2019	Environ Int	Exposome-wide association study of semen quality: Systematic discovery of endocrine disrupting chemical biomarkers in fertility require large sample sizes.	10.1016/j.envint.2018.11.037
+30476763	2019	Chemosphere	Home-based and informal work exposes the families to high levels of potentially toxic elements.	10.1016/j.chemosphere.2018.11.083
+30322234	2018	Epidemiol Prev	Addressing complexity of health impact assessment in industrially contaminated sites via the exposome paradigm.	10.19191/EP18.5-6.S1.P037.086
+30211112	2018	Front Oncol	Applying an Exposome-Wide (ExWAS) Approach to Cancer Research.	10.3389/fonc.2018.00313
+30181901	2018	NPJ Syst Biol Appl	Redefining environmental exposure for disease etiology.	10.1038/s41540-018-0065-0
+30024382	2018	Environ Health Perspect	The Urban Exposome during Pregnancy and Its Socioeconomic Determinants.	10.1289/EHP2862
+29879615	2018	Environ Int	Toward a panoramic perspective of the association between environmental factors and cardiovascular disease: An environment-wide association study from National Health and Nutrition Examination Survey 1999-2014.	10.1016/j.envint.2018.05.046
+29897703	2018			10.17226/25135
+29626821	2018	Environ Res	Biomarkers of exposure in environment-wide association studies - Opportunities to decode the exposome using human biomonitoring data.	10.1016/j.envres.2018.02.041
+29366990	2018	Atherosclerosis	Environment-wide association study to identify novel factors associated with peripheral arterial disease: Evidence from the National Health and Nutrition Examination Survey (1999-2004).	10.1016/j.atherosclerosis.2018.01.006
+29079728	2017	Nat Commun	PLATO software provides analytic framework for investigating complexity beyond genome-wide association studies.	10.1038/s41467-017-00802-2
+28947495	2018	Occup Environ Med	Performance of variable selection methods for assessing the health effects of correlated exposures in case-control studies.	10.1136/oemed-2016-104231
+28841522	2017	Environ Res	Human biomonitoring data analysis for metals in an Italian adolescents cohort: An exposome approach.	10.1016/j.envres.2017.08.012
+28743678	2017	Environ Health Perspect	The Saliva Exposome for Monitoring of Individuals' Health Trajectories.	10.1289/EHP1011
+28709428	2017	Environ Health	A systematic comparison of statistical methods to detect interactions in exposome-health associations.	10.1186/s12940-017-0277-6
+28271979	2017	OMICS	Toward a Taxonomy for Multi-Omics Science? Terminology Development for Whole Genome Study Approaches by Omics Technology and Hierarchy.	10.1089/omi.2016.0144
+28266605	2017	Sci Rep	In vivo microsampling to capture the elusive exposome.	10.1038/srep44038
+28251040	2017	Curr Epidemiol Rep	Analytic Complexity and Challenges in Identifying Mixtures of Exposures Associated with Phenotypes in the Exposome Era.	10.1007/s40471-017-0100-5
+28154108	2017	Cancer Epidemiol Biomarkers Prev	Contextual Correlates of Physical Activity among Older Adults: A Neighborhood Environment-Wide Association Study (NE-WAS).	10.1158/1055-9965.EPI-16-0827
+28068484	2017	Annu Rev Public Health	Informatics and Data Analytics to Support Exposome-Based Discovery for Public Health.	10.1146/annurev-publhealth-082516-012737
+27924041	2017	Nucleic Acids Res	Exposome-Explorer: a manually-curated database on biomarkers of exposure to dietary and environmental factors.	10.1093/nar/gkw980
+27497879	2016	Environ Res	In vivo tissue sampling using solid-phase microextraction for non-lethal exposome-wide association study of CYP1A1 induction in Catostomus commersonii.	10.1016/j.envres.2016.07.006
+27576363	2017	Int J Hyg Environ Health	The exposome in practice: Design of the EXPOsOMICS project.	10.1016/j.ijheh.2016.08.001
+27502758	2016	Ann Epidemiol	Environment-wide association study to identify factors associated with hematocrit: evidence from the Guangzhou Biobank Cohort Study.	10.1016/j.annepidem.2016.07.005
+27457472	2016	Sci Rep	Environment-Wide Association Study of Blood Pressure in the National Health and Nutrition Examination Survey (1999-2012).	10.1038/srep30373
+27302240	2016	Lancet Neurol	Epigenetics of dementia: understanding the disease as a transformation rather than a state.	10.1016/S1474-4422(16)00065-X
+27219331	2016	Environ Health Perspect	A Systematic Comparison of Linear Regression-Based Statistical Methods to Assess Exposome-Health Associations.	10.1289/EHP172
+27105432	2016	PLoS One	Genetic Factors Are Not the Major Causes of Chronic Diseases.	10.1371/journal.pone.0154387
+27059547	2017	Int J Epidemiol	Systematic correlation of environmental exposure and physiological and self-reported behaviour factors with leukocyte telomere length.	10.1093/ije/dyw043
+27020472	2016	Nat Commun	Meta-analysis of gene-environment-wide association scans accounting for education level identifies additional loci for refractive error.	10.1038/ncomms11008
+26809563	2016	Curr Environ Health Rep	Analytical Complexity in Detection of Gene Variant-by-Environment Exposure Interactions in High-Throughput Genomic and Exposomic Research.	10.1007/s40572-016-0080-5
+26415577	2016	J Clin Epidemiol	Field-wide meta-analyses of observational associations can map selective availability of risk factors and the impact of model specifications.	10.1016/j.jclinepi.2015.09.004
+26279400	2015	J Clin Epidemiol	Assessment of vibration of effects due to model specification can demonstrate the instability of observational associations.	10.1016/j.jclinepi.2015.05.029
+25914450	2015	Bioinformation	A method to associate all possible combinations of genetic and environmental factors using GxE landscape plot.	10.6026/97320630011161
+25592584	2015	Pac Symp Biocomput	Development of exposome correlation globes to map out environment-wide associations.	
+25510818	2015	Metabolism	Biomarkers of Parkinson's disease: present and future.	10.1016/j.metabol.2014.10.030
+25483344	2015	Biol Psychiatry	Genetic epidemiology and insights into interactive genetic and environmental effects in autism spectrum disorders.	10.1016/j.biopsych.2014.11.001
+24373932	2014	Reprod Toxicol	Investigation of maternal environmental exposures in association with self-reported preterm birth.	10.1016/j.reprotox.2013.12.005
+24345851	2013	Int J Epidemiol	Systematic evaluation of environmental and behavioural factors associated with all-cause mortality in the United States national health and nutrition examination survey.	10.1093/ije/dyt208
+24297547	2014	Pac Symp Biocomput	Environment-wide association study (EWAS) for type 2 diabetes in the Marshfield Personalized Medicine Research Project Biobank.	
+23334806	2013	Hum Genet	Systematic identification of interaction effects between genome- and environment-wide associations in type 2 diabetes mellitus.	10.1007/s00439-012-1258-z
+22689751	2012	Bioinformatics	Data-driven integration of epidemiological and toxicological data to select candidate interacting genes and environmental factors in association with disease.	10.1093/bioinformatics/bts229
+22672124	2012	Biomarkers	Biomarkers intersect with the exposome.	10.3109/1354750X.2012.691553
+21291902	2013	Toxicol Appl Pharmacol	Integrating mechanistic and polymorphism data to characterize human genetic susceptibility for environmental chemical risk assessment in the 21st century.	10.1016/j.taap.2011.01.015
+20505766	2010	PLoS One	An Environment-Wide Association Study (EWAS) on type 2 diabetes mellitus.	10.1371/journal.pone.0010746
+20212493	2010	Nat Rev Genet	Gene--environment-wide association studies: emerging approaches.	10.1038/nrg2764
+
+## 探针E 全标题
+42837054	2026	Geroscience	Association of systemic aging and frailty with retinal alterations: insights from an integrated exposome and metabolome framework.	10.1007/s11357-026-02572-6
+42800676	2026	Asia Pac J Ophthalmol (Phila)	Risk factors of primary angle-closure glaucoma: An exposome-wide association study in the China Kadoorie Biobank.	10.1016/j.apjo.2026.100378
+42778012	2026	Environ Pollut	Classroom dust microbiome-metabolome signatures and ocular health in students: Cross-sectional associations with putative pollutant-transformation and microbial functional profiles.	10.1016/j.envpol.2026.129217
+42697425	2026	Prog Retin Eye Res	Exposome for ocular diseases: From exposure evidence to causality and actionable prevention.	10.1016/j.preteyeres.2026.101524
+42676567	2026	Glob Chall	Artificial Intelligence-Powered One Health: A Predictive Framework for Managing Persistent Chemical Threats across Human, Animal, and Environmental Systems.	10.1002/gch2.202500607
+42434707	2026	Front Ophthalmol (Lausanne)	Editorial: Ocular surface disorders- an insight.	10.3389/fopht.2026.1895030
+42200542	2026	Environ Sci Technol	Vision for Exposomics-Scale Investigation: A Heuristic for Exposure-Wide Association Studies (ExWAS).	10.1021/acs.est.6c02553
+42178975	2026	Eur Psychiatry	One brain, one mind: A joint EPA-EAN leadership perspective on brain health.	10.1192/j.eurpsy.2026.12222
+42177686	2026	Metabolomics	Association of age-related macular degeneration with exposome related metabolomics.	10.1007/s11306-026-02446-0
+42047992	2026	Curr Psychiatry Rep	Light Exposure as a Modifiable Determinant of Mental Health.	10.1007/s11920-026-01671-7
+41547936	2026	Hum Genomics	Charting exposomethics: a roadmap for the ethical foundations of the human exposome project.	10.1186/s40246-025-00906-7
+41380808	2026	Neurotoxicol Teratol	Is there a glymphatic pathway to environmental risk in neurodevelopmental disorders?	10.1016/j.ntt.2025.107578
+41352903	2026	Anal Chim Acta	A review of the applications and challenges of applying partial least squares (PLS) to exposomics research.	10.1016/j.aca.2025.344826
+41281807	2025	Exposome	Oculomics meets exposomics: a roadmap for applying multi-modal ocular biomarkers in precision environmental health research.	10.1093/exposome/osaf013
+41135427	2025	Environ Int	Long-term exposure of mice to sodium fluoride and to a mixture of endocrine disruptors causes tooth enamel and retina abnormalities associated with changes in hepatic metabolism.	10.1016/j.envint.2025.109861
+41052635	2025	J Biol Chem	Microphysiological systems as a pillar of the Human Exposome Project.	10.1016/j.jbc.2025.110782
+41000410	2025	Front Artif Intell	AI: the Apollo guidance computer of the Exposome moonshot.	10.3389/frai.2025.1632520
+40217908	2025	J Clin Med	Omics in Keratoconus: From Molecular to Clinical Practice.	10.3390/jcm14072459
+39787587	2025	JMIR Public Health Surveill	Leveraging Administrative Health Databases to Address Health Challenges in Farming Populations: Scoping Review and Bibliometric Analysis (1975-2024).	10.2196/62939
+39598116	2024	J Clin Med	Skin Markers of Premature Ageing in Patients with COPD: Results Form COSYCONET.	10.3390/jcm13226972
+39539237	2025	Dermatitis	Combined Effect of Ambient Temperature and Relative Humidity on Skin Aging Phenotypes in the Era of Climate Change: Results From an Indian Cohort Study.	10.1089/derm.2024.0301
+39331035	2024	Environ Health Perspect	Reconceptualizing and Defining Exposomics within Environmental Health: Expanding the Scope of Health Research.	10.1289/EHP14509
+39103015	2024	Ocul Surf	Unraveling the complexity - Insights and interventions of refractory vernal keratoconjunctivitis.	10.1016/j.jtos.2024.07.009
+38986086	2024	Med Sci (Paris)	[The mission of COVARS: how to anticipate health risks within a "One Health" vision of the exposome].	10.1051/medsci/2024098
+38450851	2024	Diabetes Metab Res Rev	Type 1 diabetes: A new vision of the disease based on endotypes.	10.1002/dmrr.3770
+37511032	2023	Int J Mol Sci	Impact of Exposomes on Ocular Surface Diseases.	10.3390/ijms241411273
+36822006	2023	Environ Int	Characterizing the adult exposome in men and women from the general population: Results from the EHES-LUX study.	10.1016/j.envint.2023.107780
+36409330	2023	Handb Exp Pharmacol	Compound Identification Strategies in Mass Spectrometry-Based Metabolomics and Pharmacometabolomics.	10.1007/164_2022_617
+34886514	2021	Int J Environ Res Public Health	Earth Dreams: Reimagining ARPA for Health of People, Places and Planet.	10.3390/ijerph182312788
+34435882	2021	Environ Health Perspect	Utilizing a Biology-Driven Approach to Map the Exposome in Health and Disease: An Essential Investment to Drive the Next Generation of Environmental Discovery.	10.1289/EHP8327
+34062470	2021	Sci Total Environ	Estimating multiple greenspace exposure types and their associations with neighbourhood premature mortality: A socioecological study.	10.1016/j.scitotenv.2021.147919
+33298950	2020	NPJ Microgravity	Red risks for a journey to the red planet: The highest priority human health risks for a mission to Mars.	10.1038/s41526-020-00124-6
+32197999	2020	Reprod Toxicol	A vision for exposome epidemiology: The pregnancy exposome in relation to breast cancer in the Child Health and Development Studies.	10.1016/j.reprotox.2020.03.006
+32093162	2020	Int J Environ Res Public Health	Balance between Health Risks and Benefits for Outdoor Workers Exposed to Solar Radiation: An Overview on the Role of Near Infrared Radiation Alone and in Combination with Other Solar Spectral Bands.	10.3390/ijerph17041357
+31543064	2019	J Toxicol Environ Health B Crit Rev	An overview of the current progress, challenges, and prospects of human biomonitoring and exposome studies.	10.1080/10937404.2019.1661588
+30857860	2019	Acta Trop	Water and health: From environmental pressures to integrated responses.	10.1016/j.actatropica.2019.03.011
+30408667	2019	Sci Total Environ	Human exposure to airborne pollen and relationships with symptoms and immune responses: Indoors versus outdoors, circadian patterns and meteorological effects in alpine and urban environments.	10.1016/j.scitotenv.2018.10.366
+28867821	2016	Am Biol Teach	The Exposome: A New Frontier for Education.	10.1525/abt.2016.78.7.542
+28707677	2017	Nat Rev Endocrinol	'Omics' and endocrine-disrupting chemicals - new paths forward.	10.1038/nrendo.2017.81
+28494538	2017	Environ Health Toxicol	The exposome and the future of epidemiology: a vision and prospect.	10.5620/eht.e2017009
+26415577	2016	J Clin Epidemiol	Field-wide meta-analyses of observational associations can map selective availability of risk factors and the impact of model specifications.	10.1016/j.jclinepi.2015.09.004
+26361763	2015	BMC Res Notes	I feel you-monitoring environmental variables related to asthma in an integrated real-time frame.	10.1186/s13104-015-1421-4
+25670022	2015	J Expo Sci Environ Epidemiol	Commentary on the contributions and future role of occupational exposure science in a vision and strategy for the discipline of exposure science.	10.1038/jes.2014.91
+22796811	2012	Dig Dis	Towards a 'cure' for IBD.	10.1159/000338148
+
+## 探针F 全标题
+42829524	2026	Diabetes Metab Syndr Obes	Identifying Patients with Rapid Progression to Diabetic Retinopathy in Type 2 Diabetes: A Simple Prediction Model for Community Settings.	10.2147/DMSO.S624132
+42822125	2026	Ecotoxicol Environ Saf	Longitudinal association of multi-dimensional nighttime light characteristics on myopic shift.	10.1016/j.ecoenv.2026.120875
+42780389	2026	Atheroscler Plus	Associations between carotid macrovascular and retinal microvascular alterations in diabetes: Evidence synthesis and implications for risk assessment.	10.1016/j.athplu.2026.100608
+42769069	2026	Front Endocrinol (Lausanne)	Identification of key genes and metabolites in thyroid eye disease through integrated transcriptomic and metabolomic analysis.	10.3389/fendo.2026.1844082
+42761456	2026	J Ophthalmic Vis Res	A Novel Chaos-inspired Artificial Intelligence-based Model for Keratoconus Prediction.	10.18502/jovr.v21.18172
+42745924	2026	China CDC Wkly	Targeted Cycloplegia in Refractive Screening of Children and Adolescents: Development and Internal Validation of a Pre-Cycloplegia Risk Prediction Model - 10 PLADs, China, 2020-2024.	10.46234/ccdcw2026.165
+42741058	2026	Front Endocrinol (Lausanne)	Hormonal metabolic burden in diabetic retinopathy: the diabetic retina as an endocrine-responsive target organ.	10.3389/fendo.2026.1899237
+42725865	2026	Cancer Epidemiol Biomarkers Prev	Phenotypic and genotypic risk factors for uveal melanoma in a high ambient UV radiation environment.	10.1158/1055-9965.EPI-26-0734
+42616587	2026	Clin J Am Soc Nephrol	The Eye as a Window to Cardio-Kidney-Metabolic Disease.	10.2215/CJN.0000001224
+42603700	2026	Ocul Surf	Ocular surface damage and blink dynamics associated with high-intensity smartphone use.	10.1016/j.jtos.2026.08.004
+42582161	2026	Front Clin Diabetes Healthc	Construction of a dynamic prediction model for diabetic retinopathy risk in adults with adult-onset type 1 diabetes: a real-world longitudinal cohort study.	10.3389/fcdhc.2026.1873754
+42553178	2026	China CDC Wkly	Nomogram for Predicting Myopia Risk in Chinese Children and Adolescents Aged 5-19 Years - 10 PLADs, China 2020-2024.	10.46234/ccdcw2026.145
+42549183	2026	Taiwan J Ophthalmol	The role of anterior segment biomarkers in the development and progression of myopia.	10.4103/tjo.TJO-D-25-00156
+42495699	2026	Ophthalmol Sci	Artificial Intelligence-Driven Multimodal Prediction of 10-Year Incident Glaucoma Integrating Genetic and Deep Learning-Derived Imaging Features.	10.1016/j.xops.2026.101292
+42445785	2026	Front Nutr	Metabolic vulnerability, genetic susceptibility, and incident age-related eye diseases: a prospective cohort study.	10.3389/fnut.2026.1840459
+42432891	2026	Medicine (Baltimore)	Risk factors for distal symmetric polyneuropathy in patients with type 2 diabetes mellitus: A retrospective study.	10.1097/MD.0000000000049467
+42405670	2026	Invest Ophthalmol Vis Sci	Nonlinear Associations of Estimated Glucose Disposal Rate With Incident Age-Related Eye Diseases: Implications for Metabolic Risk Stratification.	10.1167/iovs.67.8.16
+42404345	2026	Front Endocrinol (Lausanne)	Development of a risk stratification tool for rapidly progressive diabetic retinopathy in type 2 diabetes.	10.3389/fendo.2026.1837957
+42370639	2026	Invest Ophthalmol Vis Sci	Associations Between Serum Uric Acid Levels and Glaucoma: Results From the LifeLines Cohort and UK Biobank.	10.1167/iovs.67.6.57
+42334128	2026	Transl Vis Sci Technol	Personalized Dosing System Guided by Cross-Scale Metabolic Imaging Biomarkers in Neovascular Age-Related Macular Degeneration.	10.1167/tvst.15.6.27
+42327851	2026	Geohealth	Residential Greenspace and Domestic Gardens, Genetic Predisposition, and Incident Glaucoma: A Prospective Cohort Study.	10.1029/2025GH001367
+42207540	2026	JAMA Ophthalmol	Pathologic Myopia Globe Shape and Long-Term Prognosis.	10.1001/jamaophthalmol.2026.1561
+42170482	2026	Am J Transl Res	Factors influencing refractive status distribution and amblyopia in preschool children with low vision.	10.62347/BSCI2125
+42143165	2026	Sci Rep	Exploring dysregulation of cuproptosis-related genes molecular clusters and candidate biomarkers in pterygium.	10.1038/s41598-026-53162-7
+42131588	2026	Front Med (Lausanne)	Development and validation of a risk prediction model for dry eye disease in myopic children.	10.3389/fmed.2026.1768592
+42066985	2026	Metabolism	Integrated plasma proteomics and metabolomics reveal immunometabolic pathways and predictive signatures for age-related eye diseases.	10.1016/j.metabol.2026.156624
+42060295	2026	JAMA Ophthalmol	Nonuniform Association of Genetic Risk Scores for Intraocular Pressure.	10.1001/jamaophthalmol.2026.1022
+42055347	2026	Ophthalmology	Gene-Lifestyle Synergy in Diabetic Retinopathy Development.	10.1016/j.ophtha.2026.04.017
+41987999	2026	Spine Surg Relat Res	Description of Scatter Radiation Exposure to the Eye Lenses and Direct Exposure to the Hands in Orthopedic and Spinal Procedures.	10.22603/ssrr.2025-0262
+41938107	2026	Front Endocrinol (Lausanne)	The triglyceride-glucose index for diabetic retinopathy prediction in Chinese patients with type 2 diabetes: a preliminary cross-sectional study.	10.3389/fendo.2026.1784073
+41928879	2026	Front Endocrinol (Lausanne)	Cardiorenal risk stratification in high-risk type 2 diabetes using a simple clinical score: findings from the ELIXA trial.	10.3389/fendo.2026.1768816
+41913207	2026	Cardiovasc Diabetol	Phenotypic heterogeneity of type 2 diabetes and risks of complications with a tree-like representation.	10.1186/s12933-026-03147-7
+41882958	2026	J Neurotrauma	Wearable Tracking of Eye and Body Movements During Breaching Training: Toward Real-Time Blast Injury Monitoring.	10.1177/08977151261433837
+41750685	2026	Diagnostics (Basel)	Genetic Architecture of Myopia and Its Implications for Risk Stratification and Prognosis.	10.3390/diagnostics16040536
+41703599	2026	J Transl Med	Metabolic vulnerability index and MetaboHealth score as risk factors for age-related macular degeneration in a large-scale prospective cohort.	10.1186/s12967-026-07863-2
+41648721	2026	Front Endocrinol (Lausanne)	The MTHFR C677T genetic susceptibility and its role in risk prediction for type 2 diabetic nephropathy in Northern China.	10.3389/fendo.2026.1749477
+41624919	2025	Int J Prev Med	Assessment of Risk of Diabetes Among Indian Population Aged ≥45 Years: Evidence from Longitudinal Aging Study in India.	10.4103/ijpvm.ijpvm_178_24
+41623885	2025	Front Digit Health	Federated multimodal AI for precision-equitable diabetes care.	10.3389/fdgth.2025.1678047
+41595486	2026	Genes (Basel)	The Genetic and Epigenetic Architecture of Keratoconus: Emerging Pathways and Clinical Implications.	10.3390/genes17010066
+41581636	2026	Am J Ophthalmol	Associations of Cardiovascular-Kidney-Metabolic Syndrome With Age-Related Macular Degeneration Risk.	10.1016/j.ajo.2026.01.023
+41524889	2026	Eur J Epidemiol	Air pollutants, genetic susceptibility, and the risk of age-related macular degeneration: a large prospective cohort study.	10.1007/s10654-025-01340-8
+41513432	2026	Br J Ophthalmol	Exposure-wide approaches identifying modifiable factors for age-related macular degeneration.	10.1136/bjo-2025-328446
+41469860	2025	BMC Ophthalmol	Machine learning prediction models for visual impairment in Chinese adults aged ≥ 45 years with cardiovascular metabolic diseases: a population-based study using CHARLS.	10.1186/s12886-025-04596-6
+41427248	2025	Front Genet	Integrating GWAS and machine learning for disease risk prediction in the Taiwanese Hakka population.	10.3389/fgene.2025.1694084
+41340073	2025	J Transl Med	Multi-omics integrated analysis identifies causal risk factors and therapeutic targets for diabetic retinopathy.	10.1186/s12967-025-07353-x
+41195172	2025	Front Med (Lausanne)	Uncovering predictors of myopia in youth: a secondary data analysis using a machine learning approach.	10.3389/fmed.2025.1595320
+41163192	2025	BMC Public Health	Non-linear association between Life's Essential 8 and diabetic retinopathy: mediating role of depression in US adults with diabetes.	10.1186/s12889-025-24987-0
+41140896	2026	Ophthalmol Sci	Age-related Eye Disease Studies Supplements and Genetic Risk Score Are Crucial Determinants of Intestinal Microbial Alterations in Advanced Age-Related Macular Degeneration.	10.1016/j.xops.2025.100920
+41130333	2026	Exp Eye Res	Commentary: Toward a global atlas of ocular surface biology: Rationale, design, and clinical applications.	10.1016/j.exer.2025.110705
+41126362	2025	Hum Genomics	Association between hot spring residency and dry eye disease: a crossover gene-environment interaction (GxE) study in Taiwan.	10.1186/s40246-025-00824-8
+41109117	2025	Asian J Psychiatr	The psychosis continuum: Systematic review on prodromal markers, symptom progression, and early intervention strategies.	10.1016/j.ajp.2025.104725
+41076031	2026	Ophthalmology	Quantifying Effects of Diet and Lifestyle Changes on Progression to Advanced Age Related Macular Degeneration in High Genetic Risk Individuals.	10.1016/j.ophtha.2025.09.030
+41002966	2025	Metabolites	Metabolomic Signatures and Predictive Utility of LOXL1-Associated Genetic Risk Scores for Exfoliation Syndrome/Glaucoma in US Cohorts.	10.3390/metabo15090582
+40688783	2025	Int J Ophthalmol	Associations between organophosphorus pesticides exposure and age-related macular degeneration risk in U.S. adults: analysis from interpretable machine learning approaches.	10.18240/ijo.2025.07.04
+40643367	2025	J Occup Environ Med	Computer Vision Syndrome Before and After the SARS-CoV-2 Pandemic: New-Symptom Onset and Workplace Setup of Visual Display Terminals.	10.1097/JOM.0000000000003484
+40585168	2025	medRxiv	Quantifying Effects of Lifestyle Changes on Progression to Advanced Age-Related Macular Degeneration in High Genetic Risk Individuals.	10.1101/2025.06.18.25329367
+40548634	2025	Invest Ophthalmol Vis Sci	The Association of Muscle-Related Factors With Glaucoma and Related Traits in a Large United Kingdom Population.	10.1167/iovs.66.6.66
+40471629	2025	JAMA Ophthalmol	Fundus Refraction Offset as an Individualized Myopia Biomarker.	10.1001/jamaophthalmol.2025.1513
+40364033	2025	J Clin Med	Association of Maternal Exposure to Fine Particulate Matter During Pregnancy with Anterior Segment Dysgenesis Risk: A Matched Case-Control Study.	10.3390/jcm14093003
+40352841	2025	Front Public Health	Exploring association between ambient air pollution and glaucoma in China: a nationwide analysis with predictive modeling based on the China Health and Retirement Longitudinal Study.	10.3389/fpubh.2025.1541803
+40269036	2025	Sci Rep	PM(2.5) exposure modifies the association of physical activity with depressive symptoms and glaucoma in middle aged and elderly Chinese.	10.1038/s41598-025-98711-8
+40161462	2025	Ophthalmol Sci	Machine Learning on Prediagnostic Metabolite Data Identifies Etiologic Endotypes of Exfoliation Glaucoma in United States Health Professionals.	10.1016/j.xops.2024.100678
+40160026	2025	Diabetes Metab J	The Causal Relationship and Association between Biomarkers, Dietary Intake, and Diabetic Retinopathy: Insights from Mendelian Randomization and Cross-Sectional Study.	10.4093/dmj.2024.0731
+40028837	2025	J Endocrinol	TEDML: a new machine learning (ML) approach for predicting thyroid eye disease and identifying key biomarkers.	10.1530/JOE-24-0362
+39976861	2025	Sci China Life Sci	3D facial imaging: a novel approach for metabolic abnormalities risk profiling.	10.1007/s11427-024-2726-8
+39943980	2025	Med Genet	Diagnostic testing in the genetically complex age-related macular degeneration.	10.1515/medgen-2024-2064
+39929915	2025	Sci Rep	Machine learning prediction of glaucoma by heavy metal exposure: results from the National Health and Nutrition Examination Survey 2005 to 2008.	10.1038/s41598-025-88698-7
+39851230	2025	Discov Med	Analysis of Risk Factors Associated with Organic Erectile Dysfunction in Patients with Type 2 Diabetes Mellitus and Erectile Dysfunction.	10.24976/Discov.Med.202537192.12
+39826101	2025	Endocrinol Diabetes Metab	Association of Albumin-To-Creatinine Ratio With Diabetic Retinopathy Among US Adults (NHANES 2009-2016).	10.1002/edm2.70029
+39757747	2025	Aging Cell	Differential Organ Ageing Is Associated With Age-Related Macular Degeneration.	10.1111/acel.14473
+39739349	2024	Invest Ophthalmol Vis Sci	Association of Metabolomics With Incidence of Age-Related Macular Degeneration: The UK Biobank Study.	10.1167/iovs.65.14.43
+39635018	2024	EPMA J	Application of ChatGPT-4 to oculomics: a cost-effective osteoporosis risk assessment to enhance management as a proof-of-principles model in 3PM.	10.1007/s13167-024-00378-0
+39557423	2025	Clin Exp Ophthalmol	Association of obesity and metabolic syndrome with incident primary open angle glaucoma in the UK Biobank.	10.1111/ceo.14467
+39541127	2025	JAMA Ophthalmol	Performance of Polygenic Risk Scores for Primary Open-Angle Glaucoma in Populations of African Descent.	10.1001/jamaophthalmol.2024.4784
+39509108	2024	JAMA Ophthalmol	Primary Open-Angle Glaucoma Polygenic Risk Score and Risk of Disease Onset: A Post Hoc Analysis of a Randomized Clinical Trial.	10.1001/jamaophthalmol.2024.4376
+39497845	2024	Front Med (Lausanne)	Development and construction of a cataract risk prediction model based on biochemical indices: the National Health and Nutrition Examination Survey, 2005-2008.	10.3389/fmed.2024.1452756
+39335664	2024	Biomedicines	Retinal Imaging-Based Oculomics: Artificial Intelligence as a Tool in the Diagnosis of Cardiovascular and Metabolic Diseases.	10.3390/biomedicines12092150
+39335605	2024	Biomedicines	Fundus Image Deep Learning Study to Explore the Association of Retinal Morphology with Age-Related Macular Degeneration Polygenic Risk Score.	10.3390/biomedicines12092092
+39332264	2024	Diabetes Metab Syndr	Individual cereals intake is associated with progression of diabetes and diabetic chronic complications.	10.1016/j.dsx.2024.103127
+39091897	2024	Ophthalmol Sci	Decreased Circulating Very Small Low-Density Lipoprotein is Likely Causal for Age-Related Macular Degeneration.	10.1016/j.xops.2024.100535
+39090426	2025	Acta Diabetol	Elucidating the role of genetically determined metabolites in Diabetic Retinopathy: insights from a mendelian randomization analysis.	10.1007/s00592-024-02345-7
+39033831	2024	Am J Ophthalmol	Drug Exposure As a Predictor in Diabetic Retinopathy Risk Prediction Models-A Systematic Review and Meta-Analysis.	10.1016/j.ajo.2024.07.012
+39022764	2024	Adv Ophthalmol Pract Res	Association between glaucoma and stroke: A bidirectional mendelian randomization study.	10.1016/j.aopr.2024.04.003
+38935031	2024	Invest Ophthalmol Vis Sci	Forecasting Myopic Maculopathy Risk Over a Decade: Development and Validation of an Interpretable Machine Learning Algorithm.	10.1167/iovs.65.6.40
+38898796	2024	J Glob Health	Socioeconomic disparities and green space associated with myopia among Chinese school-aged students: A population-based cohort study.	10.7189/jogh.14.04140
+38880145	2024	Sci Total Environ	Joint effects of air pollution and genetic susceptibility on incident primary open-angle glaucoma.	10.1016/j.scitotenv.2024.173935
+38844504	2024	Sci Rep	Exploring the relationship between heavy metals and diabetic retinopathy: a machine learning modeling approach.	10.1038/s41598-024-63916-w
+38767906	2024	Transl Vis Sci Technol	Predicting Risks of Dry Eye Disease Development Using a Genome-Wide Polygenic Risk Score Model.	10.1167/tvst.13.5.13
+38723778	2024	Ophthalmol Glaucoma	The Association of Urinary Sodium Excretion with Glaucoma and Related Traits in a Large United Kingdom Population.	10.1016/j.ogla.2024.04.010
+38611684	2024	Diagnostics (Basel)	Association of Genetic Risk for Age-Related Macular Degeneration with Morphological Features of the Retinal Microvascular Network.	10.3390/diagnostics14070770
+38588447	2024	Scand J Prim Health Care	Interprofessional follow-up for people at risk of type 2 diabetes in primary healthcare - a randomized controlled trial with embedded qualitative interviews.	10.1080/02813432.2024.2337071
+38523269	2024	BMC Med	Childhood maltreatment and health in the UK Biobank: triangulation of outcome-wide and polygenic risk score analyses.	10.1186/s12916-024-03360-9
+38483402	2024	JAMA Ophthalmol	Polygenic Risk Scores for Glaucoma Onset in the Ocular Hypertension Treatment Study.	10.1001/jamaophthalmol.2024.0151
+38238173	2024	BMJ Open	Interaction between parental myopia and children lifestyle on the incidence of myopia among children aged 6-18 years: a cross-sectional study in Tianjin, China.	10.1136/bmjopen-2023-080929
+38129952	2024	J Glaucoma	Lessons From The Glaucoma Foundation Think Tank 2023: A Patient-Centric Approach to Glaucoma.	10.1097/IJG.0000000000002353
+38109866	2024	Ophthalmic Res	Glaucoma Prediction Models Based on Ocular and Systemic Findings.	10.1159/000535879
+37920374	2023	J Curr Glaucoma Pract	Lifestyle Measures for Glaucoma Patients: An Objective Social Media Content Analysis.	10.5005/jp-journals-10078-1412
+37670880	2023	Front Endocrinol (Lausanne)	Novel risk score model for non-proliferative diabetic retinopathy based on untargeted metabolomics of venous blood.	10.3389/fendo.2023.1180415
+37580831	2023	Eye Vis (Lond)	Interaction between genetics and the adherence to the Mediterranean diet: the risk for age-related macular degeneration. Coimbra Eye Study Report 8.	10.1186/s40662-023-00355-0
+37545769	2023	Int J Nurs Sci	Development and validation of a risk prediction model for visual impairment in older adults.	10.1016/j.ijnss.2023.06.010
+37437830	2023	Am J Ophthalmol	Family History of Age-Related Macular Degeneration and Genetics Predict Progression to Advanced Age-Related Macular Degeneration Adjusting for Macular Status, Demographic, and Lifestyle Factors.	10.1016/j.ajo.2023.06.017
+37367859	2023	Metabolites	Systemic Metabolomics in a Framework of Genetics and Lifestyle in Age-Related Macular Degeneration.	10.3390/metabo13060701
+37308902	2023	J Transl Med	Metabolomic phenotyping of obesity for profiling cardiovascular and ocular diseases.	10.1186/s12967-023-04244-x
+37292770	2023	medRxiv	Insights into human health from phenome- and genome-wide analyses of UK Biobank retinal optical coherence tomography phenotypes.	10.1101/2023.05.16.23290063
+37229505	2023	J Diabetes Res	A Metabolism-Based Interpretable Machine Learning Prediction Model for Diabetic Retinopathy Risk: A Cross-Sectional Study in Chinese Patients with Type 2 Diabetes.	10.1155/2023/3990035
+37188768	2023	Commun Biol	Fine-mapping of retinal vascular complexity loci identifies Notch regulation as a shared mechanism with myocardial infarction outcomes.	10.1038/s42003-023-04836-9
+36993028	2022	J Family Med Prim Care	A survey on diabetes risk prediction using machine learning approaches.	10.4103/jfmpc.jfmpc_502_22
+36961150	2023	Medicine (Baltimore)	Exploring the relationship between intestinal flora and the pathological mechanism of myopia in adolescents from the perspective of Chinese and Western medicine: A review.	10.1097/MD.0000000000033393
+36927082	2023	Eur J Ophthalmol	Ocular factors predicting requirement for corneal protective oculoplastic surgery.	10.1177/11206721231163714
+36633675	2023	Eur Radiol	Radiomics-based machine learning models in STEMI: a promising tool for the prediction of major adverse cardiac events.	10.1007/s00330-023-09394-6
+36615095	2022	J Clin Med	Polygenic Risk Score Impact on Susceptibility to Age-Related Macular Degeneration in Polish Patients.	10.3390/jcm12010295
+36481453	2023	Ophthalmol Glaucoma	The Association of Alcohol Consumption with Glaucoma and Related Traits: Findings from the UK Biobank.	10.1016/j.ogla.2022.11.008
+36442194	2023	J Alzheimers Dis	Polygenic Liability to Alzheimer's Disease Is Associated with a Wide Range of Chronic Diseases: A Cohort Study of 312,305 Participants.	10.3233/JAD-220740
+36431061	2022	Life (Basel)	Application of Machine Learning to Ranking Predictors of Anti-VEGF Response.	10.3390/life12111926
+36314304	2022	Eur Rev Med Pharmacol Sci	A study to create a risk factor models to predict the development of keratoconus among the Saudi Arabian population.	10.26355/eurrev_202210_30003
+36264335	2023	Graefes Arch Clin Exp Ophthalmol	Polygenic risk score and biochemical/environmental variables predict a low-risk profile of age-related macular degeneration in Sardinia.	10.1007/s00417-022-05858-5
+36136659	2022	Trop Med Infect Dis	A Risk Prediction Model and Risk Score of SARS-CoV-2 Infection Following Healthcare-Related Exposure.	10.3390/tropicalmed7090248
+35982766	2022	Proc SPIE Int Soc Opt Eng	Real-time Detection of Patient Head Position and Cephalometric Landmarks from Neuro-Interventional Procedure Images Using Machine Learning for Patient Eye-Lens Dose Prediction.	10.1117/12.2611184
+35763501	2022	PLoS One	Interaction of background genetic risk, psychotropic medications, and primary angle closure glaucoma in the UK Biobank.	10.1371/journal.pone.0270530
+35710775	2022	Sci Rep	Correlation between air pollution and prevalence of conjunctivitis in South Korea using analysis of public big data.	10.1038/s41598-022-13344-5
+35665268	2022	Front Cardiovasc Med	Cardiovascular Disease Risk Modeling for Astronauts: Making the Leap From Earth to Space.	10.3389/fcvm.2022.873597
+35504303	2022	Am J Ophthalmol	Self-Reported Driving Difficulty, Avoidance, and Negative Emotion With On-Road Driving Performance in Older Adults With Glaucoma.	10.1016/j.ajo.2022.04.011
+35273064	2022	BMJ Open	Cohort profile: genomic data for 26 622 individuals from the Canadian Longitudinal Study on Aging (CLSA).	10.1136/bmjopen-2021-059021
+35237552	2022	Front Public Health	Dashboard Layout Effects on Drivers' Searching Performance and Heart Rate: Experimental Investigation and Prediction.	10.3389/fpubh.2022.813859
+35094227	2022	Int Ophthalmol	Smart AMD prognosis through cellphone: an innovative localized AI-based prediction system for anti-VEGF treatment prognosis in nonagenarians and centenarians.	10.1007/s10792-021-02171-8
+34954695	2022	Lifestyle Genom	Association of Age-Related Cataract Risk with High Polygenetic Risk Scores Involved in Galactose-Related Metabolism and Dietary Interactions.	10.1159/000521548
+34777253	2021	Front Endocrinol (Lausanne)	Plasma Metabolomics Reveals Metabolic Profiling For Diabetic Retinopathy and Disease Progression.	10.3389/fendo.2021.757088
+34552342	2021	Diabetes Metab Syndr Obes	Using Metabolic and Biochemical Indicators to Predict Diabetic Retinopathy by Back-Propagation Artificial Neural Network.	10.2147/DMSO.S322224
+34539180	2021	J Multidiscip Healthc	A Deep Learning Model to Predict Knee Osteoarthritis Based on Nonimage Longitudinal Medical Record.	10.2147/JMDH.S325179
+34521499	2021	Twin Res Hum Genet	The Babytwins Study Sweden (BATSS): A Multi-Method Infant Twin Study of Genetic and Environmental Factors Influencing Infant Brain and Behavioral Development.	10.1017/thg.2021.34
+34406332	2021	Invest Ophthalmol Vis Sci	Phenotypic Consequences of the GJD2 Risk Genotype in Myopia Development.	10.1167/iovs.62.10.16
+34382031	2021	Ophthalmol Sci	Genomic-Metabolomic Associations Support the Role of LIPC and Glycerophospholipids in Age-Related Macular Degeneration.	10.1016/j.xops.2021.100017
+34315649	2022	Schizophr Res	An opportunity for primary prevention research in psychotic disorders.	10.1016/j.schres.2021.07.001
+33860952	2021	Ophthalmic Physiol Opt	Time trends on the prevalence of myopia in India - A prediction model for 2050.	10.1111/opo.12806
+33856434	2021	JAMA Ophthalmol	Assessment of Cumulative Incidence and Severity of Primary Open-Angle Glaucoma Among Participants in the Ocular Hypertension Treatment Study After 20 Years of Follow-up.	10.1001/jamaophthalmol.2021.0341
+33847996	2021	Adv Exp Med Biol	Age-Related Macular Degeneration: Epidemiology and Clinical Aspects.	10.1007/978-3-030-66014-7_1
+33830181	2021	JAMA Ophthalmol	Evaluation of Shared Genetic Susceptibility to High and Low Myopia and Hyperopia.	10.1001/jamaophthalmol.2021.0497
+33716817	2021	Front Psychiatry	Optimizing and Individualizing the Pharmacological Treatment of First-Episode Schizophrenic Patients: Study Protocol for a Multicenter Clinical Trial.	10.3389/fpsyt.2021.611070
+33682940	2021	Ophthalmic Physiol Opt	The performance and confidence of clinicians in training in the analysis of ophthalmic images within a work-integrated teaching model.	10.1111/opo.12795
+33605984	2021	Invest Ophthalmol Vis Sci	The Role of Genetic Ancestry as a Risk Factor for Primary Open-angle Glaucoma in African Americans.	10.1167/iovs.62.2.28
+33544763	2021	PLoS One	Comparing oculomotor efficiency and visual attention between drivers and non-drivers through the Adult Developmental Eye Movement (ADEM) test: A visual-verbal test.	10.1371/journal.pone.0246606
+33281075	2021	Cont Lens Anterior Eye	Development of a contact Lens risk survey.	10.1016/j.clae.2020.11.003
+33275462	2020	Comput Assist Surg (Abingdon)	Construction of a knowledge graph for diabetes complications from expert-reviewed clinical evidences.	10.1080/24699322.2020.1850866
+33253757	2021	Ophthalmology	Genetic Risk, Lifestyle, and Age-Related Macular Degeneration in Europe: The EYE-RISK Consortium.	10.1016/j.ophtha.2020.11.024
+33114701	2020	Nutrients	Polygenetic-Risk Scores for A Glaucoma Risk Interact with Blood Pressure, Glucose Control, and Carbohydrate Intake.	10.3390/nu12113282
+33088170	2020	Mol Vis	Genetic and environmental risk factors for extramacular drusen.	
+32890546	2021	Ophthalmology	Predicting Progression to Advanced Age-Related Macular Degeneration from Clinical, Genetic, and Lifestyle Factors Using Machine Learning.	10.1016/j.ophtha.2020.08.031
+32821512	2020	Transl Vis Sci Technol	Rates and Predictors of Nonadherence to Postophthalmic Screening Tertiary Referrals in Patients with Type 2 Diabetes.	10.1167/tvst.9.6.15
+32752074	2020	Sensors (Basel)	Non-Contact Evaluation of Pigs' Body Temperature Incorporating Environmental Factors.	10.3390/s20154282
+32678424	2020	JAMA Ophthalmol	Application of the Sight Outcomes Research Collaborative Ophthalmology Data Repository for Triaging Patients With Glaucoma and Clinic Appointments During Pandemics Such as COVID-19.	10.1001/jamaophthalmol.2020.2974
+32496526	2020	JAMA Ophthalmol	Evaluation of a Primary Open-Angle Glaucoma Prediction Model Using Long-term Intraocular Pressure Variability Data: A Secondary Analysis of 2 Randomized Clinical Trials.	10.1001/jamaophthalmol.2020.1902
+32100327	2020	Ophthalmic Physiol Opt	Risk factors for progression of age-related macular degeneration.	10.1111/opo.12675
+31988968	2020	Eye Vis (Lond)	Design and baseline data of a population-based metabonomics study of eye diseases in eastern China: the Yueqing Ocular Diseases Investigation.	10.1186/s40662-019-0170-1
+31885881	2019	J Ophthalmol	Generational Difference of Axial Length and Its Risk Factors in Urban and Rural China.	10.1155/2019/1607064
+31419508	2019	Toxicol In Vitro	An in vitro depth of injury prediction model for a histopathologic classification of EPA and GHS eye irritants.	10.1016/j.tiv.2019.104628
+31330177	2019	Toxicol In Vitro	Establishment and performance assessment of an in-house 3D Reconstructed Human Cornea-Like Epithelium (RhCE) as a screening tool for the identification of liquid chemicals with potential eye hazard.	10.1016/j.tiv.2019.104604
+31248127	2019	J Clin Med	(1)H Nuclear Magnetic Resonance (NMR)-Based Cerebrospinal Fluid and Plasma Metabolomic Analysis in Type 2 Diabetic Patients and Risk Prediction for Diabetic Microangiopathy.	10.3390/jcm8060874
+31047378	2018	Ophthalmol Retina	Joint Contribution of Genetic Susceptibility and Modifiable Factors to the Progression of Age-Related Macular Degeneration over 10 Years: The Three Continent AMD Consortium Report.	10.1016/j.oret.2017.10.019
+30882695	2019	Medicine (Baltimore)	Effect of adiponectin level and genetic variation of its receptors on diabetic retinopathy: A case-control study.	10.1097/MD.0000000000014878
+30419128	2019	JAMA Ophthalmol	Association of Long-term Ambient Black Carbon Exposure and Oxidative Stress Allelic Variants With Intraocular Pressure in Older Men.	10.1001/jamaophthalmol.2018.5313
+30146089	2019	Ophthalmology	Environmental Risk Factors Can Reduce Axial Length Elongation and Myopia Incidence in 6- to 9-Year-Old Children.	10.1016/j.ophtha.2018.06.029
+28389280	2017	Toxicol In Vitro	In vitro safety and efficacy evaluations of a complex botanical mixture of Eugenia dysenterica DC. (Myrtaceae): Prospects for developing a new dermocosmetic product.	10.1016/j.tiv.2017.04.002
+28341650	2017	Genetics	Bivariate Analysis of Age-Related Macular Degeneration Progression Using Genetic Risk Scores.	10.1534/genetics.116.196998
+27768796	2016	Invest Ophthalmol Vis Sci	Epidemiology of Reticular Pseudodrusen in Age-Related Macular Degeneration: The Rotterdam Study.	10.1167/iovs.15-18816
+27732974	2017	Ophthalmic Res	Risk Prediction Model for Progression of Age-Related Macular Degeneration.	10.1159/000449168
+29263899	2016	Signal Transduct Target Ther	Genetic and environmental factors strongly influence risk, severity and progression of age-related macular degeneration.	10.1038/sigtrans.2016.16
+27625572	2016	Mol Vis	Whole exome sequencing of extreme age-related macular degeneration phenotypes.	
+27174397	2016	Sci Rep	Childhood gene-environment interactions and age-dependent effects of genetic variants associated with refractive error and myopia: The CREAM Consortium.	10.1038/srep25853
+27116550	2016	Invest Ophthalmol Vis Sci	Genetic Association Analysis of Drusen Progression.	10.1167/iovs.15-18571
+26959068	2016	J Clin Med	The Application of Genetic Risk Scores in Age-Related Macular Degeneration: A Review.	10.3390/jcm5030031
+26325674	2015	J Vis Exp	Eye Irritation Test (EIT) for Hazard Identification of Eye Irritating Chemicals using Reconstructed Human Cornea-like Epithelial (RhCE) Tissue Model.	10.3791/52979
+26267496	2015	J Therm Biol	A prediction model for ocular damage - Experimental validation.	10.1016/j.jtherbio.2015.05.005
+25954476	2015	World J Hepatol	Primary biliary cirrhosis: Pathophysiology, clinical presentation and therapy.	10.4254/wjh.v7.i7.926
+25655794	2015	Invest Ophthalmol Vis Sci	Risk Prediction for Progression of Macular Degeneration: 10 Common and Rare Genetic Variants, Demographic, Environmental, and Macular Covariates.	10.1167/iovs.14-15841
+25521746	2015	JAMA Ophthalmol	Predictors for the development of referral-warranted retinopathy of prematurity in the telemedicine approaches to evaluating acute-phase retinopathy of prematurity (e-ROP) study.	10.1001/jamaophthalmol.2014.5185
+25260822	2015	Toxicol In Vitro	Development of an in vitro ocular test system for the prediction of all three GHS categories.	10.1016/j.tiv.2014.09.005
+25157998	2014	Ophthalmic Epidemiol	Predicting non-response to ranibizumab in patients with neovascular age-related macular degeneration.	10.3109/09286586.2014.949010
+25146986	2014	Invest Ophthalmol Vis Sci	Direct-to-consumer personal genome testing for age-related macular degeneration.	10.1167/iovs.14-15142
+24837561	2014	Surg Obes Relat Dis	Risk prediction of complications of metabolic syndrome before and 6 years after gastric bypass.	10.1016/j.soard.2014.01.025
+24576882	2014	Invest Ophthalmol Vis Sci	Genetic and environmental risk factors for age-related macular degeneration in persons 90 years and older.	10.1167/iovs.13-13420
+24142238	2013	Eur J Epidemiol	Education influences the role of genetics in myopia.	10.1007/s10654-013-9856-1
+24120328	2013	Ophthalmology	Prediction of age-related macular degeneration in the general population: the Three Continent AMD Consortium.	10.1016/j.ophtha.2013.07.053
+24112216	2014	Clin Exp Ophthalmol	How genetic studies have advanced our understanding of age-related macular degeneration and their impact on patient care: a review.	10.1111/ceo.12235
+23826664	2013	BMC Public Health	Prevalence and risk factors for diabetic retinopathy in a high-risk Chinese population.	10.1186/1471-2458-13-633
+23713713	2013	Clin Genet	Age-related macular degeneration-clinical review and genetics update.	10.1111/cge.12206
+23411794	2013	JAMA Ophthalmol	Validation of a prediction algorithm for progression to advanced macular degeneration subtypes.	10.1001/jamaophthalmol.2013.2578
+23290187	2013	Surg Obes Relat Dis	Long-term remission of type 2 diabetes in morbidly obese patients after sleeve gastrectomy.	10.1016/j.soard.2012.09.003
+23159500	2013	Toxicol In Vitro	Cosmetics Europe multi-laboratory pre-validation of the EpiOcular™ reconstituted human tissue test method for the prediction of eye irritation.	10.1016/j.tiv.2012.11.007
+22974496	2012	J Clin Epidemiol	Good test-retest reproducibility for an instrument to capture self-reported melanoma risk factors.	10.1016/j.jclinepi.2012.06.014
+22891656	2012	Chronobiol Int	An improved method for estimating human circadian phase derived from multichannel ambulatory monitoring and artificial neural networks.	10.3109/07420528.2012.700669
+22736163	2012	Bundesgesundheitsblatt Gesundheitsforschung Gesundheitsschutz	[The Gutenberg Health Study].	10.1007/s00103-012-1502-7
+22030572	2011	Rev Lat Am Enfermagem	Corneal injuries: incidence and risk factors in the Intensive Care Unit.	10.1590/s0104-11692011000500005
+21959373	2011	Ophthalmology	Risk models for progression to advanced age-related macular degeneration using demographic, environmental, genetic, and ocular factors.	10.1016/j.ophtha.2011.04.029
+21942547	2011	Altern Lab Anim	Development of the EpiOcular(TM) eye irritation test for hazard identification and labelling of eye irritating chemicals in response to the requirements of the EU cosmetics directive and REACH legislation.	10.1177/026119291103900409
+21807600	2011	Hum Genomics	Clinical validation of a genetic model to estimate the risk of developing choroidal neovascular age-related macular degeneration.	10.1186/1479-7364-5-5-420
+21513790	2011	Toxicol In Vitro	The Short Time Exposure (STE) test for predicting eye irritation potential: intra-laboratory reproducibility and correspondence to globally harmonized system (GHS) and EU eye irritation classification for 109 chemicals.	10.1016/j.tiv.2011.04.012
+21402993	2011	Arch Ophthalmol	Assessing susceptibility to age-related macular degeneration with genetic markers and environmental factors.	10.1001/archophthalmol.2011.10
+21291995	2011	Toxicol In Vitro	Validation study of the Short Time Exposure (STE) test to assess the eye irritation potential of chemicals.	10.1016/j.tiv.2011.01.015
+20194260	2010	Arch Pediatr Adolesc Med	Identifying children at low risk for bacterial conjunctivitis.	10.1001/archpediatrics.2009.289
+20178401	2010	Cutan Ocul Toxicol	An interlaboratory study of the short time exposure (STE) test using SIRC cells for predicting eye irritation potential.	10.3109/15569521003587327
+20170456	2010	Med J Aust	AUSDRISK: an Australian Type 2 Diabetes Risk Assessment Tool based on demographic, lifestyle and simple anthropometric measures.	10.5694/j.1326-5377.2010.tb03507.x
+20157618	2010	Mol Vis	Complement component 3: an assessment of association with AMD and analysis of gene-gene and gene-environment interactions in a Northern Irish cohort.	
+19952497	2009	J Toxicol Sci	Inter-laboratory study of short time exposure (STE) test for predicting eye irritation potential of chemicals and correspondence to globally harmonized system (GHS) classification.	10.2131/jts.34.611
+19117936	2009	Invest Ophthalmol Vis Sci	Prediction model for prevalence and incidence of advanced age-related macular degeneration based on genetic, demographic, and environmental variables.	10.1167/iovs.08-3064
+18248950	2008	Toxicol In Vitro	Development of the short time exposure (STE) test: an in vitro eye irritation test using SIRC cells.	10.1016/j.tiv.2007.11.018
+16980247	2006	Cutan Ocul Toxicol	Prediction of eye irritation potential of surfactant-based rinse-off personal care formulations by the bovine corneal opacity and permeability (BCOP) assay.	10.1080/15569520600860587
+16816528	2006	Hum Hered	CFH gene variant, Y402H, and smoking, body mass index, environmental associations with advanced age-related macular degeneration.	10.1159/000094141
+16243479	2006	Toxicol In Vitro	Reconstituted human corneal epithelium: a new alternative to the Draize eye test for the assessment of the eye irritation potential of chemicals and cosmetic products.	10.1016/j.tiv.2005.09.005
+15922552	2005	Toxicol In Vitro	Performance of porcine corneal opacity and permeability assay to predict eye irritation for water-soluble cosmetic ingredients.	10.1016/j.tiv.2005.04.006
+11933551	2002	Arch Mal Coeur Vaiss	[Evaluation of the cardiac risks in non-cardiac surgery in patients with heart failure].	
+20654489	1999	Toxicol In Vitro	Assessment of the Cytosensor Microphysiometer Assay in the COLIPA In Vitro Eye Irritation Validation Study.	10.1016/s0887-2333(98)00090-3
+
+## 探针G 全标题
+42849036	2026	J Med Internet Res	Real-World Effectiveness of AI-Enabled Clinical Decision Support in Primary Care: Systematic Review.	10.2196/98630
+42768457	2026	Oncologist	Toxicity attribution during enfortumab vedotin plus pembrolizumab therapy in urothelial carcinoma: a practical framework.	10.1093/oncolo/oyag371
+42723850	2026	Front Endocrinol (Lausanne)	Extreme phenotype-derived machine learning reveals susceptibility and resilience signatures for severe diabetic retinopathy.	10.3389/fendo.2026.1933878
+42642171	2026	Best Pract Res Clin Gastroenterol	Accurate histology prediction before resection of colorectal polyps: Is artificial intelligence shaping the future of optical diagnosis?	10.1016/j.bpg.2026.102125
+42495699	2026	Ophthalmol Sci	Artificial Intelligence-Driven Multimodal Prediction of 10-Year Incident Glaucoma Integrating Genetic and Deep Learning-Derived Imaging Features.	10.1016/j.xops.2026.101292
+42416158	2026	Front Psychol	Can explainable AI scaffolding reduce cognitive load and enhance embodied expression? A quasi-experimental study of multilingual vocal learning in Bel Canto education.	10.3389/fpsyg.2026.1835027
+42281044	2026	Sensors (Basel)	Multimodal Sensor Fusion in Autonomous Vehicles: Technologies, Architectures, and Open Challenges.	10.3390/s26113528
+42179464	2026	EPMA J	Vision restoration in glaucoma: improved subjective visual function after personalised digital lifestyle coaching.	10.1007/s13167-026-00446-7
+42067530	2026	Sci Data	EED-Astig: A Multimodal Dataset for Pediatric Astigmatism Severity Prediction.	10.1038/s41597-026-07330-z
+42052023	2026	Front Public Health	Unveiling the non-linear synergistic effects of smoking and aging on cataract-AMD comorbidity: an explainable artificial intelligence approach.	10.3389/fpubh.2026.1784189
+41966894	2026	Sleep Health	The impact of stress on sleep architecture: A seven-day study leveraging a psychophysiological stress detection algorithm and wearable EEG.	10.1016/j.sleh.2026.02.008
+41195172	2025	Front Med (Lausanne)	Uncovering predictors of myopia in youth: a secondary data analysis using a machine learning approach.	10.3389/fmed.2025.1595320
+41094985	2025	Sensors (Basel)	VLA-MP: A Vision-Language-Action Framework for Multimodal Perception and Physics-Constrained Action Generation in Autonomous Driving.	10.3390/s25196163
+41045833	2025	J Therm Biol	Artificial intelligence-based multimodal framework for non-invasive detection of digital eye strain using thermal imaging and behavioral metrics.	10.1016/j.jtherbio.2025.104280
+40688783	2025	Int J Ophthalmol	Associations between organophosphorus pesticides exposure and age-related macular degeneration risk in U.S. adults: analysis from interpretable machine learning approaches.	10.18240/ijo.2025.07.04
+39103390	2024	NPJ Aging	Shared whole environmental etiology between Alzheimer's disease and age-related macular degeneration.	10.1038/s41514-024-00162-4
+38955107	2024	Accid Anal Prev	Investigating the influence of streetscape environmental characteristics on pedestrian crashes at intersections using street view images and explainable machine learning.	10.1016/j.aap.2024.107693
+38935031	2024	Invest Ophthalmol Vis Sci	Forecasting Myopic Maculopathy Risk Over a Decade: Development and Validation of an Interpretable Machine Learning Algorithm.	10.1167/iovs.65.6.40
+37848075	2023	Neurobiol Learn Mem	Individual differences in information processing during sleep and wake predict sleep-based memory consolidation of complex rules.	10.1016/j.nlm.2023.107842
+37573641	2023	Comput Methods Programs Biomed	Enhanced joint hybrid deep neural network explainable artificial intelligence model for 1-hr ahead solar ultraviolet index prediction.	10.1016/j.cmpb.2023.107737
+37410730	2023	PLoS One	Diagnostic test accuracy of ultrasound for orbital cellulitis: A systematic review.	10.1371/journal.pone.0288011
+34071960	2021	Sensors (Basel)	Assessing Visual Exploratory Activity of Athletes in Virtual Reality Using Head Motion Characteristics.	10.3390/s21113728
+33950206	2021	JAMA Netw Open	Automated Explainable Multidimensional Deep Learning Platform of Retinal Images for Retinopathy of Prematurity Screening.	10.1001/jamanetworkopen.2021.8758
+33857176	2021	PLoS One	Identifying geographically differentiated features of Ethopian Nile tilapia (Oreochromis niloticus) morphology with machine learning.	10.1371/journal.pone.0249593
+33587709	2022	IEEE Trans Neural Netw Learn Syst	Massive-Scale Aerial Photo Categorization by Cross-Resolution Visual Perception Enhancement.	10.1109/TNNLS.2021.3055548
+33275462	2020	Comput Assist Surg (Abingdon)	Construction of a knowledge graph for diabetes complications from expert-reviewed clinical evidences.	10.1080/24699322.2020.1850866
+33041992	2020	Front Neurol	The Effects of Mild Traumatic Brain Injury on Cognitive-Motor Integration for Skilled Performance.	10.3389/fneur.2020.541630
+31699727	2019	BMJ Open	Optical coherence tomography (OCT) in unconscious and systemically unwell patients using a mobile OCT device: a pilot study.	10.1136/bmjopen-2019-030882
+31047375	2018	Ophthalmol Retina	The Systemic Safety of Ranibizumab in Patients 85 Years and Older with Neovascular Age-Related Macular Degeneration.	10.1016/j.oret.2018.01.010
+24550359	2014	Invest Ophthalmol Vis Sci	Perceptual learning improves adult amblyopic vision through rule-based cognitive compensation.	10.1167/iovs.13-13739
+24388378	2014	J Fr Ophtalmol	[Management of allergic conjunctivitis. An observational study among ophthalmologists].	10.1016/j.jfo.2013.04.008
+20648713	2010	Exp Dermatol	The physiological and phenotypic determinants of human tanning measured as change in skin colour following a single dose of ultraviolet B radiation.	10.1111/j.1600-0625.2010.01078.x
+20006816	2009	J AAPOS	Latanoprost in pediatric glaucoma--pediatric exposure over a decade.	10.1016/j.jaapos.2009.10.003

@@ -1,0 +1,335 @@
+{
+  "schema_version": "v3.0",
+  "project": {
+    "code_name": "huiyan",
+    "chinese_name": "慧眼",
+    "description_one_line": "暴露组×眼病可解释风险筛查 agent（规则引擎+知识图谱+LLM 仲裁）：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（跨国）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差",
+    "target_journal_primary": "Ophthalmology（IF 8+ 档候选；Phase 2 期刊适配检查后最终锁定）",
+    "target_journal_backup": [
+      "JAMA Ophthalmology",
+      "British Journal of Ophthalmology",
+      "American Journal of Ophthalmology"
+    ],
+    "timeline_weeks": 24
+  },
+  "domain": {
+    "disease_or_topic": "老年人群主要致盲眼病（白内障 / 青光眼 / 年龄相关性黄斑变性 AMD / 糖尿病视网膜病变 DR / 视力障碍）",
+    "research_direction": "暴露组×眼病可解释风险筛查：代谢-营养-生活方式-环境四域暴露（含组合/交互）与主要眼病的关联筛查（规则引擎+知识图谱+LLM 仲裁混合系统），跨库跨国多源验证",
+    "research_question": "在中老年人群中，代谢（尿酸/血糖/HbA1c/血脂/CRP）、营养（维生素D/抗氧化营养素/膳食模式）、生活方式（吸烟/饮酒/体力活动/BMI）与环境（重金属/空气污染）暴露及其组合，与主要眼科疾病之间存在哪些有临床意义的关联与交互？这些暴露-眼病关系能否被规则+知识图谱+LLM 混合系统以可解释、可溯源的方式筛查、分级，并在 NHANES / KNHANES / 9 国老龄队列上完成多层独立验证？"
+  },
+  "entities": {
+    "a": {
+      "name": "exposure",
+      "chinese_name": "暴露组（代谢-营养-生活方式-环境）",
+      "target_count": 40,
+      "registry_source": "各库原始变量字典（NHANES 生化 BIOPRO / 膳食 DR1TOT-DR2TOT / 毒物检测模块；KNHANES 官方变量字典 3.4 血液-3.10 眼科-4.x 营养 / 空气污染模块；CHARLS biomarkers.dta；HRS VBS 静脉血）+ GBD 2021 55+ 暴露-结局数据 + 暴露组（exposome）文献框架",
+      "example_flags": [
+        "uric_acid_elevated",
+        "hyperglycemia",
+        "hba1c_elevated",
+        "dyslipidemia",
+        "crp_elevated",
+        "vitamin_d_deficiency",
+        "low_antioxidant_intake",
+        "pro_inflammatory_diet",
+        "mediterranean_diet",
+        "current_smoking",
+        "alcohol_intake",
+        "physical_inactivity",
+        "bmi_high",
+        "lead_exposure",
+        "cadmium_exposure",
+        "mercury_exposure",
+        "pm25_exposure",
+        "uv_exposure"
+      ]
+    },
+    "b": {
+      "name": "eye_disease",
+      "chinese_name": "主要致盲眼病",
+      "target_count": 15,
+      "registry_source": "ICD-11 眼科疾病分类 + NHANES VIQ/VIX/OPXRET 变量字典（自报眼病+客观视力+视网膜分级）+ KNHANES 眼科检查变量字典（1,686 眼科变量）+ 队列自报眼病变量（CHARLS da035/da036/da037 等）+ AAO PPP 疾病定义（POAG/AMD/DR 三册免费全文已验证可下载）",
+      "example_flags": [
+        "cataract_any",
+        "cataract_subtype_graded",
+        "glaucoma_selfreport",
+        "glaucoma_iop_elevated",
+        "glaucoma_suspect_cdr",
+        "amd_selfreport",
+        "amd_early",
+        "amd_late",
+        "retinopathy_any",
+        "dr_npdr",
+        "dr_pdr",
+        "vision_impairment_mild",
+        "vision_impairment_moderate",
+        "vision_impairment_severe",
+        "optic_disc_abnormality"
+      ]
+    }
+  },
+  "interaction_mechanisms": [
+    "oxidative_stress",
+    "glycation_metabolic",
+    "inflammation_immune",
+    "vascular_perfusion",
+    "endocrine_hormonal",
+    "heavy_metal_toxicity",
+    "photochemical_uv"
+  ],
+  "population": {
+    "primary": "elderly",
+    "subgroups": [
+      "diabetic",
+      "hypertensive",
+      "rural_china",
+      "multi_country"
+    ],
+    "patient_factors": [
+      "diabetes",
+      "hypertension",
+      "obesity",
+      "smoking",
+      "chronic_kidney_disease"
+    ]
+  },
+  "data_sources": [
+    {
+      "name": "NHANES 1999-2008 本地原始库（生化/膳食/毒物 + VIX 客观视力 / OPXRET 视网膜分级 / VIQ 眼病问卷）[local_confirmed]",
+      "entity": "both",
+      "access": "download",
+      "url": "local: E:\\BaiduNetdiskDownload\\所有数据库\\16.NHANES"
+    },
+    {
+      "name": "KNHANES 1998-2024 本地 Rdata 全集 + 官方变量字典（眼科检查模块，1,686 眼科变量）[local_confirmed]",
+      "entity": "both",
+      "access": "download",
+      "url": "local: E:\\BaiduNetdiskDownload\\所有数据库\\11. KNHANES 韩国国民健康与营养调查"
+    },
+    {
+      "name": "9 大老龄队列原始库（CHARLS/HRS/ELSA/SHARE/KLoSA/LASI/MHAS/CRELES/CLHLS）[local_confirmed]",
+      "entity": "both",
+      "access": "download",
+      "url": "local: E:\\BaiduNetdiskDownload\\所有数据库\\01-09 目录"
+    },
+    {
+      "name": "GBD 视觉库（GBD 2023 近视力丧失 / 2023 盲与视力损害 / 2021 55+ 暴露-结局）[local_confirmed]",
+      "entity": "both",
+      "access": "download",
+      "url": "local: E:\\BaiduNetdiskDownload\\所有数据库\\15/17/18 目录"
+    },
+    {
+      "name": "PubMed E-utilities（NCBI_API_KEY 已配置，10 req/s）[confirmed_public_key_available]",
+      "entity": "both",
+      "access": "api",
+      "url": "https://eutils.ncbi.nlm.nih.gov"
+    },
+    {
+      "name": "AAO PPP 免费全文 PDF（POAG/AMD/DR 三册，代理通道 2026-09-27 实测可下载）[confirmed_public_proxy_path]",
+      "entity": "b",
+      "access": "download",
+      "url": "https://www.aao.org/preferred-practice-pattern"
+    },
+    {
+      "name": "Crossref + OpenAlex（引用交叉验证双源）[confirmed_public]",
+      "entity": "both",
+      "access": "api",
+      "url": "https://api.crossref.org ; https://api.openalex.org"
+    },
+    {
+      "name": "GBD 官方数据门户（burden 补充与更新）[confirmed_public]",
+      "entity": "b",
+      "access": "download",
+      "url": "https://ghdx.healthdata.org"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "dev-exposure-disease-pairs",
+      "role": "development",
+      "source_type": "literature",
+      "source_ref": "暴露-眼病机制/流行病学文献池（系统综述+Meta 分析，PubMed 检索式 Phase 2 定稿）+ AAO PPP 风险因素章节 + WHO 视力保护与中国膳食指南 — 与规则库同步构建，仅此集参与规则生成",
+      "expected_size": 400,
+      "ground_truth_method": "label_guideline",
+      "independence_axis": "source",
+      "enabled": true,
+      "notes": "分析单元=暴露x眼病 对(pair); 预测目标=agent 对该对输出风险等级 high/medium/low/unknown 及机制与证据; case 定义=指南或系统综述/Meta 分析明确报告该暴露与该眼病存在关联; 阳性阴性=约 400 对,以阳性为主并含少量阴性对照; 本集角色=仅用于规则生成与一致性检查,不出性能数字"
+    },
+    {
+      "id": "intval-nhanes",
+      "role": "internal_validation",
+      "source_type": "public_database",
+      "source_ref": "NHANES 1999-2008 本地原始库（5 周期；暴露：生化+膳食+毒物；结局：VIX 客观视力 / OPXRET 视网膜分级 / VIQ 自报白内障-青光眼-AMD）",
+      "expected_size": 400,
+      "ground_truth_method": "database_outcome",
+      "independence_axis": "source",
+      "enabled": true,
+      "notes": "分析单元=暴露x眼病 对(pair) 叠加人群层关联; 预测目标=agent 风险等级是否与库内实际关联一致; case 定义=该暴露指标(连续变量按四分位或临床切点)与眼病结局的加权 logistic 回归 OR 显著且方向与规则一致; 阳性阴性=约 400 对,含中性对以评特异度; 本集角色=内部验证,出内部性能 灵敏度/特异度/F1"
+    },
+    {
+      "id": "extval-knhanes",
+      "role": "external_validation",
+      "source_type": "public_database",
+      "source_ref": "KNHANES 1998-2024 本地全集（独立国家、独立抽样与检查设计；眼科检查 + 生化 + 营养 + 环境模块）",
+      "expected_size": 300,
+      "ground_truth_method": "database_outcome",
+      "independence_axis": "site",
+      "enabled": true,
+      "notes": "分析单元=暴露x眼病 对(pair); 预测目标=同内部集口径,用于跨国泛化; case 定义=同内部集,按 KNHANES 官方变量字典与权重复算; 阳性阴性=约 300 对; 本集角色=外部验证 跨国,出相对 NHANES 的泛化落差"
+    },
+    {
+      "id": "extval-cohorts-9",
+      "role": "external_validation",
+      "source_type": "public_database",
+      "source_ref": "9 大老龄队列原始库（CHARLS/HRS/ELSA/SHARE/KLoSA/LASI/MHAS/CRELES/CLHLS；自报眼病结局 + 统一暴露口径；跨国人群）",
+      "expected_size": 120,
+      "ground_truth_method": "database_outcome",
+      "independence_axis": "population",
+      "enabled": true,
+      "notes": "分析单元=暴露x眼病 对(pair); 预测目标=同内部集口径,用于跨人群泛化; case 定义=仅用自报眼病结局加统一暴露口径,9 库分别复算后合并; 阳性阴性=约 120 对（上限；队列层 3/15 条 B 可判：cataract_any 6/9、glaucoma_selfreport 4/9、amd_selfreport 1/9 仅 HRS 探索性）; 本集角色=外部验证 跨人群,出第二层泛化落差,并报告各库覆盖率"
+    }
+  ],
+  "clinical": {
+    "collaborator_available": false,
+    "irb_possible": true,
+    "expert_panel_size": 3,
+    "case_count_estimate": 60
+  },
+  "ethics": {
+    "irb_needed": false,
+    "irb_pathway": "exemption",
+    "human_subjects_involvement": "none",
+    "informed_consent_required": false,
+    "informed_consent_type": "waived",
+    "vulnerable_populations": [],
+    "pi": {
+      "name": "[TODO: pi_name]",
+      "title": "[TODO: pi_title]",
+      "email": "[TODO: pi_email]",
+      "phone": "[TODO: pi_phone]",
+      "department": "[TODO: pi_department]",
+      "orcid": "[TODO: orcid]"
+    },
+    "hospital_name": "[TODO: hospital_name]",
+    "hospital_collab_status": "none",
+    "irb_committee_name": "[TODO: irb_committee_name]",
+    "irb_committee_id": "[TODO: irb_committee_id]",
+    "irb_contact_name": "[TODO: irb_contact_name]",
+    "irb_contact_email": "[TODO: irb_contact_email]",
+    "irb_contact_phone": "[TODO: irb_contact_phone]",
+    "funding_source": "无",
+    "funding_id": "无",
+    "coi_disclosure": "无",
+    "data_storage_location": "本地工作站（原始库 E:\\BaiduNetdiskDownload\\所有数据库 只读；分析工程 D:\\Desktop\\眼科公共数据库agent搭建）",
+    "notes": "全部数据来自公开/注册制去标识化数据库（NHANES/KNHANES/9 国老龄队列/GBD），不涉及人类受试者接触与可识别信息；专家盲评（3 名，仅评 agent 输出报告）不构成人类受试者研究。若后续接入院内临床数据，升级为 expedited 快速审查并补交伦理文档。"
+  },
+  "resources": {
+    "compute": "cloud_api",
+    "llm_provider": "deepseek",
+    "team_python_level": "none",
+    "team_domain_expertise": [
+      "ophthalmologist"
+    ]
+  },
+  "llm_api": {
+    "deepseek": {
+      "api_key": "",
+      "base_url": "https://api.commandcode.ai/provider/v1",
+      "chat_model": "deepseek/deepseek-v4.1-flash"
+    },
+    "volcengine_ark": {
+      "api_key": "",
+      "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+      "chat_model": "doubao-pro-32k",
+      "embed_model": "doubao-embedding-vision-251215",
+      "embed_dim": 2048,
+      "endpoint_id": "ep-20260726101613-6hll6"
+    },
+    "custom_chat": {
+      "enabled": true,
+      "base_url": "https://api.commandcode.ai/provider/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "model": "deepseek/deepseek-v4.1-flash"
+    },
+    "custom_embed": {
+      "enabled": false,
+      "base_url": "",
+      "api_key_env": "",
+      "model": "",
+      "dim": 0
+    },
+    "budget_estimate_calls": 8000
+  },
+  "differentiation": {
+    "avoid_duplicate_of": "与明目 mingmu（青光眼食物×药物相互作用）和睛明 jingming（围手术期禁忌）实体对完全不同；与单暴露×眼病传统流行病学文献差异化：本项目为多暴露组×眼病筛查系统+多库跨国验证。用户明确不将 9 大数据库既有衍生项目（视觉抑郁/认知/数字排斥/ATLAS/TTE）作为对照基准（其科学性待复核）",
+    "key_selling_point": "多库跨文化验证：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（独立国家）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差；首个可解释的暴露组×眼病风险筛查 agent（暴露→机制→眼病→证据等级 全链溯源）"
+  },
+  "constraints": {
+    "must_use_chinese_ui": true,
+    "data_must_stay_local": false,
+    "no_foreign_api": false
+  },
+  "online_validation": {
+    "research_prospect_verdict": "strong",
+    "data_availability_verdict": "strong",
+    "prior_art_summary": "探针全标题筛查（2026-10-11，清单落盘 PHASE2_probe_titles.txt）：228 篇 EWAS 全称文献中眼病仅 5 篇（2.2%），同期 EWAS 已覆盖 AD/CVD/哮喘/SLE/高血压/自杀/尿酸等 10+ 疾病，眼科为结构性空白；眼病侧最直接先例为单病种关联研究（ACG×exposome-wide/CKB，APJO 2026；DR×EWAS/NHANES，JCM 2020），最近邻范式为 EWAS→预测评分（AD，Alzheimers Dement 2026）与 exposome-phenome 图谱（Nat Med 2026，描述性非筛查系统）；505 篇眼病决策支持/筛查类均为影像 DL 或器械，未见暴露组×多眼病可解释筛查系统。经全标题筛查加固的 novelty：首个暴露组×多眼病可解释筛查系统 + 三层独立泛化验证。",
+    "exemplar_papers": [
+      {
+        "title": "Exposome for ocular diseases: From exposure evidence to causality and actionable prevention",
+        "doi": "10.1016/j.preteyeres.2026.101524",
+        "year": 2026,
+        "relation": "必须引用（顶级综述）：方向被顶刊认定；actionable prevention 定位即本项目筛查系统生态位"
+      },
+      {
+        "title": "Risk factors of primary angle-closure glaucoma: An exposome-wide association study in the China Kadoorie Biobank",
+        "doi": "10.1016/j.apjo.2026.100378",
+        "year": 2026,
+        "relation": "必须区分（最直接竞品）：单病种、单队列关联研究，无系统/规则/多库验证"
+      },
+      {
+        "title": "Diabetic Retinopathy Environment-Wide Association Study (EWAS) in NHANES 2005-2008",
+        "doi": "10.3390/jcm9113643",
+        "year": 2020,
+        "relation": "必须区分：同数据库(NHANES)单病种先例，无系统化筛查与多库验证"
+      },
+      {
+        "title": "An atlas of exposome-phenome associations in health and disease risk",
+        "doi": "10.1038/s41591-026-04266-0",
+        "year": 2026,
+        "relation": "必须引用+区分：exposome-phenome 图谱框架（描述性），非临床筛查系统"
+      },
+      {
+        "title": "Exposome-wide association study and predictive risk score for incident Alzheimer's disease and related dementias",
+        "doi": "10.1002/alz.71842",
+        "year": 2026,
+        "relation": "必须区分（最近邻范式）：EWAS→预测评分，但单病种/单库/无规则引擎"
+      }
+    ],
+    "journal_fit_exemplars": [
+      {
+        "title": "Recommendations on Screening for Hydroxychloroquine Retinopathy (2025 Revision)",
+        "journal": "Ophthalmology",
+        "year": 2026,
+        "doi": "10.1016/j.ophtha.2025.11.001"
+      },
+      {
+        "title": "Plasma Metabolomics Identifies Key Metabolites and Improves Prediction of Diabetic Retinopathy",
+        "journal": "Ophthalmology",
+        "year": 2024,
+        "doi": "10.1016/j.ophtha.2024.07.004"
+      },
+      {
+        "title": "Deep Learning-Based Prediction of Cardiopulmonary Disease in Retinal Images of Premature Infants",
+        "journal": "JAMA Ophthalmology",
+        "year": 2026,
+        "doi": "10.1001/jamaophthalmol.2025.5814"
+      },
+      {
+        "title": "Combined structure-function analysis in glaucoma screening",
+        "journal": "British Journal of Ophthalmology",
+        "year": 2022,
+        "doi": "10.1136/bjophthalmol-2021-319178"
+      }
+    ]
+  }
+}

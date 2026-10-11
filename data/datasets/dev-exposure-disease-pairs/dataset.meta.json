@@ -1,0 +1,12 @@
+{
+  "id": "dev-exposure-disease-pairs",
+  "role": "development",
+  "source_type": "literature",
+  "source_ref": "暴露-眼病机制/流行病学文献池（系统综述+Meta 分析，PubMed 检索式 Phase 2 定稿）+ AAO PPP 风险因素章节 + WHO 视力保护与中国膳食指南 — 与规则库同步构建，仅此集参与规则生成",
+  "expected_size": 400,
+  "ground_truth_method": "label_guideline",
+  "independence_axis": "source",
+  "enabled": true,
+  "notes": "分析单元=暴露x眼病 对(pair); 预测目标=agent 对该对输出风险等级 high/medium/low/unknown 及机制与证据; case 定义=指南或系统综述/Meta 分析明确报告该暴露与该眼病存在关联; 阳性阴性=约 400 对,以阳性为主并含少量阴性对照; 本集角色=仅用于规则生成与一致性检查,不出性能数字",
+  "created_date": "2026-10-11"
+}

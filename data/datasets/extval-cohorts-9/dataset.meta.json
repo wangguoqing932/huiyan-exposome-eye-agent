@@ -1,0 +1,12 @@
+{
+  "id": "extval-cohorts-9",
+  "role": "external_validation",
+  "source_type": "public_database",
+  "source_ref": "9 大老龄队列原始库（CHARLS/HRS/ELSA/SHARE/KLoSA/LASI/MHAS/CRELES/CLHLS；自报眼病结局 + 统一暴露口径；跨国人群）",
+  "expected_size": 120,
+  "ground_truth_method": "database_outcome",
+  "independence_axis": "population",
+  "enabled": true,
+  "notes": "分析单元=暴露x眼病 对(pair); 预测目标=同内部集口径,用于跨人群泛化; case 定义=仅用自报眼病结局加统一暴露口径,9 库分别复算后合并; 阳性阴性=约 120 对（上限；队列层 3/15 条 B 可判：cataract_any 6/9、glaucoma_selfreport 4/9、amd_selfreport 1/9 仅 HRS 探索性）; 本集角色=外部验证 跨人群,出第二层泛化落差,并报告各库覆盖率",
+  "created_date": "2026-10-11"
+}

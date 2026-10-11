@@ -1,0 +1,42 @@
+exposure_id,primary_name,aliases,category,active_mechanisms,flags,evidence_sources
+serum_uric_acid,Serum uric acid,尿酸;UA,metabolic_serum,oxidative_stress;inflammation_immune,uric_acid_elevated,NHANES LBXSUA(BIOPRO 1999-2008);KNHANES 血清尿酸(字典3.4);CHARLS biomarkers 2011/2015
+fasting_glucose,Fasting glucose,空腹血糖,metabolic_serum,glycation_metabolic,hyperglycemia,NHANES LBXGL(BIOPRO);KNHANES 空腹血糖;CHARLS biomarkers
+hba1c,Hemoglobin A1c,糖化血红蛋白,metabolic_serum,glycation_metabolic,hba1c_elevated,NHANES LBXGH(LAB10/BIOPRO);KNHANES 당화혈색소;CHARLS 2011/2015
+homa_ir,HOMA-IR score,胰岛素抵抗指数,metabolic_serum,glycation_metabolic,hyperglycemia,由 LBXGL+胰岛素(INS 文件)派生(预注册算法);KNHANES 同
+total_cholesterol,Total cholesterol,总胆固醇,lipid_serum,oxidative_stress,dyslipidemia,NHANES LBXSCH;KNHANES 总胆固醇;CHARLS
+ldl_cholesterol,LDL cholesterol,低密度脂蛋白胆固醇,lipid_serum,oxidative_stress,dyslipidemia,NHANES LBDLDL/计算;KNHANES;CHARLS
+hdl_cholesterol,HDL cholesterol,高密度脂蛋白胆固醇,lipid_serum,oxidative_stress,dyslipidemia,NHANES LBDHDD;KNHANES;CHARLS
+triglycerides,Triglycerides,甘油三酯,lipid_serum,oxidative_stress,dyslipidemia,NHANES LBXSTR;KNHANES;CHARLS
+c_reactive_protein,C-reactive protein,C反应蛋白;CRP,inflammation_serum,inflammation_immune,crp_elevated,NHANES hsCRP(CRP文件);KNHANES CRP;CHARLS 2011/2015
+bmi,Body mass index,体质指数;BMI,anthropometric,glycation_metabolic;inflammation_immune,bmi_high,NHANES BMXBMI;KNHANES;9队列全有
+waist_circumference,Waist circumference,腰围,anthropometric,glycation_metabolic;inflammation_immune,bmi_high,NHANES BMXWAIST;KNHANES 腰围;部分队列
+serum_vitamin_d,Serum 25(OH)D,血清维生素D,vitamin_serum,endocrine_hormone;inflammation_immune,vitamin_d_deficiency,NHANES VID(2001-2006等周期);KNHANES 部分年份;可用性按周期核对
+serum_carotenoids,Serum carotenoids,血清类胡萝卜素,vitamin_serum,oxidative_stress,low_antioxidant_intake,NHANES L45VIT/VITAEC等(1999-2006);KNHANES 无
+dietary_vitamin_c,Dietary vitamin C,膳食维生素C,dietary,oxidative_stress,low_antioxidant_intake,NHANES DR1TVC/DR2TVC;KNHANES 24h回顾
+dietary_vitamin_e,Dietary vitamin E,膳食维生素E,dietary,oxidative_stress,low_antioxidant_intake,NHANES DR1TVE;KNHANES 24h回顾
+dietary_lutein_zeaxanthin,Dietary lutein+zeaxanthin,膳食叶黄素玉米黄质,dietary,oxidative_stress,low_antioxidant_intake,NHANES DR1TLZ;KNHANES 24h回顾
+dietary_beta_carotene,Dietary beta-carotene,膳食β胡萝卜素,dietary,oxidative_stress,low_antioxidant_intake,NHANES DR1TBCR;KNHANES 24h回顾
+mediterranean_diet_score,Mediterranean diet adherence,地中海饮食评分,dietary_pattern,oxidative_stress;inflammation_immune,mediterranean_diet,由 DR1TOT/DR2TOT 派生(预注册 MDS 算法);KNHANES 同
+dietary_inflammatory_index,Dietary inflammatory index,膳食炎症指数;DII,dietary_pattern,inflammation_immune,pro_inflammatory_diet,由 DR1TOT 派生(DII 算法);KNHANES 同
+dietary_glycemic_index,Dietary glycemic index,血糖生成指数,dietary,glycation_metabolic,hyperglycemia,由 DR1IFF 派生(预注册算法)
+fish_epa_dha_intake,Dietary EPA+DHA,膳食n-3脂肪酸,dietary,oxidative_stress;inflammation_immune,mediterranean_diet,NHANES DR1TPFA;KNHANES 24h回顾
+whole_grain_intake,Whole grain intake,全谷物摄入,dietary,glycation_metabolic;oxidative_stress,mediterranean_diet,NHANES DR1TGF(派生);KNHANES
+sugar_sweetened_beverage,Sugar-sweetened beverage intake,含糖饮料摄入,dietary,glycation_metabolic,pro_inflammatory_diet,NHANES DR1IFF 派生规则;KNHANES
+processed_meat,Processed meat intake,加工肉类摄入,dietary,inflammation_immune,pro_inflammatory_diet,NHANES DR1IFF 派生;KNHANES
+current_smoking,Current smoking status,现在吸烟,lifestyle,oxidative_stress;vascular_perfusion,current_smoking,NHANES SMQ040等;KNHANES 吸烟;9队列全有
+serum_cotinine,Serum cotinine,血清可替宁,lifestyle,oxidative_stress,current_smoking,NHANES COT(1999-2008);客观指标
+secondhand_smoke,Secondhand smoke exposure,二手烟暴露,lifestyle,oxidative_stress,current_smoking,NHANES SMQ/FAM 问卷;KNHANES
+alcohol_intake,Alcohol intake,饮酒,lifestyle,oxidative_stress,alcohol_intake,NHANES ALQ;KNHANES 饮酒;9队列全有
+serum_ggt,Serum gamma-glutamyl transferase,血清GGT,lifestyle,oxidative_stress,alcohol_intake,NHANES LBXSGT(BIOPRO);客观酒精标志
+binge_drinking,Binge drinking,狂饮,lifestyle,oxidative_stress,alcohol_intake,NHANES ALQ 派生;KNHANES
+physical_activity_met,Physical activity (MET-min),体力活动,lifestyle,,physical_inactivity,NHANES PAQ/派生;KNHANES PA;9队列(口径异质);类型1空白-无规则
+sedentary_time,Sedentary time,久坐时间,lifestyle,,physical_inactivity,NHANES 问卷;KNHANES;类型1空白-无规则
+blood_lead,Blood lead,血铅,environment_metal,heavy_metal_toxicity,lead_exposure,NHANES PBCD_D/E(2005-08)
+blood_cadmium,Blood cadmium,血镉,environment_metal,heavy_metal_toxicity,cadmium_exposure,NHANES PBCD_D/E(2005-08)
+blood_mercury,Blood mercury,血汞,environment_metal,heavy_metal_toxicity,mercury_exposure,NHANES 血汞(按周期核对);类型1空白-无规则
+urine_heavy_metals,Urine heavy metals,尿重金属,environment_metal,heavy_metal_toxicity,mercury_exposure,NHANES UHM_D/E(2005-08);类型1空白-无规则
+pm25_exposure,PM2.5 exposure,细颗粒物暴露,environment_air,vascular_perfusion;inflammation_immune,pm25_exposure,KNHANES 空气污染模块(hnXX_ap);NHANES 需外部监测链接(待建)
+uv_exposure,UV/sun exposure,紫外线日晒暴露,environment_physical,photochemical_uv,uv_exposure,NHANES DEQ 日晒问卷(2005-08);KNHANES E_Q_OUT/E_Q_OUT1
+pack_years,Smoking pack-years,吸烟包年,lifestyle,oxidative_stress,current_smoking,NHANES SMQ 派生(累积剂量);KNHANES;队列
+alcohol_grams_per_day,Alcohol grams per day,日均酒精克数,lifestyle,oxidative_stress,alcohol_intake,NHANES ALQ 派生;KNHANES;队列
+sun_exposure_hours,Outdoor sun exposure hours,户外日照时长,environment_physical,photochemical_uv,uv_exposure,NHANES DEQ 派生;KNHANES E_Q_OUT1

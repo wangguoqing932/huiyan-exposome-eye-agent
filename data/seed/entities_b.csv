@@ -1,0 +1,16 @@
+entity_b_id,generic_name,chinese_name,aliases,category,flags,judged_in,label_source
+cataract_any,Cataract (self-report or surgery),白内障（自报或手术史）,cataract;catracte;catrcte,eye_disease,cataract_any,"NHANES: VIQ 自报(1999-2008); KNHANES: DH2_lt/DH2_dg; 队列: ELSA/SHARE/LASI r*catracte + HRS/KLoSA r*catrcte + CHARLS da035/da036","NHANES codebook; KNHANES 官方字典; Gateway harmonized codebook(逐库实读核验 2026-10-11)"
+cataract_subtype_graded,Cataract subtype (graded),白内障分型（分级）,LOCS;lens opacity,eye_disease,cataract_subtype_graded,"无源可判(NHANES VIQ 无亚型; KNHANES 字典 lens 0 命中; 队列无分级)——不计覆盖率","PHASE2 §X.5 审计"
+glaucoma_selfreport,Glaucoma (self-report/treated),青光眼（自报/治疗）,glaucoma;glaucome,eye_disease,glaucoma_selfreport,"NHANES: VIQ; KNHANES: DH3_lt/DH3_dg; 队列: HRS/KLoSA r*glaucoma + LASI r*glaucoma/r*glaucome + CHARLS da037(4/9库)","同上"
+glaucoma_iop_elevated,Intraocular pressure elevated,眼压升高,ocular hypertension;IOP,eye_disease,glaucoma_iop_elevated,"KNHANES: E_Gr_p/E_Gl_p(2008-12) + E_Pr_1/E_Pl_1(2017-19); NHANES 无 IOP","KNHANES 官方字典(实读)"
+glaucoma_suspect_cdr,Glaucoma suspect (CDR),视盘杯盘比增大,cup-disc ratio;VCDR,eye_disease,glaucoma_suspect_cdr,"NHANES: OPDDVCDR(n=2403)/OPDSVCDR(n=2413) 连续值(2005-08); KNHANES: E_Grv/E_Grh/E_Glv/E_Glh(2008-12)","NHANES OPXRET 实测; KNHANES 官方字典"
+amd_selfreport,AMD (self-report),年龄相关性黄斑变性（自报）,macular degeneration self-report,eye_disease,amd_selfreport,"NHANES: VIQ; KNHANES: E_VS_ELY/LATE/WET/DRY 患病判定; 队列: HRS ashamd(1/9库;探索性)","同上"
+amd_early,Early AMD (graded),早期AMD,early ARM,eye_disease,amd_early,"NHANES: OPDUARM/OPDUPIGA(2005-08); KNHANES: E_AMD_ELY(2008-12/2017-20)","NHANES OPXRET 实测; KNHANES 官方字典"
+amd_late,Late AMD (graded),晚期AMD,late ARM;GA;wet AMD,eye_disease,amd_late,"NHANES: OPDULARM/OPDUGA/OPDUEXU(2005-08); KNHANES: E_AMD_LATE/WET/DRY","同上"
+retinopathy_any,Any retinopathy (graded),视网膜病变（任意）,any DR;retinopathy,eye_disease,retinopathy_any,"NHANES: OPDURET/OPDURL4>=2(2005-08); KNHANES: E_DRP","同上"
+dr_npdr,Non-proliferative DR,非增生性糖尿病视网膜病变,NPDR,eye_disease,dr_npdr,"NHANES: OPDURL4 2-3级(2005-08); KNHANES: E_DR_1..7 病灶级重建","同上"
+dr_pdr,Proliferative DR,增生性糖尿病视网膜病变,PDR,eye_disease,dr_pdr,"NHANES: OPDURL4 4级(2005-08); KNHANES: E_DR_8..11(NVD/NVE/玻璃体出血/纤维增生)","同上"
+vision_impairment_mild,Mild vision impairment,轻度视力障碍,VI mild;VA<20/40,eye_disease,vision_impairment_mild,"NHANES: VIX logMAR 5周期; KNHANES: E_Cr_1/E_Cl_1; 队列无 VA(自评视力仅对照层)","NHANES VIX 实测(logMAR); KNHANES 官方字典"
+vision_impairment_moderate,Moderate vision impairment,中度视力障碍,VI moderate;VA<20/60,eye_disease,vision_impairment_moderate,同 vision_impairment_mild,同上
+vision_impairment_severe,Severe vision impairment/blindness,重度视力障碍或盲,VI severe;VA<20/200,eye_disease,vision_impairment_severe,同 vision_impairment_mild,同上
+optic_disc_abnormality,Optic disc abnormality (other),视盘异常（其他）,disc hemorrhage;disc anomaly,eye_disease,optic_disc_abnormality,"NHANES: OPDUFOC/OPDUPHVH 等(2005-08); KNHANES: E_Gr_b/E_Gl_b 视盘出血 + CDR 高值","同上"

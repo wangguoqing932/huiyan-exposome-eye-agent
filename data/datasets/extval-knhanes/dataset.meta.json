@@ -1,0 +1,12 @@
+{
+  "id": "extval-knhanes",
+  "role": "external_validation",
+  "source_type": "public_database",
+  "source_ref": "KNHANES 1998-2024 本地全集（独立国家、独立抽样与检查设计；眼科检查 + 生化 + 营养 + 环境模块）",
+  "expected_size": 300,
+  "ground_truth_method": "database_outcome",
+  "independence_axis": "site",
+  "enabled": true,
+  "notes": "分析单元=暴露x眼病 对(pair); 预测目标=同内部集口径,用于跨国泛化; case 定义=同内部集,按 KNHANES 官方变量字典与权重复算; 阳性阴性=约 300 对; 本集角色=外部验证 跨国,出相对 NHANES 的泛化落差",
+  "created_date": "2026-10-11"
+}

@@ -1,0 +1,185 @@
+# Figure contract: Figure 2 — Performance Multi-Seed (v3.0: dataset-centric)
+# Consumed by nature-figure skill.
+# Project: huiyan (慧眼)
+
+figure_id: figure2_performance
+title: "Multi-seed performance comparison across validation datasets: 慧眼 vs three baselines"
+figure_number: 2
+manuscript_section: Results → Quantitative Performance
+
+core_conclusion: >-
+  The full 慧眼 system achieves significantly higher
+  high-risk sensitivity than three baseline methods (pure_llm, naive_rag,
+  lightrag-only) on BOTH internal and external validation datasets, with a
+  small generalization gap — demonstrating that both rule engine and KG
+  retrieval contribute incremental value that generalizes beyond the
+  development source.
+
+archetype: quantitative_grid
+
+panels:
+  - id: panel_a_forest_sens
+    role: primary
+    layout_template: ultra_wide_multi_metric_bar
+    layout: top_left
+    title: "High-risk sensitivity by dataset (5 seeds ± SD)"
+    content: >-
+      Forest plot showing sens_high (mean ± SD across 5 seeds) for each of
+      4 methods × validation datasets (one facet per dataset_id).
+    plot_type: forest
+    x_axis: sensitivity (95% CI)
+    y_axis: method (pure_llm / naive_rag / lightrag / full_system)
+    facets: ["dataset: development", "dataset: internal_validation", "dataset: external_validation"]
+    annotations:
+      - "p < 0.05 paired t-test vs pure_llm marked with *"
+      - "p < 0.01 marked with **"
+
+  - id: panel_b_confusion_matrix
+    role: primary
+    layout_template: ultra_wide_multi_metric_bar
+    layout: top_right
+    title: "4-level confusion matrix (full system, external_validation)"
+    content: >-
+      Heatmap of predicted vs gold risk level (High / Medium / Low / Unknown)
+      on the external validation dataset — the generalization headline.
+    plot_type: heatmap
+    rows: gold_level
+    cols: predicted_level
+    cells: proportion
+    annotations:
+      - "Diagonal = exact-match accuracy"
+      - "Off-diagonal asymmetry = direction of errors"
+
+  - id: panel_c_generalization_gap
+    role: primary
+    layout_template: asymmetric_hero_panel
+    layout: bottom_left
+    title: "Internal vs external validation + generalization gap (v3.0)"
+    content: >-
+      Paired dumbbell/slope chart: for each core metric (sens_high, spec_high,
+      F1, exact_4_level_acc, Cohen's κ), two dots connected by a line —
+      internal_validation score vs external_validation score (full system,
+      5-seed mean). Gap magnitude annotated per metric; gap ≤ 0.10 on
+      sens_high highlighted as the generalization claim.
+    plot_type: grouped_bar
+    x_axis: metric
+    y_axis: score (0-1)
+    groups: [internal_validation, external_validation]
+    annotations:
+      - "gap(metric) = internal − external; annotated above each pair"
+      - "sens_high gap ≤ 0.10 marked with ✓"
+
+  - id: panel_d_efficiency
+    role: supporting
+    layout_template: asymmetric_hero_panel
+    layout: bottom_right
+    title: "Retrieval efficiency"
+    content: >-
+      Scatter: x = context character count, y = sens_high. Each dot = 1 method
+      × 1 seed × 1 dataset. Full system should be in "high sens / low context"
+      quadrant on all datasets.
+    plot_type: scatter
+    x_axis: context_chars
+    y_axis: sensitivity_high
+    color: method
+    reference_line:
+      kind: vertical
+      at: 4000
+      label: "token budget"
+
+backend:
+  value: python
+  lock: true
+  fallback_policy: stop_and_report
+dependencies:
+  - matplotlib >= 3.7
+  - seaborn >= 0.13
+  - numpy
+  - scipy
+
+export:
+  dimensions_mm: [180, 140]   # double-column
+  dpi: 600
+  formats: [svg, pdf, tiff, png]
+  editable_text: true
+  svg_fonttype: none           # keep <text> nodes editable (v2.5)
+  pdf_fonttype: 42             # TrueType editable text (v2.5)
+  font_type: arial
+  font_size_range_pt: [6, 11]
+  line_width_range_pt: [0.5, 1.2]
+  color_mode: cmyk_friendly
+
+# ─────────────────────────────────────────────────────────────
+# STYLE (v2.5) — locks theme + rcParams at the contract layer.
+# The renderer (medical-agent-writer/scripts/figure_style.py) reads
+# style.theme and applies the matching PALETTE + rcParams.
+# ─────────────────────────────────────────────────────────────
+style:
+  theme: nmi_pastel
+  font_family: Arial
+  font_size_pt: 7
+  axes_linewidth: 0.8
+
+color_palette:
+  name: NMI_pastel
+  methods:
+    pure_llm: "#B8B8B8"      # neutral — baseline
+    naive_rag: "#9D2933"     # muted red — weaker
+    lightrag: "#5AD8A6"      # green — better
+    full_system: "#5B8FF9"   # blue — proposed
+  significance_markers:
+    "*": "#F4664A"
+    "**": "#A45A52"
+  heatmap_colormap: viridis   # colorblind-safe
+  note: >-
+    Use colorblind-safe encoding; never use red/green as the only signal.
+
+source_data:
+  csv_path: outputs/figures/source_data/figure2_performance.csv
+  schema:
+    - column: method
+      values: [pure_llm, naive_rag, lightrag, full_system]
+    - column: dataset_id
+      note: "v3.0 — one row per dataset × method × seed; must match config datasets[] ids"
+    - column: dataset_role
+      values: [development, internal_validation, external_validation]
+    - column: phase
+      values: [1, 2, 3, 4]
+    - column: seed
+      values: [42, 43, 44, 45, 46]
+    - column: sensitivity_high
+    - column: specificity_high
+    - column: f1_high
+    - column: exact_4_level_accuracy
+    - column: cohens_kappa
+    - column: context_chars
+
+review_risks:
+  - id: seed_variance_hidden
+    risk: "Mean-only plot hides high variance"
+    mitigation: "Mandatory error bars (SD) + report SD in caption"
+  - id: multiple_testing
+    risk: "80 paired comparisons inflate Type I"
+    mitigation: "Apply Benjamini-Hochberg FDR; mark adj-p < 0.05"
+  - id: ci_vs_sd_confusion
+    risk: "Reviewers ask if error bars are SD or 95% CI"
+    mitigation: "Explicit caption: 'bars = SD across 5 seeds; 95% CI in source data'"
+  - id: pooled_metrics_hide_gap
+    risk: "v3.0 — pooling internal+external metrics hides a generalization gap"
+    mitigation: "All headline metrics reported PER DATASET; gap panel mandatory; never report pooled-only numbers"
+
+legend:
+  position: below
+  font_size_pt: 7
+  items:
+    - "n(method=4) × n(dataset≥2) × n(seed=5) evaluations per metric, reported per dataset"
+    - "Paired t-test, * = p < 0.05, ** = p < 0.01 (BH-FDR adjusted)"
+    - "Error bars: SD across 5 random seeds"
+    - "Generalization gap = internal_validation − external_validation (per metric)"
+
+accessibility:
+  alt_text: >-
+    Four-panel figure showing per-dataset sensitivity forest plot, external
+    validation confusion matrix heatmap, internal-vs-external generalization
+    gap chart, and retrieval efficiency scatter.
+  color_blind_safe: true
