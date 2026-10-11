@@ -11,7 +11,8 @@
     "planner.phase1",
     "planner.phase2",
     "planner.phase4_5",
-    "executor.phase3"
+    "executor.phase3",
+    "executor.phase5"
   ],
   "in_progress": "executor.phase4",
   "blocked": [],
@@ -77,6 +78,11 @@
     {
       "date": "2026-10-11",
       "event": "executor phase1 (registries 40A/15B) + phase2 (evidence 36 chunks) + phase3 (rules.yaml 21 rules + rationale + uric counter-evidence) complete; phase5 NHANES pipeline built+debugged (4 bug fixes: units/modules/weights) and FIRST PASS RUN: 101 pairs tested, rule pairs 13, TP2/FP11/FN11/TN77, P=R=F1=0.154",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "phase5 NHANES+KNHANES pair-level runs complete: NHANES F1=0.154 (101 pairs), KNHANES F1=0.154 (39 pairs, cross-country zero degradation); gap table written; cohort layer + baselines + LightRAG pending",
       "skill": "medical-agent-executor"
     }
   ]

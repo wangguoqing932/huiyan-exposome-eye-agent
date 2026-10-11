@@ -1,0 +1,17 @@
+{
+  "dataset": "CHARLS-2011(45+)",
+  "pairs_tested": 14,
+  "pairs_underpowered": 0,
+  "rule_pairs_tested": 4,
+  "TP": 0,
+  "FP": 4,
+  "FN": 0,
+  "TN": 10,
+  "precision": 0.0,
+  "recall": null,
+  "notes": [
+    "cohort arm layer 1/9: cataract_any(surgery)+glaucoma_selfreport only (coverage matrix)",
+    "BMI/diet/metals/PM2.5/UV exposures not in this merge (documented)",
+    "self-rated eyesight (da033/34) reserved as exploratory contrast, not scored"
+  ]
+}
