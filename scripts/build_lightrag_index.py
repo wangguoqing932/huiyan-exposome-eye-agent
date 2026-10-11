@@ -43,7 +43,7 @@ def prepare_core_chunks() -> tuple[list[str], list[str], list[str]]:
     filtered = [c for c in chunks if len(c.get("text", "")) >= 300]
     garbage_count = len(chunks) - len(filtered)
 
-    # A2 revised: Build FULL index (515 chunks after garbage filter), not just core 30.
+    # A2 revised: Build FULL index (~1060 chunks after PPP cleaning), not just core 30.
     # User decision 2026-10-11: 30-chunk core was too small for a meaningful KG.
     # 91% of probe chunks contain relevant eye/exposure content.
     core = filtered
