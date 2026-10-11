@@ -147,7 +147,7 @@ def run_lightrag(pairs, seed):
     for p in pairs:
         query = f"What is the relationship between {p['a_flag']} and {p['b_item']}?"
         try:
-            kg_result = adapter.query(query, mode="hybrid") or ""
+            kg_result = adapter.query(query, mode="naive") or ""
         except Exception:
             kg_result = ""
         prompt = f"KG evidence: {kg_result[:500]}\n\nIs {p['a_flag']} a risk factor for {p['b_item']}? YES or NO."

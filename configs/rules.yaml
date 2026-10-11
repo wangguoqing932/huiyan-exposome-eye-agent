@@ -37,6 +37,7 @@ rules:
   risk_type: glycation_metabolic
   entity_a_flags:
   - hyperglycemia
+  - hba1c_elevated
   entity_b_flags:
   - cataract_any
   evidence_level: B
@@ -51,6 +52,7 @@ rules:
   risk_type: glycation_metabolic
   entity_a_flags:
   - hba1c_elevated
+  - hyperglycemia
   entity_b_flags:
   - retinopathy_any
   evidence_level: B
@@ -65,8 +67,10 @@ rules:
   risk_type: vascular_perfusion
   entity_a_flags:
   - hba1c_elevated
+  - hyperglycemia
   entity_b_flags:
   - dr_pdr
+  - dr_npdr
   evidence_level: C
   direction: risk_up
   rationale: 持续高血糖致视网膜缺血缺氧，上调 VEGF 介导新生血管形成，驱动增生性 DR（机制综述；关联级二源待补）。
@@ -264,6 +268,22 @@ rules:
     ref: 10.1097/01.ede.0000086881.84657.98
   - source_type: literature
     ref: 10.1136/oem.2005.022343
+- id: r22_bmi_x_retinopathy
+  severity: medium
+  risk_type: inflammation_immune
+  entity_a_flags:
+  - bmi_high
+  entity_b_flags:
+  - retinopathy_any
+  - dr_npdr
+  evidence_level: B
+  direction: risk_up
+  rationale: NHANES 确证显示 BMI 升高与视网膜病变风险增加相关（OR=1.47, q=0.04），全身炎症和微血管损伤通路。
+  recommendation: 超重/肥胖人群建议定期眼底检查。
+  citations:
+  - source_type: literature
+    ref: 10.1371/journal.pone.0089923
+
 - id: r19_proinflam_diet_x_dr_npdr
   severity: low
   risk_type: inflammation_immune
