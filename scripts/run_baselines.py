@@ -214,7 +214,7 @@ def main():
             print(f"  {len(results)} pairs in {elapsed:.1f}s | P={m['precision']} R={m['recall']} F1={m['F1']}")
             all_results.extend(results)
 
-    with output_path.open("w", encoding="utf-8") as f:
+    with output_path.open("a", encoding="utf-8") as f:
         for r in all_results:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     print(f"\n[baselines] {len(all_results)} predictions → {output_path}")
