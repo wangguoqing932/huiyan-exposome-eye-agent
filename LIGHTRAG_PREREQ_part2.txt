@@ -1,0 +1,105 @@
+【建 LightRAG 之前你要做的事 · 区块 2/2】续传实现 + 顺手项 + 验收
+================================================================
+说明: 接区块 1。核心结论：不要另起一套账本，LightRAG 的 doc_status 就是账本。
+================================================================
+
+---- C. 断点续传 ----
+
+C0 | 好消息：LightRAG 自带幂等，重跑几乎免费
+   实测: 同一块连插两次
+         第 1 次 20.5s（36 实体/35 关系）
+         第 2 次  0.0s（日志: No new unique documents were found）
+   依据: 按 content_hash + file_path 去重
+   已有: working_dir 下 12 个存储文件全落盘，已完成的文档不会因中断丢失
+         （含 kv_store_llm_response_cache.json，LLM 响应也缓存了）
+
+C1 | 坑：每次重跑都会写一条假 FAILED，必须忽略
+   实测: 第 2 次插入后 doc_status 多出一条
+         doc_id = dup-632832497a7d89a9cd460f7bf9553039
+         status = failed
+         error_msg = File name already exists. Original doc_id: ev0010, Status: processed
+   后果: 每续传一次、每块都多一条假 FAILED；
+         若把 FAILED 当"待重试"，会死循环或虚报失败
+   改法: 续传逻辑显式忽略 dup- 前缀的 doc_id
+
+C2 | 续传判定表（插桩在 insert 之前）
+   读 working_dir/kv_store_doc_status.json，对每个 chunk_id:
+     doc_id 以 "dup-" 开头                  -> 忽略
+     processed 且 content_hash 一致          -> 跳过
+     processed 但 content_hash 变了          -> adelete_by_doc_id 后重插
+     parsing / analyzing / processing        -> 被 kill 的残留，删后重插
+     failed（非 dup-）                       -> 重试，上限 N 次
+     不存在                                  -> 插入
+   批末: 追加一条 run journal（chunk_id / attempt / status / elapsed / error）
+   注意: content_hash 那一行很关键 —— 建完索引后若改了某块的文字，
+         其 hash 变了，LightRAG 会当新文档重抽，而旧实体仍留在图里成孤儿节点，
+         必须显式 adelete_by_doc_id 清掉
+   可用 API（已确认存在）:
+     adelete_by_doc_id(doc_id, delete_llm_cache=False)
+     apipeline_reset_failed_for_scan
+     get_processing_status
+
+C3 | 抽一个通用件，不要只在索引脚本里做
+   建议文件: src/huiyan_agent/resumable.py
+   内容:
+     Ledger(path)   只追加 JSONL，每条 append 后 flush + fsync（被 kill 也不写坏）
+     task_id        用任务内容的稳定哈希，不要用序号或时间（重跑才对得上）
+     run_resumable(tasks, worker, ledger, max_retry=3)
+                    跳过 DONE、重试 FAILED、把陈旧 RUNNING 视为可重试、
+                    结束汇报 done / skipped / failed 与失败清单
+     CLI            --reset / --only-failed / --limit N
+     SIGINT         跑完当前任务、刷盘、退出码 130（不要丢进度）
+
+C4 | 按需要程度应用到这些进程
+   高: build_lightrag_index.py         分钟到小时级，每块都花 LLM 钱
+   高: run_baselines.py / run_multiseed.py
+                                       4 基线 x 5 seeds x 4 数据集 = 80 次运行
+   高: fetch_pubmed.py                 网络型 + NCBI 限流，几百个 PMID 必然中断
+   中: 引用核验门                      LLM 型且慢
+   中: generate_cases.py               逐对生成，量大
+   低: evaluate.py                     确定性、几分钟级
+
+C5 | 顺带加项目级 LLM 响应缓存（一石三鸟）
+   现状: LightRAG 有 kv_store_llm_response_cache.json，
+         但项目自己的调用（仲裁器、引用核验门）没有任何缓存
+   后果: 每次重跑都重新问模型 —— 费钱、慢、而且不可复现
+   改法: 按 (model, prompt_hash) 缓存响应
+   收益: 同时拿到 断点续传 + 省钱 + 可复现
+   附带: 这正好解决我上一轮报的"引用门不可复现"（同一份规则内容两次运行
+         给出 4 条 vs 6 条失败）——内容哈希命中同一缓存，两次结果就一致
+
+================================================================
+---- D. 顺手项 ----
+================================================================
+
+D1 | data-gym-cache/ 加进 .gitignore
+   说明: 3.6 MB，LightRAG tokenizer 的运行时缓存，
+         创建时间 21:13 对应我那次冒烟测试 —— 是我生成的
+   处理: 加 .gitignore，不要删（下次构建还会生成）
+
+D2 | provenance 仍只有 2 个唯一值
+   位置: data/seed/evidence_chunks.jsonl（521 块）
+   说明: 上一轮 D6 已提，未修；建索引后更该可追溯
+   改法: 每条写入 检索式 / 数据库 / 检索日期 / 命中序号
+
+================================================================
+---- E. 构建顺序与验收 ----
+================================================================
+
+顺序:
+  1. 拍板 A1（语言）与 A2（语料范围）
+  2. 做 B1-B8（记住 B1 溯源、B3 标注、B4 id 这三条改完必须重建）
+  3. 实现 C3 通用账本 + C2 判定表，接到 build_lightrag_index
+  4. 建核心集 30 块到 data/processed/lightrag_index_core
+
+验收（缺一不可）:
+  a. stats() 的实体/关系数 > 0（现在是恒 0）
+  b. 查询 "smoking and cataract" 能召回 r10 的证据块 ev0010
+  c. doc_status 里没有 parsing/analyzing/processing 残留
+  d. 立刻重跑一次 -> 全部跳过、0 秒、不新增 dup- 之外的记录
+  e. 随机抽 10 条检索结果人工看质量，再决定是否扩全量
+
+关键一句:
+  链路已实测可用（嵌入 2048 维、对话 deepseek-v4.1-flash、单块 20.5s 建完），
+  真正的风险不在技术而在 语料（94.2% 是检索噪点）与 溯源（B1），
+  这两条都必须建之前处理，建完再改要重建。

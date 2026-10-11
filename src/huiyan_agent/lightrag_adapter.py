@@ -53,7 +53,7 @@ class LightRAGAdapter:
         working_dir: str | None = None,
         chat_client: LLMClient | None = None,
         embed_client: ArkVisionEmbedding | None = None,
-        language: str = "Chinese",
+        language: str = "English",  # A1: corpus/registry/rules are all English
         llm_max_async: int = 3,
         embed_max_async: int = 4,
     ) -> None:
@@ -115,7 +115,9 @@ class LightRAGAdapter:
                     and lines[-1].strip().count("<|>") < 2:
                 t = "\n".join(lines[:-1])
             # 补全完成标记：有记录但模型忘了写 <|COMPLETE|>
+            # B5: count how many were fabricated (truncation detection)
             if "<|COMPLETE|>" not in t and _re.search(r"^(entity|relationship)<\|>", t, _re.MULTILINE):
+                self._completion_marker_fabricated = getattr(self, "_completion_marker_fabricated", 0) + 1
                 t = t.rstrip() + "\n<|COMPLETE|>"
             return t
 
@@ -243,16 +245,34 @@ class LightRAGAdapter:
     # ------------------------------------------------------------------ #
     # public API (sync wrappers for phase4 / streamlit convenience)
     # ------------------------------------------------------------------ #
-    def insert_chunks(self, chunks: list[str], batch_size: int = 50) -> None:
-        """Insert evidence chunks in batches to avoid OOM (see failure_modes.md)."""
+    def insert_chunks(self, chunks: list[str], ids: list[str] | None = None,
+                      file_paths: list[str] | None = None, batch_size: int = 50) -> None:
+        """Insert evidence chunks in batches. B1: pass ids+file_paths for traceability.
+
+        file_paths should be DOI or PMID strings — they appear in KG node provenance
+        and enable the "全链溯源" claim (without them, every doc is "unknown_source").
+        """
         self._ensure_init()
         for i in range(0, len(chunks), batch_size):
             batch = chunks[i : i + batch_size]
-            self._run(self.rag.ainsert(batch))
+            batch_ids = ids[i : i + batch_size] if ids else None
+            batch_fps = file_paths[i : i + batch_size] if file_paths else None
+            kwargs: dict = {}
+            if batch_ids:
+                kwargs["ids"] = batch_ids
+            if batch_fps:
+                kwargs["file_paths"] = batch_fps
+            self._run(self.rag.ainsert(batch, **kwargs))
 
-    def insert_text(self, text: str) -> None:
+    def insert_text(self, text: str, id_: str | None = None, file_path: str | None = None) -> None:
+        """B1: single-text insert with traceability."""
         self._ensure_init()
-        self._run(self.rag.ainsert(text))
+        kwargs: dict = {}
+        if id_:
+            kwargs["ids"] = [id_]
+        if file_path:
+            kwargs["file_paths"] = [file_path]
+        self._run(self.rag.ainsert(text, **kwargs))
 
     def _expand_bilingual(self, question: str) -> str:
         """注册表双语扩展（F5 审计：抽取实体中英混合命名空间，中文查询对英文节点失配）。

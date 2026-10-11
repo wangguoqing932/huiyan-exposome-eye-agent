@@ -1,0 +1,108 @@
+【建 LightRAG 之前你要做的事 · 区块 1/2】决策 + 必须改的代码
+================================================================
+说明: 分两批。区块 1 = 需要你拍板的 4 件事 + 建索引前必须改的代码（改了要重建）。
+      区块 2 = 续传实现 + 顺手项 + 构建顺序与验收。
+      实测依据均来自真实数据块 ev0010（r10 的证据）。
+================================================================
+
+---- A. 需要你拍板的 4 件事（定了才能动）----
+
+A1 | 抽取语言 —— 改语言等于重建，现在必须定
+   位置: src/huiyan_agent/lightrag_adapter.py:56, :182
+   现状: addon_params={"language": "Chinese"} 是默认值，
+         而你的语料是英文、注册表是英文
+   实测: 从英文块抽出的节点全是中文 ——
+         吸烟->白内障、吸烟->呼吸系统疾病、PubMed->安德森癌症中心
+   建议: 改成 English（与语料、注册表、规则 id 一致），
+         否则要在 KG 层长期维护一个中英翻译层，靠 _expand_bilingual 硬桥接
+
+A2 | 语料范围 —— 决定花 4 分钟还是 60 分钟
+   现状: 521 块里
+         规则证据块 (linked_rules 非空)      18 块
+         竞品/图谱块                          12 块
+         probe_landscape 检索噪点           491 块（94.2%）
+         其中 6 块 <300 字（corrigendum/editorial/comment）
+   实测: 单块建索引 20.5s、占盘 1.00 MB、抽出 36 实体/35 关系
+         并发 3 时核心集 30 块约 4 分钟；全量 521 块约 60 分钟
+   建议: 先建核心集 30 块（18 规则证据 + 12 竞品），
+         用真实检索质量决定要不要扩全量；
+         全量另建 lightrag_index_full，两个 working_dir 分开
+
+A3 | KG 结果的证据级 —— 现在你建的 KG 被赋最低权重
+   位置: src/huiyan_agent/safety_agent.py:147
+   现状: LightRAG 检索到的块被一律强制为 E 级，
+         而 evidence_store 的权重是 A5/B4/C3/D2/E1 —— E 是最低
+   后果: 花力气建的 KG，其结果在加权时影响力被封顶；
+         而那 18 个规则证据块本身是 A/B/C 级
+   建议: 二选一 —— (1) 让 KG 结果继承原块的真实证据级
+                    (2) 明确接受 KG 只作上下文补充、不参与判级
+
+A4 | KG 是否参与风险判级
+   说明: 这决定 A3 怎么选。若只作上下文补充，A3 保持现状即可；
+         若参与判级，需先定接线方式，再建索引
+
+================================================================
+---- B. 建索引之前必须改的代码（改完要重建，不能事后补）----
+================================================================
+
+B1 | file_paths 没传 —— 溯源断在这里【最要紧】
+   位置: src/huiyan_agent/lightrag_adapter.py:246-255（insert_chunks / insert_text）
+   现状: 调 ainsert(text) 时不传 file_paths，
+         实测 KG 里每个文档的 file_path 都是 unknown_source
+   后果: 检索到的实体无法回溯到具体哪个证据块，
+         PLAN 的"全链溯源"在 KG 层不成立
+   改法: ainsert(text, ids=[chunk_id], file_paths=[doi 或 pmid])
+         实测传 ids 是生效的（doc_status 的键就是 ev0010），file_paths 同理
+   注意: 这条存在文档记录里，建完再补要重建
+
+B2 | build_from_jsonl 不存在 —— 脚本一跑就崩
+   位置: scripts/build_lightrag_index.py:12
+   现状: 调 a.build_from_jsonl(...)，但适配器的公开方法只有
+         insert_chunks / insert_text / query / stats / available
+   改法: 脚本改成读 JSONL 后调 insert_chunks(texts)，
+         或给适配器补一个 build_from_jsonl
+
+B3 | 实体标注全是空的 —— KG 与项目词汇表不对齐
+   位置: data/seed/evidence_chunks.jsonl（521 块）
+   现状: entities_a / entities_b / risk_types 三列全空（0/521）；
+         而 evidence_store.py:60 把 linked_rules 塞进 entities_a，
+         那是规则 id（"r06"）不是暴露实体
+   后果: evidence_store 的 +5.0 实体加权永不触发；
+         实测 LightRAG 只能自己抽，抽出的粒度与规则 vocab 不齐
+         （抽到"吸烟->眼部疾病"粗粒度，规则用的是 current_smoking x cataract_any）
+   改法: 建索引前注入标注 ——
+         18 个规则块: linked_rules -> 规则 -> entity_a_flags / entity_b_flags
+         其余块: 按 entities_a.csv / entities_b.csv 的名称与别名做关键词匹配
+
+B4 | 短 id 与长 id 不一致
+   位置: evidence_chunks.jsonl vs configs/rules.yaml
+   现状: linked_rules 用 "r06"、"r14,r15"；rules.yaml 用 "r06_crp_x_amd_late"
+   后果: 任何按规则 id 关联的逻辑都失配
+   改法: 统一，或显式建短->长映射表
+
+B5 | 伪造完成标记，掩盖抽取截断
+   位置: src/huiyan_agent/lightrag_adapter.py:117-119
+   现状: 只要输出里有实体记录、缺 <|COMPLETE|> 就自动补上；
+         模型因 max_tokens 截断时也会被补
+   后果: LightRAG 认为抽取完成，被截断的后半段实体静默丢失且不留痕
+   改法: 加计数器统计多少块被补标记；比例高说明要调 max_tokens 或 chunk_token_size
+
+B6 | 6 个垃圾块要剔除
+   位置: data/seed/evidence_chunks.jsonl
+   明细: 2 篇 corrigendum、1 篇 editorial、2 篇 comment、1 条 56 字题录
+         （ev_x0267 / ev_x0401 / ev_x0653 / ev_x0656 / ev_x0657 / ev_x0707）
+   后果: 会产生垃圾实体（实测已出现 PubMed->安德森癌症中心 这类机构节点）
+   改法: 过滤后再建索引
+
+B7 | stats() 报 0，长跑看不到进度
+   位置: src/huiyan_agent/lightrag_adapter.py:313-321
+   实测: 索引里已有 36 实体 / 35 关系，stats() 仍报
+         entities_extracted: 0, relations_extracted: 0
+   后果: 构建时无法判断是卡住了还是在正常跑
+   改法: 从图存储读真实节点/边数
+
+B8 | 进程不干净退出，编排会误判
+   现状: 实测 Python 已跑完并清理了目录，但管道始终不关闭，外层任务挂死十几分钟
+   原因: 适配器开了专用事件循环线程 + httpx 连接池
+   后果: 状态机会把已完成的构建判为"仍在运行"
+   改法: 构建脚本结尾显式关线程，或用 os._exit()
