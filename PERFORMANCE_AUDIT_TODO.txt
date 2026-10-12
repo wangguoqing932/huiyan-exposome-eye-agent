@@ -1,0 +1,168 @@
+【性能与执行层审核 · 待办工单】
+================================================================
+结论: 执行层骨架正确（三层确证、四基线、LightRAG 索引、指标落盘都已跑通），
+      但性能数字被流程污染 —— 规则在看过测试集之后被改成正好盖住 gold-positive，
+      R=1.000 是构造的。先修 1，再重跑，数字才能用。
+================================================================
+
+---- 一、致命问题（完整证据链）----
+
+Q1 | 规则在看过测试集之后被改 —— 测试集拟合
+   时间线（铁证）:
+     10-11 20:52  analysis_plan.md 最后修改（仍 v1.1，此后未更新）
+     10-11 20:59  确证运行，用旧规则集（无 r22）
+     10-12 07:12  rules.yaml 被改：新增 r22、改 r02/r03/r04 的 flags
+     10-12 07:13  基线运行，用新规则集
+   确认 CSV 里 7 个 gold3=replicated 的对，有 6 个在旧规则下 predicted=False:
+     hyperglycemia   x retinopathy_any   OR=3.30  q=0.0395  predicted=False
+     hyperglycemia   x dr_npdr           OR=3.15  q=0.0395  predicted=False
+     hba1c_elevated  x cataract_any      OR=1.80  q<0.05    predicted=False
+     hba1c_elevated  x retinopathy_any   OR=6.07  q<0.05    predicted=True (r03)
+     hba1c_elevated  x dr_npdr           OR=5.63  q<0.05    predicted=False
+     bmi_high        x retinopathy_any   OR=1.47  q=0.0395  predicted=False rule_ids=nan
+     bmi_high        x dr_npdr           OR=1.46  q=0.0395  predicted=False rule_ids=nan
+   规则改动正好覆盖这 6 个:
+     r02  entity_a_flags += hba1c_elevated     -> 盖住 hba1c x cataract
+     r03  entity_a_flags += hyperglycemia      -> 盖住 hyperglycemia x retinopathy
+     r04  entity_a_flags += hyperglycemia      -> 盖住 hyperglycemia x dr_npdr
+          entity_b_flags += dr_npdr
+     r22  新增 bmi_high x (retinopathy_any, dr_npdr) -> 盖住最后两个
+   关键: r22 的 rationale 直接引用了那次测试结果作为自己的证据:
+     "NHANES 确证显示 BMI 升高与视网膜病变风险增加相关（OR=1.47, q=0.04）"
+     规则从测试集导出，又在同一个测试集上被评估 —— 教科书式测试集拟合
+   违反: analysis_plan 冻结条款 "一经确证运行开始不得修改"
+   另:  r22 标 severity=medium / evidence_level=B，
+        但 B = 系统综述/meta，而它的 rationale 引的是自己单库确证结果
+
+Q2 | R=1.000 是构造的
+   基线判定: prediction = len(signals) > 0（有规则覆盖即预测阳性）
+   改规则前: 7 个 gold-positive 里 6 个无规则覆盖 -> FN=6  -> R=0.143
+   改规则后: 7 个全覆盖                    -> FN=0  -> R=1.000
+   两次测的是两套不同的系统。0.111 -> 0.583 不是性能优化，是往测试集上贴规则
+
+Q3 | "5 seeds" 没有产生任何信息
+   实测: 4 个基线在 5 个 seed 下的 (pair, prediction) 集合完全相同
+   原因: full_system 是确定性规则引擎（与 seed 无关）；
+         三个 LLM 基线都是 temperature=0.0（LLM 输出确定）
+   后果: "4x5=20 runs" 实际是 4 个唯一结果 x 5 份拷贝；
+         提交里的 "~1300 predictions" 是重复计数；
+         seed 复现无法用来估计方差
+
+Q4 | 其他 3 个基线的预测不在文件里
+   现状: outputs/baseline_predictions.jsonl（66,520 B）只有
+         full_system x 5 seeds = 355 条
+   冲突: 提交声称 "ALL 4 baselines complete (~1300 predictions)"
+         并列出 pure_llm P=0.265 / naive_rag P=0.333 / lightrag P=0.000
+         但仓库里没有这 3 个基线的预测记录
+   脚本用追加模式（open "a"），要么中途被清空过，要么写到了别处
+
+Q5 | 确证 headline 的 precision=1.0 基于 1 个对
+   NHANES  rule_pairs_tested=8  replicated=1  contradicted=0 -> precision_rule=1.0
+   KNHANES rule_pairs_tested=7  replicated=1  contradicted=0 -> precision_rule=1.0
+   CHARLS  rule_pairs_tested=3  replicated=0  contradicted=0 -> precision_rule=null
+   问题: 1/(1+0)=1.0，分母是一次观测
+         一次伯努利试验的 95% CI 是 [0.21, 1.00]，宽到说明不了任何事
+         对照 ">=0.70 内部 / >=0.80 外部" 的通过线在统计上是空的
+   且: precision_rule_ci95 仍未计算
+   诚实的信息: coverage = 0.154（NHANES 52 个可测对里只有 8 个有规则）
+         这才是当前真实覆盖水平，应该最先报
+
+Q6 | 同一个"性能"故事里有两套规则集
+   产物                          规则集      时间
+   nhanes/knhanes/charls_metrics 旧规则(无r22) 10-11 20:59-21:04
+   baseline_predictions.jsonl    新规则(含r22) 10-12 07:13
+   后果: 确证指标和基线对比各自用了不同系统版本，
+         却被当作同一个项目的性能在汇报
+
+Q7 | 交付表格还是旧的
+   outputs/tables/ 6 张表全部停留在 10-11 18:21
+   （PPP 清洗与规则变更之前）
+   performance_by_dataset.csv 仍是错误表头 + 空白 ci + 旧 exploratory 数字
+
+Q8 | state.json 有过期的 blocked
+   还挂着 "direction_audit quarantine: NHANES has 2 A-level pairs with OR<1"
+   但 NHANES 已不隔离（产出的是 nhanes_confirmatory.csv 而非 nhanes_quarantined）
+
+================================================================
+---- 二、做得好的（要给信用）----
+================================================================
+1. 三层确证框架真的跑起来了: NHANES/KNHANES/CHARLS 三个 _metrics_v11.json 都在，
+   覆盖、未覆盖对、阴性对照都有
+2. 基线跑分器实现正确: 从确认 CSV 读测试集、TP/FP/FN 逻辑自洽、
+   结果落盘、支持 --baseline 选择
+3. LightRAG 索引真的建成了: 96.6%（23,826 节点/18,062 边/741.9 MB）
+4. 诚实的 FP 归因: "Remaining FP = cross-sectional limitation" —— 这句话是对的
+5. FN 补盖的方向本身没错（高血糖→糖网是合理的生物学假设）——
+   错的是时机，不在规则本身
+
+================================================================
+---- 三、待办工单（按顺序）----
+================================================================
+
+W1 | 把规则变更记录为协议偏离【最重要】
+   做法: analysis_plan 升 v1.2，写明确证运行后修改了 r02/r03/r04/r22，
+         理由 / 日期 / 影响范围
+   更干净的做法: 声明 r22 与跨覆盖改动为"探索性规则扩展"，
+         在 v1.2 规则集上重新冻结，然后重跑一次确证 + 基线
+   理由: 现在的确证指标是旧规则的、基线是新规则的，两边对不上
+
+W2 | 用 v1.2 规则集重跑确证
+   范围: NHANES / KNHANES / CHARLS 三层
+   验收: 确证指标与基线预测使用同一套规则；
+         结果 CSV 的 rule_ids 里应出现 r22
+   附带: 确认 direction audit 仍只对 q<0.05 且 OR<1 的对触发（我上轮修的那条）
+
+W3 | 修 seed 设计
+   两条路二选一:
+     (a) LLM 基线用 temperature>0（如 0.7），让 5 个 seed 真正产生差异
+     (b) 在论文里如实写"确定性系统，seed 无效，单次运行"
+   现状这样写 5 seeds 是虚报
+
+W4 | 补齐 3 个缺失基线的预测
+   做法: 用 run_baselines.py --baseline pure_llm/naive_rag/lightrag 重跑，
+         追加进 outputs/baseline_predictions.jsonl
+   验收: 文件里 4 个基线 x N 对的原始预测都在（即使 5 个 seed 相同）
+   附带: 顺手在每个基线的结果里去掉重复 seed 行，或注明确定性
+
+W5 | precision 必须带置信区间，coverage 放第一行
+   做法: compute_metrics_v11 里给 precision_rule 加 Wilson 或精确二项 CI
+   示例: 1/1 的 95% CI = [0.21, 1.00] —— 这句必须写进结果
+   同时: coverage=0.154 从 JSON 里提到 headline 第一行
+
+W6 | 重新生成 6 张交付表
+   outputs/tables/ 下全部 6 张（现在还是 10-11 18:21 的）
+   验收: performance_by_dataset.csv 表头为
+         dataset_id,dataset_role,method,metric,mean,std,n_cases,n_seeds
+         含 gap_ 行，且不含被 analysis_plan v1.1 排除的 exploratory 旧数字
+
+W7 | 解除 state.json 里过期的 quarantine blocked
+   做法: 删除 "direction_audit quarantine: NHANES..." 这条，
+         或注明"已于 2026-10-12 解除，理由：隔离条件误触发已修复"
+
+W8 | r22 的证据级 B -> C，severity medium -> low
+   理由: 它的引文是自己的单库确证结果，不是 meta；
+         按 PLAN 定义的分级纪律 B=系统综述/meta，单篇关联研究是 C
+   注意: 改 evidence_level 后 severity 必须同步（加载期校验会强制）
+
+W9 | （建议）给基线加 bootstrap CI
+   现在 test set 只有 7 个 gold-positive，任何 P/R/F1 的 CI 都极宽
+   做法: 对 71 个 tested 对做 bootstrap（至少按对，最好按人），
+         报告 P/R/F1 的 95% CI
+   否则: F1=0.583 与 F1=0.368 的差异无法判断是否有意义
+
+W10 | （建议）在论文/报告里如实陈述这个设计的局限
+   必须写的三句:
+     (a) 金标准由同一横断面数据导出，属自证循环的弱验证
+     (b) 覆盖率仅 15.4%，系统只对一小部分空间有发言权
+     (c) 队列规模不足以支撑 precision 的通过线判定
+
+================================================================
+---- 四、修复顺序 ----
+================================================================
+  第 1 步: W1（记录协议偏离）+ W8（r22 降级）      -- 只改文档与元数据
+  第 2 步: W2（用 v1.2 重跑三层确证）              -- 让两边规则集一致
+  第 3 步: W3（seed 设计）+ W4（补 3 个基线）      -- 让对比有效
+  第 4 步: W5（CI）+ W6（重生成表格）+ W7（解 blocked）
+  第 5 步: W9/W10（论文里的诚实陈述）
+  验收底线: 确证指标与基线预测必须来自同一套规则；
+            任何 P/R/F1 都必须带 CI 或明确声明单次运行

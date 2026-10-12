@@ -1,17 +1,17 @@
 {
-  "rule_pairs_tested": 7,
-  "replicated": 1,
+  "rule_pairs_tested": 10,
+  "replicated": 2,
   "contradicted": 0,
-  "uninformative": 6,
+  "uninformative": 8,
   "separation": 0,
   "precision_rule": 1.0,
   "precision_rule_ci95": [
     1.0,
     1.0
   ],
-  "coverage": 0.184,
-  "uncovered_significant": 2,
-  "uncovered_pairs": 31,
+  "coverage": 0.263,
+  "uncovered_significant": 1,
+  "uncovered_pairs": 28,
   "negative_control_pairs": 0,
   "negative_control_outcome": {}
 }

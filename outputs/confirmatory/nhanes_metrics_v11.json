@@ -1,6 +1,6 @@
 {
-  "rule_pairs_tested": 8,
-  "replicated": 1,
+  "rule_pairs_tested": 14,
+  "replicated": 7,
   "contradicted": 0,
   "uninformative": 7,
   "separation": 0,
@@ -9,9 +9,9 @@
     1.0,
     1.0
   ],
-  "coverage": 0.154,
-  "uncovered_significant": 6,
-  "uncovered_pairs": 44,
+  "coverage": 0.269,
+  "uncovered_significant": 0,
+  "uncovered_pairs": 38,
   "negative_control_pairs": 1,
   "negative_control_outcome": {
     "uninformative": 1

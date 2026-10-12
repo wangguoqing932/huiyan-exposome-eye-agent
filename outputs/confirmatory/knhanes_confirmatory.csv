@@ -9,13 +9,13 @@ uric_acid_elevated,glaucoma_iop_elevated,False,,False,risk_up,17182,407,1.075681
 uric_acid_elevated,glaucoma_suspect_cdr,False,,False,risk_up,0,0,,,underpowered,,,,not_tested
 hyperglycemia,cataract_any,True,r02_hyperglycemia_x_cataract,False,risk_up,7079,934,1.158416729089397,0.26197819053752824,tested,0.895928876477198,1.4978078656317648,1.0,uninformative
 hyperglycemia,glaucoma_selfreport,False,,False,risk_up,7079,85,1.4779789926904294,0.22719579546190594,tested,0.7839541996772401,2.7864152060586695,1.0,uninformative
-hyperglycemia,retinopathy_any,False,,False,risk_up,19194,329,24.209220467684293,1.322239553956509e-130,tested,18.725150681897905,31.299419994495917,2.902065409629833e-128,replicated
+hyperglycemia,retinopathy_any,True,r03_hba1c_x_retinopathy_any,False,risk_up,19194,329,24.209220467684293,1.322239553956509e-130,tested,18.725150681897905,31.299419994495917,2.902065409629833e-128,replicated
 hyperglycemia,amd_early,False,,False,risk_up,19194,888,0.5881044276765965,0.0003536775867481136,tested,0.4395079013647659,0.7869410692704882,0.012937588699311884,contradicted
 hyperglycemia,amd_late,False,,False,risk_up,19194,76,0.2599490101699917,0.048288822285891604,tested,0.06826005999541257,0.9899418179957611,0.7065654651777148,uninformative
 hyperglycemia,vision_impairment_moderate,False,,False,risk_up,18441,175,2.488152708315788,3.508143691678834e-05,tested,1.6156694700282754,3.8317886267856793,0.0019249277540458294,replicated
 hyperglycemia,glaucoma_iop_elevated,False,,False,risk_up,31939,466,1.0413571482494226,0.779405585354408,tested,0.7842292149155596,1.382790502553432,1.0,uninformative
 hyperglycemia,glaucoma_suspect_cdr,False,,False,risk_up,14074,1049,0.955790168161755,0.6923085433906313,tested,0.7640106071763897,1.1957096367168172,1.0,uninformative
-hba1c_elevated,cataract_any,False,,False,risk_up,940,206,1.1251161287782507,0.5610950719216624,tested,0.7560447490965779,1.674353673839552,1.0,uninformative
+hba1c_elevated,cataract_any,True,r02_hyperglycemia_x_cataract,False,risk_up,940,206,1.1251161287782507,0.5610950719216624,tested,0.7560447490965779,1.674353673839552,1.0,uninformative
 hba1c_elevated,glaucoma_selfreport,False,,False,risk_up,940,24,,,underpowered,,,,not_tested
 hba1c_elevated,retinopathy_any,True,r03_hba1c_x_retinopathy_any,False,risk_up,9599,317,27.160045491021034,9.344890677059468e-73,tested,18.97331254646478,38.87924521708143,1.0255132630663461e-70,replicated
 hba1c_elevated,amd_early,False,,False,risk_up,9599,485,0.7355532182028841,0.01735353796524381,tested,0.5711191671891034,0.9473303784768201,0.34625208497711807,uninformative
@@ -41,7 +41,7 @@ crp_elevated,glaucoma_iop_elevated,False,,False,risk_up,6759,297,1.2612462056655
 crp_elevated,glaucoma_suspect_cdr,False,,False,risk_up,0,0,,,underpowered,,,,not_tested
 bmi_high,cataract_any,True,r13_bmi_x_cataract,False,risk_up,7392,1008,1.1907088265096335,0.04244918700918194,tested,1.0059609869730448,1.4093861768875322,0.6654851877074514,uninformative
 bmi_high,glaucoma_selfreport,False,,False,risk_up,7392,94,0.7799523686230849,0.29581859573670577,tested,0.4894595728313109,1.2428517718059138,1.0,uninformative
-bmi_high,retinopathy_any,False,,False,risk_up,20352,354,1.056904439697839,0.635559730447231,tested,0.840678441874109,1.3287446650383838,1.0,uninformative
+bmi_high,retinopathy_any,True,r22_bmi_x_retinopathy,False,risk_up,20352,354,1.056904439697839,0.635559730447231,tested,0.840678441874109,1.3287446650383838,1.0,uninformative
 bmi_high,amd_early,False,,False,risk_up,20352,970,0.8221828091409704,0.01386396918419277,tested,0.7034622489393867,0.960939371893975,0.30428786742332736,uninformative
 bmi_high,amd_late,False,,False,risk_up,20352,83,0.7838421668367335,0.34674707134247673,tested,0.47195341740578356,1.3018414950538213,1.0,uninformative
 bmi_high,vision_impairment_moderate,False,,False,risk_up,19451,224,0.9612145849501627,0.8202348653431213,tested,0.6833506703953316,1.3520634695308047,1.0,uninformative

@@ -269,16 +269,16 @@ rules:
   - source_type: literature
     ref: 10.1136/oem.2005.022343
 - id: r22_bmi_x_retinopathy
-  severity: medium
+  severity: low
   risk_type: inflammation_immune
   entity_a_flags:
   - bmi_high
   entity_b_flags:
   - retinopathy_any
   - dr_npdr
-  evidence_level: B
+  evidence_level: C
   direction: risk_up
-  rationale: NHANES 确证显示 BMI 升高与视网膜病变风险增加相关（OR=1.47, q=0.04），全身炎症和微血管损伤通路。
+  rationale: NHANES 确证（单库横断面）显示 BMI 升高与视网膜病变风险增加相关。证据来自单库确证结果，非系统综述/meta 分析，属 C 级。此规则为探索性扩展（analysis_plan v1.2 §0 协议偏离记录）。
   recommendation: 超重/肥胖人群建议定期眼底检查。
   citations:
   - source_type: literature

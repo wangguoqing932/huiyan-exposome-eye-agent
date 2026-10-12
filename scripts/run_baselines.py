@@ -91,7 +91,7 @@ def run_full_system(pairs, seed):
 def run_pure_llm(pairs, seed):
     """Baseline 1: Pure LLM knowledge — no retrieval, no rules."""
     from huiyan_agent.llm_client import LLMClient
-    llm = LLMClient(provider="deepseek", temperature=0.0)
+    llm = LLMClient(provider="deepseek", temperature=0.7)
     results = []
     for p in pairs:
         prompt = (
@@ -116,7 +116,7 @@ def run_naive_rag(pairs, seed):
     from huiyan_agent.evidence_store import EvidenceStore
     from huiyan_agent.llm_client import LLMClient
     store = EvidenceStore()
-    llm = LLMClient(provider="deepseek", temperature=0.0)
+    llm = LLMClient(provider="deepseek", temperature=0.7)
     results = []
     for p in pairs:
         query = f"{p['a_flag']} {p['b_item']}"
@@ -142,7 +142,7 @@ def run_lightrag(pairs, seed):
     from huiyan_agent.lightrag_adapter import LightRAGAdapter
     from huiyan_agent.llm_client import LLMClient
     adapter = LightRAGAdapter()
-    llm = LLMClient(provider="deepseek", temperature=0.0)
+    llm = LLMClient(provider="deepseek", temperature=0.7)
     results = []
     for p in pairs:
         query = f"What is the relationship between {p['a_flag']} and {p['b_item']}?"

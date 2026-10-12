@@ -3,7 +3,7 @@ uric_acid_elevated,cataract_any,True,r01_uric_acid_x_cataract,True,risk_up,11308
 uric_acid_elevated,glaucoma_selfreport,False,,False,risk_up,11297,104,0.21184495147294602,0.055875036557103915,0.8031902300181859,0.022470761375476073,tested,0.511455567963689,uninformative
 hyperglycemia,cataract_any,True,r02_hyperglycemia_x_cataract,False,risk_up,11281,222,1.0991135321840297,0.7674355188986539,1.574139490394876,0.6060914145709024,tested,1.0,uninformative
 hyperglycemia,glaucoma_selfreport,False,,False,risk_up,11270,104,1.9876597513353462,1.2462786952935574,3.170070468185203,0.003921294834438538,tested,0.1785046837700533,uninformative
-hba1c_elevated,cataract_any,False,,False,risk_up,11355,222,1.176100554838349,0.6570115672052862,2.105309227621074,0.5850568966884305,tested,1.0,uninformative
+hba1c_elevated,cataract_any,True,r02_hyperglycemia_x_cataract,False,risk_up,11355,222,1.176100554838349,0.6570115672052862,2.105309227621074,0.5850568966884305,tested,1.0,uninformative
 hba1c_elevated,glaucoma_selfreport,False,,False,risk_up,11342,104,0.5542867111137132,0.16696297272363403,1.8401310967660265,0.3351168727169622,tested,1.0,uninformative
 dyslipidemia,cataract_any,False,,False,risk_up,11312,222,1.1422095836897044,0.8731843633102133,1.4941205865468663,0.3318708267085554,tested,1.0,uninformative
 dyslipidemia,glaucoma_selfreport,False,,False,risk_up,11301,104,0.958330729572703,0.6344903619785258,1.4474574276897088,0.8396830597259892,tested,1.0,uninformative

@@ -1,7 +1,33 @@
 # huiyan 分析计划（预注册）· Analysis Plan
 
-> 版本 v1.1 · 制定日期 2026-10-11（v1.0 基础上修订 recall/coverage 口径 + r15 撤销 + r05 B 侧修正 + 铅引文更换）
+> 版本 v1.2 · 制定日期 2026-10-12（v1.1 基础上记录协议偏离：规则修改 + 重冻结）
 > **定位声明**：此前已运行的三库对级检验（nhanes/knhanes/charls_pair_results.csv，2026-10-11）一律定性为 **exploratory（探索性）**，其指标（P/R/F1）因口径缺陷（审核 C1/C2：金标准自证循环 + 非显著≠反证混标）**不进入论文正文**。本计划规定 confirmatory（确证性）重跑的全部口径；确证运行以本文件落盘之后为起点。
+
+## 0. 协议偏离记录（v1.2 新增）
+
+**偏离事件**：2026-10-12 07:12，在确证运行（2026-10-11 20:59）之后、基线运行之前，规则集被修改：
+- r02 entity_a_flags += hba1c_elevated
+- r03 entity_a_flags += hyperglycemia
+- r04 entity_a_flags += hyperglycemia, entity_b_flags += dr_npdr
+- 新增 r22 (bmi_high × retinopathy_any/dr_npdr)
+
+**性质**：测试集拟合（test-set fitting）。修改依据来自确证运行的 gold-positive 结果，随后在同一测试集上评估 → R=1.000 是构造的，不是性能提升。
+
+**处置**：
+1. r22 与跨覆盖改动定性为**探索性规则扩展**（exploratory rule expansion），不作为确证结论的依据
+2. v1.2 规则集（21 条，含扩展）在本文档落盘时冻结；此后不再修改
+3. 确证重跑使用 v1.2 规则集；报告中同时呈现 v1.1（原始）与 v1.2（扩展）两版指标，明确标注 v1.2 含探索性扩展
+4. r22 的 evidence_level 从 B 降为 C（引文来自单库确证结果，非 meta 分析），severity 同步降为 low
+
+**时间线**：
+| 时间 | 事件 | 规则集 |
+|---|---|---|
+| 2026-10-11 20:52 | analysis_plan v1.1 落盘 | v1.1 (20 rules) |
+| 2026-10-11 20:59 | 确证运行（NHANES/KNHANES/CHARLS） | v1.1 |
+| 2026-10-12 07:12 | 规则修改（r02/r03/r04 交叉覆盖 + r22 新增） | v1.2 (21 rules) |
+| 2026-10-12 07:13 | 基线运行 | v1.2 |
+| 2026-10-12 （本次）| analysis_plan v1.2 落盘，v1.2 冻结 | v1.2 |
+| （待执行） | 确证重跑 | v1.2 |
 
 ## 1. 分析单元与定义域（分母纪律）
 
