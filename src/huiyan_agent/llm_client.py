@@ -92,6 +92,19 @@ class LLMClient:
             self.max_tokens = max_tokens or cfg.max_tokens or 1024
             return
 
+        # 本地 llama-server（OpenAI 兼容，无鉴权；基线/测试用）
+        if self.provider == "local":
+            self.api_key = os.getenv("LOCAL_LLM_API_KEY", "local")
+            self.base_url = _ensure_v1(
+                os.getenv("LOCAL_LLM_BASE_URL", "http://127.0.0.1:8082/v1"))
+            self.model = os.getenv("LOCAL_LLM_MODEL", "local-qwen")
+            self.temperature = float(
+                temperature if temperature is not None
+                else (cfg.temperature if cfg.temperature is not None else 0.0))
+            self.max_tokens = int(
+                max_tokens or cfg.max_tokens or os.getenv("HUANYU_BULK_MAX_TOKENS", "1024"))
+            return
+
         # DeepSeek / OpenAI-compatible resolution
         if self.provider == "arbiter":
             self.api_key = (
@@ -150,9 +163,17 @@ class LLMClient:
     # ------------------------------------------------------------------ #
     # public API
     # ------------------------------------------------------------------ #
-    def complete(self, prompt: str, system: str | None = None) -> ChatResponse:
-        """Return a chat completion. ``degraded=True`` if in stub mode."""
+    def complete(self, prompt: str, system: str | None = None,
+                 *, raise_on_error: bool = False) -> ChatResponse:
+        """Return a chat completion. ``degraded=True`` if in stub mode.
+
+        ``raise_on_error=True`` 时网络/API 失败直接抛异常（基线运行等
+        需要区分"模型判断"与"管道故障"的场景必须开启；默认 False 保持
+        建索引等长任务的韧性降级）。
+        """
         if self.degraded:
+            if raise_on_error:
+                raise RuntimeError("LLM client in stub/degraded mode at init")
             return ChatResponse(
                 text=f"[stub] no LLM key configured; prompt was {len(prompt)} chars.",
                 degraded=True,
@@ -165,6 +186,8 @@ class LLMClient:
             text = self._chat(messages)
             return ChatResponse(text=text, degraded=False)
         except Exception as e:
+            if raise_on_error:
+                raise
             # network / API failure → degrade rather than crash the build
             return ChatResponse(text=f"[llm error] {e}", degraded=True)
 
@@ -176,15 +199,22 @@ class LLMClient:
         try:
             from openai import OpenAI  # type: ignore
             client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+            kwargs = {}
+            if self.provider != "local":
+                # Command Code 网关的 deepseek-v4.1-flash 对结构化提示词默认启动
+                # 深度推理，max_tokens 被 reasoning 耗尽后 content 为空（Phase 4
+                # 实测 reasoning 64K 字符 content 0）。管线场景不需要推理。
+                kwargs["extra_body"] = {"reasoning_effort": "off"}
+            else:
+                # 本地 qwen3.8：关思维链（实测 84s→0.3s），基线跑批必需；
+                # 论文报告时注明 thinking disabled (fast mode)。
+                kwargs["extra_body"] = {"chat_template_kwargs": {"enable_thinking": False}}
             resp = client.chat.completions.create(
                 model=self.model,
                 messages=messages,
                 temperature=self.temperature,
                 max_tokens=self.max_tokens,
-                # Command Code 网关的 deepseek-v4.1-flash 对结构化提示词默认启动
-                # 深度推理，max_tokens 被 reasoning 耗尽后 content 为空（Phase 4
-                # 实测 reasoning 64K 字符 content 0）。管线场景不需要推理。
-                extra_body={"reasoning_effort": "off"},
+                **kwargs,
             )
             return resp.choices[0].message.content or ""
         except ImportError:
@@ -193,13 +223,17 @@ class LLMClient:
         return self._chat_urllib(messages)
 
     def _chat_urllib(self, messages: list[dict[str, str]]) -> str:
-        body = json.dumps({
+        body_d = {
             "model": self.model,
             "messages": messages,
             "temperature": self.temperature,
             "max_tokens": self.max_tokens,
-            "reasoning_effort": "off",
-        }).encode("utf-8")
+        }
+        if self.provider != "local":
+            body_d["reasoning_effort"] = "off"
+        else:
+            body_d["chat_template_kwargs"] = {"enable_thinking": False}
+        body = json.dumps(body_d).encode("utf-8")
         url = f"{self.base_url.rstrip('/')}/chat/completions"
         req = urllib.request.Request(
             url, data=body,

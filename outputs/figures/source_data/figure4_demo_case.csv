@@ -1,0 +1,4 @@
+﻿entity_a,entity_b,layer,action,OR_nhanes,p,q_bhy,gold3
+hba1c_elevated,retinopathy_any,rule_engine,r03/r04 match,6.069920208333704,2.849905299907751e-54,9.80741928631811e-52,replicated
+hba1c_elevated,dr_any+dr_pdr,rules_yaml,evidence_level=B direction=risk_up,,,,
+hba1c_elevated,dr_pdr,rules_yaml,r04 severity=low,,,,

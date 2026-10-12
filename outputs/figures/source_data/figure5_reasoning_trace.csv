@@ -1,0 +1,8 @@
+﻿case_id,step_id,layer,content
+hba1c_elevated x dr_pdr,step1,normalize,input flag hba1c_elevated → EntityA hba1c (glycation_metabolic)
+hba1c_elevated x dr_pdr,step2,normalize,input item dr_pdr → EntityB diabetic_retinopathy_proliferative
+hba1c_elevated x dr_pdr,step3,rule_engine,"match r04_hba1c_x_dr_pdr (severity=low, evidence=C, direction=risk_up)"
+hba1c_elevated x dr_pdr,step4,rule_engine,cross-coverage r03_hba1c_x_retinopathy_any also fires (flag overlap)
+hba1c_elevated x dr_pdr,step5,kg_retrieval,LightRAG query: hba1c_elevated ↔ dr_pdr path via hyperglycemia/VEGF nodes
+hba1c_elevated x dr_pdr,step6,arbiter,signals aggregated → risk level (worst of matched rules)
+hba1c_elevated x dr_pdr,step7,report,structured output with rule ids + evidence trace

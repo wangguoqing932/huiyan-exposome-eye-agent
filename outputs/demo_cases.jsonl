@@ -1,0 +1,9 @@
+{"case_id": "demo_serum_uric_acid_cataract_any", "entity_a": "Serum uric acid", "entity_b": "Cataract (self-report or surgery)", "risk_level": "low", "n_signals": 1}
+{"case_id": "demo_serum_uric_acid_cataract_subtype_graded", "entity_a": "Serum uric acid", "entity_b": "Cataract subtype (graded)", "risk_level": "unknown", "n_signals": 0}
+{"case_id": "demo_serum_uric_acid_glaucoma_selfreport", "entity_a": "Serum uric acid", "entity_b": "Glaucoma (self-report/treated)", "risk_level": "unknown", "n_signals": 0}
+{"case_id": "demo_fasting_glucose_cataract_any", "entity_a": "Fasting glucose", "entity_b": "Cataract (self-report or surgery)", "risk_level": "medium", "n_signals": 1}
+{"case_id": "demo_fasting_glucose_cataract_subtype_graded", "entity_a": "Fasting glucose", "entity_b": "Cataract subtype (graded)", "risk_level": "unknown", "n_signals": 0}
+{"case_id": "demo_fasting_glucose_glaucoma_selfreport", "entity_a": "Fasting glucose", "entity_b": "Glaucoma (self-report/treated)", "risk_level": "unknown", "n_signals": 0}
+{"case_id": "demo_hba1c_cataract_any", "entity_a": "Hemoglobin A1c", "entity_b": "Cataract (self-report or surgery)", "risk_level": "medium", "n_signals": 1}
+{"case_id": "demo_hba1c_cataract_subtype_graded", "entity_a": "Hemoglobin A1c", "entity_b": "Cataract subtype (graded)", "risk_level": "unknown", "n_signals": 0}
+{"case_id": "demo_hba1c_glaucoma_selfreport", "entity_a": "Hemoglobin A1c", "entity_b": "Glaucoma (self-report/treated)", "risk_level": "unknown", "n_signals": 0}

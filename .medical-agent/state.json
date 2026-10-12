@@ -15,19 +15,11 @@
     "planner.phase4_5",
     "executor.phase0",
     "executor.phase1",
-    "executor.phase2"
+    "executor.phase2",
+    "executor.phase6"
   ],
-  "in_progress": "executor.phase3",
-  "blocked": [
-    {
-      "phase": "executor.phase3",
-      "reason": "verify_rule_citations gate NOT yet run on rules.yaml (audit A1); severity/level mapping fixes pending"
-    },
-    {
-      "phase": "executor.phase5",
-      "reason": "exploratory runs only; metrics retracted (audit C1/C2 gold-standard invalid; B7 sens 0.154/0.167 << 0.70); confirmatory rerun governed by docs/analysis_plan.md v1.0"
-    }
-  ],
+  "in_progress": null,
+  "blocked": [],
   "artifacts": {
     "config": ".planner.config.json",
     "plan_md": "PLAN.md",
@@ -125,6 +117,16 @@
     {
       "date": "2026-10-12",
       "event": "W1-W7 complete: analysis_plan v1.2 (protocol deviation); r22 C/low; 3-layer v1.2 rerun; temp=0.0 (deterministic); Wilson CI added; 6 tables regenerated; stale quarantine removed. LLM API 429 (resets 10-14).",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-12",
+      "event": "C4 修复：progress.json 按磁盘实况重写（1060 chunks/180 cases/索引 23826 节点/20-20 引用）；state.json 清除过期 blocked（phase3 引用门已 20/20，phase5 v1.2 确证已完成）；基线 fail-loud 修复+本地 qwen 重跑",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-12",
+      "event": "executor.phase6 completed (streamlit verified)",
       "skill": "medical-agent-executor"
     }
   ]

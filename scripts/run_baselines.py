@@ -1,21 +1,29 @@
 #!/usr/bin/env python
-"""Run 4 baselines × 5 seeds for A2 handoff deliverable.
+"""Run 4 baselines for A2 handoff deliverable.
 
 Baselines:
   1. pure_llm      — LLM answers without retrieval
   2. naive_rag     — EvidenceStore keyword retrieval + LLM
   3. lightrag      — LightRAG KG retrieval + LLM (requires index)
-  4. full_system   — Rule engine + evidence + LLM arbiter
+  4. full_system   — Rule engine + evidence + LLM arbiter (deterministic)
 
-Seeds: [11, 22, 33, 44, 55] (pre-registered)
-Output: outputs/baseline_predictions.jsonl
+Seeds: [11, 22, 33, 44, 55] (pre-registered); temperature=0.7 makes
+seed-level variation meaningful. full_system is rule-driven and
+seed-invariant.
+
+Fail-loud discipline (2026-10-12 audit):
+  - LLM 调用失败必须计数并落盘 error 字段，禁止静默变成 NO；
+  - 每个基线开跑前先做 canary 调用（连通性 + 合理性），失败即中止该基线；
+  - failures>0 的 run 标记 valid=False，不并入均值；全部失败则非零退出。
+
+Output: outputs/baseline_predictions.jsonl (append; provider/model 落盘可溯)
 
 Usage:
-  PYTHONUTF8=1 python scripts/run_baselines.py --baseline full_system
-  PYTHONUTF8=1 python scripts/run_baselines.py --all
+  PYTHONUTF8=1 python scripts/run_baselines.py --baseline pure_llm --provider local
+  PYTHONUTF8=1 python scripts/run_baselines.py --all --provider local --seed 11
 """
 from __future__ import annotations
-import argparse, json, os, sys, time
+import argparse, json, os, re, sys, time
 from pathlib import Path
 from collections import defaultdict
 
@@ -30,6 +38,36 @@ from huiyan_agent.normalize import (load_entity_a_registry, load_entity_b_regist
 
 SEEDS = [11, 22, 33, 44, 55]
 BASELINES = ["pure_llm", "naive_rag", "lightrag", "full_system"]
+TEMPERATURE = 0.7
+CANARY_PAIR = ("hyperglycemia", "retinopathy_any")
+_THINK_RE = re.compile(r"<think>.*?</think>", re.DOTALL)
+
+
+def strip_think(text: str) -> str:
+    """本地 qwen 等带思维链模型：剥掉 <think> 块再解析。"""
+    return _THINK_RE.sub("", text or "").strip()
+
+
+def make_llm(provider: str):
+    from huiyan_agent.llm_client import LLMClient
+    return LLMClient(provider=provider, temperature=TEMPERATURE)
+
+
+def canary(llm) -> None:
+    """跑批前单点连通性 + 合理性检查：失败即抛异常中止。"""
+    resp = llm.complete(
+        prompt="Is hyperglycemia a risk factor for diabetic retinopathy? Answer YES or NO on the first line only.",
+        system="You are a medical knowledge classifier. Be concise.",
+        raise_on_error=True,
+    )
+    first = strip_think(resp.text).split("\n")[0].strip().upper()
+    if not first.startswith(("YES", "NO")):
+        raise RuntimeError(f"canary unparsable response: {first[:120]!r}")
+    if not first.startswith("YES"):
+        print(f"[canary] WARNING: model answered {first[:20]!r} for hyperglycemia×retinopathy "
+              f"(expected YES) — proceeding but flag as quality concern")
+    else:
+        print(f"[canary] OK ({llm.label})")
 
 
 def load_test_pairs() -> list[dict]:
@@ -52,7 +90,7 @@ def load_test_pairs() -> list[dict]:
 
 
 def run_full_system(pairs, seed):
-    """Baseline 4: Full system — rule engine drives prediction."""
+    """Baseline 4: Full system — rule engine drives prediction (deterministic)."""
     rules = load_rules()
     a_reg = load_entity_a_registry()
     b_reg = load_entity_b_registry()
@@ -85,84 +123,83 @@ def run_full_system(pairs, seed):
                 "prediction": False, "gold3": p["gold3"],
                 "risk_level": "unknown", "confidence": 0.0,
             })
-    return results
+    return results, 0
 
 
-def run_pure_llm(pairs, seed):
+def _llm_predict(llm, prompt, system, meta, results, failures):
+    """单次 LLM 预测：失败计数+落盘 error，绝不静默。"""
+    rec = dict(meta)
+    try:
+        resp = llm.complete(prompt=prompt, system=system, raise_on_error=True)
+        first = strip_think(resp.text).split("\n")[0].strip().upper()
+        rec["prediction"] = first.startswith("YES")
+        if not first.startswith(("YES", "NO")):
+            # 格式不可解析也算失败（不是模型判断）
+            failures[0] += 1
+            rec["error"] = f"unparsable: {first[:80]!r}"
+    except Exception as e:
+        failures[0] += 1
+        rec["prediction"] = False
+        rec["error"] = f"{type(e).__name__}: {str(e)[:150]}"
+    results.append(rec)
+
+
+def run_pure_llm(pairs, seed, provider):
     """Baseline 1: Pure LLM knowledge — no retrieval, no rules."""
-    from huiyan_agent.llm_client import LLMClient
-    llm = LLMClient(provider="deepseek", temperature=0.0)
-    results = []
+    llm = make_llm(provider)
+    canary(llm)
+    results, failures = [], [0]
     for p in pairs:
         prompt = (
             f"Is {p['a_flag']} a known risk factor for {p['b_item']}? "
             f"Answer YES or NO on the first line only."
         )
-        try:
-            resp = llm.complete(prompt=prompt, system="You are a medical knowledge classifier. Be concise.")
-            prediction = (resp.text or "").strip().split("\n")[0].strip().upper().startswith("YES")
-        except Exception:
-            prediction = False
-        results.append({
-            "baseline": "pure_llm", "seed": seed,
-            "a_flag": p["a_flag"], "b_item": p["b_item"],
-            "prediction": prediction, "gold3": p["gold3"],
-        })
-    return results
+        meta = {"baseline": "pure_llm", "seed": seed,
+                "a_flag": p["a_flag"], "b_item": p["b_item"], "gold3": p["gold3"],
+                "provider": llm.label}
+        _llm_predict(llm, prompt, "You are a medical knowledge classifier. Be concise.",
+                     meta, results, failures)
+    return results, failures[0]
 
 
-def run_naive_rag(pairs, seed):
+def run_naive_rag(pairs, seed, provider):
     """Baseline 2: Naive RAG — EvidenceStore keyword retrieval + LLM."""
     from huiyan_agent.evidence_store import EvidenceStore
-    from huiyan_agent.llm_client import LLMClient
     store = EvidenceStore()
-    llm = LLMClient(provider="deepseek", temperature=0.0)
-    results = []
+    llm = make_llm(provider)
+    canary(llm)
+    results, failures = [], [0]
     for p in pairs:
         query = f"{p['a_flag']} {p['b_item']}"
         evidence = store.retrieve(query, top_k=3)
         ev_text = " | ".join(ev.text[:200] for ev in evidence) if evidence else "No evidence found."
         prompt = f"Evidence: {ev_text[:500]}\n\nIs {p['a_flag']} a risk factor for {p['b_item']}? YES or NO."
-        try:
-            resp = llm.complete(prompt=prompt, system="Answer based only on provided evidence.")
-            prediction = (resp.text or "").strip().split("\n")[0].strip().upper().startswith("YES")
-        except Exception:
-            prediction = False
-        results.append({
-            "baseline": "naive_rag", "seed": seed,
-            "a_flag": p["a_flag"], "b_item": p["b_item"],
-            "prediction": prediction, "gold3": p["gold3"],
-            "n_evidence": len(evidence),
-        })
-    return results
+        meta = {"baseline": "naive_rag", "seed": seed,
+                "a_flag": p["a_flag"], "b_item": p["b_item"], "gold3": p["gold3"],
+                "n_evidence": len(evidence), "provider": llm.label}
+        _llm_predict(llm, prompt, "Answer based only on provided evidence.",
+                     meta, results, failures)
+    return results, failures[0]
 
 
-def run_lightrag(pairs, seed):
+def run_lightrag(pairs, seed, provider):
     """Baseline 3: LightRAG KG retrieval + LLM."""
     from huiyan_agent.lightrag_adapter import LightRAGAdapter
-    from huiyan_agent.llm_client import LLMClient
-    adapter = LightRAGAdapter()
-    llm = LLMClient(provider="deepseek", temperature=0.0)
-    results = []
+    llm = make_llm(provider)
+    canary(llm)
+    # 传入同一 provider，避免 adapter 内部默认 deepseek（429 时 KG 综合降级）
+    adapter = LightRAGAdapter(chat_client=llm)
+    results, failures = [], [0]
     for p in pairs:
         query = f"What is the relationship between {p['a_flag']} and {p['b_item']}?"
-        try:
-            kg_result = adapter.query(query, mode="naive") or ""
-        except Exception:
-            kg_result = ""
+        kg_result = adapter.query(query, mode="naive") or ""
         prompt = f"KG evidence: {kg_result[:500]}\n\nIs {p['a_flag']} a risk factor for {p['b_item']}? YES or NO."
-        try:
-            resp = llm.complete(prompt=prompt, system="Answer based on KG evidence.")
-            prediction = (resp.text or "").strip().split("\n")[0].strip().upper().startswith("YES")
-        except Exception:
-            prediction = False
-        results.append({
-            "baseline": "lightrag", "seed": seed,
-            "a_flag": p["a_flag"], "b_item": p["b_item"],
-            "prediction": prediction, "gold3": p["gold3"],
-            "kg_chars": len(kg_result),
-        })
-    return results
+        meta = {"baseline": "lightrag", "seed": seed,
+                "a_flag": p["a_flag"], "b_item": p["b_item"], "gold3": p["gold3"],
+                "kg_chars": len(kg_result), "provider": llm.label}
+        _llm_predict(llm, prompt, "Answer based on KG evidence.",
+                     meta, results, failures)
+    return results, failures[0]
 
 
 def metrics(results):
@@ -180,6 +217,9 @@ def main():
     parser.add_argument("--seed", type=int)
     parser.add_argument("--baseline", choices=BASELINES)
     parser.add_argument("--all", action="store_true")
+    parser.add_argument("--provider", default="deepseek",
+                        choices=["deepseek", "local"],
+                        help="LLM provider（deepseek=commandcode 网关；local=127.0.0.1:8082 llama-server）")
     args = parser.parse_args()
 
     pairs = load_test_pairs()
@@ -191,27 +231,43 @@ def main():
     baselines_to_run = [args.baseline] if args.baseline else BASELINES
     seeds_to_run = [args.seed] if args.seed else SEEDS
 
+    any_total_failure = False
     for baseline in baselines_to_run:
         for seed in seeds_to_run:
-            print(f"\n[baselines] {baseline} seed={seed}...")
+            print(f"\n[baselines] {baseline} seed={seed} provider={args.provider}...")
             t0 = time.time()
             try:
                 if baseline == "full_system":
-                    results = run_full_system(pairs, seed)
+                    results, n_fail = run_full_system(pairs, seed)
                 elif baseline == "pure_llm":
-                    results = run_pure_llm(pairs, seed)
+                    results, n_fail = run_pure_llm(pairs, seed, args.provider)
                 elif baseline == "naive_rag":
-                    results = run_naive_rag(pairs, seed)
+                    results, n_fail = run_naive_rag(pairs, seed, args.provider)
                 elif baseline == "lightrag":
-                    results = run_lightrag(pairs, seed)
+                    results, n_fail = run_lightrag(pairs, seed, args.provider)
                 else:
                     continue
             except Exception as e:
-                print(f"  ERROR: {type(e).__name__}: {str(e)[:120]}")
+                print(f"  ABORTED: {type(e).__name__}: {str(e)[:200]}")
+                any_total_failure = True
                 continue
             elapsed = time.time() - t0
             m = metrics(results)
-            print(f"  {len(results)} pairs in {elapsed:.1f}s | P={m['precision']} R={m['recall']} F1={m['F1']}")
+            valid = n_fail == 0
+            if not valid:
+                any_total_failure = True
+                n_err_samples = sum(1 for r in results if r.get("error"))
+                print(f"  {len(results)} pairs in {elapsed:.1f}s | "
+                      f"FAILURES={n_fail}/{len(results)} (invalid run, excluded from means)")
+                for r in results:
+                    if r.get("error"):
+                        print(f"    e.g. {r['a_flag']}x{r['b_item']}: {r['error'][:100]}")
+                        break
+            else:
+                print(f"  {len(results)} pairs in {elapsed:.1f}s | "
+                      f"P={m['precision']} R={m['recall']} F1={m['F1']} | 0 failures")
+            for r in results:
+                r["valid"] = valid
             all_results.extend(results)
 
     with output_path.open("a", encoding="utf-8") as f:
@@ -219,11 +275,12 @@ def main():
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     print(f"\n[baselines] {len(all_results)} predictions → {output_path}")
 
-    # Summary
+    # Summary（只统计 valid run）
     by_bl = defaultdict(list)
     for r in all_results:
-        by_bl[r["baseline"]].append(r)
-    print("\n=== Summary ===")
+        if r.get("valid", True):
+            by_bl[r["baseline"]].append(r)
+    print("\n=== Summary (valid runs only) ===")
     for bl, rs in sorted(by_bl.items()):
         by_seed = defaultdict(list)
         for r in rs:
@@ -232,8 +289,9 @@ def main():
         p = sum(m["precision"] or 0 for m in ms) / max(1, len(ms))
         r_ = sum(m["recall"] or 0 for m in ms) / max(1, len(ms))
         f = sum(m["F1"] or 0 for m in ms) / max(1, len(ms))
-        print(f"  {bl:15s} | P={p:.3f} R={r_:.3f} F1={f:.3f} | {len(ms)} seeds")
-    return 0
+        print(f"  {bl:15s} | P={p:.3f} R={r_:.3f} F1={f:.3f} | {len(ms)} seeds | temp={TEMPERATURE}")
+    return 1 if any_total_failure else 0
+
 
 if __name__ == "__main__":
     sys.exit(main())

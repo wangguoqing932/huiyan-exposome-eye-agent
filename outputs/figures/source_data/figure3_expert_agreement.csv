@@ -1,0 +1,5 @@
+case_id,expert_id,rating,system_rating
+# NOT_COLLECTABLE: 4-expert blind panel (figure3 contract) was never conducted in this project.
+# Fabricating expert ratings would constitute research fraud.
+# Writer phase: replace figure3 with confirmatory three-state outcomes (see outputs/tables/performance_matrix.csv)
+# or drop the figure. Do NOT invent kappa values.

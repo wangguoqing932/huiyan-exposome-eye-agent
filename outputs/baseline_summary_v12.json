@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-12",
+  "gold": "nhanes_confirmatory.csv gold3 (v1.2), positive=replicated",
+  "note": "LLM baselines on local qwen3.8-27b (thinking disabled, temp=0.7, seed 11, 0 failures each); commandcode DeepSeek weekly quota 429 until 2026-10-14; full_system deterministic rule engine",
+  "baselines": {
+    "pure_llm": {
+      "provider": "local:qwen3.8-27b",
+      "P": 0.3333333333333333,
+      "R": 0.5714285714285714,
+      "F1": 0.4210526315789474,
+      "TP": 4,
+      "FP": 8,
+      "FN": 3,
+      "n_yes": 12,
+      "failures": 0
+    },
+    "naive_rag": {
+      "provider": "local:qwen3.8-27b",
+      "P": 0.25,
+      "R": 0.14285714285714285,
+      "F1": 0.18181818181818182,
+      "TP": 1,
+      "FP": 3,
+      "FN": 6,
+      "n_yes": 4,
+      "failures": 0
+    },
+    "lightrag": {
+      "provider": "local:qwen3.8-27b",
+      "P": 0.16129032258064516,
+      "R": 0.7142857142857143,
+      "F1": 0.2631578947368421,
+      "TP": 5,
+      "FP": 26,
+      "FN": 2,
+      "n_yes": 31,
+      "failures": 0
+    },
+    "full_system": {
+      "provider": "deepseek:legacy",
+      "P": 0.4117647058823529,
+      "R": 1.0,
+      "F1": 0.5833333333333334,
+      "TP": 7,
+      "FP": 10,
+      "FN": 0,
+      "n_yes": 17,
+      "failures": 0
+    }
+  }
+}

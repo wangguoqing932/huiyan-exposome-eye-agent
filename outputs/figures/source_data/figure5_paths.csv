@@ -1,0 +1,8 @@
+﻿source_node,target_node,edge_type
+hba1c_elevated,hyperglycemia,flag_of
+hyperglycemia,retinal_ischemia,mechanism
+retinal_ischemia,VEGF_upregulation,mechanism
+VEGF_upregulation,neovascularization,mechanism
+neovascularization,dr_pdr,manifests_as
+r04_hba1c_x_dr_pdr,hba1c_elevated,rule_covers
+r04_hba1c_x_dr_pdr,dr_pdr,rule_covers

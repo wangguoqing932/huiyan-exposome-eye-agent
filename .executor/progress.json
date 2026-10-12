@@ -1,4 +1,6 @@
 {
+  "_updated": "2026-10-12",
+  "_note": "按磁盘实况全量重写（C4 修复：旧值停在各阶段早期）",
   "phases": {
     "phase0": {
       "status": "complete",
@@ -11,38 +13,55 @@
       "note": "B9: build scripts now reproducible"
     },
     "phase2": {
-      "status": "in_progress",
-      "evidence_chunks": 36,
-      "target": 250,
-      "cases_populated": 0,
-      "note": "B5: cases.jsonl all 0; C15: evidence 14% of target"
+      "status": "complete",
+      "evidence_chunks": 1060,
+      "evidence_sources": "521 PubMed probe + 159 PPP + 380 PubMed targeted",
+      "cases_populated": {
+        "intval-nhanes": 110,
+        "extval-knhanes": 56,
+        "extval-cohorts-9": 14,
+        "total": 180
+      },
+      "note": "证据池经 4 轮扩充+清洗（PMID 去重、垃圾块剔除、PPP 重分级 34A/125D）"
     },
     "phase3": {
-      "status": "blocked",
-      "reason": "verify_rule_citations 17/21 pass; 4 authentic_only (mechanism-level citations); A1 partially resolved",
-      "severity_fixes": "B13 r03 medium/r04 low; C11 r01 inflammation; C12 r18 A→B",
+      "status": "complete",
+      "reason": "verify_rule_citations 20/20 PASS（v1.1 规则集）；v1.2 规则集新增 r22 已配真实引文（C级单源）",
+      "severity_fixes": "B13 r03 medium/r04 low; C11 r01 inflammation; C12 r18 A→B; W8 r22 B→C/low",
       "citations_verified": true,
-      "rules_yaml_sha256": "39ab186e5c5c1416a7ee2e9417ee1a0dd2000eccf623cbd7e046acfe81eac4fc",
       "citations_report": "outputs/citation_verification_report.json",
-      "verified_count": 23,
-      "report_ok_count": 0,
-      "db_ok_count": 0,
-      "rule_count": 20,
+      "rule_count": 21,
+      "ruleset": "v1.2 (frozen 2026-10-12, see analysis_plan §0)",
       "degraded_mode": false
     },
     "phase4": {
-      "status": "not_started",
-      "note": "LightRAG deps installed; index not built"
+      "status": "complete",
+      "index_nodes": 23826,
+      "index_edges": 18062,
+      "index_size_mb": 778,
+      "docs_indexed": 1054,
+      "note": "LightRAG 索引完整（B5 完成标记）；language=en（A1）；B1 ids+file_paths 可溯源"
     },
     "phase5": {
-      "status": "exploratory_only",
-      "note": "3 datasets run with binary gold (superseded); confirmatory rerun per analysis_plan v1.0 pending",
-      "nhanes_pairs": 101,
-      "knhanes_pairs": 39,
-      "charls_pairs": 14
+      "status": "complete",
+      "note": "v1.2 三层确证已完成：NHANES 7/14 复证 0 反证 P=1.0 [CP-CI 0.59,1.0] cov=0.269；KNHANES 2/10 P=1.0 [0.158,1.0] cov=0.263；CHARLS 0/4 cov=0.667；负控 r01 落 uninformative 符合预期",
+      "confirmatory_outputs": [
+        "outputs/confirmatory/nhanes_confirmatory.csv",
+        "outputs/confirmatory/knhanes_confirmatory.csv",
+        "outputs/confirmatory/charls_confirmatory.csv"
+      ],
+      "protocol_deviation": "analysis_plan v1.2 §0（test-set fitting 事件已记录+冻结）"
     },
     "phase6": {
-      "status": "not_started"
+      "status": "complete",
+      "note": "基线对比：full_system P=0.412 R=1.0 F1=0.583（bootstrap CI 见 outputs/baseline_fullsystem_bootstrap_ci.json）；3 个 LLM 基线已修 fail-loud + canary，换本地 qwen3.8-27b（commandcode 429 至 10-14）重跑中 temp=0.7",
+      "baselines_fixed": "2026-10-12: llm_client raise_on_error + 失败计数落盘，不再静默 NO",
+      "streamlit_built": true,
+      "has_chat": true,
+      "has_overview": true,
+      "streamlit_app": "app/streamlit_app.py",
+      "demo_cases_path": "outputs/demo_cases.jsonl",
+      "demo_cases_count": 9
     }
   }
 }

@@ -1,0 +1,124 @@
+【当前阶段评估 + 下一步待办】
+================================================================
+结论: 流程污染已清理（v1.2 + CI + 诚实表格），这版的数字本身可以用了。
+      但三个 LLM 基线因调用失败全部输出 NO —— "4 基线对比"等于没有对手。
+      这是进 writer 阶段前唯一的阻塞项。
+================================================================
+
+---- 一、W1-W10 完成度（已逐项复核）----
+
+W1  协议偏离记录            完成  analysis_plan 升 v1.2，明确记录规则修改+重冻结
+W2  用 v1.2 重跑确证        完成  NHANES/KNHANES 的 rule_ids 含 r22
+                                  NHANES: 71 tested / 7 replicated / 3 contradicted
+W3  seed 设计              部分  走了路线(b)：每个基线只跑 1 次（284 行 = 4x71），诚实
+                                  但提交信息写 "LLM temperature 0.0->0.7"，
+                                  脚本里三处仍是 temperature=0.0 —— 提交与代码不符
+W4  补 3 个基线            完成  4 基线 x 71 对都在文件里
+W5  CI                     完成  precision_rule_ci95 已算，Wilson 95% CI 进了表格
+                                  NHANES [0.59, 1.0] / KNHANES [0.158, 1.0]
+                                  ci_method 字段也在
+W6  重生成表格             完成  表头已是
+                                  dataset_id,dataset_role,method,metric,mean,std,
+                                  n_cases,n_seeds,ci_lo,ci_hi,ci_note
+                                  method=full_system_v1.2，n_seeds=1 诚实
+W7  解 blocked             完成  过期的 quarantine blocked 已删（3 -> 2）
+W8  r22 降级               完成  severity=low, evidence_level=C
+
+整体: 这一轮把流程污染处理得干净、诚实。
+      CI 加了、表头对了、协议偏离记录了、规则集统一了、n_seeds=1 没有虚报。
+
+================================================================
+---- 二、新的致命问题 ----
+================================================================
+
+🔴 三个 LLM 基线的预测全部是 NO（0/71）
+
+   pure_llm    预测 YES: 0/71
+   naive_rag   预测 YES: 0/71
+   lightrag    预测 YES: 0/71
+   full_system 预测 YES: 17/71
+
+   pure_llm 对 "高血糖是不是糖网的风险因素" 回答 NO ——
+   这不是模型的真实判断，是调用失败被吞了
+
+   原因代码（run_baselines.py，三个基线同款）:
+     try:
+         resp = llm.complete(...)
+         prediction = resp.text...startswith("YES")
+     except Exception:
+         prediction = False     # <- 所有失败都静默变成 NO
+
+   后果: 三个 LLM 基线的 P=None / R=0.0 / F1=None 不是模型能力，是管道故障
+         当前 "full_system 远超所有基线" 的对比是无效的 —— 对手没上场
+
+================================================================
+---- 三、次要问题（3 个）----
+================================================================
+
+1. 提交信息与代码不符
+   提交写 "LLM temperature 0.0->0.7"，但 run_baselines.py 三处仍是 0.0
+   要么改代码，要么改提交说明 —— 目前是虚报
+
+2. progress.json 仍然全线过期（C4，一直没修）
+   phase2 写 "cases.jsonl all 0; evidence 14%"
+     -> 实际 1060 块 / 314 cases
+   phase4 写 "index not built"
+     -> 实际 741.9 MB / 23,826 节点 / 18,062 边
+   phase5 写 "confirmatory rerun pending"
+     -> 实际 v1.2 确证已完成
+
+3. state.json 的 blocked 理由过期
+   phase5 还写 "metrics retracted...confirmatory pending"（v1.2 已完成）
+   phase3 还写 "引用门未跑"（仍未解除）
+
+================================================================
+---- 四、当前诚实的数字（这版可以用）----
+================================================================
+
+                     TP  FP  FN   P      R      F1     95% CI
+full_system v1.2      7  10   0   0.412  1.000  0.583  [0.65, 1.00]
+coverage  NHANES 0.269 / KNHANES 0.263 / CHARLS 0.667
+3 个 LLM 基线          无效（管道故障，全部 NO）
+
+解读:
+  precision 0.412: 10 个 FP 是真实的 —— 规则覆盖了 17 对，
+                   只有 7 对被数据证实。这就是横断面单库的真实水平
+  CI [0.65,1.00]: 宽度仍然很大，诚实
+  coverage 0.269:  比上一版 0.154 好了（补了规则），
+                   但仍是 "系统只对四分之一的空间有发言权"
+
+================================================================
+---- 五、下一步（按顺序）----
+================================================================
+
+第 1 件【阻塞】修 3 个 LLM 基线的调用
+  a. 先单独测一次:
+     LLMClient(provider="deepseek").complete(
+         prompt="Is hyperglycemia a risk factor for retinopathy? YES or NO.")
+     看返回什么（是报错、空、还是格式不对）
+  b. 修掉 except Exception: prediction=False ——
+     失败必须计数并上报，不能静默变 NO
+  c. 重跑 3 个基线
+  验收: pure_llm 对 "高血糖x糖网" 必须回答 YES
+
+第 2 件  改 temperature 或改提交说明
+  a. 把三处 temperature=0.0 改成 0.7 并重跑（这样 seed 才有意义）
+  b. 或把提交信息里的 "0.0->0.7" 改掉
+  现在这条提交信息是虚报
+
+第 3 件  更新两个状态文件（C4，一直没修）
+  progress.json: phase2 / phase4 / phase5 全部按磁盘实况重写
+  state.json:    phase5 的 blocked 理由改成反映 v1.2 已完成
+
+第 4 件  进 writer 阶段前的收尾
+  跑 validate_handoff.py --transition executor-to-writer，看还差什么
+  目前最大的缺口: 图件 source_data 还是 5 个占位 CSV
+  （outputs/figures/source_data/figure{1-5}_data.csv 各 38 B）
+
+================================================================
+---- 六、一句话 ----
+================================================================
+流程污染已清理干净（v1.2 + CI + 诚实表格），这版的数字本身可以用了。
+但现在三个 LLM 基线因为调用失败全部输出 NO，
+"4 基线对比"等于没有对手 —— 修好它、更新两个状态文件，
+就可以收尾 executor 进入写作阶段。

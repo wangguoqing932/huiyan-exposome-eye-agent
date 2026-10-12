@@ -29,9 +29,13 @@
 - CHARLS 眼病为问卷自报，0/4 复证可能部分反映测量差异而非规则错误；
 - 所有 OR 为横断面关联，不构成因果推断。
 
-## 5. 基线比较不完整
+## 5. 基线对比的 provider 不一致与单种子局限
 
-pure_llm / naive_rag / lightrag 三个 LLM 基线在 2026-10-12 因 API 周额度限流（429）返回降级输出（全 NO），其有效结果仅来自 2026-10-11 的 temp=0.0 单种子运行。API 恢复（2026-10-14）后应重跑并以多种子均值±CI 报告。当前基线结论（full_system 优于 LLM 基线）为**初步**结论。
+三个 LLM 基线（pure_llm / naive_rag / lightrag）最终在**本地 Qwen3.8-27B（3bit 量化，关闭思维链）**上完成（temp=0.7，seed 11，各自 0 调用失败），而 full_system 为确定性规则引擎——两者 LLM 后端不同（原定 DeepSeek 因 commandcode 周额度 429 限流至 2026-10-14 切换）。含义：
+- 基线对比结论（full_system F1=0.583 > pure_llm 0.421 > lightrag 0.263 > naive_rag 0.182）**跨了不同的 LLM 后端**，解释时须注明；
+- 本地模型为 3bit 量化 + thinking disabled（fast mode），其参数化医学知识弱于满血 DeepSeek/GPT 系，可能**低估** LLM 基线上限；
+- 每基线仅 1 个 seed（temp=0.7 下种子间应有波动），未做多种子均值±CI；DeepSeek 额度恢复后应以同一后端、≥5 seeds 重跑确认；
+- lightrag 基线 R=0.714 但 P=0.161（31/71 YES）：KG 检索倾向过度肯定，其 5 个 FP 与证据池发表偏倚一致（见 §6）。
 
 ## 6. 规则证据的时效与来源偏差
 
@@ -45,4 +49,4 @@ pure_llm / naive_rag / lightrag 三个 LLM 基线在 2026-10-12 因 API 周额�
 
 ## 论文表述模板（Discussion 用）
 
-> The rule set was modified once after observing first-round confirmatory results (protocol deviation, fully documented in analysis_plan v1.2 §0); consequently the reported recall of 1.000 for the v1.2 rule set is optimistic and should be interpreted as exploratory. Precision was 1.000 (95% CI 0.590–1.000, NHANES) over only 14 informative pairs; coverage was 0.269 by design (precision-first, UNKNOWN for unevidenced pairs). Cross-sectional databases limit causal interpretation; the smoking–cataract reversal is attributed to age confounding, reverse causation, and survivorship bias (direction audit quarantined). LLM-based baselines were API-rate-limited during final runs and will be re-run multi-seed; current baseline comparison is preliminary.
+> The rule set was modified once after observing first-round confirmatory results (protocol deviation, fully documented in analysis_plan v1.2 §0); consequently the reported recall of 1.000 for the v1.2 rule set is optimistic and should be interpreted as exploratory. Precision was 1.000 (95% CI 0.590–1.000, NHANES) over only 14 informative pairs; coverage was 0.269 by design (precision-first, UNKNOWN for unevidenced pairs). Cross-sectional databases limit causal interpretation; the smoking–cataract reversal is attributed to age confounding, reverse causation, and survivorship bias (direction audit quarantined). LLM baselines ran on a local quantized Qwen3.8-27B (thinking disabled) after the primary API hit its weekly quota — a different backend than originally planned, which may understate LLM baseline performance; baseline numbers are single-seed (temp 0.7) and await multi-seed confirmation on the original backend. Against these baselines the full system achieved the highest F1 (0.583 vs 0.421 best LLM baseline) with recall 1.000 by construction of the rule set.
