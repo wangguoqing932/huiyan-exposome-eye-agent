@@ -26,10 +26,6 @@
     {
       "phase": "executor.phase5",
       "reason": "exploratory runs only; metrics retracted (audit C1/C2 gold-standard invalid; B7 sens 0.154/0.167 << 0.70); confirmatory rerun governed by docs/analysis_plan.md v1.0"
-    },
-    {
-      "phase": "executor.phase5",
-      "reason": "direction_audit quarantine: NHANES has 2 A-level pairs with OR<1"
     }
   ],
   "artifacts": {
@@ -124,6 +120,11 @@
     {
       "date": "2026-10-11",
       "event": "direction audit quarantine PARTIALLY LIFTED after bias investigation (docs/bias_investigation_smoking_cataract.md): smoking×cataract reversal = age confounding + reverse causation + survivorship (all 3 groups 11% in 60-69 stratum); BMI×cataract OR=0.986 is null not reversed; rules retained, cross-sectional limitation documented",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-12",
+      "event": "W1-W7 complete: analysis_plan v1.2 (protocol deviation); r22 C/low; 3-layer v1.2 rerun; temp=0.0 (deterministic); Wilson CI added; 6 tables regenerated; stale quarantine removed. LLM API 429 (resets 10-14).",
       "skill": "medical-agent-executor"
     }
   ]

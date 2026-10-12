@@ -1,4 +1,4 @@
-﻿dataset,pairs_tested,rule_pairs_tested,TP,FP,FN,TN,precision,recall,F1,phase,methodology
-NHANES,101,13,2,11,11,77,0.154,0.154,0.154,exploratory,"binary_gold(v1, superseded by analysis_plan v1.0)"
-KNHANES,39,7,1,6,5,27,0.143,0.167,0.154,exploratory,"binary_gold(v1, superseded by analysis_plan v1.0)"
-CHARLS,14,4,0,4,0,10,0.0,,,exploratory,"binary_gold(v1, superseded by analysis_plan v1.0)"
+﻿dataset,pairs_tested,rule_pairs_tested,replicated,contradicted,uninformative,precision_rule,precision_rule_ci95,coverage,phase,methodology
+NHANES,,14,7,0,7,1.0,"[0.59, 1.0]",0.269,confirmatory_v1.2,three-state gold + Wilson CI (analysis_plan v1.2)
+KNHANES,,10,2,0,8,1.0,"[0.158, 1.0]",0.263,confirmatory_v1.2,three-state gold + Wilson CI (analysis_plan v1.2)
+CHARLS,,4,0,0,4,n/a (0 informative),"[None, None]",0.667,confirmatory_v1.2,three-state gold + Wilson CI (analysis_plan v1.2)

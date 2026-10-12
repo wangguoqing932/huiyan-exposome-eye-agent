@@ -1,5 +1,5 @@
-﻿dataset_id,role,source_type,expected_size,ground_truth,independence_axis,cases_populated,note
-dev-exposure-disease-pairs,development,literature,400,label_guideline,source,0,B5: cases not yet populated
-intval-nhanes,internal_validation,public_database,400,database_outcome,source,0,B5: cases not yet populated
-extval-knhanes,external_validation,public_database,300,database_outcome,site,0,B5: cases not yet populated
-extval-cohorts-9,external_validation,public_database,120,database_outcome,population,0,B5: cases not yet populated
+﻿dataset_id,role,source_type,expected_size,ground_truth,cases_populated,confirmatory_run
+dev-exposure-disease-pairs,development,literature,400,label_guideline,134,pending
+intval-nhanes,internal_validation,public_database,400,database_outcome,110,pending
+extval-knhanes,external_validation,public_database,300,database_outcome,56,pending
+extval-cohorts-9,external_validation,public_database,120,database_outcome,14,pending

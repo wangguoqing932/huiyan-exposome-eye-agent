@@ -6,12 +6,13 @@
   "separation": 0,
   "precision_rule": 1.0,
   "precision_rule_ci95": [
-    1.0,
+    0.158,
     1.0
   ],
   "coverage": 0.263,
   "uncovered_significant": 1,
   "uncovered_pairs": 28,
   "negative_control_pairs": 0,
-  "negative_control_outcome": {}
+  "negative_control_outcome": {},
+  "ci_method": "Clopper-Pearson exact binomial (v1.2 metrics fix 2026-10-12; replaces degenerate bootstrap)"
 }

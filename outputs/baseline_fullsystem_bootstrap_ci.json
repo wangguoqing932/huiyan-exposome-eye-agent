@@ -1,0 +1,33 @@
+{
+  "method": "full_system_v1.2",
+  "gold_source": "nhanes_confirmatory.csv gold3 (v1.2)",
+  "gold_positive_def": "gold3 == replicated",
+  "n_pairs": 71,
+  "point": {
+    "TP": 7,
+    "FP": 10,
+    "FN": 0,
+    "TN": 54,
+    "precision": 0.412,
+    "recall": 1.0,
+    "F1": 0.583
+  },
+  "bootstrap_95ci": {
+    "precision": [
+      0.167,
+      0.667
+    ],
+    "recall": [
+      1.0,
+      1.0
+    ],
+    "F1": [
+      0.286,
+      0.8
+    ]
+  },
+  "B": 2000,
+  "seed": 42,
+  "note": "percentile bootstrap over 71 pair-level outcomes; full_system is deterministic so CI reflects finite-test-set sampling uncertainty only",
+  "llm_baselines_note": "pure_llm/naive_rag/lightrag 今日为 API 429 限流（DeepSeek 周额度，2026-10-14 重置），全 NO 属降级输出；其有效结果为 2026-10-11 运行（temp=0.0），重跑待 API 恢复"
+}

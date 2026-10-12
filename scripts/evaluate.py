@@ -394,19 +394,14 @@ def compute_metrics_v11(res):
     uninf = int((rp["gold3"] == "uninformative").sum())
     sep = int((res["status"] == "separation").sum())
     prec = round(rep / (rep + con), 3) if rep + con else None
-    # Bootstrap CI (pair-level; patient-level noted as WO-15 pending)
-    vals = rp["gold3"].values
+    # Clopper-Pearson exact binomial CI on rep/(rep+con)（小 n 下 bootstrap 对观测
+    # 标签重采样会退化，如 7/0 恒得 [1.0,1.0]，无法反映真实不确定性）
     ci = (None, None)
-    if len(vals) > 0:
-        rng = np.random.default_rng(42)
-        samples = []
-        for _ in range(1000):
-            s = rng.choice(vals, size=len(vals), replace=True)
-            r, c = int((s == "replicated").sum()), int((s == "contradicted").sum())
-            if r + c > 0: samples.append(r / (r + c))
-        if samples:
-            ci = (round(float(np.percentile(samples, 2.5)), 3),
-                  round(float(np.percentile(samples, 97.5)), 3))
+    if rep + con:
+        from scipy import stats as _st
+        lo = _st.beta.ppf(0.025, rep, con + 1) if rep > 0 else 0.0
+        hi = _st.beta.ppf(0.975, rep + 1, con) if con > 0 else 1.0
+        ci = (round(float(lo), 3), round(float(hi), 3))
     coverage = round(len(rp) / len(t_main), 3) if len(t_main) else None
     non_rule = t_main[~t_main["predicted"]]
     return {
