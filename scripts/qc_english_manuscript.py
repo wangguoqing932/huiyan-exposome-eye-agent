@@ -92,22 +92,42 @@ def main() -> int:
     # ---- citations ---------------------------------------------------------
     pool = json.loads(POOL.read_text(encoding="utf-8"))
     ids = {e["pool_id"] for e in pool["entries"]}
-    # Third instance of a too-narrow regex in this checker. Requiring the exact
-    # form [C031] meant grouped citations such as [C031, C032, C033] were
-    # invisible, so three references the manuscript DOES cite were reported as
-    # uncited. Collect every C### token inside any bracketed span instead.
+    # The manuscript may cite either the pool codes ([C031, C032]) before the
+    # reference list is built, or the numbered form ([12]) after 7_8 has run
+    # scripts/build_references.py. Both forms are checked; the numbered form is
+    # validated against the rendered References section.
     cited: list[str] = []
     for _m in re.finditer(r"\[([^\]]*)\]", text):
         cited += re.findall(r"C\d{3}", _m.group(1))
     cited = sorted(set(cited))
-    ck("citations:all_in_pool", set(cited) <= ids,
-       f"outside pool: {sorted(set(cited) - ids)}")
-    unused = sorted(ids - set(cited))
-    ck("citations:pool_all_used", not unused, f"unused: {unused}")
+    if cited:
+        ck("citations:all_in_pool", set(cited) <= ids,
+           f"outside pool: {sorted(set(cited) - ids)}")
+        unused = sorted(ids - set(cited))
+        ck("citations:pool_all_used", not unused, f"unused: {unused}")
+        ck("citations:n", len(cited) >= 15, f"{len(cited)} cited")
+    else:
+        nums: set[int] = set()
+        for _m in re.finditer(r"\[([\d,\s\u2013-]+)\]", text):
+            for part in _m.group(1).split(","):
+                part = part.strip()
+                rng = re.fullmatch(r"(\d+)\s*[-\u2013]\s*(\d+)", part)
+                if rng:  # the generator compresses [16,17,18] to [16-18]
+                    nums.update(range(int(rng.group(1)), int(rng.group(2)) + 1))
+                elif part.isdigit():
+                    nums.add(int(part))
+        ref_sec = text.split("# References", 1)[-1].split("# Figure Legends", 1)[0]
+        n_refs = len(re.findall(r"^\s*\d+\.\s+", ref_sec, re.M))
+        ck("citations:numbered_range",
+           bool(nums) and nums == set(range(1, n_refs + 1)),
+           f"cited {len(nums)}/{n_refs}; gaps "
+           f"{sorted(set(range(1, n_refs + 1)) - nums)[:5]}")
+        ck("citations:all_numbers_have_reference", max(nums, default=0) <= n_refs,
+           f"max {max(nums, default=0)} vs {n_refs}")
+        ck("citations:n", len(nums) >= 15, f"{len(nums)} cited")
     ck("citations:no_retracted",
        not [e for e in pool["entries"] if e.get("retraction_flag")],
        "none flagged")
-    ck("citations:n", len(cited) >= 15, f"{len(cited)} cited")
 
     # ---- abstract numbers must appear in the results -----------------------
     abs_m = re.search(r"# Abstract(.*?)# Introduction", text, re.S)

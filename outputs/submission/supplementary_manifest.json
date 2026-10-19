@@ -1,5 +1,5 @@
 {
-  "assembled_on": "2026-10-15",
+  "assembled_on": "2026-10-19",
   "items": [
     {
       "item": "S1. Variable operationalisation and quality-control log",
@@ -12,14 +12,14 @@
       "item": "S2. Per-pair statistical power in the cohort layer",
       "status": "included",
       "path": "outputs\\tables\\table6_power.md",
-      "bytes": 2972,
+      "bytes": 3283,
       "produced_by": "scripts/cohort_power.py"
     },
     {
       "item": "S3. Between-cohort heterogeneity, full output",
       "status": "included",
       "path": "outputs\\cohorts\\cohort_heterogeneity.json",
-      "bytes": 9324,
+      "bytes": 10454,
       "produced_by": "scripts/cohort_heterogeneity.py"
     },
     {
@@ -47,7 +47,7 @@
       "item": "S7. Verified citation pool",
       "status": "included",
       "path": "outputs\\paper\\citation_pool.json",
-      "bytes": 21206,
+      "bytes": 23632,
       "produced_by": "scripts/build_citation_pool.py, scripts/extend_citation_pool_intro.py"
     },
     {

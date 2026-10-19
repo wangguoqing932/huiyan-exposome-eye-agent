@@ -31,6 +31,9 @@ outputs/paper/*.pdf
 # pytest 缓存
 .pytest_cache/
 
+# 工作区临时目录（R 的 TMPDIR / 运行时临时文件）
+.tmp/
+
 # OS
 .DS_Store
 Thumbs.db
@@ -51,3 +54,6 @@ pip-*/
 # R10/R11 rerun backups (not deliverables)
 outputs/_rerun_backup_*/
 .audit_tmp/
+
+# 2026-10-19 合规修复：被取代的失效投稿包（仅在本地留档，不入库；旧版本见 tag freeze-r13-2026-10-19）
+outputs/submission/_superseded_*/

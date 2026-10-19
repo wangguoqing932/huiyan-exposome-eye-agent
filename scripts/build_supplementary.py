@@ -57,8 +57,8 @@ ITEMS = [
      "used for each side, so the coverage claim is auditable."),
     ("S7. Verified citation pool",
      ROOT / "outputs" / "paper" / "citation_pool.json",
-     "All 24 references with DOI, cross-verification source, retraction status "
-     "and the claim each supports."),
+     "The verified citation pool (all entries) with DOI, cross-verification "
+     "source, retraction status and the claim each supports."),
     ("S8. Figure source data",
      ROOT / "outputs" / "figures" / "source_data" / "figure8_cohort_transportability.csv",
      "The single CSV behind Figure 8, so every plotted value is traceable."),
@@ -70,9 +70,9 @@ def main() -> int:
     parts = [
         "# Supplementary Material",
         "",
-        "**Pooling conceals directional conflict: a pre-registered cross-cohort "
-        "evaluation of 21 literature-derived exposome rules for major eye "
-        "disease in 2.0 million person-waves**",
+        "**Even age does not transport: a pooled multi-cohort exposome estimate "
+        "describes no population, in 285,878 participants and 21 "
+        "literature-derived rules**",
         "",
         f"Assembled {date.today()}. Every item below is a generated artefact; "
         "the script that produces it is named so the analysis can be "

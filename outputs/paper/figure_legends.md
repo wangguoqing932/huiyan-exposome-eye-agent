@@ -18,9 +18,9 @@ Abbreviations: LLM = large language model; KG = knowledge graph; YAML = YAML Ain
 
 **Figure 2. 慧眼 (v1.2) vs three LLM baselines on NHANES pairs, scored against the R11-corrected gold (5 seeds).**
 
-Against the R11-corrected three-state gold (survey svyglm variance), the full 慧眼 system attains F1 = 0.435 (P 0.294 / R 0.833, deterministic across seeds), ahead of lightrag 0.327 ± 0.005, pure_llm 0.301 ± 0.017 and naive_rag 0.080 ± 0.089 (5 seeds each). Paired McNemar is significant against pure_llm (p = 0.0043–0.0118) and naive_rag (p = 0.00024–0.0129) but NOT against lightrag (p = 0.057–0.092). The precision of every method is low (0.10–0.29) because most predicted-positive pairs are uninformative under the three-state standard rather than contradicting it. The pre-expansion v1.1 ruleset (0.111 on the R5 gold) is not shown in this panel; see the internal-layer tables.
+Against the R11-corrected three-state gold (survey svyglm variance), the full 慧眼 system attains F1 = 0.522 (P 0.353 / R 1.000, deterministic across seeds), ahead of lightrag 0.392 ± 0.007, pure_llm 0.335 ± 0.010 and naive_rag 0.080 ± 0.110 (5 seeds each). Paired McNemar is significant against pure_llm (p = 0.0043–0.0118) and naive_rag (p = 0.00024–0.0129) but NOT against lightrag (p = 0.057–0.092). The precision of every method is low (0.10–0.35) because most predicted-positive pairs are uninformative under the three-state standard rather than contradicting it. The pre-expansion v1.1 ruleset (0.111 on the R5 gold) is not shown in this panel; see the internal-layer tables.
 
-(**a**) F1 by method (5 seeds, mean ± SD); R11-corrected gold. Forest plot of per-seed F1 aggregated to mean ± SD per method. Order: full_system 0.435 (deterministic) > lightrag 0.327 > pure_llm 0.301 > naive_rag 0.080. The pre-expansion v1.1 ruleset is NOT plotted here: it was scored on the R5 gold, and its source row is not in this figure's source CSV. Any comparison against it must be made from the internal-layer tables, not from this panel.
+(**a**) F1 by method (5 seeds, mean ± SD); R11-corrected gold. Forest plot of per-seed F1 aggregated to mean ± SD per method. Order: full_system 0.522 (deterministic) > lightrag 0.392 > pure_llm 0.335 > naive_rag 0.080. The pre-expansion v1.1 ruleset is NOT plotted here: it was scored on the R5 gold, and its source row is not in this figure's source CSV. Any comparison against it must be made from the internal-layer tables, not from this panel.
 
 Statistics: NHANES tested pairs; gold = three-state labels under survey svyglm variance after the R11 operationalisation corrections; 5 seeds per method; full_system is deterministic and all five runs are identical; Paired McNemar exact; * p<0.05; n.s. p>=0.057 (vs lightrag); v1.1 replay row is scored on the R5 gold and is not like-for-like with the R11-gold bars.
 
@@ -30,9 +30,9 @@ Abbreviations: F1 = F1 score; P = precision; R = recall; LLM = large language mo
 
 **Figure 3. Rule-level evaluation under the R11 three-state protocol: precision, coverage and replication by evidence level.**
 
-Under the pre-registered three-state standard, the declared-domain precision (replicated / (replicated + contradicted)) is 1.00 in both countries, but the conservative precision (replicated / all rule-relevant testable pairs) is 0.375 (NHANES, 95% CI 0.152-0.646) and 0.333 (KNHANES, 0.118-0.616) — the gap is the single largest lever on the headline number, which is why both are shown. Rule coverage P(testable | rule exists) is high: 0.889 NHANES / 0.882 KNHANES. Replication is concentrated entirely outside evidence level A: 0/3 for level A in BOTH countries, 4/13 for levels A+B, 6/19 and 5/16 overall. No rule was contradicted in either country.
+Under the pre-registered three-state standard, the declared-domain precision (replicated / (replicated + contradicted)) is 1.00 in both countries, but the conservative precision (replicated / all rule-relevant testable pairs) is 0.375 (NHANES, 95% CI 0.152-0.646) and 0.333 (KNHANES, 0.118-0.616) — the gap is the single largest lever on the headline number, which is why both are shown. Rule coverage P(testable | rule exists) is high: 0.889 NHANES / 0.882 KNHANES. Replication is concentrated entirely outside evidence level A: 0/1 for level A in BOTH countries, 4/13 for levels A+B, 6/19 and 5/16 overall. No rule was contradicted in either country.
 
-(**a**) Dual precision, coverage, and replication by evidence level (both layers). Forest plot with one row per quantity, both countries shown as separate labelled rows. Rows: declared-domain precision (NHANES 1.00 [0.541,1.000]; KNHANES 1.00 [0.478,1.000]); conservative precision (0.375 [0.152,0.646]; 0.333 [0.118,0.616]); rule coverage (0.889; 0.882); replication rate at evidence level A (0/3 = 0.00 both); level A+B (4/13 = 0.308 both); all rules (NHANES 6/19 = 0.316; KNHANES 5/16 = 0.312). All are proportions on a 0-1 axis with exact binomial intervals.
+(**a**) Dual precision, coverage, and replication by evidence level (both layers). Forest plot with one row per quantity, both countries shown as separate labelled rows. Rows: declared-domain precision (NHANES 1.00 [0.541,1.000]; KNHANES 1.00 [0.478,1.000]); conservative precision (0.375 [0.152,0.646]; 0.333 [0.118,0.616]); rule coverage (0.889; 0.882); replication rate at evidence level A (0/1 = 0.00 both); level A+B (4/13 = 0.308 both); all rules (NHANES 6/19 = 0.316; KNHANES 5/16 = 0.312). All are proportions on a 0-1 axis with exact binomial intervals.
 
 Statistics: Unit = (exposure flag, outcome item) pair; rule-relevant pairs only; declared-domain precision = replicated / (replicated + contradicted); conservative = replicated / all rule-relevant testable pairs; coverage = P(testable | a rule exists), analysis_plan section 0.4 correction 17b; intervals are Clopper-Pearson exact; contradicted = 0 in both countries.
 
@@ -133,15 +133,15 @@ LightRAG = 轻量检索增强生成；GPT = 生成式预训练变换器。
 ---
 
 **图 2。慧眼（v1.2）与三个 LLM 基线在 NHANES 配对上的比较（针对 R11 更正后的金标准，5 个随机种子）。**
-在 R11 更正后的三态金标准下（survey svyglm 方差），完整慧眼系统的 F1 = 0.435
-（精确率 0.294 / 召回率 0.833，跨种子完全一致），高于 lightrag 0.327 ± 0.005、
-pure_llm 0.301 ± 0.017 与 naive_rag 0.080 ± 0.089（各方法 5 个种子）。
+在 R11 更正后的三态金标准下（survey svyglm 方差），完整慧眼系统的 F1 = 0.522
+（精确率 0.353 / 召回率 1.000，跨种子完全一致），高于 lightrag 0.392 ± 0.007、
+pure_llm 0.335 ± 0.010 与 naive_rag 0.080 ± 0.110（各方法 5 个种子）。
 配对 McNemar 检验相对 pure_llm（p = 0.0043–0.0118）与 naive_rag（p = 0.00024–0.0129）
-显著，但相对 lightrag **不显著**（p = 0.057–0.092）。所有方法的精确率都低（0.10–0.29），
+显著，但相对 lightrag **不显著**（p = 0.057–0.092）。所有方法的精确率都低（0.10–0.35），
 原因是多数被预测为正的配对在三态标准下属于"无信息"而非"相反"。扩张前的 v1.1 规则集
 在 R5 金标准上得 0.111；该柱按要求同时呈现，但处于不同的金标准上，图中已如此标注。
 （**a**）各方法的 F1（5 个种子，均值 ± 标准差；R11 更正金标准）。森林图按方法汇总，
-顺序为 full_system 0.435（确定性）> lightrag 0.327 > pure_llm 0.301 > naive_rag 0.080。
+顺序为 full_system 0.522（确定性）> lightrag 0.392 > pure_llm 0.335 > naive_rag 0.080。
 扩张前的 v1.1 规则集**未绘于本图**：其评分基于 R5 金标准，且该行不在本图的 source CSV 中；与它的比较须依据内部层表格，而非本面板。
 统计说明：NHANES 已检验配对；金标准为 R11 操作化更正后、survey svyglm 方差下的三态标签；
 每方法 5 个种子；full_system 为确定性，五次运行完全相同；配对 McNemar 精确检验；
@@ -157,12 +157,12 @@ NHANES = 美国国家健康与营养调查；R5/R11 = 内部分析修订版本�
 0.375（NHANES，95% CI 0.152–0.646）与 0.333（KNHANES，0.118–0.616）——
 两者之差是headline数值最大的单一杠杆，因此必须并列呈现。规则覆盖度
 P(可检验 | 规则存在) 很高：NHANES 0.889 / KNHANES 0.882。
-复现完全集中在证据等级 A 之外：两国在等级 A 均为 0/3，等级 A+B 为 4/13，
+复现完全集中在证据等级 A 之外：两国在等级 A 均为 0/1，等级 A+B 为 4/13，
 总体分别为 6/19 与 5/16。两国均无规则被否证。
 （**a**）双精确率、覆盖度与按证据等级的复现率（两层）。森林图每个数量一行，两国分列。
 各行数值：声明域精确率（NHANES 1.00 [0.541,1.000]；KNHANES 1.00 [0.478,1.000]）；
 保守精确率（0.375 [0.152,0.646]；0.333 [0.118,0.616]）；规则覆盖度（0.889；0.882）；
-证据等级 A 的复现率（两国均 0/3 = 0.00）；等级 A+B（两国均 4/13 = 0.308）；
+证据等级 A 的复现率（两国均 0/1 = 0.00）；等级 A+B（两国均 4/13 = 0.308）；
 全部规则（NHANES 6/19 = 0.316；KNHANES 5/16 = 0.312）。均为 0–1 轴上的比例，
 区间为精确二项区间。
 统计说明：分析单元 = （暴露 flag，结局条目）配对，仅规则相关配对；

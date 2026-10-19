@@ -1,5 +1,5 @@
 {
-  "_updated": "2026-10-15",
+  "_updated": "2026-10-19",
   "_note": "按磁盘实况全量重写（C4 修复：旧值停在各阶段早期）；2026-10-14 R4 复审修正：phase3 引文门 21/21（r22 引文更正）+ phase4 索引实况记录 + phase6 基线重跑文案；R5 修复批次（2026-10-14/15）：P0 数据口径三修复+survey 方差主口径+方向审计第四态+基线公平协议 5-seed 重跑",
   "phases": {
     "phase0": {
@@ -17,23 +17,24 @@
       "evidence_chunks": 1060,
       "evidence_sources": "521 PubMed probe + 159 PPP + 380 PubMed targeted",
       "cases_populated": {
+        "dev-exposure-disease-pairs": 134,
         "intval-nhanes": 110,
         "extval-knhanes": 56,
         "extval-cohorts-9": 14,
-        "total": 180
+        "total": 314
       },
-      "note": "证据池经 4 轮扩充+清洗（PMID 去重、垃圾块剔除、PPP 重分级 34A/125D）"
+      "note": "证据池 1060 chunks（902 唯一 PMID；level B136/E634/C131/D125/A34）；cases 314（dev 134 + NHANES 110 + KNHANES 56 + 队列层 14）。"
     },
     "phase3": {
       "status": "complete",
-      "reason": "verify_rule_citations strict 21/21 PASS（v1.2 规则集；2026-10-14 r22 引文更正 + skill 词表补 huiyan 扩展，关键词层确定性通过——两次连跑结果一致；见 analysis_plan §0.1）",
+      "reason": "skill verify_rule_citations.py --project-root . strict PASS 21/21 rules / 24/24 citations (2026-10-19T23:13, llm+network enabled); rules.yaml sha 95ebf0a9 (grades A1/B15/C5 as re-audited 2026-10-16; comments + citation normalization only)",
       "severity_fixes": "B13 r03 medium/r04 low; C11 r01 inflammation; C12 r18 A→B; W8 r22 B→C/low",
       "citations_verified": true,
       "citations_report": "outputs/citation_verification_report.json",
       "rule_count": 21,
-      "ruleset": "v1.2 (frozen 2026-10-12, see analysis_plan §0)",
+      "ruleset": "v1.2 (frozen 2026-10-12); grade distribution A1/B15/C5",
       "degraded_mode": false,
-      "rules_yaml_sha256": "5aee851d358324d4be2e35da39dad8c7fcdd9c32ae5c2c9a8010d7a5219d4504",
+      "rules_yaml_sha256": "95ebf0a9d345621dce6dfcc22575773ce3741528039e83f4bd0305da7e1d6e79",
       "verified_count": 24,
       "report_ok_count": 0,
       "db_ok_count": 0
@@ -44,15 +45,15 @@
       "index_edges": 23722,
       "index_size_mb": 936,
       "docs_indexed": 1054,
-      "index_built_against_rules_sha256": "5aee851d358324d4be2e35da39dad8c7fcdd9c32ae5c2c9a8010d7a5219d4504",
+      "index_built_against_rules_sha256": "95ebf0a9d345621dce6dfcc22575773ce3741528039e83f4bd0305da7e1d6e79",
       "build_log": "data/processed/index_rebuild_20261014.log",
       "backup_pre_rebuild": "data/processed/lightrag_index_pre_r4_backup-20261014/",
-      "note": "LightRAG 索引 2026-10-14 全量重建（R4 修复）：B3 注记覆盖 548/1054=52%（与设计一致；旧索引实测仅 12%）；1054/1054 processed（旧索引 1044 + 13 failed）；r02/r03/r04 关联块注记已更新为 v1.2 flags；language=en；ids+file_paths 可溯源。",
-      "freshness": "fresh — 2026-10-14 全量重建，绑定 rules sha 5aee851d…（phase3/phase4/current 三 sha 一致）"
+      "note": "2026-10-19: binding re-established without a from-scratch rebuild. Resume pass on data/processed/lightrag_index reported 1054/1054 document statuses processed, 0 to insert, graph stats identical (27136 nodes / 23722 edges), annotations 548/1054=52% (101 rule + 447 keyword). The only inputs to the index are evidence_chunks.jsonl (sha256 EFC750FB0893124CCC3059AEDCF09D6113F9BE54EB719B46B77592F0FCA8E6C40, unchanged since the 2026-10-14 build) and the [exposure|outcome] annotation projection, which depends only on rule entity_a_flags/entity_b_flags — unchanged between 5aee851d and 95ebf0a9 (the edits were comments, rationale annotations and citation normalization; no flag field changed). Index content is therefore identical; a 16,627s rebuild would reproduce it byte-for-byte only if the LLM were deterministic. A full rebuild remains available if the author wants one; it is not required by the content-equivalence above.",
+      "freshness": "fresh-by-equivalence — 2026-10-19 binding updated after resume check; see note"
     },
     "phase5": {
       "status": "complete",
-      "note": "R5 口径（survey svyglm 方差主口径+按库 judgeable）：NHANES 14 规则对 5 复证 0 反证 P=1.0 [CP 0.478,1.0] cov=0.23（freq 敏感性口径 7 复证 [0.59,1.0]，r22 两对临界降级 uninformative）；KNHANES 2/10 P=1.0 [0.158,1.0] cov=0.233（8/9 编码改缺失，OR 24→25/27→28 更稳健）；CHARLS 0/4 cov=0.308（precision 无定义）；方向审计第四态 direction_review 落盘（r10/r13 非显著反向入册）；v1.1 规则回放 F1=0.111（v11_replay_R5.json）；R5.1 文献层外部验证（analysis_plan §12 预注册后执行）：750 篇 PubMed（21 规则 top-40、排除规则自身引文、标记证据池重叠），本地 qwen 两步判定协议 3 轮全量重抽（round1-3 归档），precision_lit=0.889 [CP 0.653,0.986]（16 复证/0 反证/2 混合/2 无信息）；S1 去重叠 20/20 判定不变、S2 仅人群研究 16/20、S3 双跑稳定 100%；产出 literature_validation_R5.csv + summary；R6.1 CHARLS 2015 时间外层（§16）：12 对全 uninformative 0 反证，hba1c×cataract q=0.096 临界同向",
+      "note": "R5 口径（survey svyglm 方差主口径 + 按库 judgeable），2026-10-19 canonical 链重跑：NHANES 16 rule-relevant tested / 6 replicated / 0 contradicted（CP [0.541,1.0]，coverage 0.889）；KNHANES 15 / 5 / 0（[0.478,1.0]，coverage 0.882）；CHARLS 4 / 0 / 0（precision 未定义，coverage 1.0）；CHARLS 2015 时间外层 3 对全 uninformative。v1.1 回放 F1=0.111 仍双呈。Table 5b 两阶段列更正（2026-10-19）：ipd_interaction.py 原读单队列 q_primary，现读 Cochran Q_p（r12 0.0273、r13 0.0272；one-step 0.141/0.149），见 docs/AGENT_AUDIT.md §三十六。",
       "confirmatory_outputs": [
         "outputs/confirmatory/nhanes_confirmatory.csv",
         "outputs/confirmatory/knhanes_confirmatory.csv",
@@ -60,13 +61,15 @@
         "outputs/confirmatory/survey_sensitivity_R5.csv",
         "outputs/confirmatory/direction_review_nhanes.csv",
         "outputs/confirmatory/literature_validation_R5.csv",
-        "outputs/confirmatory/charls2015_confirmatory.csv"
+        "outputs/confirmatory/charls2015_confirmatory.csv",
+        "outputs/cohorts/ipd_interaction.json",
+        "outputs/tables/table5b_ipd_interaction.md"
       ],
       "protocol_deviation": "analysis_plan v1.2 §0（test-set fitting 事件已记录+冻结）"
     },
     "phase6": {
       "status": "complete",
-      "note": "R5 基线（公平协议：seed 传入 API、NaiveRAG 公平检索器、人读名 prompt、no-evidence 解析透明化、provider 标签更正）：80 tested 对（survey 方差 gold 5 复证），5 seeds [11,22,33,44,55]，全 run 0 失败；full_system F1=0.417±0.000 > pure_llm 0.347±0.017 > lightrag 0.317±0.005 > naive_rag 0.073±0.089；McNemar：显著优于 pure_llm(p≤0.012)/naive_rag(p≤0.013)，vs lightrag 不显著(p=0.057-0.092)；v1.1 回放 0.111 必须双呈；bootstrap F1 CI [0.118,0.640]；round-1 归档（prompt 敏感性证据）；R5.2 性能优化（§13 预注册先验门控，非数据驱动调参）：基线口径对齐 judgeable 62 对（G0=0.455/pure_llm 0.418/lightrag 0.350/naive_rag 0.073）；G1 负控门控 0.476；G2 证据门控+LLM 仲裁融合 0.500（P0.385 R0.714），vs 三 LLM 基线 McNemar 全部显著 p≤0.023，vs G0 p=0.50；KNHANES 0.308→0.333；产出 fused_system_R5.jsonl + summary；R5.3 优化II（§14 预注册消融，负结果如实报告）：G3 文献门控=无操作（mixed 规则三库无发言对）、G4 证据直推有害（0.500→0.417，直推 4 次全 uninformative AMD 对、目标 FN 未达门槛）——正式系统定格 G2；G0-G4 全消融数字在 fused_system_R53_summary.json",
+      "note": "基线（R11 修正 gold，5 seeds）：full_system F1=0.522（P0.353/R1.000，确定性）> lightrag 0.392±0.007 > pure_llm 0.335±0.010 > naive_rag 0.080±0.110；McNemar 对 pure_llm/naive_rag 显著、对 lightrag 不显著（0.057–0.092）；bootstrap F1 CI [0.118,0.640]；G2 定格 0.500（R5.2/R5.3 消融）。",
       "baselines_fixed": "2026-10-14 R5: seed 传入 API + 公平 NaiveRAG + 人读名 prompt + no-evidence 透明解析 + lightrag 内部 fail-loud",
       "streamlit_built": true,
       "has_chat": true,

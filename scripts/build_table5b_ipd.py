@@ -15,7 +15,7 @@ SRC = ROOT / "outputs" / "cohorts" / "ipd_interaction.json"
 TABLE = ROOT / "outputs" / "tables" / "table5b_ipd_interaction.md"
 
 TITLE = ("# Table 5b. One-step individual-participant interaction test, "
-         "against the two-stage subgroup test")
+         "against two-stage between-cohort heterogeneity (Cochran Q)")
 
 NARRATIVE = """
 ## What this table is
@@ -27,23 +27,30 @@ and pooling per-cohort estimates gives a cohort of 5,191 the same weight as one 
 the level of the person with an exposure x cohort interaction.
 
 Every person enters once, so cohort size sets its own weight, and the interaction
-term asks the question directly.
+term asks the question directly. The two-stage comparator is the Cochran Q test of
+between-cohort heterogeneity; for k > 2 it is not the same null as the post hoc
+regional subgroup test in Table 5 (see the definitions below).
 
 ## What it changes
 
-**r13 (BMI to cataract) is the substantive change.** The two-stage test reports
-p = 1.69e-32 -- apparently overwhelming evidence that the two cohorts differ --
-while the one-step test reports p = 0.57, i.e. no evidence of a difference at all.
-The two-stage figure is the weighting artifact the reviewers predicted: pooling
+**r13 (BMI to cataract) is the substantive change.** The two-stage Q test reports
+p = 0.027 -- evidence of a difference at the conventional threshold -- while the
+one-step test reports p = 0.149, i.e. no evidence of a difference. At k = 2 the
+two-stage statistic gives each cohort one weight regardless of size, so pooling
 SHARE (338,703 person-waves) and CRELES (5,191) on equal terms lets the small
-cohort's noise dominate, and the heterogeneity test then reports that noise.
+cohort's noise dominate the heterogeneity statistic; the person-level model, which
+weights by person, does not reproduce it.
 
-**r12 (alcohol to cataract) shows the k = 2 artifact directly.** Its two-stage
-p-value is exactly 1, because with two cohorts the subgroup comparison and the
-Q test are the same statistic. The one-step test gives 0.14.
+**r12 (alcohol to cataract) shows the same k = 2 pattern.** Its two-stage Q p is
+0.027 (at k = 2 identical to the regional subgroup statistic), while the one-step
+test gives 0.141. The disagreement at k = 2 is about weighting, not about whether
+the populations differ.
 
-**r02, r10 and r20 remain heterogeneous under both**, with the one-step p-values
-less extreme -- as expected once cohorts are weighted by their size.
+**For r02, r10 and r20 both tests detect heterogeneity** (one-step p = 3.2e-08,
+0.00223 and 2.38e-29; Q p = 6.9e-07, 2.6e-07 and 3.0e-13), so no conclusion there
+depends on the choice of test. The post hoc regional subgroup test is a coarser
+null and does not reach significance for r10 (p = 0.45), consistent with the
+leave-one-out result that r10's heterogeneity is driven by SHARE, not by region.
 
 **r11 cannot be tested this way at all**: it is feasible in one cohort only, so
 there is no interaction to estimate. That is consistent with what the manuscript
@@ -64,7 +71,7 @@ def main() -> int:
 
     lines = [TITLE, "",
              "| Rule | Cohorts | Person-waves | One-step interaction p | "
-             "Two-stage subgroup p | Agreement |",
+             "Two-stage heterogeneity (Q) p | Agreement |",
              "|---|---|---|---|---|---|"]
     for r in rows:
         rid = r["rule"]
@@ -74,7 +81,7 @@ def main() -> int:
                          f"{r['note']} |")
             continue
         ip = r["interaction_p"]
-        tp = r.get("two_stage_q_p")
+        tp = r.get("two_stage_het_q_p")
         agree = "—"
         if tp is not None:
             a = (ip < 0.05) == (tp < 0.05)
@@ -84,7 +91,19 @@ def main() -> int:
                      f"{ip:.3g} | " +
                      (f"{tp:.3g}" if tp is not None else "—") +
                      f" | {agree} |")
-    lines += ["", NARRATIVE]
+    lines += ["",
+              "**Definitions.** One-step: a single logistic model on stacked",
+              "participants with an exposure x cohort interaction and standard",
+              "errors clustered on the person; the p-value is the joint test of",
+              "all interaction terms. Two-stage: Cochran Q heterogeneity test on",
+              "the per-cohort estimates from random-effects pooling. At k = 2, Q",
+              "is statistically identical to the regional subgroup test in Table",
+              "5, so the two-stage p quoted in the text is the same number. For",
+              "k > 2 the Table 5 subgroup test is a post hoc regional contrast",
+              "with fewer degrees of freedom and is not the same null as a",
+              "cohort-level interaction; the two need not agree (r10: regional",
+              "p = 0.45, Q p = 2.6e-07).",
+              "", NARRATIVE]
 
     TABLE.parent.mkdir(parents=True, exist_ok=True)
     TABLE.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -94,7 +113,7 @@ def main() -> int:
             print(f"  {r['rule']:34s} not estimable ({r['note'][:44]})")
             continue
         print(f"  {r['rule']:34s} one-step p={r['interaction_p']:.3g}  "
-              f"two-stage p={r['two_stage_q_p']:.3g}")
+              f"two-stage Q p={r['two_stage_het_q_p']:.3g}")
 
     DOC = ROOT / "docs" / "AGENT_AUDIT.md"
     note = """

@@ -1,33 +1,22 @@
-# 慧眼 huiyan rule engine configuration — Phase 3 v2 (adjudicated 2026-10-11; v1.2 frozen 2026-10-12).
-# 21 rules: evidence A3 / B13 / C5; 7 mechanisms all covered (r15 revoked).
-# 2026-10-14 更正记录：r22 引文更换为主题匹配的前瞻队列 meta（analysis_plan §0.1；规则逻辑未变）。
-# Flag taxonomy matches `flags` columns in data/seed/entities_a.csv & entities_b.csv.
-# Author adjudication discipline (2026-10-11):
-#   1) risk_type MUST come from the 7-mechanism list (config interaction_mechanisms).
-#   2) citation count is NOT a hard gate; claims must be covered by at least one study-design-matched source (verify_rule_citations gate).
-#   3) study-design gate: citations are classified (guideline/meta/cohort/mechanism/prevalence/genetic/surgery-mgmt)
-#      and must match the rule claim type — prevalence/surgery-mgmt/genetic-only citations are rejected.
-#   4) nested-outcome semantics = plan-2: multi-flag rules allowed; report takes max(severity) with
-#      most-specific-first display; pair-level metrics count each (A,B) pair independently.
-#   5) abstention metrics evaluated ONLY on type-2 gaps (physical_activity x glaucoma_*);
-#      type-1 gaps (mercury_exposure, physical_inactivity x any B) report coverage only.
-
-# ── 分级纪律（2026-10-16 核实后补记）────────────────────────────────────
-# A = 监管标签 / 临床指南    → severity high
-# B = Meta 分析 / 系统综述   → severity medium
-# C = 原创研究              → severity low
-#
-# 2026-10-16 逐条核验 21 条规则的首篇引文 DOI（Crossref 解析 + PubMed 摘要
-# 与 PublicationType），发现 11 条声明了引文支撑不了的级别，已按上表降级：
-#   r10, r13：声明 A，引文实为 meta 分析 → B
-#   r03, r08, r09, r12, r14, r16, r18, r20, r21：声明 B，引文实为原创研究 → C
-#
-# **后果（如实声明）：本规则库当前没有任何 A 级规则。**
-# 语料中不存在监管标签或临床指南；任何规则所引的最强证据是 meta 分析。
-# 因此 evaluate.py 的 §4 预注册第四态（direction_review，只作用于 A 级配对）
-# 暂无作用对象。A 级在本项目中是**保留层级、当前未被占用**，
-# 待引入真正的指南级引文后再启用。
-# 核验脚本：scripts/verify_rule_citations.py / _pubmed.py
+# 慧眼 huiyan rule engine configuration — Phase 3 v2 (v1.2 frozen 2026-10-12; reviewed 2026-10-19).
+# 21 rules: evidence A1 / B15 / C5 (A = r11 alone; r10/r13 downgraded A->B on 2026-10-16).
+# Grading discipline: A = regulatory label / clinical guideline -> high;
+#                     B = meta-analysis / systematic review    -> medium;
+#                     C = original research                     -> low.
+# Grade audit (docs/AGENT_AUDIT.md sections 8-10, 19, 21, 22, 26): the first round of
+# downgrades (11 rules) was retracted in full (section 21) because a title-based classifier
+# cannot separate guidelines from original research and empty linked_rules is not absence of
+# evidence; the only retained grade change is r10/r13 A->B (section 26, four independent
+# non-text-matching lines of evidence). r09 stays B, r11 stays A. A-level rules today: r11
+# only, which is therefore the sole target of the pre-registered fourth state
+# (direction_review) in evaluate.py. Rationale strings still carrying
+# "【2026-10-16 降级更正 C/low …已回退】" are archive annotations from the retracted batch;
+# the field values are authoritative.
+# Citation gate: medical-agent-executor/scripts/verify_rule_citations.py (strict: 2-source
+# cross-verification + retraction screen + topic relevance). Local scripts/verify_rule_citations*.py
+# are historical audit tools, not the phase3 gate.
+# NOTE (2026-10-19): citations were rewritten once by the gate's --fix; resolved title/PMID are
+# embedded and the original DOI is kept in "[was: ...]". This normalized form is the verified form.
 
 risk_levels:
   high: 3
@@ -49,7 +38,9 @@ rules:
   recommendation: 高尿酸血症人群建议评估晶状体状态并定期复查视力。
   citations:
   - source_type: literature
-    ref: 10.1038/s41420-024-01900-z
+    ref: 'Lin et al., 2024, Cell Death Discovery, Uric acid–driven NLRP3 inflammasome
+      activation triggers lens epithelial cell sen, DOI:10.1038/s41420-024-01900-z,
+      PMID:https://pubmed.ncbi.nlm.nih.gov/38461179  [was: 10.1038/s41420-024-01900-z]'
 - id: r02_hyperglycemia_x_cataract
   severity: medium
   risk_type: glycation_metabolic
@@ -64,7 +55,9 @@ rules:
   recommendation: 糖尿病/高血糖人群应定期接受白内障筛查。
   citations:
   - source_type: literature
-    ref: 10.1002/dmrr.3073
+    ref: 'Drinkwater et al., 2018, Diabetes/Metabolism Research and Reviews, A systematic
+      review of risk factors for cataract in type 2 diabetes, DOI:10.1002/dmrr.3073,
+      PMID:https://pubmed.ncbi.nlm.nih.gov/30209868  [was: 10.1002/dmrr.3073]'
 - id: r03_hba1c_x_retinopathy_any
   severity: medium
   risk_type: glycation_metabolic
@@ -75,11 +68,14 @@ rules:
   - retinopathy_any
   evidence_level: B
   direction: risk_up
-  rationale: 血糖控制水平与 DR 发生和进展密切相关（DCCT/UKPDS 传统；血糖控制与变异综述）。【2026-10-16 降级更正 C/low】引文为 Journal Article，摘要无综述方法学。
+  rationale: 血糖控制水平与 DR 发生和进展密切相关（DCCT/UKPDS 传统；血糖控制与变异综述）。【2026-10-16 降级更正 C/low
+    — 该降级已在同日复查中回退，现行 B/medium，见文首说明】引文为 Journal Article，摘要无综述方法学。
   recommendation: HbA1c 升高者应按糖尿病视网膜病变指南定期眼底检查。
   citations:
   - source_type: literature
-    ref: 10.1007/s13300-017-0345-5
+    ref: 'Chatziralli et al., 2017, Diabetes Therapy, The Role of Glycemic Control
+      and Variability in Diabetic Retinopathy, DOI:10.1007/s13300-017-0345-5, PMID:https://pubmed.ncbi.nlm.nih.gov/29190012  [was:
+      10.1007/s13300-017-0345-5]'
 - id: r04_hba1c_x_dr_pdr
   severity: low
   risk_type: vascular_perfusion
@@ -95,7 +91,10 @@ rules:
   recommendation: HbA1c 持续升高伴眼底缺血征象者应尽早转诊视网膜专科评估 PDR 风险。
   citations:
   - source_type: literature
-    ref: 10.1167/iovs.17-22804
+    ref: "Mitchell et al., 2017, Investigative Opthalmology &amp; Visual Science,\
+      \ Mitochondrial Haplogroups Modify the Effect of Diabetes Duration and HbA\n\
+      \       , DOI:10.1167/iovs.17-22804, PMID:https://pubmed.ncbi.nlm.nih.gov/29288266\
+      \  [was: 10.1167/iovs.17-22804]"
 - id: r05_dyslipidemia_x_amd_late
   severity: low
   risk_type: oxidative_stress
@@ -110,7 +109,10 @@ rules:
   recommendation: 血脂异常人群建议纳入 AMD 常规眼底检查（含晚期 AMD 筛查）。
   citations:
   - source_type: literature
-    ref: 10.62347/QJPQ2923
+    ref: 'Yao et al., 2025, International Journal of Clinical and Experimental Pathology,
+      Association between dyslipidemia and neovascular age-related macular degeneratio,
+      DOI:10.62347/QJPQ2923, PMID:https://pubmed.ncbi.nlm.nih.gov/40519319  [was:
+      10.62347/QJPQ2923]'
 - id: r06_crp_x_amd_late
   severity: medium
   risk_type: inflammation_immune
@@ -124,7 +126,9 @@ rules:
   recommendation: CRP 持续升高者建议关注黄斑健康（Amsler/眼底检查）。
   citations:
   - source_type: literature
-    ref: 10.1016/j.survophthal.2010.08.007
+    ref: 'Hong et al., 2011, Survey of Ophthalmology, A Review and Meta-analysis of
+      the Association Between C-Reactive Protein and Age, DOI:10.1016/j.survophthal.2010.08.007,
+      PMID:https://pubmed.ncbi.nlm.nih.gov/21420705  [was: 10.1016/j.survophthal.2010.08.007]'
 - id: r07_vitamind_x_dr_npdr
   severity: medium
   risk_type: endocrine_hormonal
@@ -138,9 +142,13 @@ rules:
   recommendation: 糖尿病伴维 D 缺乏者建议纠正缺乏并加强眼底监测。
   citations:
   - source_type: literature
-    ref: 10.3390/nu9030307
+    ref: 'Luo et al., 2017, Nutrients, The Association between Vitamin D Deficiency
+      and Diabetic Retinopathy in Type 2 , DOI:10.3390/nu9030307, PMID:https://pubmed.ncbi.nlm.nih.gov/28335514  [was:
+      10.3390/nu9030307]'
   - source_type: literature
-    ref: 10.1016/j.jcjo.2017.09.026
+    ref: 'Zhang et al., 2017, Canadian Journal of Ophthalmology, Relationship between
+      vitamin D deficiency and diabetic retinopathy: a meta-analy, DOI:10.1016/j.jcjo.2017.09.026  [was:
+      10.1016/j.jcjo.2017.09.026]'
 - id: r08_low_antioxidant_x_cataract
   severity: medium
   risk_type: oxidative_stress
@@ -150,11 +158,14 @@ rules:
   - cataract_any
   evidence_level: B
   direction: risk_up
-  rationale: 抗氧化营养素（维C/维E/类胡萝卜素）摄入不足增加晶体氧化损伤与白内障风险。【2026-10-16 降级更正 C/low】引文为叙述性 Review，非 meta 分析。
+  rationale: 抗氧化营养素（维C/维E/类胡萝卜素）摄入不足增加晶体氧化损伤与白内障风险。【2026-10-16 降级更正 C/low — 该降级已在同日复查中回退，现行
+    B/medium，见文首说明】引文为叙述性 Review，非 meta 分析。
   recommendation: 膳食抗氧化摄入不足者建议调整膳食结构并评估晶体状态。
   citations:
   - source_type: literature
-    ref: 10.3109/10715762.2013.777155
+    ref: 'Thiagarajan et al., 2013, Free Radical Research, Antioxidants and cataract,
+      DOI:10.3109/10715762.2013.777155, PMID:https://pubmed.ncbi.nlm.nih.gov/23438873  [was:
+      10.3109/10715762.2013.777155]'
 - id: r09_mediterranean_diet_x_amd_late
   severity: medium
   risk_type: oxidative_stress
@@ -164,13 +175,21 @@ rules:
   - amd_late
   evidence_level: B
   direction: risk_down
-  rationale: 地中海饮食依从性与晚期 AMD 进展风险下降相关（Ophthalmology 队列证据）。【2026-10-16 降级更正 C/low】两篇引文分别为队列研究与随机对照试验，均非 meta 分析。【2026-10-16 回退 B/medium】先前据 linked_rules 降为 C；但 AAO PPP AMD 风险因素章节原文：A Mediterranean diet is associated with a reduced risk of developing AMD and of existing AMD becoming worse。属指南级陈述，构念与 r09 一致，C 级不成立。
+  rationale: 地中海饮食依从性与晚期 AMD 进展风险下降相关（Ophthalmology 队列证据）。【2026-10-16 降级更正 C/low —
+    该降级已在同日复查中回退，现行 B/medium，见文首说明】两篇引文分别为队列研究与随机对照试验，均非 meta 分析。【2026-10-16 回退 B/medium】先前据
+    linked_rules 降为 C；但 AAO PPP AMD 风险因素章节原文：A Mediterranean diet is associated with
+    a reduced risk of developing AMD and of existing AMD becoming worse。属指南级陈述，构念与
+    r09 一致，C 级不成立。
   recommendation: 建议 AMD 高危人群提高地中海饮食依从性。
   citations:
   - source_type: literature
-    ref: 10.1016/j.ophtha.2018.08.006
+    ref: 'Merle et al., 2019, Ophthalmology, Mediterranean Diet and Incidence of Advanced
+      Age-Related Macular Degeneration, DOI:10.1016/j.ophtha.2018.08.006, PMID:https://pubmed.ncbi.nlm.nih.gov/30114418  [was:
+      10.1016/j.ophtha.2018.08.006]'
   - source_type: literature
-    ref: 10.3945/ajcn.115.111047
+    ref: 'Merle et al., 2015, The American Journal of Clinical Nutrition, Adherence
+      to a Mediterranean diet, genetic susceptibility, and progression to ad, DOI:10.3945/ajcn.115.111047,
+      PMID:https://pubmed.ncbi.nlm.nih.gov/26490493  [was: 10.3945/ajcn.115.111047]'
 - id: r10_smoking_x_cataract
   severity: medium
   risk_type: oxidative_stress
@@ -180,11 +199,18 @@ rules:
   - cataract_any
   evidence_level: B
   direction: risk_up
-  rationale: 吸烟为白内障确立因果危险因素（MR 系统综述确认因果角色）。【2026-10-16 降级更正 B/medium】引文为 Meta-Analysis + Systematic Review（PubMed PublicationType），按分级纪律应 B 而非 A。【2026-10-16 降级依据 A→B】引文 10.1016/j.ebiom.2022.104154 经 PubMed 解析为 Meta-Analysis + Systematic Review（PMID 35816897），属 B 级；A 级保留给监管标签/临床指南。且四个独立来源一致表明本项目无法获得白内障指南：PubMed 检索白内障危险因素指南 0 条命中；data/raw/aao_ppp/ 只有 AMD/DR/POAG 三份（白内障 PPP 为会员墙，见 network_and_proxy.md）；语料 159 个指南块覆盖 {AMD:49, DR:52, POAG:58}，白内障 0。故 A 无据，降为 B。
+  rationale: 吸烟为白内障确立因果危险因素（MR 系统综述确认因果角色）。【2026-10-16 降级更正 B/medium】引文为 Meta-Analysis
+    + Systematic Review（PubMed PublicationType），按分级纪律应 B 而非 A。【2026-10-16 降级依据 A→B】引文
+    10.1016/j.ebiom.2022.104154 经 PubMed 解析为 Meta-Analysis + Systematic Review（PMID
+    35816897），属 B 级；A 级保留给监管标签/临床指南。且四个独立来源一致表明本项目无法获得白内障指南：PubMed 检索白内障危险因素指南 0 条命中；data/raw/aao_ppp/
+    只有 AMD/DR/POAG 三份（白内障 PPP 为会员墙，见 network_and_proxy.md）；语料 159 个指南块覆盖 {AMD:49,
+    DR:52, POAG:58}，白内障 0。故 A 无据，降为 B。
   recommendation: 现在吸烟者建议戒烟并定期白内障筛查。
   citations:
   - source_type: literature
-    ref: 10.1016/j.ebiom.2022.104154
+    ref: 'Larsson et al., 2022, eBioMedicine, Appraising the causal role of smoking
+      in multiple diseases: A systematic review , DOI:10.1016/j.ebiom.2022.104154,
+      PMID:https://pubmed.ncbi.nlm.nih.gov/35816897  [was: 10.1016/j.ebiom.2022.104154]'
 - id: r11_smoking_x_amd_late
   severity: high
   risk_type: oxidative_stress
@@ -194,11 +220,19 @@ rules:
   - amd_late
   evidence_level: A
   direction: risk_up
-  rationale: 吸烟是晚期 AMD 的确立危险因素（AMD 风险因素 meta 分析）。【2026-10-16 降级更正】原判 A/high 依据 DOI 10.1097/MD.0000000000041599，经 Crossref 解析为 Medicine 2025 的 systematic review and meta-analysis，按本项目分级纪律（A=监管标签/指南，B=Meta 分析）应为 B/medium；语料侧链接亦为 1×B + 3×C 且无 A。已降为 B/medium。【2026-10-16 回退 A/high】先前据 linked_rules 判其最佳证据为 B，但 linked_rules 对语料中全部 159 个 AAO PPP 块（含 34 个 A 级）均为空——无链接不等于无证据。AAO PPP AMD Section 9 原文：Risk factors for the development of advanced AMD include smoking... Cigarette smoking has been identified as the primary modifiable risk factor... 属指南级陈述，A 级成立。
+  rationale: 吸烟是晚期 AMD 的确立危险因素（AMD 风险因素 meta 分析）。【2026-10-16 降级更正】原判 A/high 依据 DOI
+    10.1097/MD.0000000000041599，经 Crossref 解析为 Medicine 2025 的 systematic review and
+    meta-analysis，按本项目分级纪律（A=监管标签/指南，B=Meta 分析）应为 B/medium；语料侧链接亦为 1×B + 3×C 且无 A。已降为
+    B/medium。【2026-10-16 回退 A/high】先前据 linked_rules 判其最佳证据为 B，但 linked_rules 对语料中全部
+    159 个 AAO PPP 块（含 34 个 A 级）均为空——无链接不等于无证据。AAO PPP AMD Section 9 原文：Risk factors
+    for the development of advanced AMD include smoking... Cigarette smoking has been
+    identified as the primary modifiable risk factor... 属指南级陈述，A 级成立。
   recommendation: 吸烟者建议戒烟并行 AMD 风险评估。
   citations:
   - source_type: literature
-    ref: 10.1097/MD.0000000000041599
+    ref: 'Babaker et al., 2025, Medicine, Risk factors for age-related macular degeneration:
+      Updated systematic review and, DOI:10.1097/MD.0000000000041599, PMID:https://pubmed.ncbi.nlm.nih.gov/39993131  [was:
+      10.1097/MD.0000000000041599]'
 - id: r12_alcohol_x_cataract
   severity: medium
   risk_type: oxidative_stress
@@ -208,11 +242,14 @@ rules:
   - cataract_any
   evidence_level: B
   direction: risk_up
-  rationale: 饮酒与白内障风险相关（白内障与全身病综述；剂量-反应关系待验证库检验）。【2026-10-16 降级更正 C/low】引文为 Journal Article，摘要无综述方法学。
+  rationale: 饮酒与白内障风险相关（白内障与全身病综述；剂量-反应关系待验证库检验）。【2026-10-16 降级更正 C/low — 该降级已在同日复查中回退，现行
+    B/medium，见文首说明】引文为 Journal Article，摘要无综述方法学。
   recommendation: 建议限制饮酒并定期评估晶体状态。
   citations:
   - source_type: literature
-    ref: 10.1016/j.ophtha.2006.07.046
+    ref: 'Ejdervik Lindblad et al., 2007, Ophthalmology, Alcohol Consumption and Risk
+      of Cataract Extraction, DOI:10.1016/j.ophtha.2006.07.046, PMID:https://pubmed.ncbi.nlm.nih.gov/17173974  [was:
+      10.1016/j.ophtha.2006.07.046]'
 - id: r13_bmi_x_cataract
   severity: medium
   risk_type: glycation_metabolic
@@ -222,11 +259,17 @@ rules:
   - cataract_any
   evidence_level: B
   direction: risk_up
-  rationale: BMI 与年龄相关性白内障呈前瞻队列 meta 级正向关联（代谢/炎症通路）。【2026-10-16 降级更正 B/medium】引文为 'Body Mass Index and Risk of Age-Related Cataract — A Meta-Analysis of Prospective Cohort Studies'（PLoS ONE），应 B 而非 A。【2026-10-16 降级依据 A→B】引文 10.1371/journal.pone.0089923 为 BMI×白内障的前瞻队列 meta 分析，属 B 级；A 级保留给监管标签/临床指南。与 r10 同因：本项目不存在可及的白内障指南（PubMed 0 命中；aao_ppp 缓存无白内障；语料指南块不含白内障）。
+  rationale: BMI 与年龄相关性白内障呈前瞻队列 meta 级正向关联（代谢/炎症通路）。【2026-10-16 降级更正 B/medium】引文为
+    'Body Mass Index and Risk of Age-Related Cataract — A Meta-Analysis of Prospective
+    Cohort Studies'（PLoS ONE），应 B 而非 A。【2026-10-16 降级依据 A→B】引文 10.1371/journal.pone.0089923
+    为 BMI×白内障的前瞻队列 meta 分析，属 B 级；A 级保留给监管标签/临床指南。与 r10 同因：本项目不存在可及的白内障指南（PubMed 0
+    命中；aao_ppp 缓存无白内障；语料指南块不含白内障）。
   recommendation: 超重/肥胖人群建议体重管理并纳入白内障筛查。
   citations:
   - source_type: literature
-    ref: 10.1371/journal.pone.0089923
+    ref: 'Ye et al., 2014, PLoS ONE, Body Mass Index and Risk of Age-Related Cataract:
+      A Meta-Analysis of Prospective, DOI:10.1371/journal.pone.0089923, PMID:https://pubmed.ncbi.nlm.nih.gov/24587127  [was:
+      10.1371/journal.pone.0089923]'
 - id: r14_lead_x_cataract
   severity: medium
   risk_type: heavy_metal_toxicity
@@ -236,11 +279,14 @@ rules:
   - cataract_any
   evidence_level: B
   direction: risk_up
-  rationale: 骨铅蓄积（胫骨/髌骨）与美国男性年龄相关性白内障风险升高相关（JAMA 2004 队列）；注意 NHANES 血铅为当前暴露标志物，可能低估终身蓄积效应。【2026-10-16 降级更正 C/low】引文为 Journal Article，摘要无综述方法学。
+  rationale: 骨铅蓄积（胫骨/髌骨）与美国男性年龄相关性白内障风险升高相关（JAMA 2004 队列）；注意 NHANES 血铅为当前暴露标志物，可能低估终身蓄积效应。【2026-10-16
+    降级更正 C/low — 该降级已在同日复查中回退，现行 B/medium，见文首说明】引文为 Journal Article，摘要无综述方法学。
   recommendation: 铅暴露人群建议评估晶体状态并控制暴露来源。
   citations:
   - source_type: literature
-    ref: 10.1001/jama.292.22.2750
+    ref: 'Schaumberg et al., 2004, JAMA, Accumulated Lead Exposure and Risk of Age-Related
+      Cataract in Men, DOI:10.1001/jama.292.22.2750, PMID:https://pubmed.ncbi.nlm.nih.gov/15585735  [was:
+      10.1001/jama.292.22.2750]'
 - id: r16_pm25_x_glaucoma_iop_cdr
   severity: medium
   risk_type: vascular_perfusion
@@ -251,11 +297,14 @@ rules:
   - glaucoma_suspect_cdr
   evidence_level: B
   direction: risk_up
-  rationale: PM2.5 经焦亡通路触发眼压升高与青光眼样视盘改变（机制证据；对应 B 侧为客观 IOP/CDR 条目）。【2026-10-16 降级更正 C/low】引文为 Journal Article，摘要无综述方法学。
+  rationale: PM2.5 经焦亡通路触发眼压升高与青光眼样视盘改变（机制证据；对应 B 侧为客观 IOP/CDR 条目）。【2026-10-16 降级更正
+    C/low — 该降级已在同日复查中回退，现行 B/medium，见文首说明】引文为 Journal Article，摘要无综述方法学。
   recommendation: 高 PM2.5 暴露人群建议监测眼压与视盘形态。
   citations:
   - source_type: literature
-    ref: 10.1186/s12989-021-00403-4
+    ref: 'Li et al., 2021, Particle and Fibre Toxicology, Airborne particulate matter
+      (PM2.5) triggers ocular hypertension and glaucoma th, DOI:10.1186/s12989-021-00403-4,
+      PMID:https://pubmed.ncbi.nlm.nih.gov/33663554  [was: 10.1186/s12989-021-00403-4]'
 - id: r17_pm25_x_amd_early
   severity: medium
   risk_type: inflammation_immune
@@ -269,7 +318,9 @@ rules:
   recommendation: 高污染暴露人群建议关注黄斑健康。
   citations:
   - source_type: literature
-    ref: 10.1186/s12886-024-03465-y
+    ref: 'Wu et al., 2024, BMC Ophthalmology, Association between ambient air pollution
+      and age-related macular degeneration: , DOI:10.1186/s12886-024-03465-y, PMID:https://pubmed.ncbi.nlm.nih.gov/38684968  [was:
+      10.1186/s12886-024-03465-y]'
 - id: r18_uv_x_cataract
   severity: medium
   risk_type: photochemical_uv
@@ -279,13 +330,18 @@ rules:
   - cataract_any
   evidence_level: B
   direction: risk_up
-  rationale: 紫外线/日照暴露是皮质性与核性白内障的确立危险因素（光化学晶体蛋白损伤）。【2026-10-16 降级更正 C/low】两篇引文均为原创研究（其一为 GSTM1 多态性研究）。
+  rationale: 紫外线/日照暴露是皮质性与核性白内障的确立危险因素（光化学晶体蛋白损伤）。【2026-10-16 降级更正 C/low — 该降级已在同日复查中回退，现行
+    B/medium，见文首说明】两篇引文均为原创研究（其一为 GSTM1 多态性研究）。
   recommendation: 户外强日照人群建议佩戴防紫外线眼镜。
   citations:
   - source_type: literature
-    ref: 10.1097/01.ede.0000086881.84657.98
+    ref: 'Neale et al., 2003, Epidemiology, Sun Exposure as a Risk Factor for Nuclear
+      Cataract, DOI:10.1097/01.ede.0000086881.84657.98, PMID:https://pubmed.ncbi.nlm.nih.gov/14569187  [was:
+      10.1097/01.ede.0000086881.84657.98]'
   - source_type: literature
-    ref: 10.1136/oem.2005.022343
+    ref: 'Saadat et al., 2006, Occupational and Environmental Medicine, Occupational
+      sunlight exposure, polymorphism of glutathione S-transferase M1, an, DOI:10.1136/oem.2005.022343,
+      PMID:https://pubmed.ncbi.nlm.nih.gov/16551760  [was: 10.1136/oem.2005.022343]'
 - id: r22_bmi_x_retinopathy
   severity: low
   risk_type: inflammation_immune
@@ -296,12 +352,15 @@ rules:
   - dr_npdr
   evidence_level: C
   direction: risk_up
-  rationale: 文献层面报告肥胖与糖尿病患者 DR 发病风险升高相关（前瞻队列 meta，T2DM 亚组 RR=1.40, 95%CI 1.05-1.87，见引文）；NHANES 确证（单库横断面，OR≈1.47）方向一致。规则纳入属数据驱动的探索性扩展（analysis_plan v1.2 §0 协议偏离记录），证据评级保守取 C 级。
+  rationale: 文献层面报告肥胖与糖尿病患者 DR 发病风险升高相关（前瞻队列 meta，T2DM 亚组 RR=1.40, 95%CI 1.05-1.87，见引文）；NHANES
+    确证（单库横断面，OR≈1.47）方向一致。规则纳入属数据驱动的探索性扩展（analysis_plan v1.2 §0 协议偏离记录），证据评级保守取 C
+    级。
   recommendation: 超重/肥胖人群建议定期眼底检查。
   citations:
   - source_type: literature
-    ref: 10.1097/MD.0000000000011807
-
+    ref: 'Zhu et al., 2018, Medicine, Association of obesity and risk of diabetic
+      retinopathy in diabetes patients, DOI:10.1097/MD.0000000000011807, PMID:https://pubmed.ncbi.nlm.nih.gov/30095648  [was:
+      10.1097/MD.0000000000011807]'
 - id: r19_proinflam_diet_x_dr_npdr
   severity: low
   risk_type: inflammation_immune
@@ -315,7 +374,9 @@ rules:
   recommendation: 糖尿病人群建议降低促炎饮食指数（减少加工肉/含糖饮料）。
   citations:
   - source_type: literature
-    ref: 10.1016/j.jnha.2025.100694
+    ref: 'Xu et al., 2025, The Journal of nutrition, health and aging, Association
+      of standard dietary inflammatory index with diabetic retinopathy in , DOI:10.1016/j.jnha.2025.100694,
+      PMID:https://pubmed.ncbi.nlm.nih.gov/41061592  [was: 10.1016/j.jnha.2025.100694]'
 - id: r20_smoking_x_vi_mod_severe
   severity: medium
   risk_type: oxidative_stress
@@ -326,11 +387,14 @@ rules:
   - vision_impairment_severe
   evidence_level: B
   direction: risk_up
-  rationale: 吸烟（尿可替宁客观标志）与视力障碍发病相关（前瞻证据；severity 映射按原文 VI 定义核对）。【2026-10-16 降级更正 C/low】引文为 Journal Article，摘要无综述方法学。
+  rationale: 吸烟（尿可替宁客观标志）与视力障碍发病相关（前瞻证据；severity 映射按原文 VI 定义核对）。【2026-10-16 降级更正 C/low
+    — 该降级已在同日复查中回退，现行 B/medium，见文首说明】引文为 Journal Article，摘要无综述方法学。
   recommendation: 吸烟者建议戒烟并定期视力检查。
   citations:
   - source_type: literature
-    ref: 10.1038/s41598-020-79865-z
+    ref: 'Han et al., 2021, Scientific Reports, Smoking, urinary cotinine levels and
+      incidence of visual impairment, DOI:10.1038/s41598-020-79865-z, PMID:https://pubmed.ncbi.nlm.nih.gov/33432008  [was:
+      10.1038/s41598-020-79865-z]'
 - id: r21_pm25_x_vi_mod_severe
   severity: medium
   risk_type: vascular_perfusion
@@ -341,11 +405,14 @@ rules:
   - vision_impairment_severe
   evidence_level: B
   direction: risk_up
-  rationale: 空气污染与视力障碍前瞻队列关联（绿地缓冲效应同文报告）。【2026-10-16 降级更正 C/low】引文为 Journal Article，摘要无综述方法学。
+  rationale: 空气污染与视力障碍前瞻队列关联（绿地缓冲效应同文报告）。【2026-10-16 降级更正 C/low — 该降级已在同日复查中回退，现行
+    B/medium，见文首说明】引文为 Journal Article，摘要无综述方法学。
   recommendation: 高污染暴露人群建议定期视力评估。
   citations:
   - source_type: literature
-    ref: 10.1186/s12889-024-20853-7
+    ref: 'Yan et al., 2024, BMC Public Health, Residential greenness, air pollution
+      and visual impairment: a prospective cohort, DOI:10.1186/s12889-024-20853-7,
+      PMID:https://pubmed.ncbi.nlm.nih.gov/39614249  [was: 10.1186/s12889-024-20853-7]'
 patient_factor_rules:
   diabetes:
     severity: high

@@ -51,10 +51,10 @@
     {
       "dataset": "NHANES",
       "rule_set": "A_level_only",
-      "rule_pairs_tested": 3,
+      "rule_pairs_tested": 1,
       "replicated": 0,
       "contradicted": 0,
-      "uninformative": 3,
+      "uninformative": 1,
       "precision_rule_declared": NaN,
       "precision_rule_uninf_as_fp": 0.0
     },
@@ -121,10 +121,10 @@
     {
       "dataset": "KNHANES",
       "rule_set": "A_level_only",
-      "rule_pairs_tested": 3,
+      "rule_pairs_tested": 1,
       "replicated": 0,
       "contradicted": 0,
-      "uninformative": 3,
+      "uninformative": 1,
       "precision_rule_declared": NaN,
       "precision_rule_uninf_as_fp": 0.0
     },

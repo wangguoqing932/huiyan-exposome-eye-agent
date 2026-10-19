@@ -47,13 +47,22 @@ warnings.filterwarnings("ignore")
 ROOT = Path(__file__).resolve().parent.parent
 FRAMES = ROOT / "data" / "frames"
 COV = ROOT / "outputs" / "confirmatory" / "cohort_rule_coverage.json"
-TWO_STAGE = ROOT / "outputs" / "cohorts" / "cohort_rule_results.csv"
+HET = ROOT / "outputs" / "cohorts" / "cohort_heterogeneity.json"
 OUT = ROOT / "outputs" / "cohorts" / "ipd_interaction.json"
 MD = ROOT / "outputs" / "cohorts" / "IPD_INTERACTION.md"
 
 
 def main() -> int:
     cov = json.loads(COV.read_text(encoding="utf-8"))["matrix"]
+
+    # The two-stage comparator is the between-cohort heterogeneity test
+    # (Cochran Q), NOT q_primary: q_primary in cohort_rule_results.csv is the
+    # FDR-adjusted q of one cohort's association test
+    # (cohort_confirmatory.py L251-259), so taking row 0 under a "two-stage"
+    # label returned a single-cohort quantity. Fixed 2026-10-19; see
+    # docs/AGENT_AUDIT.md section 36.
+    HETDATA = (json.loads(HET.read_text(encoding="utf-8"))["by_rule"]
+               if HET.exists() else {})
 
     # rule -> list of (cohort, exposure_col, outcome_col)
     plan: dict[str, list[tuple[str, str, str]]] = {}
@@ -67,7 +76,7 @@ def main() -> int:
     print()
     results = []
     print(f"{'rule':32s} {'cohorts':>7s} {'n':>9s} {'interaction p':>14s}  "
-          f"{'two-stage p':>12s}")
+          f"{'two-stage Q p':>12s}")
     print("-" * 84)
     for rid, cells in sorted(plan.items()):
         frames = []
@@ -164,18 +173,14 @@ def main() -> int:
             except Exception:
                 ip = float("nan")
 
-        two = None
-        if TWO_STAGE.exists():
-            t = pd.read_csv(TWO_STAGE)
-            row = t[t["rule_id"] == rid]
-            if len(row) and "q_primary" in t.columns:
-                two = float(row["q_primary"].iloc[0])
+        two = HETDATA.get(rid, {}).get("Q_p")
+        two = float(two) if two is not None else None
 
         print(f"{rid:32s} {d['cohort'].nunique():>7d} {len(d):>9,d} "
               f"{ip:>14.4g}  {(f'{two:.4g}' if two is not None else 'n/a'):>12s}")
         results.append({"rule": rid, "cohorts": sorted(d["cohort"].unique()),
                         "n": int(len(d)), "n_cohorts": int(d["cohort"].nunique()),
-                        "interaction_p": ip, "two_stage_q_p": two,
+                        "interaction_p": ip, "two_stage_het_q_p": two,
                         "interaction_terms": terms,
                         "per_cohort_or": {
                             c: float(np.exp(m.params.get("x", np.nan)))
@@ -184,8 +189,10 @@ def main() -> int:
     print()
     print("=" * 84)
     print("  A one-step interaction test answers 'does the association differ")
-    print("  between cohorts' using each person once. The two-stage column is what")
-    print("  the manuscript currently reports as the regional subgroup test.")
+    print("  between cohorts' using each person once. The two-stage column is the")
+    print("  Cochran Q test of between-cohort heterogeneity (cohort_heterogeneity.")
+    print("  json). At k=2 it is the same statistic as Table 5's regional subgroup")
+    print("  test; for k>2 it is not the same null (r10: regional p=0.45, Q p=2.6e-07).")
     print()
     print("  CAVEAT: this is a within-fitted-frames analysis. It changes the")
     print("  inference, not which cells exist, and not the pooled estimates.")

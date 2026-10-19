@@ -20,24 +20,25 @@
     "executor.phase3",
     "executor.phase4",
     "executor.phase5",
-    "writer.phase7_1",
-    "writer.phase7_2",
     "writer.phase7_3",
-    "writer.phase7_4",
-    "writer.phase7_5",
     "writer.phase7_6",
     "writer.phase7_7",
     "writer.phase7_8"
   ],
-  "in_progress": "writer.phase7_9",
-  "blocked": [],
+  "in_progress": "writer.phase7_1",
+  "blocked": [
+    {
+      "phase": "writer.phase7_9",
+      "reason": "awaiting author: target journal + corresponding author name/affiliation/email + submission date; the author deferred these on 2026-10-19. cover_letter.md therefore keeps 5 bracketed fields and build_submission_pkg.py refuses to package (fail-loud)."
+    }
+  ],
   "artifacts": {
     "config": ".planner.config.json",
     "plan_md": "PLAN.md",
     "executor_progress": ".executor/progress.json",
     "writer_progress": ".writer/progress.json",
     "latest_validation": "outputs/confirmatory/nhanes_confirmatory.csv",
-    "latest_manuscript": ""
+    "latest_manuscript": "outputs/paper/manuscript.md"
   },
   "history": [
     {
@@ -228,6 +229,46 @@
     {
       "date": "2026-10-15",
       "event": "writer.phase7_8 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "compliance fix: git freeze commit 6bba42e + tag freeze-r13-2026-10-19 (HEAD had been 2026-10-12; 593 files committed, data/frames excluded as regenerable)",
+      "skill": "medical-agent"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "executor.phase3 re-verified with skill verify_rule_citations.py (strict 21/21 rules, 24/24 citations, llm+network); rules.yaml normalized by --fix + re-authored header; sha 95ebf0a9; phase3->phase4 gate OK",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "executor.phase4 freshness restored by content-equivalence: resume pass 1054/1054 processed, 27136/23722 nodes/edges unchanged, evidence sha unchanged; binding updated with documented note (no from-scratch rebuild; 16627s rebuild would reproduce identical inputs)",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "executor.phase5/6 artefacts refreshed by canonical chain run_all.py --with-baseline + headline_sensitivity.py (R tempdir fixed via TMPDIR); confirmatory 16/6 and 15/5, direction_review and headline sensitivity rebuilt; figures source_data rebuilt and 6 main figures re-rendered",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "r13/Table 5b correction: ipd_interaction.py was reading a single-cohort q_primary under a two-stage label; now reads Cochran Q_p (r12 0.0273, r13 0.0272 vs one-step 0.141/0.149); table5b regenerated; Results duplicate inline Table 5 removed; AGENT_AUDIT section 36 records the erratum",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "References section generated from the verified citation pool (27 entries, Vancouver order, 26 markers incl. one range) and injected by 7_8 assembly; qc_english_manuscript 20/20, verify_results_numbers 70/70",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "7_1 QC regenerated PASS (9 tables, 8 figure contracts, S1/S2 rendered); 7_2 legends numbers updated; 7_4/7_5 reopened for author re-confirmation; 7_8 assembled 137,288 B with references",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "7_9 run and correctly refused: only blocker is author-side (5 bracketed cover-letter fields; no journal fixed). Superseded submission artefacts archived to outputs/submission/_superseded_20261019/",
       "skill": "medical-agent-writer"
     }
   ]

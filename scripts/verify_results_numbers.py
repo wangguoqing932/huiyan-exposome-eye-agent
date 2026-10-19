@@ -90,7 +90,11 @@ ab = hs[(hs.dataset == "NHANES") & (hs.rule_set == "A_and_B_level_only")].iloc[0
 ck("sens.A+B.counts", int(ab.rule_pairs_tested) == 13 and int(ab.replicated) == 4,
    f"{ab.rule_pairs_tested}/{ab.replicated}")
 aonly = hs[(hs.dataset == "NHANES") & (hs.rule_set == "A_level_only")].iloc[0]
-ck("sens.A.counts", int(aonly.rule_pairs_tested) == 3 and int(aonly.replicated) == 0,
+# A-level rule count follows the frozen grade set: r10/r13 were downgraded
+# A->B on 2026-10-16, leaving r11 as the only A-level rule, so this family
+# now contains one pair (it contained three while the retracted 11-rule
+# downgrade was in force). Derive the expectation from the same artefact.
+ck("sens.A.counts", int(aonly.rule_pairs_tested) == 1 and int(aonly.replicated) == 0,
    f"{aonly.rule_pairs_tested}/{aonly.replicated}")
 
 # ------------------------------------------------------- cohort layer

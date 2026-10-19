@@ -3,13 +3,13 @@ NHANES,all_rules (current),19,6,0,13,1.0,0.316
 NHANES,exclude_r22_test_set_leakage,17,6,0,11,1.0,0.353
 NHANES,exclude_negative_control_r01,18,6,0,12,1.0,0.333
 NHANES,exclude_both_r22_and_r01,16,6,0,10,1.0,0.375
-NHANES,A_level_only,3,0,0,3,,0.0
+NHANES,A_level_only,1,0,0,1,,0.0
 NHANES,A_and_B_level_only,13,4,0,9,1.0,0.308
 NHANES,exclude_C_level,13,4,0,9,1.0,0.308
 KNHANES,all_rules (current),16,5,0,11,1.0,0.312
 KNHANES,exclude_r22_test_set_leakage,15,4,0,11,1.0,0.267
 KNHANES,exclude_negative_control_r01,15,5,0,10,1.0,0.333
 KNHANES,exclude_both_r22_and_r01,14,4,0,10,1.0,0.286
-KNHANES,A_level_only,3,0,0,3,,0.0
+KNHANES,A_level_only,1,0,0,1,,0.0
 KNHANES,A_and_B_level_only,13,4,0,9,1.0,0.308
 KNHANES,exclude_C_level,13,4,0,9,1.0,0.308

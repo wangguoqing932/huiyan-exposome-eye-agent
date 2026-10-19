@@ -11,7 +11,7 @@
       "n": 431026,
       "n_cohorts": 4,
       "interaction_p": 3.203410736158776e-08,
-      "two_stage_q_p": 1.5278032616706982e-14,
+      "two_stage_het_q_p": 6.941913172287982e-07,
       "interaction_terms": [
         "x:C(cohort)[T.CRELES]",
         "x:C(cohort)[T.LASI]",
@@ -32,7 +32,7 @@
       "n": 165365,
       "n_cohorts": 4,
       "interaction_p": 0.002231130819493254,
-      "two_stage_q_p": 0.0095069722565175,
+      "two_stage_het_q_p": 2.630398529163495e-07,
       "interaction_terms": [
         "x:C(cohort)[T.CRELES]",
         "x:C(cohort)[T.ELSA]",
@@ -56,7 +56,7 @@
       "n": 131271,
       "n_cohorts": 2,
       "interaction_p": 0.14137299858286356,
-      "two_stage_q_p": 1.0,
+      "two_stage_het_q_p": 0.027333989203474632,
       "interaction_terms": [
         "x:C(cohort)[T.SHARE]"
       ],
@@ -73,7 +73,7 @@
       "n": 342157,
       "n_cohorts": 2,
       "interaction_p": 0.14864867874802762,
-      "two_stage_q_p": 1.6936705824921215e-32,
+      "two_stage_het_q_p": 0.027220359150254,
       "interaction_terms": [
         "x:C(cohort)[T.SHARE]"
       ],
@@ -93,7 +93,7 @@
       "n": 212705,
       "n_cohorts": 5,
       "interaction_p": 2.383115942770181e-29,
-      "two_stage_q_p": 0.0009056190802629,
+      "two_stage_het_q_p": 3.0346615840478164e-13,
       "interaction_terms": [
         "x:C(cohort)[T.ELSA]",
         "x:C(cohort)[T.HRS]",

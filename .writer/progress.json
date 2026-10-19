@@ -2,60 +2,60 @@
   "schema_version": "v3.0",
   "phases": {
     "7_1": {
-      "status": "confirmed",
+      "status": "awaiting_author_confirmation",
       "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-15",
+      "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/figure_table_qc_report.md"
       ],
       "confirmed_at": "2026-10-15",
-      "note": "作者授权代理确认（2026-10-15）：作者已明确授权 agent 自主推进科学方向（'你不用问我，按照你认为科学的方向不断前进'）。本次确认为 AGENT 代为确认，非作者本人审阅图表。7_1 产物在盘上：figure_table_qc_report.md（自动 QC PASS + 人工目视 PASS + figure7/8 各 4 轮迭代记录 + P1 已解决 + 剩余 6 张图无压缩 TIFF 记为投稿前清单项）。作者可随时回看并 reject。"
+      "note": "2026-10-19 重新生成：verify_figures_tables.py QC PASS（8 份图契约、6 张主图+S1/S2 均已渲染、9 张 markdown 表、6 个交付 CSV、4 个数据集的 n_cases 一致）。此前的 QC 报告只覆盖 4 张表且图 3 的 A 级计数是旧规则集（3 对），现已随分级与图数据重算（A=1 对）。需作者复核图/表后确认。"
     },
     "7_2": {
-      "status": "confirmed",
+      "status": "awaiting_author_confirmation",
       "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-15",
+      "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/figure_legends.md"
       ],
       "confirmed_at": "2026-10-15",
-      "note": "作者授权代理确认（AGENT 代为确认，非作者本人审阅）。8 张图图例已由契约生成并人工核对：修掉 3 处 '(**a**) . ' 孤立句点、填满 8 处 Abbreviations 占位符、并修正 figure7 图例与渲染不符的一处（图例称参考线为 OR=1/1.5/2.0，而渲染只画了 OR=1）——按纪律让渲染器服从契约（补画 1.5x/2.0x 线）而非削弱图例。中文段按流水线设计留给 7_8 双语润色，避免翻译 7_4-7_7 仍会改动的文字。"
+      "note": "2026-10-19 更新：图 2 基线数字按 R11 更正金标准重算（full_system F1 0.522 / P 0.353 / R 1.000；lightrag 0.392 / pure_llm 0.335 / naive_rag 0.080），图 3 A 级复现 0/3→0/1；中英图例同步。需作者复核后确认。"
     },
     "7_3": {
-      "status": "confirmed",
+      "status": "awaiting_author_confirmation",
       "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-15",
+      "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/figure_prompts.md"
       ],
       "confirmed_at": "2026-10-15",
-      "note": "代理确认（AGENT 代为确认）。修掉两处：(1) figure5 提示词原先完全缺失——生成器硬编码只做 Figure 1，不扫描契约里的 archetype: schematic_led_composite，而 figure1 与 figure5 都是该类型；已据 figure5 契约的三个面板（泳道轨迹/时延堆叠条/KG 路径网络）补写中英双版提示词。(2) Variant A 标注为英文提示词却在正文嵌中文实体名，与末尾 'All labels in English' 自相矛盾；已改为英文并复验两份英文提示词中文字符数为 0。"
+      "note": "2026-10-19 更新：figure_prompts 的第二张图从“Figure 5（推理链）”改为稿件实际编号“Figure S2（推理链）”；配色一致性表述改为覆盖 Figure 1–6 与 S1–S2。需作者复核后确认。"
     },
     "7_4": {
       "status": "awaiting_author_confirmation",
       "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-15",
+      "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/sections/results.md"
       ],
       "confirmed_at": "2026-10-15",
-      "note": "代理确认（AGENT 代为确认，非作者本人审阅）。Results 首稿 9,299 B / 8 节。文中每个数字经 scripts/verify_results_numbers.py 从源 CSV 重新导出比对：70/70 PASS（含 10 组 OR+CI 逐值、5 个 q 值、5 种敏感性规则集、8 个 frame 行数、队列层三态分布）。新增队列层小节：6/21 规则可检验并列出 15 条不可检验的原因分类；r02/r20 可迁移、r10 方向翻转（4 队列 1:3 分裂）、r12 被否证、r13 单队列、r11 无证据；并明确写出队列层 contradicted=2 与 R11 两层 contradicted=0 的差异。r10 的三种竞争解释留待 Discussion，Results 只陈述计数。",
+      "note": "2026-10-19 修正：Table 5b 的“两阶段 p”列原先取错变量（取的是单队列 q_primary，非两阶段检验）。ipd_interaction.py 改读 cohort_heterogeneity.json 的 Cochran Q_p 并重跑；Table 5b 列名/定义/叙述改为 Q 口径；Results 删除重复内联 Table 5（r02/r10 的区域 subgroup 旧值与正式表冲突），r13/r12 段落按 Q 口径重写（one-step 0.149/0.141 vs Q 0.0272/0.0273）。需作者复核后确认。",
       "change_requests": [
         {
-          "date": "2026-10-15",
-          "note": "AGENT 撤回确认：本轮加入一体化 IPD 交互检验（Table 5b），改写了两队列规则的异质性判读——r13 交互 p=0.57 vs 两阶段 0.027，r12 0.14 vs 0.027。原确认由 AGENT 代理作出，非作者审阅；此改动需作者复核。scripts/ipd_interaction.py + outputs/tables/table5b_ipd_interaction.md"
+          "date": "2026-10-19",
+          "note": "Table 5b 两阶段列取错变量已修（见 docs/AGENT_AUDIT.md §三十六）；等待作者复核 r13/r12 的新表述。"
         }
       ]
     },
     "7_5": {
-      "status": "confirmed",
+      "status": "awaiting_author_confirmation",
       "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-15",
+      "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/sections/methods.md"
       ],
       "confirmed_at": "2026-10-15",
-      "note": "代理确认（AGENT 代为确认）。Methods 9,388 B / 9 节，按 TRIPOD+AI/DECIDE-AI/STROBE 结构。引用池 13 条全部经实时 API 双源交叉核验（Crossref+OpenAlex），核验结果为：13/13 池内条目被引用、池外引用 0 处、8 队列行数与文中数字相符。核验过程中拒掉了四类错引用：(1) 429 限流被误记未找到；(2) 收错文献类型（数据条目/学位论文/peer-review）；(3) 标题相近但无关（CRELES 曾命中 Nutrients 营养学论文）；(4) 韩国期刊 2024 年转载的 STROBE 因年份容差被拒。CLHLS 与 CRELES 无可用队列画像文献，如实记为 NOT FOUND 且不引用。"
+      "note": "2026-10-19 更新：Methods 增加 Figure 1 与 Table 1b 的正文引用；16 张图/表引用闭环。需作者复核后确认。"
     },
     "7_6": {
       "status": "confirmed",
@@ -85,16 +85,20 @@
         "outputs/paper/manuscript.md"
       ],
       "confirmed_at": "2026-10-15",
-      "note": "7_8 完成。注：技能的 polish_bilingual.py 是给'中文稿+英译'设计的，本项目稿件为英文原生，该双语对不适用（工具只生成了一个空 .en.md 存根，已删除）。因此本阶段的实质工作是：(1) 补齐图例的 8 处中文 TODO，并用脚本在写入前逐数字比对中英图例（不一致则拒绝写入）；(2) 组装 manuscript.md（83,349 B，含标题/摘要/IMRaD/图例/7 张表）并生成含各节 SHA-256 的组装清单；(3) 以 scripts/qc_english_manuscript.py 做英文稿 QC，20/20 PASS。QC 抓出并修正了两处真缺陷：组装时 Methods 与 Discussion 的小节标题被静默丢弃；Table 1/2 存在却从未在正文引用。另修正 QC 自身正则漏匹配 'Tables 1 and 4' 复数形式。"
+      "note": "2026-10-19 重新组装：137,288 B，含 References（27 条，Vancouver 顺序，全部 cross_verified/0 撤稿）、9 张表、8 个图例（6 主 + S1/S2）；装配清单逐源 SHA 与引用编号/范围审计通过（qc_english_manuscript.py 20/20；verify_results_numbers.py 70/70）。"
     },
     "7_9": {
       "status": "awaiting_author_confirmation",
       "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-15",
+      "submitted_at": "2026-10-19",
       "artifacts": [
-        "outputs/submission/package_manifest.json",
-        "outputs/submission/submission_pkg.zip"
-      ]
+        "outputs/submission/journal_guidelines_snapshot.md",
+        "outputs/submission/supplementary_material.md",
+        "outputs/submission/supplementary_manifest.json"
+      ],
+      "note": "2026-10-19：7_9 覆盖脚本运行并正确拒绝打包——唯一阻塞项是作者侧：cover_letter.md 仍有 5 处未填字段（[Date]/[Journal name]/[journal]/[Corresponding author]/[Affiliation]）；作者 2026-10-19 明确暂不指定期刊、不提供作者信息。期刊限额如实记为未获取（Ophthalmology 官网 403；本地清单无该刊条目）。旧版 submission 文件已移至 outputs/submission/_superseded_20261019/，避免误投。作者补齐信息后重跑 build_submission_pkg.py 即可生成 zip+manifest。"
     }
-  }
+  },
+  "_updated": "2026-10-19",
+  "_note": "2026-10-19 合规修复轮：作者门在 7_1/7_2/7_4/7_5 重新打开，因为对应产物在代理确认后又被修正/重生成；7_9 停在作者侧（目标期刊与通讯作者信息，作者 2026-10-19 明确暂不提供）。全部确认均需作者本人复核后由 author_gate.py 写入。"
 }

@@ -1,8 +1,8 @@
 # Supplementary Material
 
-**Pooling conceals directional conflict: a pre-registered cross-cohort evaluation of 21 literature-derived exposome rules for major eye disease in 2.0 million person-waves**
+**Even age does not transport: a pooled multi-cohort exposome estimate describes no population, in 285,878 participants and 21 literature-derived rules**
 
-Assembled 2026-10-15. Every item below is a generated artefact; the script that produces it is named so the analysis can be reproduced.
+Assembled 2026-10-19. Every item below is a generated artefact; the script that produces it is named so the analysis can be reproduced.
 
 | Item | Contents | Produced by |
 |---|---|---|
@@ -1070,8 +1070,12 @@ circumstances"（访员问卷）。
 ```
 # Table 6. Per-pair statistical power in the cohort layer
 
-Minimum detectable odds ratio at 80% power, two-sided alpha = 0.05, from the analysed n and
-observed margins. A pair is a POWERED NULL when its confidence interval excludes its own MDE.
+Minimum detectable odds ratio at 80% power, two-sided alpha = 0.05, computed from the analysed n and
+the observed margins. A pair is a POWERED NULL when its confidence interval excludes its own MDE.
+
+SHARE appears once per pair, not five times: its five imputation replicates are stacked as rows in the
+source release, and counting all five inflated n by exactly 5x, which shrank SE by sqrt(5) and made every
+MDE look better than it is. Replicate 1 is used here, as it is for the prevalence gate.
 
 | cohort | rule_id | n | exposure_prevalence | outcome_prevalence_unexposed | mde_or_80 | observed_or | ci_low | ci_high | three_state | powered_null | null_interpretation |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -1088,11 +1092,11 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
 | HRS | r20_smoking_x_vi_mod_severe | 28654 | 0.2256 | 0.1808 | 1.1084 | 1.6144 | 1.4682 | 1.7752 | replicated | False | replicated |
 | KLoSA | r20_smoking_x_vi_mod_severe | 40260 | 0.1418 | 0.215 | 1.1023 | 1.1002 | 1.0004 | 1.21 | uninformative | False | underpowered_or_indeterminate |
 | LASI | r02_hyperglycemia_x_cataract | 73204 | 0.121 | 0.1012 | 1.111 | 1.8782 | 1.7646 | 1.9991 | replicated | False | replicated |
-| SHARE | r02_hyperglycemia_x_cataract | 1686370 | 0.1364 | 0.0747 | 1.0242 | 1.7539 | 1.6908 | 1.8194 | replicated | False | replicated |
-| SHARE | r10_smoking_x_cataract | 710420 | 0.1715 | 0.0882 | 1.0316 | 1.109 | 1.041 | 1.1815 | replicated | False | replicated |
-| SHARE | r12_alcohol_x_cataract | 617390 | 0.1671 | 0.0919 | 1.0336 | 0.9628 | 0.8999 | 1.0301 | uninformative | True | powered_null |
-| SHARE | r13_bmi_x_cataract | 1686370 | 0.2281 | 0.0822 | 1.0189 | 1.2439 | 1.2008 | 1.2886 | replicated | False | replicated |
-| SHARE | r20_smoking_x_vi_mod_severe | 711145 | 0.1715 | 0.1443 | 1.0254 | 1.0875 | 1.0429 | 1.1339 | replicated | False | replicated |
+| SHARE | r02_hyperglycemia_x_cataract | 337274 | 0.1364 | 0.0747 | 1.0549 | 1.7539 | 1.6908 | 1.8194 | replicated | False | replicated |
+| SHARE | r10_smoking_x_cataract | 142084 | 0.1715 | 0.0882 | 1.072 | 1.109 | 1.041 | 1.1815 | replicated | False | replicated |
+| SHARE | r12_alcohol_x_cataract | 123478 | 0.167 | 0.0919 | 1.0768 | 0.9628 | 0.8999 | 1.0301 | uninformative | True | powered_null |
+| SHARE | r13_bmi_x_cataract | 337274 | 0.2282 | 0.0822 | 1.0427 | 1.2439 | 1.2008 | 1.2886 | replicated | False | replicated |
+| SHARE | r20_smoking_x_vi_mod_severe | 142229 | 0.1715 | 0.1443 | 1.0577 | 1.0875 | 1.0429 | 1.1339 | replicated | False | replicated |
 ```
 
 
@@ -1119,9 +1123,11 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
       ],
       "pooled_ci_unbounded": false,
       "prediction_interval": [
-        0.8352,
-        4.5716
+        0.3024,
+        12.6259
       ],
+      "prediction_interval_computable": true,
+      "prediction_interval_multiplier": 4.303,
       "prediction_interval_unbounded": false,
       "log_OR": 0.66989,
       "log_OR_se": 0.19841,
@@ -1144,14 +1150,21 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
           "Asia",
           "Europe"
         ],
+        "n_per_group": [
+          1,
+          2,
+          1
+        ],
         "per_group_OR": [
           1.3116,
-          1.9253,
+          2.5476,
           1.7539
         ],
-        "Q_between": 15.602,
+        "Q_between": 9.015,
         "df": 2,
-        "p_between": 0.00040923648425903884
+        "p_between": 0.011023804601815925,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": true
       },
       "meta_regression_mean_age": {
         "slope_per_year_logOR": 0.01679,
@@ -1175,9 +1188,11 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
       ],
       "pooled_ci_unbounded": false,
       "prediction_interval": [
-        0.5291,
-        1.3306
+        0.3049,
+        2.309
       ],
+      "prediction_interval_computable": true,
+      "prediction_interval_multiplier": 4.303,
       "prediction_interval_unbounded": false,
       "log_OR": -0.17549,
       "log_OR_se": 0.11495,
@@ -1200,14 +1215,21 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
           "Asia",
           "Europe"
         ],
+        "n_per_group": [
+          1,
+          1,
+          2
+        ],
         "per_group_OR": [
           0.7023,
           0.748,
-          1.0817
+          0.9394
         ],
-        "Q_between": 24.61,
+        "Q_between": 1.591,
         "df": 2,
-        "p_between": 4.529338850162278e-06
+        "p_between": 0.45134851270544596,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": true
       },
       "meta_regression_mean_age": {
         "slope_per_year_logOR": -0.0083,
@@ -1238,11 +1260,10 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
         1.0569
       ],
       "pooled_ci_unbounded": false,
-      "prediction_interval": [
-        0.6788,
-        1.1732
-      ],
-      "prediction_interval_unbounded": false,
+      "prediction_interval": null,
+      "prediction_interval_computable": false,
+      "prediction_interval_multiplier": null,
+      "prediction_interval_unbounded": true,
       "log_OR": -0.11388,
       "log_OR_se": 0.08632,
       "cohorts": [
@@ -1259,13 +1280,19 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
           "Asia",
           "Europe"
         ],
+        "n_per_group": [
+          1,
+          1
+        ],
         "per_group_OR": [
           0.809,
           0.9628
         ],
         "Q_between": 4.87,
         "df": 1,
-        "p_between": 0.027333989203474567
+        "p_between": 0.027333989203474567,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": false
       },
       "meta_regression_mean_age": {
         "note": "not fitted: k=2 leaves no residual df"
@@ -1285,11 +1312,10 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
         1.412
       ],
       "pooled_ci_unbounded": false,
-      "prediction_interval": [
-        0.7952,
-        1.6197
-      ],
-      "prediction_interval_unbounded": false,
+      "prediction_interval": null,
+      "prediction_interval_computable": false,
+      "prediction_interval_multiplier": null,
+      "prediction_interval_unbounded": true,
       "log_OR": 0.12652,
       "log_OR_se": 0.11147,
       "cohorts": [
@@ -1306,13 +1332,19 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
           "Americas",
           "Europe"
         ],
+        "n_per_group": [
+          1,
+          1
+        ],
         "per_group_OR": [
           0.9911,
           1.2439
         ],
         "Q_between": 4.877,
         "df": 1,
-        "p_between": 0.027220359150253948
+        "p_between": 0.027220359150253948,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": false
       },
       "meta_regression_mean_age": {
         "note": "not fitted: k=2 leaves no residual df"
@@ -1333,9 +1365,11 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
       ],
       "pooled_ci_unbounded": false,
       "prediction_interval": [
-        0.81,
-        1.8881
+        0.6221,
+        2.4584
       ],
+      "prediction_interval_computable": true,
+      "prediction_interval_multiplier": 3.182,
       "prediction_interval_unbounded": false,
       "log_OR": 0.21242,
       "log_OR_se": 0.09207,
@@ -1360,14 +1394,21 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
           "Asia",
           "Europe"
         ],
+        "n_per_group": [
+          1,
+          2,
+          2
+        ],
         "per_group_OR": [
           1.6144,
           1.0808,
-          1.1013
+          1.2512
         ],
-        "Q_between": 55.474,
+        "Q_between": 39.347,
         "df": 2,
-        "p_between": 8.995126775172968e-13
+        "p_between": 2.856365548557585e-09,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": true
       },
       "meta_regression_mean_age": {
         "slope_per_year_logOR": -0.00977,
@@ -1402,8 +1443,8 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
       "agreement": "DISAGREE",
       "I2_percent": 90.5,
       "prediction_interval": [
-        0.8352,
-        4.5716
+        0.3024,
+        12.6259
       ],
       "prediction_interval_crosses_null": true,
       "pre_registered_verdict_source": "cohort_transportability.json",
@@ -1415,8 +1456,8 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
       "agreement": "agree",
       "I2_percent": 91.0,
       "prediction_interval": [
-        0.5291,
-        1.3306
+        0.3049,
+        2.309
       ],
       "prediction_interval_crosses_null": true,
       "pre_registered_verdict_source": "cohort_transportability.json",
@@ -1432,11 +1473,8 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
       "heterogeneity_aware": "heterogeneous_unreliable_pool",
       "agreement": "agree",
       "I2_percent": 79.5,
-      "prediction_interval": [
-        0.6788,
-        1.1732
-      ],
-      "prediction_interval_crosses_null": true,
+      "prediction_interval": null,
+      "prediction_interval_crosses_null": null,
       "pre_registered_verdict_source": "cohort_transportability.json",
       "k": 2
     },
@@ -1445,11 +1483,8 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
       "heterogeneity_aware": "heterogeneous_unreliable_pool",
       "agreement": "agree",
       "I2_percent": 79.5,
-      "prediction_interval": [
-        0.7952,
-        1.6197
-      ],
-      "prediction_interval_crosses_null": true,
+      "prediction_interval": null,
+      "prediction_interval_crosses_null": null,
       "pre_registered_verdict_source": "cohort_transportability.json",
       "k": 2
     },
@@ -1459,8 +1494,8 @@ observed margins. A pair is a POWERED NULL when its confidence interval excludes
       "agreement": "DISAGREE",
       "I2_percent": 93.8,
       "prediction_interval": [
-        0.81,
-        1.8881
+        0.6221,
+        2.4584
       ],
       "prediction_interval_crosses_null": true,
       "pre_registered_verdict_source": "cohort_transportability.json",
@@ -2731,7 +2766,7 @@ r20_smoking_x_vi_mod_severe,CLHLS,1.2917,1.0534,1.5839,95.2,0.03963
       "CRELES": {
         "testable": true,
         "exposure_flag": "bmi_high",
-        "exposure_col": "bmi_high_25",
+        "exposure_col": "bmi_high_30",
         "exposure_n": 4963,
         "outcome_flag": "cataract_any",
         "outcome_col": "cataract_any",
@@ -2791,7 +2826,7 @@ r20_smoking_x_vi_mod_severe,CLHLS,1.2917,1.0534,1.5839,95.2,0.03963
       "SHARE": {
         "testable": true,
         "exposure_flag": "bmi_high",
-        "exposure_col": "bmi_high_25",
+        "exposure_col": "bmi_high_30",
         "exposure_n": 1693515,
         "outcome_flag": "cataract_any",
         "outcome_col": "cataract_any",
@@ -3141,7 +3176,7 @@ r20_smoking_x_vi_mod_severe,CLHLS,1.2917,1.0534,1.5839,95.2,0.03963
       "CRELES": {
         "testable": false,
         "exposure_flag": "bmi_high",
-        "exposure_col": "bmi_high_25",
+        "exposure_col": "bmi_high_30",
         "exposure_n": 4963,
         "outcome_flag": null,
         "outcome_col": null,
@@ -3201,7 +3236,7 @@ r20_smoking_x_vi_mod_severe,CLHLS,1.2917,1.0534,1.5839,95.2,0.03963
       "SHARE": {
         "testable": false,
         "exposure_flag": "bmi_high",
-        "exposure_col": "bmi_high_25",
+        "exposure_col": "bmi_high_30",
         "exposure_n": 1693515,
         "outcome_flag": null,
         "outcome_col": null,
@@ -3509,7 +3544,7 @@ r20_smoking_x_vi_mod_severe,CLHLS,1.2917,1.0534,1.5839,95.2,0.03963
 
 ## S7. Verified citation pool
 
-*Why supplementary:* All 24 references with DOI, cross-verification source, retraction status and the claim each supports.
+*Why supplementary:* The verified citation pool (all entries) with DOI, cross-verification source, retraction status and the claim each supports.
 
 ```
 {
@@ -3517,7 +3552,7 @@ r20_smoking_x_vi_mod_severe,CLHLS,1.2917,1.0534,1.5839,95.2,0.03963
   "generated_by": "scripts/build_citation_pool.py",
   "generated_on": "2026-10-15",
   "rule_note": "kuku-paper-lookup Rules 1/3/4/5/6; entries are live API responses only, DOI cross-confirmed in Crossref+OpenAlex where marked cross_verified",
-  "n_entries": 24,
+  "n_entries": 27,
   "failed_claims": [
     "C011",
     "C012",
@@ -4065,11 +4100,78 @@ r20_smoking_x_vi_mod_severe,CLHLS,1.2917,1.0534,1.5839,95.2,0.03963
       ],
       "claim_supported": "Systematic review of reasons for abstinence from alcohol (sick-quitter / healthy-abstainer context)",
       "added_at_phase": "7_7"
+    },
+    {
+      "pool_id": "C031",
+      "doi": "10.18170/DVN/MKB1LF",
+      "title": "The Chinese Longitudinal Healthy Longevity Survey (CLHLS)-Longitudinal Data（1998-2011）",
+      "year": 2015,
+      "journal": "Peking University Opendata Dataverse",
+      "url": "https://doi.org/10.18170/DVN/MKB1LF",
+      "verification_status": "cross_verified",
+      "verified_in": [
+        "datacite"
+      ],
+      "resource_type": null,
+      "datacite_state": "findable",
+      "retraction_flag": false,
+      "abstract_retrieved": false,
+      "metadata_only_note": "data deposit; cited as a dataset per DataCite/Force11 practice",
+      "used_in_sections": [
+        "methods"
+      ],
+      "claim_supported": "CLHLS data deposit (Chinese Longitudinal Healthy Longevity Survey, longitudinal data 1998-2011)",
+      "added_at_phase": "7_5"
+    },
+    {
+      "pool_id": "C032",
+      "doi": "10.7910/DVN/7AUOAO",
+      "title": "The Costa Rican Longevity and Healthy Aging Study (CRELES)",
+      "year": 2025,
+      "journal": "Harvard Dataverse",
+      "url": "https://doi.org/10.7910/DVN/7AUOAO",
+      "verification_status": "cross_verified",
+      "verified_in": [
+        "datacite"
+      ],
+      "resource_type": "Dataset",
+      "datacite_state": "findable",
+      "retraction_flag": false,
+      "abstract_retrieved": false,
+      "metadata_only_note": "data deposit; cited as a dataset per DataCite/Force11 practice",
+      "used_in_sections": [
+        "methods"
+      ],
+      "claim_supported": "CRELES data deposit (Costa Rican Longevity and Healthy Aging Study, Harvard Dataverse)",
+      "added_at_phase": "7_5"
+    },
+    {
+      "pool_id": "C033",
+      "doi": "10.3886/icpsr26681.v2",
+      "title": "CRELES: Costa Rican Longevity and Healthy Aging Study, 2005 (Costa Rica Estudio de Longevidad y Envejecimiento Saludable)",
+      "year": 2010,
+      "journal": "ICPSR - Interuniversity Consortium for Political and Social Research",
+      "url": "https://doi.org/10.3886/icpsr26681.v2",
+      "verification_status": "cross_verified",
+      "verified_in": [
+        "datacite"
+      ],
+      "resource_type": "Dataset",
+      "datacite_state": "findable",
+      "retraction_flag": false,
+      "abstract_retrieved": false,
+      "metadata_only_note": "data deposit; cited as a dataset per DataCite/Force11 practice",
+      "used_in_sections": [
+        "methods"
+      ],
+      "claim_supported": "CRELES data deposit (ICPSR 26681)",
+      "added_at_phase": "7_5"
     }
   ],
   "not_found_detail": {
-    "C011": "CLHLS cohort profile not indexed in Crossref or OpenAlex under this title; OpenAlex top hits are derivative analyses. Not cited.",
-    "C012": "CRELES cohort profile not indexed in Crossref or OpenAlex; OpenAlex top hits are analyses USING CRELES data. ICPSR deposit 10.3886/icpsr26681.v2 exists but is a data deposit, not a citable article. Not cited."
+    "C011": "RESOLVED as a data citation: 10.18170/DVN/MKB1LF (see C031).",
+    "C012": "RESOLVED as a data citation: 10.7910/DVN/7AUOAO (see C032).",
+    "KLoSA": "No citable data deposit found in DataCite; cited by provider name only."
   },
   "failed_claims_note": "claims for which NO citable source could be verified in Crossref or OpenAlex; the manuscript must not cite these",
   "rule6_note": "Claims in the manuscript are limited to what the retrieved abstract supports. C023 has no retrievable abstract, so it is cited only as having addressed global glaucoma projections, with no numerical claim attached."
@@ -4102,43 +4204,3 @@ ELSA,r20 smoking→vision impairment,replicated,1,replicated,replicated · r20 s
 KLoSA,r20 smoking→vision impairment,uninformative,0,uninformative,uninformative · r20 smoking→vision impairment,KLoSA,1.1002,1.0004,1.21,40260,0.2199810138333751,0.4208367948766676,r20 smoking→vision impairment,uninformative,1
 CLHLS,r20 smoking→vision impairment,uninformative,0,uninformative,uninformative · r20 smoking→vision impairment,CLHLS,1.0267,0.8736,1.2066,12192,1.0,1.0,r20 smoking→vision impairment,uninformative,1
 ```
-
----
-
-## Supplementary figures moved out of the main text
-
-**Figure S1** (previously main Figure 4) and **Figure S2** (previously main
-Figure 5) illustrate the internal system — one worked case end to end, and a
-reasoning trace through the three architectural layers. They are placed in the
-supplement because the claims of this paper are about cross-cohort rule
-transportability, and neither figure bears on that argument; the main text no
-longer depends on them. **Both are rendered from the internal-layer artefacts
-and each panel states the artefact it was drawn from.** Reviewers of an earlier
-version noted that the internal system evaluation and the cohort analysis read
-as two papers, which is the reason for the separation.
-
----
-
-## Figures withdrawn from this submission
-
-**Two figures from an earlier version are withdrawn and are not included here.**
-
-They showed, respectively, one worked case end to end and a reasoning trace
-through the three architectural layers of the system. **Both were withdrawn
-because they were not rendered**: the panels contained only the figure
-renderer's placeholder text, and this was not detected by the automated
-figure QC, which checks that the rendering pipeline ran rather than that it
-produced content. The defect was found by inspecting the rendered images.
-
-They are also not needed for the argument. The claims of this paper concern
-cross-cohort transportability of literature-derived rules, and neither figure
-bears on that; the internal system evaluation they belonged to is reported in
-the tables and is not load-bearing for any conclusion here. Shipping them as
-supplementary figures would have placed two blank pages in the supplement, so
-they are removed rather than relocated.
-
-**The pipeline has been changed so that this cannot recur**: a placeholder scan
-now tests both the figure contracts and the rendered pixels, and reports the two
-figures as failures. The withdrawn contracts are retained deliberately, so that
-the scan keeps reporting them: a check that cannot see a withdrawn figure cannot
-distinguish withdrawal from repair.

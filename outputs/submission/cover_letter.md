@@ -1,10 +1,11 @@
 # Cover letter
 
-> **DRAFT — the target journal is not yet fixed.** The bracketed fields must be
-> completed and the journal-specific paragraph adapted before this is sent. The
-> manuscript is currently framed for a general-medicine readership; the package
-> manifest still records *Ophthalmology*, which would call for a different
-> emphasis in paragraph 3.
+> **DRAFT — the target journal is not yet fixed (author deferred the choice on
+> 2026-10-19).** The bracketed fields must be completed and the journal-specific
+> paragraph adapted before this is sent; packaging is blocked until then, by
+> design. The manuscript is framed for a general-medicine readership; the
+> previously configured target was *Ophthalmology*, which would call for a
+> different emphasis in paragraph 3.
 
 [Date]
 
@@ -54,9 +55,10 @@ estimate, and prefer examination-based measurement where the construct allows.
   survey design variance for the cohorts distributing design weights; the frames
   contain no design variable and an unweighted cluster-robust model was used.
   This is stated in the Methods, not only in the Limitations.
-- **Two figures from an earlier draft are withdrawn** and are not included; they
-  were never rendered. The pipeline now detects that class of failure
-  automatically.
+- **Two draft figures are rendered as supplementary Figures S1 and S2** and are
+  included in the package. An earlier version of this letter said they were
+  withdrawn and never rendered; that statement was true of the superseded
+  2026-10-15 package and is corrected here.
 - **A blind expert panel was planned and never conducted.** No kappa is reported
   anywhere, in the manuscript or the supplement.
 

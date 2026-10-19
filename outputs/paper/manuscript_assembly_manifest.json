@@ -1,5 +1,5 @@
 {
-  "assembled_on": "2026-10-16",
+  "assembled_on": "2026-10-19",
   "title": "Even age does not transport: a pooled multi-cohort exposome estimate describes no population, in 285,878 participants and 21 literature-derived rules",
   "sections": [
     {
@@ -14,13 +14,13 @@
     },
     {
       "section": "methods",
-      "bytes": 23410,
-      "sha256_16": "9cc3d5abc5c36ae5"
+      "bytes": 23647,
+      "sha256_16": "f6d3d0c6b2a968b7"
     },
     {
       "section": "results",
-      "bytes": 20754,
-      "sha256_16": "887cd8acdbb7be03"
+      "bytes": 21078,
+      "sha256_16": "fc80b62581e291bf"
     },
     {
       "section": "discussion",
@@ -35,7 +35,12 @@
     {
       "section": "figure_legends",
       "bytes": 27752,
-      "sha256_16": "eff01285149df2bf"
+      "sha256_16": "1443cf93721853d6"
+    },
+    {
+      "section": "references",
+      "bytes": 9317,
+      "sha256_16": "83948ecb4503f524"
     }
   ],
   "tables": [
@@ -78,8 +83,8 @@
     {
       "table": "Table 5b",
       "file": "table5b_ipd_interaction.md",
-      "bytes": 2705,
-      "sha256_16": "24fc5ced321760b9"
+      "bytes": 3975,
+      "sha256_16": "74898426e4025caf"
     },
     {
       "table": "Table 6",
@@ -95,5 +100,5 @@
     }
   ],
   "missing": [],
-  "assembled_bytes": 126196
+  "assembled_bytes": 137288
 }

@@ -4,8 +4,8 @@
   "gold": "survey svyglm variance headline (7 replicated positives among 80 tested judgeable pairs, of which 5 rule-covered; pair-level labels from baseline_predictions.jsonl gold3)",
   "F1_point": 0.4167,
   "F1_ci95": [
-    0.2439,
-    0.5769
+    0.1176,
+    0.6401
   ],
   "note": "supersedes v1.2-era bootstrap (F1=0.583, freq-variance gold, 71 pairs); recall CI is degenerate ([1,1]-like) by construction for a deterministic rule engine covering all rule-covered replicated pairs and must be labeled as such"
 }

@@ -79,6 +79,6 @@
 
 - **r10 相关"吸烟保护白内障"信号系编码伪影，已撤除**：原 NHANES current_smoking 参照组实为已戒烟者（SMQ040 跳转逻辑），修正后 current_smoking×dr_npdr replicated→uninformative；docs/bias_investigation_smoking_cataract.md 的混杂分析结论不再依赖该（伪）信号，但年龄混杂/反向因果/存活偏倚的机制讨论仍适用于文献层证据。
 - **KNHANES 吸烟与饮酒对全部不可测**：帧内无 BS3_1 与任何有效饮酒变量（官方字典：BA2_2_1=酒驾自行车、BA2_22=搭乘酒驾、BA2_12/13=安全带），相关配对置 NA 转 underpowered，待帧重建；尿酸（HE_UAScr=砷注释错误）与 CRP 对在眼病波不可测——KNHANES 层 15 个 underpowered 中 14 个属此类结构性不可测，包括负控 r01 与 B 级 r06。
-- **8/21 规则从未被任何层测到**（r07/r08/r09/r16/r17/r18/r21 B 级 + r19 C 级，见 rule_coverage_audit_R11.csv）；3 条 A 级规则（r10/r11/r13）被测到但 0 复证；唯一复证的规则仍为血糖×糖尿病眼病（r02/r03/r04，与暴露-结局定义存在包含关系，同义反复风险须在 Discussion 处理）。
+- **8/21 规则从未被任何层测到**（r07/r08/r09/r16/r17/r18/r21 B 级 + r19 C 级，见 rule_coverage_audit_R11.csv）；唯一 A 级规则 r11 被测到但 0 复证（r10/r13 已于 2026-10-16 分级审计降为 B 级，见 AGENT_AUDIT §二十六）；唯一复证的规则仍为血糖×糖尿病眼病（r02/r03/r04，与暴露-结局定义存在包含关系，同义反复风险须在 Discussion 处理）。
 - **跨库同对三态标签一致率 37.5%**（48 对中 18 对，修正前 60.4%）：NHANES vs KNHANES 的 gold 本身分歧远大于 coverage gap=0.001 所示；论文不得以 gap≈0 表述"泛化无落差"。
-- 基线与 G2 结论经修正 gold 双呈验证后不变（full_system 0.417→0.435 仍居首；G2=0.500 维持），但所有对外数字以 R11 修正口径为准、R5 口径仅作历史记录。
+- 基线与 G2 结论经修正 gold 双呈验证后不变（full_system 在 R11 修正 gold 上 F1=0.522、仍居首；G2=0.500 维持），但所有对外数字以 R11 修正口径为准、R5 口径仅作历史记录。2026-10-19 重跑 canonical 链后 headline 为 NHANES 16/6/0、KNHANES 15/5/0、CHARLS 4/0（上一轮 15/5 与 7/2 作废）。

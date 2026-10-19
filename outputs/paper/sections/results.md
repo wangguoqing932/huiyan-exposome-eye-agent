@@ -31,11 +31,21 @@ conclusion is drawn from it alone.
 
 Because the gap between 1.00 and 0.375 is the largest single lever on the
 headline figure, the sensitivity analysis (Table 3) reports four alternative
-rule sets. Restricting to evidence level A leaves 3 pairs, **none replicated**
+rule sets. Restricting to evidence level A leaves 1 pair, **not replicated**
 (conservative precision 0.000); levels A and B give 13 pairs, 4 replicated,
 **0.308**; excluding the test-set-leakage rule r22 and the negative control r01
 gives 16 pairs, 6 replicated, **0.375**. Replication is concentrated entirely
 outside the highest literature evidence tier.
+
+Modelling the same exposures continuously rather than as dichotomies reproduces
+this pattern rather than overturning it (Figure 4). Serum cotinine per standard
+deviation is unrelated to cataract (OR per SD 0.92, q = 0.31) and to late AMD
+(1.08, q = 0.53) in NHANES, so the smoking nulls are not an artefact of
+dichotomising self-reported exposure. BMI × cataract by contrast is significant
+per SD in KNHANES (1.077, 95% CI 1.034–1.122, q = 0.0014) and null in NHANES
+(1.030, q = 0.71); with BMI ≥ 25 affecting roughly a third of the Korean sample,
+the binary rule's null there partly reflects its pre-specified cut-point. Direction
+agreed with the rule in 19/24 NHANES and 9/10 KNHANES rule-relevant pairs.
 
 
 ## Cross-cohort transportability across eight ageing cohorts
@@ -181,31 +191,27 @@ alongside τ² here: on the log-odds-ratio scale the fitted τ² corresponds to
 cross-cohort ratio differences of only **1.24× to 2.13×**, and the high I² is
 driven by SHARE's very small standard error rather than by large absolute
 divergence, so using I² alone as a rejection criterion would partly be a
-sample-size penalty:
+sample-size penalty (Table 5).
 
-| Rule | k | Pooled OR (95% CI) | I² | Q p | Prediction interval | Regional subgroup difference |
-|---|---|---|---|---|---|---|
-| r02 self-reported diabetes → cataract | 4 | 1.95 (1.32–2.88) | 90.5% | <0.0001 | 0.30–12.63 | p = 0.0004 (same test as Q) |
-| r10 smoking → cataract | 4 | 0.84 (0.67–1.05) | 91.0% | <0.0001 | 0.30–2.31 | p < 0.0001 |
-| r20 smoking → vision impairment | 5 | 1.24 (1.03–1.48) | 93.8% | <0.0001 | 0.62–2.46 | p < 0.0001 |
-| r12 alcohol → cataract | 2 | 0.89 (0.75–1.06) | 79.5% | 0.027 | not computable | p = 0.027 (same test as Q) |
-| r13 BMI → cataract | 2 | 1.14 (0.91–1.41) | 79.5% | 0.027 | not computable | p = 0.027 (same test as Q) |
-
-**A person-level test does not reproduce the two-cohort heterogeneity.** The subgroup
-column above compares pooled per-cohort estimates, which weights each cohort once
-whatever its size and, at k = 2, is arithmetically the same statistic as Q. Stacking
-the cohorts and fitting a single model at the level of the participant, with an
-exposure × cohort interaction and standard errors clustered on the person, gives a
-different answer for the two-cohort rules (Table 5b): **r13 interaction p = 0.15**
-against a two-stage p of 0.027, and **r12 interaction p = 0.14** against 0.027. For
-the larger rules the two agree in direction and the person-level test is the less
-extreme — r02 p = 3.2 × 10⁻⁸, r10 p = 0.0022, r20 p = 2.4 × 10⁻²⁹. r11 is feasible
-in one cohort only and has no interaction to estimate. **The two-cohort heterogeneity
-in the table is therefore an artifact of equal weighting, not a property of the
-populations**: r13 pools SHARE (338,703 person-waves) with CRELES (5,191) on equal
-terms, and the smaller cohort's noise drives the heterogeneity statistic. This does
-not change the pooled estimates or the transportability verdicts, which rest on the
-pre-registered criteria; it changes what may be inferred from the subgroup column.
+**A person-level test does not reproduce the two-cohort heterogeneity.** The
+subgroup column in Table 5 compares pooled per-cohort estimates, which weights each
+cohort once whatever its size and, at k = 2, is arithmetically the same statistic as
+Q. Stacking the cohorts and fitting a single model at the level of the participant,
+with an exposure × cohort interaction and standard errors clustered on the person,
+gives a different answer for the two-cohort rules (Table 5b): **r13 interaction p =
+0.15** against a two-stage Q p of 0.027, and **r12 interaction p = 0.14** against
+0.027. For the larger rules both tests detect between-cohort heterogeneity — one-step
+interaction p = 3.2 × 10⁻⁸ (r02), 0.0022 (r10) and 2.4 × 10⁻²⁹ (r20), against Q p =
+6.9 × 10⁻⁷, 2.6 × 10⁻⁷ and 3.0 × 10⁻¹³ — so the conclusion at k > 2 does not depend
+on which test is used; the post hoc regional subgroup test is a coarser contrast and
+does not reach significance for r10 (p = 0.45). r11 is feasible in one cohort only
+and has no interaction to estimate. **At k = 2 the two-stage heterogeneity is
+therefore an artifact of equal weighting, not a property of the populations**: r13
+pools SHARE (338,703 person-waves) with CRELES (5,191) on equal terms, and the
+smaller cohort's noise drives the heterogeneity statistic. This does not change the
+pooled estimates or the transportability verdicts, which rest on the pre-registered
+criteria; it changes what may be inferred from the two-stage statistic when a rule
+is testable in two cohorts only.
 
 Two consequences follow. First, the pooled estimate for r10 is null
 (0.84, 0.67–1.05) while three cohorts agree with one another and SHARE does not
@@ -308,11 +314,11 @@ usually be shown to have had the power to do so.
 
 ## System performance
 
-Against the R11-corrected gold the full system attained F1 = 0.435 (P 0.294 /
-R 0.833, deterministic), ahead of LightRAG 0.327 ± 0.005, pure LLM
-0.301 ± 0.017 and naive RAG 0.080 ± 0.089 over five seeds (Figure 2); paired
+Against the R11-corrected gold the full system attained F1 = 0.522 (P 0.353 /
+R 1.000, deterministic), ahead of LightRAG 0.392 ± 0.007, pure LLM
+0.335 ± 0.010 and naive RAG 0.080 ± 0.110 over five seeds (Figure 2); paired
 McNemar was significant against pure LLM and naive RAG but not against LightRAG
-(p = 0.057–0.092). The precision of every method is low (0.10–0.29) because most
+(p = 0.057–0.092). The precision of every method is low (0.10–0.35) because most
 predicted-positive pairs are uninformative rather than contradicted — the same
 denominator effect seen at rule level. Figure S1 shows one worked case end to
 end and Figure S2 traces it through the three architectural layers.

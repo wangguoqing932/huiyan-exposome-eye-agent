@@ -2317,3 +2317,30 @@ table7_evidence_audit.md
 | 源漂移检测 | 无 | **逐源 SHA 复核** |
 
 **作者要求"由技能产出"，收效是可量化的：多一张表、四处更严的门。**
+
+---
+
+## 三十六、更正 §二十九/§三十：Table 5b 的"两阶段 p"列取错了变量（2026-10-19）
+
+`scripts/ipd_interaction.py` L167-172 读的是 `cohort_rule_results.csv` 按 rule
+第一行的 `q_primary`——即某个队列关联检验的 FDR q（`cohort_confirmatory.py`
+L251-259），不是两阶段检验。五个值逐一对上：r02 1.5278e-14（CLHLS q）、
+r10 9.507e-3（SHARE q）、r12 1.0（SHARE q）、r13 1.6937e-32（SHARE q）、
+r20 9.056e-4（SHARE q）。所以 §二十九 的"两阶段 p"整列对 5 个规则全错，不是
+r13 一处；r13 的 0.572 另系切点错误（§三十二，现行 0.1486）。
+
+正确的两阶段对照量是 Cochran Q（`cohort_heterogeneity.json`）：r02 6.94e-7、
+r10 2.63e-7、r12 0.027334、r13 0.027220、r20 3.03e-13；用
+`cohort_rule_results.csv` 的 beta/se 独立重算 Q 并换算 p 一致（差异来自 se
+舍入）。因此 §二十九/§三十 的两处表述作废："两阶段 p=1.69e-32 压倒性地证明
+两队列不同"不成立（真实 Q p=0.0272，仅略低于 0.05）；"r12 两阶段 p 恰为 1"
+不成立（真实 Q p=0.0273，k=2 时与 Table 5 的区域 subgroup 检验同值）。
+
+结论方向不变：k=2 的两阶段异质是等权伪影，一体化交互 0.149（r13）/ 0.141
+（r12）不显著；但强度表述必须降级，且 Table 5b 的列名与叙述改为 Q 口径。
+
+已修（2026-10-19）：`ipd_interaction.py` 改读 `Q_p`、字段改名
+`two_stage_het_q_p` 并重跑；`build_table5b_ipd.py` 列名/定义/叙述改为 Q 口径
+并重生成 `outputs/tables/table5b_ipd_interaction.md`；Results 内联重复的
+Table 5 删除（改为引用正式 Table 5），r13/r12 段落按 Q 口径重写。
+

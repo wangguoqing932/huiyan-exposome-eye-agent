@@ -1,6 +1,6 @@
 # Rule Rationale — 慧眼 huiyan v1.2（R5 评审后重写版，2026-10-14）
 
-> **数据源声明**：本文件唯一事实源为 `configs/rules.yaml`（**v1.2，sha256 5aee851d…，2026-10-12 冻结，不可改动**）。凡本文件历史版本、analysis_plan、评审报告与 yaml 冲突之处，**一律以 yaml 为准**。每条规则的 flag、方向、证据等级、severity、引文 DOI 均自 yaml 原样转录；证据性质标注（设计类型、引文-命题错配、文献反证、确证状态）来自 R5 评审报告（outputs/expert_review/R5_ophthalmology_clinical_2026-10-14.md、R5_epidemiology_methods_2026-10-14.md）的联网核实结论。
+> **数据源声明**：本文件唯一事实源为 `configs/rules.yaml`（**v1.2，sha256 95ebf0a9…（2026-10-19 引用归一化后；此前的 5aee851d 为 2026-10-12 冻结版），规则语义自 2026-10-12 起冻结**）。凡本文件历史版本、analysis_plan、评审报告与 yaml 冲突之处，**一律以 yaml 为准**。每条规则的 flag、方向、证据等级、severity、引文 DOI 均自 yaml 原样转录；证据性质标注（设计类型、引文-命题错配、文献反证、确证状态）来自 R5 评审报告（outputs/expert_review/R5_ophthalmology_clinical_2026-10-14.md、R5_epidemiology_methods_2026-10-14.md）的联网核实结论。
 > 旧版（2026-10-11）与本版的全部矛盾点见文末"与 v1.2 yaml 的差异审计"。
 
 ## 统计口径（自 yaml 逐条清点）
@@ -231,4 +231,4 @@ diabetes / hypertension / chronic_kidney_disease / elderly 四组，定义见 co
 | 16 | 定义性关联分层 | 无 | — | 新增"数据库复证的分层口径"节（hba1c/FG 切点=糖尿病诊断线；教科书级对 vs 非平凡对）（R5 P1-2） |
 | 17 | bmi_high 切点错配 | 无 | `bmi_high`=≥25 vs 引文肥胖 ≥30 | r13/r22 节新增错配声明（宽定义→向 null 稀释）（R5 P1-1） |
 
-*本文件为 R5 评审（2026-10-14）P1-4 处置产物；除本文件外未改动任何项目文件；configs/rules.yaml v1.2（sha 5aee851d…）保持冻结。*
+*本文件为 R5 评审（2026-10-14）P1-4 处置产物；除本文件外未改动任何项目文件；configs/rules.yaml v1.2 的规则语义自 2026-10-12 起冻结（当前 sha 95ebf0a9…，仅 2026-10-19 的引用标识符归一化与分级注释更新，字段未变）。*

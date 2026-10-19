@@ -53,24 +53,24 @@ exposure was replaced by a self-reported proxy.
 Visual loss in later life is common, and its dominant causes are chronic rather
 than acute. Global estimates of the magnitude and causes of vision impairment
 are compiled periodically and remain the subject of methodological debate
-[C016], and among the leading contributors in ageing populations are cataract,
+[1], and among the leading contributors in ageing populations are cataract,
 glaucoma, age-related macular degeneration and diabetic retinopathy. Each of the
 retinal and optic-nerve causes has been the subject of global prevalence
-projection — glaucoma to 2040 [C023], age-related macular degeneration with its
-associated disability burden [C021] — and diabetic retinopathy in particular is
+projection — glaucoma to 2040 [2], age-related macular degeneration with its
+associated disability burden [3] — and diabetic retinopathy in particular is
 a leading cause of vision impairment and blindness in working-age adults, with
-burden estimates now extending to the largest middle-income populations [C022].
+burden estimates now extending to the largest middle-income populations [4].
 Because these conditions are largely irreversible once advanced, the clinical
 value of screening lies in identifying people whose modifiable exposures place
 them at risk before vision is lost.
 
 That framing — that a person's risk is carried by a set of modifiable
-exposures rather than by a single factor — is the exposome concept [C020]. In
+exposures rather than by a single factor — is the exposome concept [5]. In
 ophthalmology the relevant exposome spans metabolic state, nutrition, lifestyle
 and environment: hyperglycaemia, smoking, alcohol intake, adiposity, and
 particulate or ultraviolet exposure have each been linked to one or more of the
 major eye diseases, with smoking and cataract among the better documented
-associations [C018]. The literature is nevertheless uneven. Associations are
+associations [6]. The literature is nevertheless uneven. Associations are
 reported for different outcomes, at different exposure thresholds, in
 populations with different age structures and different instruments for
 measuring both exposure and disease, and a rule distilled from one body of
@@ -129,9 +129,9 @@ should be collected.
 
 This is a retrospective, multi-cohort evaluation of a rule-based clinical
 decision-support system for ocular risk in older adults. The observational cohort
-analyses follow STROBE [C003], and the cross-cohort synthesis follows standard
+analyses follow STROBE [7], and the cross-cohort synthesis follows standard
 meta-analytic reporting (random-effects pooling with REML tau-squared, Cochran's
-Q, I-squared and prediction intervals). **TRIPOD+AI [C001] and DECIDE-AI [C002]
+Q, I-squared and prediction intervals). **TRIPOD+AI [8] and DECIDE-AI [9]
 are not applicable to this work and are not claimed**: both govern the reporting
 of prediction models with estimated coefficients and their evaluation, whereas
 this study evaluates deterministic rules taken from the literature, reports no
@@ -145,8 +145,8 @@ analyses were run. A **development** set of 134 literature-derived
 exposure–disease pairs was used to construct the rule base only. **Internal
 validation** used the US National Health and Nutrition Examination Survey.
 **External validation** used the Korea National Health and Nutrition Examination
-Survey [C014], one wave of the China Health and Retirement Longitudinal Study
-[C013], and — new in this report — eight population-based ageing cohorts on
+Survey [10], one wave of the China Health and Retirement Longitudinal Study
+[11], and — new in this report — eight population-based ageing cohorts on
 three continents.
 The eight-cohort layer was pre-registered, including its testable rule set, its
 per-cohort BMI cut-point, its covariate set and its transportability criterion,
@@ -165,20 +165,23 @@ that a rule asserts something about; all other pairs are exploratory.
 ## Cohort-layer data sources
 
 Eight cohorts were analysed from raw source files: the Survey of Health, Ageing
-and Retirement in Europe (SHARE) [C006], the US Health and Retirement Study
-(HRS) [C007], the English Longitudinal Study of Ageing (ELSA) [C008], the Korean
+and Retirement in Europe (SHARE) [12], the US Health and Retirement Study
+(HRS) [13], the English Longitudinal Study of Ageing (ELSA) [14], the Korean
 Longitudinal Study of Ageing (KLoSA), the Longitudinal Ageing Study in India
-(LASI) [C009], the Mexican Health and Aging Study (MHAS) [C010], the Chinese
+(LASI) [15], the Mexican Health and Aging Study (MHAS) [16], the Chinese
 Longitudinal Healthy Longevity Survey (CLHLS), and the Costa Rican Study on
 Longevity and Healthy Ageing (CRELES). CLHLS and CRELES are cited to their
-**data deposits** [C031, C032, C033]. An earlier version of this section claimed
+**data deposits** [17-19]. An earlier version of this section claimed
 none of the three could be cited, which was wrong twice over: a dataset is
 citable in its own right, and the search had covered only article indexes
 (Crossref, OpenAlex) and not the data repositories. KLoSA has no citable data
 deposit that could be located and is described by provider name only. In total **598,386
 unique person-wave records were analysed, from 285,878 participants** (unique
 person-waves: SHARE 338,703; LASI 73,408; CLHLS 72,744; HRS 42,946; KLoSA
-40,406; MHAS 15,217; ELSA 9,771; CRELES 5,191). SHARE distributes five
+40,406; MHAS 15,217; ELSA 9,771; CRELES 5,191). Table 1b gives the per-cohort
+denominators, prevalences and frame-missingness that every cohort-layer estimate
+is computed from; because it is derived from the analysis frames themselves, it
+cannot drift from the analysis. SHARE distributes five
 imputation replicates stacked as rows, so its raw row count (1,693,515) is five
 times its unique person-wave count; **replicate 1 is used for every descriptive
 and power calculation and the five are combined only by Rubin's rules for the
@@ -294,15 +297,15 @@ In the cohort layer each rule-relevant pair was estimated by logistic regression
 within cohort, with age and sex as covariates and wave fixed effects where more
 than one wave contributed, and with variance clustered by participant to account
 for repeated observations. SHARE supplies five imputation replicates; the model
-was fitted on each and the estimates combined by Rubin's rules [C015]. The
+was fitted on each and the estimates combined by Rubin's rules [20]. The
 prevalence gate and all descriptive statistics use the first replicate only, so
 that an imputation replicate is never counted as an independent person.
 
-Multiplicity was controlled by the Benjamini–Yekutieli procedure [C004], which
+Multiplicity was controlled by the Benjamini–Yekutieli procedure [21], which
 remains valid under arbitrary dependence, over two pre-registered families: a
 confirmatory family containing the rule-relevant pairs and an exploratory family
 containing every exposure–outcome pair actually tested in that cohort. Exact
-binomial intervals for proportions use the Clopper–Pearson method [C005].
+binomial intervals for proportions use the Clopper–Pearson method [22].
 
 Power was computed per pair rather than assumed. For each pair the minimum
 detectable odds ratio at 80% power was derived from the observed marginal
@@ -314,9 +317,9 @@ value.
 
 The system combines a deterministic rule engine, a knowledge-graph retrieval
 layer, and a language-model arbiter that produces a risk-graded, fully traceable
-report. It was compared against three baselines — a retrieval-only system, a
-plain language model, and a naive retrieval baseline — under five random seeds
-per method, with the language-model component held fixed so that differences
+report (Figure 1). It was compared against three baselines — a retrieval-only
+system, a plain language model, and a naive retrieval baseline — under five random
+seeds per method, with the language-model component held fixed so that differences
 reflect architecture rather than model choice. Paired comparisons used exact
 McNemar tests.
 
@@ -512,11 +515,21 @@ conclusion is drawn from it alone.
 
 Because the gap between 1.00 and 0.375 is the largest single lever on the
 headline figure, the sensitivity analysis (Table 3) reports four alternative
-rule sets. Restricting to evidence level A leaves 3 pairs, **none replicated**
+rule sets. Restricting to evidence level A leaves 1 pair, **not replicated**
 (conservative precision 0.000); levels A and B give 13 pairs, 4 replicated,
 **0.308**; excluding the test-set-leakage rule r22 and the negative control r01
 gives 16 pairs, 6 replicated, **0.375**. Replication is concentrated entirely
 outside the highest literature evidence tier.
+
+Modelling the same exposures continuously rather than as dichotomies reproduces
+this pattern rather than overturning it (Figure 4). Serum cotinine per standard
+deviation is unrelated to cataract (OR per SD 0.92, q = 0.31) and to late AMD
+(1.08, q = 0.53) in NHANES, so the smoking nulls are not an artefact of
+dichotomising self-reported exposure. BMI × cataract by contrast is significant
+per SD in KNHANES (1.077, 95% CI 1.034–1.122, q = 0.0014) and null in NHANES
+(1.030, q = 0.71); with BMI ≥ 25 affecting roughly a third of the Korean sample,
+the binary rule's null there partly reflects its pre-specified cut-point. Direction
+agreed with the rule in 19/24 NHANES and 9/10 KNHANES rule-relevant pairs.
 
 
 ## Cross-cohort transportability across eight ageing cohorts
@@ -662,31 +675,27 @@ alongside τ² here: on the log-odds-ratio scale the fitted τ² corresponds to
 cross-cohort ratio differences of only **1.24× to 2.13×**, and the high I² is
 driven by SHARE's very small standard error rather than by large absolute
 divergence, so using I² alone as a rejection criterion would partly be a
-sample-size penalty:
+sample-size penalty (Table 5).
 
-| Rule | k | Pooled OR (95% CI) | I² | Q p | Prediction interval | Regional subgroup difference |
-|---|---|---|---|---|---|---|
-| r02 self-reported diabetes → cataract | 4 | 1.95 (1.32–2.88) | 90.5% | <0.0001 | 0.30–12.63 | p = 0.0004 (same test as Q) |
-| r10 smoking → cataract | 4 | 0.84 (0.67–1.05) | 91.0% | <0.0001 | 0.30–2.31 | p < 0.0001 |
-| r20 smoking → vision impairment | 5 | 1.24 (1.03–1.48) | 93.8% | <0.0001 | 0.62–2.46 | p < 0.0001 |
-| r12 alcohol → cataract | 2 | 0.89 (0.75–1.06) | 79.5% | 0.027 | not computable | p = 0.027 (same test as Q) |
-| r13 BMI → cataract | 2 | 1.14 (0.91–1.41) | 79.5% | 0.027 | not computable | p = 0.027 (same test as Q) |
-
-**A person-level test does not reproduce the two-cohort heterogeneity.** The subgroup
-column above compares pooled per-cohort estimates, which weights each cohort once
-whatever its size and, at k = 2, is arithmetically the same statistic as Q. Stacking
-the cohorts and fitting a single model at the level of the participant, with an
-exposure × cohort interaction and standard errors clustered on the person, gives a
-different answer for the two-cohort rules (Table 5b): **r13 interaction p = 0.15**
-against a two-stage p of 0.027, and **r12 interaction p = 0.14** against 0.027. For
-the larger rules the two agree in direction and the person-level test is the less
-extreme — r02 p = 3.2 × 10⁻⁸, r10 p = 0.0022, r20 p = 2.4 × 10⁻²⁹. r11 is feasible
-in one cohort only and has no interaction to estimate. **The two-cohort heterogeneity
-in the table is therefore an artifact of equal weighting, not a property of the
-populations**: r13 pools SHARE (338,703 person-waves) with CRELES (5,191) on equal
-terms, and the smaller cohort's noise drives the heterogeneity statistic. This does
-not change the pooled estimates or the transportability verdicts, which rest on the
-pre-registered criteria; it changes what may be inferred from the subgroup column.
+**A person-level test does not reproduce the two-cohort heterogeneity.** The
+subgroup column in Table 5 compares pooled per-cohort estimates, which weights each
+cohort once whatever its size and, at k = 2, is arithmetically the same statistic as
+Q. Stacking the cohorts and fitting a single model at the level of the participant,
+with an exposure × cohort interaction and standard errors clustered on the person,
+gives a different answer for the two-cohort rules (Table 5b): **r13 interaction p =
+0.15** against a two-stage Q p of 0.027, and **r12 interaction p = 0.14** against
+0.027. For the larger rules both tests detect between-cohort heterogeneity — one-step
+interaction p = 3.2 × 10⁻⁸ (r02), 0.0022 (r10) and 2.4 × 10⁻²⁹ (r20), against Q p =
+6.9 × 10⁻⁷, 2.6 × 10⁻⁷ and 3.0 × 10⁻¹³ — so the conclusion at k > 2 does not depend
+on which test is used; the post hoc regional subgroup test is a coarser contrast and
+does not reach significance for r10 (p = 0.45). r11 is feasible in one cohort only
+and has no interaction to estimate. **At k = 2 the two-stage heterogeneity is
+therefore an artifact of equal weighting, not a property of the populations**: r13
+pools SHARE (338,703 person-waves) with CRELES (5,191) on equal terms, and the
+smaller cohort's noise drives the heterogeneity statistic. This does not change the
+pooled estimates or the transportability verdicts, which rest on the pre-registered
+criteria; it changes what may be inferred from the two-stage statistic when a rule
+is testable in two cohorts only.
 
 Two consequences follow. First, the pooled estimate for r10 is null
 (0.84, 0.67–1.05) while three cohorts agree with one another and SHARE does not
@@ -789,11 +798,11 @@ usually be shown to have had the power to do so.
 
 ## System performance
 
-Against the R11-corrected gold the full system attained F1 = 0.435 (P 0.294 /
-R 0.833, deterministic), ahead of LightRAG 0.327 ± 0.005, pure LLM
-0.301 ± 0.017 and naive RAG 0.080 ± 0.089 over five seeds (Figure 2); paired
+Against the R11-corrected gold the full system attained F1 = 0.522 (P 0.353 /
+R 1.000, deterministic), ahead of LightRAG 0.392 ± 0.007, pure LLM
+0.335 ± 0.010 and naive RAG 0.080 ± 0.110 over five seeds (Figure 2); paired
 McNemar was significant against pure LLM and naive RAG but not against LightRAG
-(p = 0.057–0.092). The precision of every method is low (0.10–0.29) because most
+(p = 0.057–0.092). The precision of every method is low (0.10–0.35) because most
 predicted-positive pairs are uninformative rather than contradicted — the same
 denominator effect seen at rule level. Figure S1 shows one worked case end to
 end and Figure S2 traces it through the three architectural layers.
@@ -856,8 +865,8 @@ distinguish them; what it can do is bound them.
 populations of that age, associations estimated cross-sectionally are conditioned
 on having survived to be sampled, and the depletion of susceptible individuals
 biases risk-factor associations in ways that are well recognised in geriatric
-epidemiology, both through comorbidity-adjusted risk models [C028] and through
-survivorship selection on the trait itself [C029]. Smokers die earlier, so among
+epidemiology, both through comorbidity-adjusted risk models [23] and through
+survivorship selection on the trait itself [24]. Smokers die earlier, so among
 the extremely old the surviving smokers are a selected minority; a protective
 cross-sectional estimate is one of the forms that selection can take. This
 explanation predicts that the protective direction should strengthen with
@@ -877,7 +886,7 @@ effect.
 
 **Genuine effect modification.** Cataract is not one disease. Nuclear, cortical
 and posterior subcapsular opacities have different risk-factor profiles, and the
-pooled literature association is a weighted average over them [C018]. If the
+pooled literature association is a weighted average over them [6]. If the
 subtype mix differs between cohorts — which it does, with different sun-exposure
 and diabetes prevalences — then the same exposure can produce different marginal
 associations without any bias. This explanation is the only one that would
@@ -896,19 +905,19 @@ The same caution applies to the alcohol–cataract rule, where CLHLS gave a
 protective estimate (0.809, 0.70–0.93) that SHARE did not reproduce (0.963). The
 reasons people abstain differ systematically between populations and include
 illness and prior dependence, so "abstainers" are not a comparable exposure
-category across cohorts [C030]; a protective association with drinking is the
+category across cohorts [25]; a protective association with drinking is the
 expected direction when those who quit did so because they were unwell.
 
 ## Why the pooled estimate is the wrong summary here
 
 Heterogeneity of this magnitude is not a nuisance to be absorbed. With I² of
-90–94% across every multi-cohort rule [C026], the fixed- or random-effects
+90–94% across every multi-cohort rule [26], the fixed- or random-effects
 average estimates a quantity that no population in the analysis has, and the
 confidence interval around it understates the uncertainty a new population
 faces. The prediction interval is the appropriate summary because it answers the
 question a clinician or a health service actually asks — what should we expect
 here? — and in this layer **every prediction interval includes the null**:
-r02 0.30–12.63, r10 0.30–2.31, r20 0.62–2.46 [C027]. Leave-one-cohort-out
+r02 0.30–12.63, r10 0.30–2.31, r20 0.62–2.46 [27]. Leave-one-cohort-out
 analysis, reported in full in Supplementary S4, qualifies this reading and
 corrects an earlier claim of ours: removing SHARE collapses I² from 91.0% to
 0.0% and moves the pooled estimate to 0.747 (0.66–0.84), so the heterogeneity is
@@ -1222,6 +1231,38 @@ pipeline, not predictive-model performance, and is reported as such.
 
 ---
 
+# References
+
+1. Keel S, Cieza A. Rising to the challenge: estimates of the magnitude and causes of vision impairment and blindness. The Lancet Global Health. 2021;9(2):e100-e101. doi:10.1016/s2214-109x(21)00008-5. <!-- C016 | n=1 | cross_verified | retracted=no | abstract=yes | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1016/s2214-109x(21)00008-5 -->
+2. Tham YC, Li X, Wong TY, Quigley HA, Aung T, Cheng CY. Global Prevalence of Glaucoma and Projections of Glaucoma Burden through 2040. Ophthalmology. 2014;121(11):2081-2090. doi:10.1016/j.ophtha.2014.05.013. <!-- C023 | n=2 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1016/j.ophtha.2014.05.013 -->
+3. Jonas JB. Global prevalence of age-related macular degeneration. The Lancet Global Health. 2014;2(2):e65-e66. doi:10.1016/s2214-109x(13)70163-3. <!-- C021 | n=3 | cross_verified | retracted=no | abstract=yes | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1016/s2214-109x(13)70163-3 -->
+4. Song P, Yu J, Chan KY, Τheodoratou E, Rudan I. Prevalence, risk factors and burden of diabetic retinopathy in China: a systematic review and meta-analysis. Journal of Global Health. 2018;8(1):010803. doi:10.7189/jogh.08.010803. <!-- C022 | n=4 | cross_verified | retracted=no | abstract=yes | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.7189/jogh.08.010803 -->
+5. Wild CP. Complementing the Genome with an “Exposome”: The Outstanding Challenge of Environmental Exposure Measurement in Molecular Epidemiology. Cancer Epidemiology Biomarkers & Prevention. 2005;14(8):1847-1850. doi:10.1158/1055-9965.epi-05-0456. <!-- C020 | n=5 | cross_verified | retracted=no | abstract=yes | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1158/1055-9965.epi-05-0456 -->
+6. Ye J, He J, Wang C, Wu H, Shi X, Zhang H, et al. Smoking and Risk of Age-Related Cataract: A Meta-Analysis. Investigative Opthalmology & Visual Science. 2012;53(7):3885. doi:10.1167/iovs.12-9820. <!-- C018 | n=6 | cross_verified | retracted=no | abstract=yes | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1167/iovs.12-9820 -->
+7. Vandenbroucke JP. Strengthening the Reporting of Observational Studies in Epidemiology (STROBE). Epidemiology. 2007;18(6):805-835. doi:10.1097/ede.0b013e3181577511. <!-- C003 | n=7 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1097/ede.0b013e3181577511 -->
+8. Cohen JF. TRIPOD+AI: an updated reporting guideline for clinical prediction models. BMJ. 2024;385:q824. doi:10.1136/bmj.q824. <!-- C001 | n=8 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1136/bmj.q824 -->
+9. The DECIDE-AI Steering Group. DECIDE-AI: new reporting guidelines to bridge the development-to-implementation gap in clinical artificial intelligence. Nature Medicine. 2021;27(2):186-187. doi:10.1038/s41591-021-01229-5. <!-- C002 | n=9 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1038/s41591-021-01229-5 -->
+10. Kweon S. Data Resource Profile: The Korea National Health and Nutrition Examination Survey (KNHANES). International Journal of Epidemiology. 2014;43(1):69-77. doi:10.1093/ije/dyt228. <!-- C014 | n=10 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1093/ije/dyt228 -->
+11. Zhao Y. Cohort Profile: The China Health and Retirement Longitudinal Study (CHARLS). International Journal of Epidemiology. 2012;43(1):61-68. doi:10.1093/ije/dys203. <!-- C013 | n=11 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1093/ije/dys203 -->
+12. Börsch-Supan A. Data Resource Profile: The Survey of Health, Ageing and Retirement in Europe (SHARE). International Journal of Epidemiology. 2013;42(4):992-1001. doi:10.1093/ije/dyt088. <!-- C006 | n=12 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1093/ije/dyt088 -->
+13. Sonnega AJ, Faul JD, Ofstedal MB, Langa KM, Phillips JW, Weir DR. Cohort Profile: the Health and Retirement Study (HRS). International Journal of Epidemiology. 2014;43(2):576-585. doi:10.1093/ije/dyu067. <!-- C007 | n=13 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1093/ije/dyu067 -->
+14. Steptoe A. Cohort Profile: The English Longitudinal Study of Ageing. International Journal of Epidemiology. 2012;42(6):1640-1648. doi:10.1093/ije/dys168. <!-- C008 | n=14 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1093/ije/dys168 -->
+15. Perianayagam A. Cohort Profile: The Longitudinal Ageing Study in India (LASI). International Journal of Epidemiology. 2022;51(4):e167-e176. doi:10.1093/ije/dyab266. <!-- C009 | n=15 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1093/ije/dyab266 -->
+16. Wong R. Cohort Profile: The Mexican Health and Aging Study (MHAS). International Journal of Epidemiology. 2015;46(2):e2. doi:10.1093/ije/dyu263. <!-- C010 | n=16 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1093/ije/dyu263 -->
+17. The Chinese Longitudinal Healthy Longevity Survey (CLHLS)-Longitudinal Data（1998-2011）. Peking University Opendata Dataverse. 2015. doi:10.18170/DVN/MKB1LF. <!-- C031 | n=17 | cross_verified | retracted=no | abstract=no | vol/pages=no | authors=pool | sources=datacite | doi:10.18170/DVN/MKB1LF -->
+18. The Costa Rican Longevity and Healthy Aging Study (CRELES). Harvard Dataverse. 2025. doi:10.7910/DVN/7AUOAO. <!-- C032 | n=18 | cross_verified | retracted=no | abstract=no | vol/pages=no | authors=pool | sources=datacite | doi:10.7910/DVN/7AUOAO -->
+19. CRELES: Costa Rican Longevity and Healthy Aging Study, 2005 (Costa Rica Estudio de Longevidad y Envejecimiento Saludable). ICPSR - Interuniversity Consortium for Political and Social Research. 2010. doi:10.3886/icpsr26681.v2. <!-- C033 | n=19 | cross_verified | retracted=no | abstract=no | vol/pages=no | authors=pool | sources=datacite | doi:10.3886/icpsr26681.v2 -->
+20. Rubin DB. Multiple Imputation for Nonresponse in Surveys. Wiley Series in Probability and Statistics. 1987. doi:10.1002/9780470316696. <!-- C015 | n=20 | cross_verified | retracted=no | abstract=no | vol/pages=no | authors=pool | sources=crossref+openalex | doi:10.1002/9780470316696 -->
+21. Benjamini Y. The control of the false discovery rate in multiple testing under dependency. The Annals of Statistics. 2001;29(4):1165-1188. doi:10.1214/aos/1013699998. <!-- C004 | n=21 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1214/aos/1013699998 -->
+22. Clopper CJ. THE USE OF CONFIDENCE OR FIDUCIAL LIMITS ILLUSTRATED IN THE CASE OF THE BINOMIAL. Biometrika. 1934;26(4):404. doi:10.1093/biomet/26.4.404. <!-- C005 | n=22 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1093/biomet/26.4.404 -->
+23. Pressley JC, Patrick CH. Frailty Bias in Comorbidity Risk Adjustments of Community-Dwelling Elderly Populations. Journal of Clinical Epidemiology. 1999;52(8):753-760. doi:10.1016/s0895-4356(99)00056-6. <!-- C028 | n=23 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1016/s0895-4356(99)00056-6 -->
+24. Burgess S, Zhou A. Genetic predictors of traits in elderly subjects: risk of survival bias and reverse causation. European Heart Journal. 2024;45(24):2155-2157. doi:10.1093/eurheartj/ehae295. <!-- C029 | n=24 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1093/eurheartj/ehae295 -->
+25. Rosansky JA, Rosenberg H. A systematic review of reasons for abstinence from alcohol reported by lifelong abstainers, current abstainers and former problem-drinkers. Drug and Alcohol Review. 2020;39(7):960-974. doi:10.1111/dar.13119. <!-- C030 | n=25 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1111/dar.13119 -->
+26. Higgins JPT, Thompson SG. Quantifying heterogeneity in a meta-analysis. Statistics in Medicine. 2002;21(11):1539-1558. doi:10.1002/sim.1186. <!-- C026 | n=26 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1002/sim.1186 -->
+27. Spineli LM, Pandis N. Prediction interval in random-effects meta-analysis. American Journal of Orthodontics and Dentofacial Orthopedics. 2020;157(4):586-588. doi:10.1016/j.ajodo.2019.12.011. <!-- C027 | n=27 | cross_verified | retracted=no | abstract=no | vol/pages=yes | authors=pool+openalex | sources=crossref+openalex | doi:10.1016/j.ajodo.2019.12.011 -->
+
+---
+
 # Figure Legends
 
 **Figure 1. System architecture of 慧眼.**
@@ -1242,9 +1283,9 @@ Abbreviations: LLM = large language model; KG = knowledge graph; YAML = YAML Ain
 
 **Figure 2. 慧眼 (v1.2) vs three LLM baselines on NHANES pairs, scored against the R11-corrected gold (5 seeds).**
 
-Against the R11-corrected three-state gold (survey svyglm variance), the full 慧眼 system attains F1 = 0.435 (P 0.294 / R 0.833, deterministic across seeds), ahead of lightrag 0.327 ± 0.005, pure_llm 0.301 ± 0.017 and naive_rag 0.080 ± 0.089 (5 seeds each). Paired McNemar is significant against pure_llm (p = 0.0043–0.0118) and naive_rag (p = 0.00024–0.0129) but NOT against lightrag (p = 0.057–0.092). The precision of every method is low (0.10–0.29) because most predicted-positive pairs are uninformative under the three-state standard rather than contradicting it. The pre-expansion v1.1 ruleset (0.111 on the R5 gold) is not shown in this panel; see the internal-layer tables.
+Against the R11-corrected three-state gold (survey svyglm variance), the full 慧眼 system attains F1 = 0.522 (P 0.353 / R 1.000, deterministic across seeds), ahead of lightrag 0.392 ± 0.007, pure_llm 0.335 ± 0.010 and naive_rag 0.080 ± 0.110 (5 seeds each). Paired McNemar is significant against pure_llm (p = 0.0043–0.0118) and naive_rag (p = 0.00024–0.0129) but NOT against lightrag (p = 0.057–0.092). The precision of every method is low (0.10–0.35) because most predicted-positive pairs are uninformative under the three-state standard rather than contradicting it. The pre-expansion v1.1 ruleset (0.111 on the R5 gold) is not shown in this panel; see the internal-layer tables.
 
-(**a**) F1 by method (5 seeds, mean ± SD); R11-corrected gold. Forest plot of per-seed F1 aggregated to mean ± SD per method. Order: full_system 0.435 (deterministic) > lightrag 0.327 > pure_llm 0.301 > naive_rag 0.080. The pre-expansion v1.1 ruleset is NOT plotted here: it was scored on the R5 gold, and its source row is not in this figure's source CSV. Any comparison against it must be made from the internal-layer tables, not from this panel.
+(**a**) F1 by method (5 seeds, mean ± SD); R11-corrected gold. Forest plot of per-seed F1 aggregated to mean ± SD per method. Order: full_system 0.522 (deterministic) > lightrag 0.392 > pure_llm 0.335 > naive_rag 0.080. The pre-expansion v1.1 ruleset is NOT plotted here: it was scored on the R5 gold, and its source row is not in this figure's source CSV. Any comparison against it must be made from the internal-layer tables, not from this panel.
 
 Statistics: NHANES tested pairs; gold = three-state labels under survey svyglm variance after the R11 operationalisation corrections; 5 seeds per method; full_system is deterministic and all five runs are identical; Paired McNemar exact; * p<0.05; n.s. p>=0.057 (vs lightrag); v1.1 replay row is scored on the R5 gold and is not like-for-like with the R11-gold bars.
 
@@ -1254,9 +1295,9 @@ Abbreviations: F1 = F1 score; P = precision; R = recall; LLM = large language mo
 
 **Figure 3. Rule-level evaluation under the R11 three-state protocol: precision, coverage and replication by evidence level.**
 
-Under the pre-registered three-state standard, the declared-domain precision (replicated / (replicated + contradicted)) is 1.00 in both countries, but the conservative precision (replicated / all rule-relevant testable pairs) is 0.375 (NHANES, 95% CI 0.152-0.646) and 0.333 (KNHANES, 0.118-0.616) — the gap is the single largest lever on the headline number, which is why both are shown. Rule coverage P(testable | rule exists) is high: 0.889 NHANES / 0.882 KNHANES. Replication is concentrated entirely outside evidence level A: 0/3 for level A in BOTH countries, 4/13 for levels A+B, 6/19 and 5/16 overall. No rule was contradicted in either country.
+Under the pre-registered three-state standard, the declared-domain precision (replicated / (replicated + contradicted)) is 1.00 in both countries, but the conservative precision (replicated / all rule-relevant testable pairs) is 0.375 (NHANES, 95% CI 0.152-0.646) and 0.333 (KNHANES, 0.118-0.616) — the gap is the single largest lever on the headline number, which is why both are shown. Rule coverage P(testable | rule exists) is high: 0.889 NHANES / 0.882 KNHANES. Replication is concentrated entirely outside evidence level A: 0/1 for level A in BOTH countries, 4/13 for levels A+B, 6/19 and 5/16 overall. No rule was contradicted in either country.
 
-(**a**) Dual precision, coverage, and replication by evidence level (both layers). Forest plot with one row per quantity, both countries shown as separate labelled rows. Rows: declared-domain precision (NHANES 1.00 [0.541,1.000]; KNHANES 1.00 [0.478,1.000]); conservative precision (0.375 [0.152,0.646]; 0.333 [0.118,0.616]); rule coverage (0.889; 0.882); replication rate at evidence level A (0/3 = 0.00 both); level A+B (4/13 = 0.308 both); all rules (NHANES 6/19 = 0.316; KNHANES 5/16 = 0.312). All are proportions on a 0-1 axis with exact binomial intervals.
+(**a**) Dual precision, coverage, and replication by evidence level (both layers). Forest plot with one row per quantity, both countries shown as separate labelled rows. Rows: declared-domain precision (NHANES 1.00 [0.541,1.000]; KNHANES 1.00 [0.478,1.000]); conservative precision (0.375 [0.152,0.646]; 0.333 [0.118,0.616]); rule coverage (0.889; 0.882); replication rate at evidence level A (0/1 = 0.00 both); level A+B (4/13 = 0.308 both); all rules (NHANES 6/19 = 0.316; KNHANES 5/16 = 0.312). All are proportions on a 0-1 axis with exact binomial intervals.
 
 Statistics: Unit = (exposure flag, outcome item) pair; rule-relevant pairs only; declared-domain precision = replicated / (replicated + contradicted); conservative = replicated / all rule-relevant testable pairs; coverage = P(testable | a rule exists), analysis_plan section 0.4 correction 17b; intervals are Clopper-Pearson exact; contradicted = 0 in both countries.
 
@@ -1357,15 +1398,15 @@ LightRAG = 轻量检索增强生成；GPT = 生成式预训练变换器。
 ---
 
 **图 2。慧眼（v1.2）与三个 LLM 基线在 NHANES 配对上的比较（针对 R11 更正后的金标准，5 个随机种子）。**
-在 R11 更正后的三态金标准下（survey svyglm 方差），完整慧眼系统的 F1 = 0.435
-（精确率 0.294 / 召回率 0.833，跨种子完全一致），高于 lightrag 0.327 ± 0.005、
-pure_llm 0.301 ± 0.017 与 naive_rag 0.080 ± 0.089（各方法 5 个种子）。
+在 R11 更正后的三态金标准下（survey svyglm 方差），完整慧眼系统的 F1 = 0.522
+（精确率 0.353 / 召回率 1.000，跨种子完全一致），高于 lightrag 0.392 ± 0.007、
+pure_llm 0.335 ± 0.010 与 naive_rag 0.080 ± 0.110（各方法 5 个种子）。
 配对 McNemar 检验相对 pure_llm（p = 0.0043–0.0118）与 naive_rag（p = 0.00024–0.0129）
-显著，但相对 lightrag **不显著**（p = 0.057–0.092）。所有方法的精确率都低（0.10–0.29），
+显著，但相对 lightrag **不显著**（p = 0.057–0.092）。所有方法的精确率都低（0.10–0.35），
 原因是多数被预测为正的配对在三态标准下属于"无信息"而非"相反"。扩张前的 v1.1 规则集
 在 R5 金标准上得 0.111；该柱按要求同时呈现，但处于不同的金标准上，图中已如此标注。
 （**a**）各方法的 F1（5 个种子，均值 ± 标准差；R11 更正金标准）。森林图按方法汇总，
-顺序为 full_system 0.435（确定性）> lightrag 0.327 > pure_llm 0.301 > naive_rag 0.080。
+顺序为 full_system 0.522（确定性）> lightrag 0.392 > pure_llm 0.335 > naive_rag 0.080。
 扩张前的 v1.1 规则集**未绘于本图**：其评分基于 R5 金标准，且该行不在本图的 source CSV 中；与它的比较须依据内部层表格，而非本面板。
 统计说明：NHANES 已检验配对；金标准为 R11 操作化更正后、survey svyglm 方差下的三态标签；
 每方法 5 个种子；full_system 为确定性，五次运行完全相同；配对 McNemar 精确检验；
@@ -1381,12 +1422,12 @@ NHANES = 美国国家健康与营养调查；R5/R11 = 内部分析修订版本�
 0.375（NHANES，95% CI 0.152–0.646）与 0.333（KNHANES，0.118–0.616）——
 两者之差是headline数值最大的单一杠杆，因此必须并列呈现。规则覆盖度
 P(可检验 | 规则存在) 很高：NHANES 0.889 / KNHANES 0.882。
-复现完全集中在证据等级 A 之外：两国在等级 A 均为 0/3，等级 A+B 为 4/13，
+复现完全集中在证据等级 A 之外：两国在等级 A 均为 0/1，等级 A+B 为 4/13，
 总体分别为 6/19 与 5/16。两国均无规则被否证。
 （**a**）双精确率、覆盖度与按证据等级的复现率（两层）。森林图每个数量一行，两国分列。
 各行数值：声明域精确率（NHANES 1.00 [0.541,1.000]；KNHANES 1.00 [0.478,1.000]）；
 保守精确率（0.375 [0.152,0.646]；0.333 [0.118,0.616]）；规则覆盖度（0.889；0.882）；
-证据等级 A 的复现率（两国均 0/3 = 0.00）；等级 A+B（两国均 4/13 = 0.308）；
+证据等级 A 的复现率（两国均 0/1 = 0.00）；等级 A+B（两国均 4/13 = 0.308）；
 全部规则（NHANES 6/19 = 0.316；KNHANES 5/16 = 0.312）。均为 0–1 轴上的比例，
 区间为精确二项区间。
 统计说明：分析单元 = （暴露 flag，结局条目）配对，仅规则相关配对；
@@ -1639,14 +1680,26 @@ Random-effects pooling with REML τ², computed in Python/SciPy (no external met
 
 # Table 5b
 
-| Rule | Cohorts | Person-waves | One-step interaction p | Two-stage subgroup p | Agreement |
+| Rule | Cohorts | Person-waves | One-step interaction p | Two-stage heterogeneity (Q) p | Agreement |
 |---|---|---|---|---|---|
-| `r02_hyperglycemia_x_cataract` | 4 | 431,026 | 3.2e-08 | 1.53e-14 | both significant |
-| `r10_smoking_x_cataract` | 4 | 165,365 | 0.00223 | 0.00951 | both significant |
+| `r02_hyperglycemia_x_cataract` | 4 | 431,026 | 3.2e-08 | 6.94e-07 | both significant |
+| `r10_smoking_x_cataract` | 4 | 165,365 | 0.00223 | 2.63e-07 | both significant |
 | `r11_smoking_x_amd_late` | — | 3,991 | not estimable | — | not fittable after cleaning: x_nunique=2 y_nunique=2 cohort_nunique=1 n=3991 |
-| `r12_alcohol_x_cataract` | 2 | 131,271 | 0.141 | 1 | neither |
-| `r13_bmi_x_cataract` | 2 | 342,157 | 0.149 | 1.69e-32 | **DISAGREE** |
-| `r20_smoking_x_vi_mod_severe` | 5 | 212,705 | 2.38e-29 | 0.000906 | both significant |
+| `r12_alcohol_x_cataract` | 2 | 131,271 | 0.141 | 0.0273 | **DISAGREE** |
+| `r13_bmi_x_cataract` | 2 | 342,157 | 0.149 | 0.0272 | **DISAGREE** |
+| `r20_smoking_x_vi_mod_severe` | 5 | 212,705 | 2.38e-29 | 3.03e-13 | both significant |
+
+**Definitions.** One-step: a single logistic model on stacked
+participants with an exposure x cohort interaction and standard
+errors clustered on the person; the p-value is the joint test of
+all interaction terms. Two-stage: Cochran Q heterogeneity test on
+the per-cohort estimates from random-effects pooling. At k = 2, Q
+is statistically identical to the regional subgroup test in Table
+5, so the two-stage p quoted in the text is the same number. For
+k > 2 the Table 5 subgroup test is a post hoc regional contrast
+with fewer degrees of freedom and is not the same null as a
+cohort-level interaction; the two need not agree (r10: regional
+p = 0.45, Q p = 2.6e-07).
 
 
 ## What this table is
@@ -1658,23 +1711,30 @@ and pooling per-cohort estimates gives a cohort of 5,191 the same weight as one 
 the level of the person with an exposure x cohort interaction.
 
 Every person enters once, so cohort size sets its own weight, and the interaction
-term asks the question directly.
+term asks the question directly. The two-stage comparator is the Cochran Q test of
+between-cohort heterogeneity; for k > 2 it is not the same null as the post hoc
+regional subgroup test in Table 5 (see the definitions below).
 
 ## What it changes
 
-**r13 (BMI to cataract) is the substantive change.** The two-stage test reports
-p = 1.69e-32 -- apparently overwhelming evidence that the two cohorts differ --
-while the one-step test reports p = 0.57, i.e. no evidence of a difference at all.
-The two-stage figure is the weighting artifact the reviewers predicted: pooling
+**r13 (BMI to cataract) is the substantive change.** The two-stage Q test reports
+p = 0.027 -- evidence of a difference at the conventional threshold -- while the
+one-step test reports p = 0.149, i.e. no evidence of a difference. At k = 2 the
+two-stage statistic gives each cohort one weight regardless of size, so pooling
 SHARE (338,703 person-waves) and CRELES (5,191) on equal terms lets the small
-cohort's noise dominate, and the heterogeneity test then reports that noise.
+cohort's noise dominate the heterogeneity statistic; the person-level model, which
+weights by person, does not reproduce it.
 
-**r12 (alcohol to cataract) shows the k = 2 artifact directly.** Its two-stage
-p-value is exactly 1, because with two cohorts the subgroup comparison and the
-Q test are the same statistic. The one-step test gives 0.14.
+**r12 (alcohol to cataract) shows the same k = 2 pattern.** Its two-stage Q p is
+0.027 (at k = 2 identical to the regional subgroup statistic), while the one-step
+test gives 0.141. The disagreement at k = 2 is about weighting, not about whether
+the populations differ.
 
-**r02, r10 and r20 remain heterogeneous under both**, with the one-step p-values
-less extreme -- as expected once cohorts are weighted by their size.
+**For r02, r10 and r20 both tests detect heterogeneity** (one-step p = 3.2e-08,
+0.00223 and 2.38e-29; Q p = 6.9e-07, 2.6e-07 and 3.0e-13), so no conclusion there
+depends on the choice of test. The post hoc regional subgroup test is a coarser
+null and does not reach significance for r10 (p = 0.45), consistent with the
+leave-one-out result that r10's heterogeneity is driven by SHARE, not by region.
 
 **r11 cannot be tested this way at all**: it is feasible in one cohort only, so
 there is no interaction to estimate. That is consistent with what the manuscript

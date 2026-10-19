@@ -2,9 +2,9 @@
 
 **唯一目标（R12 起约束）**：用 medical-agent skill 搭建暴露组×眼病智能体，并写出论文。仓库一切内容服务于这条主线；史档已归位 `docs/history/`，一次性脚本见 `scripts/README.md` 注册表 D 组。
 
-## Project Status（2026-10-16，R12 整理轮后）
+## Project Status（2026-10-19，合规修复轮后）
 
-📋 **Planner 0–4.5、Executor 0–6 完成；Writer 7_1–7_8 已确认，7_9（投稿包）未过机械六项检查——投稿包修复前勿投。**
+📋 **Planner 0–4.5、Executor 0–6 完成且四门全绿（phase3 引用门重验、索引 freshness 重建绑定）；Writer 7_8 已按当前规则与数据重组装（137,288 B，含 References 27 条 / 9 表 / 8 图例）；7_1、7_2、7_4、7_5 因修正后重开待作者复核；7_9 唯一阻塞项在作者侧（目标期刊与通讯作者信息）。**
 
 **agent 三层现状**：
 - 规则层确定；**患者因素升级已修复并有单测锁定**（`tests/test_synthetic_regression.py::test_escalation_fixed`，修复前 272 测试 0 触发 → 现 17 触发且范围受限）；
@@ -13,9 +13,9 @@
 - ⚠️ **仲裁层非确定**：温度钉 0.0 仍有约 1/12 运行改级（原因在提供方），`confidence` 由规则层独算不反映仲裁犹豫（docs/AGENT_AUDIT.md §十四）；
 - G3/G4/G5 负结果路径已归档（docs/archive_g3g4g5/，M8）；推理层禁止再投入。
 
-**R5 主口径 headline**（详见 `outputs/README_baseline_predictions.md`）：NHANES 5 复证/0 反证 CP [0.478,1.0]；KNHANES 2/0；CHARLS 0 信息性对；full_system F1 0.417 > 纯 LLM 基线（McNemar 显著）；G2 定格 0.500；**v1.1/v1.2 双呈义务**（回放 F1=0.111）。
+**R11 主口径 headline**（2026-10-19 重跑；详见 `outputs/README_baseline_predictions.md`）：NHANES 16 规则对 / 6 复证 / 0 反证（CP [0.541,1.0]）；KNHANES 15 / 5 / 0（[0.478,1.0]）；CHARLS 4 对全 uninformative；full_system F1 = 0.522（R11 修正 gold，5 seeds）> 纯 LLM 基线（McNemar 显著；对 lightrag 不显著 p=0.057–0.092）；G2 定格 0.500；**v1.1/v1.2 双呈义务**（回放 F1=0.111）。
 
-**论文两条线（均未投出）**：① 八队列测量学稿 `outputs/paper/manuscript.md`；② 三库复现稿 `outputs/paper/manuscript_R11.md`。**投稿包六项机械缺陷未修**（无 References 节/zip 图件错位/markdown-only/TIFF 80MB/封面信 DRAFT/期刊要求未核）——见 2026-10-16 桌拒诊断。
+**论文两条线（均未投出）**：① 八队列测量学稿 `outputs/paper/manuscript.md`（7_8 已重组装：References 27 条、9 表、6 主图 + S1/S2；r13/Table 5b 的“两阶段 p”列已从单队列 q 更正为 Cochran Q，见 AGENT_AUDIT §三十六）；② 三库复现稿 `outputs/paper/manuscript_R11.md`（仍为 10-15 草稿、未走 writer 流水线，内含旧“A 级=3”表述，暂勿投）。投稿包：旧版已归档 `outputs/submission/_superseded_20261019/`；7_9 在作者提供期刊/作者信息前保持 fail-loud 拒绝打包（封面信 5 处未填字段）。
 
 ## Quick Navigation
 

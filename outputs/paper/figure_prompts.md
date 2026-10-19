@@ -1,9 +1,9 @@
 # Schematic Figure Prompts (writer phase 7_3, v3.0)
 
 BioRender-style prompts for AI image generation of the project's schematic
-figures (Figure 1 architecture flowchart). Two model variants are provided —
-pick per the author's available tools, iterate, and paste final renders into
-`outputs/figures/manual/` for the figure-assembly step.
+figures (Figure 1 architecture flowchart, Figure S2 reasoning trace). Two model
+variants are provided — pick per the author's available tools, iterate, and paste
+final renders into `outputs/figures/manual/` for the figure-assembly step.
 
 ## 1. Figure 1 — System architecture flowchart
 
@@ -32,9 +32,9 @@ highest available resolution; "style: flat illustration" if the UI offers it.
 
 **建议参数：** 画幅 16:9（双栏图可用 3:2）；最高分辨率；风格选「扁平插画」。
 
-## 2. Figure 5 — Three-layer reasoning trace
+## 2. Figure S2 — Three-layer reasoning trace
 
-Figure 5 shows HOW a single conclusion is produced and audited, so its job is
+Figure S2 shows HOW a single conclusion is produced and audited, so its job is
 traceability rather than architecture: three swim-lanes, one per layer, with the
 hand-off between them visible.
 
@@ -89,10 +89,10 @@ hand-off between them visible.
 1. 第一版先确认**布局结构**（左输入 → 中间三层 → 右输出）再调配色。
 2. 图中文字若出错，优先在提示词末尾加 "text labels must be spelled
    exactly as given" 或改用矢量工具手动替换文字层。
-3. 保持与 Figure 2–5 的配色一致（见 figure contract `color_palette`）。
+3. 保持与 Figure 1–6 及 S1–S2 的配色一致（见 figure contract `color_palette`）。
 4. 最终图需导出 PNG ≥600 DPI 或 SVG，供组图使用。
 
 ---
 Generated for project 「慧眼」 by build_schematic_prompts.py.
 Customize bracketed slots before author submission.
-Figure 5 prompts added locally: the generator hardcodes Figure 1 and does not scan contracts for `archetype: schematic_led_composite`.
+Figure S2 prompts added locally: the generator hardcodes Figure 1 and does not scan contracts for `archetype: schematic_led_composite`.

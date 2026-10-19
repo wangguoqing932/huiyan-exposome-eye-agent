@@ -212,6 +212,22 @@ OGTT/FPG 定义的糖尿病患病率 11–13%——HbA1c 对中国人群表型�
 **§6 降级路径适用**：CHARLS 无 PSU/strata，用调查权重 + 模型方差（**非 svyglm**），
 此降级为显式声明而非默认等同。
 
+### 0.6 2026-10-19 合规修复轮：数字与口径更新（非预注册变更，仅记录）
+
+- **分级审计终态**：A1 / B15 / C5（唯一 A 级为 r11；r10/r13 于 2026-10-16 降 B；此前 11 条降级批
+  次已在 AGENT_AUDIT §十九/§二十一整批作废并回退）。§4 预注册第四态（direction_review）因此
+  只有 r11 一个作用对象，§0 中"3 条 A 级（r10/r11/r13）"的表述作废。
+- **结论性数字以 2026-10-19 重跑 canonical 链为准**（规则集未变、阈值未改；差异来自 v1.2 规则集
+  + survey 方差主口径 + KNHANES 帧重建后的完整判定）：NHANES rule-relevant tested 16 / replicated
+  6 / contradicted 0（CP [0.541, 1.0]）；KNHANES 15 / 5 / 0（[0.478, 1.0]）；CHARLS 4 / 0
+  （precision 未定义）。§0.3 的 15/5 与 7/2 为上一轮口径，已被取代。
+- **基线**（R11 修正 gold，5 seeds）：full_system F1 = 0.522（P 0.353 / R 1.000）、lightrag
+  0.392 ± 0.007、pure_llm 0.335 ± 0.010、naive_rag 0.080 ± 0.110；McNemar 对 pure_llm 与
+  naive_rag 显著、对 lightrag 不显著（p = 0.057–0.092）。§0.3 的 0.435 为上一轮数字。
+- **Table 5b 两阶段列更正**：原实现误取单队列 `q_primary`（非两阶段检验）；现行对照量为
+  Cochran Q（r12 0.0273、r13 0.0272；one-step 0.141 / 0.149），见 AGENT_AUDIT §三十六。
+  预注册阈值、三态定义、覆盖度公式与统计模型均未改动。
+
 ## 1. 分析单元与定义域（分母纪律）
 
 - 单元 = (A-flag, B-item) 对。

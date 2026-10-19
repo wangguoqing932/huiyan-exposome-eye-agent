@@ -53,7 +53,10 @@ citable in its own right, and the search had covered only article indexes
 deposit that could be located and is described by provider name only. In total **598,386
 unique person-wave records were analysed, from 285,878 participants** (unique
 person-waves: SHARE 338,703; LASI 73,408; CLHLS 72,744; HRS 42,946; KLoSA
-40,406; MHAS 15,217; ELSA 9,771; CRELES 5,191). SHARE distributes five
+40,406; MHAS 15,217; ELSA 9,771; CRELES 5,191). Table 1b gives the per-cohort
+denominators, prevalences and frame-missingness that every cohort-layer estimate
+is computed from; because it is derived from the analysis frames themselves, it
+cannot drift from the analysis. SHARE distributes five
 imputation replicates stacked as rows, so its raw row count (1,693,515) is five
 times its unique person-wave count; **replicate 1 is used for every descriptive
 and power calculation and the five are combined only by Rubin's rules for the
@@ -189,9 +192,9 @@ value.
 
 The system combines a deterministic rule engine, a knowledge-graph retrieval
 layer, and a language-model arbiter that produces a risk-graded, fully traceable
-report. It was compared against three baselines — a retrieval-only system, a
-plain language model, and a naive retrieval baseline — under five random seeds
-per method, with the language-model component held fixed so that differences
+report (Figure 1). It was compared against three baselines — a retrieval-only
+system, a plain language model, and a naive retrieval baseline — under five random
+seeds per method, with the language-model component held fixed so that differences
 reflect architecture rather than model choice. Paired comparisons used exact
 McNemar tests.
 
