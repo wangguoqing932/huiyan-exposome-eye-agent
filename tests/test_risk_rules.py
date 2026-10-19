@@ -31,6 +31,26 @@ def test_mechanism_coverage():
     assert used == mech, f"未覆盖: {sorted(mech - used)}；越界: {sorted(used - mech)}"
 
 def test_smoking_amd():
+    """smoking -> late AMD resolves to the rule layer's high.
+
+    This assertion has been changed twice, and the history is the point.
+
+    On 2026-10-16 an audit read the per-chunk `linked_rules` field, found that
+    r11's linked chunks were 1 x B and 3 x C, and concluded the rule's declared
+    grade A was unsupported. The assertion was lowered to `medium` accordingly.
+
+    That audit was wrong. **All 159 AAO PPP chunks in the corpus have
+    `linked_rules` empty** -- 0 of 159 -- while 34 of them are grade A. The
+    corpus does contain the guideline support, and the agent retrieves it: for
+    smoking x late AMD it surfaces `[A] AAO PPP AMD - Section 9`, whose text
+    reads "Risk factors for the development of advanced AMD include smoking ...
+    Cigarette smoking has been identified as the primary modifiable risk factor
+    in numerous studies on advanced AMD."
+
+    So "no link" was read as "no evidence", an empty field was taken as a
+    substantive claim, and a correct grade was lowered because of it. r11 is
+    restored to A/high and the assertion follows it.
+    """
     a = resolve_entity_a("current_smoking")
     b = resolve_entity_b("amd_late")
     assert a and b

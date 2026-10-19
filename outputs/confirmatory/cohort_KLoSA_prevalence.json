@@ -1,0 +1,351 @@
+{
+  "diagnostics": {
+    "cohort": "KLoSA",
+    "waves": [
+      {
+        "wave": 1,
+        "status": "ok",
+        "rows": 10254,
+        "file": "str01_e.dta",
+        "vars_found": [
+          "hhid",
+          "pid",
+          "w01A002_age",
+          "w01C011",
+          "w01C075",
+          "w01C076",
+          "w01C077",
+          "w01C078",
+          "w01C080",
+          "w01C116",
+          "w01C117",
+          "w01bmi",
+          "w01gender1"
+        ]
+      },
+      {
+        "wave": 2,
+        "status": "ok",
+        "rows": 8688,
+        "file": "str02_e.dta",
+        "vars_found": [
+          "hhid",
+          "pid",
+          "w02A002_age",
+          "w02C011",
+          "w02C075",
+          "w02C076",
+          "w02C077",
+          "w02C078",
+          "w02C080",
+          "w02C116",
+          "w02C117",
+          "w02alc",
+          "w02bmi",
+          "w02gender1"
+        ]
+      },
+      {
+        "wave": 4,
+        "status": "ok",
+        "rows": 7486,
+        "file": "str04_e.dta",
+        "vars_found": [
+          "hhid",
+          "pid",
+          "w04A002_age",
+          "w04C011",
+          "w04C075",
+          "w04C076",
+          "w04C077",
+          "w04C078",
+          "w04C080",
+          "w04C116",
+          "w04C117",
+          "w04alc",
+          "w04bmi",
+          "w04gender1"
+        ]
+      },
+      {
+        "wave": 6,
+        "status": "ok",
+        "rows": 7490,
+        "file": "str06_e.dta",
+        "vars_found": [
+          "hhid",
+          "pid",
+          "w06A002_age",
+          "w06C011",
+          "w06C075",
+          "w06C076",
+          "w06C077",
+          "w06C078",
+          "w06C080",
+          "w06C116",
+          "w06C117",
+          "w06alc",
+          "w06bmi",
+          "w06gender1"
+        ]
+      },
+      {
+        "wave": 8,
+        "status": "ok",
+        "rows": 6488,
+        "file": "str08_e.dta",
+        "vars_found": [
+          "hhid",
+          "pid",
+          "w08A002_age",
+          "w08C011",
+          "w08C075",
+          "w08C076",
+          "w08C077",
+          "w08C078",
+          "w08C080",
+          "w08C116",
+          "w08C117",
+          "w08alc",
+          "w08bmi",
+          "w08gender1"
+        ]
+      }
+    ]
+  },
+  "gate": {
+    "cohort": "KLoSA",
+    "n_rows": 40406,
+    "flags": {
+      "bmi_high_25": {
+        "n": 39459,
+        "prevalence": 0.2306,
+        "hard_band": [
+          0.05,
+          0.8
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.15,
+          0.6
+        ],
+        "within_typical": true
+      },
+      "bmi_high_30": {
+        "n": 39459,
+        "prevalence": 0.0145,
+        "hard_band": [
+          0.005,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.03,
+          0.45
+        ],
+        "within_typical": false
+      },
+      "current_smoking": {
+        "n": 40404,
+        "prevalence": 0.1417,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.05,
+          0.35
+        ],
+        "within_typical": true
+      },
+      "diabetes": {
+        "n": 30469,
+        "prevalence": 0.0543,
+        "hard_band": [
+          0.01,
+          0.5
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.04,
+          0.35
+        ],
+        "within_typical": true
+      },
+      "vision_impairment_moderate": {
+        "n": 40262,
+        "prevalence": 0.2095,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.03,
+          0.35
+        ],
+        "within_typical": true
+      },
+      "vision_impairment_severe": {
+        "n": 40262,
+        "prevalence": 0.0178,
+        "hard_band": [
+          0.0005,
+          0.25
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.005,
+          0.1
+        ],
+        "within_typical": true
+      }
+    },
+    "imputation_replicates": [
+      1
+    ],
+    "rows_per_replicate": 40406,
+    "gate_passed": true,
+    "failed": [],
+    "outside_typical": [
+      "bmi_high_30"
+    ],
+    "per_wave": {
+      "1": {
+        "bmi_high_25": {
+          "n": 9991,
+          "prevalence": 0.228
+        },
+        "bmi_high_30": {
+          "n": 9991,
+          "prevalence": 0.0165
+        },
+        "current_smoking": {
+          "n": 10252,
+          "prevalence": 0.1928
+        },
+        "diabetes": {
+          "n": 10253,
+          "prevalence": 0.1192
+        },
+        "vision_impairment_moderate": {
+          "n": 10229,
+          "prevalence": 0.2275
+        },
+        "vision_impairment_severe": {
+          "n": 10229,
+          "prevalence": 0.0267
+        }
+      },
+      "2": {
+        "bmi_high_25": {
+          "n": 8502,
+          "prevalence": 0.2162
+        },
+        "bmi_high_30": {
+          "n": 8502,
+          "prevalence": 0.0158
+        },
+        "current_smoking": {
+          "n": 8688,
+          "prevalence": 0.1821
+        },
+        "diabetes": {
+          "n": 7640,
+          "prevalence": 0.0215
+        },
+        "vision_impairment_moderate": {
+          "n": 8666,
+          "prevalence": 0.2487
+        },
+        "vision_impairment_severe": {
+          "n": 8666,
+          "prevalence": 0.0181
+        }
+      },
+      "4": {
+        "bmi_high_25": {
+          "n": 7230,
+          "prevalence": 0.2328
+        },
+        "bmi_high_30": {
+          "n": 7230,
+          "prevalence": 0.0136
+        },
+        "current_smoking": {
+          "n": 7486,
+          "prevalence": 0.1604
+        },
+        "diabetes": {
+          "n": 6345,
+          "prevalence": 0.0208
+        },
+        "vision_impairment_moderate": {
+          "n": 7456,
+          "prevalence": 0.1866
+        },
+        "vision_impairment_severe": {
+          "n": 7456,
+          "prevalence": 0.011
+        }
+      },
+      "6": {
+        "bmi_high_25": {
+          "n": 7322,
+          "prevalence": 0.2372
+        },
+        "bmi_high_30": {
+          "n": 7322,
+          "prevalence": 0.0123
+        },
+        "current_smoking": {
+          "n": 7490,
+          "prevalence": 0.08
+        },
+        "diabetes": {
+          "n": 6231,
+          "prevalence": 0.022
+        },
+        "vision_impairment_moderate": {
+          "n": 7447,
+          "prevalence": 0.1868
+        },
+        "vision_impairment_severe": {
+          "n": 7447,
+          "prevalence": 0.0134
+        }
+      },
+      "8": {
+        "bmi_high_25": {
+          "n": 6414,
+          "prevalence": 0.2437
+        },
+        "bmi_high_30": {
+          "n": 6414,
+          "prevalence": 0.0136
+        },
+        "current_smoking": {
+          "n": 6488,
+          "prevalence": 0.0563
+        },
+        "vision_impairment_moderate": {
+          "n": 6464,
+          "prevalence": 0.1808
+        },
+        "vision_impairment_severe": {
+          "n": 6464,
+          "prevalence": 0.0162
+        }
+      }
+    },
+    "wave_outliers": [],
+    "age_context": {
+      "n": 40406,
+      "mean": 65.7,
+      "min": 45.0,
+      "max": 107.0,
+      "pct_60plus": 0.6725
+    }
+  }
+}

@@ -115,7 +115,7 @@ def main() -> int:
         if r["status"] == "tested" else "not_tested", axis=1)
     quarantine, n_rev = direction_audit_and_block(res, rules, "CHARLS")
     if not quarantine:
-        metrics = compute_metrics_v11(res)
+        metrics = compute_metrics_v11(res, "cohort")
         print(json.dumps(metrics, ensure_ascii=False, indent=2))
         out = ROOT / "outputs" / "confirmatory"
         out.mkdir(parents=True, exist_ok=True)

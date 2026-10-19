@@ -1,0 +1,131 @@
+# Figure contract: Figure 6 — continuous (per-1-SD) dose-response, rule-relevant pairs
+# Project: huiyan (慧眼) — NEW in R11 (2026-10-15)
+#
+# Why this figure exists: the binary rule layer dichotomises every exposure at a
+# clinical cut-point, so a null there could be an artefact of the cut-point
+# rather than an absent association. Re-fitting every exposure standardised to
+# per-1-SD answers that directly, and it is the analysis that qualifies the
+# headline result in two opposite directions:
+#   * the smoking nulls SURVIVE an objective biomarker (serum cotinine),
+#     so they are not a self-report measurement artefact;
+#   * BMI x cataract becomes detectable per SD in KNHANES (OR/SD 1.077,
+#     q=0.0014) while staying null in NHANES, so for that one level-A rule the
+#     binary null is partly a cut-point effect.
+# Values are OR per 1 SD from survey svyglm (strata/PSU), same covariates and
+# same two-family FDR as the binary layer. Tautological pairs are excluded
+# (continuous IOP regressed on the "elevated IOP" flag returns OR = inf).
+
+figure_id: figure6_dose_response
+title: "Continuous (per-1-SD) dose-response for rule-relevant pairs, survey-weighted"
+figure_number: 4
+manuscript_section: Results → continuous dose-response
+
+core_conclusion: >-
+  Modelling exposures continuously reproduces the binary layer's pattern rather
+  than overturning it. Serum cotinine per SD is unrelated to cataract (OR/SD 0.92,
+  q=0.31) and to late AMD (1.08, q=0.53) in NHANES, so the smoking nulls are not
+  created by dichotomising self-reported exposure. BMI x cataract, by contrast, is
+  significant per SD in KNHANES (1.077, 95% CI 1.034-1.122, q=0.0014) and null in
+  NHANES (1.030, q=0.71): with BMI >= 25 affecting roughly a third of the KNHANES
+  sample, that rule's binary null partly reflects the pre-specified cut-point.
+  Direction agreed with the rule in 19/24 NHANES and 9/10 KNHANES rule-relevant
+  pairs.
+
+archetype: quantitative_grid
+
+panels:
+  - id: panel_a_or_per_sd
+    role: primary
+    layout: full_width
+    title: "OR per 1 SD for rule-relevant pairs, NHANES and KNHANES"
+    content: >-
+      Forest plot, one row per (exposure, outcome) pair labelled with its layer,
+      sorted by OR per SD within layer. Rows span the glycaemic pairs (highest
+      OR/SD: HbA1c-retinopathy 1.96 NHANES / 1.98 KNHANES) down to the
+      around-null behavioural pairs (serum cotinine-cataract 0.92, BMI-cataract
+      1.03 NHANES) and the opposite-direction lipid rows (total cholesterol
+      -retinopathy 0.71 KNHANES). Rows with q<0.05 carry a significance marker.
+    plot_type: forest
+    x_axis: OR per 1 SD (95% CI)
+    annotations:
+      - "same covariates and two-family FDR as the binary layer; survey svyglm (strata/PSU)"
+      - "tautological pairs excluded: continuous IOP vs the 'elevated IOP' flag returns OR=inf"
+      - "NHANES n=24 rule-relevant pairs, KNHANES n=10"
+      - "opposite-direction lipid rows are shown for completeness and are not causal claims"
+
+backend:
+  value: python
+  lock: true
+  fallback_policy: stop_and_report
+dependencies:
+  - matplotlib >= 3.7
+  - numpy
+
+export:
+  dimensions_mm: [180, 150]
+  dpi: 600
+  formats: [svg, pdf, tiff, png]
+  editable_text: true
+  svg_fonttype: none
+  pdf_fonttype: 42
+  font_type: arial
+  font_size_range_pt: [5, 11]
+  color_mode: cmyk_friendly
+
+style:
+  theme: nmi_pastel
+  font_family: Arial
+  font_size_pt: 6
+  axes_linewidth: 0.8
+
+color_palette:
+  name: NMI_pastel
+  note: "rows coloured by layer; direction is read from the position relative to OR=1"
+
+source_data:
+  csv_path: outputs/figures/source_data/figure6_dose_response.csv
+  schema:
+    - column: method
+      note: "exposure · outcome"
+    - column: dataset
+      values: [NHANES, KNHANES]
+    - column: estimate
+      note: "OR per 1 SD"
+    - column: ci_low
+    - column: ci_high
+    - column: q
+    - column: n
+    - column: significant
+  # Supporting sources (comments only — `additional_files` is not permitted by
+  # figure_contract.schema.json):
+  #   outputs/confirmatory/dose_response_matrix.csv
+  #   outputs/confirmatory/dose_response_svyglm.csv
+  #   outputs/confirmatory/dose_response_summary.json
+
+review_risks:
+  - id: cutpoint_qualifier
+    risk: "BMI x cataract being detectable per SD in KNHANES means 'all level-A rules fail' is imprecise"
+    mitigation: "state the exact wording — all level-A rules fail as dichotomised at their pre-specified cut-points, and one of the three is detectable per SD in one of two countries"
+  - id: opposite_direction_lipids
+    risk: "total cholesterol is inversely associated with retinopathy and cataract, which is not biologically causal"
+    mitigation: "present as evidence of confounding/reverse causation by health-system contact, not as a finding"
+  - id: multiple_pairs
+    risk: "34 rows invite cherry-picking"
+    mitigation: "all rule-relevant rows are plotted, not a selected subset"
+
+legend:
+  position: below
+  font_size_pt: 6
+  items:
+    - "OR per 1 standard deviation, survey svyglm (strata/PSU), same adjustment set as the binary layer"
+    - "rule-relevant pairs only; all of them are shown"
+    - "* q<0.05 within the pre-registered confirmatory family"
+    - "tautological pairs excluded; see analysis_plan section 18.2"
+
+accessibility:
+  alt_text: >-
+    Forest plot of odds ratios per one standard deviation for rule-relevant
+    exposure-outcome pairs in NHANES and KNHANES, showing large glycaemic
+    associations, near-null smoking associations including the objective
+    cotinine biomarker, and inverse lipid associations.
+  color_blind_safe: true

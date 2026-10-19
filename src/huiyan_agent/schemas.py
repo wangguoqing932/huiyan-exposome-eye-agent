@@ -101,6 +101,20 @@ class RiskAssessment(BaseModel):
     signals: list[RiskSignal] = Field(default_factory=list)
     confidence: float = 0.0        # 数值置信度 [0,1]（streamlit 契约: float(confidence)）
     confidence_score: float = 0.0  # 同 confidence（语义别名，供评估脚本使用）
+    # 仲裁层自陈的置信度；None 表示未使用仲裁层。
+    #
+    # 需要独立字段的原因：`confidence` 完全由规则层算出（risk_rules.py 的
+    # strength + agreement + evidence_confidence），**仲裁的结果不进入那个式子**，
+    # 所以它结构上无法反映仲裁的犹豫——实测一个在不同运行间 medium/high 摇摆的
+    # 配对与两个始终稳定的配对，三者 `confidence` 同为 0.60。
+    # 单独存放仲裁的自陈置信度，既不改 `confidence` 的既有语义
+    # （streamlit 的 float(confidence) 契约不变），又让"仲裁有多确定"可读可测。
+    arbiter_confidence: float | None = None
+    arbiter_rationale: str | None = None
+    # 仲裁建议的等级。在 arbiter_authority="advisory" 下，risk_level 保持规则层的值，
+    # 这里记录仲裁原本想改成什么——既保留它的判断供人看，又不让它改最终输出。
+    # 见 safety_agent.SafetyAgentConfig.arbiter_authority 的说明。
+    arbiter_suggested_level: str | None = None
 
 
 class SafetyReport(BaseModel):

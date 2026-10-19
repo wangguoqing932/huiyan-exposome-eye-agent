@@ -1,0 +1,30 @@
+
+============================================================
+NHANES confirmatory (analysis_plan v1.1)
+============================================================
+[audit] 2 A-level pair(s) with OR<1 flagged direction_review (plan §4 standard):
+    bmi_high x cataract_any: OR=0.986 [ns (q=1.00)]
+    current_smoking x cataract_any: OR=0.698 [ns (q=0.75)]
+[metrics] D5: excluded 18 non-judgeable pairs from denominator
+{
+  "rule_pairs_tested": 14,
+  "replicated": 7,
+  "contradicted": 0,
+  "uninformative": 7,
+  "separation": 0,
+  "precision_rule": 1.0,
+  "precision_rule_ci95": [
+    0.59,
+    1.0
+  ],
+  "coverage": 0.23,
+  "uncovered_significant": 2,
+  "uncovered_pairs": 47,
+  "negative_control_pairs": 1,
+  "negative_control_outcome": {
+    "uninformative": 1
+  }
+}
+
+[evaluate] KNHANES and cohort layers: implement using same framework
+[evaluate] with build_knhanes_exposures/outcomes (fixed cutoffs) + cohort outcomes

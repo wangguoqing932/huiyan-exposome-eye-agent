@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-12（lightrag 更新于 2026-10-14）",
   "gold": "nhanes_confirmatory.csv gold3 (v1.2), positive=replicated",
-  "note": "LLM baselines on local qwen3.8-27b (thinking disabled, temp=0.7, seed 11, 0 failures each); commandcode DeepSeek weekly quota 429 until 2026-10-14; full_system deterministic rule engine",
+  "note": "LLM baselines on local qwen3.8-27b (thinking disabled, temp=0.7, seed 11, 0 failures each); commandcode DeepSeek weekly quota 429 until 2026-10-14; full_system deterministic rule engine；lightrag 于 2026-10-14 在重建索引上重跑（seed 11，0 失败）",
   "baselines": {
     "pure_llm": {
       "provider": "local:qwen3.8-27b",
@@ -27,14 +27,15 @@
     },
     "lightrag": {
       "provider": "local:qwen3.8-27b",
-      "P": 0.16129032258064516,
+      "P": 0.16666666666666666,
       "R": 0.7142857142857143,
-      "F1": 0.2631578947368421,
+      "F1": 0.2702702702702703,
       "TP": 5,
-      "FP": 26,
+      "FP": 25,
       "FN": 2,
-      "n_yes": 31,
-      "failures": 0
+      "n_yes": 30,
+      "failures": 0,
+      "note": "2026-10-14 在重建索引（注记覆盖 52%）上重跑；与上一代仅 1 对翻转（crp_elevated×dr_npdr: YES→NO）"
     },
     "full_system": {
       "provider": "deepseek:legacy",

@@ -272,9 +272,27 @@ exposure_id,exposure_name,aliases,category,active_mechanisms,flags,evidence_sour
 
 **验收**：sens ≥ 0.70，spec ≥ 0.80；**并报告泛化落差 generalization gap = 内部指标 − 外部指标**（高危敏感度 gap ≤ 0.10 为优，> 0.10 触发 triage）。
 
-### Phase 4：盲法专家评估（n = 8 cases × 3 experts）
+### Phase 4：盲法专家评估（n = 8 cases × 3 experts）—— **未进行**
 
-**验收**：系统-专家 κ ≥ 0.6；Fleiss κ ≥ 0.6。
+**原验收标准**：系统-专家 κ ≥ 0.6；Fleiss κ ≥ 0.6。
+
+**实际状态（2026-10-16 据实补记）：该阶段从未开展。**
+
+- 未招募专家、未收集任何评分，**因此没有任何 κ 值**
+- `outputs/figures/source_data/figure3_expert_agreement.csv` 中留有明确记录：
+  `NOT_COLLECTABLE: 4-expert blind panel was never conducted in this project.
+  Fabricating expert ratings would constitute research fraud.`
+- 原 figure3 契约（专家一致性）已被 `figure3_rule_evaluation` 取代，
+  图 3 改为呈现确证三态结果
+- **稿件全文不含 expert / kappa / blinded panel 任何表述**（已 grep 确认），
+  故不影响已报告的结论
+
+**对本项目的影响**：四阶段验证中 Phase 1–3 已完成，
+Phase 4 缺失意味着**系统输出未经人类专家盲法核验**，
+"与专家判断一致性"这一主张**在本项目中无证据支持，不得写入论文**。
+
+**若日后要补做**：需 8 个案例 × 3 位眼科专家、盲法、预先注册评分表与 κ 阈值；
+在此之前任何 κ 数值都不得出现在任何产物中。
 
 ---
 

@@ -1,4 +1,2 @@
-﻿entity_a,entity_b,layer,action,OR_nhanes,p,q_bhy,gold3
-hba1c_elevated,retinopathy_any,rule_engine,r03/r04 match,6.069920208333704,2.849905299907751e-54,9.80741928631811e-52,replicated
-hba1c_elevated,dr_any+dr_pdr,rules_yaml,evidence_level=B direction=risk_up,,,,
-hba1c_elevated,dr_pdr,rules_yaml,r04 severity=low,,,,
+﻿entity_a,entity_b,layer,action,OR_nhanes,OR_low,OR_high,p,q_bhy,gold3,n,n_pos,variance,source
+hyperglycemia,cataract_any,rule_engine,r02_hyperglycemia_x_cataract,1.5965016711415112,1.2831441850243963,1.986384395226151,0.0011486078174259,0.0129040447638925,replicated,6510,952,survey svyglm (strata/PSU),"R11 (variable_map v2, 2026-10-15)"

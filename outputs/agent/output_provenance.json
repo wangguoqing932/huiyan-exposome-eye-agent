@@ -1,0 +1,2833 @@
+{
+  "examined": 358,
+  "without_named_generator": [
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/direction_review_charls.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/direction_review_knhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/direction_review_nhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/agent/rule_citation_abstracts.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/baseline_predictions_preR5_archive.jsonl",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/baseline_predictions_valid.jsonl",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/cohorts/RESULTS_COHORT.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_CLHLS_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_CRELES_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_ELSA_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_HRS_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_KLoSA_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_LASI_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_MHAS_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_SHARE_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/direction_review_charls.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/direction_review_knhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/direction_review_nhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_CRELES.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_ELSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_HRS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_KLoSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_LASI.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_MHAS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_SHARE.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_CRELES.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_ELSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_HRS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_KLoSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_LASI.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_MHAS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_SHARE.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/power_analysis_knhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/power_analysis_nhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_CRELES.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_ELSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_HRS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_KLoSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_LASI.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_MHAS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_SHARE.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/demo_cases.jsonl",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/.r6_tmp_stats.pkl",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_ai_llm_evaluation_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_biostatistics_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_epidemiology_methods_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_FIXLOG_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_ophthalmology_clinical_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_research_integrity_audit_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_SUMMARY_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R6_fix_verification_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R7_lit_validation_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R8_perf_optimization_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R9_semantic_layer_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/charls_pair_metrics.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/charls_pair_results.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/generalization_gap_pairs.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/knhanes_pair_metrics.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/knhanes_pair_results.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/nhanes_pair_metrics.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/nhanes_pair_results.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure1_architecture.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure2_performance.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure3_expert_agreement.yaml.superseded_R11",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure3_rule_evaluation.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure7_power_mde.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure8_cohort_transportability.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/legacy/generate_figures_R11.py.archived",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/source_data/.gitkeep",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1158334049.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1198993018.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1286228933.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1360658556.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1478417237.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1519865425.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1577282774.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1646518318.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1738409140.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_2058614843.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_2538936900.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_2876787853.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_2884949006.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3163378187.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3332192435.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3537865348.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_354900629.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3644441907.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3970813889.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_4278268586.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5708561556.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5732833690.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5827859678.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5877199425.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5924483984.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_6213959250.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_6677769720.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_674728978.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7238478382.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7486606034.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7768895295.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_781476512.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7847528063.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7879996286.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7916229882.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8069481500.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8081214553.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8195671213.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_840108421.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8616796096.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8793236672.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8971390844.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9029119987.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9139927813.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9203947346.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9670088379.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9686049488.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_968860690.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/intro_6277166276.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/intro_7470895356.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/intro_9996292504.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1002_9780470316696.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1002_sim.1186.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_j.ajodo.2019.12.011.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_j.crad.2022.09.131.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_j.ophtha.2014.05.013.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_s0895-4356(99)00056-6.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_s2214-109x(13)70163-3.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_s2214-109x(21)00008-5.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1038_s41591-021-01229-5.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_biomet_26.4.404.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_eurheartj_ehae295.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyab266.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dys168.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dys203.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyt088.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyt228.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyu067.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyu263.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1097_ede.0b013e3181577511.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1111_dar.13119.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1136_bmj.39386.490150.94.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1136_bmj.q824.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1158_1055-9965.epi-05-0456.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1167_iovs.12-9820.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1214_aos_1013699998.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.12771_emj.2024.e31.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1920_ps.ifs.2024.1192.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.3389_fpubh.2024.1352937.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.3390_nu15061446.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.3886_icpsr26681.v2.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.4178_epih_e2014002.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.5204_thesis.eprints.105510.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.7189_jogh.08.010803.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/figure_table_qc_report.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/figure_visual_inspection.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/KNOWN_ISSUES_figure_export.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/sections/declarations.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/README_baseline_predictions.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/FATAL_blank_figures.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R1_NEJM_lizhi.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R2_JAMA_methods.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R3_Lancet_waitui.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R4_BMJxNM_chuangxin.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R5_stat_recalculator.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R6_ethics_reporting.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/__pycache__/r5_02_confirm.cpython-310.pyc",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/__pycache__/r5_03_meta.cpython-310.pyc",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/log_SHARE.txt",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_01_datahealth.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_02_confirm.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_03_meta.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_04_power.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_05_audit.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_06_sens.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_07_denominators.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_08_evalues.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_09_verdicts.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_confirmed_18.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_datahealth.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_datahealth.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_evalues.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_evidence_audit.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_CLHLS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_CRELES.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_ELSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_HRS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_KLoSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_LASI.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_SHARE.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_meta.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_personwave.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_power.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_sensitivity.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_three_state.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_verdicts.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_vs_project.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_waves.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/source_coverage_report.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/tables/rule_coverage_audit_R11.csv",
+      "generators": []
+    }
+  ],
+  "all": [
+    {
+      "artifact": "outputs/_rerun_backup_20261015/baseline_fullsystem_bootstrap_ci.json",
+      "generators": [
+        "scripts/make_baseline_bootstrap_ci.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/baseline_predictions.jsonl",
+      "generators": [
+        "scripts/generate_paper_figures.py",
+        "scripts/make_baseline_bootstrap_ci.py",
+        "scripts/make_baseline_summary_R11_goldcheck.py",
+        "scripts/make_baseline_summary_R5.py",
+        "scripts/performance_bottleneck_diagnosis.py",
+        "scripts/run_baselines.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/baseline_summary_R5.json",
+      "generators": [
+        "scripts/make_baseline_summary_R11_goldcheck.py",
+        "scripts/make_baseline_summary_R5.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/charls2015_confirmatory.csv",
+      "generators": [
+        "scripts/evaluate_charls2015.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/charls2015_metrics.json",
+      "generators": [
+        "scripts/evaluate_charls2015.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/charls_confirmatory.csv",
+      "generators": [
+        "scripts/evaluate_charls.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/run_fused_system.py",
+        "scripts/run_fused_system_v2.py",
+        "scripts/run_fused_system_v3.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/charls_metrics_v11.json",
+      "generators": [
+        "scripts/evaluate_charls.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/direction_review_charls.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/direction_review_knhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/direction_review_nhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/fused_system_R5.jsonl",
+      "generators": [
+        "scripts/evaluate_charls2015.py",
+        "scripts/run_fused_system.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/fused_system_R53.jsonl",
+      "generators": [
+        "scripts/run_fused_system_v2.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/fused_system_R53_summary.json",
+      "generators": [
+        "scripts/run_fused_system_v2.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/fused_system_R6.jsonl",
+      "generators": [
+        "scripts/run_fused_system_v3.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/fused_system_R6_summary.json",
+      "generators": [
+        "scripts/run_fused_system_v3.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/fused_system_summary.json",
+      "generators": [
+        "scripts/run_fused_system.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/generalization_gap_v1.2.csv",
+      "generators": [
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/generalization_gap_v1.2_summary.json",
+      "generators": [
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/knhanes_confirmatory.csv",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/dose_response_matrix.py",
+        "scripts/evaluate_knhanes.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/headline_sensitivity.py",
+        "scripts/power_analysis.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/run_fused_system.py",
+        "scripts/run_fused_system_v2.py",
+        "scripts/run_fused_system_v3.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/knhanes_metrics_v11.json",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/evaluate_knhanes.py",
+        "scripts/generate_paper_figures.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/literature_validation_R5.csv",
+      "generators": [
+        "scripts/literature_validation.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/literature_validation_summary.json",
+      "generators": [
+        "scripts/literature_validation.py",
+        "scripts/run_fused_system_v2.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/nhanes_confirmatory.csv",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/build_source_data_R11.py",
+        "scripts/dose_response_matrix.py",
+        "scripts/evaluate.py",
+        "scripts/evaluate_knhanes.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/headline_sensitivity.py",
+        "scripts/make_baseline_summary_R11_goldcheck.py",
+        "scripts/make_baseline_summary_R5.py",
+        "scripts/power_analysis.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/run_baselines.py",
+        "scripts/run_fused_system.py",
+        "scripts/run_fused_system_v2.py",
+        "scripts/run_fused_system_v3.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/nhanes_metrics_v11.json",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/evaluate.py",
+        "scripts/evaluate_knhanes.py",
+        "scripts/generate_paper_figures.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/survey_sensitivity_R5.csv",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/survey_sensitivity_export.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/confirmatory/v11_replay_R5.json",
+      "generators": [
+        "scripts/build_source_data_R11.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/entities_a.csv",
+      "generators": [
+        "scripts/agent_audit.py",
+        "scripts/agent_escalation_regression.py",
+        "scripts/agent_escalation_test.py",
+        "scripts/arbiter_confidence_usefulness.py",
+        "scripts/build_entity_a_registry.py",
+        "scripts/build_lightrag_index.py",
+        "scripts/evaluate.py",
+        "scripts/evaluate_knhanes.py",
+        "scripts/generate_cases.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/record_confidence_usefulness.py",
+        "src/huiyan_agent/normalize.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/entities_b.csv",
+      "generators": [
+        "scripts/agent_audit.py",
+        "scripts/agent_escalation_regression.py",
+        "scripts/agent_escalation_test.py",
+        "scripts/build_entity_b_registry.py",
+        "scripts/build_lightrag_index.py",
+        "scripts/evaluate.py",
+        "scripts/generate_cases.py",
+        "scripts/generate_paper_tables.py",
+        "src/huiyan_agent/normalize.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/fused_system_R53.jsonl",
+      "generators": [
+        "scripts/run_fused_system_v2.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/tables/dataset_summary.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/render_manual_figures.py",
+        "scripts/verify_results_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/tables/performance_by_dataset.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py",
+        "scripts/make_baseline_summary_R5.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/run_multiseed.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/tables/performance_matrix.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_results_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/tables/registry_summary.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/tables/rule_list.csv",
+      "generators": [
+        "scripts/build_table2.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/record_table2_gap.py"
+      ]
+    },
+    {
+      "artifact": "outputs/_rerun_backup_20261015/tables/validation_distribution.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_table4.py",
+        "scripts/verify_results_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/agent_audit.json",
+      "generators": [
+        "scripts/agent_audit.py",
+        "scripts/agent_escalation_regression.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/arbiter_confidence.json",
+      "generators": [
+        "scripts/agent_arbiter_confidence.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/arbiter_confidence_usefulness.json",
+      "generators": [
+        "scripts/arbiter_confidence_usefulness.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/arbiter_determinism.json",
+      "generators": [
+        "scripts/agent_arbiter_determinism.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/arbiter_reliability.json",
+      "generators": [
+        "scripts/agent_arbiter_reliability.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/escalation_test.json",
+      "generators": [
+        "scripts/agent_escalation_test.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/evidence_level_fix.json",
+      "generators": [
+        "scripts/fix_evidence_level_ambiguity.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/full_stack_test.json",
+      "generators": [
+        "scripts/agent_full_stack_test.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/guideline_search.json",
+      "generators": [
+        "scripts/find_guideline_citations.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/rule_citation_abstracts.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/agent/rule_citation_pubmed.json",
+      "generators": [
+        "scripts/verify_rule_citations_pubmed.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/rule_citation_verification.json",
+      "generators": [
+        "scripts/verify_rule_citations.py",
+        "scripts/verify_rule_citations_pubmed.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/rule_evidence_grade_audit.json",
+      "generators": [
+        "scripts/rule_evidence_grade_audit.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/rule_grade_reaudit.json",
+      "generators": [
+        "scripts/rule_grade_reaudit.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/rule_grade_title_audit.json",
+      "generators": [
+        "scripts/rule_grade_title_audit.py"
+      ]
+    },
+    {
+      "artifact": "outputs/agent/tier_reproducibility.json",
+      "generators": [
+        "scripts/agent_tier_reproducibility.py"
+      ]
+    },
+    {
+      "artifact": "outputs/baseline_fullsystem_bootstrap_ci.json",
+      "generators": [
+        "scripts/make_baseline_bootstrap_ci.py"
+      ]
+    },
+    {
+      "artifact": "outputs/baseline_predictions.jsonl",
+      "generators": [
+        "scripts/generate_paper_figures.py",
+        "scripts/make_baseline_bootstrap_ci.py",
+        "scripts/make_baseline_summary_R11_goldcheck.py",
+        "scripts/make_baseline_summary_R5.py",
+        "scripts/performance_bottleneck_diagnosis.py",
+        "scripts/run_baselines.py"
+      ]
+    },
+    {
+      "artifact": "outputs/baseline_predictions_preR5_archive.jsonl",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/baseline_predictions_R5_round1.jsonl",
+      "generators": [
+        "scripts/make_baseline_summary_R5.py"
+      ]
+    },
+    {
+      "artifact": "outputs/baseline_predictions_valid.jsonl",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/baseline_summary_R11_corrected_gold.json",
+      "generators": [
+        "scripts/build_source_data_R11.py",
+        "scripts/make_baseline_summary_R11_goldcheck.py"
+      ]
+    },
+    {
+      "artifact": "outputs/baseline_summary_R5.json",
+      "generators": [
+        "scripts/make_baseline_summary_R11_goldcheck.py",
+        "scripts/make_baseline_summary_R5.py"
+      ]
+    },
+    {
+      "artifact": "outputs/citation_verification_report.json",
+      "generators": [
+        "scripts/literature_validation.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/clhls_sensitivity.json",
+      "generators": [
+        "scripts/clhls_sensitivity.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/cohort_evalues_corrected.json",
+      "generators": [
+        "scripts/correct_evalues.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/cohort_heterogeneity.json",
+      "generators": [
+        "scripts/build_supplementary.py",
+        "scripts/cohort_heterogeneity.py",
+        "scripts/positive_control.py",
+        "scripts/rebuild_table5.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/cohort_influence.csv",
+      "generators": [
+        "scripts/build_supplementary.py",
+        "scripts/cohort_heterogeneity.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/cohort_meta_summary.csv",
+      "generators": [
+        "scripts/cohort_heterogeneity.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/cohort_power.csv",
+      "generators": [
+        "scripts/cohort_power.py",
+        "scripts/verify_r2_claims.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/cohort_rule_results.csv",
+      "generators": [
+        "scripts/build_source_data_cohort.py",
+        "scripts/cohort_confirmatory.py",
+        "scripts/cohort_heterogeneity.py",
+        "scripts/cohort_power.py",
+        "scripts/correct_evalues.py",
+        "scripts/verify_r2_claims.py",
+        "scripts/verify_results_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/cohort_transportability.json",
+      "generators": [
+        "scripts/cohort_confirmatory.py",
+        "scripts/cohort_heterogeneity.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/evidence_audit.json",
+      "generators": [
+        "scripts/build_supplementary.py",
+        "scripts/evidence_base_audit.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/nhanes_outcome_validation.json",
+      "generators": [
+        "scripts/nhanes_outcome_validation.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/positive_control.json",
+      "generators": [
+        "scripts/positive_control.py"
+      ]
+    },
+    {
+      "artifact": "outputs/cohorts/RESULTS_COHORT.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/charls2015_confirmatory.csv",
+      "generators": [
+        "scripts/evaluate_charls2015.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/charls2015_metrics.json",
+      "generators": [
+        "scripts/evaluate_charls2015.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/charls_confirmatory.csv",
+      "generators": [
+        "scripts/evaluate_charls.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/run_fused_system.py",
+        "scripts/run_fused_system_v2.py",
+        "scripts/run_fused_system_v3.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/charls_metrics_v11.json",
+      "generators": [
+        "scripts/evaluate_charls.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_CLHLS_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_CRELES_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_ELSA_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_HRS_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_KLoSA_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_LASI_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_MHAS_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_raw_recon.json",
+      "generators": [
+        "scripts/cohort_raw_recon.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_rule_coverage.json",
+      "generators": [
+        "scripts/build_supplementary.py",
+        "scripts/cohort_confirmatory.py",
+        "scripts/cohort_power.py",
+        "scripts/cohort_rule_coverage.py",
+        "scripts/evidence_base_audit.py",
+        "scripts/rebuild_all_tables.py",
+        "scripts/verify_results_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/cohort_SHARE_prevalence.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/direction_review_charls.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/direction_review_knhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/direction_review_nhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/dose_response_charls.csv",
+      "generators": [
+        "scripts/dose_response_charls.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/dose_response_charls_summary.json",
+      "generators": [
+        "scripts/dose_response_charls.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/dose_response_matrix.csv",
+      "generators": [
+        "scripts/build_source_data_R11.py",
+        "scripts/dose_response_matrix.py",
+        "scripts/generate_figures_R11.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/dose_response_summary.json",
+      "generators": [
+        "scripts/dose_response_matrix.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/dose_response_svyglm.csv",
+      "generators": [
+        "scripts/dose_response_matrix.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_CRELES.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_ELSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_HRS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_KLoSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_LASI.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_MHAS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_gates_SHARE.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_CRELES.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_ELSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_HRS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_KLoSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_LASI.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_MHAS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/exposure_scan_SHARE.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/fused_system_R5.jsonl",
+      "generators": [
+        "scripts/evaluate_charls2015.py",
+        "scripts/run_fused_system.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/fused_system_R53.jsonl",
+      "generators": [
+        "scripts/run_fused_system_v2.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/fused_system_R53_summary.json",
+      "generators": [
+        "scripts/run_fused_system_v2.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/fused_system_R6.jsonl",
+      "generators": [
+        "scripts/run_fused_system_v3.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/fused_system_R6_summary.json",
+      "generators": [
+        "scripts/run_fused_system_v3.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/fused_system_summary.json",
+      "generators": [
+        "scripts/run_fused_system.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/generalization_gap_v1.2.csv",
+      "generators": [
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/generalization_gap_v1.2_summary.json",
+      "generators": [
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/headline_sensitivity.json",
+      "generators": [
+        "scripts/headline_sensitivity.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/knhanes_confirmatory.csv",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/dose_response_matrix.py",
+        "scripts/evaluate_knhanes.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/headline_sensitivity.py",
+        "scripts/power_analysis.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/run_fused_system.py",
+        "scripts/run_fused_system_v2.py",
+        "scripts/run_fused_system_v3.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/knhanes_metrics_v11.json",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/evaluate_knhanes.py",
+        "scripts/generate_paper_figures.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/literature_validation_R5.csv",
+      "generators": [
+        "scripts/literature_validation.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/literature_validation_summary.json",
+      "generators": [
+        "scripts/literature_validation.py",
+        "scripts/run_fused_system_v2.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/mediation_analysis.csv",
+      "generators": [
+        "scripts/mediation_analysis.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/mediation_summary.json",
+      "generators": [
+        "scripts/mediation_analysis.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/nhanes_confirmatory.csv",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/build_source_data_R11.py",
+        "scripts/dose_response_matrix.py",
+        "scripts/evaluate.py",
+        "scripts/evaluate_knhanes.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/headline_sensitivity.py",
+        "scripts/make_baseline_summary_R11_goldcheck.py",
+        "scripts/make_baseline_summary_R5.py",
+        "scripts/power_analysis.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/run_baselines.py",
+        "scripts/run_fused_system.py",
+        "scripts/run_fused_system_v2.py",
+        "scripts/run_fused_system_v3.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/nhanes_metrics_v11.json",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/evaluate.py",
+        "scripts/evaluate_knhanes.py",
+        "scripts/generate_paper_figures.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/performance_bottleneck_diagnosis.json",
+      "generators": [
+        "scripts/performance_bottleneck_diagnosis.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/power_analysis_knhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/power_analysis_nhanes.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/power_summary.json",
+      "generators": [
+        "scripts/power_analysis.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/survey_sensitivity_R5.csv",
+      "generators": [
+        "scripts/apply_survey_variance.py",
+        "scripts/survey_sensitivity_export.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/v11_replay_R5.json",
+      "generators": [
+        "scripts/build_source_data_R11.py"
+      ]
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_CRELES.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_ELSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_HRS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_KLoSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_LASI.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_MHAS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/confirmatory/vision_scan_SHARE.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/demo_cases.jsonl",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/.r6_tmp_stats.pkl",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_ai_llm_evaluation_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_biostatistics_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_epidemiology_methods_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_FIXLOG_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_ophthalmology_clinical_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_research_integrity_audit_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R5_SUMMARY_2026-10-14.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R6_fix_verification_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R7_lit_validation_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R8_perf_optimization_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/expert_review/R9_semantic_layer_2026-10-15.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/charls_pair_metrics.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/charls_pair_results.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/generalization_gap_pairs.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/knhanes_pair_metrics.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/knhanes_pair_results.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/nhanes_pair_metrics.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/exploratory/nhanes_pair_results.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure1_architecture.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure2_performance.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure3_expert_agreement.yaml.superseded_R11",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure3_rule_evaluation.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure4_demo_case.yaml",
+      "generators": [
+        "scripts/withdraw_blank_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure5_reasoning_trace.yaml",
+      "generators": [
+        "scripts/withdraw_blank_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure6_dose_response.yaml",
+      "generators": [
+        "scripts/build_submission_package.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure7_power_mde.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/contracts/figure8_cohort_transportability.yaml",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/legacy/generate_figures_R11.py.archived",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/source_data/.gitkeep",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure1_data.csv",
+      "generators": [
+        "scripts/generate_paper_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure2_performance.csv",
+      "generators": [
+        "scripts/build_source_data_R11.py",
+        "scripts/generate_paper_figures.py",
+        "scripts/render_locked_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure3_expert_agreement.csv",
+      "generators": [
+        "scripts/generate_paper_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure3_rule_evaluation.csv",
+      "generators": [
+        "scripts/build_source_data_R11.py",
+        "scripts/render_locked_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure4_demo_case.csv",
+      "generators": [
+        "scripts/build_source_data_R11.py",
+        "scripts/generate_paper_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure5_paths.csv",
+      "generators": [
+        "scripts/generate_paper_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure5_reasoning_trace.csv",
+      "generators": [
+        "scripts/generate_paper_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure6_dose_response.csv",
+      "generators": [
+        "scripts/build_source_data_R11.py",
+        "scripts/render_locked_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure7_power_mde.csv",
+      "generators": [
+        "scripts/build_source_data_R11.py",
+        "scripts/render_locked_figures.py",
+        "scripts/render_manual_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/figures/source_data/figure8_cohort_transportability.csv",
+      "generators": [
+        "scripts/build_source_data_cohort.py",
+        "scripts/build_supplementary.py",
+        "scripts/render_locked_figures.py",
+        "scripts/render_manual_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/citation_pool.json",
+      "generators": [
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_citation_pool.py",
+        "scripts/build_submission_package.py",
+        "scripts/build_supplementary.py",
+        "scripts/extend_citation_pool_intro.py",
+        "scripts/qc_english_manuscript.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1158334049.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1198993018.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1286228933.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1360658556.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1478417237.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1519865425.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1577282774.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1646518318.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_1738409140.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_2058614843.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_2538936900.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_2876787853.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_2884949006.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3163378187.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3332192435.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3537865348.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_354900629.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3644441907.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_3970813889.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_4278268586.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5708561556.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5732833690.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5827859678.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5877199425.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_5924483984.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_6213959250.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_6677769720.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_674728978.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7238478382.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7486606034.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7768895295.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_781476512.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7847528063.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7879996286.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_7916229882.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8069481500.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8081214553.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8195671213.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_840108421.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8616796096.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8793236672.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_8971390844.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9029119987.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9139927813.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9203947346.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9670088379.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_9686049488.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/crossref_968860690.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/intro_6277166276.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/intro_7470895356.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/intro_9996292504.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1002_9780470316696.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1002_sim.1186.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_j.ajodo.2019.12.011.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_j.crad.2022.09.131.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_j.ophtha.2014.05.013.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_s0895-4356(99)00056-6.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_s2214-109x(13)70163-3.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1016_s2214-109x(21)00008-5.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1038_s41591-021-01229-5.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_biomet_26.4.404.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_eurheartj_ehae295.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyab266.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dys168.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dys203.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyt088.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyt228.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyu067.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1093_ije_dyu263.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1097_ede.0b013e3181577511.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1111_dar.13119.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1136_bmj.39386.490150.94.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1136_bmj.q824.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1158_1055-9965.epi-05-0456.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1167_iovs.12-9820.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1214_aos_1013699998.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.12771_emj.2024.e31.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.1920_ps.ifs.2024.1192.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.3389_fpubh.2024.1352937.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.3390_nu15061446.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.3886_icpsr26681.v2.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.4178_epih_e2014002.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.5204_thesis.eprints.105510.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/citation_raw/openalex_10.7189_jogh.08.010803.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/figure_legends.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_submission_package.py",
+        "scripts/fill_chinese_legends.py",
+        "scripts/refine_figure_legends.py",
+        "scripts/renumber_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/figure_legends.md.bak",
+      "generators": [
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_submission_package.py",
+        "scripts/renumber_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/figure_prompts.md",
+      "generators": [
+        "scripts/fix_schematic_prompts.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/figure_table_qc_report.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/figure_visual_inspection.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/highlights.md",
+      "generators": [
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_phase7_9_artifacts.py",
+        "scripts/record_readme_fix.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/KNOWN_ISSUES_figure_export.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/manuscript.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_strobe_checklist.py",
+        "scripts/build_submission_package.py",
+        "scripts/qc_english_manuscript.py",
+        "scripts/record_readme_fix.py",
+        "scripts/record_table2_gap.py",
+        "scripts/renumber_figures.py",
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/manuscript_assembly_manifest.json",
+      "generators": [
+        "scripts/assemble_manuscript.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/manuscript_R11.md",
+      "generators": [
+        "scripts/verify_manuscript_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/sections/abstract.md",
+      "generators": [
+        "scripts/apply_framing_corrections.py",
+        "scripts/assemble_submission_zip.py",
+        "scripts/disclose_r02_substitution.py",
+        "scripts/extend_citation_pool_intro.py",
+        "scripts/qc_english_manuscript.py",
+        "scripts/record_protocol_deviations.py",
+        "scripts/retitle_for_positive_control.py",
+        "scripts/update_after_subgroup_correction.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/sections/declarations.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/paper/sections/discussion.md",
+      "generators": [
+        "scripts/disclose_all_substitutions.py",
+        "scripts/record_protocol_deviations.py",
+        "scripts/update_after_subgroup_correction.py",
+        "scripts/write_nhanes_validation.py",
+        "scripts/write_positive_control.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/sections/introduction.md",
+      "generators": [
+        "scripts/extend_citation_pool_intro.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/sections/methods.md",
+      "generators": [
+        "scripts/disclose_all_substitutions.py",
+        "scripts/disclose_r02_substitution.py",
+        "scripts/record_protocol_deviations.py",
+        "scripts/write_nhanes_validation.py",
+        "scripts/write_positive_control.py"
+      ]
+    },
+    {
+      "artifact": "outputs/paper/sections/results.md",
+      "generators": [
+        "scripts/apply_framing_corrections.py",
+        "scripts/disclose_all_substitutions.py",
+        "scripts/disclose_r02_substitution.py",
+        "scripts/qc_english_manuscript.py",
+        "scripts/update_after_subgroup_correction.py",
+        "scripts/verify_results_numbers.py",
+        "scripts/write_nhanes_validation.py",
+        "scripts/write_positive_control.py"
+      ]
+    },
+    {
+      "artifact": "outputs/README_baseline_predictions.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/FATAL_blank_figures.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/figure_placeholder_scan.json",
+      "generators": [
+        "scripts/qc_figure_placeholders.py"
+      ]
+    },
+    {
+      "artifact": "outputs/review/image_integrity_prescreen.json",
+      "generators": [
+        "scripts/image_integrity_screen.py"
+      ]
+    },
+    {
+      "artifact": "outputs/review/R1_NEJM_lizhi.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R2_JAMA_methods.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R3_Lancet_waitui.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R4_BMJxNM_chuangxin.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R5_stat_recalculator.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/R6_ethics_reporting.md",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/__pycache__/r5_02_confirm.cpython-310.pyc",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/__pycache__/r5_03_meta.cpython-310.pyc",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/log_SHARE.txt",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_01_datahealth.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_02_confirm.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_03_meta.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_04_power.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_05_audit.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_06_sens.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_07_denominators.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_08_evalues.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/r5_09_verdicts.py",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_confirmed_18.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_datahealth.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_datahealth.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_evalues.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_evidence_audit.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_CLHLS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_CRELES.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_ELSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_HRS.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_KLoSA.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_LASI.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_fit_SHARE.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_meta.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_personwave.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_power.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_sensitivity.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_three_state.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_verdicts.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_vs_project.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/recalc/recalc_waves.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/review/REVIEW_FINDINGS_LEDGER.md",
+      "generators": [
+        "scripts/append_ledger_round34.py",
+        "scripts/build_strobe_checklist.py"
+      ]
+    },
+    {
+      "artifact": "outputs/source_coverage_report.json",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/submission/cover_letter.md",
+      "generators": [
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_cover_letter.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/data_availability.md",
+      "generators": [
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_phase7_9_artifacts.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/figure_legends.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_submission_package.py",
+        "scripts/fill_chinese_legends.py",
+        "scripts/refine_figure_legends.py",
+        "scripts/renumber_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/highlights.md",
+      "generators": [
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_phase7_9_artifacts.py",
+        "scripts/record_readme_fix.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/journal_guidelines_snapshot.md",
+      "generators": [
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_submission_package.py",
+        "scripts/build_supplementary.py",
+        "scripts/fetch_journal_guidelines.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/manuscript.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_strobe_checklist.py",
+        "scripts/build_submission_package.py",
+        "scripts/qc_english_manuscript.py",
+        "scripts/record_readme_fix.py",
+        "scripts/record_table2_gap.py",
+        "scripts/renumber_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/package_manifest.json",
+      "generators": [
+        "scripts/build_submission_package.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/strobe_checklist.md",
+      "generators": [
+        "scripts/assemble_submission_zip.py",
+        "scripts/build_strobe_checklist.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/supplementary_manifest.json",
+      "generators": [
+        "scripts/build_supplementary.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/supplementary_material.md",
+      "generators": [
+        "scripts/build_supplementary.py",
+        "scripts/renumber_figures.py",
+        "scripts/withdraw_blank_figures.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/tables/table1_registry.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/rebuild_all_tables.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/tables/table1b_descriptives.md",
+      "generators": [
+        "scripts/build_descriptive_table.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/tables/table2_rules.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/build_table2.py",
+        "scripts/record_table2_gap.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/tables/table3_performance.md",
+      "generators": [
+        "scripts/assemble_manuscript.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/tables/table4_validation.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/rebuild_table4.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/tables/table5_heterogeneity.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/rebuild_table5.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/tables/table6_power.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/build_supplementary.py"
+      ]
+    },
+    {
+      "artifact": "outputs/submission/tables/table7_evidence_audit.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/evidence_base_audit.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/dataset_summary.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/render_manual_figures.py",
+        "scripts/verify_results_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/headline_sensitivity.csv",
+      "generators": [
+        "scripts/build_source_data_R11.py",
+        "scripts/generate_figures_R11.py",
+        "scripts/headline_sensitivity.py",
+        "scripts/verify_manuscript_numbers.py",
+        "scripts/verify_results_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/performance_by_dataset.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py",
+        "scripts/make_baseline_summary_R5.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/run_multiseed.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/performance_matrix.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_deliverables_R5.py",
+        "scripts/verify_results_numbers.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/registry_summary.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/rule_coverage_audit_R11.csv",
+      "generators": []
+    },
+    {
+      "artifact": "outputs/tables/rule_list.csv",
+      "generators": [
+        "scripts/build_table2.py",
+        "scripts/generate_paper_tables.py",
+        "scripts/record_table2_gap.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/table1_registry.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/rebuild_all_tables.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/table1b_descriptives.json",
+      "generators": [
+        "scripts/build_descriptive_table.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/table1b_descriptives.md",
+      "generators": [
+        "scripts/build_descriptive_table.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/table2_rules.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/build_table2.py",
+        "scripts/record_table2_gap.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/table3_performance.md",
+      "generators": [
+        "scripts/assemble_manuscript.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/table4_validation.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/rebuild_table4.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/table5_heterogeneity.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/rebuild_table5.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/table6_power.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/build_supplementary.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/table7_evidence_audit.md",
+      "generators": [
+        "scripts/assemble_manuscript.py",
+        "scripts/evidence_base_audit.py"
+      ]
+    },
+    {
+      "artifact": "outputs/tables/validation_distribution.csv",
+      "generators": [
+        "scripts/generate_paper_tables.py",
+        "scripts/rebuild_table4.py",
+        "scripts/verify_results_numbers.py"
+      ]
+    }
+  ]
+}

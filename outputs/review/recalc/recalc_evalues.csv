@@ -1,0 +1,5 @@
+rule,cohort,OR,CI,E_value_point,E_value_ci_bound
+r10_smoking_x_cataract,CLHLS,0.748,0.6435-0.8694,2.008,1.566
+r10_smoking_x_cataract,SHARE,1.109,1.041-1.1815,1.457,1.248
+r12_alcohol_x_cataract,CLHLS,0.809,0.704-0.9297,1.776,1.361
+r02_hyperglycemia_x_cataract,CLHLS,3.5887,2.6244-4.9074,6.637,4.689

@@ -1,0 +1,6603 @@
+{
+  "cohort": "KLoSA",
+  "root": "E:\\BaiduNetdiskDownload\\所有数据库\\04. KLoSA 韩国老龄化纵向研究\\KLoSA_韩国\\Raw_data",
+  "files": 39,
+  "scanned": 39,
+  "candidates": [
+    {
+      "file": "wave3\\w03_exit_e.dta",
+      "var": "w03Xc101m03",
+      "rows": 309,
+      "n_valid": 309,
+      "dtype": "category",
+      "label": "The chronic disease that the person suffered until 1 week before death_Diabetes/",
+      "n_distinct": 2,
+      "values": {
+        " No": 270,
+        " Yes": 39
+      }
+    },
+    {
+      "file": "wave3\\w03_exit_e.dta",
+      "var": "w03Xc307",
+      "rows": 309,
+      "n_valid": 309,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not smoking ",
+      "n_distinct": 2,
+      "values": {
+        " No": 267,
+        " Yes": 42
+      }
+    },
+    {
+      "file": "wave3\\w03_exit_e.dta",
+      "var": "w03Xc308",
+      "rows": 309,
+      "n_valid": 309,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not drinking",
+      "n_distinct": 3,
+      "values": {
+        " Could not drink": 144,
+        " No": 102,
+        " Yes": 63
+      }
+    },
+    {
+      "file": "wave3\\w03_exit_e.dta",
+      "var": "w03Xc309",
+      "rows": 309,
+      "n_valid": 309,
+      "dtype": "category",
+      "label": "The weight when the perons died (unit: kg)",
+      "n_distinct": 37,
+      "values": {
+        " Don't know": 51,
+        "30": 5,
+        "34": 1,
+        "35": 4,
+        "38": 3,
+        "40": 22,
+        "42": 6,
+        "43": 8
+      }
+    },
+    {
+      "file": "wave3\\w03_exit_e.dta",
+      "var": "w03Xc310",
+      "rows": 309,
+      "n_valid": 309,
+      "dtype": "category",
+      "label": "Any change in the weight during the two years before death",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 2,
+        " There was no change": 125,
+        " Yes, gained a lot": 8,
+        " Yes, lost a lot": 174
+      }
+    },
+    {
+      "file": "wave6\\w06_Exit_e.dta",
+      "var": "w06x_C307",
+      "rows": 403,
+      "n_valid": 403,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not smoking ",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 1,
+        "No": 367,
+        "Yes": 35
+      }
+    },
+    {
+      "file": "wave6\\w06_Exit_e.dta",
+      "var": "w06x_C308",
+      "rows": 403,
+      "n_valid": 403,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not drinking",
+      "n_distinct": 3,
+      "values": {
+        "Could not drink": 177,
+        "No": 166,
+        "Yes": 60
+      }
+    },
+    {
+      "file": "wave6\\w06_Exit_e.dta",
+      "var": "w06x_C309",
+      "rows": 403,
+      "n_valid": 403,
+      "dtype": "category",
+      "label": "The weight when the perons died (unit: kg)",
+      "n_distinct": 41,
+      "values": {
+        " Don't know": 106,
+        " Refuse to answer": 1,
+        "30": 2,
+        "35": 4,
+        "36": 1,
+        "38": 7,
+        "40": 18,
+        "41": 1
+      }
+    },
+    {
+      "file": "wave6\\w06_Exit_e.dta",
+      "var": "w06x_C310",
+      "rows": 403,
+      "n_valid": 403,
+      "dtype": "category",
+      "label": "Any change in the weight during the two years before death",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 10,
+        "There was no change": 143,
+        "Yes, gained a lot": 7,
+        "Yes, lost a lot": 243
+      }
+    },
+    {
+      "file": "wave2\\w02_exit_e.dta",
+      "var": "w02Xc101m03",
+      "rows": 187,
+      "n_valid": 187,
+      "dtype": "category",
+      "label": "The chronic disease that the person suffered until 1 week before death_Diabetes/",
+      "n_distinct": 2,
+      "values": {
+        " No": 156,
+        " Yes": 31
+      }
+    },
+    {
+      "file": "wave2\\w02_exit_e.dta",
+      "var": "w02Xc307",
+      "rows": 187,
+      "n_valid": 187,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not smoking ",
+      "n_distinct": 2,
+      "values": {
+        " No": 153,
+        " Yes": 34
+      }
+    },
+    {
+      "file": "wave2\\w02_exit_e.dta",
+      "var": "w02Xc308",
+      "rows": 187,
+      "n_valid": 187,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not drinking",
+      "n_distinct": 3,
+      "values": {
+        " Could not drink": 97,
+        " No": 48,
+        " Yes": 42
+      }
+    },
+    {
+      "file": "wave2\\w02_exit_e.dta",
+      "var": "w02Xc309",
+      "rows": 187,
+      "n_valid": 187,
+      "dtype": "category",
+      "label": "The weight when the perons died (unit: kg)",
+      "n_distinct": 39,
+      "values": {
+        " Don't know": 31,
+        "110": 1,
+        "32": 1,
+        "35": 8,
+        "36": 1,
+        "37": 1,
+        "38": 1,
+        "39": 1
+      }
+    },
+    {
+      "file": "wave2\\w02_exit_e.dta",
+      "var": "w02Xc310",
+      "rows": 187,
+      "n_valid": 187,
+      "dtype": "category",
+      "label": "Any change in the weight during the two years before death",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " There was no change": 104,
+        " Yes, gained a lot": 3,
+        " Yes, lost a lot": 79
+      }
+    },
+    {
+      "file": "wave5\\w05_exit_e.dta",
+      "var": "w05xC101m03",
+      "rows": 438,
+      "n_valid": 438,
+      "dtype": "category",
+      "label": "The chronic disease that the person suffered until 1 week before death_Diabetes/",
+      "n_distinct": 2,
+      "values": {
+        " No": 353,
+        " Yes": 85
+      }
+    },
+    {
+      "file": "wave5\\w05_exit_e.dta",
+      "var": "w05XC307",
+      "rows": 438,
+      "n_valid": 438,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not smoking ",
+      "n_distinct": 2,
+      "values": {
+        " No": 393,
+        " Yes": 45
+      }
+    },
+    {
+      "file": "wave5\\w05_exit_e.dta",
+      "var": "w05XC308",
+      "rows": 438,
+      "n_valid": 438,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not drinking",
+      "n_distinct": 3,
+      "values": {
+        " Could not drink": 182,
+        " No": 179,
+        " Yes": 77
+      }
+    },
+    {
+      "file": "wave5\\w05_exit_e.dta",
+      "var": "w05XC309",
+      "rows": 438,
+      "n_valid": 438,
+      "dtype": "category",
+      "label": "The weight when the perons died (unit: kg)",
+      "n_distinct": 41,
+      "values": {
+        " Don't know": 97,
+        "30": 3,
+        "32": 1,
+        "33": 1,
+        "35": 3,
+        "37": 1,
+        "38": 3,
+        "40": 24
+      }
+    },
+    {
+      "file": "wave5\\w05_exit_e.dta",
+      "var": "w05XC310",
+      "rows": 438,
+      "n_valid": 438,
+      "dtype": "category",
+      "label": "Any change in the weight during the two years before death",
+      "n_distinct": 5,
+      "values": {
+        " Don't know": 1,
+        " There was no change": 188,
+        " Yes, gained a lot": 11,
+        " Yes, lost a lot": 237,
+        "-8": 1
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01wgt_c",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "float64",
+      "label": "Cross-sectional weight",
+      "n_distinct": 1098,
+      "values": {
+        "277.70462664": 5,
+        "393.38881632": 4,
+        "401.80633668": 3,
+        "418.75955871": 5,
+        "419.64966904": 4,
+        "428.34105566": 6,
+        "428.59439262": 3,
+        "432.43485723": 1
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01chronic_a",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "High blood pressure or hypertension or not",
+      "n_distinct": 2,
+      "values": {
+        "1": 2834,
+        "5": 7420
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01chronic_b",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Diabetes or high blood sugar or not",
+      "n_distinct": 3,
+      "values": {
+        " Don't know": 1,
+        "1": 1222,
+        "5": 9031
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01C105",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 73,
+      "values": {
+        " Don't know": 97,
+        " Refuse to answer": 6,
+        "100": 2,
+        "105": 1,
+        "30": 5,
+        "31": 1,
+        "32": 1,
+        "33": 1
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01C106",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 6,
+      "values": {
+        " Don't know": 3,
+        "1": 405,
+        "2": 769,
+        "3": 305,
+        "4": 134,
+        "5": 8638
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01C107",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "int16",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 53,
+      "values": {
+        "-9": 234,
+        "-8": 5,
+        "135": 3,
+        "136": 1,
+        "137": 2,
+        "140": 23,
+        "142": 5,
+        "143": 3
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01bmi",
+      "rows": 10254,
+      "n_valid": 9991,
+      "dtype": "category",
+      "label": "bmi",
+      "n_distinct": 1201,
+      "values": {
+        "12.494793835901708": 1,
+        "12.886259040105195": 1,
+        "13.333333333333334": 2,
+        "13.671874999999998": 2,
+        "13.696128560993426": 1,
+        "13.84083044982699": 1,
+        "13.850415512465373": 1,
+        "13.984008031840512": 1
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01smoke",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Smoking status",
+      "n_distinct": 4,
+      "values": {
+        "0": 7297,
+        "Current-drinker": 979,
+        "Don't know": 1,
+        "Past-drinker": 1977
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01alc",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Drinking status",
+      "n_distinct": 3,
+      "values": {
+        "1": 3889,
+        "2": 689,
+        "3": 5676
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01C124y",
+      "rows": 10254,
+      "n_valid": 4578,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : Year)",
+      "n_distinct": 78,
+      "values": {
+        " Don't know": 381,
+        " Refuse to answer": 9,
+        "1927.0": 1,
+        "1930.0": 1,
+        "1933.0": 1,
+        "1934.0": 1,
+        "1936.0": 1,
+        "1937.0": 1
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01C124m",
+      "rows": 10254,
+      "n_valid": 4578,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : month)",
+      "n_distinct": 15,
+      "values": {
+        "10.0": 70,
+        "11.0": 24,
+        "12.0": 20,
+        "2~3 times a month": 284,
+        "2~3 times a week": 141,
+        "4~6 times a week": 53,
+        "9.0": 139,
+        "Don't know": 3217
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01C126",
+      "rows": 10254,
+      "n_valid": 3889,
+      "dtype": "category",
+      "label": "Drinking frequency per month (soju)",
+      "n_distinct": 10,
+      "values": {
+        " Don't know": 1,
+        "1.0": 635,
+        "2.0": 478,
+        "3.0": 775,
+        "4.0": 687,
+        "5.0": 785,
+        "6.0": 226,
+        "7.0": 296
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01C127",
+      "rows": 10254,
+      "n_valid": 3254,
+      "dtype": "category",
+      "label": "Average drinking capacity at a time (soju)",
+      "n_distinct": 32,
+      "values": {
+        " 2~3 times a month": 531,
+        " 2~3 times a week": 220,
+        " 4~6 times a week": 48,
+        " Don't know": 1,
+        " Everyday/ more than twice a day": 29,
+        " Everyday/ once a day": 1130,
+        " None or less than once a month": 86,
+        " Once a month": 347
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01C128",
+      "rows": 10254,
+      "n_valid": 3889,
+      "dtype": "category",
+      "label": "Drinking frequency per month (beer)",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 2192,
+        "2.0": 638,
+        "3.0": 554,
+        "4.0": 265,
+        "5.0": 177,
+        "6.0": 25,
+        "7.0": 36,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "wave7\\w07_exit_e.dta",
+      "var": "w07x_c307",
+      "rows": 551,
+      "n_valid": 551,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not smoking ",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 6,
+        "No": 506,
+        "Yes": 39
+      }
+    },
+    {
+      "file": "wave7\\w07_exit_e.dta",
+      "var": "w07x_c308",
+      "rows": 551,
+      "n_valid": 551,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not drinking",
+      "n_distinct": 4,
+      "values": {
+        "Could not drink": 264,
+        "Don't know": 6,
+        "No": 190,
+        "Yes": 91
+      }
+    },
+    {
+      "file": "wave7\\w07_exit_e.dta",
+      "var": "w07x_c309",
+      "rows": 551,
+      "n_valid": 551,
+      "dtype": "category",
+      "label": "The weight when the perons died (unit: kg)",
+      "n_distinct": 41,
+      "values": {
+        " Don't know": 148,
+        " Refuse to answer": 1,
+        "31": 1,
+        "35": 6,
+        "36": 1,
+        "37": 1,
+        "38": 7,
+        "39": 2
+      }
+    },
+    {
+      "file": "wave7\\w07_exit_e.dta",
+      "var": "w07x_c310",
+      "rows": 551,
+      "n_valid": 551,
+      "dtype": "category",
+      "label": "Any change in the weight during the two years before death",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 17,
+        "There was no change": 243,
+        "Yes, gained a lot": 13,
+        "Yes, lost a lot": 278
+      }
+    },
+    {
+      "file": "wave8\\w08_exit_e.dta",
+      "var": "w08x_c307",
+      "rows": 512,
+      "n_valid": 512,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not smoking ",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 9,
+        "No": 473,
+        "Yes": 30
+      }
+    },
+    {
+      "file": "wave8\\w08_exit_e.dta",
+      "var": "w08x_c308",
+      "rows": 512,
+      "n_valid": 512,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not drinking",
+      "n_distinct": 4,
+      "values": {
+        "Could not drink": 203,
+        "Don't know": 8,
+        "No": 227,
+        "Yes": 74
+      }
+    },
+    {
+      "file": "wave8\\w08_exit_e.dta",
+      "var": "w08x_c309",
+      "rows": 512,
+      "n_valid": 512,
+      "dtype": "category",
+      "label": "The weight when the perons died (unit: kg)",
+      "n_distinct": 45,
+      "values": {
+        " Don't know": 154,
+        "30": 2,
+        "32": 1,
+        "35": 6,
+        "37": 1,
+        "38": 5,
+        "39": 3,
+        "40": 29
+      }
+    },
+    {
+      "file": "wave8\\w08_exit_e.dta",
+      "var": "w08x_c310",
+      "rows": 512,
+      "n_valid": 512,
+      "dtype": "category",
+      "label": "Any change in the weight during the two years before death",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 7,
+        "There was no change": 255,
+        "Yes, gained a lot": 10,
+        "Yes, lost a lot": 240
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02wgt_p",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "float64",
+      "label": "Longitudinal weight",
+      "n_distinct": 6305,
+      "values": {
+        "327.59734": 1,
+        "328.97433": 1,
+        "337.32491": 1,
+        "339.15301": 1,
+        "376.74785": 1,
+        "430.34007": 1,
+        "434.06884": 1,
+        "439.29673": 1
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02wgt_c",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "float64",
+      "label": "Cross-sectional weight",
+      "n_distinct": 6337,
+      "values": {
+        "321.97973": 1,
+        "323.3331": 1,
+        "331.54049": 1,
+        "333.33723": 1,
+        "370.2874": 1,
+        "383.52984": 1,
+        "385.90833": 1,
+        "409.60576": 1
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02chronic_a",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "High blood pressure or hypertension or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 5867,
+        " Yes": 2821
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02chronic_b",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "Diabetes or high blood sugar or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 7476,
+        " Yes": 1212
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02C105",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 70,
+      "values": {
+        " Don't know": 89,
+        "102": 1,
+        "110": 1,
+        "30": 2,
+        "32": 2,
+        "33": 1,
+        "34": 1,
+        "35": 7
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02C106",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 6,
+      "values": {
+        " Don't know": 1,
+        " I gained weight": 434,
+        " I gained weight and then lost it again": 419,
+        " I lost weight": 928,
+        " I lost weight and then gained it again": 155,
+        " There was no change": 6751
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02C107",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 50,
+      "values": {
+        " Don't know": 166,
+        "135": 5,
+        "136": 1,
+        "137": 1,
+        "140": 25,
+        "142": 2,
+        "143": 5,
+        "144": 1
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02bmi",
+      "rows": 8688,
+      "n_valid": 8502,
+      "dtype": "float64",
+      "label": "bmi",
+      "n_distinct": 1121,
+      "values": {
+        "13.14878892733564": 1,
+        "13.590449954086319": 1,
+        "14.172335600907031": 1,
+        "14.222222222222221": 1,
+        "14.26872770511296": 1,
+        "14.5681581685744": 2,
+        "14.609203798392988": 1,
+        "14.692378328741967": 2
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02smoke",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "Smoking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-smoker": 1582,
+        "Non-smoker": 6044,
+        "Past-smoker": 1062
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02alc",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "Drinking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-drinker": 3160,
+        "Non-drinker": 4667,
+        "Past-drinker": 861
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02C124y",
+      "rows": 8688,
+      "n_valid": 211,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : Year)",
+      "n_distinct": 5,
+      "values": {
+        " Don't know": 9,
+        "2006.0": 134,
+        "2007.0": 57,
+        "2008.0": 11,
+        "nan": 8477
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02C124m",
+      "rows": 8688,
+      "n_valid": 211,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : month)",
+      "n_distinct": 13,
+      "values": {
+        " Don't know": 74,
+        "1.0": 40,
+        "10.0": 19,
+        "11.0": 12,
+        "12.0": 22,
+        "2.0": 8,
+        "3.0": 10,
+        "4.0": 3
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02C126",
+      "rows": 8688,
+      "n_valid": 3160,
+      "dtype": "category",
+      "label": "Drinking frequency per month (soju)",
+      "n_distinct": 9,
+      "values": {
+        "2~3 times a month": 672,
+        "2~3 times a week": 624,
+        "4~6 times a week": 172,
+        "Everyday/ more than twice a day": 10,
+        "Everyday/ once a day": 203,
+        "None or less than once a month": 455,
+        "Once a month": 342,
+        "Once a week": 682
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02C127",
+      "rows": 8688,
+      "n_valid": 2705,
+      "dtype": "category",
+      "label": "Average drinking capacity at a time (soju)",
+      "n_distinct": 29,
+      "values": {
+        "1.0": 85,
+        "1.5": 1,
+        "2.0": 272,
+        "2.3": 1,
+        "3.0": 548,
+        "3.2": 11,
+        "3.5": 2,
+        "4.0": 328
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03wgt_p",
+      "rows": 7920,
+      "n_valid": 7763,
+      "dtype": "float64",
+      "label": "Longitudinal weight",
+      "n_distinct": 6241,
+      "values": {
+        "329.22764": 1,
+        "330.70224": 1,
+        "340.96602": 1,
+        "388.25093": 1,
+        "427.96968": 1,
+        "430.31189": 1,
+        "433.5182": 1,
+        "434.43527": 1
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03wgt_c",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "float64",
+      "label": "Cross-sectional weight",
+      "n_distinct": 6322,
+      "values": {
+        "297.54534": 1,
+        "298.87803": 1,
+        "308.15411": 1,
+        "350.88869": 1,
+        "386.94289": 1,
+        "389.06057": 1,
+        "391.9595": 1,
+        "392.78866": 1
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03chronic_a",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "High blood pressure or hypertension or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 4971,
+        " Yes": 2949
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03chronic_b",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "Diabetes or high blood sugar or not",
+      "n_distinct": 3,
+      "values": {
+        " Don't know": 1,
+        " No": 6680,
+        " Yes": 1239
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03C105",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 71,
+      "values": {
+        " Don't know": 85,
+        " Refuse to answer": 11,
+        "100": 2,
+        "101": 1,
+        "30": 4,
+        "32": 3,
+        "33": 1,
+        "34": 1
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03C106",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 7,
+      "values": {
+        " Don't know": 3,
+        " I gained weight": 360,
+        " I gained weight and then lost it again": 527,
+        " I lost weight": 978,
+        " I lost weight and then gained it again": 240,
+        " Refuse to answer": 1,
+        " There was no change": 5811
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03C107",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 49,
+      "values": {
+        " Don't know": 157,
+        " Refuse to answer": 16,
+        "137": 1,
+        "140": 23,
+        "142": 3,
+        "143": 6,
+        "144": 2,
+        "145": 69
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03bmi",
+      "rows": 7920,
+      "n_valid": 7725,
+      "dtype": "float64",
+      "label": "bmi",
+      "n_distinct": 1099,
+      "values": {
+        "12.327416173570018": 1,
+        "12.486992715920914": 1,
+        "13.157317661506074": 1,
+        "13.84083044982699": 1,
+        "14.097142124823787": 1,
+        "14.172335600907031": 1,
+        "14.222222222222221": 1,
+        "14.5681581685744": 1
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03smoke",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "Smoking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-smoker": 1377,
+        "Non-smoker": 5441,
+        "Past-smoker": 1102
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03alc",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "Drinking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-drinker": 2775,
+        "Non-drinker": 4160,
+        "Past-drinker": 985
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03C124y",
+      "rows": 7920,
+      "n_valid": 156,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : Year)",
+      "n_distinct": 7,
+      "values": {
+        " Don't know": 14,
+        "2006.0": 53,
+        "2007.0": 7,
+        "2008.0": 33,
+        "2009.0": 34,
+        "2010.0": 15,
+        "nan": 7764
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03C124m",
+      "rows": 7920,
+      "n_valid": 156,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : month)",
+      "n_distinct": 13,
+      "values": {
+        " Don't know": 54,
+        "1.0": 29,
+        "10.0": 19,
+        "11.0": 10,
+        "12.0": 12,
+        "2.0": 5,
+        "3.0": 9,
+        "4.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03C126",
+      "rows": 7920,
+      "n_valid": 2775,
+      "dtype": "category",
+      "label": "Drinking frequency per month (soju)",
+      "n_distinct": 9,
+      "values": {
+        "2~3 times a month": 662,
+        "2~3 times a week": 484,
+        "4~6 times a week": 115,
+        "Everyday/ more than twice a day": 5,
+        "Everyday/ once a day": 141,
+        "None or less than once a month": 461,
+        "Once a month": 308,
+        "Once a week": 599
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03C127",
+      "rows": 7920,
+      "n_valid": 2314,
+      "dtype": "category",
+      "label": "Average drinking capacity at a time (soju)",
+      "n_distinct": 30,
+      "values": {
+        "1.0": 56,
+        "1.5": 1,
+        "2.0": 206,
+        "3.0": 470,
+        "3.2": 8,
+        "3.5": 1,
+        "4.0": 308,
+        "5.0": 310
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04wgt_p",
+      "rows": 7486,
+      "n_valid": 7104,
+      "dtype": "float64",
+      "label": "Longitudinal weight",
+      "n_distinct": 5969,
+      "values": {
+        "335.26308": 1,
+        "336.92858": 1,
+        "347.44368": 1,
+        "404.65681": 1,
+        "426.80996": 1,
+        "429.40255": 1,
+        "433.05705": 1,
+        "433.66803": 1
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04wgt_c",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "float64",
+      "label": "Cross-sectional weight",
+      "n_distinct": 6083,
+      "values": {
+        "269.10706": 1,
+        "270.44392": 1,
+        "278.88412": 1,
+        "324.80763": 1,
+        "338.26373": 1,
+        "343.24404": 1,
+        "376.15121": 1,
+        "378.43608": 1
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04chronic_a",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "High blood pressure or hypertension or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 4463,
+        " Yes": 3023
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04chronic_b",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "Diabetes or high blood sugar or not",
+      "n_distinct": 3,
+      "values": {
+        " Don't know": 1,
+        " No": 6213,
+        " Yes": 1272
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04C105",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 70,
+      "values": {
+        " Don't know": 54,
+        " Refuse to answer": 1,
+        "105": 1,
+        "106": 1,
+        "30": 4,
+        "32": 1,
+        "34": 1,
+        "35": 8
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04C106",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 7,
+      "values": {
+        " Don't know": 5,
+        " I gained weight": 493,
+        " I gained weight and then lost it again": 39,
+        " I lost weight": 789,
+        " I lost weight and then gained it again": 51,
+        " Refuse to answer": 1,
+        " There was no change": 6108
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04C107",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 52,
+      "values": {
+        " Don't know": 244,
+        " Refuse to answer": 5,
+        "100": 1,
+        "137": 1,
+        "139": 1,
+        "140": 17,
+        "142": 3,
+        "143": 5
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04bmi",
+      "rows": 7486,
+      "n_valid": 7230,
+      "dtype": "float64",
+      "label": "bmi",
+      "n_distinct": 1060,
+      "values": {
+        "12.456747404844291": 1,
+        "13.333333333333334": 1,
+        "13.625443723331779": 1,
+        "13.84083044982699": 2,
+        "13.88310426211301": 1,
+        "14.020189072264058": 1,
+        "14.5681581685744": 1,
+        "14.821342733536289": 1
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04smoke",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "Smoking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-smoker": 1201,
+        "Non-smoker": 5148,
+        "Past-smoker": 1137
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04alc",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "Drinking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-drinker": 2546,
+        "Non-drinker": 3883,
+        "Past-drinker": 1057
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04C124y",
+      "rows": 7486,
+      "n_valid": 123,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : Year)",
+      "n_distinct": 8,
+      "values": {
+        " Don't know": 13,
+        "2006.0": 43,
+        "2007.0": 4,
+        "2009.0": 1,
+        "2010.0": 19,
+        "2011.0": 33,
+        "2012.0": 10,
+        "nan": 7363
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04C124m",
+      "rows": 7486,
+      "n_valid": 123,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : month)",
+      "n_distinct": 13,
+      "values": {
+        " Don't know": 50,
+        "1.0": 13,
+        "10.0": 6,
+        "11.0": 9,
+        "12.0": 14,
+        "2.0": 7,
+        "3.0": 9,
+        "4.0": 1
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04C126",
+      "rows": 7486,
+      "n_valid": 2546,
+      "dtype": "category",
+      "label": "Drinking frequency per month (soju)",
+      "n_distinct": 9,
+      "values": {
+        "2~3 times a month": 615,
+        "2~3 times a week": 391,
+        "4~6 times a week": 92,
+        "Everyday/ more than twice a day": 1,
+        "Everyday/ once a day": 130,
+        "None or less than once a month": 442,
+        "Once a month": 309,
+        "Once a week": 566
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04C127",
+      "rows": 7486,
+      "n_valid": 2104,
+      "dtype": "category",
+      "label": "Average drinking capacity at a time (soju)",
+      "n_distinct": 26,
+      "values": {
+        "1.0": 43,
+        "2.0": 147,
+        "3.0": 350,
+        "3.2": 2,
+        "4.0": 278,
+        "5.0": 327,
+        "6.0": 246,
+        "6.5": 115
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05wgt_p",
+      "rows": 7029,
+      "n_valid": 6591,
+      "dtype": "float64",
+      "label": "Longitudinal weight",
+      "n_distinct": 5673,
+      "values": {
+        "368.56675": 1,
+        "370.27758": 1,
+        "381.79277": 1,
+        "422.12238": 1,
+        "425.6565": 1,
+        "429.81768": 1,
+        "435.79972": 1,
+        "443.40958": 1
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05wgt_c",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "float64",
+      "label": "Cross-sectional weight",
+      "n_distinct": 5779,
+      "values": {
+        "276.72615": 1,
+        "278.01067": 1,
+        "286.65647": 1,
+        "322.94123": 1,
+        "324.31576": 1,
+        "341.45415": 1,
+        "344.72985": 1,
+        "345.16995": 1
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05chronic_a",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "category",
+      "label": "High blood pressure or hypertension or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 3965,
+        " Yes": 3064
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05chronic_b",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "category",
+      "label": "Diabetes or high blood sugar or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 5701,
+        " Yes": 1328
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05chronic_l",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "category",
+      "label": "Disc in neck or waist or not",
+      "n_distinct": 2,
+      "values": {
+        "No": 6893,
+        "Yes": 136
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05C105",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 70,
+      "values": {
+        " Don't know": 24,
+        "100": 1,
+        "104": 1,
+        "115": 1,
+        "30": 4,
+        "32": 1,
+        "33": 1,
+        "34": 1
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05C106",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 6,
+      "values": {
+        " Don't know": 3,
+        " I gained weight": 607,
+        " I gained weight and then lost it again": 51,
+        " I lost weight": 821,
+        " I lost weight and then gained it again": 44,
+        " There was no change": 5503
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05C107",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 52,
+      "values": {
+        " Don't know": 129,
+        " Refuse to answer": 1,
+        "100": 1,
+        "137": 1,
+        "138": 1,
+        "139": 1,
+        "140": 16,
+        "142": 1
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05bmi",
+      "rows": 7029,
+      "n_valid": 6894,
+      "dtype": "float64",
+      "label": "bmi",
+      "n_distinct": 1081,
+      "values": {
+        "12.017304919083479": 1,
+        "12.456747404844291": 1,
+        "13.333333333333334": 1,
+        "13.818027210884356": 1,
+        "13.84083044982699": 1,
+        "14.020189072264058": 1,
+        "14.342572340349243": 1,
+        "14.757969303423849": 1
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05smoke",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "category",
+      "label": "Smoking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-smoker": 913,
+        "Non-smoker": 4840,
+        "Past-smoker": 1276
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05alc",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "category",
+      "label": "Drinking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-drinker": 2297,
+        "Non-drinker": 3629,
+        "Past-drinker": 1103
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05C124y",
+      "rows": 7029,
+      "n_valid": 92,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : Year)",
+      "n_distinct": 6,
+      "values": {
+        " Don't know": 9,
+        "2011.0": 1,
+        "2012.0": 25,
+        "2013.0": 41,
+        "2014.0": 16,
+        "nan": 6937
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05C124m",
+      "rows": 7029,
+      "n_valid": 92,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : month)",
+      "n_distinct": 11,
+      "values": {
+        " Don't know": 9,
+        "0.0": 6,
+        "1.0": 31,
+        "10.0": 4,
+        "11.0": 15,
+        "12.0": 18,
+        "2.0": 3,
+        "3.0": 3
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05C126",
+      "rows": 7029,
+      "n_valid": 2297,
+      "dtype": "category",
+      "label": "Drinking frequency per month (soju)",
+      "n_distinct": 9,
+      "values": {
+        "2~3 times a month": 615,
+        "2~3 times a week": 415,
+        "4~6 times a week": 89,
+        "Everyday/ more than twice a day": 2,
+        "Everyday/ once a day": 55,
+        "None or less than once a month": 378,
+        "Once a month": 259,
+        "Once a week": 484
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06wgt_p",
+      "rows": 6618,
+      "n_valid": 6121,
+      "dtype": "float64",
+      "label": "Longitudinal weight",
+      "n_distinct": 5433,
+      "values": {
+        "376.94040856": 1,
+        "378.66549011": 1,
+        "390.43312911": 1,
+        "432.76882331": 1,
+        "437.5596702": 1,
+        "441.42547215": 1,
+        "451.37264868": 1,
+        "451.82725015": 1
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06wgt_c",
+      "rows": 6618,
+      "n_valid": 6618,
+      "dtype": "float64",
+      "label": "Cross-sectional weight",
+      "n_distinct": 5550,
+      "values": {
+        "282.69635685": 1,
+        "300.9990141": 1,
+        "301.8111865": 1,
+        "321.47718263": 1,
+        "328.9201913": 1,
+        "330.21434646": 1,
+        "331.72558448": 1,
+        "339.22932025": 1
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06chronic_a",
+      "rows": 6618,
+      "n_valid": 6618,
+      "dtype": "category",
+      "label": "High blood pressure or hypertension or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 3575,
+        " Yes": 3043
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06chronic_b",
+      "rows": 6618,
+      "n_valid": 6618,
+      "dtype": "category",
+      "label": "Diabetes or high blood sugar or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 5268,
+        " Yes": 1350
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06chronic_l",
+      "rows": 6618,
+      "n_valid": 6618,
+      "dtype": "category",
+      "label": "Disc in neck or waist or not",
+      "n_distinct": 2,
+      "values": {
+        "No": 6397,
+        "Yes": 221
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06C105",
+      "rows": 6618,
+      "n_valid": 6618,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 68,
+      "values": {
+        " Don't know": 29,
+        " Refuse to answer": 4,
+        "103": 1,
+        "120": 1,
+        "30": 3,
+        "32": 2,
+        "34": 1,
+        "35": 6
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06C106",
+      "rows": 6618,
+      "n_valid": 6618,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 5,
+      "values": {
+        " I gained weight": 565,
+        " I gained weight and then lost it again": 94,
+        " I lost weight": 907,
+        " I lost weight and then gained it again": 22,
+        " There was no change": 5030
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06C107",
+      "rows": 6618,
+      "n_valid": 6618,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 51,
+      "values": {
+        " Don't know": 123,
+        " Refuse to answer": 2,
+        "100": 1,
+        "137": 1,
+        "139": 1,
+        "140": 14,
+        "142": 2,
+        "143": 9
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06bmi",
+      "rows": 6618,
+      "n_valid": 6481,
+      "dtype": "float64",
+      "label": "bmi",
+      "n_distinct": 1055,
+      "values": {
+        "12.110726643598618": 1,
+        "13.333333333333334": 1,
+        "14.222222222222221": 1,
+        "14.342572340349243": 1,
+        "14.5681581685744": 1,
+        "14.693877551020408": 1,
+        "14.71606648199446": 1,
+        "14.792899408284022": 1
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06smoke",
+      "rows": 6618,
+      "n_valid": 6618,
+      "dtype": "category",
+      "label": "Smoking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-smoker": 682,
+        "Non-smoker": 4561,
+        "Past-smoker": 1375
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06alc",
+      "rows": 6618,
+      "n_valid": 6618,
+      "dtype": "category",
+      "label": "Drinking status",
+      "n_distinct": 4,
+      "values": {
+        "Current-drinker": 2077,
+        "Don't know": 1,
+        "Non-drinker": 3395,
+        "Past-drinker": 1145
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06C124y",
+      "rows": 6618,
+      "n_valid": 83,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : Year)",
+      "n_distinct": 6,
+      "values": {
+        " Don't know": 8,
+        "2012.0": 1,
+        "2014.0": 15,
+        "2015.0": 51,
+        "2016.0": 8,
+        "nan": 6535
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06C124m",
+      "rows": 6618,
+      "n_valid": 83,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : month)",
+      "n_distinct": 11,
+      "values": {
+        " Don't know": 32,
+        "1.0": 13,
+        "10.0": 2,
+        "11.0": 12,
+        "12.0": 14,
+        "3.0": 5,
+        "4.0": 1,
+        "5.0": 2
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06C126",
+      "rows": 6618,
+      "n_valid": 2077,
+      "dtype": "category",
+      "label": "Drinking frequency per month (soju)",
+      "n_distinct": 9,
+      "values": {
+        "2~3 times a month": 617,
+        "2~3 times a week": 301,
+        "4~6 times a week": 55,
+        "Everyday/ more than twice a day": 2,
+        "Everyday/ once a day": 52,
+        "None or less than once a month": 360,
+        "Once a month": 270,
+        "Once a week": 420
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08wgt_c",
+      "rows": 5717,
+      "n_valid": 5717,
+      "dtype": "float64",
+      "label": "Vertical weighting_8th wave",
+      "n_distinct": 5058,
+      "values": {
+        "245.06620919190925": 1,
+        "247.2439258952275": 1,
+        "247.4822533410032": 1,
+        "247.5530961506991": 1,
+        "261.7056270122861": 1,
+        "268.11478624638835": 1,
+        "268.95479243790123": 1,
+        "277.8450130287379": 1
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08wgt_p",
+      "rows": 5717,
+      "n_valid": 5101,
+      "dtype": "float64",
+      "label": "Horizontal weighting_8th wave",
+      "n_distinct": 4952,
+      "values": {
+        "435.9477518619034": 1,
+        "437.77172009150144": 1,
+        "455.40128091315154": 1,
+        "483.07665721013086": 1,
+        "489.05572374378033": 1,
+        "490.0740031878519": 1,
+        "490.30347877740246": 1,
+        "492.2469221558665": 1
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08chronic_a",
+      "rows": 5717,
+      "n_valid": 5679,
+      "dtype": "category",
+      "label": "High blood pressure or hypertension or not",
+      "n_distinct": 3,
+      "values": {
+        " No": 2844,
+        " Yes": 2835,
+        "nan": 38
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08chronic_b",
+      "rows": 5717,
+      "n_valid": 5717,
+      "dtype": "category",
+      "label": "Diabetes or high blood sugar or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 4416,
+        " Yes": 1301
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08chronic_l",
+      "rows": 5717,
+      "n_valid": 5717,
+      "dtype": "category",
+      "label": "Disc in neck or waist or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 5613,
+        " Yes": 104
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08C105",
+      "rows": 5717,
+      "n_valid": 5717,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 64,
+      "values": {
+        " Don't know": 21,
+        "32": 1,
+        "33": 1,
+        "35": 7,
+        "36": 3,
+        "37": 4,
+        "38": 10,
+        "39": 3
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08C106",
+      "rows": 5717,
+      "n_valid": 5717,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 5,
+      "values": {
+        " I gained weight": 401,
+        " I gained weight and then lost it again": 92,
+        " I lost weight": 534,
+        " I lost weight and then gained it again": 31,
+        " There was no change": 4659
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08C107",
+      "rows": 5717,
+      "n_valid": 5717,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 51,
+      "values": {
+        " Don't know": 53,
+        "136": 1,
+        "137": 2,
+        "138": 2,
+        "139": 1,
+        "140": 9,
+        "141": 1,
+        "142": 2
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08bmi",
+      "rows": 5717,
+      "n_valid": 5649,
+      "dtype": "float64",
+      "label": "bmi",
+      "n_distinct": 1005,
+      "values": {
+        "12.110726643598618": 1,
+        "13.21178491214163": 1,
+        "14.062499999999996": 1,
+        "14.413765145714157": 1,
+        "14.534883720930234": 1,
+        "14.864195306517725": 1,
+        "14.951514374813106": 1,
+        "15.020408163265307": 1
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08smoke",
+      "rows": 5717,
+      "n_valid": 5717,
+      "dtype": "category",
+      "label": "Smoking status",
+      "n_distinct": 3,
+      "values": {
+        "Current-smoker": 412,
+        "Non-smoker": 3924,
+        "Past-smoker": 1381
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08alc",
+      "rows": 5717,
+      "n_valid": 5716,
+      "dtype": "category",
+      "label": "Drinking status",
+      "n_distinct": 4,
+      "values": {
+        "Current-drinker": 1595,
+        "Non-drinker": 2861,
+        "Past-drinker": 1260,
+        "nan": 1
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08C124y",
+      "rows": 5717,
+      "n_valid": 60,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : Year)",
+      "n_distinct": 6,
+      "values": {
+        " Don't know": 22,
+        "2012.0": 1,
+        "2018.0": 17,
+        "2019.0": 9,
+        "2020.0": 11,
+        "nan": 5657
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08C124m",
+      "rows": 5717,
+      "n_valid": 60,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : month)",
+      "n_distinct": 9,
+      "values": {
+        " Don't know": 26,
+        "1.0": 6,
+        "10.0": 3,
+        "11.0": 17,
+        "12.0": 2,
+        "2.0": 1,
+        "3.0": 4,
+        "4.0": 1
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08C126",
+      "rows": 5717,
+      "n_valid": 1595,
+      "dtype": "category",
+      "label": "Drinking frequency per month (soju)",
+      "n_distinct": 8,
+      "values": {
+        "2~3 times a month": 501,
+        "2~3 times a week": 177,
+        "4~6 times a week": 33,
+        "Everyday/ once a day": 39,
+        "None or less than once a month": 330,
+        "Once a month": 215,
+        "Once a week": 300,
+        "nan": 4122
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07wgt_p",
+      "rows": 6136,
+      "n_valid": 5586,
+      "dtype": "float64",
+      "label": "Longitudinal weight",
+      "n_distinct": 5264,
+      "values": {
+        "376.91801302781414": 1,
+        "376.9434322196029": 1,
+        "377.8196809081465": 1,
+        "460.34216794354654": 1,
+        "462.2396102063138": 1,
+        "470.2341869416078": 1,
+        "471.664600400706": 1,
+        "476.5004380417785": 1
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07wgt_c",
+      "rows": 6136,
+      "n_valid": 6136,
+      "dtype": "float64",
+      "label": "Cross-sectional weight",
+      "n_distinct": 5370,
+      "values": {
+        "216.0048008768376": 1,
+        "219.04861455911038": 1,
+        "246.48270535334672": 1,
+        "248.30598184904878": 1,
+        "250.41218949940648": 1,
+        "261.1433839604459": 1,
+        "265.2248719244322": 1,
+        "268.7428836773421": 1
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07chronic_a",
+      "rows": 6136,
+      "n_valid": 6136,
+      "dtype": "category",
+      "label": "High blood pressure or hypertension or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 3209,
+        " Yes": 2927
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07chronic_b",
+      "rows": 6136,
+      "n_valid": 6136,
+      "dtype": "category",
+      "label": "Diabetes or high blood sugar or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 4805,
+        " Yes": 1331
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07chronic_l",
+      "rows": 6136,
+      "n_valid": 6136,
+      "dtype": "category",
+      "label": "Disc in neck or waist or not",
+      "n_distinct": 2,
+      "values": {
+        " No": 5874,
+        " Yes": 262
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07C105",
+      "rows": 6136,
+      "n_valid": 6136,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 65,
+      "values": {
+        " Don't know": 29,
+        " Refuse to answer": 4,
+        "100": 1,
+        "102": 1,
+        "30": 4,
+        "32": 1,
+        "35": 8,
+        "37": 3
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07C106",
+      "rows": 6136,
+      "n_valid": 6136,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 6,
+      "values": {
+        " Don't know": 2,
+        " I gained weight": 551,
+        " I gained weight and then lost it again": 101,
+        " I lost weight": 791,
+        " I lost weight and then gained it again": 44,
+        " There was no change": 4647
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07C107",
+      "rows": 6136,
+      "n_valid": 6136,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 50,
+      "values": {
+        " Don't know": 78,
+        " Refuse to answer": 6,
+        "100": 1,
+        "137": 1,
+        "139": 1,
+        "140": 13,
+        "142": 2,
+        "143": 9
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07bmi",
+      "rows": 6136,
+      "n_valid": 6035,
+      "dtype": "float64",
+      "label": "bmi",
+      "n_distinct": 1029,
+      "values": {
+        "12.110726643598618": 1,
+        "12.6496879743633": 1,
+        "12.984764542936288": 1,
+        "13.061224489795919": 1,
+        "13.364963747535834": 1,
+        "14.222222222222221": 1,
+        "14.5681581685744": 1,
+        "14.670644041273414": 1
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07smoke",
+      "rows": 6136,
+      "n_valid": 6084,
+      "dtype": "category",
+      "label": "Smoking status",
+      "n_distinct": 4,
+      "values": {
+        "Current-smoker": 536,
+        "Non-smoker": 4183,
+        "Past-smoker": 1365,
+        "nan": 52
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07alc",
+      "rows": 6136,
+      "n_valid": 6135,
+      "dtype": "category",
+      "label": "Drinking status",
+      "n_distinct": 4,
+      "values": {
+        "Current-drinker": 1843,
+        "Non-drinker": 3102,
+        "Past-drinker": 1190,
+        "nan": 1
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07C124y",
+      "rows": 6136,
+      "n_valid": 70,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : Year)",
+      "n_distinct": 10,
+      "values": {
+        " Don't know": 14,
+        "2006.0": 17,
+        "2008.0": 1,
+        "2009.0": 2,
+        "2011.0": 1,
+        "2015.0": 1,
+        "2016.0": 15,
+        "2017.0": 11
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07C124m",
+      "rows": 6136,
+      "n_valid": 70,
+      "dtype": "category",
+      "label": "Drinking beginning time (unit : month)",
+      "n_distinct": 9,
+      "values": {
+        " Don't know": 36,
+        "1.0": 10,
+        "11.0": 4,
+        "12.0": 11,
+        "2.0": 2,
+        "3.0": 4,
+        "4.0": 2,
+        "5.0": 1
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07C126",
+      "rows": 6136,
+      "n_valid": 1843,
+      "dtype": "category",
+      "label": "Drinking frequency per month (soju)",
+      "n_distinct": 8,
+      "values": {
+        "2~3 times a month": 523,
+        "2~3 times a week": 279,
+        "4~6 times a week": 38,
+        "Everyday/ once a day": 46,
+        "None or less than once a month": 309,
+        "Once a month": 261,
+        "Once a week": 387,
+        "nan": 4293
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01wgt_c",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "float64",
+      "label": "Horizontal weighting_1st wave",
+      "n_distinct": 1098,
+      "values": {
+        "277.70462664": 5,
+        "393.38881632": 4,
+        "401.80633668": 3,
+        "418.75955871": 5,
+        "419.64966904": 4,
+        "428.34105566": 6,
+        "428.59439262": 3,
+        "432.43485723": 1
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C006",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 2,
+      "values": {
+        "No": 7420,
+        "Yes": 2834
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C009",
+      "rows": 10254,
+      "n_valid": 2834,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        "No": 210,
+        "Yes": 2624,
+        "nan": 7420
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C010",
+      "rows": 10254,
+      "n_valid": 2834,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 2068,
+        "Yes": 766,
+        "nan": 7420
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C011",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 1,
+        "No": 9031,
+        "Yes": 1222
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C014",
+      "rows": 10254,
+      "n_valid": 1222,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 136,
+        "Yes": 1086,
+        "nan": 9032
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C015",
+      "rows": 10254,
+      "n_valid": 1222,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 767,
+        "Yes": 455,
+        "nan": 9032
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C096",
+      "rows": 10254,
+      "n_valid": 3632,
+      "dtype": "category",
+      "label": "Level of pain_8 Waist pain",
+      "n_distinct": 4,
+      "values": {
+        "Mild": 2013,
+        "Moderate": 1168,
+        "Severe": 451,
+        "nan": 6622
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C105",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 73,
+      "values": {
+        " Don't know": 97,
+        " Refuse to answer": 6,
+        "100": 2,
+        "105": 1,
+        "30": 5,
+        "31": 1,
+        "32": 1,
+        "33": 1
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C106",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 6,
+      "values": {
+        "Don't know": 3,
+        "I gained weight": 405,
+        "I gained weight and then lost it again": 305,
+        "I lost weight": 769,
+        "I lost weight and then gained it again": 134,
+        "There was no change": 8638
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C107",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 53,
+      "values": {
+        " Don't know": 234,
+        " Refuse to answer": 5,
+        "135": 3,
+        "136": 1,
+        "137": 2,
+        "140": 23,
+        "142": 5,
+        "143": 3
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C116",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Smoking experience more than 5 packs (100 cigarettes) since previous interview",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 1,
+        "No": 7297,
+        "Yes": 2956
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C117",
+      "rows": 10254,
+      "n_valid": 2956,
+      "dtype": "category",
+      "label": "Currently, whether or not smoking",
+      "n_distinct": 4,
+      "values": {
+        "-9.0": 1,
+        "No": 978,
+        "Yes": 1977,
+        "nan": 7298
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C118",
+      "rows": 10254,
+      "n_valid": 2955,
+      "dtype": "category",
+      "label": "Smoking beginning time (unit : yyyy+mm)",
+      "n_distinct": 448,
+      "values": {
+        " Don't know": 216,
+        " Refuse to answer": 3,
+        "192905.0": 1,
+        "193000.0": 1,
+        "193500.0": 1,
+        "193600.0": 1,
+        "193703.0": 1,
+        "193800.0": 1
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05wgt_a",
+      "rows": 920,
+      "n_valid": 920,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_5th wave",
+      "n_distinct": 617,
+      "values": {
+        "15.967": 1,
+        "21.9766": 1,
+        "22.349": 2,
+        "22.7132": 1,
+        "22.8922": 1,
+        "22.9051": 2,
+        "23.3128": 1,
+        "23.9609": 5
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C006",
+      "rows": 920,
+      "n_valid": 920,
+      "dtype": "category",
+      "label": "Whether or not high blood pressure or hypertension diagnostic",
+      "n_distinct": 2,
+      "values": {
+        " No": 835,
+        " Yes": 85
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C009",
+      "rows": 920,
+      "n_valid": 85,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        " No": 3,
+        " Yes": 82,
+        "nan": 835
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C010",
+      "rows": 920,
+      "n_valid": 85,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 79,
+        " Yes": 6,
+        "nan": 835
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C011",
+      "rows": 920,
+      "n_valid": 920,
+      "dtype": "category",
+      "label": "Whether or not diabetes or high blood sugar diagnostic",
+      "n_distinct": 2,
+      "values": {
+        " No": 877,
+        " Yes": 43
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C014",
+      "rows": 920,
+      "n_valid": 43,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        " No": 3,
+        " Yes": 40,
+        "nan": 877
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C015",
+      "rows": 920,
+      "n_valid": 43,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        " No": 36,
+        " Yes": 7,
+        "nan": 877
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C078n",
+      "rows": 920,
+      "n_valid": 920,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 905,
+        " Yes": 15
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C080n",
+      "rows": 920,
+      "n_valid": 15,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 10,
+        " Yes": 5,
+        "nan": 905
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C081n",
+      "rows": 920,
+      "n_valid": 15,
+      "dtype": "category",
+      "label": "Daily activity difficulty by any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 9,
+        " Yes": 6,
+        "nan": 905
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C096",
+      "rows": 920,
+      "n_valid": 146,
+      "dtype": "category",
+      "label": "Level of pain_8 Waist pain",
+      "n_distinct": 4,
+      "values": {
+        " Mild": 121,
+        " Moderate": 22,
+        " Severe": 3,
+        "nan": 774
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C105",
+      "rows": 920,
+      "n_valid": 920,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 51,
+      "values": {
+        "30": 1,
+        "40": 1,
+        "41": 1,
+        "42": 2,
+        "43": 3,
+        "44": 2,
+        "45": 4,
+        "46": 5
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C106",
+      "rows": 920,
+      "n_valid": 920,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 5,
+      "values": {
+        " I gained weight": 46,
+        " I gained weight and then lost it again": 7,
+        " I lost weight": 26,
+        " I lost weight and then gained it again": 3,
+        " There was no change": 838
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C107",
+      "rows": 920,
+      "n_valid": 920,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 39,
+      "values": {
+        "145": 1,
+        "147": 1,
+        "148": 4,
+        "149": 2,
+        "150": 20,
+        "151": 3,
+        "152": 7,
+        "153": 15
+      }
+    },
+    {
+      "file": "wave5\\e_imp_w05_new.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06wgt_p",
+      "rows": 7490,
+      "n_valid": 6121,
+      "dtype": "float64",
+      "label": "Longitudinal weight",
+      "n_distinct": 5433,
+      "values": {
+        "376.94040856": 1,
+        "378.66549011": 1,
+        "390.43312911": 1,
+        "432.76882331": 1,
+        "437.5596702": 1,
+        "441.42547215": 1,
+        "451.37264868": 1,
+        "451.82725015": 1
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06wgt_c",
+      "rows": 7490,
+      "n_valid": 6618,
+      "dtype": "float64",
+      "label": "Cross-sectional weight",
+      "n_distinct": 5550,
+      "values": {
+        "282.69635685": 1,
+        "300.9990141": 1,
+        "301.8111865": 1,
+        "321.47718263": 1,
+        "328.9201913": 1,
+        "330.21434646": 1,
+        "331.72558448": 1,
+        "339.22932025": 1
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06wgt_ap",
+      "rows": 7490,
+      "n_valid": 7368,
+      "dtype": "float64",
+      "label": "Integrated vertical weighting_6th wave",
+      "n_distinct": 6618,
+      "values": {
+        "17.225638079": 1,
+        "22.526950562": 1,
+        "23.849096988": 1,
+        "24.140855069": 1,
+        "24.247067729": 1,
+        "24.841715698": 1,
+        "24.854618252": 1,
+        "24.857901098": 1
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06wgt_ac",
+      "rows": 7490,
+      "n_valid": 7490,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_6th wave",
+      "n_distinct": 6690,
+      "values": {
+        "17.825611897": 1,
+        "24.328642984": 1,
+        "24.831622515": 1,
+        "25.135400328": 1,
+        "25.245988694": 1,
+        "25.865134732": 1,
+        "25.87856884": 1,
+        "25.881986931": 1
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C006",
+      "rows": 7490,
+      "n_valid": 4563,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 4351,
+        " Yes": 212,
+        "nan": 2927
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C008",
+      "rows": 7490,
+      "n_valid": 2927,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 17,
+        " Greatly worsened": 7,
+        " Improved": 131,
+        " Same": 2709,
+        " Worsened": 63,
+        "nan": 4563
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C009",
+      "rows": 7490,
+      "n_valid": 3139,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        " No": 319,
+        " Yes": 2820,
+        "nan": 4351
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C010",
+      "rows": 7490,
+      "n_valid": 3139,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 2882,
+        " Yes": 257,
+        "nan": 4351
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C011",
+      "rows": 7490,
+      "n_valid": 6231,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        " No": 6094,
+        " Yes": 137,
+        "nan": 1259
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C013",
+      "rows": 7490,
+      "n_valid": 1259,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 12,
+        " Greatly worsened": 5,
+        " Improved": 58,
+        " Same": 1125,
+        " Worsened": 59,
+        "nan": 6231
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C014",
+      "rows": 7490,
+      "n_valid": 1396,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 202,
+        " Yes": 1194,
+        "nan": 6094
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C015",
+      "rows": 7490,
+      "n_valid": 1396,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 1235,
+        " Yes": 161,
+        "nan": 6094
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C078n",
+      "rows": 7490,
+      "n_valid": 7490,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 7368,
+        " Yes": 122
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C080n",
+      "rows": 7490,
+      "n_valid": 122,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 32,
+        " Yes": 90,
+        "nan": 7368
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08wgt_c",
+      "rows": 6488,
+      "n_valid": 5717,
+      "dtype": "float64",
+      "label": "Vertical weighting_8th wave",
+      "n_distinct": 5058,
+      "values": {
+        "245.06620919190925": 1,
+        "247.2439258952275": 1,
+        "247.4822533410032": 1,
+        "247.5530961506991": 1,
+        "261.7056270122861": 1,
+        "268.11478624638835": 1,
+        "268.95479243790123": 1,
+        "277.8450130287379": 1
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08wgt_p",
+      "rows": 6488,
+      "n_valid": 5101,
+      "dtype": "float64",
+      "label": "Horizontal weighting_8th wave",
+      "n_distinct": 4952,
+      "values": {
+        "435.9477518619034": 1,
+        "437.77172009150144": 1,
+        "455.40128091315154": 1,
+        "483.07665721013086": 1,
+        "489.05572374378033": 1,
+        "490.0740031878519": 1,
+        "490.30347877740246": 1,
+        "492.2469221558665": 1
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08wgt_ac",
+      "rows": 6488,
+      "n_valid": 6488,
+      "dtype": "float64",
+      "label": "Integrated vertical weighting_8th wave",
+      "n_distinct": 6029,
+      "values": {
+        "12.83848867651299": 1,
+        "21.798076844930574": 1,
+        "23.619976051511426": 1,
+        "23.804232439328956": 1,
+        "23.82776664797198": 1,
+        "24.36954004358152": 1,
+        "24.553021756305558": 1,
+        "24.64329021798958": 1
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08wgt_ap",
+      "rows": 6488,
+      "n_valid": 6113,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_7th wave",
+      "n_distinct": 5936,
+      "values": {
+        "24.939236107296136": 1,
+        "27.127051028982276": 1,
+        "28.0180399325719": 1,
+        "28.683417867798504": 1,
+        "28.899379376622676": 1,
+        "29.005627094147737": 1,
+        "29.31384783654805": 1,
+        "29.40567467533133": 1
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08_fam1",
+      "rows": 6488,
+      "n_valid": 6488,
+      "dtype": "category",
+      "label": "Integrated horizontal weighting_7th wave",
+      "n_distinct": 5,
+      "values": {
+        "Four generation": 11,
+        "One generation": 2768,
+        "Other": 6,
+        "Three generation": 504,
+        "Two generation": 3199
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C006",
+      "rows": 6488,
+      "n_valid": 3706,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "nan": 2782,
+        "아니오": 3507,
+        "예": 199
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C008",
+      "rows": 6488,
+      "n_valid": 2782,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        "nan": 3706,
+        "그대로": 2622,
+        "악화됨(나빠진 편)": 72,
+        "완치": 19,
+        "크게 악화됨": 9,
+        "호전됨(나아진 편)": 60
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C009",
+      "rows": 6488,
+      "n_valid": 2981,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 4,
+      "values": {
+        "nan": 3507,
+        "모르겠음": 1,
+        "아니오": 396,
+        "예": 2584
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C010",
+      "rows": 6488,
+      "n_valid": 2981,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 4,
+      "values": {
+        "nan": 3507,
+        "모르겠음": 1,
+        "아니오": 2783,
+        "예": 197
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C011",
+      "rows": 6488,
+      "n_valid": 5252,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        "nan": 1236,
+        "아니오": 5129,
+        "예": 123
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C013",
+      "rows": 6488,
+      "n_valid": 1237,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 7,
+      "values": {
+        "nan": 5251,
+        "그대로": 1107,
+        "모르겠음": 1,
+        "악화됨(나빠진 편)": 70,
+        "완치": 8,
+        "크게 악화됨": 9,
+        "호전됨(나아진 편)": 42
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C014",
+      "rows": 6488,
+      "n_valid": 1359,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar ",
+      "n_distinct": 4,
+      "values": {
+        "nan": 5129,
+        "모르겠음": 1,
+        "아니오": 213,
+        "예": 1145
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C015",
+      "rows": 6488,
+      "n_valid": 1359,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar ",
+      "n_distinct": 4,
+      "values": {
+        "nan": 5129,
+        "모르겠음": 1,
+        "아니오": 1204,
+        "예": 154
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C078n",
+      "rows": 6488,
+      "n_valid": 6488,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 6381,
+        " Yes": 107
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07wgt_p",
+      "rows": 6940,
+      "n_valid": 5586,
+      "dtype": "float64",
+      "label": "Vertical weighting_7th wave",
+      "n_distinct": 5264,
+      "values": {
+        "376.91801302781414": 1,
+        "376.9434322196029": 1,
+        "377.8196809081465": 1,
+        "460.34216794354654": 1,
+        "462.2396102063138": 1,
+        "470.2341869416078": 1,
+        "471.664600400706": 1,
+        "476.5004380417785": 1
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07wgt_c",
+      "rows": 6940,
+      "n_valid": 6136,
+      "dtype": "float64",
+      "label": "Horizontal weighting_7th wave",
+      "n_distinct": 5370,
+      "values": {
+        "216.0048008768376": 1,
+        "219.04861455911038": 1,
+        "246.48270535334672": 1,
+        "248.30598184904878": 1,
+        "250.41218949940648": 1,
+        "261.1433839604459": 1,
+        "265.2248719244322": 1,
+        "268.7428836773421": 1
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07wgt_ap",
+      "rows": 6940,
+      "n_valid": 6701,
+      "dtype": "float64",
+      "label": "Integrated vertical weighting_7th wave",
+      "n_distinct": 6366,
+      "values": {
+        "20.520974053998223": 1,
+        "22.20380902389508": 1,
+        "24.89011904970699": 1,
+        "24.95717100290397": 1,
+        "25.570673778324856": 1,
+        "26.30171048335998": 1,
+        "26.30974292287416": 1,
+        "26.33596305455206": 1
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07wgt_ac",
+      "rows": 6940,
+      "n_valid": 6940,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_7th wave",
+      "n_distinct": 6451,
+      "values": {
+        "20.96715830123458": 1,
+        "23.057347477701715": 1,
+        "23.14236635521956": 1,
+        "30.339178981061625": 1,
+        "30.420910257838983": 1,
+        "30.62083992334937": 1,
+        "31.16872389712696": 1,
+        "32.059802537268986": 1
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C006",
+      "rows": 6940,
+      "n_valid": 4088,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 3909,
+        " Yes": 179,
+        "nan": 2852
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C008",
+      "rows": 6940,
+      "n_valid": 2852,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 24,
+        " Greatly worsened": 13,
+        " Improved": 118,
+        " Same": 2638,
+        " Worsened": 59,
+        "nan": 4088
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C009",
+      "rows": 6940,
+      "n_valid": 3031,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        " No": 375,
+        " Yes": 2656,
+        "nan": 3909
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C010",
+      "rows": 6940,
+      "n_valid": 3031,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 2772,
+        " Yes": 259,
+        "nan": 3909
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C011",
+      "rows": 6940,
+      "n_valid": 5672,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        " No": 5558,
+        " Yes": 114,
+        "nan": 1268
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C013",
+      "rows": 6940,
+      "n_valid": 1268,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 14,
+        " Greatly worsened": 8,
+        " Improved": 71,
+        " Same": 1122,
+        " Worsened": 53,
+        "nan": 5672
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C014",
+      "rows": 6940,
+      "n_valid": 1382,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        " No": 228,
+        " Yes": 1154,
+        "nan": 5558
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C015",
+      "rows": 6940,
+      "n_valid": 1382,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        " No": 1187,
+        " Yes": 195,
+        "nan": 5558
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C078n",
+      "rows": 6940,
+      "n_valid": 6940,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 6852,
+        " Yes": 88
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C080n",
+      "rows": 6940,
+      "n_valid": 88,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 19,
+        " Yes": 69,
+        "nan": 6852
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05wgt_p",
+      "rows": 7949,
+      "n_valid": 6591,
+      "dtype": "float64",
+      "label": "Vertical weighting_5th wave",
+      "n_distinct": 5673,
+      "values": {
+        "368.56675": 1,
+        "370.27758": 1,
+        "381.79277": 1,
+        "422.12238": 1,
+        "425.6565": 1,
+        "429.81768": 1,
+        "435.79972": 1,
+        "443.40958": 1
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05wgt_c",
+      "rows": 7949,
+      "n_valid": 7029,
+      "dtype": "float64",
+      "label": "Horizontal weighting_5th wave",
+      "n_distinct": 5779,
+      "values": {
+        "276.72615": 1,
+        "278.01067": 1,
+        "286.65647": 1,
+        "322.94123": 1,
+        "324.31576": 1,
+        "341.45415": 1,
+        "344.72985": 1,
+        "345.16995": 1
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05wgt_a",
+      "rows": 7949,
+      "n_valid": 7949,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_5th wave",
+      "n_distinct": 6428,
+      "values": {
+        "15.967": 1,
+        "21.9766": 1,
+        "22.349": 2,
+        "22.7132": 1,
+        "22.8922": 1,
+        "22.9051": 2,
+        "23.3128": 1,
+        "23.9609": 5
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C006",
+      "rows": 7949,
+      "n_valid": 5145,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 4800,
+        " Yes": 345,
+        "nan": 2804
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C008",
+      "rows": 7949,
+      "n_valid": 2804,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 12,
+        " Greatly worsened": 13,
+        " Improved": 105,
+        " Same": 2607,
+        " Worsened": 67,
+        "nan": 5145
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C009",
+      "rows": 7949,
+      "n_valid": 3149,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 343,
+        " Yes": 2805,
+        "nan": 4800
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C010",
+      "rows": 7949,
+      "n_valid": 3149,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 2859,
+        " Yes": 289,
+        "nan": 4800
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C011",
+      "rows": 7949,
+      "n_valid": 6803,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        " No": 6578,
+        " Yes": 225,
+        "nan": 1146
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C013",
+      "rows": 7949,
+      "n_valid": 1146,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 12,
+        " Greatly worsened": 12,
+        " Improved": 53,
+        " Same": 1033,
+        " Worsened": 36,
+        "nan": 6803
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C014",
+      "rows": 7949,
+      "n_valid": 1371,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 250,
+        " Yes": 1121,
+        "nan": 6578
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C015",
+      "rows": 7949,
+      "n_valid": 1371,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 1204,
+        " Yes": 167,
+        "nan": 6578
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C078n",
+      "rows": 7949,
+      "n_valid": 7949,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 7798,
+        " Yes": 151
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C080n",
+      "rows": 7949,
+      "n_valid": 151,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 52,
+        " Yes": 99,
+        "nan": 7798
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C081n",
+      "rows": 7949,
+      "n_valid": 151,
+      "dtype": "category",
+      "label": "Daily activity difficulty by any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 49,
+        " Yes": 102,
+        "nan": 7798
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02wgt_p",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "float64",
+      "label": "Vertical weighting_2nd wave",
+      "n_distinct": 6305,
+      "values": {
+        "327.59734": 1,
+        "328.97433": 1,
+        "337.32491": 1,
+        "339.15301": 1,
+        "376.74785": 1,
+        "430.34007": 1,
+        "434.06884": 1,
+        "439.29673": 1
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02wgt_c",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "float64",
+      "label": "Horizontal weighting_2nd wave",
+      "n_distinct": 6337,
+      "values": {
+        "321.97973": 1,
+        "323.3331": 1,
+        "331.54049": 1,
+        "333.33723": 1,
+        "370.2874": 1,
+        "383.52984": 1,
+        "385.90833": 1,
+        "409.60576": 1
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C006",
+      "rows": 8688,
+      "n_valid": 6277,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 5867,
+        "Yes": 410,
+        "nan": 2411
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C008",
+      "rows": 8688,
+      "n_valid": 2411,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 17,
+        "Greatly worsened": 14,
+        "Improved": 153,
+        "Same": 2101,
+        "Worsened": 126,
+        "nan": 6277
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C009",
+      "rows": 8688,
+      "n_valid": 2821,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        "No": 311,
+        "Yes": 2510,
+        "nan": 5867
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C010",
+      "rows": 8688,
+      "n_valid": 2821,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 2362,
+        "Yes": 459,
+        "nan": 5867
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C011",
+      "rows": 8688,
+      "n_valid": 7640,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        "No": 7476,
+        "Yes": 164,
+        "nan": 1048
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C013",
+      "rows": 8688,
+      "n_valid": 1048,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 19,
+        "Greatly worsened": 11,
+        "Improved": 76,
+        "Same": 828,
+        "Worsened": 114,
+        "nan": 7640
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C014",
+      "rows": 8688,
+      "n_valid": 1212,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        "No": 210,
+        "Yes": 1002,
+        "nan": 7476
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C015",
+      "rows": 8688,
+      "n_valid": 1212,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        "No": 919,
+        "Yes": 293,
+        "nan": 7476
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C096",
+      "rows": 8688,
+      "n_valid": 2810,
+      "dtype": "category",
+      "label": "Level of pain_8 Waist pain",
+      "n_distinct": 4,
+      "values": {
+        "Mild": 1692,
+        "Moderate": 879,
+        "Severe": 239,
+        "nan": 5878
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C105",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 70,
+      "values": {
+        " Don't know": 89,
+        "102": 1,
+        "110": 1,
+        "30": 2,
+        "32": 2,
+        "33": 1,
+        "34": 1,
+        "35": 7
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C106",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 6,
+      "values": {
+        "Don't know": 1,
+        "I gained weight": 434,
+        "I gained weight and then lost it again": 419,
+        "I lost weight": 928,
+        "I lost weight and then gained it again": 155,
+        "There was no change": 6751
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C107",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 50,
+      "values": {
+        " Don't know": 166,
+        "135": 5,
+        "136": 1,
+        "137": 1,
+        "140": 25,
+        "142": 2,
+        "143": 5,
+        "144": 1
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05wgt_p",
+      "rows": 7029,
+      "n_valid": 6591,
+      "dtype": "float64",
+      "label": "Vertical weighting_5th wave",
+      "n_distinct": 5673,
+      "values": {
+        "368.56675": 1,
+        "370.27758": 1,
+        "381.79277": 1,
+        "422.12238": 1,
+        "425.6565": 1,
+        "429.81768": 1,
+        "435.79972": 1,
+        "443.40958": 1
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05wgt_c",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "float64",
+      "label": "Horizontal weighting_5th wave",
+      "n_distinct": 5779,
+      "values": {
+        "276.72615": 1,
+        "278.01067": 1,
+        "286.65647": 1,
+        "322.94123": 1,
+        "324.31576": 1,
+        "341.45415": 1,
+        "344.72985": 1,
+        "345.16995": 1
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05wgt_a",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_5th wave",
+      "n_distinct": 5811,
+      "values": {
+        "311.6700204315566": 1,
+        "313.11674341005215": 1,
+        "322.85430335620384": 1,
+        "350.6677234928924": 1,
+        "352.1602643151879": 1,
+        "365.65648232847497": 1,
+        "367.986023393081": 1,
+        "371.0669012530526": 1
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C006",
+      "rows": 7029,
+      "n_valid": 4225,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 3965,
+        " Yes": 260,
+        "nan": 2804
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C008",
+      "rows": 7029,
+      "n_valid": 2804,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 12,
+        " Greatly worsened": 13,
+        " Improved": 105,
+        " Same": 2607,
+        " Worsened": 67,
+        "nan": 4225
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C009",
+      "rows": 7029,
+      "n_valid": 3064,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 340,
+        " Yes": 2723,
+        "nan": 3965
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C010",
+      "rows": 7029,
+      "n_valid": 3064,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 2780,
+        " Yes": 283,
+        "nan": 3965
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C011",
+      "rows": 7029,
+      "n_valid": 5883,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        " No": 5701,
+        " Yes": 182,
+        "nan": 1146
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C013",
+      "rows": 7029,
+      "n_valid": 1146,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 12,
+        " Greatly worsened": 12,
+        " Improved": 53,
+        " Same": 1033,
+        " Worsened": 36,
+        "nan": 5883
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C014",
+      "rows": 7029,
+      "n_valid": 1328,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 247,
+        " Yes": 1081,
+        "nan": 5701
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C015",
+      "rows": 7029,
+      "n_valid": 1328,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 1168,
+        " Yes": 160,
+        "nan": 5701
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C078n",
+      "rows": 7029,
+      "n_valid": 7029,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 6893,
+        " Yes": 136
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C080n",
+      "rows": 7029,
+      "n_valid": 136,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 42,
+        " Yes": 94,
+        "nan": 6893
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C081n",
+      "rows": 7029,
+      "n_valid": 136,
+      "dtype": "category",
+      "label": "Daily activity difficulty by any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 40,
+        " Yes": 96,
+        "nan": 6893
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03wgt_p",
+      "rows": 7920,
+      "n_valid": 7763,
+      "dtype": "float64",
+      "label": "Vertical weighting_3rd wave",
+      "n_distinct": 6241,
+      "values": {
+        "329.22764": 1,
+        "330.70224": 1,
+        "340.96602": 1,
+        "388.25093": 1,
+        "427.96968": 1,
+        "430.31189": 1,
+        "433.5182": 1,
+        "434.43527": 1
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03wgt_c",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "float64",
+      "label": "Horizontal weighting_3rd wave",
+      "n_distinct": 6322,
+      "values": {
+        "297.54534": 1,
+        "298.87803": 1,
+        "308.15411": 1,
+        "350.88869": 1,
+        "386.94289": 1,
+        "389.06057": 1,
+        "391.9595": 1,
+        "392.78866": 1
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C006",
+      "rows": 7920,
+      "n_valid": 5360,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 4971,
+        "Yes": 389,
+        "nan": 2560
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C008",
+      "rows": 7920,
+      "n_valid": 2560,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 25,
+        "Greatly worsened": 10,
+        "Improved": 81,
+        "Same": 2345,
+        "Worsened": 99,
+        "nan": 5360
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C009",
+      "rows": 7920,
+      "n_valid": 2949,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        "No": 298,
+        "Yes": 2651,
+        "nan": 4971
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C010",
+      "rows": 7920,
+      "n_valid": 2949,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 2625,
+        "Yes": 323,
+        "nan": 4971
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C011",
+      "rows": 7920,
+      "n_valid": 6854,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 6680,
+        "Yes": 173,
+        "nan": 1066
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C013",
+      "rows": 7920,
+      "n_valid": 1066,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 26,
+        "Greatly worsened": 13,
+        "Improved": 54,
+        "Same": 872,
+        "Worsened": 101,
+        "nan": 6854
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C014",
+      "rows": 7920,
+      "n_valid": 1239,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        "No": 216,
+        "Yes": 1023,
+        "nan": 6681
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C015",
+      "rows": 7920,
+      "n_valid": 1239,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        "No": 999,
+        "Yes": 240,
+        "nan": 6681
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C096",
+      "rows": 7920,
+      "n_valid": 2402,
+      "dtype": "category",
+      "label": "Level of pain_8 Waist pain",
+      "n_distinct": 4,
+      "values": {
+        " Mild": 1397,
+        " Moderate": 800,
+        " Severe": 205,
+        "nan": 5518
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C105",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 71,
+      "values": {
+        " Don't know": 85,
+        " Refuse to answer": 11,
+        "100": 2,
+        "101": 1,
+        "30": 4,
+        "32": 3,
+        "33": 1,
+        "34": 1
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C106",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 7,
+      "values": {
+        " Don't know": 3,
+        " I gained weight": 360,
+        " I gained weight and then lost it again": 527,
+        " I lost weight": 978,
+        " I lost weight and then gained it again": 240,
+        " Refuse to answer": 1,
+        " There was no change": 5811
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C107",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 49,
+      "values": {
+        " Don't know": 157,
+        " Refuse to answer": 16,
+        "137": 1,
+        "140": 23,
+        "142": 3,
+        "143": 6,
+        "144": 2,
+        "145": 69
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04wgt_p",
+      "rows": 7486,
+      "n_valid": 7104,
+      "dtype": "float64",
+      "label": "Vertical weighting_4th wave",
+      "n_distinct": 5969,
+      "values": {
+        "335.26308": 1,
+        "336.92858": 1,
+        "347.44368": 1,
+        "404.65681": 1,
+        "426.80996": 1,
+        "429.40255": 1,
+        "433.05705": 1,
+        "433.66803": 1
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04wgt_c",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "float64",
+      "label": "Horizontal weighting_4th wave",
+      "n_distinct": 6083,
+      "values": {
+        "269.10706": 1,
+        "270.44392": 1,
+        "278.88412": 1,
+        "324.80763": 1,
+        "338.26373": 1,
+        "343.24404": 1,
+        "376.15121": 1,
+        "378.43608": 1
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C006",
+      "rows": 7486,
+      "n_valid": 4739,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 4463,
+        "Yes": 276,
+        "nan": 2747
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C008",
+      "rows": 7486,
+      "n_valid": 2747,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 7,
+      "values": {
+        "Completely recovered": 24,
+        "Don't know": 1,
+        "Greatly worsened": 15,
+        "Improved": 102,
+        "Same": 2511,
+        "Worsened": 94,
+        "nan": 4739
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C009",
+      "rows": 7486,
+      "n_valid": 3023,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 291,
+        "Yes": 2731,
+        "nan": 4463
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C010",
+      "rows": 7486,
+      "n_valid": 3023,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 2753,
+        "Yes": 269,
+        "nan": 4463
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C011",
+      "rows": 7486,
+      "n_valid": 6346,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 6213,
+        "Yes": 132,
+        "nan": 1140
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C013",
+      "rows": 7486,
+      "n_valid": 1140,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 13,
+        "Greatly worsened": 9,
+        "Improved": 49,
+        "Same": 980,
+        "Worsened": 89,
+        "nan": 6346
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C014",
+      "rows": 7486,
+      "n_valid": 1272,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        "No": 206,
+        "Yes": 1066,
+        "nan": 6214
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C015",
+      "rows": 7486,
+      "n_valid": 1272,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        "No": 1077,
+        "Yes": 195,
+        "nan": 6214
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C096",
+      "rows": 7486,
+      "n_valid": 2847,
+      "dtype": "category",
+      "label": "Level of pain_8 Waist pain",
+      "n_distinct": 4,
+      "values": {
+        "Mild": 1708,
+        "Moderate": 914,
+        "Severe": 225,
+        "nan": 4639
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C105",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 70,
+      "values": {
+        " Don't know": 54,
+        " Refuse to answer": 1,
+        "105": 1,
+        "106": 1,
+        "30": 4,
+        "32": 1,
+        "34": 1,
+        "35": 8
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C106",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 7,
+      "values": {
+        " Don't know": 5,
+        " I gained weight": 493,
+        " I gained weight and then lost it again": 39,
+        " I lost weight": 789,
+        " I lost weight and then gained it again": 51,
+        " Refuse to answer": 1,
+        " There was no change": 6108
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C107",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 52,
+      "values": {
+        " Don't know": 244,
+        " Refuse to answer": 5,
+        "100": 1,
+        "137": 1,
+        "139": 1,
+        "140": 17,
+        "142": 3,
+        "143": 5
+      }
+    },
+    {
+      "file": "wave5\\e_imp_w05.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08wgt_c",
+      "rows": 6488,
+      "n_valid": 5717,
+      "dtype": "float64",
+      "label": "Vertical weighting_8th wave",
+      "n_distinct": 5058,
+      "values": {
+        "245.06620919190925": 1,
+        "247.2439258952275": 1,
+        "247.4822533410032": 1,
+        "247.5530961506991": 1,
+        "261.7056270122861": 1,
+        "268.11478624638835": 1,
+        "268.95479243790123": 1,
+        "277.8450130287379": 1
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08wgt_p",
+      "rows": 6488,
+      "n_valid": 5101,
+      "dtype": "float64",
+      "label": "Horizontal weighting_8th wave",
+      "n_distinct": 4952,
+      "values": {
+        "435.9477518619034": 1,
+        "437.77172009150144": 1,
+        "455.40128091315154": 1,
+        "483.07665721013086": 1,
+        "489.05572374378033": 1,
+        "490.0740031878519": 1,
+        "490.30347877740246": 1,
+        "492.2469221558665": 1
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08wgt_ac",
+      "rows": 6488,
+      "n_valid": 6488,
+      "dtype": "float64",
+      "label": "Integrated vertical weighting_8th wave",
+      "n_distinct": 6029,
+      "values": {
+        "12.83848867651299": 1,
+        "21.798076844930574": 1,
+        "23.619976051511426": 1,
+        "23.804232439328956": 1,
+        "23.82776664797198": 1,
+        "24.36954004358152": 1,
+        "24.553021756305558": 1,
+        "24.64329021798958": 1
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08wgt_ap",
+      "rows": 6488,
+      "n_valid": 6113,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_8th wave",
+      "n_distinct": 5936,
+      "values": {
+        "24.939236107296136": 1,
+        "27.127051028982276": 1,
+        "28.0180399325719": 1,
+        "28.683417867798504": 1,
+        "28.899379376622676": 1,
+        "29.005627094147737": 1,
+        "29.31384783654805": 1,
+        "29.40567467533133": 1
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C006",
+      "rows": 6488,
+      "n_valid": 3706,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 3507,
+        " Yes": 199,
+        "nan": 2782
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C008",
+      "rows": 6488,
+      "n_valid": 2782,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 19,
+        " Greatly worsened": 9,
+        " Improved": 60,
+        " Same": 2622,
+        " Worsened": 72,
+        "nan": 3706
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C009",
+      "rows": 6488,
+      "n_valid": 2981,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 396,
+        " Yes": 2584,
+        "nan": 3507
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C010",
+      "rows": 6488,
+      "n_valid": 2981,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 2783,
+        " Yes": 197,
+        "nan": 3507
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C011",
+      "rows": 6488,
+      "n_valid": 5252,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        " No": 5129,
+        " Yes": 123,
+        "nan": 1236
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C013",
+      "rows": 6488,
+      "n_valid": 1237,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 7,
+      "values": {
+        " Completely recovered": 8,
+        " Don't know": 1,
+        " Greatly worsened": 9,
+        " Improved": 42,
+        " Same": 1107,
+        " Worsened": 70,
+        "nan": 5251
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C014",
+      "rows": 6488,
+      "n_valid": 1359,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar ",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 213,
+        " Yes": 1145,
+        "nan": 5129
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C015",
+      "rows": 6488,
+      "n_valid": 1359,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar ",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 1204,
+        " Yes": 154,
+        "nan": 5129
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C078n",
+      "rows": 6488,
+      "n_valid": 6488,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 6381,
+        " Yes": 107
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08Cadd_05",
+      "rows": 6488,
+      "n_valid": 107,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of any disc in neck or waist",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 2,
+        " Greatly worsened": 4,
+        " Improved": 11,
+        " Same": 53,
+        " Worsened": 37,
+        "nan": 6381
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07wgt_p",
+      "rows": 6940,
+      "n_valid": 5586,
+      "dtype": "float64",
+      "label": "Vertical weighting_7th wave",
+      "n_distinct": 5264,
+      "values": {
+        "376.91801302781414": 1,
+        "376.9434322196029": 1,
+        "377.8196809081465": 1,
+        "460.34216794354654": 1,
+        "462.2396102063138": 1,
+        "470.2341869416078": 1,
+        "471.664600400706": 1,
+        "476.5004380417785": 1
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07wgt_c",
+      "rows": 6940,
+      "n_valid": 6136,
+      "dtype": "float64",
+      "label": "Horizontal weighting_7th wave",
+      "n_distinct": 5370,
+      "values": {
+        "216.0048008768376": 1,
+        "219.04861455911038": 1,
+        "246.48270535334672": 1,
+        "248.30598184904878": 1,
+        "250.41218949940648": 1,
+        "261.1433839604459": 1,
+        "265.2248719244322": 1,
+        "268.7428836773421": 1
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07wgt_ap",
+      "rows": 6940,
+      "n_valid": 6701,
+      "dtype": "float64",
+      "label": "Integrated vertical weighting_7th wave",
+      "n_distinct": 6366,
+      "values": {
+        "20.520974053998223": 1,
+        "22.20380902389508": 1,
+        "24.89011904970699": 1,
+        "24.95717100290397": 1,
+        "25.570673778324856": 1,
+        "26.30171048335998": 1,
+        "26.30974292287416": 1,
+        "26.33596305455206": 1
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07wgt_ac",
+      "rows": 6940,
+      "n_valid": 6940,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_7th wave",
+      "n_distinct": 6451,
+      "values": {
+        "20.96715830123458": 1,
+        "23.057347477701715": 1,
+        "23.14236635521956": 1,
+        "30.339178981061625": 1,
+        "30.420910257838983": 1,
+        "30.62083992334937": 1,
+        "31.16872389712696": 1,
+        "32.059802537268986": 1
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C006",
+      "rows": 6940,
+      "n_valid": 4088,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 3909,
+        " Yes": 179,
+        "nan": 2852
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C008",
+      "rows": 6940,
+      "n_valid": 2852,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 24,
+        " Greatly worsened": 13,
+        " Improved": 118,
+        " Same": 2638,
+        " Worsened": 59,
+        "nan": 4088
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C009",
+      "rows": 6940,
+      "n_valid": 3031,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        " No": 375,
+        " Yes": 2656,
+        "nan": 3909
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C010",
+      "rows": 6940,
+      "n_valid": 3031,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 2772,
+        " Yes": 259,
+        "nan": 3909
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C011",
+      "rows": 6940,
+      "n_valid": 5672,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        " No": 5558,
+        " Yes": 114,
+        "nan": 1268
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C013",
+      "rows": 6940,
+      "n_valid": 1268,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 14,
+        " Greatly worsened": 8,
+        " Improved": 71,
+        " Same": 1122,
+        " Worsened": 53,
+        "nan": 5672
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C014",
+      "rows": 6940,
+      "n_valid": 1382,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        " No": 228,
+        " Yes": 1154,
+        "nan": 5558
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C015",
+      "rows": 6940,
+      "n_valid": 1382,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        " No": 1187,
+        " Yes": 195,
+        "nan": 5558
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C078n",
+      "rows": 6940,
+      "n_valid": 6940,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 6852,
+        " Yes": 88
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07Cadd_05",
+      "rows": 6940,
+      "n_valid": 88,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of any disc in neck or waist",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 1,
+        " Greatly worsened": 3,
+        " Improved": 13,
+        " Same": 37,
+        " Worsened": 34,
+        "nan": 6852
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07wgt_p",
+      "rows": 34700,
+      "n_valid": 27930,
+      "dtype": "float64",
+      "label": "Vertical weighting_6th wave",
+      "n_distinct": 5264,
+      "values": {
+        "376.91801302781414": 5,
+        "376.9434322196029": 5,
+        "377.8196809081465": 5,
+        "460.34216794354654": 5,
+        "462.2396102063138": 5,
+        "470.2341869416078": 5,
+        "471.664600400706": 5,
+        "476.5004380417785": 5
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07wgt_c",
+      "rows": 34700,
+      "n_valid": 30680,
+      "dtype": "float64",
+      "label": "Horizontal weighting_6th wave",
+      "n_distinct": 5370,
+      "values": {
+        "216.0048008768376": 5,
+        "219.04861455911038": 5,
+        "246.48270535334672": 5,
+        "248.30598184904878": 5,
+        "250.41218949940648": 5,
+        "261.1433839604459": 5,
+        "265.2248719244322": 5,
+        "268.7428836773421": 5
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07wgt_ap",
+      "rows": 34700,
+      "n_valid": 33505,
+      "dtype": "float64",
+      "label": "Integrated vertical weighting_6th wave",
+      "n_distinct": 6366,
+      "values": {
+        "20.520974053998223": 5,
+        "22.20380902389508": 5,
+        "24.89011904970699": 5,
+        "24.95717100290397": 5,
+        "25.570673778324856": 5,
+        "26.30171048335998": 5,
+        "26.30974292287416": 5,
+        "26.33596305455206": 5
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07wgt_ac",
+      "rows": 34700,
+      "n_valid": 34700,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_6th wave",
+      "n_distinct": 6451,
+      "values": {
+        "20.96715830123458": 5,
+        "23.057347477701715": 5,
+        "23.14236635521956": 5,
+        "30.339178981061625": 5,
+        "30.420910257838983": 5,
+        "30.62083992334937": 5,
+        "31.16872389712696": 5,
+        "32.059802537268986": 5
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C006",
+      "rows": 34700,
+      "n_valid": 20440,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 19545,
+        " Yes": 895,
+        "nan": 14260
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C008",
+      "rows": 34700,
+      "n_valid": 14260,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 120,
+        " Greatly worsened": 65,
+        " Improved": 590,
+        " Same": 13190,
+        " Worsened": 295,
+        "nan": 20440
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C009",
+      "rows": 34700,
+      "n_valid": 15155,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        " No": 1875,
+        " Yes": 13280,
+        "nan": 19545
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C010",
+      "rows": 34700,
+      "n_valid": 15155,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 13860,
+        " Yes": 1295,
+        "nan": 19545
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C011",
+      "rows": 34700,
+      "n_valid": 28360,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        " No": 27790,
+        " Yes": 570,
+        "nan": 6340
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C013",
+      "rows": 34700,
+      "n_valid": 6340,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 70,
+        " Greatly worsened": 40,
+        " Improved": 355,
+        " Same": 5610,
+        " Worsened": 265,
+        "nan": 28360
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C014",
+      "rows": 34700,
+      "n_valid": 6910,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 1140,
+        " Yes": 5770,
+        "nan": 27790
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C015",
+      "rows": 34700,
+      "n_valid": 6910,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 5935,
+        " Yes": 975,
+        "nan": 27790
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C078n",
+      "rows": 34700,
+      "n_valid": 34700,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 34260,
+        " Yes": 440
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07Cadd_05",
+      "rows": 34700,
+      "n_valid": 440,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of any disc in neck or waist",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 5,
+        " Greatly worsened": 15,
+        " Improved": 65,
+        " Same": 185,
+        " Worsened": 170,
+        "nan": 34260
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06wgt_p",
+      "rows": 7490,
+      "n_valid": 6121,
+      "dtype": "float64",
+      "label": "Vertical weighting_6th wave",
+      "n_distinct": 5433,
+      "values": {
+        "376.94040856": 1,
+        "378.66549011": 1,
+        "390.43312911": 1,
+        "432.76882331": 1,
+        "437.5596702": 1,
+        "441.42547215": 1,
+        "451.37264868": 1,
+        "451.82725015": 1
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06wgt_c",
+      "rows": 7490,
+      "n_valid": 6618,
+      "dtype": "float64",
+      "label": "Horizontal weighting_6th wave",
+      "n_distinct": 5550,
+      "values": {
+        "282.69635685": 1,
+        "300.9990141": 1,
+        "301.8111865": 1,
+        "321.47718263": 1,
+        "328.9201913": 1,
+        "330.21434646": 1,
+        "331.72558448": 1,
+        "339.22932025": 1
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06wgt_ap",
+      "rows": 7490,
+      "n_valid": 7368,
+      "dtype": "float64",
+      "label": "Integrated vertical weighting_6th wave",
+      "n_distinct": 6618,
+      "values": {
+        "17.225638079": 1,
+        "22.526950562": 1,
+        "23.849096988": 1,
+        "24.140855069": 1,
+        "24.247067729": 1,
+        "24.841715698": 1,
+        "24.854618252": 1,
+        "24.857901098": 1
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06wgt_ac",
+      "rows": 7490,
+      "n_valid": 7490,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_6th wave",
+      "n_distinct": 6690,
+      "values": {
+        "17.825611897": 1,
+        "24.328642984": 1,
+        "24.831622515": 1,
+        "25.135400328": 1,
+        "25.245988694": 1,
+        "25.865134732": 1,
+        "25.87856884": 1,
+        "25.881986931": 1
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C006",
+      "rows": 7490,
+      "n_valid": 4563,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 4351,
+        " Yes": 212,
+        "nan": 2927
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C008",
+      "rows": 7490,
+      "n_valid": 2927,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 17,
+        " Greatly worsened": 7,
+        " Improved": 131,
+        " Same": 2709,
+        " Worsened": 63,
+        "nan": 4563
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C009",
+      "rows": 7490,
+      "n_valid": 3139,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        " No": 319,
+        " Yes": 2820,
+        "nan": 4351
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C010",
+      "rows": 7490,
+      "n_valid": 3139,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 2882,
+        " Yes": 257,
+        "nan": 4351
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C011",
+      "rows": 7490,
+      "n_valid": 6231,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        " No": 6094,
+        " Yes": 137,
+        "nan": 1259
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C013",
+      "rows": 7490,
+      "n_valid": 1259,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 12,
+        " Greatly worsened": 5,
+        " Improved": 58,
+        " Same": 1125,
+        " Worsened": 59,
+        "nan": 6231
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C014",
+      "rows": 7490,
+      "n_valid": 1396,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        " No": 202,
+        " Yes": 1194,
+        "nan": 6094
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C015",
+      "rows": 7490,
+      "n_valid": 1396,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar ",
+      "n_distinct": 3,
+      "values": {
+        " No": 1235,
+        " Yes": 161,
+        "nan": 6094
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C078n",
+      "rows": 7490,
+      "n_valid": 7490,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 7368,
+        " Yes": 122
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C080n",
+      "rows": 7490,
+      "n_valid": 122,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 32,
+        " Yes": 90,
+        "nan": 7368
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06wgt_p",
+      "rows": 37450,
+      "n_valid": 30605,
+      "dtype": "float64",
+      "label": "Vertical weighting_6th wave",
+      "n_distinct": 5433,
+      "values": {
+        "376.94040856": 5,
+        "378.66549011": 5,
+        "390.43312911": 5,
+        "432.76882331": 5,
+        "437.5596702": 5,
+        "441.42547215": 5,
+        "451.37264868": 5,
+        "451.82725015": 5
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06wgt_c",
+      "rows": 37450,
+      "n_valid": 33090,
+      "dtype": "float64",
+      "label": "Horizontal weighting_6th wave",
+      "n_distinct": 5550,
+      "values": {
+        "282.69635685": 5,
+        "300.9990141": 5,
+        "301.8111865": 5,
+        "321.47718263": 5,
+        "328.9201913": 5,
+        "330.21434646": 5,
+        "331.72558448": 5,
+        "339.22932025": 5
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06wgt_ap",
+      "rows": 37450,
+      "n_valid": 36840,
+      "dtype": "float64",
+      "label": "Integrated vertical weighting_6th wave",
+      "n_distinct": 6618,
+      "values": {
+        "17.225638079": 5,
+        "22.526950562": 5,
+        "23.849096988": 5,
+        "24.140855069": 5,
+        "24.247067729": 5,
+        "24.841715698": 5,
+        "24.854618252": 5,
+        "24.857901098": 5
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06wgt_ac",
+      "rows": 37450,
+      "n_valid": 37450,
+      "dtype": "float64",
+      "label": "Integrated horizontal weighting_6th wave",
+      "n_distinct": 6690,
+      "values": {
+        "17.825611897": 5,
+        "24.328642984": 5,
+        "24.831622515": 5,
+        "25.135400328": 5,
+        "25.245988694": 5,
+        "25.865134732": 5,
+        "25.87856884": 5,
+        "25.881986931": 5
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C006",
+      "rows": 37450,
+      "n_valid": 22815,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 21755,
+        " Yes": 1060,
+        "nan": 14635
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C008",
+      "rows": 37450,
+      "n_valid": 14635,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 85,
+        " Greatly worsened": 35,
+        " Improved": 655,
+        " Same": 13545,
+        " Worsened": 315,
+        "nan": 22815
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C009",
+      "rows": 37450,
+      "n_valid": 15695,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        " No": 1595,
+        " Yes": 14100,
+        "nan": 21755
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C010",
+      "rows": 37450,
+      "n_valid": 15695,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        " No": 14410,
+        " Yes": 1285,
+        "nan": 21755
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C011",
+      "rows": 37450,
+      "n_valid": 31155,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        " No": 30470,
+        " Yes": 685,
+        "nan": 6295
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C013",
+      "rows": 37450,
+      "n_valid": 6295,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        " Completely recovered": 60,
+        " Greatly worsened": 25,
+        " Improved": 290,
+        " Same": 5625,
+        " Worsened": 295,
+        "nan": 31155
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C014",
+      "rows": 37450,
+      "n_valid": 6980,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 1010,
+        " Yes": 5970,
+        "nan": 30470
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C015",
+      "rows": 37450,
+      "n_valid": 6980,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        " No": 6175,
+        " Yes": 805,
+        "nan": 30470
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C078n",
+      "rows": 37450,
+      "n_valid": 37450,
+      "dtype": "category",
+      "label": "Whether or not diagnostic for any disc in neck or waist",
+      "n_distinct": 2,
+      "values": {
+        " No": 36840,
+        " Yes": 610
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C080n",
+      "rows": 37450,
+      "n_valid": 610,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about any disc in neck or waist",
+      "n_distinct": 3,
+      "values": {
+        " No": 160,
+        " Yes": 450,
+        "nan": 36840
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02wgt_p",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "float64",
+      "label": "Vertical weighting_2nd wave",
+      "n_distinct": 6305,
+      "values": {
+        "327.59734": 1,
+        "328.97433": 1,
+        "337.32491": 1,
+        "339.15301": 1,
+        "376.74785": 1,
+        "430.34007": 1,
+        "434.06884": 1,
+        "439.29673": 1
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02wgt_c",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "float64",
+      "label": "Horizontal weighting_2nd wave",
+      "n_distinct": 6337,
+      "values": {
+        "321.97973": 1,
+        "323.3331": 1,
+        "331.54049": 1,
+        "333.33723": 1,
+        "370.2874": 1,
+        "383.52984": 1,
+        "385.90833": 1,
+        "409.60576": 1
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C006",
+      "rows": 8688,
+      "n_valid": 6277,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 5867,
+        "Yes": 410,
+        "nan": 2411
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C008",
+      "rows": 8688,
+      "n_valid": 2411,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 17,
+        "Greatly worsened": 14,
+        "Improved": 153,
+        "Same": 2101,
+        "Worsened": 126,
+        "nan": 6277
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C009",
+      "rows": 8688,
+      "n_valid": 2821,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        "No": 311,
+        "Yes": 2510,
+        "nan": 5867
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C010",
+      "rows": 8688,
+      "n_valid": 2821,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 2362,
+        "Yes": 459,
+        "nan": 5867
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C011",
+      "rows": 8688,
+      "n_valid": 7640,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 3,
+      "values": {
+        "No": 7476,
+        "Yes": 164,
+        "nan": 1048
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C013",
+      "rows": 8688,
+      "n_valid": 1048,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 19,
+        "Greatly worsened": 11,
+        "Improved": 76,
+        "Same": 828,
+        "Worsened": 114,
+        "nan": 7640
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C014",
+      "rows": 8688,
+      "n_valid": 1212,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 210,
+        "Yes": 1002,
+        "nan": 7476
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C015",
+      "rows": 8688,
+      "n_valid": 1212,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 919,
+        "Yes": 293,
+        "nan": 7476
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C096",
+      "rows": 8688,
+      "n_valid": 2810,
+      "dtype": "category",
+      "label": "Level of pain_8 Waist pain",
+      "n_distinct": 4,
+      "values": {
+        "Mild": 1692,
+        "Moderate": 879,
+        "Severe": 239,
+        "nan": 5878
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C105",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 70,
+      "values": {
+        " Don't know": 89,
+        "102": 1,
+        "110": 1,
+        "30": 2,
+        "32": 2,
+        "33": 1,
+        "34": 1,
+        "35": 7
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C106",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 6,
+      "values": {
+        "Don't know": 1,
+        "I gained weight": 434,
+        "I gained weight and then lost it again": 419,
+        "I lost weight": 928,
+        "I lost weight and then gained it again": 155,
+        "There was no change": 6751
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C107",
+      "rows": 8688,
+      "n_valid": 8688,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 50,
+      "values": {
+        " Don't know": 166,
+        "135": 5,
+        "136": 1,
+        "137": 1,
+        "140": 25,
+        "142": 2,
+        "143": 5,
+        "144": 1
+      }
+    },
+    {
+      "file": "wave2\\e_imp_w02.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03wgt_p",
+      "rows": 7920,
+      "n_valid": 7763,
+      "dtype": "float64",
+      "label": "Vertical weighting_3rd wave",
+      "n_distinct": 6241,
+      "values": {
+        "329.22764": 1,
+        "330.70224": 1,
+        "340.96602": 1,
+        "388.25093": 1,
+        "427.96968": 1,
+        "430.31189": 1,
+        "433.5182": 1,
+        "434.43527": 1
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03wgt_c",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "float64",
+      "label": "Horizontal weighting_3rd wave",
+      "n_distinct": 6322,
+      "values": {
+        "297.54534": 1,
+        "298.87803": 1,
+        "308.15411": 1,
+        "350.88869": 1,
+        "386.94289": 1,
+        "389.06057": 1,
+        "391.9595": 1,
+        "392.78866": 1
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C006",
+      "rows": 7920,
+      "n_valid": 5360,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 4971,
+        "Yes": 389,
+        "nan": 2560
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C008",
+      "rows": 7920,
+      "n_valid": 2560,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 25,
+        "Greatly worsened": 10,
+        "Improved": 81,
+        "Same": 2345,
+        "Worsened": 99,
+        "nan": 5360
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C009",
+      "rows": 7920,
+      "n_valid": 2949,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        "No": 298,
+        "Yes": 2651,
+        "nan": 4971
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C010",
+      "rows": 7920,
+      "n_valid": 2949,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 2625,
+        "Yes": 323,
+        "nan": 4971
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C011",
+      "rows": 7920,
+      "n_valid": 6854,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 6680,
+        "Yes": 173,
+        "nan": 1066
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C013",
+      "rows": 7920,
+      "n_valid": 1066,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 26,
+        "Greatly worsened": 13,
+        "Improved": 54,
+        "Same": 872,
+        "Worsened": 101,
+        "nan": 6854
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C014",
+      "rows": 7920,
+      "n_valid": 1239,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 216,
+        "Yes": 1023,
+        "nan": 6681
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C015",
+      "rows": 7920,
+      "n_valid": 1239,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 999,
+        "Yes": 240,
+        "nan": 6681
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C096",
+      "rows": 7920,
+      "n_valid": 2402,
+      "dtype": "category",
+      "label": "Level of pain_8 Waist pain",
+      "n_distinct": 4,
+      "values": {
+        " Mild": 1397,
+        " Moderate": 800,
+        " Severe": 205,
+        "nan": 5518
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C105",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 71,
+      "values": {
+        " Don't know": 85,
+        " Refuse to answer": 11,
+        "100": 2,
+        "101": 1,
+        "30": 4,
+        "32": 3,
+        "33": 1,
+        "34": 1
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C106",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 7,
+      "values": {
+        " Don't know": 3,
+        " I gained weight": 360,
+        " I gained weight and then lost it again": 527,
+        " I lost weight": 978,
+        " I lost weight and then gained it again": 240,
+        " Refuse to answer": 1,
+        " There was no change": 5811
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C107",
+      "rows": 7920,
+      "n_valid": 7920,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 49,
+      "values": {
+        " Don't know": 157,
+        " Refuse to answer": 16,
+        "137": 1,
+        "140": 23,
+        "142": 3,
+        "143": 6,
+        "144": 2,
+        "145": 69
+      }
+    },
+    {
+      "file": "wave3\\e_imp_w03.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04wgt_p",
+      "rows": 7486,
+      "n_valid": 7104,
+      "dtype": "float64",
+      "label": "Vertical weighting_4th wave",
+      "n_distinct": 5969,
+      "values": {
+        "335.26308": 1,
+        "336.92858": 1,
+        "347.44368": 1,
+        "404.65681": 1,
+        "426.80996": 1,
+        "429.40255": 1,
+        "433.05705": 1,
+        "433.66803": 1
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04wgt_c",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "float64",
+      "label": "Horizontal weighting_4th wave",
+      "n_distinct": 6083,
+      "values": {
+        "269.10706": 1,
+        "270.44392": 1,
+        "278.88412": 1,
+        "324.80763": 1,
+        "338.26373": 1,
+        "343.24404": 1,
+        "376.15121": 1,
+        "378.43608": 1
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C006",
+      "rows": 7486,
+      "n_valid": 4739,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 4463,
+        "Yes": 276,
+        "nan": 2747
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C008",
+      "rows": 7486,
+      "n_valid": 2747,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of high blood pressure or hype",
+      "n_distinct": 7,
+      "values": {
+        "Completely recovered": 24,
+        "Don't know": 1,
+        "Greatly worsened": 15,
+        "Improved": 102,
+        "Same": 2511,
+        "Worsened": 94,
+        "nan": 4739
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C009",
+      "rows": 7486,
+      "n_valid": 3023,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 291,
+        "Yes": 2731,
+        "nan": 4463
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C010",
+      "rows": 7486,
+      "n_valid": 3023,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 2753,
+        "Yes": 269,
+        "nan": 4463
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C011",
+      "rows": 7486,
+      "n_valid": 6346,
+      "dtype": "category",
+      "label": "Since the previous interview, whether or not diabetes or high blood sugar diagno",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 6213,
+        "Yes": 132,
+        "nan": 1140
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C013",
+      "rows": 7486,
+      "n_valid": 1140,
+      "dtype": "category",
+      "label": "Compared to the previous interview, the condition of diabetes or high blood suga",
+      "n_distinct": 6,
+      "values": {
+        "Completely recovered": 13,
+        "Greatly worsened": 9,
+        "Improved": 49,
+        "Same": 980,
+        "Worsened": 89,
+        "nan": 6346
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C014",
+      "rows": 7486,
+      "n_valid": 1272,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 206,
+        "Yes": 1066,
+        "nan": 6214
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C015",
+      "rows": 7486,
+      "n_valid": 1272,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 1077,
+        "Yes": 195,
+        "nan": 6214
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C096",
+      "rows": 7486,
+      "n_valid": 2847,
+      "dtype": "category",
+      "label": "Level of pain_8 Waist pain",
+      "n_distinct": 4,
+      "values": {
+        "Mild": 1708,
+        "Moderate": 914,
+        "Severe": 225,
+        "nan": 4639
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C105",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 70,
+      "values": {
+        " Don't know": 54,
+        " Refuse to answer": 1,
+        "105": 1,
+        "106": 1,
+        "30": 4,
+        "32": 1,
+        "34": 1,
+        "35": 8
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C106",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 7,
+      "values": {
+        " Don't know": 5,
+        " I gained weight": 493,
+        " I gained weight and then lost it again": 39,
+        " I lost weight": 789,
+        " I lost weight and then gained it again": 51,
+        " Refuse to answer": 1,
+        " There was no change": 6108
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C107",
+      "rows": 7486,
+      "n_valid": 7486,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 52,
+      "values": {
+        " Don't know": 244,
+        " Refuse to answer": 5,
+        "100": 1,
+        "137": 1,
+        "139": 1,
+        "140": 17,
+        "142": 3,
+        "143": 5
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01wgt_c",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "float64",
+      "label": "Horizontal weighting_1st wave",
+      "n_distinct": 1098,
+      "values": {
+        "277.70462664": 5,
+        "393.38881632": 4,
+        "401.80633668": 3,
+        "418.75955871": 5,
+        "419.64966904": 4,
+        "428.34105566": 6,
+        "428.59439262": 3,
+        "432.43485723": 1
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C006",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Whether or not high blood pressure or hypertension diagnostic",
+      "n_distinct": 2,
+      "values": {
+        "No": 7420,
+        "Yes": 2834
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C009",
+      "rows": 10254,
+      "n_valid": 2834,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about high blood pressure or hypert",
+      "n_distinct": 3,
+      "values": {
+        "No": 210,
+        "Yes": 2624,
+        "nan": 7420
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C010",
+      "rows": 10254,
+      "n_valid": 2834,
+      "dtype": "category",
+      "label": "Daily activity difficulty by high blood pressure or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 2068,
+        "Yes": 766,
+        "nan": 7420
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C011",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Whether or not diabetes or high blood sugar diagnostic",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 1,
+        "No": 9031,
+        "Yes": 1222
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C014",
+      "rows": 10254,
+      "n_valid": 1222,
+      "dtype": "category",
+      "label": "Whether or not taking medicine and treatment about diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 136,
+        "Yes": 1086,
+        "nan": 9032
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C015",
+      "rows": 10254,
+      "n_valid": 1222,
+      "dtype": "category",
+      "label": "Daily activity difficulty by diabetes or high blood sugar",
+      "n_distinct": 3,
+      "values": {
+        "No": 767,
+        "Yes": 455,
+        "nan": 9032
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C096",
+      "rows": 10254,
+      "n_valid": 3632,
+      "dtype": "category",
+      "label": "Level of pain_8 Waist pain",
+      "n_distinct": 4,
+      "values": {
+        "Mild": 2013,
+        "Moderate": 1168,
+        "Severe": 451,
+        "nan": 6622
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C105",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Weight (unit : Kilogram)",
+      "n_distinct": 73,
+      "values": {
+        " Don't know": 97,
+        " Refuse to answer": 6,
+        "100": 2,
+        "105": 1,
+        "30": 5,
+        "31": 1,
+        "32": 1,
+        "33": 1
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C106",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "The weight is change more than 5 kilograms for the latest 1 year",
+      "n_distinct": 6,
+      "values": {
+        " Don't know": 3,
+        " I gained weight": 405,
+        " I gained weight and then lost it again": 305,
+        " I lost weight": 769,
+        " I lost weight and then gained it again": 134,
+        " There was no change": 8638
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C107",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Height (unit : Centimeter)",
+      "n_distinct": 53,
+      "values": {
+        " Don't know": 234,
+        " Refuse to answer": 5,
+        "135": 3,
+        "136": 1,
+        "137": 2,
+        "140": 23,
+        "142": 5,
+        "143": 3
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C116",
+      "rows": 10254,
+      "n_valid": 10254,
+      "dtype": "category",
+      "label": "Smoking experience more than 5 packs (100 cigarettes) since previous interview",
+      "n_distinct": 3,
+      "values": {
+        " Don't know": 1,
+        " No": 7297,
+        " Yes": 2956
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C117",
+      "rows": 10254,
+      "n_valid": 2956,
+      "dtype": "category",
+      "label": "Currently, whether or not smoking",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 978,
+        " Yes": 1977,
+        "nan": 7298
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C118",
+      "rows": 10254,
+      "n_valid": 2955,
+      "dtype": "category",
+      "label": "Smoking beginning time (unit : yyyy+mm)",
+      "n_distinct": 448,
+      "values": {
+        "192905.0": 1,
+        "193000.0": 1,
+        "193500.0": 1,
+        "193600.0": 1,
+        "193703.0": 1,
+        "193800.0": 1,
+        "193805.0": 1,
+        "193900.0": 1
+      }
+    },
+    {
+      "file": "wave4\\e_imp_w04.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave1\\e_imp_w01.dta",
+      "error": "UnicodeDecodeError"
+    }
+  ],
+  "notes": []
+}

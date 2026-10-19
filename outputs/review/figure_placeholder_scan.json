@@ -1,0 +1,147 @@
+{
+  "why": "verify_figures_tables.py passes a blank page because it only checks that the pipeline ran; this scan checks that it produced content",
+  "min_ink_fraction": 0.004,
+  "n_findings": 16,
+  "n_failed": 0,
+  "blank_or_placeholder_figures": [],
+  "findings": [
+    {
+      "figure": "figure1_architecture",
+      "check": "contract",
+      "ok": true,
+      "panels_without_plot_type": [
+        "panel_a_pipeline",
+        "panel_b_layers",
+        "panel_c_outputs"
+      ],
+      "panels_with_unsupported_plot_type": []
+    },
+    {
+      "figure": "figure1_architecture",
+      "check": "pixels",
+      "png": "figure1_architecture.png",
+      "withdrawn": false,
+      "ink_fraction": 0.152864,
+      "min_required": 0.004,
+      "ok": true
+    },
+    {
+      "figure": "figure2_performance",
+      "check": "contract",
+      "ok": true,
+      "panels_without_plot_type": [],
+      "panels_with_unsupported_plot_type": []
+    },
+    {
+      "figure": "figure2_performance",
+      "check": "pixels",
+      "png": "figure2_performance.png",
+      "withdrawn": false,
+      "ink_fraction": 0.027697,
+      "min_required": 0.004,
+      "ok": true
+    },
+    {
+      "figure": "figure3_rule_evaluation",
+      "check": "contract",
+      "ok": true,
+      "panels_without_plot_type": [],
+      "panels_with_unsupported_plot_type": []
+    },
+    {
+      "figure": "figure3_rule_evaluation",
+      "check": "pixels",
+      "png": "figure3_rule_evaluation.png",
+      "withdrawn": false,
+      "ink_fraction": 0.047634,
+      "min_required": 0.004,
+      "ok": true
+    },
+    {
+      "figure": "figure4_demo_case",
+      "check": "contract",
+      "ok": true,
+      "panels_without_plot_type": [
+        "panel_a_input",
+        "panel_d_traceability"
+      ],
+      "panels_with_unsupported_plot_type": [
+        {
+          "panel": "panel_c_evidence_pyramid",
+          "plot_type": "pyramid_stack"
+        }
+      ]
+    },
+    {
+      "figure": "figure4_demo_case",
+      "check": "pixels",
+      "ok": true,
+      "withdrawn": true,
+      "detail": "withdrawn: no rendered PNG"
+    },
+    {
+      "figure": "figure5_reasoning_trace",
+      "check": "contract",
+      "ok": true,
+      "panels_without_plot_type": [
+        "panel_a_trace_flow"
+      ],
+      "panels_with_unsupported_plot_type": []
+    },
+    {
+      "figure": "figure5_reasoning_trace",
+      "check": "pixels",
+      "ok": true,
+      "withdrawn": true,
+      "detail": "withdrawn: no rendered PNG"
+    },
+    {
+      "figure": "figure6_dose_response",
+      "check": "contract",
+      "ok": true,
+      "panels_without_plot_type": [],
+      "panels_with_unsupported_plot_type": []
+    },
+    {
+      "figure": "figure6_dose_response",
+      "check": "pixels",
+      "png": "figure6_dose_response.png",
+      "withdrawn": false,
+      "ink_fraction": 0.559569,
+      "min_required": 0.004,
+      "ok": true
+    },
+    {
+      "figure": "figure7_power_mde",
+      "check": "contract",
+      "ok": true,
+      "panels_without_plot_type": [],
+      "panels_with_unsupported_plot_type": []
+    },
+    {
+      "figure": "figure7_power_mde",
+      "check": "pixels",
+      "png": "figure7_power_mde.png",
+      "withdrawn": false,
+      "ink_fraction": 0.025431,
+      "min_required": 0.004,
+      "ok": true
+    },
+    {
+      "figure": "figure8_cohort_transportability",
+      "check": "contract",
+      "ok": true,
+      "panels_without_plot_type": [],
+      "panels_with_unsupported_plot_type": []
+    },
+    {
+      "figure": "figure8_cohort_transportability",
+      "check": "pixels",
+      "png": "figure8_cohort_transportability.png",
+      "withdrawn": false,
+      "ink_fraction": 0.09894,
+      "min_required": 0.004,
+      "ok": true
+    }
+  ]
+}

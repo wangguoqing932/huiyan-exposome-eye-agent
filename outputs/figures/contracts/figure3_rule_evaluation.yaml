@@ -1,0 +1,141 @@
+# Figure contract: Figure 3 — rule-level evaluation under the R11 three-state protocol
+# Project: huiyan (慧眼)
+#
+# REPLACES figure3_expert_agreement.yaml (deleted in R11).
+# Reason: that contract specified a 4-expert blind rating panel (Fleiss kappa vs
+# the system). The panel was NEVER CONDUCTED — outputs/figures/source_data/
+# figure3_expert_agreement.csv carries the literal marker
+# "# NOT_COLLECTABLE: 4-expert blind panel (figure3 contract) was never
+# conducted in this project.", and generate_paper_figures.py already skipped the
+# figure under an anti-fabrication clause. Rendering it would fabricate data.
+# Rather than leave a hole in the figure set, figure_number 3 now carries the
+# project's primary result: how the 21 literature-derived rules performed under
+# the pre-registered three-state standard after the R11 corrections.
+#
+# plot_type is `forest` because that is what the renderer implements; every
+# quantity here is a proportion with a Clopper-Pearson interval, which is
+# exactly a forest row.
+
+figure_id: figure3_rule_evaluation
+title: "Rule-level evaluation under the R11 three-state protocol: precision, coverage and replication by evidence level"
+figure_number: 3
+manuscript_section: Results → rule-level evaluation
+
+core_conclusion: >-
+  Under the pre-registered three-state standard, the declared-domain precision
+  (replicated / (replicated + contradicted)) is 1.00 in both countries, but the
+  conservative precision (replicated / all rule-relevant testable pairs) is 0.375
+  (NHANES, 95% CI 0.152-0.646) and 0.333 (KNHANES, 0.118-0.616) — the gap is the
+  single largest lever on the headline number, which is why both are shown.
+  Rule coverage P(testable | rule exists) is high: 0.889 NHANES / 0.882 KNHANES.
+  Replication is concentrated entirely outside evidence level A: 0/3 for level A
+  in BOTH countries, 4/13 for levels A+B, 6/19 and 5/16 overall. No rule was
+  contradicted in either country.
+
+archetype: quantitative_grid
+
+panels:
+  - id: panel_a_precision_coverage_replication
+    role: primary
+    layout: full_width
+    title: "Dual precision, coverage, and replication by evidence level (both layers)"
+    content: >-
+      Forest plot with one row per quantity, both countries shown as separate
+      labelled rows. Rows: declared-domain precision (NHANES 1.00 [0.541,1.000];
+      KNHANES 1.00 [0.478,1.000]); conservative precision (0.375 [0.152,0.646];
+      0.333 [0.118,0.616]); rule coverage (0.889; 0.882); replication rate at
+      evidence level A (0/3 = 0.00 both); level A+B (4/13 = 0.308 both);
+      all rules (NHANES 6/19 = 0.316; KNHANES 5/16 = 0.312). All are proportions
+      on a 0-1 axis with exact binomial intervals.
+    plot_type: forest
+    x_axis: proportion (0-1), Clopper-Pearson 95% CI
+    annotations:
+      - "declared domain excludes uninformative from the denominator; conservative counts it as a failure — both must be reported"
+      - "level A = smoking x cataract, smoking x late AMD, BMI x cataract: 0/3 replicated in BOTH countries"
+      - "no rule was contradicted in either country (contradicted = 0 rows, not plotted)"
+
+backend:
+  value: python
+  lock: true
+  fallback_policy: stop_and_report
+dependencies:
+  - matplotlib >= 3.7
+  - numpy
+  - scipy
+
+export:
+  dimensions_mm: [180, 120]
+  dpi: 600
+  formats: [svg, pdf, tiff, png]
+  editable_text: true
+  svg_fonttype: none
+  pdf_fonttype: 42
+  font_type: arial
+  font_size_range_pt: [6, 11]
+  color_mode: cmyk_friendly
+
+style:
+  theme: nmi_pastel
+  font_family: Arial
+  font_size_pt: 7
+  axes_linewidth: 0.8
+
+color_palette:
+  name: NMI_pastel
+  metrics:
+    precision_rule_declared: "#5B8FF9"
+    precision_rule_uninf_as_fp: "#F6BD16"
+    coverage: "#5AD8A6"
+    replication_rate: "#9D2933"
+
+source_data:
+  csv_path: outputs/figures/source_data/figure3_rule_evaluation.csv
+  schema:
+    - column: method
+    - column: dataset
+      values: [NHANES, KNHANES]
+    - column: metric
+      values: [precision_rule_declared, precision_rule_uninf_as_fp, coverage, replication_rate]
+    - column: estimate
+    - column: ci_low
+    - column: ci_high
+    - column: k
+      note: "numerator (replicated count)"
+    - column: n
+      note: "denominator"
+  # Supporting sources (comments only — `additional_files` is not permitted by
+  # figure_contract.schema.json):
+  #   outputs/confirmatory/{nhanes,knhanes}_confirmatory.csv
+  #   outputs/confirmatory/{nhanes,knhanes}_metrics_v11.json
+  #   outputs/tables/headline_sensitivity.csv
+
+review_risks:
+  - id: dual_precision
+    risk: "1.00 vs 0.375 on the same data; citing only the first is the single most damaging reporting choice available"
+    mitigation: "both rows plotted side by side with intervals; the caption states the denominator difference"
+  - id: small_informative_n
+    risk: "declared-domain precision rests on 6 and 5 informative pairs; CP intervals are very wide (lower bound 0.48-0.54)"
+    mitigation: "always report the interval, never the point estimate alone"
+  - id: levelA_zero
+    risk: "0/3 at level A could be read as underpowered rather than truly null"
+    mitigation: "the power analysis (Figure 4) shows the median MDE-OR is 1.34 / 1.16 and 10 of 13 (NHANES) and 7 of 11 (KNHANES) nulls could exclude a 2-fold association"
+  - id: coverage_redefinition
+    risk: "the pre-R11 coverage formula divided by ALL testable pairs and had to be redefined"
+    mitigation: "figure uses P(testable | rule exists); analysis_plan section 0.4 correction 17b records the change"
+
+legend:
+  position: below
+  font_size_pt: 7
+  items:
+    - "Unit = (exposure flag, outcome item) pair; rule-relevant pairs only"
+    - "declared-domain precision = replicated / (replicated + contradicted); conservative = replicated / all rule-relevant testable pairs"
+    - "coverage = P(testable | a rule exists), analysis_plan section 0.4 correction 17b"
+    - "intervals are Clopper-Pearson exact; contradicted = 0 in both countries"
+
+accessibility:
+  alt_text: >-
+    Forest plot of rule-level proportions for NHANES and KNHANES: declared-domain
+    precision 1.00 for both, conservative precision 0.375 and 0.333, coverage
+    0.889 and 0.882, and replication rates showing 0/3 at evidence level A in
+    both countries, 4/13 at levels A+B, and 6/19 and 5/16 overall.
+  color_blind_safe: true

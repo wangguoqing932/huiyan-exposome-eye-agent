@@ -1,0 +1,764 @@
+# 慧眼 huiyan — 暴露/结局操作化映射表（码本驱动）
+# ============================================================================
+# 唯一操作化真源。运行时守卫:src/huiyan_agent/variable_map.py(evaluate.py 消费)。
+# 纪律:切点必须外生(禁样本分位);码本不确定必须标 UNVERIFIED;
+# 每条暴露须过 reference_prevalence 校验;corrections 段留痕全部历史更正。
+# ============================================================================
+meta:
+  created: '2026-10-15'
+  purpose: 修复操作化错误并支撑跨库可复现分析
+  discipline:
+  - 切点必须是外生临床/指南阈值，禁止样本分位数
+  - 每条暴露必须通过 reference_prevalence 校验才算通过
+  - 码本语义不确定的变量必须标注 UNVERIFIED 并做敏感性分析
+  - 变量名与官方标签一一对照，禁止按命名推断含义
+corrections:
+- id: C1
+  dataset: NHANES
+  domain: current_smoking
+  was: SMQ040 in (1,2)，参照组=已戒烟者
+  why_wrong: SMQ040 仅在 SMQ020==1（一生吸过≥100支）时提问；.where() 把 3433 名从不吸烟者（48%）全变缺失
+  evidence: SMQ020 x SMQ040 交叉表：SMQ020==2 的 3433 行 SMQ040 全为 NaN；暴露率 38.3%（真实≈20%）
+  impact: r10/r11/r20；r10 变成 OR=0.698 p=0.0396 的显著保护效应
+  fix: never=SMQ020==2; former=(SMQ020==1)&(SMQ040==3); current=(SMQ020==1)&(SMQ040 in 1,2)
+- id: C2
+  dataset: NHANES
+  domain: alcohol_intake
+  was: ALQ101==1
+  why_wrong: ALQ101 是终生门槛题（一生是否喝过≥12杯）；ALQ110 仅在 ALQ101==2 时提问（实测 1355/1355）
+  evidence: 暴露率 61.8%（age≥40）
+  fix: alcohol_current = ALQ120Q>=1（过去一年饮酒天数）；abstainer = ALQ101==2 & ALQ110==2
+- id: C3
+  dataset: NHANES
+  domain: crp_elevated
+  was: LBXCRP > 3.0
+  why_wrong: LBXCRP 单位是 mg/dL，不是 mg/L；>3.0 mg/dL = >30 mg/L
+  evidence: LBXCRP 合并 n=14981，med=0.12-0.16，max=17-20；>0.3 者 30.4%，>3.0 者 1.17%
+  impact: r06（CRP×晚期AMD，B级）暴露率被压到 1.2%，必然 underpowered
+  fix: crp_elevated = LBXCRP > 0.3 (mg/dL) ≡ >3 mg/L（AHA 高心血管风险阈值）
+- id: C4
+  dataset: NHANES
+  domain: dyslipidemia
+  was: LBDHDD / LBDHDL / LBDLDL 都不在已加载模块内
+  why_wrong: HDL 在 HDL_D.XPT(LBDHDL)，LDL/TG 在 TRIGLY_D.XPT(LBDLDL/LBXTR)；BIOPRO 只有 LBXSCH/LBXSTR
+  evidence: 变量溯源审计：LBDHDD/LBDHDL/LBDLDL 在 evaluate.py 加载的 15 个模块中均不存在
+  impact: HDL<40 与 LDL>=160 两个分支恒为 False，实际只剩 TC>=240 | TG>=200
+  fix: 加载 HDL 与 TRIGLY 模块
+- id: C5
+  dataset: NHANES
+  domain: low_antioxidant_intake
+  was: DR1TVC / DR1TVE / DR1TLZ + 样本下四分位切点
+  why_wrong: DR1TOT 无 DR1TVE 列（维生素E为 DR1TATOC/DR1TATOA）；且复合 z 全为 NaN
+  evidence: 审计实测 low_antioxidant_intake 非缺失 n=0；该规则(r08)因此从未被测到
+  fix: 改用 DR1TVC + DR1TATOC + DR1TLZ(+DR1TBCAR)，切点用外生 RDA 标准，非样本分位数
+- id: C6
+  dataset: KNHANES
+  domain: current_smoking
+  was: BS1_1==1
+  why_wrong: 官方清洗示例代码用 BS1_1(一生吸烟状况)+BS3_1(当前吸烟状况)联合定义；BS3_1 未进入 frame
+  evidence: BS1_1 x BS3_1 交叉表：BS1_1==3 与 BS3_1==8 精确 1:1(3952 vs 3957)；BS3_1 in (1,2) 成人率 29.2%（男53.6/女9.4），与韩国2008国民统计一致；BS1_1==1
+    在40+仅 1.53%
+  impact: KNHANES 全部吸烟配对构造上不可测
+  fix: current = BS3_1 in (1,2); ever = BS1_1 in (1,2); never = BS1_1==3
+- id: C7
+  dataset: KNHANES
+  domain: alcohol_intake
+  was: BA2_2_1
+  why_wrong: 官方标签：BA2_2_1 = 过去一年酒驾 - 自行车；BA2_22 = 过去一年与酒驾司机同乘车辆次数；BA2_12/13/14 = 安全带使用
+  evidence: 暴露率 3.01%（男6.53/女0.36）；且产出 alcohol x amd_early OR=0.542 p=0.0077 进入金标准
+  fix: BD1_11(过去一年饮酒频率) / BD2_1(单次饮酒量) / BD2_14(杯) / BD2_31-32(高风险饮酒频率) / BD4(无法控制饮酒)
+- id: C8
+  dataset: KNHANES
+  domain: retinopathy_any
+  was: 仅用 E_DRP_R/L（2008-2012 命名）
+  why_wrong: 2016-2021 换用新命名；E_DM=糖尿病视网膜病变，E_DR=目前是否使用眼药水（不是DR）
+  evidence: 官方字典：E_DM=糖尿病视网膜病变患病情况；E_DR=调查4：目前是否使用眼药水；hn17_all..hn21_all 均含 E_DM/E_DM_r/E_DM_l/E_DME/E_AMD/E_GR
+  impact: 14 个配对（尿酸/CRP × 眼结局）被判 underpowered，实为 frame 未合并眼科模块
+  fix: harmonize：2008-2012 E_DRP_R/L ↔ 2016-2021 E_DM_r/E_DM_l
+- id: C9
+  dataset: KNHANES
+  domain: ses_covariates
+  was: 协变量只有 age/age2/sex
+  why_wrong: edu/incm/incm5 存在于全部 wave（hn07_all..hn24_all），只是 frame builder 未取
+  fix: 纳入 edu / incm5 作为 SES 协变量
+- id: C10
+  dataset: KNHANES
+  domain: uric_acid
+  was: fallback 到 HE_UAScr
+  why_wrong: 官方字典：HE_UAScr = 砷（肌酐校正，ICP-MS方法），不是尿酸；真尿酸是 HE_Uacid（hn16+）
+  evidence: HE_UAScr 值域到 1478，远超尿酸 mg/dL；本次 concat 恰使 HE_Uacid 列存在故未污染
+  fix: 只用 HE_Uacid；显式禁止 HE_UAScr
+- id: C11
+  dataset: NHANES
+  domain: crp_elevated
+  was: LBXCRP > 3.0
+  why_wrong: LBXCRP 单位是 mg/dL 而非 mg/L(实测 med=0.12-0.16, p75=0.38, max=17-20)。 >3.0 mg/dL 实为 >30 mg/L。
+  evidence: 'gate 实测: 修前暴露率 1.48%, 修后 36.75%(AHA 3 mg/L 阈值应约 30-37%)'
+  impact: r06(CRP×晚期AMD, B级) 暴露率被压到 1.2%, 必然 underpowered
+  fix: LBXCRP > 0.3 (mg/dL) ≡ >3 mg/L；连续版导出 crp_mgl = LBXCRP*10
+- id: C12
+  dataset: NHANES
+  domain: dyslipidemia
+  was: LBDHDD / LBDHDL / LBDLDL 均不在已加载模块内
+  why_wrong: HDL 在 HDL_D.XPT(LBDHDD), LDL 在 TRIGLY_D.XPT(LBDLDL); BIOPRO 只有 LBXSCH(总胆固醇)/LBXSTR(甘油三酯)。
+  evidence: gate 实测修前 hdl/ldl 分支非缺失 n=0; 修后 HDL n=6410, LDL n=3036
+  impact: HDL<40 与 LDL>=160 两分支恒为 False, '血脂异常'实际只剩 TC>=240|TG>=200
+  fix: FILES 补入 HDL/TRIGLY/TCHOL 模块
+- id: C13
+  dataset: NHANES
+  domain: low_antioxidant_intake
+  was: DR1TVC / DR1TVE / DR1TLZ + 样本下四分位切点
+  why_wrong: DR1TOT 无 DR1TVE 列(维生素E为 DR1TATOC/DR1TATOA), 致复合 z 全为 NaN; 且样本分位数切点与文件头部"切点必须预注册"的纪律自相矛盾。
+  evidence: gate 实测修前非缺失 n=0; 修后 n=7081
+  impact: 规则 r08 从未真正被测到
+  fix: 改用 DR1TVC + DR1TATOC + DR1TLZ, 切点改为外生 EAR 标准(三项中 >=2 项不足)
+- id: C14
+  dataset: NHANES
+  domain: low_antioxidant_intake / lutein_zeaxanthin
+  was: DR1TLZ 按 mg 处理, 阈值 <6
+  why_wrong: DR1TLZ 原始单位是 µg(实测 med=503, p95=3095)
+  evidence: 'gate 连续量检查: 修前中位 637(标为 mg, 触发 HARD_WARN), 修后 0.637 mg'
+  impact: 若不换算则全部样本被判为摄入不足(暴露率 100%)
+  fix: lz_mg = DR1TLZ / 1000; 阈值 <6 mg; 连续导出同时给 mg 与 µg
+- id: C15
+  dataset: NHANES
+  domain: alcohol_intake
+  was: ALQ120Q >= 1 作为饮酒天数, >=52 作为高频饮酒
+  why_wrong: '两个陷阱: (a) ALQ120Q 是天数但需配 ALQ120U 换算单位(1=周*52 / 2=月*12 / 3=年); (b) 非饮酒者的 ALQ120Q 被 SAS 传输读成 5.4e-79 而非 0, 故 `==0`
+    判断漏掉 2036 人, 分母偏小、饮酒率虚高。'
+  evidence: 'gate 实测: 修前 frequent=0.91%(应约 28%); 修后 27.76%, 饮酒率 67.1%->58.2%'
+  fix: 以 <0.5 归零后再按 ALQ120U 换算为年天数; 另导出 alcohol_days_per_year 连续量
+- id: C16
+  dataset: NHANES vs KNHANES
+  domain: uric_acid_elevated
+  was: NHANES 男 >=6.8 mg/dL; KNHANES 男 >7.0 mg/dL
+  why_wrong: 两库切点不一致, 跨库比较的不是同一个暴露定义
+  evidence: gate 内部一致性检查抓出 272 例差异(6.8-7.0 之间的男性)
+  fix: 统一到男 >7.0 / 女 >5.7 mg/dL(近期文献常用定义)
+- id: C17
+  dataset: NHANES
+  domain: hyperglycemia
+  was: DIQ010 分支存在但 DIQ 模块从未加载
+  why_wrong: 代码引用 DIQ010 做'医生诊断糖尿病'合并, 但 FILES 表无 DIQ → 恒为空, 死代码
+  evidence: 'gate 模块完整性: 修前 DIQ010 n=0; 修后 n=7081; 暴露率 15.0%->21.9%'
+  fix: FILES 补入 DIQ; 构念正名为 'diabetes (FPG>=126 或自报诊断)'
+- id: C18
+  date: '2026-10-16'
+  dataset: MAP
+  domain: hyperglycemia/dyslipidemia
+  was: dict 只登记 LBXSGL、LBDHDL;代码实际用 LBXGL/LBDHDD
+  fix: 补登 LBXGL/DIQ010/LBDHDD;由 M12 运行时守卫(evaluate.py)强制对齐
+  verified_by: M12 check_code_vars
+exposures:
+  current_smoking:
+    concept: 当前吸烟（过去/现在吸烟状态）
+    nhanes:
+      source: SMQ_D / SMQ_E
+      vars:
+      - SMQ020
+      - SMQ040
+      coding:
+        SMQ020: 1=一生吸过>=100支, 2=否
+        SMQ040: 1=每天, 2=部分天, 3=完全不吸（仅 SMQ020==1 时提问）
+      derive: current = (SMQ020==1) & (SMQ040 in (1,2)); reference = never (SMQ020==2)
+      verified_by: codebook + skip_pattern_verified + prevalence_vs_reference
+      reference_prevalence: US 40+ 约 18-20%；实测 19.7%
+    knhanes:
+      source: hnYY_all
+      vars:
+      - BS1_1
+      - BS3_1
+      label_official:
+        BS1_1: 终身吸烟（一生吸烟状况）
+        BS3_1: 当前普通香烟的吸食情况（当前吸烟状况）
+      value_labels:
+        BS1_1:
+          1: 少于5包（100支香烟）——未达终生门槛
+          2: 超过5包（100支香烟）——一生吸过
+          3: 从未吸烟
+          8: 不合格者（儿童、青少年）
+          9: 不知道/无回应
+        BS3_1:
+          1: 每天吸烟
+          2: 偶尔吸烟
+          3: 以前抽过烟，但现在不抽了（已戒烟）
+          8: 不适用（BS1_1 为 1/3/8，即非一生吸烟者）
+          9: 不知道/无回应
+      derive: current = BS3_1 in (1,2); former = BS3_1==3; never = BS3_1==8; ever = BS3_1 in (1,2,3) 或 BS1_1==2
+      denominator_rule: 必须用 BS3_1 in (1,2,3,8) 作为分母。若按 in (1,2,8) 过滤，会把已戒烟者 (code 3) 人为剔出分母，令男性当前吸烟率虚高到 71.6%（实测踩过这个坑）。
+      verified_by: codebook(value_labels) + official_cleaning_example + prevalence_vs_reference
+      observed_prevalence:
+        40plus_all:
+          current: 0.2174
+          former: 0.1894
+          ever_BS1_1_2: 0.3918
+        40plus_male:
+          current: 0.4359
+          former: 0.3913
+          ever_BS1_1_2: 0.8059
+        40plus_female:
+          current: 0.0519
+          former: 0.0366
+          ever_BS1_1_2: 0.0784
+      reference_prevalence: 韩国 40+ 当前吸烟 男45-50/女5-8；一生吸烟 男70-80/女8-10
+      structural_limit: BS3_1 的 code 3（已戒烟）在 2008 与 2009 两个 wave 完全不存在（问卷改版， 实测 n3=0），2010 起才有。因此 2008-2009 只能构造"一生吸烟(BS1_1==2)"，
+        不能构造"当前吸烟"；当前吸烟相关分析必须限定 2010+（建议主分析用 2017-2021）。
+    charls:
+      source: CHARLS 2011/2015
+      vars:
+      - da002
+      - da003
+      coding: UNVERIFIED
+      verify_required: true
+  ever_smoking:
+    concept: 一生吸烟（敏感性分析用；也是 2008-2009 唯一可用的吸烟变量）
+    nhanes:
+      vars:
+      - SMQ020
+      derive: SMQ020==1
+      observed_prevalence: 0.5146
+      reference_prevalence: US 40+ 约 50-55%
+    knhanes:
+      vars:
+      - BS1_1
+      derive: BS1_1==2
+      observed_prevalence: 0.3918
+      reference_prevalence: 韩国 40+ 约 40%
+  alcohol_current:
+    concept: 过去一年饮酒
+    nhanes:
+      source: ALQ_D / ALQ_E
+      vars:
+      - ALQ101
+      - ALQ110
+      - ALQ120Q
+      - ALQ120U
+      - ALQ130
+      coding:
+        ALQ101: 终生>=12杯
+        ALQ110: 仅 ALQ101==2 时问，过去12月>=12杯
+        ALQ120Q: 过去12月饮酒天数
+      derive: current = ALQ120Q>=1; abstainer = (ALQ101==2)&(ALQ110==2)
+      verified_by: skip_pattern_verified
+    knhanes:
+      source: hnYY_all
+      vars:
+      - BD1
+      - BD1_11
+      - BD2_1
+      - BD2_31
+      - BD2_32
+      label_official:
+        BD1: 终身饮酒体验
+        BD1_11: 饮酒频率持续一年（过去一年饮酒频率）
+        BD2_1: 一次喝多少酒
+        BD2_31: 狂欢频率（男性高风险饮酒频率）
+        BD2_32: 女性暴饮暴食的频率
+      value_labels:
+        BD1:
+          1: 从未喝过酒
+          2: 是的
+          8: 不适用（儿童）
+          9: 不知道/无回应
+        BD1_11:
+          1: 过去一年我一点酒都没喝过
+          2: 每月少于一次
+          3: 大约每月一次
+          4: 每月2-4次
+          5: 每周大约2-3次
+          6: 每周至少4次
+          8: 不适用（BD1==8）
+          9: 不知道/无回应
+        BD2_1:
+          1: 1-2杯
+          2: 3-4杯
+          3: 5-6杯
+          4: 7-9杯
+          5: 超过10杯
+        BD2_31/BD2_32:
+          1: 完全没有
+          2: 每月少于一次
+          3: 大约每月一次
+          4: 大约每周一次
+          5: 几乎每天都在
+      derive: current_drinker = (BD1==2) & (BD1_11 in (2,3,4,5,6))； frequent = BD1_11 in (5,6)；binge = BD2_31(男)/BD2_32(女)
+        >= 2； heavy_amount = BD2_1 >= 3
+      caveat: BD1_11==1 表示"过去一年完全没喝"，不是 0 天。因此 current 必须用 >=2， 用 >=1 会得到 100%（实测踩过这个坑）。
+      observed_prevalence:
+        current_incl_lifetime_abstainers: 0.645
+        frequent_weekly_plus: 0.2541
+        binge_monthly_plus: 0.615
+      reference_prevalence: 韩国 40+ 过去一年饮酒 60-65%；每周+ 男约40%；暴饮 男约70%
+      banned:
+      - BA2_2_1
+      - BA2_22
+      - BA2_12
+      - BA2_13
+      - BA2_14
+      banned_reason: 官方取值表逐字确认：BA2_2_1=「酒驾一年：骑自行车」，BA2_22=「酒驾车辆一年：乘客人数」， BA2_12/13/14=安全带使用。整个 BA2 模块是交通安全，与饮酒无关。
+  uric_acid:
+    concept: 高尿酸血症
+    nhanes:
+      vars:
+      - LBXSUA
+      threshold: 男>=6.8 / 女>=5.7 mg/dL
+      unit: mg/dL
+      verified_by: prevalence_vs_reference
+    knhanes:
+      vars:
+      - HE_Uacid
+      label_official: 尿酸
+      banned:
+      - HE_UAScr
+      - HE_UAScr_AAS
+      threshold: 男>7.0 / 女>5.7 mg/dL
+  hba1c:
+    concept: 血糖控制（糖化血红蛋白）
+    nhanes:
+      vars:
+      - LBXGH
+      unit: '%'
+      threshold: '>=6.5 (ADA 糖尿病)'
+      plus_continuous: true
+    knhanes:
+      vars:
+      - HE_HbA1c
+      label_official: 糖化血红蛋白
+      unit: '%'
+      threshold: '>=6.5'
+  hyperglycemia:
+    concept: 空腹血糖升高
+    nhanes:
+      vars:
+      - LBXGL
+      - LBXSGL
+      - DIQ010
+      unit: mg/dL
+      threshold: '>=126 (ADA)'
+      note: LBXGL(2005-08)与 LBXSGL 为空腹血糖;DIQ010=医生诊断糖尿病(或分支)
+    knhanes:
+      vars:
+      - HE_glu
+      label_official: 空腹血糖
+      unit: mg/dL
+      threshold: '>=126'
+  dyslipidemia:
+    concept: 血脂异常
+    nhanes:
+      vars:
+      - LBDHDD
+      - LBDHDL
+      - LBDLDL
+      - LBXSCH
+      - LBXSTR
+      modules_required:
+      - BIOPRO
+      - HDL
+      - TRIGLY
+      threshold: TC>=240 或 TG>=200 或 HDL<40 或 LDL>=160 mg/dL
+    knhanes:
+      vars:
+      - HE_chol
+      - HE_TG
+      - HE_HDL_st2
+      - HE_LDL_drct
+      label_official:
+        HE_chol: 总胆固醇
+        HE_TG: 甘油三酯
+        HE_HDL_st2: 可转换高密度脂蛋白胆固醇
+        HE_LDL_drct: LDL胆固醇（直接法）
+      threshold: 同上
+  crp_elevated:
+    concept: 系统性炎症（高敏CRP）
+    nhanes:
+      vars:
+      - LBXCRP
+      unit: mg/dL
+      threshold: '>0.3 mg/dL (≡3 mg/L, AHA 高心血管风险)'
+      corrected_from: '>3.0（单位误读，见 C3）'
+    knhanes:
+      vars:
+      - HE_hsCRP
+      label_official: 高敏C反应蛋白检测
+      unit: UNVERIFIED
+      threshold: 需按 KNHANES 单位核实后设定
+  bmi_high:
+    concept: 超重/肥胖
+    nhanes:
+      vars:
+      - BMXBMI
+      threshold: '>=25 kg/m2 (WHO)'
+      sensitivity: '>=23 (WHO 亚洲)'
+    knhanes:
+      vars:
+      - HE_BMI
+      label_official: BMI
+      threshold: '>=25'
+      sensitivity: '>=23'
+    note: 跨人群分析需同时报告 25 与 23 两套
+  lead_exposure:
+    concept: 铅暴露
+    nhanes:
+      vars:
+      - LBXBPB
+      unit: ug/dL
+      threshold: '>=3.5 (2021 CDC BLRV)'
+      sensitivity: '>=5.0（旧参考值）'
+    knhanes:
+      vars:
+      - HE_Pb
+      label_official: 铅
+      threshold: 待定（按分位与连续性分析）
+    note: 建议以 log 连续暴露为主，二分类仅作敏感性分析
+  vitamin_d_deficiency:
+    concept: 维生素D缺乏
+    nhanes:
+      vars:
+      - LBXVIDMS
+      status: 本机 NHANES 2005-2008 无 VID 模块，需补下载
+    knhanes:
+      vars:
+      - HE_vitD
+      - N_VITD
+      label_official:
+        HE_vitD: 维生素D
+        N_VITD: 维生素D摄入量（μg）
+      threshold: 血清 25(OH)D <20 ng/mL（IOM 缺乏）
+  low_antioxidant_intake:
+    concept: 抗氧化营养素摄入不足 / 血清抗氧化水平低
+    nhanes:
+      vars:
+      - DR1TVC
+      - DR1TATOC
+      - DR1TLZ
+      - DR1TBCAR
+      banned:
+      - DR1TVE
+      threshold: 外生 RDA 标准，禁止样本分位数
+    knhanes:
+      serum:
+      - HE_VitA
+      - HE_VitE
+      serum_label:
+        HE_VitA: 维生素A
+        HE_VitE: 维生素E
+      dietary:
+      - N_VITC
+      - N_VITE
+      - N_CAROT
+      dietary_label:
+        N_VITC: 每日维生素C摄入量（毫克）
+        N_VITE: 维生素E摄入量（mg α-TE）
+        N_CAROT: 每日胡萝卜素摄入量（微克）
+      supplement:
+      - LS_VIT
+      - TLS_VITC
+      - FQ_VITC
+      supplement_label:
+        LS_VIT: 是否服用维生素或矿物质
+        TLS_VITC: 通过膳食补充剂摄入的调查前1日维生素C摄入量（mg）
+        FQ_VITC: 每日维生素C摄入量（食物频率调查）
+  mediterranean_diet:
+    concept: 地中海饮食依从性
+    knhanes:
+      vars:
+      - N_FAT
+      - N_FIBER
+      - N_N3
+      - N_CA
+      - N_PROT
+      - N_NA
+      - FQ_VITC
+      ffq_objects:
+      - hn12_ffq
+      - hn13_ffq
+      - hn14_ffq
+      - hn15_ffq
+      - hn16_ffq
+      status: 可构建（FFQ/24h recall 存在），需自建指数并预注册权重
+    nhanes:
+      vars:
+      - DR1TOT
+      status: 可构建（1日回顾偏倚大，需 2 日平均 DR2TOT）
+  pro_inflammatory_diet:
+    concept: 促炎饮食（DII）
+    status: 需自建 DII 指数（Shivappa 2014 权重），NHANES/KNHANES 均可
+    note: DII 标准权重是外生的，符合本表纪律
+  pm25_exposure:
+    concept: PM2.5 暴露
+    knhanes:
+      vars:
+      - PM25
+      - PM10
+      - O3
+      - NO2
+      - SO2
+      - CO
+      objects:
+      - hn07_ap
+      - hn08_ap
+      - hn09_ap
+      - hn10_ap
+      - hn11_ap
+      - hn12_ap
+      - hn13_ap
+      - hn14_ap
+      - hn15_ap
+      - hn16_ap
+      - hn17_ap
+      - hn18_ap
+      - hn19_ap
+      - hn20_ap
+      - hn21_ap
+      - hn22_ap
+      label_official: 当日平均 PM2.5 浓度（µg/m³）
+      indoor:
+      - IAQ_PM2_5
+      - IAQ_PM2_5_atmos
+      indoor_label:
+        IAQ_PM2_5: 家庭内超细颗粒物(PM2.5)浓度
+        IAQ_PM2_5_atmos: 大气中超细颗粒物(PM2.5)浓度
+      indoor_object: hn21_iaq
+      threshold: 按 WHO 2021 年均 5 / 24h 15 µg/m³；分析以连续 + 三分位为主
+    nhanes:
+      status: 需按县/日期链接 EPA AQS，本机未做
+  uv_exposure:
+    concept: 紫外线/日照暴露
+    knhanes:
+      vars:
+      - E_Q_SUN
+      label_official: 调查二：平均日照射时间
+      objects:
+      - hn10_eye
+      - hn11_eye
+      - hn12_eye
+      coding: UNVERIFIED
+      status: 仅 3 个 wave，需核实取值编码
+    nhanes:
+      status: unmeasurable
+      note: NHANES 无紫外线暴露变量(地理链接未建)
+outcomes:
+  cataract_any:
+    concept: 白内障
+    nhanes:
+      vars:
+      - VIQ071
+      coding:
+        VIQ071: 1=是, 2=否, 9=不知道
+      note: 自报；客观白内障需 SL 影像（NHANES 未公开分级）
+    knhanes:
+      self_report:
+        2008-2009:
+          vars:
+          - DH2_lt
+          label_official: （一生中）是否曾被诊断为白内障
+        2016-2021:
+          vars:
+          - DH2_dg
+          label_official: 是否经医生诊断为白内障
+      note: DH2_lt 与 DH2_dg 语义不同（一生 vs 现患），必须分层报告，不得直接合并
+    charls:
+      vars:
+      - da001/da002 系列
+      verify_required: true
+  retinopathy_any:
+    concept: 糖尿病视网膜病变（任意期）
+    nhanes:
+      vars:
+      - OPDURL4
+      coding:
+        1: 无
+        2: 轻度NPDR
+        3: 中度及以上NPDR
+        4: PDR
+      derive: any = OPDURL4 in (2,3,4)
+    knhanes:
+      2008-2012:
+        vars:
+        - E_DRP_R
+        - E_DRP_L
+        label_official: 糖尿病性视网膜病变或类似发现_右/左眼
+        coding:
+          0: 无
+          1: 有
+          8: 未检查→缺失
+          9: 无法分级→缺失
+      2016-2021:
+        vars:
+        - E_DM_r
+        - E_DM_l
+        label_official: 糖尿病视网膜病变详细情况_右/左眼
+      banned:
+      - E_DR
+      banned_reason: E_DR = 调查4：目前是否使用眼药水，不是视网膜病变
+      derive: 任一眼为 1 → 阳性；两眼均非分级 → 缺失
+  dr_npdr / dr_pdr:
+    concept: 非增殖期 / 增殖期 DR
+    nhanes:
+      vars:
+      - OPDURL4
+      derive: npdr = in (2,3); pdr = ==4
+    knhanes:
+      2008-2012:
+        vars:
+        - E_DRP_Rorp
+        - E_DRP_Lorp
+        note: orP 列编码需核实
+      2016-2021:
+        vars:
+        - E_DME_r
+        - E_DME_l
+        note: 对应糖尿病黄斑水肿；PDR 分级需核实
+  amd_early:
+    concept: 早期年龄相关性黄斑变性
+    nhanes:
+      vars:
+      - OPDUARM
+      - OPDUPIGA
+      derive: (arm>=1) | (pig>=1)
+    knhanes:
+      2008-2012:
+        vars:
+        - E_AMD_ELY_R
+        - E_AMD_ELY_L
+        label_official: 早期老年性黄斑变性_右/左眼
+      2016-2021:
+        vars:
+        - E_AMD_r
+        - E_AMD_l
+        label_official: 年龄相关性黄斑变性详情_右/左眼
+        note: 需按分级码区分早期/晚期
+  amd_late:
+    concept: 晚期（新生血管性/地图样萎缩）AMD
+    nhanes:
+      vars:
+      - OPDULARM
+      - OPDUGA
+      - OPDUEXU
+      derive: (larm>=1)|(ga>=1)|(exu>=1)
+    knhanes:
+      2008-2012:
+        vars:
+        - E_AMD_LATE_R
+        - E_AMD_LATE_L
+        - E_AMD_WET_R
+        - E_AMD_DRY_R
+      2016-2021:
+        vars:
+        - E_AMD_r
+        - E_AMD_l
+  glaucoma_selfreport:
+    concept: 自报青光眼
+    knhanes:
+      2008-2009:
+        vars:
+        - DH3_lt
+        label_official: （一生中）是否曾被诊断为青光眼
+      2016-2021:
+        vars:
+        - DH3_dg
+        label_official: 是否经医生诊断为青光眼
+  glaucoma_iop_elevated:
+    concept: 眼压升高
+    nhanes:
+      vars:
+      - OPDDVCDR
+      note: NHANES 无 IOP 测量；本概念仅在 KNHANES 可用
+    knhanes:
+      2008-2012:
+        vars:
+        - E_Gr_p
+        - E_Gl_p
+        label_official: 青光眼_眼压_右/左眼
+        unit: mmHg
+        missing_sentinel: 999
+      2016-2021:
+        vars:
+        - E_Pr_1
+        label_official: 右眼眼压测试结果
+        unit: mmHg
+        missing_sentinel: 999.99
+      threshold: '>21 mmHg'
+      note: 建议取双眼最大值并写明；原实现只用右眼
+  glaucoma_suspect_cdr:
+    concept: 视盘杯盘比增大
+    knhanes:
+      2008-2012:
+        vars:
+        - E_Grv
+        - E_Glv
+        label_official: 青光眼_散瞳_视盘比率_垂直_右/左眼
+      2016-2021:
+        vars:
+        - E_GR
+        label_official: 青光眼患病情况
+        note: E_GR 是二值青光眼患病，不是 CDR；2016+ 无 CDR
+      threshold: '>=0.7'
+  vision_impairment_mild/moderate/severe:
+    concept: 视力损害（分级）
+    nhanes:
+      vars:
+      - VIDRVA
+      - VIDLVA
+      derive: logMAR = log10(worst_eye/20)，最差眼；mild>0.30 / moderate>0.48 / severe>1.00，取最差一档（非累积）
+      unit: Snellen 分母（20-666，666=差于20/400）
+    knhanes:
+      2008-2012:
+        vars:
+        - E_VS_DS
+        label_official: 视力障碍患病情况
+        coding:
+          0: 无
+          1: 有
+        limitation: 二值，无分级；不得与 NHANES 三级并列比较
+      2016-2021:
+        status: 本判定未找到对应变量，需进一步核实
+      banned_reason: 原实现把 E_VS_DS 命名为 vision_impairment_moderate，属构念错配
+reference_prevalence:
+  note: 每条暴露在 40+ 人群的期望率；分析脚本必须自动比对并在偏离>50%时报警
+  values:
+    nhanes_40plus:
+      current_smoking: 0.19
+      ever_smoking: 0.52
+      bmi_high_25: 0.73
+      hba1c_elevated: 0.145
+      hyperglycemia_126: 0.14
+      crp_elevated_3mgl: 0.3
+      uric_acid_elevated: 0.25
+      alcohol_current: 0.55
+      lead_3_5: 0.13
+    knhanes_40plus:
+      current_smoking: 0.25
+      ever_smoking: 0.4
+      bmi_high_25: 0.36
+      hba1c_elevated: 0.17
+      hyperglycemia_126: 0.1
+      dyslipidemia: 0.38
+      alcohol_current: 0.5
+rule_testability:
+- rule: r07_vitamind_x_dr_npdr
+  status: untestable_with_current_data
+  reason: NHANES 本机副本缺 VID 模块(LBXVIDMS 不存在)，无法构造 25(OH)D； KNHANES 血清维生素D(HE_vitD)仅 2008-2012，而 DR 分级(E_DM_r/l 的 1/2/3 级) 仅
+    2016-2021 —— 两个窗口不重叠。
+  remedies: '① 补下载 NHANES 2005-2006 VID_D.XPT / 2007-2008 VID_E.XPT； ② 或用 KNHANES 膳食维生素D(N_VITD, 2016+) 作不同构念的敏感性分析。
+
+    '
+- rule: r09_mediterranean_diet_x_amd_late
+  status: not_yet_built
+  reason: 需自建地中海饮食依从性指数；原始 FFQ/24h recall 数据已在(hn12-hn16_ffq, hnYY_24rc)，但指数权重与切点尚未预注册。
+- rule: r19_proinflam_diet_x_dr_npdr
+  status: not_yet_built
+  reason: 需自建 DII(膳食炎症指数)；Shivappa 2014 标准权重是外生的，符合本表纪律，尚未实现。
+- rule: r18_uv_x_cataract
+  status: untestable_with_current_data
+  reason: KNHANES 日照暴露(E_Q_SUN)仅 2010-2012；而白内障自报 DH2_lt 仅 2008-2009、 DH2_dg 仅 2008-2009 与 2017-2021 —— 无重叠 wave。E_Q_SUN 的取值编码
+    (1/2/3)也未在码本中确证。
+- rule: r21_pm25_x_vi_mod_severe
+  status: untestable_construct_mismatch
+  reason: KNHANES 视力障碍仅有 E_VS_DS 二值"任意视力障碍"(2008-2012，阳性仅 226)， 没有轻/中/重分级。规则针对 moderate/severe，属于构念错配，不得用二值变量顶替 (这正是原实现 vision_impairment_moderate
+    = E_VS_DS 的错误)。
+rule_downgrades:
+- rule: r22_bmi_x_retinopathy
+  action: must_leave_headline
+  reason: rationale 自述"NHANES 确证(OR≈1.47)方向一致，规则纳入属数据驱动的探索性扩展" —— 即看到内部验证结果后新增，随后又参与内部验证指标。属测试集泄漏。
+  options: ① 从 headline 剔除、单独作为探索性发现报告；② 冻结规则集后重跑全部层。

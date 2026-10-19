@@ -1,0 +1,245 @@
+{
+  "corpus": 1060,
+  "grade_A_chunks": 47,
+  "grade_A_without_links": 39,
+  "per_rule": [
+    {
+      "rule": "r01_uric_acid_x_cataract",
+      "declared_now": "C",
+      "n_hits": 0,
+      "n_grade_A": 0,
+      "best_grade": null,
+      "verdict": "ok",
+      "example_A": null
+    },
+    {
+      "rule": "r02_hyperglycemia_x_cataract",
+      "declared_now": "B",
+      "n_hits": 145,
+      "n_grade_A": 8,
+      "best_grade": "A",
+      "verdict": "ok",
+      "example_A": "Body mass index and risk of age-related cataract: a meta-analysis of prospective cohort studies."
+    },
+    {
+      "rule": "r03_hba1c_x_retinopathy_any",
+      "declared_now": "C",
+      "n_hits": 186,
+      "n_grade_A": 15,
+      "best_grade": "A",
+      "verdict": "REVERT: corpus has 15 grade-A chunk(s)",
+      "example_A": "Current status of diabetes mellitus care and management in the Philippines."
+    },
+    {
+      "rule": "r04_hba1c_x_dr_pdr",
+      "declared_now": "C",
+      "term_list": [],
+      "best_grade": null,
+      "verdict": "no term mapping -- not assessed"
+    },
+    {
+      "rule": "r05_dyslipidemia_x_amd_late",
+      "declared_now": "C",
+      "n_hits": 22,
+      "n_grade_A": 2,
+      "best_grade": "A",
+      "verdict": "ok",
+      "example_A": "Global Burden of Dry Age-Related Macular Degeneration: A Targeted Literature Review."
+    },
+    {
+      "rule": "r06_crp_x_amd_late",
+      "declared_now": "B",
+      "n_hits": 10,
+      "n_grade_A": 0,
+      "best_grade": "B",
+      "verdict": "ok",
+      "example_A": null
+    },
+    {
+      "rule": "r07_vitamind_x_dr_npdr",
+      "declared_now": "B",
+      "n_hits": 0,
+      "n_grade_A": 0,
+      "best_grade": null,
+      "verdict": "ok",
+      "example_A": null
+    },
+    {
+      "rule": "r08_low_antioxidant_x_cataract",
+      "declared_now": "C",
+      "n_hits": 11,
+      "n_grade_A": 1,
+      "best_grade": "A",
+      "verdict": "REVERT: corpus has 1 grade-A chunk(s)",
+      "example_A": "AAO PPP AMD - Section 58"
+    },
+    {
+      "rule": "r09_mediterranean_diet_x_amd_late",
+      "declared_now": "C",
+      "n_hits": 20,
+      "n_grade_A": 4,
+      "best_grade": "A",
+      "verdict": "REVERT: corpus has 4 grade-A chunk(s)",
+      "example_A": "Mediterranean Diet on Development and Progression of Age-Related Macular Degeneration: Systematic Review and Meta-Analysis of Observational Studies."
+    },
+    {
+      "rule": "r10_smoking_x_cataract",
+      "declared_now": "B",
+      "n_hits": 15,
+      "n_grade_A": 1,
+      "best_grade": "A",
+      "verdict": "REVERT: corpus has 1 grade-A chunk(s)",
+      "example_A": "Appraising the causal role of smoking in multiple diseases: A systematic review and meta-analysis of Mendelian randomization studies."
+    },
+    {
+      "rule": "r11_smoking_x_amd_late",
+      "declared_now": "B",
+      "n_hits": 12,
+      "n_grade_A": 4,
+      "best_grade": "A",
+      "verdict": "ok",
+      "example_A": "Global Burden of Dry Age-Related Macular Degeneration: A Targeted Literature Review."
+    },
+    {
+      "rule": "r12_alcohol_x_cataract",
+      "declared_now": "C",
+      "n_hits": 11,
+      "n_grade_A": 0,
+      "best_grade": "B",
+      "verdict": "downgrade stands (no grade-A chunk found)",
+      "example_A": null
+    },
+    {
+      "rule": "r13_bmi_x_cataract",
+      "declared_now": "B",
+      "n_hits": 3,
+      "n_grade_A": 1,
+      "best_grade": "A",
+      "verdict": "REVERT: corpus has 1 grade-A chunk(s)",
+      "example_A": "Body mass index and risk of age-related cataract: a meta-analysis of prospective cohort studies."
+    },
+    {
+      "rule": "r14_lead_x_cataract",
+      "declared_now": "C",
+      "n_hits": 6,
+      "n_grade_A": 0,
+      "best_grade": "B",
+      "verdict": "downgrade stands (no grade-A chunk found)",
+      "example_A": null
+    },
+    {
+      "rule": "r16_pm25_x_glaucoma_iop_cdr",
+      "declared_now": "C",
+      "n_hits": 12,
+      "n_grade_A": 1,
+      "best_grade": "A",
+      "verdict": "REVERT: corpus has 1 grade-A chunk(s)",
+      "example_A": "Impact of Environmental Factors on Glaucoma Progression: A Systematic Review."
+    },
+    {
+      "rule": "r17_pm25_x_amd_early",
+      "declared_now": "B",
+      "n_hits": 6,
+      "n_grade_A": 0,
+      "best_grade": "B",
+      "verdict": "ok",
+      "example_A": null
+    },
+    {
+      "rule": "r18_uv_x_cataract",
+      "declared_now": "C",
+      "n_hits": 17,
+      "n_grade_A": 1,
+      "best_grade": "A",
+      "verdict": "REVERT: corpus has 1 grade-A chunk(s)",
+      "example_A": "Cataracts: A Review."
+    },
+    {
+      "rule": "r22_bmi_x_retinopathy",
+      "declared_now": "C",
+      "n_hits": 11,
+      "n_grade_A": 0,
+      "best_grade": "B",
+      "verdict": "ok",
+      "example_A": null
+    },
+    {
+      "rule": "r19_proinflam_diet_x_dr_npdr",
+      "declared_now": "C",
+      "n_hits": 58,
+      "n_grade_A": 5,
+      "best_grade": "A",
+      "verdict": "ok",
+      "example_A": "Mediterranean Diet on Development and Progression of Age-Related Macular Degeneration: Systematic Review and Meta-Analysis of Observational Studies."
+    },
+    {
+      "rule": "r20_smoking_x_vi_mod_severe",
+      "declared_now": "C",
+      "n_hits": 0,
+      "n_grade_A": 0,
+      "best_grade": null,
+      "verdict": "downgrade stands (no grade-A chunk found)",
+      "example_A": null
+    },
+    {
+      "rule": "r21_pm25_x_vi_mod_severe",
+      "declared_now": "C",
+      "n_hits": 0,
+      "n_grade_A": 0,
+      "best_grade": null,
+      "verdict": "downgrade stands (no grade-A chunk found)",
+      "example_A": null
+    }
+  ],
+  "reverts": [
+    {
+      "rule": "r03_hba1c_x_retinopathy_any",
+      "changed": "B->C",
+      "restore_to": "B",
+      "n_grade_A": 15,
+      "example": "Current status of diabetes mellitus care and management in the Philippines."
+    },
+    {
+      "rule": "r08_low_antioxidant_x_cataract",
+      "changed": "B->C",
+      "restore_to": "B",
+      "n_grade_A": 1,
+      "example": "AAO PPP AMD - Section 58"
+    },
+    {
+      "rule": "r09_mediterranean_diet_x_amd_late",
+      "changed": "B->C",
+      "restore_to": "B",
+      "n_grade_A": 4,
+      "example": "Mediterranean Diet on Development and Progression of Age-Related Macular Degeneration: Systematic Review and Meta-Analysis of Observational Studies."
+    },
+    {
+      "rule": "r10_smoking_x_cataract",
+      "changed": "A->B",
+      "restore_to": "A",
+      "n_grade_A": 1,
+      "example": "Appraising the causal role of smoking in multiple diseases: A systematic review and meta-analysis of Mendelian randomization studies."
+    },
+    {
+      "rule": "r13_bmi_x_cataract",
+      "changed": "A->B",
+      "restore_to": "A",
+      "n_grade_A": 1,
+      "example": "Body mass index and risk of age-related cataract: a meta-analysis of prospective cohort studies."
+    },
+    {
+      "rule": "r16_pm25_x_glaucoma_iop_cdr",
+      "changed": "B->C",
+      "restore_to": "B",
+      "n_grade_A": 1,
+      "example": "Impact of Environmental Factors on Glaucoma Progression: A Systematic Review."
+    },
+    {
+      "rule": "r18_uv_x_cataract",
+      "changed": "B->C",
+      "restore_to": "B",
+      "n_grade_A": 1,
+      "example": "Cataracts: A Review."
+    }
+  ]
+}

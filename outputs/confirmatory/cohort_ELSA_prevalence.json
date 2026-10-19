@@ -1,0 +1,100 @@
+{
+  "diagnostics": {
+    "cohort": "ELSA",
+    "waves": [
+      {
+        "wave": 3,
+        "status": "ok",
+        "rows": 9771,
+        "vars_found": [
+          "heeye",
+          "hefrnd",
+          "heoptca",
+          "heoptgl",
+          "heoptmd",
+          "hepap",
+          "idauniq"
+        ],
+        "note": "smoking/age/sex merged from wave_3_life_history_data"
+      }
+    ]
+  },
+  "gate": {
+    "cohort": "ELSA",
+    "n_rows": 9771,
+    "flags": {
+      "cataract_any": {
+        "n": 8091,
+        "prevalence": 0.2216,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.03,
+          0.3
+        ],
+        "within_typical": true
+      },
+      "current_smoking": {
+        "n": 4710,
+        "prevalence": 0.2376,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.05,
+          0.35
+        ],
+        "within_typical": true
+      },
+      "vision_impairment_moderate": {
+        "n": 9438,
+        "prevalence": 0.1179,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.03,
+          0.35
+        ],
+        "within_typical": true
+      },
+      "vision_impairment_severe": {
+        "n": 9438,
+        "prevalence": 0.0025,
+        "hard_band": [
+          0.0005,
+          0.25
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.005,
+          0.1
+        ],
+        "within_typical": false
+      }
+    },
+    "imputation_replicates": [
+      1
+    ],
+    "rows_per_replicate": 9771,
+    "gate_passed": true,
+    "failed": [],
+    "outside_typical": [
+      "vision_impairment_severe"
+    ],
+    "age_context": {
+      "n": 7769,
+      "mean": 64.9,
+      "min": 25.0,
+      "max": 90.0,
+      "pct_60plus": 0.6382
+    }
+  }
+}

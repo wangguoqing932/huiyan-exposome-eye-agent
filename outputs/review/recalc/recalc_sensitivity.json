@@ -1,0 +1,610 @@
+{
+  "loo_r10_smoking_x_cataract": {
+    "base": {
+      "label": "all",
+      "k": 4,
+      "cohorts": [
+        "CLHLS",
+        "CRELES",
+        "ELSA",
+        "SHARE"
+      ],
+      "per_cohort_OR": {
+        "CLHLS": 0.748,
+        "CRELES": 0.7023,
+        "ELSA": 0.7675,
+        "SHARE": 1.109
+      },
+      "pooled_OR": 0.839,
+      "CI": [
+        0.6698,
+        1.0511
+      ],
+      "I2": 91.02,
+      "Q_p": 2.6301520370000137e-07,
+      "region_OR": {
+        "Americas": 0.7023,
+        "Asia": 0.748,
+        "Europe": 1.0817
+      },
+      "Q_between_p": 4.5288775358728525e-06
+    },
+    "leave_one_out": [
+      {
+        "label": "drop CLHLS",
+        "k": 3,
+        "cohorts": [
+          "CRELES",
+          "ELSA",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "CRELES": 0.7023,
+          "ELSA": 0.7675,
+          "SHARE": 1.109
+        },
+        "pooled_OR": 0.8701,
+        "CI": [
+          0.6493,
+          1.166
+        ],
+        "I2": 86.64,
+        "Q_p": 0.0005617641289485807,
+        "region_OR": {
+          "Americas": 0.7023,
+          "Europe": 1.0817
+        },
+        "Q_between_p": 0.013052559587714027
+      },
+      {
+        "label": "drop CRELES",
+        "k": 3,
+        "cohorts": [
+          "CLHLS",
+          "ELSA",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 0.748,
+          "ELSA": 0.7675,
+          "SHARE": 1.109
+        },
+        "pooled_OR": 0.8722,
+        "CI": [
+          0.67,
+          1.1354
+        ],
+        "I2": 93.02,
+        "Q_p": 6.053050843526848e-07,
+        "region_OR": {
+          "Asia": 0.748,
+          "Europe": 1.0817
+        },
+        "Q_between_p": 8.472427603360234e-06
+      },
+      {
+        "label": "drop ELSA",
+        "k": 3,
+        "cohorts": [
+          "CLHLS",
+          "CRELES",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 0.748,
+          "CRELES": 0.7023,
+          "SHARE": 1.109
+        },
+        "pooled_OR": 0.8562,
+        "CI": [
+          0.6378,
+          1.1495
+        ],
+        "I2": 92.76,
+        "Q_p": 1.0108974747587972e-06,
+        "region_OR": {
+          "Americas": 0.7023,
+          "Asia": 0.748,
+          "Europe": 1.109
+        },
+        "Q_between_p": 1.0108974747587972e-06
+      },
+      {
+        "label": "drop SHARE",
+        "k": 3,
+        "cohorts": [
+          "CLHLS",
+          "CRELES",
+          "ELSA"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 0.748,
+          "CRELES": 0.7023,
+          "ELSA": 0.7675
+        },
+        "pooled_OR": 0.747,
+        "CI": [
+          0.6636,
+          0.841
+        ],
+        "I2": 0.0,
+        "Q_p": 0.9133027193673948,
+        "region_OR": {
+          "Americas": 0.7023,
+          "Asia": 0.748,
+          "Europe": 0.7675
+        },
+        "Q_between_p": 0.9133027193673948
+      }
+    ]
+  },
+  "loo_r02_hyperglycemia_x_cataract": {
+    "base": {
+      "label": "all",
+      "k": 4,
+      "cohorts": [
+        "CLHLS",
+        "CRELES",
+        "LASI",
+        "SHARE"
+      ],
+      "per_cohort_OR": {
+        "CLHLS": 3.5887,
+        "CRELES": 1.3116,
+        "LASI": 1.8782,
+        "SHARE": 1.7539
+      },
+      "pooled_OR": 1.954,
+      "CI": [
+        1.3245,
+        2.8828
+      ],
+      "I2": 90.45,
+      "Q_p": 6.939887302448155e-07,
+      "region_OR": {
+        "Americas": 1.3116,
+        "Asia": 1.9253,
+        "Europe": 1.7539
+      },
+      "Q_between_p": 0.0004091366741595088
+    },
+    "leave_one_out": [
+      {
+        "label": "drop CLHLS",
+        "k": 3,
+        "cohorts": [
+          "CRELES",
+          "LASI",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "CRELES": 1.3116,
+          "LASI": 1.8782,
+          "SHARE": 1.7539
+        },
+        "pooled_OR": 1.6649,
+        "CI": [
+          1.3751,
+          2.0157
+        ],
+        "I2": 83.44,
+        "Q_p": 0.002382715006182826,
+        "region_OR": {
+          "Americas": 1.3116,
+          "Asia": 1.8782,
+          "Europe": 1.7539
+        },
+        "Q_between_p": 0.002382715006182826
+      },
+      {
+        "label": "drop CRELES",
+        "k": 3,
+        "cohorts": [
+          "CLHLS",
+          "LASI",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 3.5887,
+          "LASI": 1.8782,
+          "SHARE": 1.7539
+        },
+        "pooled_OR": 2.2205,
+        "CI": [
+          1.4585,
+          3.3805
+        ],
+        "I2": 91.06,
+        "Q_p": 1.3829470744317153e-05,
+        "region_OR": {
+          "Asia": 1.9253,
+          "Europe": 1.7539
+        },
+        "Q_between_p": 0.010417636862730024
+      },
+      {
+        "label": "drop LASI",
+        "k": 3,
+        "cohorts": [
+          "CLHLS",
+          "CRELES",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 3.5887,
+          "CRELES": 1.3116,
+          "SHARE": 1.7539
+        },
+        "pooled_OR": 1.9956,
+        "CI": [
+          1.1294,
+          3.5263
+        ],
+        "I2": 92.85,
+        "Q_p": 8.429380177208105e-07,
+        "region_OR": {
+          "Americas": 1.3116,
+          "Asia": 3.5887,
+          "Europe": 1.7539
+        },
+        "Q_between_p": 8.429380177208105e-07
+      },
+      {
+        "label": "drop SHARE",
+        "k": 3,
+        "cohorts": [
+          "CLHLS",
+          "CRELES",
+          "LASI"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 3.5887,
+          "CRELES": 1.3116,
+          "LASI": 1.8782
+        },
+        "pooled_OR": 2.0434,
+        "CI": [
+          1.1658,
+          3.5815
+        ],
+        "I2": 92.96,
+        "Q_p": 6.815814592221043e-07,
+        "region_OR": {
+          "Americas": 1.3116,
+          "Asia": 1.9253
+        },
+        "Q_between_p": 0.0003894106668777755
+      }
+    ]
+  },
+  "loo_r20_smoking_x_vi_mod_severe": {
+    "base": {
+      "label": "all",
+      "k": 5,
+      "cohorts": [
+        "CLHLS",
+        "ELSA",
+        "HRS",
+        "KLoSA",
+        "SHARE"
+      ],
+      "per_cohort_OR": {
+        "CLHLS": 1.0267,
+        "ELSA": 1.4883,
+        "HRS": 1.6144,
+        "KLoSA": 1.1002,
+        "SHARE": 1.0875
+      },
+      "pooled_OR": 1.2367,
+      "CI": [
+        1.0325,
+        1.4812
+      ],
+      "I2": 93.81,
+      "Q_p": 3.026211417692634e-13,
+      "region_OR": {
+        "Americas": 1.6144,
+        "Asia": 1.0808,
+        "Europe": 1.1013
+      },
+      "Q_between_p": 8.968808160466784e-13
+    },
+    "leave_one_out": [
+      {
+        "label": "drop CLHLS",
+        "k": 4,
+        "cohorts": [
+          "ELSA",
+          "HRS",
+          "KLoSA",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "ELSA": 1.4883,
+          "HRS": 1.6144,
+          "KLoSA": 1.1002,
+          "SHARE": 1.0875
+        },
+        "pooled_OR": 1.2917,
+        "CI": [
+          1.0534,
+          1.5839
+        ],
+        "I2": 95.21,
+        "Q_p": 1.6584194130290113e-13,
+        "region_OR": {
+          "Americas": 1.6144,
+          "Asia": 1.1002,
+          "Europe": 1.1013
+        },
+        "Q_between_p": 1.9673626054793665e-12
+      },
+      {
+        "label": "drop ELSA",
+        "k": 4,
+        "cohorts": [
+          "CLHLS",
+          "HRS",
+          "KLoSA",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 1.0267,
+          "HRS": 1.6144,
+          "KLoSA": 1.1002,
+          "SHARE": 1.0875
+        },
+        "pooled_OR": 1.1896,
+        "CI": [
+          0.9707,
+          1.4578
+        ],
+        "I2": 94.88,
+        "Q_p": 1.203782977319166e-12,
+        "region_OR": {
+          "Americas": 1.6144,
+          "Asia": 1.0808,
+          "Europe": 1.0875
+        },
+        "Q_between_p": 2.5190863965019674e-13
+      },
+      {
+        "label": "drop HRS",
+        "k": 4,
+        "cohorts": [
+          "CLHLS",
+          "ELSA",
+          "KLoSA",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 1.0267,
+          "ELSA": 1.4883,
+          "KLoSA": 1.1002,
+          "SHARE": 1.0875
+        },
+        "pooled_OR": 1.14,
+        "CI": [
+          1.0031,
+          1.2956
+        ],
+        "I2": 67.91,
+        "Q_p": 0.025009644095225905,
+        "region_OR": {
+          "Asia": 1.0808,
+          "Europe": 1.1013
+        },
+        "Q_between_p": 0.6876987507548609
+      },
+      {
+        "label": "drop KLoSA",
+        "k": 4,
+        "cohorts": [
+          "CLHLS",
+          "ELSA",
+          "HRS",
+          "SHARE"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 1.0267,
+          "ELSA": 1.4883,
+          "HRS": 1.6144,
+          "SHARE": 1.0875
+        },
+        "pooled_OR": 1.2762,
+        "CI": [
+          1.0217,
+          1.5942
+        ],
+        "I2": 95.28,
+        "Q_p": 1.0132891604110209e-13,
+        "region_OR": {
+          "Americas": 1.6144,
+          "Asia": 1.0267,
+          "Europe": 1.1013
+        },
+        "Q_between_p": 1.1928406737293003e-12
+      },
+      {
+        "label": "drop SHARE",
+        "k": 4,
+        "cohorts": [
+          "CLHLS",
+          "ELSA",
+          "HRS",
+          "KLoSA"
+        ],
+        "per_cohort_OR": {
+          "CLHLS": 1.0267,
+          "ELSA": 1.4883,
+          "HRS": 1.6144,
+          "KLoSA": 1.1002
+        },
+        "pooled_OR": 1.2823,
+        "CI": [
+          1.0289,
+          1.5982
+        ],
+        "I2": 92.81,
+        "Q_p": 4.6310842948588e-09,
+        "region_OR": {
+          "Americas": 1.6144,
+          "Asia": 1.0808,
+          "Europe": 1.4883
+        },
+        "Q_between_p": 1.1407419304536526e-09
+      }
+    ]
+  },
+  "r10_age_age<=85": {
+    "label": "age<=85",
+    "k": 4,
+    "cohorts": [
+      "CLHLS",
+      "CRELES",
+      "ELSA",
+      "SHARE"
+    ],
+    "per_cohort_OR": {
+      "CLHLS": 0.7323,
+      "CRELES": 0.7213,
+      "ELSA": 0.7804,
+      "SHARE": 1.1489
+    },
+    "pooled_OR": 0.8557,
+    "CI": [
+      0.6688,
+      1.0949
+    ],
+    "I2": 87.76,
+    "Q_p": 1.958582664850779e-05,
+    "region_OR": {
+      "Americas": 0.7213,
+      "Asia": 0.7323,
+      "Europe": 1.1182
+    },
+    "Q_between_p": 0.0005845405324174848
+  },
+  "r10_age_age<=80": {
+    "label": "age<=80",
+    "k": 4,
+    "cohorts": [
+      "CLHLS",
+      "CRELES",
+      "ELSA",
+      "SHARE"
+    ],
+    "per_cohort_OR": {
+      "CLHLS": 0.8575,
+      "CRELES": 0.7896,
+      "ELSA": 0.8012,
+      "SHARE": 1.1756
+    },
+    "pooled_OR": 0.933,
+    "CI": [
+      0.7356,
+      1.1834
+    ],
+    "I2": 77.87,
+    "Q_p": 0.0035797784003824265,
+    "region_OR": {
+      "Americas": 0.7896,
+      "Asia": 0.8575,
+      "Europe": 1.1449
+    },
+    "Q_between_p": 0.08754345905813002
+  },
+  "r10_age_age in 60-85": {
+    "label": "age in 60-85",
+    "k": 4,
+    "cohorts": [
+      "CLHLS",
+      "CRELES",
+      "ELSA",
+      "SHARE"
+    ],
+    "per_cohort_OR": {
+      "CLHLS": 0.7323,
+      "CRELES": 0.7213,
+      "ELSA": 0.7718,
+      "SHARE": 1.1402
+    },
+    "pooled_OR": 0.8524,
+    "CI": [
+      0.6663,
+      1.0904
+    ],
+    "I2": 86.61,
+    "Q_p": 5.389397322848834e-05,
+    "region_OR": {
+      "Americas": 0.7213,
+      "Asia": 0.7323,
+      "Europe": 1.1109
+    },
+    "Q_between_p": 0.0007988839290219902
+  },
+  "r13_bmi_cut": {
+    "pre-declared (SHARE/CRELES=30)": {
+      "label": "pre-declared (SHARE/CRELES=30)",
+      "k": 2,
+      "cohorts": [
+        "SHARE",
+        "CRELES"
+      ],
+      "per_cohort_OR": {
+        "SHARE": 1.2439,
+        "CRELES": 0.9911
+      },
+      "pooled_OR": 1.1349,
+      "CI": [
+        0.9121,
+        1.4121
+      ],
+      "I2": 79.5,
+      "Q_p": 0.02718560980920908,
+      "region_OR": {
+        "Americas": 0.9911,
+        "Europe": 1.2439
+      },
+      "Q_between_p": 0.027185609809209043
+    },
+    "swapped (SHARE/CRELES=25)": {
+      "label": "swapped (SHARE/CRELES=25)",
+      "k": 2,
+      "cohorts": [
+        "SHARE",
+        "CRELES"
+      ],
+      "per_cohort_OR": {
+        "SHARE": 1.1473,
+        "CRELES": 1.0772
+      },
+      "pooled_OR": 1.1448,
+      "CI": [
+        1.1099,
+        1.1808
+      ],
+      "I2": 0.0,
+      "Q_p": 0.4655305569770736,
+      "region_OR": {
+        "Americas": 1.0772,
+        "Europe": 1.1473
+      },
+      "Q_between_p": 0.4655305569770736
+    }
+  },
+  "r13_alt_cut_asian": {
+    "KLoSA": {
+      "note": null
+    },
+    "MHAS": {
+      "note": null
+    },
+    "LASI": {
+      "note": null
+    },
+    "CLHLS": {
+      "note": null
+    }
+  }
+}

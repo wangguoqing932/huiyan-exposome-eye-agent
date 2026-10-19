@@ -1,0 +1,3 @@
+﻿a_flag,b_item,predicted,rule_ids,negative_control,direction,n,n_pos,n_exp,or,ci_lo,ci_hi,p,status,q,q_rule,q_primary,gold3,gold3_exploratory
+bmi_high,cataract_any,True,r13_bmi_x_cataract,False,risk_up,6126,858,4502,0.986043003417777,0.7942411626759311,1.2241632016570052,0.8986598303530452,tested,1.0,1.0,1.0,uninformative,uninformative
+current_smoking,cataract_any,True,r10_smoking_x_cataract,False,risk_up,6504,950,1287,0.7564370431567213,0.5512447591465477,1.0380089620182054,0.08381980256041473,tested,1.0,0.6277828793725778,0.6277828793725778,uninformative,uninformative

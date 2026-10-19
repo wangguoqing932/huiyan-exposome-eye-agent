@@ -103,6 +103,31 @@ def load_rules(path: str | Path | None = None) -> list[Rule]:
         raise FileNotFoundError(f"rules.yaml not found at {path}")
     raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     mech = set(canonical_mechanisms())
+
+    # ── 患者因素升级规格 ────────────────────────────────────────────────
+    # rules.yaml 把升级规格写在顶层 patient_factor_rules，每条列出 severity 与
+    # 它适用的 entity_a / entity_b flags。此前 load_rules 只读每条规则内部的
+    # patient_factors / escalation_map，而这两个字段在 rules.yaml 中全部为空，
+    # 顶层结构又没有任何模块读取 —— 结果该功能从未生效，实际的等级上调由 LLM
+    # 仲裁悄悄完成（审计见 docs/AGENT_AUDIT.md）。
+    #
+    # 修法：加载期按 flag 匹配把顶层规格落到每条规则上，match_rules 无需改动，
+    # 同时保留"只对匹配 flag 的配对环境生效"这一表达力。
+    # 语义取 floor：规格给出的是目标 severity，对应文档中的"直接抬到该级"。
+    pf_rules: dict[str, dict] = {}
+    for factor, spec in (raw.get("patient_factor_rules") or {}).items():
+        if not isinstance(spec, dict):
+            continue
+        sev = str(spec.get("severity", "")).strip().lower()
+        if sev not in ("high", "medium", "low"):
+            raise ValueError(
+                f"patient_factor_rules[{factor}]: 非法 severity={sev!r}")
+        pf_rules[str(factor)] = {
+            "severity": sev,
+            "a_flags": {str(f) for f in (spec.get("matching_entity_a_flags") or [])},
+            "b_flags": {str(f) for f in (spec.get("matching_entity_b_flags") or [])},
+        }
+
     rules: list[Rule] = []
     for item in raw.get("rules", []) or []:
         if not isinstance(item, dict) or not item.get("id"):
@@ -148,6 +173,21 @@ def load_rules(path: str | Path | None = None) -> list[Rule]:
                 citations=list(item.get("citations", []) or []),
             )
         )
+
+    # 把顶层患者因素规格落到匹配的规则上（保留规则内已有的声明，不覆盖）
+    for rule in rules:
+        a_flags, b_flags = set(rule.entity_a_flags), set(rule.entity_b_flags)
+        for factor, spec in pf_rules.items():
+            if spec["a_flags"] and not (a_flags & spec["a_flags"]):
+                continue
+            if spec["b_flags"] and not (b_flags & spec["b_flags"]):
+                continue
+            # 两侧都无 flag 约束则视为对全部规则生效；此处两条都给了约束
+            if not spec["a_flags"] and not spec["b_flags"]:
+                continue
+            current = rule.escalation_map.get(factor)
+            if current is None or _severity_key(spec["severity"]) > _severity_key(current):
+                rule.escalation_map[factor] = spec["severity"]
     return rules
 
 

@@ -1,0 +1,44 @@
+{
+  "method": "CHARLS has no PSU/strata, so analysis_plan §6 downgrade path: survey weights with model-based variance (NOT svyglm). Declared, not hidden.",
+  "pairs": 32,
+  "significant": 0,
+  "prevalence_gate_hard_failures": 2,
+  "gate_failed_exposures": {
+    "charls2011": [],
+    "charls2015": [
+      "current_smoking",
+      "ever_smoking"
+    ]
+  },
+  "gate_prevalences": {
+    "charls2011": {
+      "hba1c_elevated": 0.0486,
+      "hyperglycemia": 0.1404,
+      "crp_elevated": 0.1799,
+      "uric_acid_elevated": 0.0768,
+      "dyslipidemia": 0.3934,
+      "current_smoking": 0.2811,
+      "ever_smoking": 0.4009,
+      "alcohol_intake": 0.3324,
+      "alcohol_frequent": 0.2532
+    },
+    "charls2015": {
+      "hba1c_elevated": 0.1313,
+      "hyperglycemia": 0.1143,
+      "crp_elevated": 0.2005,
+      "uric_acid_elevated": 0.1583,
+      "dyslipidemia": 0.3151,
+      "current_smoking": 0.0755,
+      "ever_smoking": 0.1235,
+      "alcohol_intake": 0.354,
+      "alcohol_frequent": 0.2663
+    }
+  },
+  "findings": [
+    "charls2011 current_smoking was mis-operationalised as the smoking rate AMONG EVER-SMOKERS (77.0%) because da061 is asked only of da059==1 — the third occurrence of the NHANES C1 error class. Corrected to 28.1%, which matches the Chinese reference.",
+    "The HbA1c reference for a Chinese population is ~5-7%, not the 11-13% OGTT/FPG figure: HbA1c-defined diabetes is roughly half of OGTT-defined diabetes in Chinese samples. Using the wrong prior would have flagged a correct variable as broken.",
+    "charls2015 smoking exposures fail the gate (current 7.5%, ever 12.4% vs references 27% and 40%) and are excluded. Resolving them requires the 2015 questionnaire codebook; until then no CHARLS smoking claim is supportable.",
+    "charls2015 hba1c_elevated is 13.1% vs 4.9% in 2011 — a 2.7-fold jump for the same variable name across waves, the same cross-wave comparability problem found for KNHANES HbA1c. The plan's 'borderline' CHARLS-2015 HbA1c x cataract signal therefore rests on a variable that is not comparable across waves.",
+    "This is the first time the CHARLS exposures were put through the codebook/prevalence gate."
+  ]
+}

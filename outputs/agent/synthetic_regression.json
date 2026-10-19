@@ -1,0 +1,16 @@
+{
+ "seed": 20261016,
+ "n_pairs": 26,
+ "n_per_pair": 6000,
+ "power_or2_replicated": 1.0,
+ "power_or1_4_replicated": 0.875,
+ "fpr_or1_replicated": 0.0,
+ "protective_contradicted": 1.0,
+ "null_contradicted": 0.0,
+ "median_or_hat_by_truth": {
+  "0.6": 0.61,
+  "1.0": 1.049,
+  "1.4": 1.395,
+  "2.0": 1.964
+ }
+}

@@ -1,0 +1,82 @@
+{
+  "SHARE": {
+    "person_waves": 338703,
+    "age_mean": 67.85,
+    "female": 56.7,
+    "current_smoking": 17.1,
+    "diabetes": 13.6,
+    "bmi_high": 22.8,
+    "cataract_any": 8.4,
+    "vision_impairment_moderate": 14.0
+  },
+  "HRS": {
+    "person_waves": 42946,
+    "age_mean": 65.67,
+    "female": 58.5,
+    "current_smoking": 22.5,
+    "diabetes": 24.5,
+    "bmi_high": null,
+    "cataract_any": 13.5,
+    "vision_impairment_moderate": 19.1
+  },
+  "ELSA": {
+    "person_waves": 9771,
+    "age_mean": 64.85,
+    "female": 56.4,
+    "current_smoking": 23.8,
+    "diabetes": null,
+    "bmi_high": null,
+    "cataract_any": 22.2,
+    "vision_impairment_moderate": 11.8
+  },
+  "KLoSA": {
+    "person_waves": 40406,
+    "age_mean": 65.74,
+    "female": 57.0,
+    "current_smoking": 14.2,
+    "diabetes": 5.4,
+    "bmi_high": 23.1,
+    "cataract_any": 4.5,
+    "vision_impairment_moderate": 20.9
+  },
+  "LASI": {
+    "person_waves": 73408,
+    "age_mean": 57.92,
+    "female": 57.6,
+    "current_smoking": null,
+    "diabetes": 12.1,
+    "bmi_high": null,
+    "cataract_any": 11.2,
+    "vision_impairment_moderate": 12.1
+  },
+  "MHAS": {
+    "person_waves": 15217,
+    "age_mean": 60.26,
+    "female": 57.2,
+    "current_smoking": null,
+    "diabetes": null,
+    "bmi_high": null,
+    "cataract_any": null,
+    "vision_impairment_moderate": 34.8
+  },
+  "CLHLS": {
+    "person_waves": 72744,
+    "age_mean": 91.98,
+    "female": 60.0,
+    "current_smoking": 15.9,
+    "diabetes": 1.4,
+    "bmi_high": null,
+    "cataract_any": 17.1,
+    "vision_impairment_moderate": 13.5
+  },
+  "CRELES": {
+    "person_waves": 5191,
+    "age_mean": 76.75,
+    "female": 54.4,
+    "current_smoking": 11.0,
+    "diabetes": 19.1,
+    "bmi_high": 20.0,
+    "cataract_any": 38.5,
+    "vision_impairment_moderate": null
+  }
+}

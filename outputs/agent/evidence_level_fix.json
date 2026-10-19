@@ -1,0 +1,84 @@
+{
+  "rule": "evidence_level A requires source_type == guideline",
+  "regraded": [
+    {
+      "chunk_id": "ev0003",
+      "title": "Body mass index and risk of age-related cataract: a meta-a",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev0010",
+      "title": "Appraising the causal role of smoking in multiple diseases",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev0025",
+      "title": "Cataracts: A Review.",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev_m004_0060",
+      "title": "Global Burden of Dry Age-Related Macular Degeneration: A T",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev_m005_0084",
+      "title": "Association of long-term ozone air pollution and age-relat",
+      "new_level": "C"
+    },
+    {
+      "chunk_id": "ev_m005_0087",
+      "title": "Current status of diabetes mellitus care and management in",
+      "new_level": "C"
+    },
+    {
+      "chunk_id": "ev_m005_0090",
+      "title": "Visual Impairment and Suicide Risk: A Systematic Review an",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev_m005_0093",
+      "title": "Risk factors for complications in resident-performed catar",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev_m006_0104",
+      "title": "Impact of Environmental Factors on Glaucoma Progression: A",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev_m006_0111",
+      "title": "Cataract surgery risk stratification models: a systematic ",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev_m007_0115",
+      "title": "Mediterranean Diet on Development and Progression of Age-R",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev_m007_0130",
+      "title": "Risk factors for glaucoma in nanophthalmos - a systematic ",
+      "new_level": "B"
+    },
+    {
+      "chunk_id": "ev_m008_0141",
+      "title": "Ambient Air Pollution and Glaucoma: A Systematic Review an",
+      "new_level": "B"
+    }
+  ],
+  "before": {
+    "B": 125,
+    "A": 47,
+    "E": 634,
+    "C": 129,
+    "D": 125
+  },
+  "after": {
+    "B": 136,
+    "E": 634,
+    "C": 131,
+    "D": 125,
+    "A": 34
+  }
+}

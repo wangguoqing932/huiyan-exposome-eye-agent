@@ -78,10 +78,16 @@ class LLMClient:
         provider: str | None = None,
         temperature: float | None = None,
         max_tokens: int | None = None,
+        seed: int | None = None,
     ) -> None:
         cfg = config or LLMConfig()
         self.provider = provider or cfg.provider
         self.degraded = False
+        # R5 fix 2026-10-14: seed is now passed through to the API request
+        # body (previously only recorded in metadata, with no reproducibility
+        # semantics). OpenAI-compatible /chat/completions supports `seed`
+        # (llama-server and DeepSeek both honor it).
+        self.seed = seed
 
         if self.provider == "stub":
             self.degraded = True
@@ -123,6 +129,14 @@ class LLMClient:
                 or os.getenv("LLM_CHAT_MODEL")
                 or "deepseek-v4-flash"
             )
+        elif self.provider == "zhipu":  # bigmodel 智谱 GLM(2026-10-16 加,有 key 即可用)
+            self.api_key = os.getenv("ZHIPU_API_KEY", "")
+            if not self.api_key:
+                raise RuntimeError(
+                    "[zhipu] .env 缺 ZHIPU_API_KEY(bigmodel.cn)——拿到 key 后填入即可启用,无需改代码")
+            self.base_url = _ensure_v1(
+                os.getenv("ZHIPU_BASE_URL", "https://open.bigmodel.cn/api/paas"))
+            self.model = os.getenv("ZHIPU_MODEL", "glm-4.5")
         else:  # deepseek 主通道
             self.api_key = (
                 os.getenv("HUANYU_BULK_API_KEY")
@@ -171,6 +185,60 @@ class LLMClient:
         需要区分"模型判断"与"管道故障"的场景必须开启；默认 False 保持
         建索引等长任务的韧性降级）。
         """
+        # R13-D(2026-10-16):自一致确定性层。temp=0 仍有提供方级非确定
+        # (AGENT_AUDIT: 1/12 翻转)。n_consistency>1 时多次采样取多数,
+        # 并按 (模型,温度,消息哈希) 落盘缓存保证跨运行可复现。
+        import os as _os
+        _nc = int(_os.environ.get("HUIYAN_ARBITER_CONSISTENCY", "1"))
+        if _nc > 1:
+            return self._complete_consistent(prompt, system, _nc, raise_on_error)
+
+
+    def _complete_consistent(self, prompt: str, system: str | None, n: int,
+                             raise_on_error: bool) -> ChatResponse:
+        """n 次自一致采样:文本完全一致 → 直接返回;否则取多数文本。
+
+        缓存:data/processed/arbiter_consistency_cache.json,key 为
+        (model, temperature, sha256(messages));命中则零调用返回。
+        """
+        import hashlib, json as _json
+        from collections import Counter
+        from pathlib import Path as _P
+        messages = ([{"role": "system", "content": system}] if system else []) +                    [{"role": "user", "content": prompt}]
+        key = hashlib.sha256(
+            (f"{self.model}|{self.temperature}|" +
+             _json.dumps(messages, ensure_ascii=False, sort_keys=True)
+             ).encode("utf-8")).hexdigest()[:24]
+        cache_path = _P(__file__).resolve().parents[2] / "data" / "processed" /             "arbiter_consistency_cache.json"
+        cache = {}
+        if cache_path.exists():
+            try:
+                cache = _json.loads(cache_path.read_text(encoding="utf-8"))
+            except Exception:  # noqa: BLE001 — 缓存损坏则重建
+                cache = {}
+        if key in cache:
+            r0 = ChatResponse(text=cache[key]["text"], degraded=False)
+            r0.consistency_meta = {"cached": True, **(cache[key].get("meta") or {})}
+            return r0
+        texts = []
+        last = None
+        for _ in range(n):
+            r = self._complete_single(prompt, system, raise_on_error)
+            texts.append(r.text)
+            last = r
+        (majority, _), = Counter(texts).most_common(1)
+        cache[key] = {"text": majority, "meta": {"n": n, "distinct": len(set(texts)),
+                                                 "texts": texts}}
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        cache_path.write_text(_json.dumps(cache, ensure_ascii=False, indent=1),
+                              encoding="utf-8")
+        rr = ChatResponse(text=majority, degraded=last.degraded)
+        rr.consistency_meta = {"n": n, "distinct": len(set(texts))}
+        return rr
+
+    def _complete_single(self, prompt: str, system: str | None,
+                         raise_on_error: bool) -> ChatResponse:
+        """原 complete 主体(单次)。"""
         if self.degraded:
             if raise_on_error:
                 raise RuntimeError("LLM client in stub/degraded mode at init")
@@ -214,6 +282,7 @@ class LLMClient:
                 messages=messages,
                 temperature=self.temperature,
                 max_tokens=self.max_tokens,
+                **({"seed": self.seed} if self.seed is not None else {}),
                 **kwargs,
             )
             return resp.choices[0].message.content or ""
@@ -229,6 +298,8 @@ class LLMClient:
             "temperature": self.temperature,
             "max_tokens": self.max_tokens,
         }
+        if self.seed is not None:
+            body_d["seed"] = self.seed
         if self.provider != "local":
             body_d["reasoning_effort"] = "off"
         else:

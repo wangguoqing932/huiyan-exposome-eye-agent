@@ -1,0 +1,24 @@
+{
+  "cohort": "CRELES",
+  "n_targets": 2,
+  "findings": [
+    {
+      "var": "ev10c",
+      "label": "SpouseCurrentlySmoke",
+      "n_valid": 331,
+      "own_positives": 26,
+      "own_positive_rate_if_naive": 0.0785,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ev17",
+      "label": "CurrentHeight",
+      "n_valid": 491,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    }
+  ]
+}

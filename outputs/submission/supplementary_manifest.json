@@ -1,0 +1,62 @@
+{
+  "assembled_on": "2026-10-15",
+  "items": [
+    {
+      "item": "S1. Variable operationalisation and quality-control log",
+      "status": "included",
+      "path": "docs\\cohort_variable_mapping.md",
+      "bytes": 62544,
+      "produced_by": "docs/cohort_variable_mapping.md (hand-maintained ledger)"
+    },
+    {
+      "item": "S2. Per-pair statistical power in the cohort layer",
+      "status": "included",
+      "path": "outputs\\tables\\table6_power.md",
+      "bytes": 2972,
+      "produced_by": "scripts/cohort_power.py"
+    },
+    {
+      "item": "S3. Between-cohort heterogeneity, full output",
+      "status": "included",
+      "path": "outputs\\cohorts\\cohort_heterogeneity.json",
+      "bytes": 9324,
+      "produced_by": "scripts/cohort_heterogeneity.py"
+    },
+    {
+      "item": "S4. Leave-one-cohort-out influence analysis",
+      "status": "included",
+      "path": "outputs\\cohorts\\cohort_influence.csv",
+      "bytes": 937,
+      "produced_by": "scripts/cohort_heterogeneity.py"
+    },
+    {
+      "item": "S5. Measurement-modality evidence audit, full output",
+      "status": "included",
+      "path": "outputs\\cohorts\\evidence_audit.json",
+      "bytes": 1785,
+      "produced_by": "scripts/evidence_base_audit.py"
+    },
+    {
+      "item": "S6. Rule-coverage measurement",
+      "status": "included",
+      "path": "outputs\\confirmatory\\cohort_rule_coverage.json",
+      "bytes": 54282,
+      "produced_by": "scripts/cohort_rule_coverage.py"
+    },
+    {
+      "item": "S7. Verified citation pool",
+      "status": "included",
+      "path": "outputs\\paper\\citation_pool.json",
+      "bytes": 21206,
+      "produced_by": "scripts/build_citation_pool.py, scripts/extend_citation_pool_intro.py"
+    },
+    {
+      "item": "S8. Figure source data",
+      "status": "included",
+      "path": "outputs\\figures\\source_data\\figure8_cohort_transportability.csv",
+      "bytes": 3900,
+      "produced_by": "scripts/build_source_data_cohort.py"
+    }
+  ],
+  "note": "supplementary item S1 is a hand-maintained ledger rather than a generated artefact; all others are regenerable from the named script"
+}

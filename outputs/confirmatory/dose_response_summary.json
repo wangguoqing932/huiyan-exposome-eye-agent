@@ -1,0 +1,18 @@
+{
+  "method": "OR per 1 standard deviation, survey svyglm (strata/PSU), same covariates as the binary layer; FDR within the confirmatory (rule-relevant) and exploratory (full matrix) families.",
+  "pairs": 314,
+  "pairs_significant": 54,
+  "by_dataset": {
+    "knhanes": {
+      "pairs": 180,
+      "significant": 38,
+      "rule_relevant": 10
+    },
+    "nhanes": {
+      "pairs": 134,
+      "significant": 16,
+      "rule_relevant": 24
+    }
+  },
+  "note": "Dropped as redundant/derived: antioxidant_inadequate_count, log_blood_lead, lutein_zeaxanthin_ug"
+}

@@ -1,0 +1,26 @@
+
+============================================================
+CHARLS confirmatory (analysis_plan v1.1)
+============================================================
+frame: n=17222
+[audit] 1 A-level pair(s) with OR<1 flagged direction_review (plan §4 standard):
+    current_smoking x cataract_any: OR=0.657 [ns (q=0.82)]
+{
+  "rule_pairs_tested": 4,
+  "replicated": 0,
+  "contradicted": 0,
+  "uninformative": 4,
+  "separation": 0,
+  "precision_rule": null,
+  "precision_rule_ci95": [
+    null,
+    null
+  ],
+  "coverage": 0.308,
+  "uncovered_significant": 0,
+  "uncovered_pairs": 9,
+  "negative_control_pairs": 1,
+  "negative_control_outcome": {
+    "uninformative": 1
+  }
+}

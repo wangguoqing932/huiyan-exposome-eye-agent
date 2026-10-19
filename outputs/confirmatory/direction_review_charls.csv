@@ -1,0 +1,2 @@
+﻿a_flag,b_item,predicted,rule_ids,negative_control,direction,n,n_pos,or,ci_lo,ci_hi,p,status,q,gold3
+current_smoking,cataract_any,True,r10_smoking_x_cataract,False,risk_up,6226,105,0.6567137788564862,0.4283040569566926,1.0069318287675555,0.053815046843877515,tested,0.8165872349587819,uninformative

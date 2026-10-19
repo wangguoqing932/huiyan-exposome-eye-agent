@@ -1,0 +1,1755 @@
+[baselines] 80 test pairs from NHANES confirmatory
+
+[baselines] pure_llm seed=11 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 28.9s | P=0.22580645161290322 R=1.0 F1=0.3684210526315789 | 0 failures
+
+[baselines] pure_llm seed=22 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 28.9s | P=0.20689655172413793 R=0.8571428571428571 F1=0.33333333333333326 | 0 failures
+
+[baselines] pure_llm seed=33 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 28.3s | P=0.20689655172413793 R=0.8571428571428571 F1=0.33333333333333326 | 0 failures
+
+[baselines] pure_llm seed=44 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 28.5s | P=0.22580645161290322 R=1.0 F1=0.3684210526315789 | 0 failures
+
+[baselines] pure_llm seed=55 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 41.0s | P=0.20689655172413793 R=0.8571428571428571 F1=0.33333333333333326 | 0 failures
+
+[baselines] 400 predictions → D:\Desktop\眼科公共数据库agent搭建\outputs\baseline_predictions.jsonl
+
+=== Summary (valid runs only) ===
+  pure_llm        | P=0.214 R=0.914 F1=0.347 | 5 seeds | temp=0.7
+[baselines] 80 test pairs from NHANES confirmatory
+
+[baselines] naive_rag seed=11 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 40.1s | P=0.25 R=0.14285714285714285 F1=0.18181818181818182 | 0 failures
+
+[baselines] naive_rag seed=22 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 39.9s | P=0.0 R=0.0 F1=None | 0 failures
+
+[baselines] naive_rag seed=33 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 39.6s | P=0.0 R=0.0 F1=None | 0 failures
+
+[baselines] naive_rag seed=44 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 40.1s | P=0.25 R=0.14285714285714285 F1=0.18181818181818182 | 0 failures
+
+[baselines] naive_rag seed=55 provider=local...
+[canary] OK (local:qwen3.8-27b)
+  80 pairs in 41.0s | P=0.0 R=0.0 F1=None | 0 failures
+
+[baselines] 400 predictions → D:\Desktop\眼科公共数据库agent搭建\outputs\baseline_predictions.jsonl
+
+=== Summary (valid runs only) ===
+  naive_rag       | P=0.100 R=0.057 F1=0.073 | 5 seeds | temp=0.7
+[baselines] 80 test pairs from NHANES confirmatory
+
+[baselines] lightrag seed=11 provider=local...
+[canary] OK (local:qwen3.8-27b)
+INFO: [] Loaded graph from data/processed/lightrag_index\graph_chunk_entity_relation.graphml with 27136 nodes, 23722 edges
+INFO:nano-vectordb:Load (27136, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_entities.json'} 27136 data
+INFO:nano-vectordb:Load (23722, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_relationships.json'} 23722 data
+INFO:nano-vectordb:Load (1054, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_chunks.json'} 1054 data
+INFO: Role LLM Configuration (initialized):
+INFO:  - extract: None/None, host=None, max_async=3, timeout=240
+INFO:  - keyword: None/None, host=None, max_async=3, timeout=240
+INFO:  - query: None/None, host=None, max_async=3, timeout=240
+INFO:  - vlm: None/None, host=None, max_async=3, timeout=240
+INFO: [] Process 17380 KV load full_docs with 1054 records
+INFO: [] Process 17380 KV load text_chunks with 1054 records
+INFO: [] Process 17380 KV load full_entities with 1054 records
+INFO: [] Process 17380 KV load full_relations with 1054 records
+INFO: [] Process 17380 KV load entity_chunks with 27136 records
+INFO: [] Process 17380 KV load relation_chunks with 23722 records
+INFO: [] Process 17380 KV load llm_response_cache with 9190 records
+INFO: [] Process 17380 doc status load doc_status with 1054 records
+INFO: Embedding func: 4 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+  80 pairs in 68.2s | P=0.20833333333333334 R=0.7142857142857143 F1=0.3225806451612903 | 0 failures
+
+[baselines] lightrag seed=22 provider=local...
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+[canary] OK (local:qwen3.8-27b)
+INFO: [] Loaded graph from data/processed/lightrag_index\graph_chunk_entity_relation.graphml with 27136 nodes, 23722 edges
+INFO:nano-vectordb:Load (27136, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_entities.json'} 27136 data
+INFO:nano-vectordb:Load (23722, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_relationships.json'} 23722 data
+INFO:nano-vectordb:Load (1054, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_chunks.json'} 1054 data
+INFO: Role LLM Configuration (initialized):
+INFO:  - extract: None/None, host=None, max_async=3, timeout=240
+INFO:  - keyword: None/None, host=None, max_async=3, timeout=240
+INFO:  - query: None/None, host=None, max_async=3, timeout=240
+INFO:  - vlm: None/None, host=None, max_async=3, timeout=240
+INFO: Embedding func: 4 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+  80 pairs in 66.4s | P=0.2 R=0.7142857142857143 F1=0.3125 | 0 failures
+
+[baselines] lightrag seed=33 provider=local...
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+[canary] OK (local:qwen3.8-27b)
+INFO: [] Loaded graph from data/processed/lightrag_index\graph_chunk_entity_relation.graphml with 27136 nodes, 23722 edges
+INFO:nano-vectordb:Load (27136, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_entities.json'} 27136 data
+INFO:nano-vectordb:Load (23722, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_relationships.json'} 23722 data
+INFO:nano-vectordb:Load (1054, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_chunks.json'} 1054 data
+INFO: Role LLM Configuration (initialized):
+INFO:  - extract: None/None, host=None, max_async=3, timeout=240
+INFO:  - keyword: None/None, host=None, max_async=3, timeout=240
+INFO:  - query: None/None, host=None, max_async=3, timeout=240
+INFO:  - vlm: None/None, host=None, max_async=3, timeout=240
+INFO: Embedding func: 4 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+  80 pairs in 67.1s | P=0.2 R=0.7142857142857143 F1=0.3125 | 0 failures
+
+[baselines] lightrag seed=44 provider=local...
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+[canary] OK (local:qwen3.8-27b)
+INFO: [] Loaded graph from data/processed/lightrag_index\graph_chunk_entity_relation.graphml with 27136 nodes, 23722 edges
+INFO:nano-vectordb:Load (27136, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_entities.json'} 27136 data
+INFO:nano-vectordb:Load (23722, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_relationships.json'} 23722 data
+INFO:nano-vectordb:Load (1054, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_chunks.json'} 1054 data
+INFO: Role LLM Configuration (initialized):
+INFO:  - extract: None/None, host=None, max_async=3, timeout=240
+INFO:  - keyword: None/None, host=None, max_async=3, timeout=240
+INFO:  - query: None/None, host=None, max_async=3, timeout=240
+INFO:  - vlm: None/None, host=None, max_async=3, timeout=240
+INFO: Embedding func: 4 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+  80 pairs in 66.9s | P=0.20833333333333334 R=0.7142857142857143 F1=0.3225806451612903 | 0 failures
+
+[baselines] lightrag seed=55 provider=local...
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+[canary] OK (local:qwen3.8-27b)
+INFO: [] Loaded graph from data/processed/lightrag_index\graph_chunk_entity_relation.graphml with 27136 nodes, 23722 edges
+INFO:nano-vectordb:Load (27136, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_entities.json'} 27136 data
+INFO:nano-vectordb:Load (23722, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_relationships.json'} 23722 data
+INFO:nano-vectordb:Load (1054, 2048) data
+INFO:nano-vectordb:Init {'embedding_dim': 2048, 'metric': 'cosine', 'storage_file': 'data/processed/lightrag_index\\vdb_chunks.json'} 1054 data
+INFO: Role LLM Configuration (initialized):
+INFO:  - extract: None/None, host=None, max_async=3, timeout=240
+INFO:  - keyword: None/None, host=None, max_async=3, timeout=240
+INFO:  - query: None/None, host=None, max_async=3, timeout=240
+INFO:  - vlm: None/None, host=None, max_async=3, timeout=240
+INFO: Embedding func: 4 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+INFO: Naive query: 20 chunks (chunk_top_k:20 cosine:0.2)
+INFO: Final context: 20 chunks
+INFO:  == LLM cache == Query cache hit, using cached response as query result
+INFO:httpx2:HTTP Request: POST http://127.0.0.1:8082/v1/chat/completions "HTTP/1.1 200 OK"
+  80 pairs in 67.0s | P=0.2 R=0.7142857142857143 F1=0.3125 | 0 failures
+
+[baselines] 400 predictions → D:\Desktop\眼科公共数据库agent搭建\outputs\baseline_predictions.jsonl
+
+=== Summary (valid runs only) ===
+  lightrag        | P=0.203 R=0.714 F1=0.317 | 5 seeds | temp=0.7

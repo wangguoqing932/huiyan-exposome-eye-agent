@@ -1,0 +1,7276 @@
+{
+  "HRS": {
+    "root": "E:\\BaiduNetdiskDownload\\所有数据库\\03. HRS 美国健康与退休研究\\HRS_美国\\Raw_data",
+    "exists": true,
+    "dta_files": 382,
+    "scanned": 382,
+    "vision_files": [
+      {
+        "file": "2006 HRS\\H06C_R.dta",
+        "n_vars": 208,
+        "size_mb": 5.2,
+        "vision_vars": [
+          [
+            "KC095",
+            "RATE EYESIGHT"
+          ],
+          [
+            "KC096",
+            "RATE DISTAL VISION"
+          ],
+          [
+            "KC097",
+            "RATE NEAR VISION"
+          ],
+          [
+            "KC098",
+            "CATARACT SURGERY"
+          ],
+          [
+            "KC099",
+            "CATARACT SURGERY ON ONE OR BOTH EYES"
+          ],
+          [
+            "KC100",
+            "CATARACT IMPLANT LENS"
+          ],
+          [
+            "KC101",
+            "GLAUCOMA"
+          ]
+        ]
+      },
+      {
+        "file": "2006 HRS\\H06IO_R.dta",
+        "n_vars": 116,
+        "size_mb": 2.6,
+        "vision_vars": [
+          [
+            "K022F",
+            "OFTEN AVOID EYE CONTACT"
+          ]
+        ]
+      },
+      {
+        "file": "2006 HRS\\H06J_R.dta",
+        "n_vars": 1926,
+        "size_mb": 109.7,
+        "vision_vars": [
+          [
+            "KJ541",
+            "GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2006 HRS\\H06M2_R.dta",
+        "n_vars": 461,
+        "size_mb": 16.1,
+        "vision_vars": [
+          [
+            "KM614",
+            "HM614 GOOD EYESIGHT"
+          ],
+          [
+            "KM623",
+            "HM623 GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2006 HRS\\H06PR_R.dta",
+        "n_vars": 166,
+        "size_mb": 9.9,
+        "vision_vars": [
+          [
+            "KZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "KZ112",
+            "PREV WAVE R HAS HAD CATARACTS"
+          ]
+        ]
+      },
+      {
+        "file": "2006 HRS\\H06T_R.dta",
+        "n_vars": 79,
+        "size_mb": 4.2,
+        "vision_vars": [
+          [
+            "KT002",
+            "DID R MAKE FAMILY PROVISIONS IN WILL"
+          ]
+        ]
+      },
+      {
+        "file": "2006 RAND HRS Fat File\\h06f4a.dta",
+        "n_vars": 7881,
+        "size_mb": 251.4,
+        "vision_vars": [
+          [
+            "kc095",
+            "rate eyesight"
+          ],
+          [
+            "kc096",
+            "rate distal vision"
+          ],
+          [
+            "kc097",
+            "rate near vision"
+          ],
+          [
+            "kc098",
+            "cataract surgery"
+          ],
+          [
+            "kc099",
+            "cataract surgery on one or both eyes"
+          ],
+          [
+            "kc100",
+            "cataract implant lens"
+          ],
+          [
+            "kc101",
+            "glaucoma"
+          ],
+          [
+            "k022f",
+            "often avoid eye contact"
+          ],
+          [
+            "kj541",
+            "good eyesight"
+          ],
+          [
+            "km614",
+            "hm614 good eyesight"
+          ],
+          [
+            "km623",
+            "hm623 good eyesight"
+          ],
+          [
+            "kz089",
+            "prev wave r has glaucoma"
+          ],
+          [
+            "kz112",
+            "prev wave r has had cataracts"
+          ],
+          [
+            "kt002",
+            "did r make family provisions in will"
+          ]
+        ]
+      },
+      {
+        "file": "2008 HRS\\H08C_R.dta",
+        "n_vars": 229,
+        "size_mb": 5.9,
+        "vision_vars": [
+          [
+            "LC095",
+            "RATE EYESIGHT"
+          ],
+          [
+            "LC096",
+            "RATE DISTAL VISION"
+          ],
+          [
+            "LC097",
+            "RATE NEAR VISION"
+          ],
+          [
+            "LC098",
+            "CATARACT SURGERY"
+          ],
+          [
+            "LC099",
+            "CATARACT SURGERY ON ONE OR BOTH EYES"
+          ],
+          [
+            "LC100",
+            "CATARACT IMPLANT LENS"
+          ],
+          [
+            "LC101",
+            "GLAUCOMA"
+          ]
+        ]
+      },
+      {
+        "file": "2008 HRS\\H08IO_R.dta",
+        "n_vars": 120,
+        "size_mb": 2.4,
+        "vision_vars": [
+          [
+            "L022F",
+            "OFTEN AVOID EYE CONTACT"
+          ]
+        ]
+      },
+      {
+        "file": "2008 HRS\\H08J_R.dta",
+        "n_vars": 1535,
+        "size_mb": 73.5,
+        "vision_vars": [
+          [
+            "LJ541",
+            "GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2008 HRS\\H08M2_R.dta",
+        "n_vars": 453,
+        "size_mb": 14.4,
+        "vision_vars": [
+          [
+            "LM614",
+            "HM614 GOOD EYESIGHT"
+          ],
+          [
+            "LM623",
+            "HM623 GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2008 HRS\\H08PR_R.dta",
+        "n_vars": 171,
+        "size_mb": 9.3,
+        "vision_vars": [
+          [
+            "LZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "LZ112",
+            "PREV WAVE R HAS HAD CATARACTS"
+          ]
+        ]
+      },
+      {
+        "file": "2008 HRS\\H08T_R.dta",
+        "n_vars": 81,
+        "size_mb": 4.2,
+        "vision_vars": [
+          [
+            "LT002",
+            "DID R MAKE FAMILY PROVISIONS IN WILL"
+          ]
+        ]
+      },
+      {
+        "file": "2008 RAND HRS Fat File\\h08f3a.dta",
+        "n_vars": 7737,
+        "size_mb": 221.9,
+        "vision_vars": [
+          [
+            "lc095",
+            "rate eyesight"
+          ],
+          [
+            "lc096",
+            "rate distal vision"
+          ],
+          [
+            "lc097",
+            "rate near vision"
+          ],
+          [
+            "lc098",
+            "cataract surgery"
+          ],
+          [
+            "lc099",
+            "cataract surgery on one or both eyes"
+          ],
+          [
+            "lc100",
+            "cataract implant lens"
+          ],
+          [
+            "lc101",
+            "glaucoma"
+          ],
+          [
+            "l022f",
+            "often avoid eye contact"
+          ],
+          [
+            "lj541",
+            "good eyesight"
+          ],
+          [
+            "lm614",
+            "hm614 good eyesight"
+          ],
+          [
+            "lm623",
+            "hm623 good eyesight"
+          ],
+          [
+            "lz089",
+            "prev wave r has glaucoma"
+          ],
+          [
+            "lz112",
+            "prev wave r has had cataracts"
+          ],
+          [
+            "lt002",
+            "did r make family provisions in will"
+          ]
+        ]
+      },
+      {
+        "file": "2010 HRS\\H10C_R.dta",
+        "n_vars": 252,
+        "size_mb": 6.6,
+        "vision_vars": [
+          [
+            "MC095",
+            "RATE EYESIGHT"
+          ],
+          [
+            "MC096",
+            "RATE DISTAL VISION"
+          ],
+          [
+            "MC097",
+            "RATE NEAR VISION"
+          ],
+          [
+            "MC098",
+            "CATARACT SURGERY"
+          ],
+          [
+            "MC099",
+            "CATARACT SURGERY ON ONE OR BOTH EYES"
+          ],
+          [
+            "MC100",
+            "CATARACT IMPLANT LENS"
+          ],
+          [
+            "MC101",
+            "GLAUCOMA"
+          ]
+        ]
+      },
+      {
+        "file": "2010 HRS\\H10IO_R.dta",
+        "n_vars": 123,
+        "size_mb": 3.0,
+        "vision_vars": [
+          [
+            "M022F",
+            "OFTEN AVOID EYE CONTACT"
+          ]
+        ]
+      },
+      {
+        "file": "2010 HRS\\H10J_R.dta",
+        "n_vars": 1577,
+        "size_mb": 58.6,
+        "vision_vars": [
+          [
+            "MJ541",
+            "GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2010 HRS\\H10LB_R.dta",
+        "n_vars": 401,
+        "size_mb": 9.8,
+        "vision_vars": [
+          [
+            "MLB001J",
+            "Q01J. OFTEN WATCH TELEVISION"
+          ]
+        ]
+      },
+      {
+        "file": "2010 HRS\\H10M2_R.dta",
+        "n_vars": 475,
+        "size_mb": 13.9,
+        "vision_vars": [
+          [
+            "MM614",
+            "HM614 GOOD EYESIGHT"
+          ],
+          [
+            "MM623",
+            "HM623 GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2010 HRS\\H10PR_R.dta",
+        "n_vars": 166,
+        "size_mb": 7.0,
+        "vision_vars": [
+          [
+            "MZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "MZ112",
+            "PREV WAVE R HAS HAD CATARACTS"
+          ]
+        ]
+      },
+      {
+        "file": "2010 HRS\\H10T_R.dta",
+        "n_vars": 85,
+        "size_mb": 4.8,
+        "vision_vars": [
+          [
+            "MT002",
+            "DID R MAKE FAMILY PROVISIONS IN WILL"
+          ]
+        ]
+      },
+      {
+        "file": "2010 RAND HRS Fat File\\hd10f6a.dta",
+        "n_vars": 7935,
+        "size_mb": 295.5,
+        "vision_vars": [
+          [
+            "mc095",
+            "rate eyesight"
+          ],
+          [
+            "mc096",
+            "rate distal vision"
+          ],
+          [
+            "mc097",
+            "rate near vision"
+          ],
+          [
+            "mc098",
+            "cataract surgery"
+          ],
+          [
+            "mc099",
+            "cataract surgery on one or both eyes"
+          ],
+          [
+            "mc100",
+            "cataract implant lens"
+          ],
+          [
+            "mc101",
+            "glaucoma"
+          ],
+          [
+            "m022f",
+            "often avoid eye contact"
+          ],
+          [
+            "mj541",
+            "good eyesight"
+          ],
+          [
+            "mlb001j",
+            "q01j. often watch television"
+          ],
+          [
+            "mm614",
+            "hm614 good eyesight"
+          ],
+          [
+            "mm623",
+            "hm623 good eyesight"
+          ],
+          [
+            "mz089",
+            "prev wave r has glaucoma"
+          ],
+          [
+            "mz112",
+            "prev wave r has had cataracts"
+          ],
+          [
+            "mt002",
+            "did r make family provisions in will"
+          ]
+        ]
+      },
+      {
+        "file": "2012 HRS\\H12C_R.dta",
+        "n_vars": 250,
+        "size_mb": 6.0,
+        "vision_vars": [
+          [
+            "NC095",
+            "RATE EYESIGHT"
+          ],
+          [
+            "NC096",
+            "RATE DISTAL VISION"
+          ],
+          [
+            "NC097",
+            "RATE NEAR VISION"
+          ],
+          [
+            "NC098",
+            "CATARACT SURGERY"
+          ],
+          [
+            "NC099",
+            "CATARACT SURGERY ON ONE OR BOTH EYES"
+          ],
+          [
+            "NC100",
+            "CATARACT IMPLANT LENS"
+          ],
+          [
+            "NC101",
+            "GLAUCOMA"
+          ]
+        ]
+      },
+      {
+        "file": "2012 HRS\\H12J_R.dta",
+        "n_vars": 636,
+        "size_mb": 19.8,
+        "vision_vars": [
+          [
+            "NJ541",
+            "GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2012 HRS\\H12LB_R.dta",
+        "n_vars": 485,
+        "size_mb": 10.9,
+        "vision_vars": [
+          [
+            "NLB001J",
+            "Q01J. OFTEN WATCH TELEVISION"
+          ]
+        ]
+      },
+      {
+        "file": "2012 HRS\\H12M2_R.dta",
+        "n_vars": 453,
+        "size_mb": 12.2,
+        "vision_vars": [
+          [
+            "NM614",
+            "HM614 GOOD EYESIGHT"
+          ],
+          [
+            "NM623",
+            "HM623 GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2012 HRS\\H12PR_R.dta",
+        "n_vars": 165,
+        "size_mb": 6.4,
+        "vision_vars": [
+          [
+            "NZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "NZ112",
+            "PREV WAVE R HAS HAD CATARACTS"
+          ]
+        ]
+      },
+      {
+        "file": "2012 HRS\\H12T_R.dta",
+        "n_vars": 105,
+        "size_mb": 5.3,
+        "vision_vars": [
+          [
+            "NT002",
+            "DID R MAKE FAMILY PROVISIONS IN WILL"
+          ]
+        ]
+      },
+      {
+        "file": "2012 HRS\\H12V_R.dta",
+        "n_vars": 494,
+        "size_mb": 11.3,
+        "vision_vars": [
+          [
+            "NV167",
+            "NUMBER OF GLASSES OR CUPS OF FLUIDS DRUN"
+          ]
+        ]
+      },
+      {
+        "file": "2012 RAND HRS Fat File\\h12f3a.dta",
+        "n_vars": 8902,
+        "size_mb": 299.7,
+        "vision_vars": [
+          [
+            "nc095",
+            "rate eyesight"
+          ],
+          [
+            "nc096",
+            "rate distal vision"
+          ],
+          [
+            "nc097",
+            "rate near vision"
+          ],
+          [
+            "nc098",
+            "cataract surgery"
+          ],
+          [
+            "nc099",
+            "cataract surgery on one or both eyes"
+          ],
+          [
+            "nc100",
+            "cataract implant lens"
+          ],
+          [
+            "nc101",
+            "glaucoma"
+          ],
+          [
+            "nj541",
+            "good eyesight"
+          ],
+          [
+            "nlb001j",
+            "q01j. often watch television"
+          ],
+          [
+            "nm614",
+            "hm614 good eyesight"
+          ],
+          [
+            "nm623",
+            "hm623 good eyesight"
+          ],
+          [
+            "nz089",
+            "prev wave r has glaucoma"
+          ],
+          [
+            "nz112",
+            "prev wave r has had cataracts"
+          ],
+          [
+            "nt002",
+            "did r make family provisions in will"
+          ],
+          [
+            "nv167",
+            "number of glasses or cups of fluids drun"
+          ]
+        ]
+      },
+      {
+        "file": "2014 HRS\\H14C_R.dta",
+        "n_vars": 227,
+        "size_mb": 4.9,
+        "vision_vars": [
+          [
+            "OC095",
+            "RATE EYESIGHT"
+          ],
+          [
+            "OC096",
+            "RATE DISTAL VISION"
+          ],
+          [
+            "OC097",
+            "RATE NEAR VISION"
+          ],
+          [
+            "OC098",
+            "CATARACT SURGERY"
+          ],
+          [
+            "OC099",
+            "CATARACT SURGERY ON ONE OR BOTH EYES"
+          ],
+          [
+            "OC100",
+            "CATARACT IMPLANT LENS"
+          ],
+          [
+            "OC101",
+            "GLAUCOMA"
+          ]
+        ]
+      },
+      {
+        "file": "2014 HRS\\H14J_R.dta",
+        "n_vars": 644,
+        "size_mb": 18.0,
+        "vision_vars": [
+          [
+            "OJ541",
+            "GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2014 HRS\\H14LB_R.dta",
+        "n_vars": 399,
+        "size_mb": 8.0,
+        "vision_vars": [
+          [
+            "OLB001J",
+            "Q01J. OFTEN WATCH TELEVISION"
+          ]
+        ]
+      },
+      {
+        "file": "2014 HRS\\H14M2_R.dta",
+        "n_vars": 449,
+        "size_mb": 10.6,
+        "vision_vars": [
+          [
+            "OM614",
+            "HM614 GOOD EYESIGHT"
+          ],
+          [
+            "OM623",
+            "HM623 GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2014 HRS\\H14PR_R.dta",
+        "n_vars": 168,
+        "size_mb": 5.9,
+        "vision_vars": [
+          [
+            "OZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "OZ112",
+            "PREV WAVE R HAS HAD CATARACTS"
+          ]
+        ]
+      },
+      {
+        "file": "2014 HRS\\H14T_R.dta",
+        "n_vars": 101,
+        "size_mb": 4.5,
+        "vision_vars": [
+          [
+            "OT002",
+            "DID R MAKE FAMILY PROVISIONS IN WILL"
+          ]
+        ]
+      },
+      {
+        "file": "2014 RAND HRS Fat File\\h14f2b.dta",
+        "n_vars": 8559,
+        "size_mb": 251.4,
+        "vision_vars": [
+          [
+            "oc095",
+            "rate eyesight"
+          ],
+          [
+            "oc096",
+            "rate distal vision"
+          ],
+          [
+            "oc097",
+            "rate near vision"
+          ],
+          [
+            "oc098",
+            "cataract surgery"
+          ],
+          [
+            "oc099",
+            "cataract surgery on one or both eyes"
+          ],
+          [
+            "oc100",
+            "cataract implant lens"
+          ],
+          [
+            "oc101",
+            "glaucoma"
+          ],
+          [
+            "oj541",
+            "good eyesight"
+          ],
+          [
+            "olb001j",
+            "q01j. often watch television"
+          ],
+          [
+            "om614",
+            "hm614 good eyesight"
+          ],
+          [
+            "om623",
+            "hm623 good eyesight"
+          ],
+          [
+            "oz089",
+            "prev wave r has glaucoma"
+          ],
+          [
+            "oz112",
+            "prev wave r has had cataracts"
+          ],
+          [
+            "ot002",
+            "did r make family provisions in will"
+          ]
+        ]
+      },
+      {
+        "file": "2016 HRS\\H16C_R.dta",
+        "n_vars": 240,
+        "size_mb": 5.8,
+        "vision_vars": [
+          [
+            "PC095",
+            "RATE EYESIGHT"
+          ],
+          [
+            "PC096",
+            "RATE DISTAL VISION"
+          ],
+          [
+            "PC097",
+            "RATE NEAR VISION"
+          ],
+          [
+            "PC098",
+            "CATARACT SURGERY"
+          ],
+          [
+            "PC284",
+            "HAD CATARACT SURGERY IN OTHER EYE"
+          ],
+          [
+            "PC099",
+            "CATARACT SURGERY ON ONE OR BOTH EYES"
+          ],
+          [
+            "PC100",
+            "CATARACT IMPLANT LENS"
+          ],
+          [
+            "PC101",
+            "GLAUCOMA"
+          ]
+        ]
+      },
+      {
+        "file": "2016 HRS\\H16J_R.dta",
+        "n_vars": 617,
+        "size_mb": 18.9,
+        "vision_vars": [
+          [
+            "PJ541",
+            "GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2016 HRS\\H16LB_R.dta",
+        "n_vars": 402,
+        "size_mb": 9.0,
+        "vision_vars": [
+          [
+            "PLB001J",
+            "Q01J. OFTEN WATCH TELEVISION"
+          ]
+        ]
+      },
+      {
+        "file": "2016 HRS\\H16PR_R.dta",
+        "n_vars": 175,
+        "size_mb": 6.7,
+        "vision_vars": [
+          [
+            "PZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "PZ112",
+            "PREV WAVE R HAS HAD CATARACTS"
+          ]
+        ]
+      },
+      {
+        "file": "2016 HRS\\H16T_R.dta",
+        "n_vars": 106,
+        "size_mb": 5.4,
+        "vision_vars": [
+          [
+            "PT002",
+            "DID R MAKE FAMILY PROVISIONS IN WILL"
+          ]
+        ]
+      },
+      {
+        "file": "2016 HRS\\H16V_R.dta",
+        "n_vars": 319,
+        "size_mb": 8.4,
+        "vision_vars": [
+          [
+            "PV156",
+            "COLOR TELEVISION IN HOME"
+          ]
+        ]
+      },
+      {
+        "file": "2016 RAND HRS Fat File\\h16f2c.dta",
+        "n_vars": 7904,
+        "size_mb": 260.9,
+        "vision_vars": [
+          [
+            "pc095",
+            "rate eyesight"
+          ],
+          [
+            "pc096",
+            "rate distal vision"
+          ],
+          [
+            "pc097",
+            "rate near vision"
+          ],
+          [
+            "pc098",
+            "cataract surgery"
+          ],
+          [
+            "pc284",
+            "had cataract surgery in other eye"
+          ],
+          [
+            "pc099",
+            "cataract surgery on one or both eyes"
+          ],
+          [
+            "pc100",
+            "cataract implant lens"
+          ],
+          [
+            "pc101",
+            "glaucoma"
+          ],
+          [
+            "pj541",
+            "good eyesight"
+          ],
+          [
+            "plb001j",
+            "q01j. often watch television"
+          ],
+          [
+            "pz089",
+            "prev wave r has glaucoma"
+          ],
+          [
+            "pz112",
+            "prev wave r has had cataracts"
+          ],
+          [
+            "pt002",
+            "did r make family provisions in will"
+          ],
+          [
+            "pv156",
+            "color television in home"
+          ]
+        ]
+      },
+      {
+        "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+        "n_vars": 258,
+        "size_mb": 5.2,
+        "vision_vars": [
+          [
+            "QC095",
+            "RATE EYESIGHT"
+          ],
+          [
+            "QC096",
+            "RATE DISTAL VISION"
+          ],
+          [
+            "QC097",
+            "RATE NEAR VISION"
+          ],
+          [
+            "QC098",
+            "CATARACT SURGERY"
+          ],
+          [
+            "QC284",
+            "HAD CATARACT SURGERY IN OTHER EYE"
+          ],
+          [
+            "QC099",
+            "CATARACT SURGERY ON ONE OR BOTH EYES"
+          ],
+          [
+            "QC100",
+            "CATARACT IMPLANT LENS"
+          ],
+          [
+            "QC101",
+            "glaucoma"
+          ]
+        ]
+      },
+      {
+        "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18j_r.dta",
+        "n_vars": 600,
+        "size_mb": 15.2,
+        "vision_vars": [
+          [
+            "QJ541",
+            "GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18lb_r.dta",
+        "n_vars": 413,
+        "size_mb": 7.5,
+        "vision_vars": [
+          [
+            "QLB001J",
+            "Q01J. WATCH TELEVISION"
+          ]
+        ]
+      },
+      {
+        "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18pr_r.dta",
+        "n_vars": 180,
+        "size_mb": 5.6,
+        "vision_vars": [
+          [
+            "QZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "QZ112",
+            "PREV WAVE R HAS HAD CATARACTS"
+          ]
+        ]
+      },
+      {
+        "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18t_r.dta",
+        "n_vars": 110,
+        "size_mb": 4.1,
+        "vision_vars": [
+          [
+            "QT002",
+            "DID R MAKE FAMILY PROVISIONS IN WILL"
+          ]
+        ]
+      },
+      {
+        "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18PR_R.dta",
+        "n_vars": 92,
+        "size_mb": 0.2,
+        "vision_vars": [
+          [
+            "XQZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "XQZ112",
+            "PREV WAVE R HAD CATARACT SURGERY"
+          ]
+        ]
+      },
+      {
+        "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18T_R.dta",
+        "n_vars": 413,
+        "size_mb": 1.0,
+        "vision_vars": [
+          [
+            "XQT161",
+            "DIVISION OF ASSETS"
+          ]
+        ]
+      },
+      {
+        "file": "2018 RAND HRS Fat File\\h18f2b.dta",
+        "n_vars": 7807,
+        "size_mb": 213.3,
+        "vision_vars": [
+          [
+            "qc095",
+            "rate eyesight"
+          ],
+          [
+            "qc096",
+            "rate distal vision"
+          ],
+          [
+            "qc097",
+            "rate near vision"
+          ],
+          [
+            "qc098",
+            "cataract surgery"
+          ],
+          [
+            "qc284",
+            "had cataract surgery in other eye"
+          ],
+          [
+            "qc099",
+            "cataract surgery on one or both eyes"
+          ],
+          [
+            "qc100",
+            "cataract implant lens"
+          ],
+          [
+            "qc101",
+            "glaucoma"
+          ],
+          [
+            "qj541",
+            "good eyesight"
+          ],
+          [
+            "qlb001j",
+            "q01j. watch television"
+          ],
+          [
+            "qz089",
+            "prev wave r has glaucoma"
+          ],
+          [
+            "qz112",
+            "prev wave r has had cataracts"
+          ],
+          [
+            "qt002",
+            "did r make family provisions in will"
+          ]
+        ]
+      },
+      {
+        "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+        "n_vars": 255,
+        "size_mb": 4.7,
+        "vision_vars": [
+          [
+            "RC095",
+            "RATE EYESIGHT"
+          ],
+          [
+            "RC096",
+            "RATE DISTAL VISION"
+          ],
+          [
+            "RC097",
+            "RATE NEAR VISION"
+          ],
+          [
+            "RC098",
+            "CATARACT SURGERY"
+          ],
+          [
+            "RC284",
+            "HAD CATARACT SURGERY IN OTHER EYE"
+          ],
+          [
+            "RC099",
+            "CATARACT SURGERY ON ONE OR BOTH EYES"
+          ],
+          [
+            "RC100",
+            "CATARACT IMPLANT LENS"
+          ],
+          [
+            "RC101",
+            "GLAUCOMA"
+          ]
+        ]
+      },
+      {
+        "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20J_R.dta",
+        "n_vars": 632,
+        "size_mb": 14.5,
+        "vision_vars": [
+          [
+            "RJ541",
+            "GOOD EYESIGHT"
+          ]
+        ]
+      },
+      {
+        "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20LB_R.dta",
+        "n_vars": 523,
+        "size_mb": 8.8,
+        "vision_vars": [
+          [
+            "RLB001J",
+            "Q01J. WATCH TELEVISION"
+          ]
+        ]
+      },
+      {
+        "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20PR_R.dta",
+        "n_vars": 181,
+        "size_mb": 5.2,
+        "vision_vars": [
+          [
+            "RZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "RZ112",
+            "PREV WAVE R HAS HAD CATARACTS"
+          ]
+        ]
+      },
+      {
+        "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20T_R.dta",
+        "n_vars": 107,
+        "size_mb": 3.8,
+        "vision_vars": [
+          [
+            "RT002",
+            "DID R MAKE FAMILY PROVISIONS IN WILL"
+          ]
+        ]
+      },
+      {
+        "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20PR_R.dta",
+        "n_vars": 92,
+        "size_mb": 0.2,
+        "vision_vars": [
+          [
+            "XRZ089",
+            "PREV WAVE R HAS GLAUCOMA"
+          ],
+          [
+            "XRZ112",
+            "PREV WAVE R HAD CATARACT SURGERY"
+          ]
+        ]
+      },
+      {
+        "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20T_R.dta",
+        "n_vars": 425,
+        "size_mb": 1.2,
+        "vision_vars": [
+          [
+            "XRT161",
+            "DIVISION OF ASSETS"
+          ]
+        ]
+      },
+      {
+        "file": "2020 RAND HRS Fat File\\h20f1a.dta",
+        "n_vars": 7687,
+        "size_mb": 191.1,
+        "vision_vars": [
+          [
+            "rc095",
+            "rate eyesight"
+          ],
+          [
+            "rc096",
+            "rate distal vision"
+          ],
+          [
+            "rc097",
+            "rate near vision"
+          ],
+          [
+            "rc098",
+            "cataract surgery"
+          ],
+          [
+            "rc284",
+            "had cataract surgery in other eye"
+          ],
+          [
+            "rc099",
+            "cataract surgery on one or both eyes"
+          ],
+          [
+            "rc100",
+            "cataract implant lens"
+          ],
+          [
+            "rc101",
+            "glaucoma"
+          ],
+          [
+            "rj541",
+            "good eyesight"
+          ],
+          [
+            "rlb001j",
+            "q01j. watch television"
+          ],
+          [
+            "rz089",
+            "prev wave r has glaucoma"
+          ],
+          [
+            "rz112",
+            "prev wave r has had cataracts"
+          ],
+          [
+            "rt002",
+            "did r make family provisions in will"
+          ]
+        ]
+      },
+      {
+        "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+        "n_vars": 17653,
+        "size_mb": 1472.6,
+        "vision_vars": [
+          [
+            "s1cendiv",
+            "s1cendiv:w1 census division"
+          ],
+          [
+            "s2cendiv",
+            "s2cendiv:w2 census division"
+          ],
+          [
+            "s3cendiv",
+            "s3cendiv:w3 census division"
+          ],
+          [
+            "s4cendiv",
+            "s4cendiv:w4 census division"
+          ],
+          [
+            "s5cendiv",
+            "s5cendiv:w5 census division"
+          ],
+          [
+            "s6cendiv",
+            "s6cendiv:w6 census division"
+          ],
+          [
+            "s7cendiv",
+            "s7cendiv:w7 census division"
+          ],
+          [
+            "s8cendiv",
+            "s8cendiv:w8 census division"
+          ],
+          [
+            "s9cendiv",
+            "s9cendiv:w9 census division"
+          ],
+          [
+            "s10cendiv",
+            "s10cendiv:w10 census division"
+          ],
+          [
+            "s11cendiv",
+            "s11cendiv:w11 census division"
+          ],
+          [
+            "s12cendiv",
+            "s12cendiv:w12 census division"
+          ],
+          [
+            "s13cendiv",
+            "s13cendiv:w13 census division"
+          ],
+          [
+            "s14cendiv",
+            "s14cendiv:w14 census division"
+          ],
+          [
+            "s15cendiv",
+            "s15cendiv:w15 census division"
+          ],
+          [
+            "r1cendiv",
+            "r1cendiv:w1 census division"
+          ],
+          [
+            "r2cendiv",
+            "r2cendiv:w2 census division"
+          ],
+          [
+            "r3cendiv",
+            "r3cendiv:w3 census division"
+          ]
+        ]
+      }
+    ],
+    "notes": []
+  },
+  "ELSA": {
+    "root": "E:\\BaiduNetdiskDownload\\所有数据库\\02. ELSA 英国老龄化纵向研究\\Raw_data",
+    "exists": true,
+    "dta_files": 161,
+    "scanned": 161,
+    "vision_files": [
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\elsa_endoflife_w6archive.dta",
+        "n_vars": 2192,
+        "size_mb": 1.4,
+        "vision_vars": [
+          [
+            "EiCogK",
+            "Did deceased have difficulty in interpreting surroundings?"
+          ],
+          [
+            "EIEye",
+            "How good was deceased's eyesight?"
+          ],
+          [
+            "EiOpt1",
+            "Did a doctor ever tell deceased that they had: Glaucoma or suspected g"
+          ],
+          [
+            "EiOpt2",
+            "Did a doctor ever tell deceased that they had: Diabetic eye disease"
+          ],
+          [
+            "EiOpt3",
+            "Did a doctor ever tell deceased that they had: Macular degeneration"
+          ],
+          [
+            "EiOpt4",
+            "Did a doctor ever tell deceased that they had: Cataracts"
+          ],
+          [
+            "EiCat",
+            "Did deceased ever have cataract surgery?"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\nutrition_elsa_wave9_id.dta",
+        "n_vars": 90,
+        "size_mb": 2.5,
+        "vision_vars": [
+          [
+            "mean_alcoh_tot",
+            "Total alcoholic drinks intake glasses/day"
+          ],
+          [
+            "mean_ret",
+            "Retinol µg/day"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\w9_nutrition_quantity_20032020.dta",
+        "n_vars": 559,
+        "size_mb": 16.3,
+        "vision_vars": [
+          [
+            "ret",
+            "ug Retinol"
+          ],
+          [
+            "alcoh_tot",
+            "Total alcoholic drinks intake glasses/day"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave0\\wave_0_1998_data.dta",
+        "n_vars": 1106,
+        "size_mb": 14.0,
+        "vision_vars": [
+          [
+            "scomp601",
+            "SC Refused: Eyesight problems"
+          ],
+          [
+            "sherqgs",
+            "Amount sherry (glasses) on heaviest day"
+          ],
+          [
+            "wineqgs",
+            "Amount wine (glasses) usually drank/day"
+          ],
+          [
+            "sherqgs7",
+            "Amount sherry (glasses) on heaviest day"
+          ],
+          [
+            "wineqgs7",
+            "Amount wine (glasses) on heaviest day"
+          ],
+          [
+            "compm5",
+            "(D) VI Eye complaints"
+          ],
+          [
+            "medtyp11",
+            "(D) Eye/Ear etc medicine taken"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave0\\wave_0_1999_data.dta",
+        "n_vars": 1199,
+        "size_mb": 7.4,
+        "vision_vars": [
+          [
+            "scomp601",
+            "SC Refused: Eyesight problems"
+          ],
+          [
+            "drinjc08",
+            "Injury type: Getting something stuck in the eye, throat, ear or other "
+          ],
+          [
+            "drbdyc01",
+            "Part of body: Eyes (major accident)"
+          ],
+          [
+            "sherqgs",
+            "Amount sherry (glasses) usually drank/day"
+          ],
+          [
+            "wineqgs",
+            "Amount wine (glasses) usually drank/day"
+          ],
+          [
+            "sherqgs7",
+            "Amount sherry (glasses) on heaviest day"
+          ],
+          [
+            "wineqgs7",
+            "Amount wine (glasses) on heaviest day"
+          ],
+          [
+            "compm5",
+            "(D) VI Eye complaints"
+          ],
+          [
+            "medtyp11",
+            "(D) Eye/Ear etc medicine taken ?"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave0\\wave_0_2001_data.dta",
+        "n_vars": 1515,
+        "size_mb": 17.6,
+        "vision_vars": [
+          [
+            "scomp61",
+            "SC Refused: Eyesight problems"
+          ],
+          [
+            "compm3",
+            "(D) VI Eye complaints"
+          ],
+          [
+            "glwear",
+            "Whether wears glasses or contact lenses"
+          ],
+          [
+            "gltype",
+            "Whether wears both or just contacts / glasses"
+          ],
+          [
+            "drinjc08",
+            "Injury type: Getting something stuck in the eye, throat, ear or other "
+          ],
+          [
+            "drbdyc01",
+            "Part of body: Eyes (major accident)"
+          ],
+          [
+            "axinj08",
+            "Injury type: Getting something stuck in the eye, throat, ear or other "
+          ],
+          [
+            "axbdy01",
+            "Part of body: Eyes (minor accident)"
+          ],
+          [
+            "axiinj08",
+            "Injury type: Getting something stuck in the eye, throat, ear or other "
+          ],
+          [
+            "axibdy01",
+            "Part of body: Eyes (minor accident)"
+          ],
+          [
+            "sight",
+            "(D) sight disability"
+          ],
+          [
+            "glasses",
+            "Whether wears glasses or contact lenses most of the time"
+          ],
+          [
+            "comvis",
+            "Are communication problems to do with vision?"
+          ],
+          [
+            "eyeit",
+            "Atopic condition accompanied by itchy watery eyes"
+          ],
+          [
+            "krees15",
+            "Skin condition ever affected around the eyes?"
+          ],
+          [
+            "frtdrnkq",
+            "Number of small glasses of fruit juice drank yesterday"
+          ],
+          [
+            "medtyp11",
+            "(D) Eye/Ear etc medicine taken"
+          ],
+          [
+            "sherqgs",
+            "Amount sherry (glasses) on heaviest day"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave0\\wave_0_common_variables_v2.dta",
+        "n_vars": 411,
+        "size_mb": 17.0,
+        "vision_vars": [
+          [
+            "compm5",
+            "(D) VI Eye complaints"
+          ],
+          [
+            "medtyp11",
+            "(D) Eye/Ear etc medicine taken ?"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+        "n_vars": 4484,
+        "size_mb": 70.2,
+        "vision_vars": [
+          [
+            "heeye",
+            "Is your eyesight (using glasses or corrective lens as usual) ... ?"
+          ],
+          [
+            "hefrnd",
+            "How good is your eyesight for seeing things at a distance, like recogn"
+          ],
+          [
+            "hepap",
+            "How good is your eyesight for seeing things up close, like reading ord"
+          ],
+          [
+            "heopt1",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "heopt2",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "heopt3",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "heopt4",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "heopt5",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "hecat",
+            "Have you ever had cataract surgery?"
+          ],
+          [
+            "hevsi",
+            "Do you have any difficulty with your vision?"
+          ],
+          [
+            "iareye",
+            "yearly private debt repayments - Bracket Entry point (iarep): How much"
+          ],
+          [
+            "horeye",
+            "yearly rent payment exc housing benefit - Bracket Entry point (horebp)"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+        "n_vars": 6328,
+        "size_mb": 58.4,
+        "vision_vars": [
+          [
+            "HeEye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "Heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "Hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "Hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "HECAT",
+            "Whether had cataract surgery"
+          ],
+          [
+            "HECATN",
+            "Cataract surgery: who paid"
+          ],
+          [
+            "headlsp",
+            "IADL: difficulty with communication (speech, hearing or eyesight)"
+          ],
+          [
+            "ialreye",
+            "annual commercial loan repayment - bracket entry point (ialre)"
+          ],
+          [
+            "cfwhteye",
+            "Factors which impaired performance: blind or poor eyesight"
+          ],
+          [
+            "cfwhtmeye",
+            "Factors which impaired performance: blind or poor eyesight (merged)"
+          ],
+          [
+            "SCINNO05",
+            "My vision is not good enough to use the equipment"
+          ],
+          [
+            "SCINNO06",
+            "My health problems (not including vision problems) stop me from using "
+          ],
+          [
+            "SCDRWIN",
+            "During the last 7 days how many glasses of wine did you have?"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\elsa_eol_w2_archive_v1.dta",
+        "n_vars": 481,
+        "size_mb": 0.3,
+        "vision_vars": [
+          [
+            "EiCogK",
+            "Did deceased have difficulty in interpreting surroundings?"
+          ],
+          [
+            "EIEye",
+            "How good was deceased's eyesight?"
+          ],
+          [
+            "EiOpt1",
+            "Did a doctor ever tell deceased that they had: Glaucoma or suspected g"
+          ],
+          [
+            "EiOpt2",
+            "Did a doctor ever tell deceased that they had: Diabetic eye disease"
+          ],
+          [
+            "EiOpt3",
+            "Did a doctor ever tell deceased that they had: Macular degeneration"
+          ],
+          [
+            "EiOpt4",
+            "Did a doctor ever tell deceased that they had: Cataracts"
+          ],
+          [
+            "EiCat",
+            "Did deceased ever have cataract surgery?"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+        "n_vars": 6624,
+        "size_mb": 78.7,
+        "vision_vars": [
+          [
+            "Heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "Hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "Hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "HeOpC",
+            "Whether confirms diagnosed eye condition recorded in wave 1"
+          ],
+          [
+            "HeOpW1",
+            "Which eye condition disputed from wave 1 (1st mention)"
+          ],
+          [
+            "HeOpW2",
+            "Which eye condition disputed from wave 1 (2nd mention)"
+          ],
+          [
+            "HeOpN1",
+            "Reason disputed glaucoma diagnosis from wave 1 "
+          ],
+          [
+            "HeOpN2",
+            "Reason disputed diabetic eye disease diagnosis from wave 1 "
+          ],
+          [
+            "HeOpN3",
+            "Reason disputed macular degeneration diagnosis from wave 1"
+          ],
+          [
+            "HeOpN4",
+            "Reason disputed cataract diagnosis from wave 1 "
+          ],
+          [
+            "HeOpS",
+            "Whether still has eye condition at wave 2"
+          ],
+          [
+            "HeOpt1",
+            "Diagnosed eye condition newly reported at W2 (1st mention)"
+          ],
+          [
+            "HeOpt2",
+            "Diagnosed eye condition newly reported at W2 (2nd mention)"
+          ],
+          [
+            "Hedreye",
+            "Whether doctor or optician recommended cataract removal"
+          ],
+          [
+            "Hecat",
+            "Whether had cataract surgery"
+          ],
+          [
+            "HeVsi",
+            "Stroke: whether has difficulty  with vision"
+          ],
+          [
+            "ialreye",
+            "Annual commercial loan repayment - bracket entry point (ialre)"
+          ],
+          [
+            "scaspir",
+            "Number of glasses of spirits drunk on heaviest day"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_derived_variables.dta",
+        "n_vars": 122,
+        "size_mb": 2.2,
+        "vision_vars": [
+          [
+            "bheopt5",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "cheopt1",
+            "Diagnosed eye condition newly reported at W2 (1st mention)"
+          ],
+          [
+            "cheopt2",
+            "Diagnosed eye condition newly reported at W2 (2nd mention)"
+          ],
+          [
+            "heoptgl",
+            "(D) Ever reported glaucoma (diagnosed)"
+          ],
+          [
+            "heoptdi",
+            "(D) Ever reported diabetic eye disease (diagnosed)"
+          ],
+          [
+            "heoptmd",
+            "(D) Ever reported macular degeneration (diagnosed)"
+          ],
+          [
+            "heoptca",
+            "(D) Ever reported cataract (diagnosed)"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_nurse_data_v2.dta",
+        "n_vars": 210,
+        "size_mb": 4.6,
+        "vision_vars": [
+          [
+            "eyesurg",
+            "Lung function: Whether respondent has had eye surgery in the last 4 we"
+          ],
+          [
+            "mmlosc",
+            "Leg raise (eyes open): Whether respondent feels it is safe to attempt "
+          ],
+          [
+            "mmlore",
+            "Leg raise (eyes open): Outcome"
+          ],
+          [
+            "mmloti",
+            "Leg raise (eyes open): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlona",
+            "Leg raise (eyes open): Reason not attempted"
+          ],
+          [
+            "mmlssc",
+            "Leg raise (eyes shut): Whether respondent feels it is safe to attempt "
+          ],
+          [
+            "mmlsre",
+            "Leg raise (eyes shut): Outcome"
+          ],
+          [
+            "mmlsti",
+            "Leg raise (eyes shut): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlsna",
+            "Leg raise (eyes shut): Reason not attempted"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\elsa_eol_w3_archive_v1.dta",
+        "n_vars": 2100,
+        "size_mb": 1.6,
+        "vision_vars": [
+          [
+            "EiCogK",
+            "Did deceased have difficulty in interpreting surroundings?"
+          ],
+          [
+            "EIEye",
+            "How good was deceased's eyesight?"
+          ],
+          [
+            "EiOpt1",
+            "Did a doctor ever tell deceased that they had: Glaucoma or suspected g"
+          ],
+          [
+            "EiOpt2",
+            "Did a doctor ever tell deceased that they had: Diabetic eye disease"
+          ],
+          [
+            "EiOpt3",
+            "Did a doctor ever tell deceased that they had: Macular degeneration"
+          ],
+          [
+            "EiOpt4",
+            "Did a doctor ever tell deceased that they had: Cataracts"
+          ],
+          [
+            "EiCat",
+            "Did deceased ever have cataract surgery?"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+        "n_vars": 6071,
+        "size_mb": 72.0,
+        "vision_vars": [
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ],
+          [
+            "heopsmd",
+            "Whether still has macular degeneration"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_life_history_data.dta",
+        "n_vars": 2040,
+        "size_mb": 20.1,
+        "vision_vars": [
+          [
+            "rhcig55m",
+            "Condition that caused health prob as child: other: eye problems (Merge"
+          ],
+          [
+            "rhpbx6",
+            "Reasons for ill health age 16+: eyesight problems"
+          ],
+          [
+            "rhpbx6m",
+            "Reasons for ill health age 16+: eyesight problems (Merged)"
+          ],
+          [
+            "rhpbx55m",
+            "Reasons for ill health age 16+: other: eye problem (Merged)"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\elsa_eol_w4_archive_v1.dta",
+        "n_vars": 2126,
+        "size_mb": 1.3,
+        "vision_vars": [
+          [
+            "EiCogK",
+            "Did deceased have difficulty in interpreting surroundings?"
+          ],
+          [
+            "EIEye",
+            "How good was deceased's eyesight?"
+          ],
+          [
+            "EiOpt1",
+            "Did a doctor ever tell deceased that they had: Glaucoma or suspected g"
+          ],
+          [
+            "EiOpt2",
+            "Did a doctor ever tell deceased that they had: Diabetic eye disease"
+          ],
+          [
+            "EiOpt3",
+            "Did a doctor ever tell deceased that they had: Macular degeneration"
+          ],
+          [
+            "EiOpt4",
+            "Did a doctor ever tell deceased that they had: Cataracts"
+          ],
+          [
+            "EiCat",
+            "Did deceased ever have cataract surgery?"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+        "n_vars": 7945,
+        "size_mb": 106.6,
+        "vision_vars": [
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ],
+          [
+            "heopsmd",
+            "Whether still has macular degeneration"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_nurse_data.dta",
+        "n_vars": 249,
+        "size_mb": 5.7,
+        "vision_vars": [
+          [
+            "eyesurg",
+            "Lung function: Whether respondent has had eye surgery in the last four"
+          ],
+          [
+            "mmlosc",
+            "Leg raise (eyes open): Whether respondent feels it is safe to attempt "
+          ],
+          [
+            "mmlore",
+            "Leg raise (eyes open): Outcome"
+          ],
+          [
+            "mmloti",
+            "Leg raise (eyes open): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlona",
+            "Leg raise (eyes open): Reason not attempted"
+          ],
+          [
+            "mmlssc",
+            "Leg raise (eyes shut): Whether respondent feels it is safe to attempt "
+          ],
+          [
+            "mmlsre",
+            "Leg raise (eyes shut): Outcome"
+          ],
+          [
+            "mmlsti",
+            "Leg raise (eyes shut): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlsna",
+            "Leg raise (eyes shut): Reason not attempted"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+        "n_vars": 5756,
+        "size_mb": 72.6,
+        "vision_vars": [
+          [
+            "headlco",
+            "IADL: communication (speech, hearing or eyesight)"
+          ],
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+        "n_vars": 6189,
+        "size_mb": 80.6,
+        "vision_vars": [
+          [
+            "HeEye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "Heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "Hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "Hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_nurse_data_v2.dta",
+        "n_vars": 419,
+        "size_mb": 7.2,
+        "vision_vars": [
+          [
+            "mmlosc",
+            "LEGRAISE: Leg raise (eyes open): Respondent feels safe to attempt it"
+          ],
+          [
+            "mmlore",
+            "LEGRAISE: Leg raise (eyes open): Outcome"
+          ],
+          [
+            "mmloti",
+            "LEGRAISE: Leg raise (eyes open): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlona",
+            "LEGRAISE: Leg raise (eyes open): Reason not attempted"
+          ],
+          [
+            "mmlssc",
+            "LEGRAISE: Leg raise (eyes shut): Respondent feels safe to attempt it"
+          ],
+          [
+            "mmlsre",
+            "LEGRAISE: Leg raise (eyes shut): Outcome"
+          ],
+          [
+            "mmlsti",
+            "LEGRAISE: Leg raise (eyes shut): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlsna",
+            "LEGRAISE: Leg raise (eyes shut): Reason not attempted"
+          ],
+          [
+            "eyesurg",
+            "LUNG: Whether have a detached retina or had eye or ear surgery in the "
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+        "n_vars": 6350,
+        "size_mb": 74.0,
+        "vision_vars": [
+          [
+            "HeEye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "Heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "Hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "Hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+        "n_vars": 6392,
+        "size_mb": 66.1,
+        "vision_vars": [
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ]
+        ]
+      },
+      {
+        "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+        "n_vars": 6360,
+        "size_mb": 67.5,
+        "vision_vars": [
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ]
+        ]
+      },
+      {
+        "file": "wave0\\wave_0_1998_data.dta",
+        "n_vars": 1106,
+        "size_mb": 14.0,
+        "vision_vars": [
+          [
+            "scomp601",
+            "SC Refused: Eyesight problems"
+          ],
+          [
+            "sherqgs",
+            "Amount sherry (glasses) on heaviest day"
+          ],
+          [
+            "wineqgs",
+            "Amount wine (glasses) usually drank/day"
+          ],
+          [
+            "sherqgs7",
+            "Amount sherry (glasses) on heaviest day"
+          ],
+          [
+            "wineqgs7",
+            "Amount wine (glasses) on heaviest day"
+          ],
+          [
+            "compm5",
+            "(D) VI Eye complaints"
+          ],
+          [
+            "medtyp11",
+            "(D) Eye/Ear etc medicine taken"
+          ]
+        ]
+      },
+      {
+        "file": "wave0\\wave_0_1999_data.dta",
+        "n_vars": 1199,
+        "size_mb": 7.4,
+        "vision_vars": [
+          [
+            "scomp601",
+            "SC Refused: Eyesight problems"
+          ],
+          [
+            "drinjc08",
+            "Injury type: Getting something stuck in the eye, throat, ear or other "
+          ],
+          [
+            "drbdyc01",
+            "Part of body: Eyes (major accident)"
+          ],
+          [
+            "sherqgs",
+            "Amount sherry (glasses) usually drank/day"
+          ],
+          [
+            "wineqgs",
+            "Amount wine (glasses) usually drank/day"
+          ],
+          [
+            "sherqgs7",
+            "Amount sherry (glasses) on heaviest day"
+          ],
+          [
+            "wineqgs7",
+            "Amount wine (glasses) on heaviest day"
+          ],
+          [
+            "compm5",
+            "(D) VI Eye complaints"
+          ],
+          [
+            "medtyp11",
+            "(D) Eye/Ear etc medicine taken ?"
+          ]
+        ]
+      },
+      {
+        "file": "wave0\\wave_0_2001_data.dta",
+        "n_vars": 1515,
+        "size_mb": 17.6,
+        "vision_vars": [
+          [
+            "scomp61",
+            "SC Refused: Eyesight problems"
+          ],
+          [
+            "compm3",
+            "(D) VI Eye complaints"
+          ],
+          [
+            "glwear",
+            "Whether wears glasses or contact lenses"
+          ],
+          [
+            "gltype",
+            "Whether wears both or just contacts / glasses"
+          ],
+          [
+            "drinjc08",
+            "Injury type: Getting something stuck in the eye, throat, ear or other "
+          ],
+          [
+            "drbdyc01",
+            "Part of body: Eyes (major accident)"
+          ],
+          [
+            "axinj08",
+            "Injury type: Getting something stuck in the eye, throat, ear or other "
+          ],
+          [
+            "axbdy01",
+            "Part of body: Eyes (minor accident)"
+          ],
+          [
+            "axiinj08",
+            "Injury type: Getting something stuck in the eye, throat, ear or other "
+          ],
+          [
+            "axibdy01",
+            "Part of body: Eyes (minor accident)"
+          ],
+          [
+            "sight",
+            "(D) sight disability"
+          ],
+          [
+            "glasses",
+            "Whether wears glasses or contact lenses most of the time"
+          ],
+          [
+            "comvis",
+            "Are communication problems to do with vision?"
+          ],
+          [
+            "eyeit",
+            "Atopic condition accompanied by itchy watery eyes"
+          ],
+          [
+            "krees15",
+            "Skin condition ever affected around the eyes?"
+          ],
+          [
+            "frtdrnkq",
+            "Number of small glasses of fruit juice drank yesterday"
+          ],
+          [
+            "medtyp11",
+            "(D) Eye/Ear etc medicine taken"
+          ],
+          [
+            "sherqgs",
+            "Amount sherry (glasses) on heaviest day"
+          ]
+        ]
+      },
+      {
+        "file": "wave0\\wave_0_common_variables_v2.dta",
+        "n_vars": 411,
+        "size_mb": 17.0,
+        "vision_vars": [
+          [
+            "compm5",
+            "(D) VI Eye complaints"
+          ],
+          [
+            "medtyp11",
+            "(D) Eye/Ear etc medicine taken ?"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\wave_1_core_data_v3.dta",
+        "n_vars": 4484,
+        "size_mb": 70.2,
+        "vision_vars": [
+          [
+            "heeye",
+            "Is your eyesight (using glasses or corrective lens as usual) ... ?"
+          ],
+          [
+            "hefrnd",
+            "How good is your eyesight for seeing things at a distance, like recogn"
+          ],
+          [
+            "hepap",
+            "How good is your eyesight for seeing things up close, like reading ord"
+          ],
+          [
+            "heopt1",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "heopt2",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "heopt3",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "heopt4",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "heopt5",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "hecat",
+            "Have you ever had cataract surgery?"
+          ],
+          [
+            "hevsi",
+            "Do you have any difficulty with your vision?"
+          ],
+          [
+            "iareye",
+            "yearly private debt repayments - Bracket Entry point (iarep): How much"
+          ],
+          [
+            "horeye",
+            "yearly rent payment exc housing benefit - Bracket Entry point (horebp)"
+          ]
+        ]
+      },
+      {
+        "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+        "n_vars": 6328,
+        "size_mb": 58.4,
+        "vision_vars": [
+          [
+            "HeEye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "Heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "Hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "Hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "HECAT",
+            "Whether had cataract surgery"
+          ],
+          [
+            "HECATN",
+            "Cataract surgery: who paid"
+          ],
+          [
+            "headlsp",
+            "IADL: difficulty with communication (speech, hearing or eyesight)"
+          ],
+          [
+            "ialreye",
+            "annual commercial loan repayment - bracket entry point (ialre)"
+          ],
+          [
+            "cfwhteye",
+            "Factors which impaired performance: blind or poor eyesight"
+          ],
+          [
+            "cfwhtmeye",
+            "Factors which impaired performance: blind or poor eyesight (merged)"
+          ],
+          [
+            "SCINNO05",
+            "My vision is not good enough to use the equipment"
+          ],
+          [
+            "SCINNO06",
+            "My health problems (not including vision problems) stop me from using "
+          ],
+          [
+            "SCDRWIN",
+            "During the last 7 days how many glasses of wine did you have?"
+          ]
+        ]
+      },
+      {
+        "file": "wave10\\wave_10_elsa_data_eul_v1_CN.dta",
+        "n_vars": 6328,
+        "size_mb": 62.1,
+        "vision_vars": [
+          [
+            "HeEye",
+            "自报视力（如适用，使用镜片时）"
+          ],
+          [
+            "ialreye",
+            "年度商业贷款还款 - 区间入口点 (ialre)"
+          ],
+          [
+            "cfwhteye",
+            "影响表现的因素：失明或视力差"
+          ],
+          [
+            "cfwhtmeye",
+            "影响表现的因素：失明或视力差（合并）"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\elsa_eol_w2_archive_v1.dta",
+        "n_vars": 481,
+        "size_mb": 0.3,
+        "vision_vars": [
+          [
+            "EiCogK",
+            "Did deceased have difficulty in interpreting surroundings?"
+          ],
+          [
+            "EIEye",
+            "How good was deceased's eyesight?"
+          ],
+          [
+            "EiOpt1",
+            "Did a doctor ever tell deceased that they had: Glaucoma or suspected g"
+          ],
+          [
+            "EiOpt2",
+            "Did a doctor ever tell deceased that they had: Diabetic eye disease"
+          ],
+          [
+            "EiOpt3",
+            "Did a doctor ever tell deceased that they had: Macular degeneration"
+          ],
+          [
+            "EiOpt4",
+            "Did a doctor ever tell deceased that they had: Cataracts"
+          ],
+          [
+            "EiCat",
+            "Did deceased ever have cataract surgery?"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\wave_2_core_data_v4.dta",
+        "n_vars": 6624,
+        "size_mb": 78.7,
+        "vision_vars": [
+          [
+            "Heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "Hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "Hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "HeOpC",
+            "Whether confirms diagnosed eye condition recorded in wave 1"
+          ],
+          [
+            "HeOpW1",
+            "Which eye condition disputed from wave 1 (1st mention)"
+          ],
+          [
+            "HeOpW2",
+            "Which eye condition disputed from wave 1 (2nd mention)"
+          ],
+          [
+            "HeOpN1",
+            "Reason disputed glaucoma diagnosis from wave 1 "
+          ],
+          [
+            "HeOpN2",
+            "Reason disputed diabetic eye disease diagnosis from wave 1 "
+          ],
+          [
+            "HeOpN3",
+            "Reason disputed macular degeneration diagnosis from wave 1"
+          ],
+          [
+            "HeOpN4",
+            "Reason disputed cataract diagnosis from wave 1 "
+          ],
+          [
+            "HeOpS",
+            "Whether still has eye condition at wave 2"
+          ],
+          [
+            "HeOpt1",
+            "Diagnosed eye condition newly reported at W2 (1st mention)"
+          ],
+          [
+            "HeOpt2",
+            "Diagnosed eye condition newly reported at W2 (2nd mention)"
+          ],
+          [
+            "Hedreye",
+            "Whether doctor or optician recommended cataract removal"
+          ],
+          [
+            "Hecat",
+            "Whether had cataract surgery"
+          ],
+          [
+            "HeVsi",
+            "Stroke: whether has difficulty  with vision"
+          ],
+          [
+            "ialreye",
+            "Annual commercial loan repayment - bracket entry point (ialre)"
+          ],
+          [
+            "scaspir",
+            "Number of glasses of spirits drunk on heaviest day"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\wave_2_derived_variables.dta",
+        "n_vars": 122,
+        "size_mb": 2.2,
+        "vision_vars": [
+          [
+            "bheopt5",
+            "Has a doctor or optician ever told you that [have/have had] ... {glauc"
+          ],
+          [
+            "cheopt1",
+            "Diagnosed eye condition newly reported at W2 (1st mention)"
+          ],
+          [
+            "cheopt2",
+            "Diagnosed eye condition newly reported at W2 (2nd mention)"
+          ],
+          [
+            "heoptgl",
+            "(D) Ever reported glaucoma (diagnosed)"
+          ],
+          [
+            "heoptdi",
+            "(D) Ever reported diabetic eye disease (diagnosed)"
+          ],
+          [
+            "heoptmd",
+            "(D) Ever reported macular degeneration (diagnosed)"
+          ],
+          [
+            "heoptca",
+            "(D) Ever reported cataract (diagnosed)"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\wave_2_nurse_data_v2.dta",
+        "n_vars": 210,
+        "size_mb": 4.6,
+        "vision_vars": [
+          [
+            "eyesurg",
+            "Lung function: Whether respondent has had eye surgery in the last 4 we"
+          ],
+          [
+            "mmlosc",
+            "Leg raise (eyes open): Whether respondent feels it is safe to attempt "
+          ],
+          [
+            "mmlore",
+            "Leg raise (eyes open): Outcome"
+          ],
+          [
+            "mmloti",
+            "Leg raise (eyes open): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlona",
+            "Leg raise (eyes open): Reason not attempted"
+          ],
+          [
+            "mmlssc",
+            "Leg raise (eyes shut): Whether respondent feels it is safe to attempt "
+          ],
+          [
+            "mmlsre",
+            "Leg raise (eyes shut): Outcome"
+          ],
+          [
+            "mmlsti",
+            "Leg raise (eyes shut): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlsna",
+            "Leg raise (eyes shut): Reason not attempted"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\elsa_eol_w3_archive_v1.dta",
+        "n_vars": 2100,
+        "size_mb": 1.6,
+        "vision_vars": [
+          [
+            "EiCogK",
+            "Did deceased have difficulty in interpreting surroundings?"
+          ],
+          [
+            "EIEye",
+            "How good was deceased's eyesight?"
+          ],
+          [
+            "EiOpt1",
+            "Did a doctor ever tell deceased that they had: Glaucoma or suspected g"
+          ],
+          [
+            "EiOpt2",
+            "Did a doctor ever tell deceased that they had: Diabetic eye disease"
+          ],
+          [
+            "EiOpt3",
+            "Did a doctor ever tell deceased that they had: Macular degeneration"
+          ],
+          [
+            "EiOpt4",
+            "Did a doctor ever tell deceased that they had: Cataracts"
+          ],
+          [
+            "EiCat",
+            "Did deceased ever have cataract surgery?"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\wave_3_elsa_data_v4.dta",
+        "n_vars": 6071,
+        "size_mb": 72.0,
+        "vision_vars": [
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ],
+          [
+            "heopsmd",
+            "Whether still has macular degeneration"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\wave_3_life_history_data.dta",
+        "n_vars": 2040,
+        "size_mb": 20.1,
+        "vision_vars": [
+          [
+            "rhcig55m",
+            "Condition that caused health prob as child: other: eye problems (Merge"
+          ],
+          [
+            "rhpbx6",
+            "Reasons for ill health age 16+: eyesight problems"
+          ],
+          [
+            "rhpbx6m",
+            "Reasons for ill health age 16+: eyesight problems (Merged)"
+          ],
+          [
+            "rhpbx55m",
+            "Reasons for ill health age 16+: other: eye problem (Merged)"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\elsa_eol_w4_archive_v1.dta",
+        "n_vars": 2126,
+        "size_mb": 1.3,
+        "vision_vars": [
+          [
+            "EiCogK",
+            "Did deceased have difficulty in interpreting surroundings?"
+          ],
+          [
+            "EIEye",
+            "How good was deceased's eyesight?"
+          ],
+          [
+            "EiOpt1",
+            "Did a doctor ever tell deceased that they had: Glaucoma or suspected g"
+          ],
+          [
+            "EiOpt2",
+            "Did a doctor ever tell deceased that they had: Diabetic eye disease"
+          ],
+          [
+            "EiOpt3",
+            "Did a doctor ever tell deceased that they had: Macular degeneration"
+          ],
+          [
+            "EiOpt4",
+            "Did a doctor ever tell deceased that they had: Cataracts"
+          ],
+          [
+            "EiCat",
+            "Did deceased ever have cataract surgery?"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\wave_4_elsa_data_v3.dta",
+        "n_vars": 7945,
+        "size_mb": 106.6,
+        "vision_vars": [
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ],
+          [
+            "heopsmd",
+            "Whether still has macular degeneration"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\wave_4_nurse_data.dta",
+        "n_vars": 249,
+        "size_mb": 5.7,
+        "vision_vars": [
+          [
+            "eyesurg",
+            "Lung function: Whether respondent has had eye surgery in the last four"
+          ],
+          [
+            "mmlosc",
+            "Leg raise (eyes open): Whether respondent feels it is safe to attempt "
+          ],
+          [
+            "mmlore",
+            "Leg raise (eyes open): Outcome"
+          ],
+          [
+            "mmloti",
+            "Leg raise (eyes open): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlona",
+            "Leg raise (eyes open): Reason not attempted"
+          ],
+          [
+            "mmlssc",
+            "Leg raise (eyes shut): Whether respondent feels it is safe to attempt "
+          ],
+          [
+            "mmlsre",
+            "Leg raise (eyes shut): Outcome"
+          ],
+          [
+            "mmlsti",
+            "Leg raise (eyes shut): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlsna",
+            "Leg raise (eyes shut): Reason not attempted"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\wave_5_elsa_data_v4.dta",
+        "n_vars": 5756,
+        "size_mb": 72.6,
+        "vision_vars": [
+          [
+            "headlco",
+            "IADL: communication (speech, hearing or eyesight)"
+          ],
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\wave_5_elsa_data_v4_CN.dta",
+        "n_vars": 5756,
+        "size_mb": 75.6,
+        "vision_vars": [
+          [
+            "heeye",
+            "自我报告的视力（如适用，使用镜片时）"
+          ],
+          [
+            "ialreye",
+            "年度商业贷款还款 - 范围入口点 (ialre)"
+          ],
+          [
+            "cfwhteye",
+            "影响表现的因素：失明或视力差"
+          ],
+          [
+            "cfwhmeye",
+            "合并变量 - 影响表现的因素：失明或视力差"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\elsa_endoflife_w6archive.dta",
+        "n_vars": 2192,
+        "size_mb": 1.4,
+        "vision_vars": [
+          [
+            "EiCogK",
+            "Did deceased have difficulty in interpreting surroundings?"
+          ],
+          [
+            "EIEye",
+            "How good was deceased's eyesight?"
+          ],
+          [
+            "EiOpt1",
+            "Did a doctor ever tell deceased that they had: Glaucoma or suspected g"
+          ],
+          [
+            "EiOpt2",
+            "Did a doctor ever tell deceased that they had: Diabetic eye disease"
+          ],
+          [
+            "EiOpt3",
+            "Did a doctor ever tell deceased that they had: Macular degeneration"
+          ],
+          [
+            "EiOpt4",
+            "Did a doctor ever tell deceased that they had: Cataracts"
+          ],
+          [
+            "EiCat",
+            "Did deceased ever have cataract surgery?"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\wave_6_elsa_data_v2.dta",
+        "n_vars": 6189,
+        "size_mb": 80.6,
+        "vision_vars": [
+          [
+            "HeEye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "Heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "Hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "Hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\wave_6_elsa_data_v2_CN.dta",
+        "n_vars": 6189,
+        "size_mb": 83.9,
+        "vision_vars": [
+          [
+            "HeEye",
+            "自我报告的视力（如适用，使用镜片时）"
+          ],
+          [
+            "ialreye",
+            "年度商业贷款偿还 - 范围输入点 (ialre)"
+          ],
+          [
+            "cfwhteye",
+            "影响表现的因素：失明或视力差"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\wave_6_elsa_nurse_data_v2.dta",
+        "n_vars": 419,
+        "size_mb": 7.2,
+        "vision_vars": [
+          [
+            "mmlosc",
+            "LEGRAISE: Leg raise (eyes open): Respondent feels safe to attempt it"
+          ],
+          [
+            "mmlore",
+            "LEGRAISE: Leg raise (eyes open): Outcome"
+          ],
+          [
+            "mmloti",
+            "LEGRAISE: Leg raise (eyes open): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlona",
+            "LEGRAISE: Leg raise (eyes open): Reason not attempted"
+          ],
+          [
+            "mmlssc",
+            "LEGRAISE: Leg raise (eyes shut): Respondent feels safe to attempt it"
+          ],
+          [
+            "mmlsre",
+            "LEGRAISE: Leg raise (eyes shut): Outcome"
+          ],
+          [
+            "mmlsti",
+            "LEGRAISE: Leg raise (eyes shut): Time leg raise held (seconds)"
+          ],
+          [
+            "mmlsna",
+            "LEGRAISE: Leg raise (eyes shut): Reason not attempted"
+          ],
+          [
+            "eyesurg",
+            "LUNG: Whether have a detached retina or had eye or ear surgery in the "
+          ]
+        ]
+      },
+      {
+        "file": "wave7\\wave_7_elsa_data.dta",
+        "n_vars": 6350,
+        "size_mb": 74.0,
+        "vision_vars": [
+          [
+            "HeEye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "Heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "Hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "Hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ]
+        ]
+      },
+      {
+        "file": "wave7\\wave_7_elsa_data_CN.dta",
+        "n_vars": 6350,
+        "size_mb": 77.4,
+        "vision_vars": [
+          [
+            "HeEye",
+            "自我报告的视力（如适用，佩戴镜片时）"
+          ],
+          [
+            "ialreye",
+            "年度商业贷款偿还 - 区间起始点 (ialre)"
+          ],
+          [
+            "cfwhteye",
+            "影响表现的因素：失明或视力差"
+          ],
+          [
+            "cfwhmteye",
+            "合并变量 - 影响表现的因素：失明或视力差"
+          ]
+        ]
+      },
+      {
+        "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+        "n_vars": 6392,
+        "size_mb": 66.1,
+        "vision_vars": [
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ]
+        ]
+      },
+      {
+        "file": "wave8\\wave_8_elsa_data_eul_v2_CN.dta",
+        "n_vars": 6392,
+        "size_mb": 69.9,
+        "vision_vars": [
+          [
+            "heeye",
+            "自我报告的视力（如适用，使用镜片时）"
+          ],
+          [
+            "ialreye",
+            "年度商业贷款偿还 - 分级入口点 (ialre)"
+          ],
+          [
+            "cfwhteye",
+            "影响表现的因素：失明或视力差"
+          ],
+          [
+            "cfwhtmeye",
+            "影响表现的因素：失明或视力差（合并）"
+          ]
+        ]
+      },
+      {
+        "file": "wave9\\nutrition_elsa_wave9_id.dta",
+        "n_vars": 90,
+        "size_mb": 2.5,
+        "vision_vars": [
+          [
+            "mean_alcoh_tot",
+            "Total alcoholic drinks intake glasses/day"
+          ],
+          [
+            "mean_ret",
+            "Retinol µg/day"
+          ]
+        ]
+      },
+      {
+        "file": "wave9\\w9_nutrition_quantity_20032020.dta",
+        "n_vars": 559,
+        "size_mb": 16.3,
+        "vision_vars": [
+          [
+            "ret",
+            "ug Retinol"
+          ],
+          [
+            "alcoh_tot",
+            "Total alcoholic drinks intake glasses/day"
+          ]
+        ]
+      },
+      {
+        "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+        "n_vars": 6360,
+        "size_mb": 67.5,
+        "vision_vars": [
+          [
+            "heeye",
+            "Self-reported eyesight (while using lenses, if appropriate)"
+          ],
+          [
+            "heeyea",
+            "Whether registered with local council as sight impaired"
+          ],
+          [
+            "hefrnd",
+            "Eyesight for recognition of friend across street"
+          ],
+          [
+            "hepap",
+            "Eyesight for reading ordinary newspaper print"
+          ],
+          [
+            "heopcgl",
+            "Whether confirms glaucoma diagnosis"
+          ],
+          [
+            "heopcdi",
+            "Whether confirms diabetic eye disease diagnosed"
+          ],
+          [
+            "heopcmd",
+            "Whether confirms macular degeneration diagnosis"
+          ],
+          [
+            "heopcca",
+            "Whether confirms cataract diagnosis"
+          ],
+          [
+            "heopfgl",
+            "Eye: diagnosed glaucoma fed forward"
+          ],
+          [
+            "heopfdi",
+            "Eye: diagnosed diabetic eye disease fed forward"
+          ],
+          [
+            "heopfmd",
+            "Eye: diagnosed macular degeneration fed forward"
+          ],
+          [
+            "heopfca",
+            "Eye: diagnosed cataract fed forward"
+          ],
+          [
+            "heopngl",
+            "Reason disputed glaucoma diagnosis fed forward"
+          ],
+          [
+            "heopndi",
+            "Reason disputed diabetic eye disease diagnosis fed forward"
+          ],
+          [
+            "heopnmd",
+            "Reason disputed macular degeneration diagnosis fed forward"
+          ],
+          [
+            "heopnca",
+            "Reason disputed cataract diagnosis fed forward"
+          ],
+          [
+            "heopsgl",
+            "Whether still has glaucoma"
+          ],
+          [
+            "heopsdi",
+            "Whether still has diabetic eye disease"
+          ]
+        ]
+      },
+      {
+        "file": "wave9\\wave_9_elsa_data_eul_v1_CN.dta",
+        "n_vars": 6360,
+        "size_mb": 71.1,
+        "vision_vars": [
+          [
+            "heeye",
+            "自我报告的视力（如适用，使用镜片时）"
+          ],
+          [
+            "ialreye",
+            "年度商业贷款还款 - 范围入口点 (ialre)"
+          ],
+          [
+            "cfwhteye",
+            "影响表现的因素：失明或视力差"
+          ],
+          [
+            "cfwhtmeye",
+            "影响表现的因素：失明或视力差（合并）"
+          ]
+        ]
+      }
+    ],
+    "notes": []
+  },
+  "KLoSA": {
+    "root": "E:\\BaiduNetdiskDownload\\所有数据库\\04. KLoSA 韩国老龄化纵向研究\\KLoSA_韩国\\Raw_data",
+    "exists": true,
+    "dta_files": 89,
+    "scanned": 89,
+    "vision_files": [
+      {
+        "file": "wave1\\e_imp_w01.dta",
+        "n_vars": 4133,
+        "size_mb": 341.2,
+        "vision_vars": [
+          [
+            "w01C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w01C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w01C075",
+            "Eyesight"
+          ],
+          [
+            "w01C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w01C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w01C078",
+            "Whether or not cataract operation experience"
+          ],
+          [
+            "w01C079",
+            "Cataract operation part"
+          ],
+          [
+            "w01C080",
+            "Whether or not glaucoma treatment experience"
+          ],
+          [
+            "w01C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w01C417",
+            "Following direction (reading and speaking, closing eyes)"
+          ],
+          [
+            "w01D179",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w01D338",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w01D431",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\Lt01_e.dta",
+        "n_vars": 319,
+        "size_mb": 5.3,
+        "vision_vars": [
+          [
+            "w01C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w01d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\str01_e.dta",
+        "n_vars": 2026,
+        "size_mb": 29.1,
+        "vision_vars": [
+          [
+            "w01C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w01C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w01C075",
+            "Eyesight"
+          ],
+          [
+            "w01C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w01C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w01C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w01C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w01C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w01C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w01d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\w01_e.dta",
+        "n_vars": 3886,
+        "size_mb": 58.5,
+        "vision_vars": [
+          [
+            "w01C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w01C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w01C075",
+            "Eyesight"
+          ],
+          [
+            "w01C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w01C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w01C078",
+            "Whether or not cataract operation experience"
+          ],
+          [
+            "w01C079",
+            "Cataract operation part"
+          ],
+          [
+            "w01C080",
+            "Whether or not glaucoma treatment experience"
+          ],
+          [
+            "w01C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w01D179",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w01D338",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w01D431",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\w02_e.dta",
+        "n_vars": 3145,
+        "size_mb": 36.7,
+        "vision_vars": [
+          [
+            "w02C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w02C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w02C075",
+            "Eyesight"
+          ],
+          [
+            "w02C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w02C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w02C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w02C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w02C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w02C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w02D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w02D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w02D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\e_imp_w02.dta",
+        "n_vars": 3395,
+        "size_mb": 212.8,
+        "vision_vars": [
+          [
+            "w02C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w02C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w02C075",
+            "Eyesight"
+          ],
+          [
+            "w02C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w02C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w02C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w02C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w02C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w02C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w02C417",
+            "Following direction (reading and speaking, closing eyes)"
+          ],
+          [
+            "w02D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w02D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w02D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\Lt02_e.dta",
+        "n_vars": 360,
+        "size_mb": 5.2,
+        "vision_vars": [
+          [
+            "w02C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w02d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\str02_e.dta",
+        "n_vars": 2391,
+        "size_mb": 30.4,
+        "vision_vars": [
+          [
+            "w02C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w02C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w02C075",
+            "Eyesight"
+          ],
+          [
+            "w02C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w02C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w02C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w02C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w02C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w02C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w02d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\w02_exit_e.dta",
+        "n_vars": 296,
+        "size_mb": 0.2,
+        "vision_vars": [
+          [
+            "w02Xc108m20",
+            "The body part diagnosed cancer lastly_(20) Malignant tumor of eyes and"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\e_imp_w03.dta",
+        "n_vars": 3818,
+        "size_mb": 208.6,
+        "vision_vars": [
+          [
+            "w03C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w03C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w03C075",
+            "Eyesight"
+          ],
+          [
+            "w03C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w03C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w03C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w03C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w03C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w03C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w03C417",
+            "Following direction (reading and speaking, closing eyes)"
+          ],
+          [
+            "w03D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w03D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w03D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\Lt03_e.dta",
+        "n_vars": 361,
+        "size_mb": 4.9,
+        "vision_vars": [
+          [
+            "w03C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w03d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\str03_e.dta",
+        "n_vars": 2401,
+        "size_mb": 27.5,
+        "vision_vars": [
+          [
+            "w03C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w03C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w03C075",
+            "Eyesight"
+          ],
+          [
+            "w03C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w03C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w03C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w03C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w03C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w03C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w03d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\w03_e.dta",
+        "n_vars": 3563,
+        "size_mb": 37.5,
+        "vision_vars": [
+          [
+            "w03C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w03C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w03C075",
+            "Eyesight"
+          ],
+          [
+            "w03C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w03C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w03C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w03C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w03C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w03C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w03D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w03D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w03D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\w03_exit_e.dta",
+        "n_vars": 288,
+        "size_mb": 0.3,
+        "vision_vars": [
+          [
+            "w03Xc108m20",
+            "The body part diagnosed cancer lastly_(20) Malignant tumor of eyes and"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\e_imp_w04.dta",
+        "n_vars": 3998,
+        "size_mb": 203.6,
+        "vision_vars": [
+          [
+            "w04C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w04C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w04C075",
+            "Eyesight"
+          ],
+          [
+            "w04C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w04C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w04C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w04C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w04C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w04C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w04C417",
+            "Following direction (reading and specking, closing eyes)"
+          ],
+          [
+            "w04D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w04D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w04D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\Lt04_e.dta",
+        "n_vars": 367,
+        "size_mb": 4.5,
+        "vision_vars": [
+          [
+            "w04C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w04d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\str04_e.dta",
+        "n_vars": 2450,
+        "size_mb": 26.2,
+        "vision_vars": [
+          [
+            "w04C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w04C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w04C075",
+            "Eyesight"
+          ],
+          [
+            "w04C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w04C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w04C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w04C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w04C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w04C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w04d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\w04_e.dta",
+        "n_vars": 3836,
+        "size_mb": 39.9,
+        "vision_vars": [
+          [
+            "w04C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w04C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w04C075",
+            "Eyesight"
+          ],
+          [
+            "w04C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w04C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w04C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w04C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w04C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w04C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w04D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w04D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w04D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\e_imp_w05.dta",
+        "n_vars": 2586,
+        "size_mb": 143.0,
+        "vision_vars": [
+          [
+            "w05C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w05C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w05C075",
+            "Eyesight"
+          ],
+          [
+            "w05C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w05C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w05C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w05C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w05C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w05C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w05C417",
+            "Following direction (reading and specking, closing eyes)"
+          ],
+          [
+            "w05D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w05D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w05D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\e_imp_w05_new.dta",
+        "n_vars": 2269,
+        "size_mb": 16.8,
+        "vision_vars": [
+          [
+            "w05C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w05C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w05C075",
+            "Eyesight"
+          ],
+          [
+            "w05C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w05C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w05C078",
+            "Whether or not cataract operation experience"
+          ],
+          [
+            "w05C079",
+            "Cataract operation part"
+          ],
+          [
+            "w05C080",
+            "Whether or not glaucoma treatment experience"
+          ],
+          [
+            "w05C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w05C417",
+            "Following direction (reading and speaking, closing eyes)"
+          ],
+          [
+            "w05D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w05D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w05D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\Lt05_e.dta",
+        "n_vars": 389,
+        "size_mb": 4.5,
+        "vision_vars": [
+          [
+            "w05C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w05d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\str05_e.dta",
+        "n_vars": 2311,
+        "size_mb": 27.4,
+        "vision_vars": [
+          [
+            "w05C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w05C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w05C075",
+            "Eyesight"
+          ],
+          [
+            "w05C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w05C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w05C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w05C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w05C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w05C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w05d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\w05_e.dta",
+        "n_vars": 2395,
+        "size_mb": 24.8,
+        "vision_vars": [
+          [
+            "w05C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w05C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w05C075",
+            "Eyesight"
+          ],
+          [
+            "w05C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w05C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w05C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w05C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w05C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w05C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w05D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w05D235",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w05D325",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\w05_exit_e.dta",
+        "n_vars": 314,
+        "size_mb": 0.4,
+        "vision_vars": [
+          [
+            "w05XC108m20",
+            "The body part diagnosed cancer lastly_(20) Malignant tumor of eyes and"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\w05_new_e.dta",
+        "n_vars": 2115,
+        "size_mb": 4.4,
+        "vision_vars": [
+          [
+            "w05C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w05C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w05C075",
+            "Eyesight"
+          ],
+          [
+            "w05C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w05C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w05C078",
+            "Whether or not cataract operation experience"
+          ],
+          [
+            "w05C079",
+            "Cataract operation part"
+          ],
+          [
+            "w05C080",
+            "Whether or not glaucoma treatment experience"
+          ],
+          [
+            "w05C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w05D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w05D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w05D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\e_imp_w06.dta",
+        "n_vars": 3112,
+        "size_mb": 183.1,
+        "vision_vars": [
+          [
+            "w06C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w06C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w06C075",
+            "Eyesight"
+          ],
+          [
+            "w06C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w06C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w06C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w06C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w06C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w06C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w06C417",
+            "Following direction (reading and specking, closing eyes)"
+          ],
+          [
+            "w06D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w06D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w06D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\Lt06_e.dta",
+        "n_vars": 389,
+        "size_mb": 4.6,
+        "vision_vars": [
+          [
+            "w06C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w06d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\str06_e.dta",
+        "n_vars": 2272,
+        "size_mb": 26.7,
+        "vision_vars": [
+          [
+            "w06C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w06C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w06C075",
+            "Eyesight"
+          ],
+          [
+            "w06C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w06C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w06C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w06C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w06C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w06C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w06d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\w06_e.dta",
+        "n_vars": 2914,
+        "size_mb": 30.9,
+        "vision_vars": [
+          [
+            "w06C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w06C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w06C075",
+            "Eyesight"
+          ],
+          [
+            "w06C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w06C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w06C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w06C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w06C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w06C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w06D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w06D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w06D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave7\\e_imp_w07.dta",
+        "n_vars": 2902,
+        "size_mb": 159.3,
+        "vision_vars": [
+          [
+            "w07C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w07C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w07C075",
+            "Eyesight"
+          ],
+          [
+            "w07C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w07C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w07C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w07C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w07C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w07C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w07C417",
+            "Following direction (reading and specking, closing eyes)"
+          ],
+          [
+            "w07D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w07D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w07D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave7\\Lt07_e.dta",
+        "n_vars": 399,
+        "size_mb": 4.2,
+        "vision_vars": [
+          [
+            "w07C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w07d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave7\\str07_e.dta",
+        "n_vars": 2302,
+        "size_mb": 24.9,
+        "vision_vars": [
+          [
+            "w07C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w07C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w07C075",
+            "Eyesight"
+          ],
+          [
+            "w07C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w07C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w07C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w07C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w07C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w07C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w07d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave7\\w07_e.dta",
+        "n_vars": 2741,
+        "size_mb": 29.2,
+        "vision_vars": [
+          [
+            "w07C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w07C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w07C075",
+            "Eyesight"
+          ],
+          [
+            "w07C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w07C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w07C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w07C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w07C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w07C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w07D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w07D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w07D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave8\\Lt08_e.dta",
+        "n_vars": 397,
+        "size_mb": 3.8,
+        "vision_vars": [
+          [
+            "w08C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w08d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave8\\str08_e.dta",
+        "n_vars": 2275,
+        "size_mb": 22.9,
+        "vision_vars": [
+          [
+            "w08C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w08C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w08C075",
+            "Eyesight"
+          ],
+          [
+            "w08C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w08C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w08C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w08C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w08C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w08C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w08d_com076",
+            "(Wage worker) My job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "wave8\\w08_e.dta",
+        "n_vars": 2667,
+        "size_mb": 26.3,
+        "vision_vars": [
+          [
+            "w08C004m03",
+            "Disability diagnosis_3 Visual disability"
+          ],
+          [
+            "w08C074",
+            "Usual usage of glasses and contact lenses"
+          ],
+          [
+            "w08C075",
+            "Eyesight"
+          ],
+          [
+            "w08C076",
+            "Eyesight for far away object"
+          ],
+          [
+            "w08C077",
+            "Eyesight for near object"
+          ],
+          [
+            "w08C078",
+            "Since the previous interview, whether or not cataract operation experi"
+          ],
+          [
+            "w08C079",
+            "Since the previous interview, cataract operation part"
+          ],
+          [
+            "w08C080",
+            "Since the previous interview, whether or not glaucoma treatment experi"
+          ],
+          [
+            "w08C081",
+            "Daily activity difficulty by eyesight"
+          ],
+          [
+            "w08D158",
+            "(Wage worker) My job requires good eyesight"
+          ],
+          [
+            "w08D232",
+            "(Self-employed) My job requires good eyesight"
+          ],
+          [
+            "w08D322",
+            "(Unpaid family worker) My job requires good eyesight"
+          ]
+        ]
+      }
+    ],
+    "notes": []
+  },
+  "LASI": {
+    "root": "E:\\BaiduNetdiskDownload\\所有数据库\\05. LASI 印度老龄化纵向研究\\LASI_印度\\Raw_data",
+    "exists": true,
+    "dta_files": 11,
+    "scanned": 11,
+    "vision_files": [
+      {
+        "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+        "n_vars": 3166,
+        "size_mb": 12.6,
+        "vision_vars": [
+          [
+            "ht039",
+            "difficulty with vision due to stroke"
+          ],
+          [
+            "ht076",
+            "glasses or corrective lenses"
+          ],
+          [
+            "ht077",
+            "how good is eyesight for things in distance"
+          ],
+          [
+            "ht078",
+            "how good is eyesight for things up close"
+          ],
+          [
+            "we322",
+            "job requires good eyesight"
+          ]
+        ]
+      },
+      {
+        "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+        "n_vars": 977,
+        "size_mb": 14.2,
+        "vision_vars": [
+          [
+            "rb017",
+            "% of households has television (tv) set"
+          ],
+          [
+            "rb022a_n",
+            "Kirana/general provision shop"
+          ]
+        ]
+      },
+      {
+        "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+        "n_vars": 8712,
+        "size_mb": 687.6,
+        "vision_vars": [
+          [
+            "ad705s",
+            "Own non-financial assets - Televisions"
+          ]
+        ]
+      },
+      {
+        "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+        "n_vars": 2906,
+        "size_mb": 755.7,
+        "vision_vars": [
+          [
+            "we028d",
+            "Thinking of main job, job requires-Good eyesight"
+          ],
+          [
+            "we110",
+            "Number of pepole under supervision"
+          ],
+          [
+            "we313d",
+            "Thinking of last job, job requires-Good eyesight"
+          ],
+          [
+            "ht007j",
+            "Stroke related problems_vision difficulty"
+          ],
+          [
+            "ht015",
+            "Ever diagnosed_eye or vision problem"
+          ],
+          [
+            "ht016",
+            "Eye or vision problem diagnosed in one or both eyes"
+          ],
+          [
+            "ht017",
+            "Eye or vision problem diagnosed"
+          ],
+          [
+            "ht017_other",
+            "Eye or vision problem diagnosed_other specified"
+          ],
+          [
+            "ht017s1",
+            "Eye or vision problem diagnosed_presbyopia"
+          ],
+          [
+            "ht017s2",
+            "Eye or vision problem diagnosed_cataract"
+          ],
+          [
+            "ht017s3",
+            "Eye or vision problem diagnosed_ glaucoma"
+          ],
+          [
+            "ht017s4",
+            "Eye or vision problem diagnosed_myopia"
+          ],
+          [
+            "ht017s5",
+            "Eye or vision problem diagnosed_hypermetropia"
+          ],
+          [
+            "ht017s6",
+            "Eye or vision problem diagnosed_other"
+          ],
+          [
+            "ht018",
+            "Treatment taken_eye condition"
+          ],
+          [
+            "ht018_other",
+            "Treatment taken for specified eye condition"
+          ],
+          [
+            "ht019",
+            "Eyesight for seeing things at a distance"
+          ],
+          [
+            "ht020",
+            "Eyesight for seeing things up close"
+          ]
+        ]
+      },
+      {
+        "file": "Raw LASI-DAD\\dad_cog_w1a.dta",
+        "n_vars": 456,
+        "size_mb": 17.9,
+        "vision_vars": [
+          [
+            "mmse117_reads1",
+            "READ 1 Correct; Respondent closed eyes"
+          ]
+        ]
+      },
+      {
+        "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+        "n_vars": 225,
+        "size_mb": 30.0,
+        "vision_vars": [
+          [
+            "ga906s5",
+            "occurred during the hearing test 5 Respondent removed obstructions (gl"
+          ]
+        ]
+      }
+    ],
+    "notes": []
+  },
+  "MHAS": {
+    "root": "E:\\BaiduNetdiskDownload\\所有数据库\\06. MHAS 墨西哥健康与老龄化研究\\MHAS_墨西哥\\Raw_data",
+    "exists": true,
+    "dta_files": 183,
+    "scanned": 183,
+    "vision_files": [
+      {
+        "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+        "n_vars": 116,
+        "size_mb": 20.1,
+        "vision_vars": [
+          [
+            "ve_tv",
+            "Use of time: Watches television"
+          ],
+          [
+            "visualscan",
+            "MHAS Visual Scanning (0-60) IMPUTED"
+          ],
+          [
+            "visualscan_flag",
+            "MHAS Visual Scanning - FLAG if imputed"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\Constructed Data\\MHAS_2001_Cognitive_Function_Measures.dta",
+        "n_vars": 44,
+        "size_mb": 2.6,
+        "vision_vars": [
+          [
+            "visual_scan_01",
+            "MHAS 2001 Visual Scanning (0-60)"
+          ],
+          [
+            "visual_scan_z_01",
+            "MHAS 2001 Visual Scanning - Z-Scores"
+          ],
+          [
+            "visual_scan_imp_01",
+            "MHAS 2001 Visual Scanning - Normal/Impaired"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\Core survey Data\\sect_c.dta",
+        "n_vars": 126,
+        "size_mb": 7.7,
+        "vision_vars": [
+          [
+            "c29c",
+            "stroke causes vision difficulty"
+          ],
+          [
+            "c44",
+            "glasses"
+          ],
+          [
+            "c45",
+            "vision"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\Core survey Data\\sect_e.dta",
+        "n_vars": 98,
+        "size_mb": 5.5,
+        "vision_vars": [
+          [
+            "e2",
+            "glasses help"
+          ],
+          [
+            "e3",
+            "use glasses"
+          ],
+          [
+            "e4",
+            "glasses for close-up"
+          ],
+          [
+            "e12",
+            "visual scanning - score"
+          ],
+          [
+            "e13",
+            "visual figure recall - score"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\Core survey Data\\sect_j.dta",
+        "n_vars": 56,
+        "size_mb": 0.8,
+        "vision_vars": [
+          [
+            "j10b",
+            "television"
+          ]
+        ]
+      },
+      {
+        "file": "wave1\\Imputations of Cognitive Function Variables\\Section_E_Imputed_2001.dta",
+        "n_vars": 20,
+        "size_mb": 0.4,
+        "vision_vars": [
+          [
+            "e12_imp_01",
+            "Visual Scan (Imputed)"
+          ],
+          [
+            "e12_flag_01",
+            "Visual Scan: Flag if Imputed"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\Constructed Data\\MHAS_2003_Cognitive_Function_Measures.dta",
+        "n_vars": 49,
+        "size_mb": 2.6,
+        "vision_vars": [
+          [
+            "visual_scan_03",
+            "MHAS 2003 Visual Scanning (0-60)"
+          ],
+          [
+            "visual_scan_z_03",
+            "MHAS 2003 Visual Scanning - Z-Scores"
+          ],
+          [
+            "visual_scan_imp_03",
+            "MHAS 2003 Visual Scanning - Normal/Impaired"
+          ]
+        ]
+      },
+      {
+        "file": "wave2\\Imputations of Cognitive Function Variables\\Section_E_Imputed_2003.dta",
+        "n_vars": 33,
+        "size_mb": 0.5,
+        "vision_vars": [
+          [
+            "e10_imp_03",
+            "Visual Scan (Imputed)"
+          ],
+          [
+            "e10_flag_03",
+            "Visual Scan: Flag if Imputed"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\Constructed Data\\MHAS_2012_Cognitive_Function_Measures.dta",
+        "n_vars": 70,
+        "size_mb": 4.3,
+        "vision_vars": [
+          [
+            "visual_scan_12",
+            "MHAS 2012 Visual Scanning (0-60)"
+          ],
+          [
+            "visual_scan_z_12",
+            "MHAS 2012 Visual Scanning - Z-Scores"
+          ],
+          [
+            "visual_scan_imp_12",
+            "MHAS 2012 Visual Scanning - Normal/Impaired"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+        "n_vars": 100,
+        "size_mb": 2.0,
+        "vision_vars": [
+          [
+            "ve_tv_12",
+            "R watches television at least once per week 2012"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+        "n_vars": 1000,
+        "size_mb": 34.6,
+        "vision_vars": [
+          [
+            "c27_3_12",
+            "Due to stroke:Respondent experiences difficulty with his/her sight/vis"
+          ],
+          [
+            "c41_12",
+            "Respondent wears glasses"
+          ],
+          [
+            "c42_12",
+            "Respondent's vision with glasses"
+          ],
+          [
+            "d34k1_12",
+            "Does respondent watch television"
+          ],
+          [
+            "d34k2_12",
+            "Number of times respondent watches television"
+          ],
+          [
+            "d34k3_12",
+            "Respondent's time period to report watching television"
+          ],
+          [
+            "e2_12",
+            "Respondent's need for reading glasses"
+          ],
+          [
+            "e3a_12",
+            "Interviewer:Can respondent read without glasses"
+          ],
+          [
+            "e3b_12",
+            "Respondent can read well (with glasses if needed)"
+          ],
+          [
+            "e10_12",
+            "Interviewer:Report the respondent's visual scanning score"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+        "n_vars": 648,
+        "size_mb": 9.9,
+        "vision_vars": [
+          [
+            "j18_2_12",
+            "Household electronics: Television"
+          ]
+        ]
+      },
+      {
+        "file": "wave3\\Imputations of Cognitive Function Variables\\Section_E_Imputed_2012.dta",
+        "n_vars": 38,
+        "size_mb": 0.6,
+        "vision_vars": [
+          [
+            "e10_imp_12",
+            "Visual Scan (Imputed)"
+          ],
+          [
+            "e10_flag_12",
+            "Visual Scan: Flag if Imputed"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\wave4_CN.dta",
+        "n_vars": 2365,
+        "size_mb": 98.8,
+        "vision_vars": [
+          [
+            "D4_t1_correct",
+            "D4_t1: 视觉扫描正确 Deteccion visual correcto"
+          ],
+          [
+            "D4_t1_incorrect",
+            "D4_t1: 视觉扫描错误 Deteccion visual incorrecto"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2016.dta",
+        "n_vars": 323,
+        "size_mb": 1.6,
+        "vision_vars": [
+          [
+            "mc_q11_1_l_16",
+            "11.1: Subject has visual impairment. Informante tiene una limitacion v"
+          ],
+          [
+            "mc_q15_16",
+            "15: Do as it says here. Close your eyes. Haga lo que dice aqui. Cierre"
+          ],
+          [
+            "mc_q22_1_16",
+            "PT22: Paper test. Visual route correct Cuadernillo. Recorrido visual c"
+          ],
+          [
+            "mc_q22_2_16",
+            "PT22: Paper test. Visual route incorrect Cuadernillo. Recorrido visual"
+          ],
+          [
+            "D4_t1_correct",
+            "D4_t1: Visual scan correct Deteccion visual correcto"
+          ],
+          [
+            "D4_t1_incorrect",
+            "D4_t1: Visual scan incorrect Deteccion visual incorrecto"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\Constructed Data\\MHAS_2015_Cognitive_Function_Measures.dta",
+        "n_vars": 75,
+        "size_mb": 4.4,
+        "vision_vars": [
+          [
+            "visual_scan_15",
+            "MHAS 2015 Visual Scanning (0-60)"
+          ],
+          [
+            "visual_scan_z_15",
+            "MHAS 2015 Attention - Visual Scan Z-Scores"
+          ],
+          [
+            "visual_scan_imp_15",
+            "MHAS 2015 Attention - Visual Scan Impairment"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+        "n_vars": 106,
+        "size_mb": 2.1,
+        "vision_vars": [
+          [
+            "ve_tv_15",
+            "Use of time: R watches television 2015"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+        "n_vars": 896,
+        "size_mb": 32.8,
+        "vision_vars": [
+          [
+            "c27_3_15",
+            "Due to stroke has R: Difficulty with his/her sight/vision"
+          ],
+          [
+            "c41_15",
+            "Does R usually wears glasses"
+          ],
+          [
+            "c42_15",
+            "R's vision (with glasses)"
+          ],
+          [
+            "d34k1_15",
+            "Does respondent watch television"
+          ],
+          [
+            "d34k2_15",
+            "Number of times respondent has watched television"
+          ],
+          [
+            "d34k3_15",
+            "Respondent's time period watching television"
+          ],
+          [
+            "e2_15",
+            "Respondent's need for reading glasses"
+          ],
+          [
+            "e3a_15",
+            "Interviewer:Can respondent read without glasses"
+          ],
+          [
+            "e3b_15",
+            "Respondent can read well (with glasses if needed)"
+          ],
+          [
+            "e10_15",
+            "Respondent's visual scanning score"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+        "n_vars": 756,
+        "size_mb": 11.0,
+        "vision_vars": [
+          [
+            "j18_2_15",
+            "Household electronics: Television"
+          ]
+        ]
+      },
+      {
+        "file": "wave4\\Imputations of Cognitive Function Variables\\Section_E_Imputed_2015.dta",
+        "n_vars": 40,
+        "size_mb": 0.7,
+        "vision_vars": [
+          [
+            "e10_imp_15",
+            "Visual Scan (Imputed)"
+          ],
+          [
+            "e10_flag_15",
+            "Visual Scan: Flag if Imputed"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+        "n_vars": 108,
+        "size_mb": 2.4,
+        "vision_vars": [
+          [
+            "ve_tv_18",
+            "Uso del tiempo: Ve television 2018"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+        "n_vars": 958,
+        "size_mb": 20.4,
+        "vision_vars": [
+          [
+            "c27_3_18",
+            "Due to stroke has R: Difficulty with his/her sight/vision"
+          ],
+          [
+            "c41_18",
+            "Does R usually wears glasses"
+          ],
+          [
+            "c42_18",
+            "R's vision (with glasses)"
+          ],
+          [
+            "d34k1_18",
+            "Does R watch television"
+          ],
+          [
+            "d34k2_18",
+            "Number of times R has watched television"
+          ],
+          [
+            "d34k3_18",
+            "R's time period watching television"
+          ],
+          [
+            "e2_18",
+            "R's need for reading glasses"
+          ],
+          [
+            "e3a_18",
+            "Interviewer:Can R read with glasses"
+          ],
+          [
+            "e3b_18",
+            "R can read well (with glasses if needed)"
+          ],
+          [
+            "e10a_18",
+            "Did R perform the exercise (visual scanning)?"
+          ],
+          [
+            "e10_c_18",
+            "R's visual scanning score"
+          ],
+          [
+            "e13a_18",
+            "Did R perform the exercise (visual recall)?"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+        "n_vars": 543,
+        "size_mb": 9.1,
+        "vision_vars": [
+          [
+            "j18_2_18",
+            "Household electronics: Television"
+          ]
+        ]
+      },
+      {
+        "file": "wave5\\Imputations of Cognitive Function Variables\\Section_E_Imputed_2018.dta",
+        "n_vars": 42,
+        "size_mb": 0.9,
+        "vision_vars": [
+          [
+            "e10_imp_18",
+            "Visual Scan (Imputed)"
+          ],
+          [
+            "e10_flag_18",
+            "Visual Scan: Flag if Imputed"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2021.dta",
+        "n_vars": 407,
+        "size_mb": 3.2,
+        "vision_vars": [
+          [
+            "mc_filtro_d_21",
+            "FILTER D. Needs glasses to see up close"
+          ],
+          [
+            "mc_filtro_1_21",
+            "FILTER 1: Visual limitation"
+          ],
+          [
+            "mc_p13_21",
+            "13: Do as it says here 'Close your eyes' (Card 3)"
+          ],
+          [
+            "mc_filtro_2_21",
+            "FILTER 2: Physical or visual impairment"
+          ],
+          [
+            "mc_recorrido_correcto_21",
+            "PT20: Paper task score - Visual scanning. Correct"
+          ],
+          [
+            "mc_recorrido_incorrecto_21",
+            "PT20: Paper task score - Visual scanning. Incorrect"
+          ],
+          [
+            "mc_filtro_3_21",
+            "FILTER 3: Physical or visual impairment"
+          ],
+          [
+            "D4_t1_correct_21",
+            "D4_t1: Visual scan - Correct Score"
+          ],
+          [
+            "D4_t1_incorrect_21",
+            "D4_t1: Visual scan - Number of Incorrect"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+        "n_vars": 119,
+        "size_mb": 2.4,
+        "vision_vars": [
+          [
+            "ve_tv_21",
+            "Use of time: R watches television 2021"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+        "n_vars": 985,
+        "size_mb": 20.2,
+        "vision_vars": [
+          [
+            "c27_3_21",
+            "Due to stroke does he she have: Difficulty with his/her sight/vision"
+          ],
+          [
+            "c41_21",
+            "Does he/she usually wears glasses"
+          ],
+          [
+            "c42_21",
+            "Subject's vision (with glasses)"
+          ],
+          [
+            "d34k1_21",
+            "Does he/she watch television"
+          ],
+          [
+            "d34k2_21",
+            "Frequency watching television"
+          ],
+          [
+            "d34k3_21",
+            "Time period watching television"
+          ],
+          [
+            "e2_21",
+            "Does he/she need glasses to read"
+          ],
+          [
+            "e3a_21",
+            "INTERVIEWER: Can he/she read with glasses"
+          ],
+          [
+            "e3b_21",
+            "INTERVIEWER:Subject can read well (with glasses if needed)"
+          ],
+          [
+            "e10a_21",
+            "Visual scanning: Did he/she complete the exercise"
+          ],
+          [
+            "e10_c_21",
+            "Visual scanning score: Number of correct figures"
+          ],
+          [
+            "e10_i_21",
+            "Visual scanning score: Number of incorrect figures"
+          ],
+          [
+            "e13_21",
+            "Did he/she complete the exercise (visual recall)?"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+        "n_vars": 524,
+        "size_mb": 8.2,
+        "vision_vars": [
+          [
+            "j18_2_21",
+            "Household electronics: Television"
+          ]
+        ]
+      },
+      {
+        "file": "wave6\\Imputations of Cognitive Function Variables\\Section_E_Imputed_2021.dta",
+        "n_vars": 44,
+        "size_mb": 0.9,
+        "vision_vars": [
+          [
+            "e10_c_imp_21",
+            "Visual Scan - Number of Correct (Imputed)"
+          ],
+          [
+            "e10_c_flag_21",
+            "Visual Scan - Number of Correct: Flag if Imputed"
+          ],
+          [
+            "e10_i_imp_21",
+            "Visual Scan - Number of Incorrect (Imputed)"
+          ],
+          [
+            "e10_i_flag_21",
+            "Visual Scan - Number of Incorrect: Flag if Imputed"
+          ]
+        ]
+      }
+    ],
+    "notes": []
+  },
+  "SHARE": {
+    "root": "E:\\BaiduNetdiskDownload\\所有数据库\\07. SHARE 欧洲健康退休与老龄化调查\\SHARE_欧洲\\Raw_data",
+    "exists": true,
+    "dta_files": 331,
+    "scanned": 331,
+    "vision_files": [
+      {
+        "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_br.dta",
+        "n_vars": 23,
+        "size_mb": 2.1,
+        "vision_vars": [
+          [
+            "br011_",
+            "Freq more than 2 glasses beer in a day"
+          ],
+          [
+            "br012_",
+            "Freq more than 2 glasses wine in a day"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_dropoff.dta",
+        "n_vars": 216,
+        "size_mb": 5.3,
+        "vision_vars": [
+          [
+            "q16",
+            "Had any eye exam the last two years"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_gv_health.dta",
+        "n_vars": 47,
+        "size_mb": 3.0,
+        "vision_vars": [
+          [
+            "drinkin2",
+            "Drinking more than 2 glasses of alcohol almost every or 5/6 days a wee"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_gv_imputations.dta",
+        "n_vars": 224,
+        "size_mb": 102.3,
+        "vision_vars": [
+          [
+            "eyesightr",
+            "Eyesight reading"
+          ],
+          [
+            "drinking",
+            "More than 2 glasses of alcohol almost everyday"
+          ],
+          [
+            "eyesightr_f",
+            "Eyesight reading - Flag"
+          ],
+          [
+            "drinking_f",
+            "More than 2 glasses of alcohol almost everyday - Flag"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_ph.dta",
+        "n_vars": 137,
+        "size_mb": 6.1,
+        "vision_vars": [
+          [
+            "ph006d13",
+            "Cataracts: ever diagnosed"
+          ],
+          [
+            "ph009_13",
+            "Age cataracts"
+          ],
+          [
+            "ph041_",
+            "Wears glasses/contact lenses"
+          ],
+          [
+            "ph042_",
+            "Eyesight"
+          ],
+          [
+            "ph043_",
+            "Eyesight distance"
+          ],
+          [
+            "ph044_",
+            "Eyesight reading"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 2 Release 9.0.0\\sharew2_rel9-0-0_dropoff.dta",
+        "n_vars": 154,
+        "size_mb": 1.8,
+        "vision_vars": [
+          [
+            "q16",
+            "Had any eye exam the last two years (q12)"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 2 Release 9.0.0\\sharew2_rel9-0-0_gv_imputations.dta",
+        "n_vars": 245,
+        "size_mb": 149.5,
+        "vision_vars": [
+          [
+            "eyesightr",
+            "Eyesight reading"
+          ],
+          [
+            "drinking",
+            "More than 2 glasses of alcohol almost everyday"
+          ],
+          [
+            "eyesightr_f",
+            "Eyesight reading - Flag"
+          ],
+          [
+            "drinking_f",
+            "More than 2 glasses of alcohol almost everyday - Flag"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 2 Release 9.0.0\\sharew2_rel9-0-0_ph.dta",
+        "n_vars": 168,
+        "size_mb": 8.5,
+        "vision_vars": [
+          [
+            "ph006d13",
+            "Cataracts: ever diagnosed/currently having"
+          ],
+          [
+            "ph009_13",
+            "Age cataracts"
+          ],
+          [
+            "ph041_",
+            "Wears glasses/contact lenses"
+          ],
+          [
+            "ph043_",
+            "Eyesight distance"
+          ],
+          [
+            "ph044_",
+            "Eyesight reading"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+        "n_vars": 179,
+        "size_mb": 6.6,
+        "vision_vars": [
+          [
+            "sl_hc076_",
+            "Regular vision tests"
+          ],
+          [
+            "sl_hc077_",
+            "Year regular vision tests started"
+          ],
+          [
+            "sl_hc078_",
+            "Continuity regular vision tests"
+          ],
+          [
+            "sl_hc078ad1",
+            "No vision tests: when between 0-15 years old"
+          ],
+          [
+            "sl_hc078ad2",
+            "No vision tests: when between 16-25 years old"
+          ],
+          [
+            "sl_hc078ad3",
+            "No vision tests: when between 26-40 years old"
+          ],
+          [
+            "sl_hc078ad4",
+            "No vision tests: when between 41-55 years old"
+          ],
+          [
+            "sl_hc078ad5",
+            "No vision tests: when between 56-65 years old"
+          ],
+          [
+            "sl_hc078ad6",
+            "No vision tests: when between 66-75 years old"
+          ],
+          [
+            "sl_hc078ad7",
+            "No vision tests: when older than 75 years"
+          ],
+          [
+            "sl_hc085_",
+            "Frequency regular vision tests"
+          ],
+          [
+            "sl_hc086d1",
+            "Why no regular vision tests: not affordable"
+          ],
+          [
+            "sl_hc086d2",
+            "Why no regular vision tests: not covered by health insurance"
+          ],
+          [
+            "sl_hc086d3",
+            "Why no regular vision tests: did not have health insurance"
+          ],
+          [
+            "sl_hc086d4",
+            "Why no regular vision tests: time constraints"
+          ],
+          [
+            "sl_hc086d5",
+            "Why no regular vision tests: not enough information about it"
+          ],
+          [
+            "sl_hc086d6",
+            "Why no regular vision tests: not usual to get it"
+          ],
+          [
+            "sl_hc086d7",
+            "Why no regular vision tests: no place to receive it close to home"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hs.dta",
+        "n_vars": 175,
+        "size_mb": 6.6,
+        "vision_vars": [
+          [
+            "sl_hs008d10",
+            "Childhood illness 1: difficulty seeing even with eyeglasses"
+          ],
+          [
+            "sl_hs043_",
+            "When difficulty with eyeglasses"
+          ],
+          [
+            "sl_hs056d6_1",
+            "Type 2 illness period 1: eyesight problems"
+          ],
+          [
+            "sl_hs056d6_2",
+            "Type 2 illness period 2: eyesight problems"
+          ],
+          [
+            "sl_hs056d6_3",
+            "Type 2 illness period 3: eyesight problems"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 4 Release 9.0.0\\sharew4_rel9-0-0_gv_imputations.dta",
+        "n_vars": 236,
+        "size_mb": 194.6,
+        "vision_vars": [
+          [
+            "eyesightr",
+            "Eyesight reading"
+          ],
+          [
+            "drinking",
+            "More than 2 glasses of alcohol almost everyday"
+          ],
+          [
+            "eyesightr_f",
+            "Eyesight reading - Flag"
+          ],
+          [
+            "drinking_f",
+            "More than 2 glasses of alcohol almost everyday - Flag"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 4 Release 9.0.0\\sharew4_rel9-0-0_ph.dta",
+        "n_vars": 185,
+        "size_mb": 14.4,
+        "vision_vars": [
+          [
+            "ph006d13",
+            "Cataracts: ever diagnosed/currently having"
+          ],
+          [
+            "ph009_13",
+            "Age cataracts"
+          ],
+          [
+            "ph041_",
+            "Wears glasses/contact lenses"
+          ],
+          [
+            "ph043_",
+            "Eyesight distance"
+          ],
+          [
+            "ph044_",
+            "Eyesight reading"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_co.dta",
+        "n_vars": 34,
+        "size_mb": 9.4,
+        "vision_vars": [
+          [
+            "co213_",
+            "To help keeping living costs down: gone without or not replaced glasse"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_gv_imputations.dta",
+        "n_vars": 279,
+        "size_mb": 233.9,
+        "vision_vars": [
+          [
+            "eyesightr",
+            "Eyesight reading"
+          ],
+          [
+            "drinking",
+            "More than 2 glasses of alcohol almost everyday"
+          ],
+          [
+            "eyesightr_f",
+            "Eyesight reading - Flag"
+          ],
+          [
+            "drinking_f",
+            "More than 2 glasses of alcohol almost everyday - Flag"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_interviewer_survey.dta",
+        "n_vars": 103,
+        "size_mb": 0.1,
+        "vision_vars": [
+          [
+            "q6d",
+            "Gaining insights into other people's social circumstances"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_mc.dta",
+        "n_vars": 39,
+        "size_mb": 5.6,
+        "vision_vars": [
+          [
+            "mc012d10",
+            "Disease during childhood: difficulty seeing even with eyeglasses"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_ph.dta",
+        "n_vars": 189,
+        "size_mb": 15.7,
+        "vision_vars": [
+          [
+            "ph006d13",
+            "Cataracts: ever diagnosed/currently having"
+          ],
+          [
+            "ph009_13",
+            "Age cataracts"
+          ],
+          [
+            "ph041_",
+            "Wears glasses/contact lenses"
+          ],
+          [
+            "ph043_",
+            "Eyesight distance"
+          ],
+          [
+            "ph044_",
+            "Eyesight reading"
+          ],
+          [
+            "ph090_",
+            "Bifocal or progressive glasses or contact lenses"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_gv_imputations.dta",
+        "n_vars": 267,
+        "size_mb": 247.5,
+        "vision_vars": [
+          [
+            "eyesightr",
+            "Eyesight reading"
+          ],
+          [
+            "eyesightr_f",
+            "Eyesight reading - Flag"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_interviewer_survey.dta",
+        "n_vars": 115,
+        "size_mb": 0.1,
+        "vision_vars": [
+          [
+            "q6d",
+            "Gaining insight into other people's social circumstances"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_ph.dta",
+        "n_vars": 195,
+        "size_mb": 16.7,
+        "vision_vars": [
+          [
+            "ph006d13",
+            "Cataracts: ever diagnosed/currently having"
+          ],
+          [
+            "ph009_13",
+            "Age cataracts"
+          ],
+          [
+            "ph041_",
+            "Wears glasses/contact lenses"
+          ],
+          [
+            "ph043_",
+            "Eyesight distance"
+          ],
+          [
+            "ph044_",
+            "Eyesight reading"
+          ],
+          [
+            "ph690d2",
+            "Type of glases/contact lenses: reading (single vision glasses)"
+          ],
+          [
+            "ph690d3",
+            "Type of glases/contact lenses: distance (single vision glasses)"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_dropoff.dta",
+        "n_vars": 809,
+        "size_mb": 30.8,
+        "vision_vars": [
+          [
+            "fi_g15_1",
+            "The division of house work"
+          ],
+          [
+            "pl_q7_glasses",
+            "Do you usually wear glasses or contact lenses?"
+          ],
+          [
+            "pl_q8_eyesight_distance",
+            "How good is your eyesight for seeing things at a distance"
+          ],
+          [
+            "pl_q9_eyesight_close",
+            "How good is your eyesight for seeing things up close"
+          ],
+          [
+            "pl_q20_c_test_vision",
+            "Which health test: vision test"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_gv_imputations.dta",
+        "n_vars": 280,
+        "size_mb": 289.5,
+        "vision_vars": [
+          [
+            "eyesightr",
+            "Eyesight reading"
+          ],
+          [
+            "eyesightr_f",
+            "Eyesight reading - Flag"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_hs.dta",
+        "n_vars": 139,
+        "size_mb": 14.9,
+        "vision_vars": [
+          [
+            "hs008d10",
+            "Childhood illness 1: difficulty seeing even with eyeglasses"
+          ],
+          [
+            "hs056d6_1",
+            "Type 2 illness period 1: eyesight problems"
+          ],
+          [
+            "hs056d6_2",
+            "Type 2 illness period 2: eyesight problems"
+          ],
+          [
+            "hs056d6_3",
+            "Type 2 illness period 3: eyesight problems"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_interviewer_survey.dta",
+        "n_vars": 98,
+        "size_mb": 0.2,
+        "vision_vars": [
+          [
+            "v6_4",
+            "Gaining insight into other people's social circumstances"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_ph.dta",
+        "n_vars": 196,
+        "size_mb": 18.9,
+        "vision_vars": [
+          [
+            "ph006d13",
+            "Cataracts: ever diagnosed/currently having"
+          ],
+          [
+            "ph009_13",
+            "Age cataracts"
+          ],
+          [
+            "ph041_",
+            "Wears glasses/contact lenses"
+          ],
+          [
+            "ph043_",
+            "Eyesight distance"
+          ],
+          [
+            "ph044_",
+            "Eyesight reading"
+          ],
+          [
+            "ph690d2",
+            "Type of glases/contact lenses: reading (single vision glasses)"
+          ],
+          [
+            "ph690d3",
+            "Type of glases/contact lenses: distance (single vision glasses)"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 8 COVID-19 Survey 1 Release 9.0.0\\sharew8ca_rel9-0-0_xc.dta",
+        "n_vars": 687,
+        "size_mb": 5.5,
+        "vision_vars": [
+          [
+            "d5a_2",
+            "Visual System Targets"
+          ],
+          [
+            "Euro10",
+            "How is your concentration? For example, can you concentrate on a telev"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_dropoff.dta",
+        "n_vars": 860,
+        "size_mb": 35.4,
+        "vision_vars": [
+          [
+            "il_Q6_2",
+            "Provision of basic household equipment or transport"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_gv_imputations.dta",
+        "n_vars": 299,
+        "size_mb": 209.0,
+        "vision_vars": [
+          [
+            "eyesightr",
+            "Eyesight reading"
+          ],
+          [
+            "eyesightr_f",
+            "Eyesight reading - Flag"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_hc.dta",
+        "n_vars": 67,
+        "size_mb": 7.5,
+        "vision_vars": [
+          [
+            "hc885_",
+            "Eye exam"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_ph.dta",
+        "n_vars": 196,
+        "size_mb": 13.4,
+        "vision_vars": [
+          [
+            "ph006d13",
+            "Cataracts: ever diagnosed/currently having"
+          ],
+          [
+            "ph009_13",
+            "Age cataracts"
+          ],
+          [
+            "ph041_",
+            "Wears glasses/contact lenses"
+          ],
+          [
+            "ph043_",
+            "Eyesight distance"
+          ],
+          [
+            "ph044_",
+            "Eyesight reading"
+          ],
+          [
+            "ph690d2",
+            "Type of glases/contact lenses: reading (single vision glasses)"
+          ],
+          [
+            "ph690d3",
+            "Type of glases/contact lenses: distance (single vision glasses)"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_sr.dta",
+        "n_vars": 58,
+        "size_mb": 5.6,
+        "vision_vars": [
+          [
+            "sr006_",
+            "Hindsight Saving 1: Suppose you could re-do your spending and saving"
+          ],
+          [
+            "sr007_",
+            "Hindsight Saving 2: Suppose you could re-do your spending and saving"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_dropoff.dta",
+        "n_vars": 1003,
+        "size_mb": 39.0,
+        "vision_vars": [
+          [
+            "at_q3",
+            "Dependent on provision of food by others during pandemic "
+          ],
+          [
+            "at_q5",
+            "Duration of provision of food"
+          ],
+          [
+            "at_q12_h",
+            "Measures - provision of funds to developing countries so they can reac"
+          ],
+          [
+            "ch_Q1_ReadingEyes",
+            "Picture1"
+          ],
+          [
+            "ch_Q2_ReadingEyes",
+            "Picture2"
+          ],
+          [
+            "ch_Q3_ReadingEyes",
+            "Picture3"
+          ],
+          [
+            "ch_Q4_ReadingEyes",
+            "Picture4"
+          ],
+          [
+            "ch_Q5_ReadingEyes",
+            "Picture5"
+          ],
+          [
+            "ch_Q6_ReadingEyes",
+            "Picture6"
+          ],
+          [
+            "ch_Q7_ReadingEyes",
+            "Picture7"
+          ],
+          [
+            "ch_Q8_ReadingEyes",
+            "Picture8"
+          ],
+          [
+            "ch_Q9_ReadingEyes",
+            "Picture9"
+          ],
+          [
+            "ch_Q10_ReadingEyes",
+            "Picture10"
+          ],
+          [
+            "cz_G13",
+            "Alcohol 5 and more glasses"
+          ],
+          [
+            "cz_G14",
+            "Alcohol 3-4 glasses"
+          ],
+          [
+            "cz_G15",
+            "Alcohol 1-2 glasses"
+          ],
+          [
+            "il_Q2_3",
+            "Regular vision examination"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_gv_imputations.dta",
+        "n_vars": 298,
+        "size_mb": 266.1,
+        "vision_vars": [
+          [
+            "eyesightr",
+            "Eyesight reading"
+          ],
+          [
+            "eyesightr_f",
+            "Eyesight reading - Flag"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_hc.dta",
+        "n_vars": 67,
+        "size_mb": 10.2,
+        "vision_vars": [
+          [
+            "hc885_",
+            "Eye exam"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_interviewer_survey.dta",
+        "n_vars": 92,
+        "size_mb": 0.1,
+        "vision_vars": [
+          [
+            "v6_4",
+            "Important (interviewer): Gaining insight into other people's social ci"
+          ]
+        ]
+      },
+      {
+        "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_ph.dta",
+        "n_vars": 196,
+        "size_mb": 17.3,
+        "vision_vars": [
+          [
+            "ph006d13",
+            "Cataracts: ever diagnosed/currently having"
+          ],
+          [
+            "ph009_13",
+            "Age cataracts"
+          ],
+          [
+            "ph041_",
+            "Wears glasses/contact lenses"
+          ],
+          [
+            "ph043_",
+            "Eyesight distance"
+          ],
+          [
+            "ph044_",
+            "Eyesight reading"
+          ],
+          [
+            "ph690d2",
+            "Type of glases/contact lenses: reading (single vision glasses)"
+          ],
+          [
+            "ph690d3",
+            "Type of glases/contact lenses: distance (single vision glasses)"
+          ]
+        ]
+      }
+    ],
+    "notes": []
+  },
+  "CRELES": {
+    "root": "E:\\BaiduNetdiskDownload\\所有数据库\\08. CRELES 哥斯达黎加老龄化健康研究\\Raw_data",
+    "exists": true,
+    "dta_files": 0,
+    "scanned": 0,
+    "vision_files": [],
+    "notes": []
+  },
+  "CLHLS": {
+    "root": "E:\\BaiduNetdiskDownload\\所有数据库\\09. CLHLS 中国老年健康影响因素跟踪调查\\clhls",
+    "exists": true,
+    "dta_files": 0,
+    "scanned": 0,
+    "vision_files": [],
+    "notes": []
+  }
+}

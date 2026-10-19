@@ -1,0 +1,272 @@
+{
+  "generated_at": "2026-10-14T23:56:07",
+  "rules_total": 21,
+  "rules_covered": 21,
+  "rules_under_sourced": 0,
+  "network_enabled": true,
+  "fix_mode": false,
+  "all_covered": true,
+  "by_source_type": {
+    "literature": 21,
+    "guideline": 0,
+    "database": 0,
+    "authority_book": 0
+  },
+  "rules": [
+    {
+      "id": "r01_uric_acid_x_cataract",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1038/s41420-024-01900-z"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r02_hyperglycemia_x_cataract",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1002/dmrr.3073"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r03_hba1c_x_retinopathy_any",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1007/s13300-017-0345-5"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r04_hba1c_x_dr_pdr",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1167/iovs.17-22804"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r05_dyslipidemia_x_amd_late",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.62347/QJPQ2923"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r06_crp_x_amd_late",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1016/j.survophthal.2010.08.007"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r07_vitamind_x_dr_npdr",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.3390/nu9030307",
+          "10.1016/j.jcjo.2017.09.026"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r08_low_antioxidant_x_cataract",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.3109/10715762.2013.777155"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r09_mediterranean_diet_x_amd_late",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1016/j.ophtha.2018.08.006",
+          "10.3945/ajcn.115.111047"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r10_smoking_x_cataract",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1016/j.ebiom.2022.104154"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r11_smoking_x_amd_late",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1097/MD.0000000000041599"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r12_alcohol_x_cataract",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1016/j.ophtha.2006.07.046"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r13_bmi_x_cataract",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1371/journal.pone.0089923"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r14_lead_x_cataract",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1001/jama.292.22.2750"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r16_pm25_x_glaucoma_iop_cdr",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1186/s12989-021-00403-4"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r17_pm25_x_amd_early",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1186/s12886-024-03465-y"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r18_uv_x_cataract",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1097/01.ede.0000086881.84657.98",
+          "10.1136/oem.2005.022343"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r22_bmi_x_retinopathy",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1097/MD.0000000000011807"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r19_proinflam_diet_x_dr_npdr",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1016/j.jnha.2025.100694"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r20_smoking_x_vi_mod_severe",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1038/s41598-020-79865-z"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    },
+    {
+      "id": "r21_pm25_x_vi_mod_severe",
+      "covered": true,
+      "by_type": {
+        "literature": [
+          "10.1186/s12889-024-20853-7"
+        ],
+        "guideline": [],
+        "database": [],
+        "authority_book": []
+      }
+    }
+  ]
+}

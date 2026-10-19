@@ -1,0 +1,31 @@
+{
+  "datasets": "NHANES (internal) vs KNHANES (external)",
+  "metric_basis": "R11 2026-10-15: three-state gold under survey svyglm variance (analysis_plan §6 primary standard); coverage = P(tested | rule exists, judgeable, non-negative-control) — the pre-R11 formula divided by ALL testable pairs and became meaningless once the exposure×outcome matrix was expanded",
+  "n_common_tested_pairs": 85,
+  "gold3_concordant_pairs": 71,
+  "gold3_concordance_rate": 0.835,
+  "coverage": {
+    "nhanes": 0.889,
+    "knhanes": 0.882,
+    "gap_internal_minus_external": 0.007
+  },
+  "precision_rule": {
+    "nhanes": 1.0,
+    "knhanes": 1.0,
+    "gap_internal_minus_external": 0.0,
+    "note": "point estimates with CP CIs: NHANES [0.541, 1.0] / KNHANES [0.478, 1.0] (width reflects small informative n)"
+  },
+  "precision_binary_uninf_as_fp": {
+    "nhanes": 0.375,
+    "knhanes": 0.333,
+    "note": "R11: the conservative reading (uninformative counted as a failed prediction). Report BOTH this and precision_rule; the old deliverables showed only the favourable denominator."
+  },
+  "matrix": {
+    "nhanes_tested": 122,
+    "nhanes_significant": 6,
+    "knhanes_tested": 158,
+    "knhanes_significant": 8,
+    "note": "full exposure×outcome matrix, exploratory family (separate from rule metrics)"
+  },
+  "generated": "2026-10-15 (R11)"
+}

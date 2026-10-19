@@ -1,0 +1,70 @@
+{
+  "recorded_on": "2026-10-15",
+  "repeats": 6,
+  "probes": {
+    "smoking|cataract_any|": {
+      "why": "plain rule match",
+      "tiers": {
+        "medium": 6
+      },
+      "rule_tiers": {
+        "medium": 6
+      },
+      "rule_invariant": true,
+      "arbiter_conf": [
+        0.3,
+        0.4
+      ]
+    },
+    "fasting_glucose|cataract_any|diabetes": {
+      "why": "patient-factor escalation",
+      "tiers": {
+        "high": 6
+      },
+      "rule_tiers": {
+        "high": 6
+      },
+      "rule_invariant": true,
+      "arbiter_conf": [
+        0.3
+      ]
+    },
+    "smoking|amd_late|": {
+      "why": "rule whose grade was corrected A->B",
+      "tiers": {
+        "high": 6
+      },
+      "rule_tiers": {
+        "high": 6
+      },
+      "rule_invariant": true,
+      "arbiter_conf": [
+        0.9
+      ]
+    },
+    "pm25_exposure|glaucoma_iop_elevated|hypertension": {
+      "why": "rule plus factor",
+      "tiers": {
+        "medium": 6
+      },
+      "rule_tiers": {
+        "medium": 6
+      },
+      "rule_invariant": true,
+      "arbiter_conf": [
+        0.75
+      ]
+    },
+    "aspirin|cataract_any|": {
+      "why": "out of scope: no rule covers it",
+      "tiers": {
+        "unknown": 6
+      },
+      "rule_tiers": {
+        "none": 6
+      },
+      "rule_invariant": true,
+      "arbiter_conf": []
+    }
+  }
+}

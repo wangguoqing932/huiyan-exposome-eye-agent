@@ -1,121 +1,72 @@
 # 慧眼（huiyan）
 
-**慧眼** — A oxidative_stress, glycation_metabolic, inflammation_immune, vascular_perfusion, endocrine_hormonal, heavy_metal_toxicity, photochemical_uv rule-based decision support framework for screening **暴露组×眼病可解释风险筛查：代谢-营养-生活方式-环境四域暴露（含组合/交互）与主要眼病的关联筛查（规则引擎+知识图谱+LLM 仲裁混合系统），跨库跨国多源验证** in diabetic, hypertensive, rural_china, multi_country, with a focus on 多库跨文化验证：规则仅由文献/指南构建，性能在 NHANES（内部）→ KNHANES（独立国家）→ 9 国老龄队列（跨人群）三层独立验证并报告泛化落差；首个可解释的暴露组×眼病风险筛查 agent（暴露→机制→眼病→证据等级 全链溯源）.
+**唯一目标（R12 起约束）**：用 medical-agent skill 搭建暴露组×眼病智能体，并写出论文。仓库一切内容服务于这条主线；史档已归位 `docs/history/`，一次性脚本见 `scripts/README.md` 注册表 D 组。
 
-This project reuses the methodology skeleton of **TongYuan** (FDI screening, *Nutrients* submission) and applies it to a new domain: 暴露组（代谢-营养-生活方式-环境） × 主要致盲眼病 combinations.
+## Project Status（2026-10-16，R12 整理轮后）
 
-## Project Status
+📋 **Planner 0–4.5、Executor 0–6 完成；Writer 7_1–7_8 已确认，7_9（投稿包）未过机械六项检查——投稿包修复前勿投。**
 
-📋 **In execution (executor phase 3).** This project was scaffolded by the `medical-agent-planner` skill. The PLAN.md, README.md, pyproject.toml, schemas, and rule YAML templates are in place; the coding agent should now execute Phase 0 → Phase 8 per [PLAN.md](PLAN.md).
+**agent 三层现状**：
+- 规则层确定；**患者因素升级已修复并有单测锁定**（`tests/test_synthetic_regression.py::test_escalation_fixed`，修复前 272 测试 0 触发 → 现 17 触发且范围受限）；
+- **M1 合成效应注入回归已建**（`scripts/synthetic_regression.py`，已知真值评估面：OR=2 检出 100%、假阳性 0%、中位估计恢复真值；此前 80 对/5 信息性对无功效的问题就此补上）；
+- **M12 操作化字典已真接入**：`configs/variable_map.yaml` 为唯一事实源，`src/huiyan_agent/variable_map.py` 运行时守卫（代码变量 ⊆ 字典，漂移即 fail-loud）+ 患病率门（>50% 偏离报警/>2.5× 阻断）已在 evaluate.py / evaluate_knhanes.py 生效，落盘 `outputs/confirmatory/prevalence_gate_*.json`；
+- ⚠️ **仲裁层非确定**：温度钉 0.0 仍有约 1/12 运行改级（原因在提供方），`confidence` 由规则层独算不反映仲裁犹豫（docs/AGENT_AUDIT.md §十四）；
+- G3/G4/G5 负结果路径已归档（docs/archive_g3g4g5/，M8）；推理层禁止再投入。
+
+**R5 主口径 headline**（详见 `outputs/README_baseline_predictions.md`）：NHANES 5 复证/0 反证 CP [0.478,1.0]；KNHANES 2/0；CHARLS 0 信息性对；full_system F1 0.417 > 纯 LLM 基线（McNemar 显著）；G2 定格 0.500；**v1.1/v1.2 双呈义务**（回放 F1=0.111）。
+
+**论文两条线（均未投出）**：① 八队列测量学稿 `outputs/paper/manuscript.md`；② 三库复现稿 `outputs/paper/manuscript_R11.md`。**投稿包六项机械缺陷未修**（无 References 节/zip 图件错位/markdown-only/TIFF 80MB/封面信 DRAFT/期刊要求未核）——见 2026-10-16 桌拒诊断。
 
 ## Quick Navigation
 
-| Document | Purpose |
+| 路径 | 内容 |
 |---|---|
-| [PLAN.md](PLAN.md) | Master execution plan (8 phases, task list, subagent strategy, timeline) |
-| `.planner.config.json` | Phase 1 investigation output (input to scaffold) |
-| `src/huiyan_agent/` | Core source code (to be migrated from TongYuan) |
-| `configs/rules.yaml` | Rule engine configuration (to be authored) |
-| `data/seed/` | Knowledge base: entities_a.csv, entities_b.csv, evidence_chunks.jsonl (to be built) |
+| [PLAN.md](PLAN.md) | 主执行计划（8 阶段） |
+| [AGENT_V2_MUSTFIX_2026-10-16.md](AGENT_V2_MUSTFIX_2026-10-16.md) | 框架必改单（当前执行基准） |
+| [docs/analysis_plan.md](docs/analysis_plan.md) | 预注册计划 v1.2 + §0.1–0.3 更正记录 |
+| [docs/AGENT_AUDIT.md](docs/AGENT_AUDIT.md) | agent 三层审计（14 节） |
+| [docs/limitations.md](docs/limitations.md) | 局限与诚实陈述 |
+| [docs/history/](docs/history/) | 全部历史审计/修复/阶段文档（R4–R11 共 19 件） |
+| [scripts/README.md](scripts/README.md) | **脚本注册表**（A 核心管道/B 队列层/C agent 诊断/D 写作一次性） |
+| `configs/` | rules.yaml（v1.2 冻结）、variable_map.yaml（操作化唯一事实源） |
+| `src/huiyan_agent/` | 核心源码（规则/检索/仲裁/报告/variable_map 守卫） |
+| `data/` | seed（注册表+证据池）、raw/knhanes_frames_v2（重建帧）、frames（8 队列帧） |
+| `outputs/confirmatory/` | 四库确证+survey 链+prevalence_gate_* |
+| `outputs/agent/` | agent 诊断+合成回归产物 |
+| `outputs/paper/` `outputs/submission/` | 两条论文线与投稿包 |
+| `outputs/tables/`、`outputs/figures/` | 交付表 8 张、论文图 6 张 |
 
-## Differentiation from Reference Project
+## 重建前提（缺一不可）
 
-| Dimension | Reference (TongYuan) | This Project |
-|---|---|---|
-| Entity A | food | 暴露组（代谢-营养-生活方式-环境） |
-| Entity B | drug | 主要致盲眼病 |
-| Interaction type | FDI | oxidative_stress, glycation_metabolic, inflammation_immune, vascular_perfusion, endocrine_hormonal, heavy_metal_toxicity, photochemical_uv |
-| Rules | 15 | 12 |
-| Data sources | FDA + USDA + LiverTox | NHANES 1999-2008 本地原始库（生化/膳食/毒物 + VIX 客观视力 / OPXRET 视网膜分级 / VIQ 眼病问卷）[local_confirmed], KNHANES 1998-2024 本地 Rdata 全集 + 官方变量字典（眼科检查模块，1,686 眼科变量）[local_confirmed], 9 大老龄队列原始库（CHARLS/HRS/ELSA/SHARE/KLoSA/LASI/MHAS/CRELES/CLHLS）[local_confirmed], GBD 视觉库（GBD 2023 近视力丧失 / 2023 盲与视力损害 / 2021 55+ 暴露-结局）[local_confirmed] |
-| Target journal | Nutrients | Ophthalmology（IF 8+ 档候选；Phase 2 期刊适配检查后最终锁定） |
+1. **E:\ 盘原始数据**（54GB）：NHANES XPT、CHARLS dta、8 队列原始库、KNHANES Rdata；
+2. **本地 llama-server**（qwen3.8-27b @ `http://127.0.0.1:8082/v1`）；
+3. **R ≥ 4.x + survey**；4. **`.env` 密钥**（DeepSeek/Ark/NCBI）；5. Python ≥ 3.10 + `pip install -e .`。
 
-## Methodology Pipeline
-
-```text
-User input (暴露组（代谢-营养-生活方式-环境） + 主要致盲眼病 + patient factors)
-  → entity normalization
-  → rule-based screening (12 rules)
-  → graph-organized evidence retrieval (LightRAG)
-  → evidence compression (top-k, char limit)
-  → structured safety report
-  → expert-review export / evaluation
-```
-
-## Setup (conda env per project, Chinese mirrors pre-configured)
-
-The default flow creates a **conda env named after this project** (`huiyan`) and installs all deps there.
+## 管道与测试
 
 ```bash
-python scripts/setup_environment.py --project-root . --mirror cn
-conda activate huiyan
+python scripts/run_all.py                 # canonical 8 步链(顺序敏感,单跑 evaluate 会回退口径)
+python scripts/run_all.py --with-baseline # 追加基线汇总+bootstrap
+python -m pytest tests/ -q                # 17 测试(含 M1 合成回归 + 升级修复锁定)
+PYTHONUTF8=1 python scripts/synthetic_regression.py
 ```
 
-This will:
-- `conda create -n huiyan python=3.11 -y` if the env doesn't exist (idempotent)
-- Install `[dev, llm, lightrag, streamlit]` extras from `pyproject.toml`
-- Configure Tsinghua PyPI / TUNA conda / hf-mirror.com mirrors
-- Prompt for `DEEPSEEK_API_KEY` (chat) and `ARK_DOUBAO_API_KEY` (火山方舟 embedding) on first run
+详细分步顺序见 `scripts/README.md` A 组表格；KNHANES 帧重建：`build_knhanes_frames.py`。
 
-Alternatives:
+## 纪律（约束）
 
-```bash
-# Different Python version
-python scripts/setup_environment.py --project-root . --mirror cn --python 3.12
-
-# Non-interactive (CI / scripted): pre-fill keys in .env first
-python scripts/setup_environment.py --project-root . --mirror cn --non-interactive
-
-# Fallback to local .venv if conda is unavailable
-python scripts/setup_environment.py --project-root . --mirror cn --env-mode venv
-```
-
-Later sessions inside this project can re-discover the env via:
-
-```bash
-python C:/Users/heyb1/.claude/skills/medical-agent-planner/scripts/conda_helper.py discover --project-root .
-```
-
-## Execution Entry Point
-
-The full development plan is in [PLAN.md](PLAN.md). To regenerate all artifacts from scratch:
-
-```bash
-# 1. Build knowledge base
-python scripts/build_entity_a_registry.py
-python scripts/build_entity_b_registry.py
-python scripts/build_evidence_base.py
-
-# 2. Fetch real evidence (needs NCBI + LLM keys in .env)
-python scripts/fetch_pubmed.py --max-pairs 40
-python scripts/scripts/build_evidence_base.py
-
-# 3. Build validation sets + run baselines + evaluate
-python scripts/generate_cases.py --target 400
-python scripts/run_baselines.py
-python scripts/run_multiseed.py --seeds 5
-python scripts/evaluate.py
-
-# 4. Generate figures/tables
-python scripts/generate_paper_figures.py
-python scripts/generate_paper_tables.py
-```
+1. 规则集冻结；改操作化只改 variable_map.yaml（corrections 留痕），不改代码散点——运行时守卫会拦；
+2. 推理层禁止再投入（消融已证非瓶颈）；一切 agent 性能声明必须出自 M1 评估面或预注册盲测集；
+3. jsonl 追加写从现在起必须带 epoch 字段（M11 待办，先自律）；
+4. 投稿包机械六项修完前任何期刊都不投。
 
 ## Interactive Demo (Streamlit)
 
 ```bash
-pip install -e ".[streamlit]"
-streamlit run app/streamlit_app.py
+pip install -e ".[streamlit]" && streamlit run app/streamlit_app.py
 ```
 
-Then open http://localhost:8501.
-
-> ⚠️ The demo is for clinical decision support only and does not replace clinician or pharmacist judgement.
-
-## Target Output
-
-- Reproducible Python package with ~80% code reuse from TongYuan
-- Validated 暴露组×眼病可解释风险筛查：代谢-营养-生活方式-环境四域暴露（含组合/交互）与主要眼病的关联筛查（规则引擎+知识图谱+LLM 仲裁混合系统），跨库跨国多源验证 screening system (4-phase validation)
-- Manuscript submitted to *Ophthalmology（IF 8+ 档候选；Phase 2 期刊适配检查后最终锁定）* (or fallback journal)
+> ⚠️ The demo is for clinical decision support only and does not replace clinician judgement.
 
 ## License
 

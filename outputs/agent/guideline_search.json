@@ -1,0 +1,253 @@
+{
+  "queries": {
+    "r10_smoking_x_cataract": [
+      "smoking cataract[Title] AND (guideline[Publication Type] OR practice guideline[Publication Type] OR consensus[Title])",
+      "(cataract[Title]) AND (guideline[Publication Type])",
+      "smoking AND (cataract OR lens opacity) AND (recommendation OR guideline)"
+    ],
+    "r13_bmi_x_cataract": [
+      "obesity cataract[Title] AND (guideline[Publication Type] OR consensus[Title])",
+      "(cataract[Title]) AND (risk factor[Title]) AND guideline[Publication Type]",
+      "body mass index AND cataract AND (guideline OR recommendation)"
+    ]
+  },
+  "results": {
+    "r10_smoking_x_cataract": [
+      {
+        "pmid": "42674864",
+        "title": "ESCRS guideline for cataract surgery 2024: executive summary.",
+        "journal": "Journal of cataract and refractive surgery",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Practice Guideline"
+        ],
+        "guideline_type": true
+      },
+      {
+        "pmid": "40825492",
+        "title": "Controversies, Consensuses, and Guidelines on Preventing, Diagnosing and Managing Acute-onset Bacterial Endophthalmitis after Cataract Surgery by the ",
+        "journal": "American journal of ophthalmology",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Systematic Review",
+          "Consensus Statement",
+          "Practice Guideline"
+        ],
+        "guideline_type": true
+      },
+      {
+        "pmid": "39075430",
+        "title": "Bridging the gap in managing dry eye disease: a consensus report by the Taiwan society of cataract and refractive surgeons.",
+        "journal": "BMC ophthalmology",
+        "types": [
+          "<PublicationType UI=\"D016446\">Consensus Statement",
+          "Journal Article",
+          "Practice Guideline"
+        ],
+        "guideline_type": true
+      },
+      {
+        "pmid": "38428679",
+        "title": "Pre-anaesthesia assessment in cataract surgery: Recommendations from the SEDAR Working Group.",
+        "journal": "Revista espanola de anestesiologia y reanimacion",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Practice Guideline",
+          "Consensus Statement"
+        ],
+        "guideline_type": true
+      },
+      {
+        "pmid": "38061898",
+        "title": "[Chinese guideline for cataract surgery in adults (2023)].",
+        "journal": "[Zhonghua yan ke za zhi] Chinese journal of ophthalmology",
+        "types": [
+          "<PublicationType UI=\"D004740\">English Abstract",
+          "Journal Article",
+          "Practice Guideline"
+        ],
+        "guideline_type": true
+      },
+      {
+        "pmid": "37026268",
+        "title": "Management of cataract in dry eye disease: Preferred practice pattern guidelines.",
+        "journal": "Indian journal of ophthalmology",
+        "types": [
+          "<PublicationType UI=\"D017065\">Practice Guideline",
+          "Review",
+          "Journal Article"
+        ],
+        "guideline_type": true
+      },
+      {
+        "pmid": "34780842",
+        "title": "Cataract in the Adult Eye Preferred Practice Pattern.",
+        "journal": "Ophthalmology",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Practice Guideline"
+        ],
+        "guideline_type": true
+      },
+      {
+        "pmid": "32587150",
+        "title": "A new normal with cataract surgery during COVID-19 pandemic.",
+        "journal": "Indian journal of ophthalmology",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Practice Guideline"
+        ],
+        "guideline_type": true
+      },
+      {
+        "pmid": "41620543",
+        "title": "Global, regional burden of cataract attributable to Household air pollution from solid fuels, Smoking, high body mass index and high fasting plasma gl",
+        "journal": "Eye (London, England)",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "41180462",
+        "title": "Global burden of vision impairment due to smoking-related cataract: A descriptive study of spatiotemporal trends based on GBD secondary data and proje",
+        "journal": "Tobacco induced diseases",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "38295331",
+        "title": "Lifestyle factors associated with age-related macular degeneration: Case-control study.",
+        "journal": "European journal of ophthalmology",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "37883068",
+        "title": "Risk of Stroke, Myocardial Infarction, and Death After Retinal Artery Occlusion.",
+        "journal": "JAMA ophthalmology",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Research Support, N.I.H., Extramural",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "37685463",
+        "title": "Health-Related Quality of Life after Cataract Surgery in Armenia: A Cross-Sectional Survey.",
+        "journal": "Healthcare (Basel, Switzerland)",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "37660524",
+        "title": "Effects of pictorial warning labels depicting lesser-known and well-known risks of smoking on viewing patterns, recall, and knowledge of smoking harms",
+        "journal": "Drug and alcohol dependence",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Randomized Controlled Trial",
+          "Research Support, N.I.H., Extramural",
+          "Research Support, U.S. Gov't, P.H.S."
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "34323092",
+        "title": "[Nutritional problems in smokers and passive smokers].",
+        "journal": "Nutricion hospitalaria",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article"
+        ],
+        "guideline_type": false
+      }
+    ],
+    "r13_bmi_x_cataract": [
+      {
+        "pmid": "41620543",
+        "title": "Global, regional burden of cataract attributable to Household air pollution from solid fuels, Smoking, high body mass index and high fasting plasma gl",
+        "journal": "Eye (London, England)",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "40359581",
+        "title": "Ocular radiation exposure of the primary operator performing selective coronary angiography from a radial artery approach.",
+        "journal": "The Journal of invasive cardiology",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "39847049",
+        "title": "Cushing's syndrome related to higher rates and earlier onset of cataract: A nationwide retrospective cohort study.",
+        "journal": "Graefe's archive for clinical and experimental ophthalmology = Albrech",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Multicenter Study"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "39737364",
+        "title": "Corneal Refractive Surgery Considerations in Patients with Anorexia Nervosa.",
+        "journal": "Clinical ophthalmology (Auckland, N.Z.)",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Review"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "37138102",
+        "title": "[Radiation-induced cataract-an occult risk for urologists].",
+        "journal": "Urologie (Heidelberg, Germany)",
+        "types": [
+          "<PublicationType UI=\"D004740\">English Abstract",
+          "Journal Article"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "35100959",
+        "title": "Choroidal Thickness Measured by Ocular Coherence Tomography (SD-OCT) and Body Mass Index in Healthy Saudi Women: A Cross-sectional Controlled Study.",
+        "journal": "Current medical imaging",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Research Support, Non-U.S. Gov't"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "34128595",
+        "title": "Hyperglycemia and Hypo-HDL-cholesterolemia Are Primary Risk Factors for Age-related Cataract, and a Korean-style Balanced Diet has a Negative Associat",
+        "journal": "Journal of Korean medical science",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article"
+        ],
+        "guideline_type": false
+      },
+      {
+        "pmid": "33963292",
+        "title": "Obesity and risk of age-related eye diseases: a systematic review of prospective population-based studies.",
+        "journal": "International journal of obesity (2005)",
+        "types": [
+          "<PublicationType UI=\"D016428\">Journal Article",
+          "Research Support, Non-U.S. Gov't",
+          "Systematic Review"
+        ],
+        "guideline_type": false
+      }
+    ]
+  },
+  "guideline_hits": 8
+}

@@ -1,0 +1,27 @@
+{
+ "P0": {
+  "b_full_lightrag": 6,
+  "c_lightrag_full": 17,
+  "p_exact": 0.0347
+ },
+ "P1_selfreport": {
+  "b_full_lightrag": 2,
+  "c_lightrag_full": 15,
+  "p_exact": 0.0023
+ },
+ "P2_construct": {
+  "b_full_lightrag": 6,
+  "c_lightrag_full": 17,
+  "p_exact": 0.0347
+ },
+ "P3_power": {
+  "b_full_lightrag": 6,
+  "c_lightrag_full": 17,
+  "p_exact": 0.0347
+ },
+ "P1P3": {
+  "b_full_lightrag": 2,
+  "c_lightrag_full": 15,
+  "p_exact": 0.0023
+ }
+}

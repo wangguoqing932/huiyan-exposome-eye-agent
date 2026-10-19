@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 os.environ.setdefault("PYTHONUTF8", "1")
-WORKING_DIR = ROOT / "data/processed/lighightrag_index"
+WORKING_DIR = ROOT / "data/processed/lightrag_index"
 os.environ.setdefault("LIGHTRAG_WORKING_DIR", str(ROOT / "data/processed/lightrag_index"))
 
 from dotenv import load_dotenv

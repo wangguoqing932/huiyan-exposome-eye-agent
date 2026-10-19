@@ -1,0 +1,81 @@
+{
+  "repeatability": {
+    "case": [
+      "fasting_glucose",
+      "cataract_any",
+      [
+        "diabetes"
+      ]
+    ],
+    "levels": [
+      "high",
+      "high",
+      "high",
+      "high",
+      "high"
+    ],
+    "distribution": {
+      "high": 5
+    },
+    "stable": true,
+    "mean_seconds": 3.1
+  },
+  "escalation_floor": [
+    {
+      "exposure": "fasting_glucose",
+      "disease": "cataract_any",
+      "factors": [
+        "diabetes"
+      ],
+      "rule_only_level": "high",
+      "with_arbiter_level": "high",
+      "escalation_backed_high": true,
+      "floor_held": true
+    },
+    {
+      "exposure": "hba1c",
+      "disease": "dr_npdr",
+      "factors": [
+        "diabetes"
+      ],
+      "rule_only_level": "high",
+      "with_arbiter_level": "high",
+      "escalation_backed_high": true,
+      "floor_held": true
+    },
+    {
+      "exposure": "serum_uric_acid",
+      "disease": "cataract_any",
+      "factors": [
+        "chronic_kidney_disease"
+      ],
+      "rule_only_level": "medium",
+      "with_arbiter_level": "medium",
+      "escalation_backed_high": false,
+      "floor_held": true
+    }
+  ],
+  "out_of_scope": [
+    {
+      "exposure": "aspirin",
+      "disease": "cataract_any",
+      "level": "unknown",
+      "out_of_scope": true,
+      "reported_as_unknown": true
+    },
+    {
+      "exposure": "fasting_glucose",
+      "disease": "macular_hole",
+      "level": "unknown",
+      "out_of_scope": true,
+      "reported_as_unknown": true
+    },
+    {
+      "exposure": "totally_unknown_exposure",
+      "disease": "cataract_any",
+      "level": "unknown",
+      "out_of_scope": true,
+      "reported_as_unknown": true
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+# Figure contract: Figure 7 — power: minimum detectable OR vs observed OR
+# Project: huiyan (慧眼) — NEW in R11, 2026-10-15
+#
+# Origin: this figure existed only as an ad-hoc render
+# (outputs/figures/legacy/figure3_power_mde_R11.png) produced outside the
+# contract pipeline. The author asked that its scientific content be integrated
+# rather than discarded, so it is now a first-class contract. Archiving is
+# recorded in outputs/figures/legacy/.
+#
+# Why it matters: it is the ONLY visual carrier of the paper's central negative
+# claim. "No rule was contradicted" is uninterpretable without knowing the
+# smallest effect each design could have detected; this panel puts the observed
+# OR against that limit, so a reader can see that most nulls sit far to the left
+# of the 1.5x line and are therefore informative.
+#
+# plot_type `scatter` is one of the seven the renderer implements. One colour
+# column (`layer_gold`) is used so a single panel separates both layers and both
+# three-state labels.
+
+figure_id: figure7_power_mde
+title: "Power: minimum detectable OR (80%) versus observed OR for rule-relevant pairs"
+figure_number: 5
+manuscript_section: Results → statistical power
+
+core_conclusion: >-
+  Most rule nulls are informative rather than underpowered. The median minimum
+  detectable odds ratio at 80% power is 1.337 in NHANES and 1.159 in KNHANES, and
+  17 of the 30 rule-relevant pairs are classifiable as powered nulls — the design
+  could have excluded a 2-fold association. The pairs that did replicate sit in
+  the opposite corner (large observed OR, small detectable OR), i.e. they were
+  both well powered AND large; no pair replicated on the strength of a small
+  detectable effect alone. Design effects were derived per pair from the
+  survey/model CI-width ratio (median 1.07 NHANES, 1.26 KNHANES), not assumed.
+
+archetype: quantitative_grid
+
+panels:
+  - id: panel_a_mde_vs_observed
+    role: primary
+    layout: full_width
+    title: "Minimum detectable OR (80% power) vs observed OR"
+    content: >-
+      Scatter, both axes on a log scale, one point per rule-relevant pair
+      (NHANES n=17, KNHANES n=13). x = minimum detectable OR at 80% power;
+      y = observed OR. Points are coloured by layer and three-state label so the
+      reader can see that replicated pairs cluster at high observed OR and low
+      detectable OR while uninformative pairs cluster near OR = 1 across the
+      whole detectable range. Reference lines at OR = 1.0, 1.5 and 2.0 on both
+      axes, plus the y = x identity line: points below the identity line have an
+      observed effect larger than the design needed. NHANES replicate count 6,
+      KNHANES 5; no contradicted points exist to plot.
+    plot_type: scatter
+    x_axis: mde_or_80
+    # MUST be `odds_ratio`, not `or`: the renderer's _find_column does a
+    # substring match and returns the first hit, so a hint of "or" resolves to
+    # the earlier column `mde_or_80` and the panel silently plots MDE against
+    # itself. Keep this name aligned with the source_data column.
+    y_axis: odds_ratio
+    color: layer_gold
+    # The shared renderer accepts only ONE vertical-or-horizontal line here; the
+    # project-local renderer draws all three (1.0 on both axes, plus 1.5 and 2.0
+    # as labelled verticals, because the powered-null definition in this same
+    # contract uses MDE-OR <= 2.0). The first local render drew only 1.0 while
+    # the legend described 1.0/1.5/2.0 -- a legend describing a line the render
+    # omits. The renderer was brought up to the contract, not the reverse.
+    reference_line:
+      kind: vertical
+      at: 1.5
+      label: "1.5x"
+    reference_lines_all:
+      - {kind: vertical, at: 1.0, label: "OR = 1"}
+      - {kind: horizontal, at: 1.0, label: "OR = 1"}
+      - {kind: vertical, at: 1.5, label: "1.5x"}
+      - {kind: vertical, at: 2.0, label: "2.0x"}
+      - {kind: diagonal, at: null, label: "y = x (identity)"}
+    annotations:
+      - "median MDE-OR 1.337 (NHANES) / 1.159 (KNHANES) at 80% power, two-sided alpha=0.05"
+      - "design effect derived per pair from the survey/model CI-width ratio, not assumed (median 1.07 / 1.26)"
+      - "17 of 30 pairs are powered nulls: MDE-OR <= 2.0, so absence of a 2-fold association is informative"
+      - "rule-relevant pairs only; contradicted = 0 in both layers, so no red points appear"
+# MANUALLY RENDERED (R12). The shared renderer's scatter branch exposes only a
+# single vertical-or-horizontal reference_line, so it cannot draw the IDENTITY
+# line y = x -- and this figure plots minimum detectable OR against OBSERVED OR,
+# where the identity line is the entire interpretive device (above it the study
+# could have detected its own observed effect; below it, it could not).
+# Drawn instead by the project-local scripts/render_manual_figures.py, which
+# reads THIS contract's source_data CSV and adds:
+#   * log-log axes (MDE 1.10-2.27, observed OR 0.60-15.14; on linear axes the
+#     points collapse into one corner);
+#   * the dashed identity line y = x, labelled ON the line and rotated to its
+#     on-screen slope, which on a log-log plot is not 45 degrees;
+#   * dotted reference lines at OR = 1 on both axes;
+#   * plain decimal x tick labels (matplotlib labels the MINOR ticks on a
+#     sub-decade log axis and renders 1.2 as "1.2 x 10^0").
+# Export spec identical to the shared renderer (180 mm, 600 dpi, svg/pdf/tiff/
+# png, TIFF LZW -- which took this figure's TIFF from 90.9 MB to 0.9 MB).
+renderer: scripts/render_manual_figures.py
+
+backend:
+  value: python
+  lock: true
+  fallback_policy: stop_and_report
+dependencies:
+  - matplotlib >= 3.7
+  - numpy
+  - scipy
+
+export:
+  dimensions_mm: [180, 130]
+  dpi: 600
+  formats: [svg, pdf, tiff, png]
+  editable_text: true
+  svg_fonttype: none
+  pdf_fonttype: 42
+  font_type: arial
+  font_size_range_pt: [6, 11]
+  color_mode: cmyk_friendly
+
+style:
+  theme: nmi_pastel
+  font_family: Arial
+  font_size_pt: 7
+  axes_linewidth: 0.8
+
+color_palette:
+  name: NMI_pastel
+  note: >-
+    One colour per (layer, three-state) combination; replicated pairs must be
+    the most salient hue so the reader's eye goes to them first.
+
+source_data:
+  csv_path: outputs/figures/source_data/figure7_power_mde.csv
+  schema:
+    - column: mde_or_80
+      note: "minimum detectable OR at 80% power"
+    - column: "or"
+      note: "observed odds ratio"
+    - column: ci_low
+    - column: ci_high
+    - column: gold3
+      values: [replicated, uninformative, contradicted]
+    - column: dataset
+      values: [NHANES, KNHANES]
+    - column: layer_gold
+      note: "colour key = dataset · gold3"
+    - column: pair
+    - column: rule_ids
+    - column: n
+    - column: power_class
+      values: [powered_for_1.5x, powered_for_2.0x, powered_for_3.0x, severely_underpowered]
+    - column: null_type
+      values: [powered_null, underpowered_null, not_assessable]
+  # Supporting sources (comments only — `additional_files` is not permitted by
+  # figure_contract.schema.json):
+  #   outputs/confirmatory/power_analysis_nhanes.csv
+  #   outputs/confirmatory/power_analysis_knhanes.csv
+  #   scripts/power_analysis.py
+
+review_risks:
+  - id: power_is_not_evidence
+    risk: "an informative null is still a null; 'adequately powered' does not make a rule correct"
+    mitigation: "the caption states that power makes the null interpretable, not that the rule is validated"
+  - id: mde_depends_on_observed_margins
+    risk: "MDE-OR is computed from the observed n, exposure count and event count, so it is data-dependent"
+    mitigation: "state the derivation explicitly in the caption; it is not a pre-study power calculation"
+  - id: design_effect_derived
+    risk: "the design effect is estimated from the same data rather than assumed a priori"
+    mitigation: "report the median deff and the derivation; a fixed-deff sensitivity is available in the analysis script"
+  - id: no_contradicted_points
+    risk: "an empty contradicted category may look like an omission"
+    mitigation: "the caption states contradicted = 0 in both layers, so the absence is explained"
+
+legend:
+  position: below
+  font_size_pt: 7
+  items:
+    - "rule-relevant pairs: NHANES n=17, KNHANES n=13; log-log axes"
+    - "x = minimal OR detectable at 80% power (two-sided alpha=0.05); y = observed OR; grey lines at 1.0 / 1.5 / 2.0 and the identity line"
+    - "points left of the 1.5x line were adequately powered to exclude a 1.5-fold association"
+    - "design effect derived per pair from the survey/model CI-width ratio (median 1.07 / 1.26)"
+
+accessibility:
+  alt_text: >-
+    Log-log scatter of minimum detectable odds ratio against observed odds ratio
+    for 17 NHANES and 13 KNHANES rule-relevant pairs. Replicated pairs lie in the
+    high-observed / low-detectable corner; uninformative pairs cluster near an
+    observed odds ratio of one across the detectable range, showing the nulls are
+    largely informative.
+  color_blind_safe: true

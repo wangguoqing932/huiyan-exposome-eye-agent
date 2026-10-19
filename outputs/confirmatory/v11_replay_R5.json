@@ -1,0 +1,9 @@
+{
+  "ruleset": "v1.1 (pre-expansion, 20 rules incl. r15 removed → 20 active) replay on R5 gold (survey variance, 80 tested pairs)",
+  "TP": 1,
+  "FP": 10,
+  "FN": 6,
+  "P": 0.0909,
+  "R": 0.1429,
+  "F1": 0.1111
+}

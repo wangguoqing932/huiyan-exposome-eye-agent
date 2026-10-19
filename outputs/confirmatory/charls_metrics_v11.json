@@ -9,12 +9,22 @@
     null,
     null
   ],
-  "coverage": 0.667,
+  "coverage": 1.0,
+  "coverage_definition": "P(tested | rule exists, judgeable, non-negative-control) — R11 fixed; the old formula divided by ALL testable pairs",
+  "coverage_of_full_matrix": 0.308,
+  "rule_relevant_pairs": 4,
+  "precision_binary_uninf_as_fp": 0.0,
+  "precision_binary_ci95": [
+    0.0,
+    0.602
+  ],
   "uncovered_significant": 0,
-  "uncovered_pairs": 2,
+  "uncovered_pairs": 9,
+  "matrix_tested_pairs": 13,
+  "matrix_significant_pairs": 0,
+  "matrix_significant_uncovered": 0,
   "negative_control_pairs": 1,
   "negative_control_outcome": {
     "uninformative": 1
-  },
-  "ci_method": "Clopper-Pearson exact binomial (v1.2 metrics fix 2026-10-12; replaces degenerate bootstrap)"
+  }
 }

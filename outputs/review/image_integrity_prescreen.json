@@ -1,0 +1,129 @@
+{
+  "figures_screened": [
+    "figure1_architecture",
+    "figure2_performance",
+    "figure3_rule_evaluation",
+    "figure4_demo_case",
+    "figure5_reasoning_trace",
+    "figure6_dose_response",
+    "figure7_power_mde",
+    "figure8_cohort_transportability"
+  ],
+  "n_pairs": 28,
+  "threshold": 10,
+  "note": "dHash and pHash computed with Pillow only; each pair compared across original, 90/180/270-degree rotations and a horizontal flip, so reorientation cannot hide a duplicate. Results are LEADS for human review, not verdicts.",
+  "flagged_pairs": [
+    {
+      "a": "figure1_architecture",
+      "b": "figure5_reasoning_trace",
+      "min_distance": 3,
+      "variant_a": "r270",
+      "variant_b": "r270",
+      "dhash_distance": 3,
+      "phash_distance": 22
+    },
+    {
+      "a": "figure1_architecture",
+      "b": "figure4_demo_case",
+      "min_distance": 5,
+      "variant_a": "r180",
+      "variant_b": "r270",
+      "dhash_distance": 5,
+      "phash_distance": 30
+    },
+    {
+      "a": "figure4_demo_case",
+      "b": "figure5_reasoning_trace",
+      "min_distance": 6,
+      "variant_a": "r270",
+      "variant_b": "r180",
+      "dhash_distance": 6,
+      "phash_distance": 18
+    },
+    {
+      "a": "figure3_rule_evaluation",
+      "b": "figure6_dose_response",
+      "min_distance": 9,
+      "variant_a": "r180",
+      "variant_b": "r180",
+      "dhash_distance": 9,
+      "phash_distance": 20
+    },
+    {
+      "a": "figure2_performance",
+      "b": "figure3_rule_evaluation",
+      "min_distance": 10,
+      "variant_a": "r90",
+      "variant_b": "r90",
+      "dhash_distance": 10,
+      "phash_distance": 12
+    },
+    {
+      "a": "figure2_performance",
+      "b": "figure6_dose_response",
+      "min_distance": 10,
+      "variant_a": "flip",
+      "variant_b": "r90",
+      "dhash_distance": 10,
+      "phash_distance": 14
+    }
+  ],
+  "closest_pairs": [
+    {
+      "a": "figure1_architecture",
+      "b": "figure5_reasoning_trace",
+      "min_distance": 3,
+      "variant_a": "r270",
+      "variant_b": "r270",
+      "dhash_distance": 3,
+      "phash_distance": 22
+    },
+    {
+      "a": "figure1_architecture",
+      "b": "figure4_demo_case",
+      "min_distance": 5,
+      "variant_a": "r180",
+      "variant_b": "r270",
+      "dhash_distance": 5,
+      "phash_distance": 30
+    },
+    {
+      "a": "figure4_demo_case",
+      "b": "figure5_reasoning_trace",
+      "min_distance": 6,
+      "variant_a": "r270",
+      "variant_b": "r180",
+      "dhash_distance": 6,
+      "phash_distance": 18
+    },
+    {
+      "a": "figure3_rule_evaluation",
+      "b": "figure6_dose_response",
+      "min_distance": 9,
+      "variant_a": "r180",
+      "variant_b": "r180",
+      "dhash_distance": 9,
+      "phash_distance": 20
+    },
+    {
+      "a": "figure2_performance",
+      "b": "figure3_rule_evaluation",
+      "min_distance": 10,
+      "variant_a": "r90",
+      "variant_b": "r90",
+      "dhash_distance": 10,
+      "phash_distance": 12
+    },
+    {
+      "a": "figure2_performance",
+      "b": "figure6_dose_response",
+      "min_distance": 10,
+      "variant_a": "flip",
+      "variant_b": "r90",
+      "dhash_distance": 10,
+      "phash_distance": 14
+    }
+  ],
+  "interpretation": "SIX pairs fall below the dHash<=10 threshold, but this is NOT evidence of duplicated figures and must not be reported as such. dHash encodes gross structural layout; eight figures produced to one house style (180 mm wide, common margins, panel blocks in similar positions) necessarily share layout, so small dHash distances are the expected baseline. The pHash distances for the same pairs are 12-30, i.e. the frequency-domain content differs substantially, which is what distinguishes a shared template from a repeated image. Verified against provenance as well: each figure is rendered from a different declared source CSV under outputs/figures/source_data/, so a true duplicate would require a source-data collision, and none exists.",
+  "honest_limitation": "This pre-screen is mechanical. It cannot judge whether a figure EXPRESSES what its contract claims. In this project only figure7 and figure8 have been visually inspected (four iterations each, recorded in outputs/paper/figure_visual_inspection.md). FIGURES 1-6 HAVE NOT BEEN VISUALLY INSPECTED. The 7_1 QC checks structure (contract present, source_data present, files rendered, panels parseable) and by its own design cannot catch a figure that renders cleanly but says the wrong thing. Visual inspection of figures 1-6 is an open item."
+}

@@ -1,0 +1,29 @@
+# Table 6. Per-pair statistical power in the cohort layer
+
+Minimum detectable odds ratio at 80% power, two-sided alpha = 0.05, computed from the analysed n and
+the observed margins. A pair is a POWERED NULL when its confidence interval excludes its own MDE.
+
+SHARE appears once per pair, not five times: its five imputation replicates are stacked as rows in the
+source release, and counting all five inflated n by exactly 5x, which shrank SE by sqrt(5) and made every
+MDE look better than it is. Replicate 1 is used here, as it is for the prevalence gate.
+
+| cohort | rule_id | n | exposure_prevalence | outcome_prevalence_unexposed | mde_or_80 | observed_or | ci_low | ci_high | three_state | powered_null | null_interpretation |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| CLHLS | r02_hyperglycemia_x_cataract | 16650 | 0.0129 | 0.1607 | 1.6882 | 3.5887 | 2.6244 | 4.9074 | replicated | False | replicated |
+| CLHLS | r10_smoking_x_cataract | 16961 | 0.1572 | 0.1782 | 1.167 | 0.748 | 0.6435 | 0.8694 | contradicted | False | contradicted |
+| CLHLS | r12_alcohol_x_cataract | 8414 | 0.2369 | 0.2107 | 1.1926 | 0.809 | 0.704 | 0.9297 | contradicted | False | contradicted |
+| CLHLS | r20_smoking_x_vi_mod_severe | 13115 | 0.1595 | 0.1394 | 1.2127 | 1.0267 | 0.8736 | 1.2066 | uninformative | False | underpowered_or_indeterminate |
+| CRELES | r02_hyperglycemia_x_cataract | 5086 | 0.1917 | 0.3809 | 1.2281 | 1.3116 | 1.0705 | 1.6069 | uninformative | False | underpowered_or_indeterminate |
+| CRELES | r10_smoking_x_cataract | 3511 | 0.1105 | 0.3987 | 1.3607 | 0.7023 | 0.5021 | 0.9822 | uninformative | True | powered_null |
+| CRELES | r13_bmi_x_cataract | 4883 | 0.2011 | 0.3986 | 1.2267 | 0.9911 | 0.8126 | 1.2087 | uninformative | True | powered_null |
+| ELSA | r10_smoking_x_cataract | 4050 | 0.2138 | 0.2337 | 1.2888 | 0.7675 | 0.6069 | 0.9705 | uninformative | True | powered_null |
+| ELSA | r11_smoking_x_amd_late | 4028 | 0.2133 | 0.0435 | 1.6956 | 0.8586 | 0.5483 | 1.3444 | uninformative | True | powered_null |
+| ELSA | r20_smoking_x_vi_mod_severe | 4546 | 0.2352 | 0.1171 | 1.3563 | 1.4883 | 1.2128 | 1.8263 | replicated | False | replicated |
+| HRS | r20_smoking_x_vi_mod_severe | 28654 | 0.2256 | 0.1808 | 1.1084 | 1.6144 | 1.4682 | 1.7752 | replicated | False | replicated |
+| KLoSA | r20_smoking_x_vi_mod_severe | 40260 | 0.1418 | 0.215 | 1.1023 | 1.1002 | 1.0004 | 1.21 | uninformative | False | underpowered_or_indeterminate |
+| LASI | r02_hyperglycemia_x_cataract | 73204 | 0.121 | 0.1012 | 1.111 | 1.8782 | 1.7646 | 1.9991 | replicated | False | replicated |
+| SHARE | r02_hyperglycemia_x_cataract | 337274 | 0.1364 | 0.0747 | 1.0549 | 1.7539 | 1.6908 | 1.8194 | replicated | False | replicated |
+| SHARE | r10_smoking_x_cataract | 142084 | 0.1715 | 0.0882 | 1.072 | 1.109 | 1.041 | 1.1815 | replicated | False | replicated |
+| SHARE | r12_alcohol_x_cataract | 123478 | 0.167 | 0.0919 | 1.0768 | 0.9628 | 0.8999 | 1.0301 | uninformative | True | powered_null |
+| SHARE | r13_bmi_x_cataract | 337274 | 0.2282 | 0.0822 | 1.0427 | 1.2439 | 1.2008 | 1.2886 | replicated | False | replicated |
+| SHARE | r20_smoking_x_vi_mod_severe | 142229 | 0.1715 | 0.1443 | 1.0577 | 1.0875 | 1.0429 | 1.1339 | replicated | False | replicated |

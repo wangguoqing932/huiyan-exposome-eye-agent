@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-15",
+  "protocol": "analysis_plan §13 (pre-registered before run)",
+  "arbiter": "local qwen3.8-27b, thinking disabled, temp=0.0, seed=20261015",
+  "evaluation_scope": "judgeable pairs per dataset; survey-variance gold3",
+  "metrics_by_dataset": {
+    "nhanes": {
+      "G0": {
+        "TP": 5,
+        "FP": 10,
+        "FN": 2,
+        "P": 0.333,
+        "R": 0.714,
+        "F1": 0.455
+      },
+      "G1": {
+        "TP": 5,
+        "FP": 9,
+        "FN": 2,
+        "P": 0.357,
+        "R": 0.714,
+        "F1": 0.476
+      },
+      "G2": {
+        "TP": 5,
+        "FP": 8,
+        "FN": 2,
+        "P": 0.385,
+        "R": 0.714,
+        "F1": 0.5
+      }
+    },
+    "knhanes": {
+      "G0": {
+        "TP": 2,
+        "FP": 8,
+        "FN": 1,
+        "P": 0.2,
+        "R": 0.667,
+        "F1": 0.308
+      },
+      "G1": {
+        "TP": 2,
+        "FP": 8,
+        "FN": 1,
+        "P": 0.2,
+        "R": 0.667,
+        "F1": 0.308
+      },
+      "G2": {
+        "TP": 2,
+        "FP": 7,
+        "FN": 1,
+        "P": 0.222,
+        "R": 0.667,
+        "F1": 0.333
+      }
+    },
+    "charls": {
+      "G0": {
+        "TP": 0,
+        "FP": 5,
+        "FN": 0,
+        "P": null,
+        "R": null,
+        "F1": 0.0
+      },
+      "G1": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 0,
+        "P": null,
+        "R": null,
+        "F1": 0.0
+      },
+      "G2": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 0,
+        "P": null,
+        "R": null,
+        "F1": 0.0
+      }
+    }
+  },
+  "mcnemar_G2_vs_G0_nhanes": {
+    "b_g2_yes_g0_no": 0,
+    "c_g2_no_g0_yes": 2,
+    "p_exact": 0.5
+  },
+  "gate_distribution": {
+    "nc_abstain": 2,
+    "no_rule": 110,
+    "arbiter_yes": 3,
+    "evidence_Bplus": 26,
+    "no_relevant_evidence": 2
+  },
+  "records": 143
+}

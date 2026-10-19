@@ -1,0 +1,130 @@
+【R4 修复批次日志 · 2026-10-14】（按批准的最小修改清单执行）
+================================================================
+执行范围: AUDIT_R4_FULL_2026-10-14.txt 的 A 档 5 项 + B 档 3 项 + 必须补 3 项
+         （r22 引文 / sha 绑定链 / CI 统一 / state / dataset_summary /
+           figure2 契约 / bootstrap 备注 / figure2 补列 / v1.1 归档 /
+           gap 表 / 基线 valid 视图）
+================================================================
+
+---- 一、已完成的修改（逐项，含验证）----
+
+1) configs/rules.yaml — r22 引文更正（唯一规则文件改动，逻辑/评级不变）
+   - 旧: 10.1371/journal.pone.0089923（实为 BMI×白内障 meta，与 r13 共用，主题错配）
+   - 新: 10.1097/MD.0000000000011807（肥胖×DR 前瞻队列 meta；总体 RR=1.20 [1.01,1.43]，
+         T2DM 亚组 RR=1.40 [1.05,1.87] —— 与 r22 的 risk_up 方向匹配）
+   - rationale 同步改为如实表述（文献支持 + NHANES 方向一致 + 探索性扩展定性）
+   - 头注释同步: "21 rules: A3/B13/C5; v1.2 frozen 2026-10-12; 2026-10-14 更正记录"
+   - 附注（供裁决）: BMI×DR 方向在文献层有异质性——另有 meta 报 null（PMID 28562529,
+     OR≈0.97）；r22 维持低等级/C 级不提级
+
+2) skill 引用门词表补 huiyan 扩展（校验基础设施修复，非规则变更）
+   - 根因: verify_rule_citations.py 缺 huiyan 项目词表段 → 24 条引文中 21 条依赖
+     LLM 层判定；DeepSeek 在 temp=0 下仍有服务侧抖动 → 同一引文两次运行结论相反
+     （实测 r04 IOVS2017 一轮过一轮挂；r01/r08/r09 之外的规则全部脆弱）
+   - 处置: 按门既有 append-only 模式（jingming 2026-09-27 / mingmu 2026-10-08 同款）
+     追加 huiyan 段（ENTITY_B 10 个眼病 flag + ENTITY_A 15 个暴露 flag +
+     MECHANISM 6 个机制词表）
+   - 两套安装已同步（md5 一致 3696dae3…）:
+     · C:\Users\Administrator\.zcode\skills\medical-agent-executor\scripts\verify_rule_citations.py
+     · C:\Users\Administrator\.dsh\skills\medical-agent-executor\scripts\verify_rule_citations.py
+     备份: 同目录 verify_rule_citations.py.bak-20261014（改前原文件）
+   - 附注: .config/opencode 下另有一份旧版（1184 行，非用户同步范围）未动
+   - 效果: 24/24 引文走确定性关键词层（模拟+实测一致）；连跑两次结果相同
+
+3) 引用门复验（strict）: 21/21 PASS，24/24 citations verified，exit 0
+   - 门自动写入 progress.json phase3: rules_yaml_sha256=5aee851d…, citations_verified=true,
+     verified_count=24
+   - outputs/citation_verification_report.json 已再生成为当前规则的一致版本
+
+4) docs/analysis_plan.md — §0.1 冻结后更正记录（3 项：r22 引文 / CI 方法 / 词表修复）
+   + 头部与 §3 标注（"bootstrap 1000" 以 §0.1 为准）
+
+5) CI 口径统一为 Clopper-Pearson
+   - outputs/tables/performance_by_dataset.csv: NHANES [0.59,1.00] / KNHANES [0.16,1.00]
+     （原 Wilson 0.646/0.342），ci_note 改为 "Clopper-Pearson exact 95% CI"
+   - 新增 2 行泛化落差: coverage_gap=0.006; precision_rule_gap=0.0
+   - 一致性核对: metrics_v11.json / performance_matrix.csv / performance_by_dataset.csv
+     三处现在同为 CP
+
+6) .executor/progress.json — phase3 文案 + phase4 实况记录
+   - phase4: docs_indexed 1054→1044（实况）；新增 freshness 字段说明索引
+     （注记覆盖 126/1047=12% 实况、18 块旧 flags、重建进行中）；phase6 文案更新
+   - 顶部 _updated/_note 更新
+
+7) .medical-agent/state.json — completed 补 executor.phase3/4/5（13/13）；
+   artifacts.latest_validation 指向 outputs/confirmatory/nhanes_confirmatory.csv；
+   history 追加 3 条 2026-10-14 事件（经官方 update_state.py，含备份）
+
+8) outputs/tables/dataset_summary.csv — confirmatory_run 实况化
+   （dev=n/a；nhanes/knhanes=done；cohorts=partial CHARLS 2011 only）
+
+9) outputs/baseline_fullsystem_bootstrap_ci.json — llm_baselines_note 过期表述更新
+   （"全 NO 待重跑" → "已于 10-12 用本地 qwen 重跑完成，0 失败"）
+
+10) outputs/figures/contracts/figure2_performance.yaml — 按 v1.2 数据实况重写
+    - 撤 "5 seeds ± SD / paired t-test / significantly higher / 双数据集" 表述
+    - 四 panels 重定义（P/R/F1 柱状 / 三态金标准混淆 / 泛化落差 / 检索上下文分布）
+    - review_risks 更新（单次运行无显著性 / recall 受扩展影响 / 宽 CI / provider 不一致）
+    - source_data schema 对齐实际列
+
+11) outputs/figures/source_data/figure2_performance.csv — 补 dataset_id / dataset_role 列
+    （v3.0 退出标准要求）
+
+12) v1.1 指标归档 — outputs/confirmatory/archive_v1.1/（6 文件 + README）
+    - 来源 git c244af7^；NHANES 8 对/1 复证/cov 0.154；KNHANES 7/1/0.184；CHARLS 3/0/0.500
+    - README 注明两版对照用途 + v1.1 CI [1,1] 为退化值勿引述
+
+13) v1.2 泛化落差表 — outputs/confirmatory/generalization_gap_v1.2.csv + _summary.json
+    - 35 个共同 tested 对，28 对 gold3 同态（80%）；coverage 落差 0.006；precision 落差 0.0
+
+14) 基线读取说明 — outputs/baseline_predictions_valid.jsonl（284 行有效视图）
+    + outputs/README_baseline_predictions.md（4 代混存陷阱 + 正确过滤规则）
+    - 旧代行保留不删（失败史证据）
+
+15) 回归验证: pytest 15/15 PASS；handoff 门 OK；freshness 门 phase3 半边已转绿
+
+---- 二、LightRAG 索引重建（执行中）----
+
+背景: R4 实测发现——索引(2026-10-12 05:00 构建)的 B3 注记覆盖仅 126/1047=12%
+（提交声称 548/1054=52% 从未成立：多数关键词块在注记代码生效前插入、被 resume 跳过），
+且 18 个 r02/r03/r04 关联块注记含 v1.1 旧 flags。协议要求 sha 绑定真实，故重建。
+
+预检（双探针，均在独立探针目录验证后删除）:
+- 缓存命中验证: 未变更文档 0 次实时 LLM 调用（纯缓存 + 嵌入）；变更文档 ~2 次/篇
+- 吞吐: 未变更 3.0s/篇（608 篇）；已变更 10.9s/篇（439 篇）
+  → 预计约 2 小时（含收尾写入）
+- 连通性: DeepSeek 网关 PONG 3.0s；Ark 嵌入 dim=2048 0.5s；本地 qwen 8082 在线
+
+执行与结果（2026-10-14 22:42 完成，exit 0，耗时 ~4.9 小时）:
+- 命令: LIGHTRAG_WORKING_DIR=<rebuild> python scripts/build_lightrag_index.py（暖缓存 4669 条）
+- 日志: data/processed/index_rebuild_20261014.log
+- 新索引验收:
+  · 节点/边: 27,136 / 23,722（旧 23,826 / 18,062 —— 注记生效后 KG 更全）
+  · B3 注记覆盖: 548/1054 = 52%（与设计声明一致；旧索引实测仅 12%）
+  · doc 处理: 1054/1054 processed（旧索引 1044 + 13 failed —— 本次全部成功）
+  · 抽检: ev0005 注记已更新为 v1.2 flags（hba1c_elevated, hyperglycemia）；
+    ev_x0117 关键词注记就位；B5 伪造完成标记 0/1054
+  · 磁盘 936MB；llm 缓存增至 113MB（重建期间约 970 次实时调用）
+- swap: data/processed/lightrag_index → 新索引；旧索引备份
+  data/processed/lightrag_index_pre_r4_backup-20261014/（743MB，保留）
+- progress.json phase4: index_built_against_rules_sha256=5aee851d… 写入；stats 更新
+- **freshness 门复跑: exit 0 全绿**（phase3 / phase4 / current 三 sha 一致）
+
+后续（已完成）:
+- lightrag 基线在重建索引上重跑（2026-10-14 22:59，exit 0）：P=0.167 R=0.714 F1=0.270
+  （旧 0.161/0.714/0.263；与上一代仅 1 对翻转：crp_elevated×dr_npdr YES→NO）
+- 级联更新完成：baseline_summary_v12 / performance_by_dataset / figure2_performance /
+  README_baseline_predictions / valid 视图（284 行，每 (基线,对) 取文件顺序最后有效行）
+- state.json 追加事件；progress.json phase4/phase6 实况更新
+
+---- 三、明确未动的（按"不能随便修改"原则）----
+- 21 条规则的逻辑/评级（除 r22 引文字段外一行未改）
+- 三层确证 CSV / metrics JSON / 其余四张交付表 / figure1/4/5 source_data
+- baseline_predictions.jsonl 旧代行（保留失败史）
+- outputs/exploratory/ 隔离目录；figure3 NOT_COLLECTABLE 占位（留给 writer 决策）
+- .config/opencode 下的旧版 skill（非用户同步范围）
+
+---- 四、裁决记录（已结案）----
+- r22 引文升级问题【已裁决 2026-10-14：保守处理】: 现引前瞻队列 meta，但按分级纪律
+  B=系统综述/meta 的升级问题经作者确认维持 evidence_level=C / severity=low，不升级
+  （含考虑 PMID 28562529 报 null、文献方向异质性）。已记录于 analysis_plan §0.1-更正1。

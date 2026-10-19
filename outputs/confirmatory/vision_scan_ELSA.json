@@ -1,0 +1,4140 @@
+{
+  "cohort": "ELSA",
+  "root": "E:\\BaiduNetdiskDownload\\所有数据库\\02. ELSA 英国老龄化纵向研究\\Raw_data",
+  "files": 134,
+  "scanned": 134,
+  "candidates": [
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_derived_variables.dta",
+      "var": "bheopt5",
+      "rows": 12207,
+      "n_valid": 12207,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Not applicable": 12099,
+        "See INWAVE": 108
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_derived_variables.dta",
+      "var": "heoptgl",
+      "rows": 12207,
+      "n_valid": 12207,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "By Wave 1": 511,
+        "By Wave 2": 116,
+        "In Wave 1 only and did not report": 2646,
+        "In Wave 2 only and did not report": 107,
+        "Neither wave": 8827
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_derived_variables.dta",
+      "var": "heoptmd",
+      "rows": 12207,
+      "n_valid": 12207,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "By Wave 1": 193,
+        "By Wave 2": 102,
+        "In Wave 1 only and did not report": 2725,
+        "In Wave 2 only and did not report": 107,
+        "Neither wave": 9080
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_derived_variables.dta",
+      "var": "heoptca",
+      "rows": 12207,
+      "n_valid": 12207,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "By Wave 1": 1588,
+        "By Wave 2": 497,
+        "In Wave 1 only and did not report": 2333,
+        "In Wave 2 only and did not report": 103,
+        "Neither wave": 7686
+      }
+    },
+    {
+      "file": "wave2\\wave_2_derived_variables.dta",
+      "var": "bheopt5",
+      "rows": 12207,
+      "n_valid": 12207,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Not applicable": 12099,
+        "See INWAVE": 108
+      }
+    },
+    {
+      "file": "wave2\\wave_2_derived_variables.dta",
+      "var": "heoptgl",
+      "rows": 12207,
+      "n_valid": 12207,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "By Wave 1": 511,
+        "By Wave 2": 116,
+        "In Wave 1 only and did not report": 2646,
+        "In Wave 2 only and did not report": 107,
+        "Neither wave": 8827
+      }
+    },
+    {
+      "file": "wave2\\wave_2_derived_variables.dta",
+      "var": "heoptmd",
+      "rows": 12207,
+      "n_valid": 12207,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "By Wave 1": 193,
+        "By Wave 2": 102,
+        "In Wave 1 only and did not report": 2725,
+        "In Wave 2 only and did not report": 107,
+        "Neither wave": 9080
+      }
+    },
+    {
+      "file": "wave2\\wave_2_derived_variables.dta",
+      "var": "heoptca",
+      "rows": 12207,
+      "n_valid": 12207,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "By Wave 1": 1588,
+        "By Wave 2": 497,
+        "In Wave 1 only and did not report": 2333,
+        "In Wave 2 only and did not report": 103,
+        "Neither wave": 7686
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EIEye",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Excellent": 17,
+        "Fair": 41,
+        "Poor": 28,
+        "SPONTANEOUS: Registered or legally blind": 3,
+        "Very good": 46
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EiOpt1",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 13,
+        "Not mentioned": 122
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EiOpt3",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 6,
+        "Not mentioned": 129
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EiOpt4",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 32,
+        "Not mentioned": 103
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EiCat",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 11,
+        "Not applicable": 103,
+        "Yes": 21
+      }
+    },
+    {
+      "file": "wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EIEye",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Excellent": 17,
+        "Fair": 41,
+        "Poor": 28,
+        "SPONTANEOUS: Registered or legally blind": 3,
+        "Very good": 46
+      }
+    },
+    {
+      "file": "wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EiOpt1",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 13,
+        "Not mentioned": 122
+      }
+    },
+    {
+      "file": "wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EiOpt3",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 6,
+        "Not mentioned": 129
+      }
+    },
+    {
+      "file": "wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EiOpt4",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 32,
+        "Not mentioned": 103
+      }
+    },
+    {
+      "file": "wave2\\elsa_eol_w2_archive_v1.dta",
+      "var": "EiCat",
+      "rows": 135,
+      "n_valid": 135,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 11,
+        "Not applicable": 103,
+        "Yes": 21
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave0\\wave_0_1998_data.dta",
+      "var": "scomp601",
+      "rows": 8267,
+      "n_valid": 8267,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Item not applicable": 7892,
+        "no": 340,
+        "yes": 35
+      }
+    },
+    {
+      "file": "wave0\\wave_0_1998_data.dta",
+      "var": "scomp601",
+      "rows": 8267,
+      "n_valid": 8267,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Item not applicable": 7892,
+        "no": 340,
+        "yes": 35
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave0\\wave_0_1999_data.dta",
+      "var": "scomp601",
+      "rows": 3967,
+      "n_valid": 3967,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Item not applicable": 3830,
+        "no": 123,
+        "yes": 14
+      }
+    },
+    {
+      "file": "wave0\\wave_0_1999_data.dta",
+      "var": "scomp601",
+      "rows": 3967,
+      "n_valid": 3967,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Item not applicable": 3830,
+        "no": 123,
+        "yes": 14
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave0\\wave_0_2001_data.dta",
+      "var": "scomp61",
+      "rows": 7600,
+      "n_valid": 7600,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Item not applicable": 7195,
+        "No": 360,
+        "Yes": 45
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave0\\wave_0_2001_data.dta",
+      "var": "comvis",
+      "rows": 7600,
+      "n_valid": 7600,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Item not applicable": 7496,
+        "No": 100,
+        "Yes": 4
+      }
+    },
+    {
+      "file": "wave0\\wave_0_2001_data.dta",
+      "var": "scomp61",
+      "rows": 7600,
+      "n_valid": 7600,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Item not applicable": 7195,
+        "No": 360,
+        "Yes": 45
+      }
+    },
+    {
+      "file": "wave0\\wave_0_2001_data.dta",
+      "var": "comvis",
+      "rows": 7600,
+      "n_valid": 7600,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Item not applicable": 7496,
+        "No": 100,
+        "Yes": 4
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_life_history_data.dta",
+      "var": "rhpbx6",
+      "rows": 7855,
+      "n_valid": 7855,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Interviewer missed question/CAPI error": 4,
+        "Item not applicable": 5083,
+        "Mentioned": 261,
+        "Not mentioned": 2507
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_life_history_data.dta",
+      "var": "rhpbx6m",
+      "rows": 7855,
+      "n_valid": 7855,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "-2": 4,
+        "Item not applicable": 5083,
+        "Mentioned": 264,
+        "Not Mentioned": 2504
+      }
+    },
+    {
+      "file": "wave3\\wave_3_life_history_data.dta",
+      "var": "rhpbx6",
+      "rows": 7855,
+      "n_valid": 7855,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Interviewer missed question/CAPI error": 4,
+        "Item not applicable": 5083,
+        "Mentioned": 261,
+        "Not mentioned": 2507
+      }
+    },
+    {
+      "file": "wave3\\wave_3_life_history_data.dta",
+      "var": "rhpbx6m",
+      "rows": 7855,
+      "n_valid": 7855,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "-2": 4,
+        "Item not applicable": 5083,
+        "Mentioned": 264,
+        "Not Mentioned": 2504
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EIEye",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Don't know": 4,
+        "SPONTANEOUS: Registered or legally blind": 11,
+        "excellent,": 32,
+        "fair,": 101,
+        "or, poor?": 69,
+        "very good,": 158
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EiOpt1",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 9,
+        "Mentioned": 29,
+        "Not mentioned": 337
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EiOpt3",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 9,
+        "Mentioned": 22,
+        "Not mentioned": 344
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EiOpt4",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 9,
+        "Mentioned": 91,
+        "Not mentioned": 275
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EiCat",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 26,
+        "Not applicable": 284,
+        "Yes": 65
+      }
+    },
+    {
+      "file": "wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EIEye",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Don't know": 4,
+        "SPONTANEOUS: Registered or legally blind": 11,
+        "excellent,": 32,
+        "fair,": 101,
+        "or, poor?": 69,
+        "very good,": 158
+      }
+    },
+    {
+      "file": "wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EiOpt1",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 9,
+        "Mentioned": 29,
+        "Not mentioned": 337
+      }
+    },
+    {
+      "file": "wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EiOpt3",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 9,
+        "Mentioned": 22,
+        "Not mentioned": 344
+      }
+    },
+    {
+      "file": "wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EiOpt4",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 9,
+        "Mentioned": 91,
+        "Not mentioned": 275
+      }
+    },
+    {
+      "file": "wave3\\elsa_eol_w3_archive_v1.dta",
+      "var": "EiCat",
+      "rows": 375,
+      "n_valid": 375,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 26,
+        "Not applicable": 284,
+        "Yes": 65
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EIEye",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Don't know": 2,
+        "SPONTANEOUS: Registered or legally blind": 2,
+        "excellent,": 21,
+        "fair,": 70,
+        "or, poor?": 48,
+        "very good,": 99
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EiOpt1",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 5,
+        "Mentioned": 15,
+        "Not mentioned": 222
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EiOpt3",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 5,
+        "Mentioned": 10,
+        "Not mentioned": 227
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EiOpt4",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 5,
+        "Mentioned": 67,
+        "Not mentioned": 170
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EiCat",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don t know": 1,
+        "No": 20,
+        "Not applicable": 175,
+        "Yes": 46
+      }
+    },
+    {
+      "file": "wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EIEye",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Don't know": 2,
+        "SPONTANEOUS: Registered or legally blind": 2,
+        "excellent,": 21,
+        "fair,": 70,
+        "or, poor?": 48,
+        "very good,": 99
+      }
+    },
+    {
+      "file": "wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EiOpt1",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 5,
+        "Mentioned": 15,
+        "Not mentioned": 222
+      }
+    },
+    {
+      "file": "wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EiOpt3",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 5,
+        "Mentioned": 10,
+        "Not mentioned": 227
+      }
+    },
+    {
+      "file": "wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EiOpt4",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Don't know": 5,
+        "Mentioned": 67,
+        "Not mentioned": 170
+      }
+    },
+    {
+      "file": "wave4\\elsa_eol_w4_archive_v1.dta",
+      "var": "EiCat",
+      "rows": 242,
+      "n_valid": 242,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don t know": 1,
+        "No": 20,
+        "Not applicable": 175,
+        "Yes": 46
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\elsa_endoflife_w6archive.dta",
+      "var": "EIEye",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Don't know": 4,
+        "SPONTANEOUS: Registered or legally blind": 5,
+        "excellent,": 28,
+        "fair,": 56,
+        "or, poor?": 34,
+        "very good,": 113
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\elsa_endoflife_w6archive.dta",
+      "var": "EiOpt1",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 19,
+        "Not mentioned": 221
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\elsa_endoflife_w6archive.dta",
+      "var": "EiOpt3",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 13,
+        "Not mentioned": 227
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\elsa_endoflife_w6archive.dta",
+      "var": "EiOpt4",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 59,
+        "Not mentioned": 181
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\elsa_endoflife_w6archive.dta",
+      "var": "EiCat",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 19,
+        "Not applicable": 181,
+        "Yes": 40
+      }
+    },
+    {
+      "file": "wave6\\elsa_endoflife_w6archive.dta",
+      "var": "EIEye",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Don't know": 4,
+        "SPONTANEOUS: Registered or legally blind": 5,
+        "excellent,": 28,
+        "fair,": 56,
+        "or, poor?": 34,
+        "very good,": 113
+      }
+    },
+    {
+      "file": "wave6\\elsa_endoflife_w6archive.dta",
+      "var": "EiOpt1",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 19,
+        "Not mentioned": 221
+      }
+    },
+    {
+      "file": "wave6\\elsa_endoflife_w6archive.dta",
+      "var": "EiOpt3",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 13,
+        "Not mentioned": 227
+      }
+    },
+    {
+      "file": "wave6\\elsa_endoflife_w6archive.dta",
+      "var": "EiOpt4",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Mentioned": 59,
+        "Not mentioned": 181
+      }
+    },
+    {
+      "file": "wave6\\elsa_endoflife_w6archive.dta",
+      "var": "EiCat",
+      "rows": 240,
+      "n_valid": 240,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 19,
+        "Not applicable": 181,
+        "Yes": 40
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "heeye",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "... excellent,": 1876,
+        "Don't Know": 5,
+        "Refusal": 4,
+        "SPONTANEOUS: registered or legally blind": 56,
+        "fair,": 1448,
+        "good,": 4620,
+        "or, poor?": 435,
+        "very good,": 3655
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "hefrnd",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "... excellent,": 3043,
+        "Don't Know": 12,
+        "Not applicable": 227,
+        "Refusal": 5,
+        "fair,": 752,
+        "good,": 3449,
+        "or, poor?": 336,
+        "very good,": 4275
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "hepap",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "... excellent,": 2301,
+        "Don't Know": 12,
+        "Not applicable": 227,
+        "Refusal": 5,
+        "fair,": 999,
+        "good,": 4097,
+        "or, poor?": 394,
+        "very good,": 4064
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt1",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "... Glaucoma or suspected glaucoma?": 504,
+        "... cataracts?": 1339,
+        "... diabetic eye disease?": 129,
+        "... macular degeneration?": 167,
+        "Don't Know": 12,
+        "None of these": 9945,
+        "Refusal": 3
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt2",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "... Glaucoma or suspected glaucoma?": 7,
+        "... cataracts?": 222,
+        "... diabetic eye disease?": 31,
+        "... macular degeneration?": 24,
+        "Not applicable": 11815
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt3",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "... cataracts?": 25,
+        "... diabetic eye disease?": 2,
+        "... macular degeneration?": 2,
+        "Not applicable": 12070
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt4",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "... cataracts?": 2,
+        "Not applicable": 12097
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt5",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 1,
+      "values": {
+        "Not applicable": 12099
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "hecat",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 795,
+        "Not applicable": 10511,
+        "Yes": 793
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta",
+      "var": "hevsi",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "No": 192,
+        "Not applicable": 11829,
+        "Yes": 77
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "heeye",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "... excellent,": 1876,
+        "Don't Know": 5,
+        "Refusal": 4,
+        "SPONTANEOUS: registered or legally blind": 56,
+        "fair,": 1448,
+        "good,": 4620,
+        "or, poor?": 435,
+        "very good,": 3655
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "hefrnd",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "... excellent,": 3043,
+        "Don't Know": 12,
+        "Not applicable": 227,
+        "Refusal": 5,
+        "fair,": 752,
+        "good,": 3449,
+        "or, poor?": 336,
+        "very good,": 4275
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "hepap",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "... excellent,": 2301,
+        "Don't Know": 12,
+        "Not applicable": 227,
+        "Refusal": 5,
+        "fair,": 999,
+        "good,": 4097,
+        "or, poor?": 394,
+        "very good,": 4064
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt1",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "... Glaucoma or suspected glaucoma?": 504,
+        "... cataracts?": 1339,
+        "... diabetic eye disease?": 129,
+        "... macular degeneration?": 167,
+        "Don't Know": 12,
+        "None of these": 9945,
+        "Refusal": 3
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt2",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "... Glaucoma or suspected glaucoma?": 7,
+        "... cataracts?": 222,
+        "... diabetic eye disease?": 31,
+        "... macular degeneration?": 24,
+        "Not applicable": 11815
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt3",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "... cataracts?": 25,
+        "... diabetic eye disease?": 2,
+        "... macular degeneration?": 2,
+        "Not applicable": 12070
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt4",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "... cataracts?": 2,
+        "Not applicable": 12097
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "heopt5",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 1,
+      "values": {
+        "Not applicable": 12099
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "hecat",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 795,
+        "Not applicable": 10511,
+        "Yes": 793
+      }
+    },
+    {
+      "file": "wave1\\wave_1_core_data_v3.dta",
+      "var": "hevsi",
+      "rows": 12099,
+      "n_valid": 12099,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "No": 192,
+        "Not applicable": 11829,
+        "Yes": 77
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "headlco",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 3,
+        "Mentioned": 391,
+        "Not mentioned": 9875,
+        "Refusal": 5
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heeye",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1529,
+        "Don't Know": 7,
+        "Refusal": 5,
+        "SPONTANEOUS: Registered or legally blind": 54,
+        "fair,": 1027,
+        "good,": 3821,
+        "or, poor?": 300,
+        "very good,": 3531
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "hefrnd",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2177,
+        "Don't Know": 7,
+        "Item not applicable": 580,
+        "Refusal": 3,
+        "fair,": 514,
+        "good,": 3072,
+        "or, poor?": 165,
+        "very good,": 3756
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "hepap",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1751,
+        "Don't Know": 7,
+        "Item not applicable": 580,
+        "Refusal": 4,
+        "fair,": 702,
+        "good,": 3347,
+        "or, poor?": 219,
+        "very good,": 3664
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopcgl",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 9841,
+        "No": 29,
+        "Yes": 403
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopcmd",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 10010,
+        "No": 18,
+        "Yes": 245
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopcca",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 5,
+        "Item not applicable": 8990,
+        "No": 83,
+        "Yes": 1196
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopfgl",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 433,
+        "Item not applicable": 9841
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopfmd",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Item not applicable": 10010,
+        "Macular degeneration": 264
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopfca",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1284,
+        "Item not applicable": 8990
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopngl",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Item not applicable": 10245,
+        "Misdiagnosed": 9,
+        "Never had": 19,
+        "No longer has": 1
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopnmd",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Item not applicable": 10256,
+        "Misdiagnosed": 7,
+        "Never had": 9,
+        "No longer has": 2
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "headlco",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 3,
+        "Mentioned": 391,
+        "Not mentioned": 9875,
+        "Refusal": 5
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heeye",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1529,
+        "Don't Know": 7,
+        "Refusal": 5,
+        "SPONTANEOUS: Registered or legally blind": 54,
+        "fair,": 1027,
+        "good,": 3821,
+        "or, poor?": 300,
+        "very good,": 3531
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "hefrnd",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2177,
+        "Don't Know": 7,
+        "Item not applicable": 580,
+        "Refusal": 3,
+        "fair,": 514,
+        "good,": 3072,
+        "or, poor?": 165,
+        "very good,": 3756
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "hepap",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1751,
+        "Don't Know": 7,
+        "Item not applicable": 580,
+        "Refusal": 4,
+        "fair,": 702,
+        "good,": 3347,
+        "or, poor?": 219,
+        "very good,": 3664
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopcgl",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 9841,
+        "No": 29,
+        "Yes": 403
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopcmd",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 10010,
+        "No": 18,
+        "Yes": 245
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopcca",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 5,
+        "Item not applicable": 8990,
+        "No": 83,
+        "Yes": 1196
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopfgl",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 433,
+        "Item not applicable": 9841
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopfmd",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Item not applicable": 10010,
+        "Macular degeneration": 264
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopfca",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1284,
+        "Item not applicable": 8990
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopngl",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Item not applicable": 10245,
+        "Misdiagnosed": 9,
+        "Never had": 19,
+        "No longer has": 1
+      }
+    },
+    {
+      "file": "wave5\\wave_5_elsa_data_v4.dta",
+      "var": "heopnmd",
+      "rows": 10274,
+      "n_valid": 10274,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Item not applicable": 10256,
+        "Misdiagnosed": 7,
+        "Never had": 9,
+        "No longer has": 2
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heeye",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1356,
+        "Don't know": 4,
+        "Refusal": 3,
+        "SPONTANEOUS: Registered or legally blind": 24,
+        "fair,": 1113,
+        "good,": 3921,
+        "or, poor?": 326,
+        "very good,": 3024
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "hefrnd",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2035,
+        "Don't know": 3,
+        "Not applicable": 253,
+        "Refusal": 3,
+        "fair,": 582,
+        "good,": 3223,
+        "or, poor?": 216,
+        "very good,": 3456
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "hepap",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1565,
+        "Don't know": 3,
+        "Not applicable": 253,
+        "Refusal": 3,
+        "fair,": 817,
+        "good,": 3550,
+        "or, poor?": 288,
+        "very good,": 3292
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopcgl",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 20,
+        "Not applicable": 9451,
+        "Yes": 299
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopcmd",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 20,
+        "Not applicable": 9602,
+        "Yes": 149
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopcca",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 59,
+        "Not applicable": 8890,
+        "Yes": 821
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopfgl",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 320,
+        "Not applicable": 9451
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopfmd",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Macular degeneration": 169,
+        "Not applicable": 9602
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopfca",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 881,
+        "Not applicable": 8890
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopngl",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Misdiagnosed": 4,
+        "Never had": 16,
+        "Not applicable": 9751
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopnmd",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Misdiagnosed": 6,
+        "Never had": 13,
+        "No longer has": 1,
+        "Not applicable": 9751
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopnca",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously, but has now": 2,
+        "Misdiagnosed": 17,
+        "Never had": 39,
+        "No longer has": 1,
+        "Not applicable": 9712
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heeye",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1356,
+        "Don't know": 4,
+        "Refusal": 3,
+        "SPONTANEOUS: Registered or legally blind": 24,
+        "fair,": 1113,
+        "good,": 3921,
+        "or, poor?": 326,
+        "very good,": 3024
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "hefrnd",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2035,
+        "Don't know": 3,
+        "Not applicable": 253,
+        "Refusal": 3,
+        "fair,": 582,
+        "good,": 3223,
+        "or, poor?": 216,
+        "very good,": 3456
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "hepap",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1565,
+        "Don't know": 3,
+        "Not applicable": 253,
+        "Refusal": 3,
+        "fair,": 817,
+        "good,": 3550,
+        "or, poor?": 288,
+        "very good,": 3292
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopcgl",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 20,
+        "Not applicable": 9451,
+        "Yes": 299
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopcmd",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 20,
+        "Not applicable": 9602,
+        "Yes": 149
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopcca",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 59,
+        "Not applicable": 8890,
+        "Yes": 821
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopfgl",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 320,
+        "Not applicable": 9451
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopfmd",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Macular degeneration": 169,
+        "Not applicable": 9602
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopfca",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 881,
+        "Not applicable": 8890
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopngl",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Misdiagnosed": 4,
+        "Never had": 16,
+        "Not applicable": 9751
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopnmd",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Misdiagnosed": 6,
+        "Never had": 13,
+        "No longer has": 1,
+        "Not applicable": 9751
+      }
+    },
+    {
+      "file": "wave3\\wave_3_elsa_data_v4.dta",
+      "var": "heopnca",
+      "rows": 9771,
+      "n_valid": 9771,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously, but has now": 2,
+        "Misdiagnosed": 17,
+        "Never had": 39,
+        "No longer has": 1,
+        "Not applicable": 9712
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "HeEye",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "-8": 6,
+        "-9": 3,
+        "1": 1555,
+        "2": 3542,
+        "3": 4083,
+        "4": 1038,
+        "5": 320,
+        "Spont: registered/legally blind": 54
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "Hefrnd",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2170,
+        "Don't Know": 3,
+        "Item not applicable": 656,
+        "Refusal": 3,
+        "fair,": 571,
+        "good,": 3264,
+        "or, poor?": 202,
+        "very good,": 3732
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "Hepap",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1719,
+        "Don't Know": 4,
+        "Item not applicable": 656,
+        "Refusal": 3,
+        "fair,": 761,
+        "good,": 3573,
+        "or, poor?": 243,
+        "very good,": 3642
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopcgl",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 3,
+        "Item not applicable": 10154,
+        "No": 34,
+        "Yes": 410
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopcmd",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 4,
+        "Item not applicable": 10305,
+        "No": 32,
+        "Yes": 260
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopcca",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 3,
+        "Item not applicable": 9202,
+        "No": 95,
+        "Yes": 1301
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopfgl",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 447,
+        "Item not applicable": 10154
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopfmd",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Item not applicable": 10305,
+        "Macular degeneration": 296
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopfca",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1399,
+        "Item not applicable": 9202
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopngl",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Item not applicable": 10567,
+        "Misdiagnosed": 11,
+        "Never had": 17,
+        "No longer has": 6
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopnmd",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 10569,
+        "Misdiagnosed": 6,
+        "Never had": 20,
+        "No longer has": 5
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopnca",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously, but has now": 3,
+        "Item not applicable": 10506,
+        "Misdiagnosed": 17,
+        "Never had": 58,
+        "No longer has": 17
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "HeEye",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "-8": 6,
+        "-9": 3,
+        "1": 1555,
+        "2": 3542,
+        "3": 4083,
+        "4": 1038,
+        "5": 320,
+        "Spont: registered/legally blind": 54
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "Hefrnd",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2170,
+        "Don't Know": 3,
+        "Item not applicable": 656,
+        "Refusal": 3,
+        "fair,": 571,
+        "good,": 3264,
+        "or, poor?": 202,
+        "very good,": 3732
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "Hepap",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1719,
+        "Don't Know": 4,
+        "Item not applicable": 656,
+        "Refusal": 3,
+        "fair,": 761,
+        "good,": 3573,
+        "or, poor?": 243,
+        "very good,": 3642
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopcgl",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 3,
+        "Item not applicable": 10154,
+        "No": 34,
+        "Yes": 410
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopcmd",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 4,
+        "Item not applicable": 10305,
+        "No": 32,
+        "Yes": 260
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopcca",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 3,
+        "Item not applicable": 9202,
+        "No": 95,
+        "Yes": 1301
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopfgl",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 447,
+        "Item not applicable": 10154
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopfmd",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Item not applicable": 10305,
+        "Macular degeneration": 296
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopfca",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1399,
+        "Item not applicable": 9202
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopngl",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Item not applicable": 10567,
+        "Misdiagnosed": 11,
+        "Never had": 17,
+        "No longer has": 6
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopnmd",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 10569,
+        "Misdiagnosed": 6,
+        "Never had": 20,
+        "No longer has": 5
+      }
+    },
+    {
+      "file": "wave6\\wave_6_elsa_data_v2.dta",
+      "var": "heopnca",
+      "rows": 10601,
+      "n_valid": 10601,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously, but has now": 3,
+        "Item not applicable": 10506,
+        "Misdiagnosed": 17,
+        "Never had": 58,
+        "No longer has": 17
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "HeEye",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1200,
+        "Don't know": 3,
+        "Refused": 1,
+        "SPONTANEOUS: Registered or legally blind": 18,
+        "fair,": 815,
+        "good,": 2823,
+        "or, poor?": 218,
+        "very good,": 2508
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "Hefrnd",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1742,
+        "Don't know": 2,
+        "Not applicable": 395,
+        "Refused": 1,
+        "fair,": 403,
+        "good,": 2312,
+        "or, poor?": 122,
+        "very good,": 2609
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "Hepap",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1367,
+        "Don't know": 2,
+        "Not applicable": 395,
+        "Refused": 1,
+        "fair,": 577,
+        "good,": 2580,
+        "or, poor?": 182,
+        "very good,": 2482
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "HECAT",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 153,
+        "Not applicable": 6362,
+        "Yes": 1070
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "HECATN",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Both": 27,
+        "NHS": 892,
+        "Not applicable": 6516,
+        "Privately/Insurance": 151
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "headlsp",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "Mentioned": 326,
+        "Not mentioned": 7258,
+        "Refused": 1
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "cfwhteye",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Mentioned": 30,
+        "Not applicable": 7244,
+        "Not mentioned": 312
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "cfwhtmeye",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Mentioned": 31,
+        "Not applicable": 7246,
+        "Not mentioned": 309
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "SCINNO05",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "0": 5951,
+        "1": 91,
+        "Not applicable": 1193,
+        "Refused": 351
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "SCINNO06",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "0": 5973,
+        "1": 69,
+        "Not applicable": 1193,
+        "Refused": 351
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "HeEye",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1200,
+        "Don't know": 3,
+        "Refused": 1,
+        "SPONTANEOUS: Registered or legally blind": 18,
+        "fair,": 815,
+        "good,": 2823,
+        "or, poor?": 218,
+        "very good,": 2508
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "Hefrnd",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1742,
+        "Don't know": 2,
+        "Not applicable": 395,
+        "Refused": 1,
+        "fair,": 403,
+        "good,": 2312,
+        "or, poor?": 122,
+        "very good,": 2609
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "Hepap",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1367,
+        "Don't know": 2,
+        "Not applicable": 395,
+        "Refused": 1,
+        "fair,": 577,
+        "good,": 2580,
+        "or, poor?": 182,
+        "very good,": 2482
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "HECAT",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 153,
+        "Not applicable": 6362,
+        "Yes": 1070
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "HECATN",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Both": 27,
+        "NHS": 892,
+        "Not applicable": 6516,
+        "Privately/Insurance": 151
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "headlsp",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "Mentioned": 326,
+        "Not mentioned": 7258,
+        "Refused": 1
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "cfwhteye",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Mentioned": 30,
+        "Not applicable": 7244,
+        "Not mentioned": 312
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "cfwhtmeye",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Mentioned": 31,
+        "Not applicable": 7246,
+        "Not mentioned": 309
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "SCINNO05",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "0": 5951,
+        "1": 91,
+        "Not applicable": 1193,
+        "Refused": 351
+      }
+    },
+    {
+      "file": "wave10\\wave_10_elsa_data_eul_v1.dta",
+      "var": "SCINNO06",
+      "rows": 7586,
+      "n_valid": 7586,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "0": 5973,
+        "1": 69,
+        "Not applicable": 1193,
+        "Refused": 351
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "HeEye",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "...excellent,": 1467,
+        "Don't Know": 9,
+        "Spont: registered/legally blind": 48,
+        "fair,": 969,
+        "good,": 3632,
+        "or, poor?": 256,
+        "very good,": 3285
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "Hefrnd",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "...excellent,": 2086,
+        "Don't Know": 6,
+        "Item not applicable": 638,
+        "fair,": 477,
+        "good,": 2839,
+        "or, poor?": 170,
+        "very good,": 3450
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "Hepap",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "...excellent,": 1710,
+        "Don't Know": 3,
+        "Item not applicable": 638,
+        "fair,": 591,
+        "good,": 3128,
+        "or, poor?": 198,
+        "very good,": 3398
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "heopcgl",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 9238,
+        "No": 44,
+        "Yes": 383
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "heopcmd",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 2,
+        "Item not applicable": 9369,
+        "No": 29,
+        "Yes": 266
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "heopcca",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 8166,
+        "No": 92,
+        "Yes": 1407
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "heopfgl",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 428,
+        "Item not applicable": 9238
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "heopfmd",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Item not applicable": 9369,
+        "Macular degeneration": 297
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "heopfca",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1500,
+        "Item not applicable": 8166
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "heopngl",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously, but has now": 2,
+        "Item not applicable": 9622,
+        "Misdiagnosed": 13,
+        "Never had": 21,
+        "No longer has": 8
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "heopnmd",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Item not applicable": 9637,
+        "Misdiagnosed": 13,
+        "Never had": 14,
+        "No longer has": 2
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave7\\wave_7_elsa_data.dta",
+      "var": "heopnca",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Did not have previously, but has now": 1,
+        "Don't Know": 1,
+        "Item not applicable": 9574,
+        "Misdiagnosed": 17,
+        "Never had": 51,
+        "No longer has": 22
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "HeEye",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "...excellent,": 1467,
+        "Don't Know": 9,
+        "Spont: registered/legally blind": 48,
+        "fair,": 969,
+        "good,": 3632,
+        "or, poor?": 256,
+        "very good,": 3285
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "Hefrnd",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "...excellent,": 2086,
+        "Don't Know": 6,
+        "Item not applicable": 638,
+        "fair,": 477,
+        "good,": 2839,
+        "or, poor?": 170,
+        "very good,": 3450
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "Hepap",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "...excellent,": 1710,
+        "Don't Know": 3,
+        "Item not applicable": 638,
+        "fair,": 591,
+        "good,": 3128,
+        "or, poor?": 198,
+        "very good,": 3398
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "heopcgl",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 9238,
+        "No": 44,
+        "Yes": 383
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "heopcmd",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 2,
+        "Item not applicable": 9369,
+        "No": 29,
+        "Yes": 266
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "heopcca",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 1,
+        "Item not applicable": 8166,
+        "No": 92,
+        "Yes": 1407
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "heopfgl",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 428,
+        "Item not applicable": 9238
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "heopfmd",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Item not applicable": 9369,
+        "Macular degeneration": 297
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "heopfca",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1500,
+        "Item not applicable": 8166
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "heopngl",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously, but has now": 2,
+        "Item not applicable": 9622,
+        "Misdiagnosed": 13,
+        "Never had": 21,
+        "No longer has": 8
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "heopnmd",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Item not applicable": 9637,
+        "Misdiagnosed": 13,
+        "Never had": 14,
+        "No longer has": 2
+      }
+    },
+    {
+      "file": "wave7\\wave_7_elsa_data.dta",
+      "var": "heopnca",
+      "rows": 9666,
+      "n_valid": 9666,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Did not have previously, but has now": 1,
+        "Don't Know": 1,
+        "Item not applicable": 9574,
+        "Misdiagnosed": 17,
+        "Never had": 51,
+        "No longer has": 22
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heeye",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't Know": 6,
+        "Excellent": 1339,
+        "Fair": 895,
+        "Good": 3269,
+        "Poor": 252,
+        "Refused": 1,
+        "SPONTANEOUS: Registered or legally blind": 35,
+        "Very good": 2939
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "hefrnd",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't Know": 2,
+        "Excellent": 1829,
+        "Fair": 438,
+        "Good": 2738,
+        "Not applicable": 575,
+        "Poor": 152,
+        "Refused": 1,
+        "Very good": 3001
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "hepap",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't Know": 2,
+        "Excellent": 1500,
+        "Fair": 567,
+        "Good": 2987,
+        "Not applicable": 575,
+        "Poor": 199,
+        "Refused": 1,
+        "Very good": 2905
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopcgl",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 27,
+        "Not applicable": 8373,
+        "Yes": 336
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopcmd",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 27,
+        "Not applicable": 8414,
+        "Yes": 295
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopcca",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 3,
+        "No": 138,
+        "Not applicable": 6999,
+        "Yes": 1596
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopfgl",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 363,
+        "Not applicable": 8373
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopfmd",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Macular degeneration": 322,
+        "Not applicable": 8414
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopfca",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1737,
+        "Not applicable": 6999
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopngl",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously but has now": 1,
+        "Misdiagnosed": 7,
+        "Never had": 14,
+        "No longer has": 5,
+        "Not applicable": 8709
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopnmd",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Misdiagnosed": 6,
+        "Never had": 19,
+        "No longer has": 2,
+        "Not applicable": 8709
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopnca",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Did not have previously but has now": 3,
+        "Don't Know": 1,
+        "Misdiagnosed": 21,
+        "Never had": 75,
+        "No longer has": 38,
+        "Not applicable": 8598
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heeye",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't Know": 6,
+        "Excellent": 1339,
+        "Fair": 895,
+        "Good": 3269,
+        "Poor": 252,
+        "Refused": 1,
+        "SPONTANEOUS: Registered or legally blind": 35,
+        "Very good": 2939
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "hefrnd",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't Know": 2,
+        "Excellent": 1829,
+        "Fair": 438,
+        "Good": 2738,
+        "Not applicable": 575,
+        "Poor": 152,
+        "Refused": 1,
+        "Very good": 3001
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "hepap",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't Know": 2,
+        "Excellent": 1500,
+        "Fair": 567,
+        "Good": 2987,
+        "Not applicable": 575,
+        "Poor": 199,
+        "Refused": 1,
+        "Very good": 2905
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopcgl",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 27,
+        "Not applicable": 8373,
+        "Yes": 336
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopcmd",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 27,
+        "Not applicable": 8414,
+        "Yes": 295
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopcca",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't Know": 3,
+        "No": 138,
+        "Not applicable": 6999,
+        "Yes": 1596
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopfgl",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 363,
+        "Not applicable": 8373
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopfmd",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Macular degeneration": 322,
+        "Not applicable": 8414
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopfca",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1737,
+        "Not applicable": 6999
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopngl",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously but has now": 1,
+        "Misdiagnosed": 7,
+        "Never had": 14,
+        "No longer has": 5,
+        "Not applicable": 8709
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopnmd",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Misdiagnosed": 6,
+        "Never had": 19,
+        "No longer has": 2,
+        "Not applicable": 8709
+      }
+    },
+    {
+      "file": "wave9\\wave_9_elsa_data_eul_v1.dta",
+      "var": "heopnca",
+      "rows": 8736,
+      "n_valid": 8736,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Did not have previously but has now": 3,
+        "Don't Know": 1,
+        "Misdiagnosed": 21,
+        "Never had": 75,
+        "No longer has": 38,
+        "Not applicable": 8598
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heeye",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 6,
+        "Excellent": 1224,
+        "Fair": 798,
+        "Good": 3156,
+        "Poor": 287,
+        "Refused": 1,
+        "SPONTANEOUS: Registered or legally blind": 37,
+        "Very good": 2936
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "hefrnd",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "Don't know": 1,
+        "Excellent": 1722,
+        "Fair": 461,
+        "Good": 2527,
+        "Not applicable": 495,
+        "Poor": 179,
+        "Very good": 3060
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "hepap",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "Don't know": 2,
+        "Excellent": 1413,
+        "Fair": 559,
+        "Good": 2793,
+        "Not applicable": 495,
+        "Poor": 206,
+        "Very good": 2977
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopcgl",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 29,
+        "Not applicable": 8058,
+        "Yes": 357
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopcmd",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 2,
+        "No": 14,
+        "Not applicable": 8153,
+        "Yes": 276
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopcca",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 3,
+        "No": 115,
+        "Not applicable": 6901,
+        "Yes": 1426
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopfgl",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 387,
+        "Not applicable": 8058
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopfmd",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Macular degeneration": 292,
+        "Not applicable": 8153
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopfca",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1544,
+        "Not applicable": 6901
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopngl",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Misdiagnosed": 10,
+        "Never had": 14,
+        "No longer has": 5,
+        "Not applicable": 8416
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopnmd",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Misdiagnosed": 2,
+        "Never had": 10,
+        "No longer has": 2,
+        "Not applicable": 8431
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopnca",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously but has now": 1,
+        "Misdiagnosed": 16,
+        "Never had": 69,
+        "No longer has": 29,
+        "Not applicable": 8330
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heeye",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 6,
+        "Excellent": 1224,
+        "Fair": 798,
+        "Good": 3156,
+        "Poor": 287,
+        "Refused": 1,
+        "SPONTANEOUS: Registered or legally blind": 37,
+        "Very good": 2936
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "hefrnd",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "Don't know": 1,
+        "Excellent": 1722,
+        "Fair": 461,
+        "Good": 2527,
+        "Not applicable": 495,
+        "Poor": 179,
+        "Very good": 3060
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "hepap",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "Don't know": 2,
+        "Excellent": 1413,
+        "Fair": 559,
+        "Good": 2793,
+        "Not applicable": 495,
+        "Poor": 206,
+        "Very good": 2977
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopcgl",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "No": 29,
+        "Not applicable": 8058,
+        "Yes": 357
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopcmd",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 2,
+        "No": 14,
+        "Not applicable": 8153,
+        "Yes": 276
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopcca",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 3,
+        "No": 115,
+        "Not applicable": 6901,
+        "Yes": 1426
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopfgl",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Glaucoma or suspected glaucoma": 387,
+        "Not applicable": 8058
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopfmd",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Macular degeneration": 292,
+        "Not applicable": 8153
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopfca",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Cataracts": 1544,
+        "Not applicable": 6901
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopngl",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Misdiagnosed": 10,
+        "Never had": 14,
+        "No longer has": 5,
+        "Not applicable": 8416
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopnmd",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Misdiagnosed": 2,
+        "Never had": 10,
+        "No longer has": 2,
+        "Not applicable": 8431
+      }
+    },
+    {
+      "file": "wave8\\wave_8_elsa_data_eul_v2.dta",
+      "var": "heopnca",
+      "rows": 8445,
+      "n_valid": 8445,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Did not have previously but has now": 1,
+        "Misdiagnosed": 16,
+        "Never had": 69,
+        "No longer has": 29,
+        "Not applicable": 8330
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+      "var": "Heeye",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1375,
+        "Don't know": 5,
+        "Refusal": 1,
+        "SPONTANEOUS: Registered or legally blind": 34,
+        "fair,": 1002,
+        "good,": 3642,
+        "or, poor?": 301,
+        "very good,": 3072
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+      "var": "Hefrnd",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2098,
+        "Don't know": 2,
+        "Not applicable": 164,
+        "Refusal": 1,
+        "fair,": 569,
+        "good,": 2974,
+        "or, poor?": 243,
+        "very good,": 3381
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+      "var": "Hepap",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1601,
+        "Don't know": 2,
+        "Not applicable": 164,
+        "Refusal": 1,
+        "fair,": 770,
+        "good,": 3285,
+        "or, poor?": 277,
+        "very good,": 3332
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+      "var": "HeOpN1",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Did not have previously, but has now": 1,
+        "Never had": 18,
+        "No longer has": 7,
+        "Not applicable": 9406
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+      "var": "HeOpN3",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Never had": 12,
+        "Not applicable": 9420
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+      "var": "HeOpN4",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Did not have previously, but has now": 3,
+        "Never had": 35,
+        "No longer has": 14,
+        "Not applicable": 9380
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+      "var": "Hedreye",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 258,
+        "Not applicable": 8830,
+        "Yes": 344
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+      "var": "Hecat",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 5,
+        "No": 1034,
+        "Not applicable": 7847,
+        "Yes": 546
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave2\\wave_2_core_data_v4.dta",
+      "var": "HeVsi",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 70,
+        "Not applicable": 9333,
+        "Yes": 29
+      }
+    },
+    {
+      "file": "wave2\\wave_2_core_data_v4.dta",
+      "var": "Heeye",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1375,
+        "Don't know": 5,
+        "Refusal": 1,
+        "SPONTANEOUS: Registered or legally blind": 34,
+        "fair,": 1002,
+        "good,": 3642,
+        "or, poor?": 301,
+        "very good,": 3072
+      }
+    },
+    {
+      "file": "wave2\\wave_2_core_data_v4.dta",
+      "var": "Hefrnd",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2098,
+        "Don't know": 2,
+        "Not applicable": 164,
+        "Refusal": 1,
+        "fair,": 569,
+        "good,": 2974,
+        "or, poor?": 243,
+        "very good,": 3381
+      }
+    },
+    {
+      "file": "wave2\\wave_2_core_data_v4.dta",
+      "var": "Hepap",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1601,
+        "Don't know": 2,
+        "Not applicable": 164,
+        "Refusal": 1,
+        "fair,": 770,
+        "good,": 3285,
+        "or, poor?": 277,
+        "very good,": 3332
+      }
+    },
+    {
+      "file": "wave2\\wave_2_core_data_v4.dta",
+      "var": "HeOpN1",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Did not have previously, but has now": 1,
+        "Never had": 18,
+        "No longer has": 7,
+        "Not applicable": 9406
+      }
+    },
+    {
+      "file": "wave2\\wave_2_core_data_v4.dta",
+      "var": "HeOpN3",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Never had": 12,
+        "Not applicable": 9420
+      }
+    },
+    {
+      "file": "wave2\\wave_2_core_data_v4.dta",
+      "var": "HeOpN4",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Did not have previously, but has now": 3,
+        "Never had": 35,
+        "No longer has": 14,
+        "Not applicable": 9380
+      }
+    },
+    {
+      "file": "wave2\\wave_2_core_data_v4.dta",
+      "var": "Hedreye",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 258,
+        "Not applicable": 8830,
+        "Yes": 344
+      }
+    },
+    {
+      "file": "wave2\\wave_2_core_data_v4.dta",
+      "var": "Hecat",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 5,
+        "No": 1034,
+        "Not applicable": 7847,
+        "Yes": 546
+      }
+    },
+    {
+      "file": "wave2\\wave_2_core_data_v4.dta",
+      "var": "HeVsi",
+      "rows": 9432,
+      "n_valid": 9432,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 70,
+        "Not applicable": 9333,
+        "Yes": 29
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heeye",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1718,
+        "Don't Know": 3,
+        "Refusal": 5,
+        "SPONTANEOUS: Registered or legally blind": 52,
+        "fair,": 1094,
+        "good,": 4166,
+        "or, poor?": 319,
+        "very good,": 3693
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "hefrnd",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2621,
+        "Don't Know": 3,
+        "Item not applicable": 492,
+        "Refusal": 5,
+        "fair,": 586,
+        "good,": 3228,
+        "or, poor?": 200,
+        "very good,": 3915
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "hepap",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2042,
+        "Don't Know": 3,
+        "Item not applicable": 492,
+        "Refusal": 5,
+        "fair,": 801,
+        "good,": 3569,
+        "or, poor?": 264,
+        "very good,": 3874
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopcgl",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10656,
+        "No": 21,
+        "Yes": 299
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopcmd",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10773,
+        "No": 19,
+        "Yes": 184
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopcca",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Don't Know": 1,
+        "Item not applicable": 9927,
+        "No": 55,
+        "Yes": 993
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopfgl",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Glaucoma or suspected glaucoma": 320,
+        "Item not applicable": 10656
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopfmd",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10773,
+        "Macular degeneration": 203
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopfca",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Cataracts": 1049,
+        "Item not applicable": 9927
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopngl",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10955,
+        "Misdiagnosed": 7,
+        "Never had": 13,
+        "No longer has": 1
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopnmd",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10957,
+        "Misdiagnosed": 4,
+        "Never had": 14,
+        "No longer has": 1
+      }
+    },
+    {
+      "file": "UKDA-5050-stata\\stata\\stata13_se\\wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopnca",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Did not have previously, but has now": 2,
+        "Don't Know": 1,
+        "Item not applicable": 10921,
+        "Misdiagnosed": 11,
+        "Never had": 37,
+        "No longer has": 4
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heeye",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 1718,
+        "Don't Know": 3,
+        "Refusal": 5,
+        "SPONTANEOUS: Registered or legally blind": 52,
+        "fair,": 1094,
+        "good,": 4166,
+        "or, poor?": 319,
+        "very good,": 3693
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "hefrnd",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2621,
+        "Don't Know": 3,
+        "Item not applicable": 492,
+        "Refusal": 5,
+        "fair,": 586,
+        "good,": 3228,
+        "or, poor?": 200,
+        "very good,": 3915
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "hepap",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "...excellent,": 2042,
+        "Don't Know": 3,
+        "Item not applicable": 492,
+        "Refusal": 5,
+        "fair,": 801,
+        "good,": 3569,
+        "or, poor?": 264,
+        "very good,": 3874
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopcgl",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10656,
+        "No": 21,
+        "Yes": 299
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopcmd",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10773,
+        "No": 19,
+        "Yes": 184
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopcca",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Don't Know": 1,
+        "Item not applicable": 9927,
+        "No": 55,
+        "Yes": 993
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopfgl",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Glaucoma or suspected glaucoma": 320,
+        "Item not applicable": 10656
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopfmd",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10773,
+        "Macular degeneration": 203
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopfca",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Cataracts": 1049,
+        "Item not applicable": 9927
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopngl",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10955,
+        "Misdiagnosed": 7,
+        "Never had": 13,
+        "No longer has": 1
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopnmd",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Item not applicable": 10957,
+        "Misdiagnosed": 4,
+        "Never had": 14,
+        "No longer has": 1
+      }
+    },
+    {
+      "file": "wave4\\wave_4_elsa_data_v3.dta",
+      "var": "heopnca",
+      "rows": 11050,
+      "n_valid": 11050,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "Capi/Interview Error": 74,
+        "Did not have previously, but has now": 2,
+        "Don't Know": 1,
+        "Item not applicable": 10921,
+        "Misdiagnosed": 11,
+        "Never had": 37,
+        "No longer has": 4
+      }
+    }
+  ],
+  "notes": [],
+  "files_with_candidates": 38
+}

@@ -1,0 +1,1944 @@
+{
+  "min_n": 200,
+  "cohorts": [
+    "CLHLS",
+    "CRELES",
+    "ELSA",
+    "HRS",
+    "KLoSA",
+    "LASI",
+    "MHAS",
+    "SHARE"
+  ],
+  "per_cohort": {
+    "CLHLS": {
+      "rows": 72744,
+      "flags_present": [
+        "age",
+        "alcohol_intake",
+        "blindness_selfreport",
+        "cataract_any",
+        "current_smoking",
+        "diabetes",
+        "glaucoma_selfreport",
+        "hypertension",
+        "implicat",
+        "mergeid",
+        "sex",
+        "vision_impairment_moderate",
+        "vision_impairment_severe",
+        "vision_rating_ordinal",
+        "wave",
+        "weight_kg"
+      ]
+    },
+    "CRELES": {
+      "rows": 5191,
+      "flags_present": [
+        "age",
+        "blindness_selfreport",
+        "bmi",
+        "bmi_high_25",
+        "bmi_high_30",
+        "cataract_any",
+        "cataract_surgery",
+        "current_smoking",
+        "diabetes",
+        "glaucoma_selfreport",
+        "hypertension",
+        "imc2",
+        "implicat",
+        "mergeid",
+        "sex",
+        "uses_glasses",
+        "wave"
+      ]
+    },
+    "ELSA": {
+      "rows": 9771,
+      "flags_present": [
+        "age",
+        "amd_any",
+        "blindness_selfreport",
+        "cataract_any",
+        "current_smoking",
+        "glaucoma_selfreport",
+        "implicat",
+        "mergeid",
+        "sex",
+        "vision_impairment_moderate",
+        "vision_impairment_severe",
+        "vision_rating_distance",
+        "vision_rating_near",
+        "vision_rating_ordinal",
+        "wave"
+      ]
+    },
+    "HRS": {
+      "rows": 42946,
+      "flags_present": [
+        "age",
+        "blindness_selfreport",
+        "cataract_surgery",
+        "current_smoking",
+        "diabetes",
+        "ever_smoked",
+        "glaucoma_selfreport",
+        "hypertension",
+        "implicat",
+        "sex",
+        "vision_impairment_moderate",
+        "vision_impairment_severe",
+        "vision_rating_ordinal",
+        "wave"
+      ]
+    },
+    "KLoSA": {
+      "rows": 40406,
+      "flags_present": [
+        "age",
+        "bmi",
+        "bmi_high_25",
+        "bmi_high_30",
+        "cataract_surgery",
+        "current_smoking",
+        "diabetes",
+        "glaucoma_treated",
+        "implicat",
+        "mergeid",
+        "sex",
+        "vision_impairment_moderate",
+        "vision_impairment_severe",
+        "vision_rating_ordinal",
+        "wave"
+      ]
+    },
+    "LASI": {
+      "rows": 73408,
+      "flags_present": [
+        "age",
+        "cataract_any",
+        "diabetes",
+        "eye_problem_any",
+        "glaucoma_selfreport",
+        "hypertension",
+        "implicat",
+        "mergeid",
+        "myopia_selfreport",
+        "presbyopia_selfreport",
+        "sex",
+        "vision_impairment_moderate",
+        "vision_impairment_severe",
+        "vision_rating_distance",
+        "vision_rating_near",
+        "vision_rating_ordinal",
+        "wave"
+      ]
+    },
+    "MHAS": {
+      "rows": 78537,
+      "flags_present": [
+        "age",
+        "blindness_selfreport",
+        "implicat",
+        "sex",
+        "vision_impairment_moderate",
+        "vision_impairment_severe",
+        "vision_rating_ordinal",
+        "wave"
+      ]
+    },
+    "SHARE": {
+      "rows": 1693515,
+      "flags_present": [
+        "age",
+        "alcohol_intake",
+        "bmi",
+        "bmi_high_25",
+        "bmi_high_30",
+        "cataract_any",
+        "current_smoking",
+        "diabetes",
+        "hypertension",
+        "implicat",
+        "sex",
+        "vision_impairment_moderate",
+        "vision_impairment_severe",
+        "vision_imputed",
+        "vision_rating_ordinal",
+        "wave"
+      ]
+    }
+  },
+  "matrix": {
+    "r01_uric_acid_x_cataract": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 16989,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 5102,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 8091,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 73408,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 1686370,
+        "construct_shifted_only": false
+      }
+    },
+    "r02_hyperglycemia_x_cataract": {
+      "CLHLS": {
+        "testable": true,
+        "exposure_flag": "hyperglycemia",
+        "exposure_col": "diabetes",
+        "exposure_n": 16858,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 16989,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": true,
+        "exposure_flag": "hyperglycemia",
+        "exposure_col": "diabetes",
+        "exposure_n": 5167,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 5102,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 8091,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": "hyperglycemia",
+        "exposure_col": "diabetes",
+        "exposure_n": 42630,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": "hyperglycemia",
+        "exposure_col": "diabetes",
+        "exposure_n": 30469,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": true,
+        "exposure_flag": "hyperglycemia",
+        "exposure_col": "diabetes",
+        "exposure_n": 73204,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 73408,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": true,
+        "exposure_flag": "hyperglycemia",
+        "exposure_col": "diabetes",
+        "exposure_n": 1686370,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 1686370,
+        "construct_shifted_only": false
+      }
+    },
+    "r03_hba1c_x_retinopathy_any": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 16858,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 5167,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 42630,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 30469,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 73204,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 1686370,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r04_hba1c_x_dr_pdr": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 16858,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 5167,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 42630,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 30469,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 73204,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": "hba1c_elevated",
+        "exposure_col": "diabetes",
+        "exposure_n": 1686370,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r05_dyslipidemia_x_amd_late": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "amd_late",
+        "outcome_col": "amd_any",
+        "outcome_n": 8051,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r06_crp_x_amd_late": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "amd_late",
+        "outcome_col": "amd_any",
+        "outcome_n": 8051,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r07_vitamind_x_dr_npdr": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r08_low_antioxidant_x_cataract": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 16989,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 5102,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 8091,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 73408,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 1686370,
+        "construct_shifted_only": false
+      }
+    },
+    "r09_mediterranean_diet_x_amd_late": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "amd_late",
+        "outcome_col": "amd_any",
+        "outcome_n": 8051,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r10_smoking_x_cataract": {
+      "CLHLS": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 18128,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 16989,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 3572,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 5102,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 4710,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 8091,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 28723,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 40404,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 73408,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 711145,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 1686370,
+        "construct_shifted_only": false
+      }
+    },
+    "r11_smoking_x_amd_late": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 18128,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 3572,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 4710,
+        "outcome_flag": "amd_late",
+        "outcome_col": "amd_any",
+        "outcome_n": 8051,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 28723,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 40404,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 711145,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r12_alcohol_x_cataract": {
+      "CLHLS": {
+        "testable": true,
+        "exposure_flag": "alcohol_intake",
+        "exposure_col": "alcohol_intake",
+        "exposure_n": 9083,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 16989,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 5102,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 8091,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 73408,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": true,
+        "exposure_flag": "alcohol_intake",
+        "exposure_col": "alcohol_intake",
+        "exposure_n": 620100,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 1686370,
+        "construct_shifted_only": false
+      }
+    },
+    "r13_bmi_x_cataract": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 16989,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": true,
+        "exposure_flag": "bmi_high",
+        "exposure_col": "bmi_high_30",
+        "exposure_n": 4963,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 5102,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 8091,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": "bmi_high",
+        "exposure_col": "bmi_high_25",
+        "exposure_n": 39459,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 73408,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": true,
+        "exposure_flag": "bmi_high",
+        "exposure_col": "bmi_high_30",
+        "exposure_n": 1693515,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 1686370,
+        "construct_shifted_only": false
+      }
+    },
+    "r14_lead_x_cataract": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 16989,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 5102,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 8091,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 73408,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 1686370,
+        "construct_shifted_only": false
+      }
+    },
+    "r16_pm25_x_glaucoma_iop_cdr": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r17_pm25_x_amd_early": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "amd_early",
+        "outcome_col": "amd_any",
+        "outcome_n": 8051,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r18_uv_x_cataract": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 16989,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 5102,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 8091,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 73408,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "cataract_any",
+        "outcome_col": "cataract_any",
+        "outcome_n": 1686370,
+        "construct_shifted_only": false
+      }
+    },
+    "r22_bmi_x_retinopathy": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": "bmi_high",
+        "exposure_col": "bmi_high_30",
+        "exposure_n": 4963,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": "bmi_high",
+        "exposure_col": "bmi_high_25",
+        "exposure_n": 39459,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": "bmi_high",
+        "exposure_col": "bmi_high_30",
+        "exposure_n": 1693515,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r19_proinflam_diet_x_dr_npdr": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      }
+    },
+    "r20_smoking_x_vi_mod_severe": {
+      "CLHLS": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 18128,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 17932,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 3572,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 4710,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 9438,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 28723,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 42832,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 40404,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 40262,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 73172,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 58097,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": true,
+        "exposure_flag": "current_smoking",
+        "exposure_col": "current_smoking",
+        "exposure_n": 711145,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 1377350,
+        "construct_shifted_only": false
+      }
+    },
+    "r21_pm25_x_vi_mod_severe": {
+      "CLHLS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 17932,
+        "construct_shifted_only": false
+      },
+      "CRELES": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": null,
+        "outcome_col": null,
+        "outcome_n": 0,
+        "construct_shifted_only": false
+      },
+      "ELSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 9438,
+        "construct_shifted_only": false
+      },
+      "HRS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 42832,
+        "construct_shifted_only": false
+      },
+      "KLoSA": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 40262,
+        "construct_shifted_only": false
+      },
+      "LASI": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 73172,
+        "construct_shifted_only": false
+      },
+      "MHAS": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 58097,
+        "construct_shifted_only": false
+      },
+      "SHARE": {
+        "testable": false,
+        "exposure_flag": null,
+        "exposure_col": null,
+        "exposure_n": 0,
+        "outcome_flag": "vision_impairment_moderate",
+        "outcome_col": "vision_impairment_moderate",
+        "outcome_n": 1377350,
+        "construct_shifted_only": false
+      }
+    }
+  },
+  "testable": {
+    "r01_uric_acid_x_cataract": [],
+    "r02_hyperglycemia_x_cataract": [
+      "CLHLS",
+      "CRELES",
+      "LASI",
+      "SHARE"
+    ],
+    "r03_hba1c_x_retinopathy_any": [],
+    "r04_hba1c_x_dr_pdr": [],
+    "r05_dyslipidemia_x_amd_late": [],
+    "r06_crp_x_amd_late": [],
+    "r07_vitamind_x_dr_npdr": [],
+    "r08_low_antioxidant_x_cataract": [],
+    "r09_mediterranean_diet_x_amd_late": [],
+    "r10_smoking_x_cataract": [
+      "CLHLS",
+      "CRELES",
+      "ELSA",
+      "SHARE"
+    ],
+    "r11_smoking_x_amd_late": [
+      "ELSA"
+    ],
+    "r12_alcohol_x_cataract": [
+      "CLHLS",
+      "SHARE"
+    ],
+    "r13_bmi_x_cataract": [
+      "CRELES",
+      "SHARE"
+    ],
+    "r14_lead_x_cataract": [],
+    "r16_pm25_x_glaucoma_iop_cdr": [],
+    "r17_pm25_x_amd_early": [],
+    "r18_uv_x_cataract": [],
+    "r22_bmi_x_retinopathy": [],
+    "r19_proinflam_diet_x_dr_npdr": [],
+    "r20_smoking_x_vi_mod_severe": [
+      "CLHLS",
+      "ELSA",
+      "HRS",
+      "KLoSA",
+      "SHARE"
+    ],
+    "r21_pm25_x_vi_mod_severe": []
+  }
+}

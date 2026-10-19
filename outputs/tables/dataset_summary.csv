@@ -1,5 +1,5 @@
-﻿dataset_id,role,source_type,expected_size,ground_truth,cases_populated,confirmatory_run
-dev-exposure-disease-pairs,development,literature,400,label_guideline,134,pending
-intval-nhanes,internal_validation,public_database,400,database_outcome,110,pending
-extval-knhanes,external_validation,public_database,300,database_outcome,56,pending
-extval-cohorts-9,external_validation,public_database,120,database_outcome,14,pending
+dataset_id,role,source_type,expected_size,ground_truth,cases_populated,confirmatory_run,n_cases
+dev-exposure-disease-pairs,development,literature,400,label_guideline,134,n/a (development set),134
+intval-nhanes,internal_validation,public_database,400,database_outcome,110,"done (R5: 16 rule pairs, 6 replicated under survey variance; nhanes_confirmatory.csv)",110
+extval-knhanes,external_validation,public_database,300,database_outcome,56,"done (R11: 15 rule pairs, 5 replicated under survey variance after the frame rebuild; knhanes_confirmatory.csv)",56
+extval-cohorts-9,external_validation,public_database,120,database_outcome,14,"partial (R11: CHARLS 2011 wave, 4 rule pairs 0 informative; CHARLS 2015 smoking exposures failed the prevalence gate and are excluded; charls_confirmatory.csv)",14

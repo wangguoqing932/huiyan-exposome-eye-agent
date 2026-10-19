@@ -1,0 +1,425 @@
+{
+  "date": "2026-10-15",
+  "protocol": "analysis_plan §12 (pre-registered before run)",
+  "verdicts": {
+    "r01_uric_acid_x_cataract": {
+      "n_searched": 30,
+      "n_relevant": 17,
+      "n_concordant": 8,
+      "n_discordant": 3,
+      "n_null": 3,
+      "n_unclear": 3,
+      "study_types": {
+        "case_control": 4,
+        "cross_sectional": 10,
+        "mechanistic": 2,
+        "review_other": 1
+      },
+      "verdict": "mixed_lit",
+      "verdict_S1_no_pool_overlap": "mixed_lit",
+      "verdict_S2_human_studies_only": "mixed_lit",
+      "negative_control": true
+    },
+    "r02_hyperglycemia_x_cataract": {
+      "n_searched": 40,
+      "n_relevant": 28,
+      "n_concordant": 27,
+      "n_discordant": 0,
+      "n_null": 0,
+      "n_unclear": 1,
+      "study_types": {
+        "case_control": 1,
+        "case_report": 3,
+        "cross_sectional": 3,
+        "mechanistic": 11,
+        "meta_systematic": 3,
+        "review_other": 7
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r03_hba1c_x_retinopathy_any": {
+      "n_searched": 40,
+      "n_relevant": 14,
+      "n_concordant": 10,
+      "n_discordant": 0,
+      "n_null": 1,
+      "n_unclear": 3,
+      "study_types": {
+        "case_control": 2,
+        "cohort": 2,
+        "cross_sectional": 7,
+        "review_other": 3
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r04_hba1c_x_dr_pdr": {
+      "n_searched": 40,
+      "n_relevant": 13,
+      "n_concordant": 10,
+      "n_discordant": 0,
+      "n_null": 1,
+      "n_unclear": 2,
+      "study_types": {
+        "case_control": 2,
+        "cohort": 2,
+        "cross_sectional": 6,
+        "review_other": 3
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r05_dyslipidemia_x_amd_late": {
+      "n_searched": 40,
+      "n_relevant": 25,
+      "n_concordant": 16,
+      "n_discordant": 0,
+      "n_null": 0,
+      "n_unclear": 9,
+      "study_types": {
+        "case_control": 1,
+        "cohort": 1,
+        "cross_sectional": 3,
+        "mechanistic": 10,
+        "meta_systematic": 3,
+        "rct": 1,
+        "review_other": 6
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "uninformative_lit",
+      "negative_control": false
+    },
+    "r06_crp_x_amd_late": {
+      "n_searched": 40,
+      "n_relevant": 22,
+      "n_concordant": 6,
+      "n_discordant": 1,
+      "n_null": 0,
+      "n_unclear": 15,
+      "study_types": {
+        "case_control": 3,
+        "cohort": 3,
+        "cross_sectional": 7,
+        "mechanistic": 2,
+        "meta_systematic": 4,
+        "review_other": 3
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r07_vitamind_x_dr_npdr": {
+      "n_searched": 40,
+      "n_relevant": 31,
+      "n_concordant": 7,
+      "n_discordant": 4,
+      "n_null": 6,
+      "n_unclear": 14,
+      "study_types": {
+        "case_control": 2,
+        "cohort": 3,
+        "cross_sectional": 14,
+        "mechanistic": 1,
+        "meta_systematic": 7,
+        "rct": 1,
+        "review_other": 3
+      },
+      "verdict": "mixed_lit",
+      "verdict_S1_no_pool_overlap": "mixed_lit",
+      "verdict_S2_human_studies_only": "mixed_lit",
+      "negative_control": false
+    },
+    "r08_low_antioxidant_x_cataract": {
+      "n_searched": 40,
+      "n_relevant": 22,
+      "n_concordant": 14,
+      "n_discordant": 5,
+      "n_null": 1,
+      "n_unclear": 2,
+      "study_types": {
+        "case_control": 1,
+        "cross_sectional": 2,
+        "mechanistic": 15,
+        "review_other": 4
+      },
+      "verdict": "mixed_lit",
+      "verdict_S1_no_pool_overlap": "mixed_lit",
+      "verdict_S2_human_studies_only": "uninformative_lit",
+      "negative_control": false
+    },
+    "r09_mediterranean_diet_x_amd_late": {
+      "n_searched": 39,
+      "n_relevant": 33,
+      "n_concordant": 17,
+      "n_discordant": 0,
+      "n_null": 0,
+      "n_unclear": 16,
+      "study_types": {
+        "case_control": 1,
+        "cohort": 8,
+        "cross_sectional": 2,
+        "mechanistic": 2,
+        "meta_systematic": 7,
+        "rct": 1,
+        "review_other": 12
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r10_smoking_x_cataract": {
+      "n_searched": 38,
+      "n_relevant": 14,
+      "n_concordant": 10,
+      "n_discordant": 0,
+      "n_null": 0,
+      "n_unclear": 4,
+      "study_types": {
+        "cohort": 8,
+        "cross_sectional": 2,
+        "meta_systematic": 1,
+        "review_other": 3
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r11_smoking_x_amd_late": {
+      "n_searched": 40,
+      "n_relevant": 19,
+      "n_concordant": 13,
+      "n_discordant": 1,
+      "n_null": 0,
+      "n_unclear": 5,
+      "study_types": {
+        "case_control": 1,
+        "cohort": 6,
+        "cross_sectional": 3,
+        "mechanistic": 2,
+        "meta_systematic": 2,
+        "review_other": 5
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r12_alcohol_x_cataract": {
+      "n_searched": 39,
+      "n_relevant": 6,
+      "n_concordant": 0,
+      "n_discordant": 1,
+      "n_null": 1,
+      "n_unclear": 4,
+      "study_types": {
+        "cohort": 5,
+        "cross_sectional": 1
+      },
+      "verdict": "uninformative_lit",
+      "verdict_S1_no_pool_overlap": "uninformative_lit",
+      "verdict_S2_human_studies_only": "uninformative_lit",
+      "negative_control": false
+    },
+    "r13_bmi_x_cataract": {
+      "n_searched": 39,
+      "n_relevant": 10,
+      "n_concordant": 6,
+      "n_discordant": 0,
+      "n_null": 0,
+      "n_unclear": 4,
+      "study_types": {
+        "cohort": 1,
+        "cross_sectional": 1,
+        "mechanistic": 3,
+        "meta_systematic": 2,
+        "review_other": 3
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r14_lead_x_cataract": {
+      "n_searched": 6,
+      "n_relevant": 6,
+      "n_concordant": 2,
+      "n_discordant": 0,
+      "n_null": 1,
+      "n_unclear": 3,
+      "study_types": {
+        "case_control": 1,
+        "cohort": 2,
+        "cross_sectional": 1,
+        "mechanistic": 1,
+        "review_other": 1
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "uninformative_lit",
+      "negative_control": false
+    },
+    "r16_pm25_x_glaucoma_iop_cdr": {
+      "n_searched": 40,
+      "n_relevant": 26,
+      "n_concordant": 20,
+      "n_discordant": 1,
+      "n_null": 0,
+      "n_unclear": 5,
+      "study_types": {
+        "case_control": 1,
+        "cohort": 12,
+        "cross_sectional": 3,
+        "mechanistic": 2,
+        "meta_systematic": 4,
+        "review_other": 4
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r17_pm25_x_amd_early": {
+      "n_searched": 39,
+      "n_relevant": 32,
+      "n_concordant": 21,
+      "n_discordant": 0,
+      "n_null": 1,
+      "n_unclear": 10,
+      "study_types": {
+        "case_control": 1,
+        "cohort": 11,
+        "cross_sectional": 6,
+        "mechanistic": 5,
+        "meta_systematic": 3,
+        "review_other": 6
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r18_uv_x_cataract": {
+      "n_searched": 40,
+      "n_relevant": 28,
+      "n_concordant": 21,
+      "n_discordant": 0,
+      "n_null": 0,
+      "n_unclear": 7,
+      "study_types": {
+        "case_control": 1,
+        "cohort": 1,
+        "cross_sectional": 3,
+        "mechanistic": 15,
+        "meta_systematic": 3,
+        "review_other": 5
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r22_bmi_x_retinopathy": {
+      "n_searched": 39,
+      "n_relevant": 9,
+      "n_concordant": 3,
+      "n_discordant": 0,
+      "n_null": 1,
+      "n_unclear": 5,
+      "study_types": {
+        "cohort": 3,
+        "cross_sectional": 3,
+        "mechanistic": 1,
+        "review_other": 2
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "uninformative_lit",
+      "negative_control": false
+    },
+    "r19_proinflam_diet_x_dr_npdr": {
+      "n_searched": 4,
+      "n_relevant": 4,
+      "n_concordant": 1,
+      "n_discordant": 0,
+      "n_null": 0,
+      "n_unclear": 3,
+      "study_types": {
+        "cross_sectional": 4
+      },
+      "verdict": "uninformative_lit",
+      "verdict_S1_no_pool_overlap": "uninformative_lit",
+      "verdict_S2_human_studies_only": "uninformative_lit",
+      "negative_control": false
+    },
+    "r20_smoking_x_vi_mod_severe": {
+      "n_searched": 39,
+      "n_relevant": 13,
+      "n_concordant": 8,
+      "n_discordant": 1,
+      "n_null": 0,
+      "n_unclear": 4,
+      "study_types": {
+        "case_control": 1,
+        "case_report": 1,
+        "cohort": 2,
+        "cross_sectional": 4,
+        "mechanistic": 1,
+        "meta_systematic": 1,
+        "review_other": 3
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    },
+    "r21_pm25_x_vi_mod_severe": {
+      "n_searched": 38,
+      "n_relevant": 24,
+      "n_concordant": 22,
+      "n_discordant": 1,
+      "n_null": 0,
+      "n_unclear": 1,
+      "study_types": {
+        "cohort": 12,
+        "cross_sectional": 7,
+        "mechanistic": 1,
+        "meta_systematic": 2,
+        "review_other": 2
+      },
+      "verdict": "replicated_lit",
+      "verdict_S1_no_pool_overlap": "replicated_lit",
+      "verdict_S2_human_studies_only": "replicated_lit",
+      "negative_control": false
+    }
+  },
+  "precision_lit": 0.889,
+  "precision_lit_ci95_clopper_pearson": [
+    0.653,
+    0.986
+  ],
+  "counts": {
+    "replicated_lit": 16,
+    "contradicted_lit": 0,
+    "mixed_lit": 2,
+    "null_dominant": 0,
+    "uninformative": 2,
+    "main_rules": 20
+  },
+  "S3_stability": {
+    "second_pass_pairs": 68,
+    "agree": 66,
+    "agreement_rate": 0.971
+  },
+  "note": "Literature layer is an EXTERNAL CONSISTENCY validation, not causal confirmation; search window/publication bias/LLM extraction error declared in limitations. Rule own-citations excluded; evidence-pool overlap tagged (S1 drops it)."
+}

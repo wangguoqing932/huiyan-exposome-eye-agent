@@ -1,0 +1,15 @@
+﻿a_flag,b_item,predicted,rule_ids,negative_control,direction,n,n_pos,or,ci_lo,ci_hi,p,status,q,gold3
+uric_acid_elevated,cataract_any,True,r01_uric_acid_x_cataract,True,risk_up,10833,186,1.2704665699625772,0.896683199671046,1.8000619460525342,0.1781202226062163,tested,1.0,uninformative
+uric_acid_elevated,glaucoma_selfreport,False,,False,risk_up,11180,161,0.9266037323480579,0.5991400105798627,1.4330448002802922,0.731855796000552,tested,1.0,uninformative
+hyperglycemia,cataract_any,True,r02_hyperglycemia_x_cataract,False,risk_up,10833,186,1.4186540625444122,0.958412189357792,2.099910008993462,0.08051356099137918,tested,1.0,uninformative
+hyperglycemia,glaucoma_selfreport,False,,False,risk_up,11180,161,1.260015729625059,0.7970688519745488,1.9918475486397056,0.32255380855527693,tested,1.0,uninformative
+hba1c_elevated,cataract_any,True,r02_hyperglycemia_x_cataract,False,risk_up,10848,185,1.7132525859188332,1.207382840467921,2.4310718396660493,0.0025652748437214185,tested,0.0955270594509784,uninformative
+hba1c_elevated,glaucoma_selfreport,False,,False,risk_up,11195,161,0.6127255575483067,0.35364448259162545,1.0616102536694114,0.08067273077898178,tested,1.0,uninformative
+dyslipidemia,cataract_any,False,,False,risk_up,10807,185,1.0653120881748066,0.7781415820908685,1.4584618934794806,0.6930082511461189,tested,1.0,uninformative
+dyslipidemia,glaucoma_selfreport,False,,False,risk_up,11154,161,0.8863388066622624,0.6185000421842497,1.2701639880591244,0.5110096632905337,tested,1.0,uninformative
+crp_elevated,cataract_any,False,,False,risk_up,10805,185,1.0221583381066737,0.7218493767274845,1.4474039901477078,0.9017201738062548,tested,1.0,uninformative
+crp_elevated,glaucoma_selfreport,False,,False,risk_up,11152,161,0.8611857359918318,0.570195486539378,1.3006782575164682,0.47746747594137173,tested,1.0,uninformative
+current_smoking,cataract_any,True,r10_smoking_x_cataract,False,risk_up,415,6,,,,,underpowered,,not_tested
+current_smoking,glaucoma_selfreport,False,,False,risk_up,442,9,,,,,underpowered,,not_tested
+alcohol_intake,cataract_any,True,r12_alcohol_x_cataract,False,risk_up,16090,268,0.8352581980889799,0.5858319446883954,1.1908812139732903,0.3198819059287723,tested,1.0,uninformative
+alcohol_intake,glaucoma_selfreport,False,,False,risk_up,16676,244,0.9968930354406775,0.6938766974973058,1.4322367759208208,0.9865704902404324,tested,1.0,uninformative

@@ -1,0 +1,329 @@
+{
+  "cohort": "SHARE",
+  "n_targets": 27,
+  "findings": [
+    {
+      "var": "br002_",
+      "label": "Smoke at the present time",
+      "n_valid": 14258,
+      "own_positives": 5859,
+      "own_positive_rate_if_naive": 0.4109,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "br001_",
+          "gate_label": "Ever smoked daily",
+          "gate_n": 30269,
+          "gate_positives": 14258,
+          "rel_diff": 0.0,
+          "gate_file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_br.dta"
+        }
+      ]
+    },
+    {
+      "var": "br002_",
+      "label": "Smoke at the present time",
+      "n_valid": 28234,
+      "own_positives": 7102,
+      "own_positive_rate_if_naive": 0.2515,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "br001_",
+          "gate_label": "Ever smoked daily",
+          "gate_n": 69342,
+          "gate_positives": 27799,
+          "rel_diff": 0.0154,
+          "gate_file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_br.dta"
+        }
+      ]
+    },
+    {
+      "var": "br002_",
+      "label": "Smoke at the present time",
+      "n_valid": 5703,
+      "own_positives": 2792,
+      "own_positive_rate_if_naive": 0.4896,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "br001_",
+          "gate_label": "Ever smoked daily",
+          "gate_n": 12600,
+          "gate_positives": 5701,
+          "rel_diff": 0.0004,
+          "gate_file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_br.dta"
+        }
+      ]
+    },
+    {
+      "var": "br002_",
+      "label": "Smoke at the present time",
+      "n_valid": 2578,
+      "own_positives": 1591,
+      "own_positive_rate_if_naive": 0.6171,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "br002_",
+      "label": "Smoke at the present time",
+      "n_valid": 22191,
+      "own_positives": 7985,
+      "own_positive_rate_if_naive": 0.3598,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "br001_",
+          "gate_label": "Ever smoked daily",
+          "gate_n": 53575,
+          "gate_positives": 22191,
+          "rel_diff": 0.0,
+          "gate_file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_br.dta"
+        }
+      ]
+    },
+    {
+      "var": "br002_",
+      "label": "Smoke at the present time",
+      "n_valid": 27799,
+      "own_positives": 10339,
+      "own_positive_rate_if_naive": 0.3719,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "br001_",
+          "gate_label": "Ever smoked daily",
+          "gate_n": 69342,
+          "gate_positives": 27799,
+          "rel_diff": 0.0,
+          "gate_file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_br.dta"
+        }
+      ]
+    },
+    {
+      "var": "br002_",
+      "label": "Smoke at the present time",
+      "n_valid": 37125,
+      "own_positives": 10749,
+      "own_positive_rate_if_naive": 0.2895,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "br002_",
+      "label": "Smoke at the present time",
+      "n_valid": 53436,
+      "own_positives": 11632,
+      "own_positive_rate_if_naive": 0.2177,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "cusmoke",
+      "label": "Current smoking",
+      "n_valid": 16082,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "br001_",
+          "gate_label": "Ever smoked daily",
+          "gate_n": 36832,
+          "gate_positives": 16648,
+          "rel_diff": 0.0352,
+          "gate_file": "Wave 4 Release 9.0.0\\sharew4_rel9-0-0_br.dta"
+        }
+      ]
+    },
+    {
+      "var": "cusmoke",
+      "label": "Current smoking",
+      "n_valid": 36831,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "cusmoke",
+      "label": "Current smoking",
+      "n_valid": 30269,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "esmoked",
+          "gate_label": "Ever smoked daily",
+          "gate_n": 385905,
+          "gate_positives": 31354,
+          "rel_diff": 0.0358,
+          "gate_file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_gv_imputations.dta"
+        },
+        {
+          "gate_var": "br001_",
+          "gate_label": "Ever smoked daily",
+          "gate_n": 69342,
+          "gate_positives": 27799,
+          "rel_diff": 0.0816,
+          "gate_file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_br.dta"
+        }
+      ]
+    },
+    {
+      "var": "smoking",
+      "label": "Smoke at the present time",
+      "n_valid": 488400,
+      "own_positives": 58049,
+      "own_positive_rate_if_naive": 0.1189,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d2",
+      "label": "High blood pressure or hypertension: ever diagnosed/currently having",
+      "n_valid": 37013,
+      "own_positives": 12964,
+      "own_positive_rate_if_naive": 0.3503,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "ph006d2",
+          "gate_label": "High blood pressure or hypertension: ever diagnosed/currently having",
+          "gate_n": 76806,
+          "gate_positives": 33820,
+          "rel_diff": 0.0863,
+          "gate_file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_ph.dta"
+        }
+      ]
+    },
+    {
+      "var": "ph006d5",
+      "label": "Diabetes or high blood sugar: ever diagnosed/currently having",
+      "n_valid": 37013,
+      "own_positives": 4142,
+      "own_positive_rate_if_naive": 0.1119,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d2",
+      "label": "High blood pressure or hypertension: ever diagnosed/currently having",
+      "n_valid": 57755,
+      "own_positives": 22713,
+      "own_positive_rate_if_naive": 0.3933,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d5",
+      "label": "Diabetes or high blood sugar: ever diagnosed/currently having",
+      "n_valid": 57755,
+      "own_positives": 7178,
+      "own_positive_rate_if_naive": 0.1243,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d2",
+      "label": "High blood pressure or hypertension: ever diagnosed/currently having",
+      "n_valid": 65873,
+      "own_positives": 25781,
+      "own_positive_rate_if_naive": 0.3914,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d5",
+      "label": "Diabetes or high blood sugar: ever diagnosed/currently having",
+      "n_valid": 65873,
+      "own_positives": 8393,
+      "own_positive_rate_if_naive": 0.1274,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d2",
+      "label": "High blood pressure or hypertension: ever diagnosed/currently having",
+      "n_valid": 67945,
+      "own_positives": 27910,
+      "own_positive_rate_if_naive": 0.4108,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d5",
+      "label": "Diabetes or high blood sugar: ever diagnosed/currently having",
+      "n_valid": 67945,
+      "own_positives": 9300,
+      "own_positive_rate_if_naive": 0.1369,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d2",
+      "label": "High blood pressure or hypertension: ever diagnosed/currently having",
+      "n_valid": 76806,
+      "own_positives": 33820,
+      "own_positive_rate_if_naive": 0.4403,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d5",
+      "label": "Diabetes or high blood sugar: ever diagnosed/currently having",
+      "n_valid": 76806,
+      "own_positives": 10618,
+      "own_positive_rate_if_naive": 0.1382,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d2",
+      "label": "High blood pressure or hypertension: ever diagnosed/currently having",
+      "n_valid": 53589,
+      "own_positives": 23944,
+      "own_positive_rate_if_naive": 0.4468,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d5",
+      "label": "Diabetes or high blood sugar: ever diagnosed/currently having",
+      "n_valid": 53589,
+      "own_positives": 7731,
+      "own_positive_rate_if_naive": 0.1443,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d2",
+      "label": "High blood pressure or hypertension: ever diagnosed/currently having",
+      "n_valid": 69351,
+      "own_positives": 32739,
+      "own_positive_rate_if_naive": 0.4721,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "ph006d5",
+      "label": "Diabetes or high blood sugar: ever diagnosed/currently having",
+      "n_valid": 69351,
+      "own_positives": 10513,
+      "own_positive_rate_if_naive": 0.1516,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "g2",
+      "label": "What is your current body weight? (in kilogramm)",
+      "n_valid": 2731,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "diagnostics": {
+    "cohort": "LASI",
+    "waves": [
+      {
+        "wave": 1,
+        "status": "ok",
+        "rows": 73408,
+        "vars_found": [
+          "dm003",
+          "dm005",
+          "hb001",
+          "hb003",
+          "ht002",
+          "ht003",
+          "ht015",
+          "ht016",
+          "ht017",
+          "ht019",
+          "ht020",
+          "prim_key"
+        ],
+        "note": "hb001 is an ever-smoked item; LASI's current-smoking item (if any) must pass the C56 gate audit before use"
+      }
+    ]
+  },
+  "gate": {
+    "cohort": "LASI",
+    "n_rows": 73408,
+    "flags": {
+      "cataract_any": {
+        "n": 73408,
+        "prevalence": 0.112,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.03,
+          0.3
+        ],
+        "within_typical": true
+      },
+      "diabetes": {
+        "n": 73204,
+        "prevalence": 0.121,
+        "hard_band": [
+          0.01,
+          0.5
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.04,
+          0.35
+        ],
+        "within_typical": true
+      },
+      "hypertension": {
+        "n": 73207,
+        "prevalence": 0.2776,
+        "hard_band": [
+          0.05,
+          0.85
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.2,
+          0.7
+        ],
+        "within_typical": true
+      },
+      "vision_impairment_moderate": {
+        "n": 73172,
+        "prevalence": 0.1212,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.03,
+          0.35
+        ],
+        "within_typical": true
+      },
+      "vision_impairment_severe": {
+        "n": 73172,
+        "prevalence": 0.0134,
+        "hard_band": [
+          0.0005,
+          0.25
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.005,
+          0.1
+        ],
+        "within_typical": true
+      }
+    },
+    "imputation_replicates": [
+      1
+    ],
+    "rows_per_replicate": 73408,
+    "gate_passed": true,
+    "failed": [],
+    "outside_typical": [],
+    "age_context": {
+      "n": 73408,
+      "mean": 57.9,
+      "min": 18.0,
+      "max": 116.0,
+      "pct_60plus": 0.4348
+    }
+  }
+}

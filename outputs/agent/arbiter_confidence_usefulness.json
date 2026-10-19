@@ -1,0 +1,209 @@
+{
+  "repeats": 8,
+  "probes": [
+    {
+      "a": "current_smoking",
+      "b": "amd_late",
+      "claimed_grade": "A",
+      "why": "r11: guideline says primary modifiable RF",
+      "tiers": {
+        "high": 8
+      },
+      "conf": [
+        0.85,
+        0.85,
+        0.9,
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "conf_median": 0.85
+    },
+    {
+      "a": "current_smoking",
+      "b": "cataract_any",
+      "claimed_grade": "B",
+      "why": "r10: cataract, no guideline in corpus",
+      "tiers": {
+        "high": 8
+      },
+      "conf": [
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "conf_median": 0.85
+    },
+    {
+      "a": "c_reactive_protein",
+      "b": "amd_late",
+      "claimed_grade": "B",
+      "why": "r06: CRP -> late AMD",
+      "tiers": {
+        "medium": 8
+      },
+      "conf": [
+        0.85,
+        0.85,
+        0.85,
+        0.75,
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ],
+      "conf_median": 0.85
+    },
+    {
+      "a": "serum_uric_acid",
+      "b": "cataract_any",
+      "claimed_grade": "C",
+      "why": "r01: uric acid -> cataract",
+      "tiers": {
+        "low": 8
+      },
+      "conf": [
+        0.75,
+        0.3,
+        0.35,
+        0.35,
+        0.4,
+        0.3,
+        0.75,
+        0.4
+      ],
+      "conf_median": 0.375
+    },
+    {
+      "a": "serum_carotenoids",
+      "b": "cataract_any",
+      "claimed_grade": "C",
+      "why": "r08: carotenoids -> cataract",
+      "tiers": {
+        "medium": 8
+      },
+      "conf": [
+        0.3,
+        0.3,
+        0.3,
+        0.2,
+        0.3,
+        0.3,
+        0.3,
+        0.3
+      ],
+      "conf_median": 0.3
+    },
+    {
+      "a": "alcohol_intake",
+      "b": "cataract_any",
+      "claimed_grade": "C",
+      "why": "r12: alcohol -> cataract",
+      "tiers": {
+        "medium": 8
+      },
+      "conf": [
+        0.45,
+        0.45,
+        0.75,
+        0.45,
+        0.45,
+        0.45,
+        0.45,
+        0.75
+      ],
+      "conf_median": 0.45
+    },
+    {
+      "a": "blood_lead",
+      "b": "cataract_any",
+      "claimed_grade": "C",
+      "why": "r14: lead -> cataract",
+      "tiers": {
+        "medium": 8
+      },
+      "conf": [
+        0.4,
+        0.4,
+        0.4,
+        0.75,
+        0.4,
+        0.4,
+        0.4,
+        0.35
+      ],
+      "conf_median": 0.4
+    }
+  ],
+  "pooled_by_grade": {
+    "A": [
+      0.85,
+      0.85,
+      0.9,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85
+    ],
+    "B": [
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.85,
+      0.75,
+      0.85,
+      0.85,
+      0.85,
+      0.85
+    ],
+    "C": [
+      0.75,
+      0.3,
+      0.35,
+      0.35,
+      0.4,
+      0.3,
+      0.75,
+      0.4,
+      0.3,
+      0.3,
+      0.3,
+      0.2,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.45,
+      0.45,
+      0.75,
+      0.45,
+      0.45,
+      0.45,
+      0.45,
+      0.75,
+      0.4,
+      0.4,
+      0.4,
+      0.75,
+      0.4,
+      0.4,
+      0.4,
+      0.35
+    ]
+  }
+}

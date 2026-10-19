@@ -20,6 +20,11 @@ core_conclusion: >-
 # EVIDENCE CHAIN — what each panel must show
 # ─────────────────────────────────────────────────────────────
 archetype: schematic_led_composite
+# Drawn by the project-local renderer, not the shared one. The shared
+# renderer cannot draw this figure: its three panels declare no plot_type,
+# so it wrote placeholder text and returned, and the 7_1 QC passed that
+# blank page. render_manual_figures.render_figure1 draws it instead.
+renderer: scripts/render_manual_figures.py
 
 panels:
   - id: panel_a_pipeline
@@ -131,7 +136,12 @@ color_palette:
 # SOURCE DATA — every figure must have CSV
 # ─────────────────────────────────────────────────────────────
 source_data:
-  csv_path: outputs/figures/source_data/figure1_architecture.csv
+  # R11 fix: the contract declared `figure1_architecture.csv`, which has never
+  # existed on disk. The real file emitted by the executor is `figure1_data.csv`
+  # (columns: component, metric, value, source). Name corrected to match reality
+  # — the previous mismatch is why build_figures.py reported
+  # "source_data CSV missing" for figure 1.
+  csv_path: outputs/figures/source_data/figure1_data.csv
   schema:
     - column: component
       values: [rule_engine, lightrag_kg, llm_arbiter, evidence_store, normalize]

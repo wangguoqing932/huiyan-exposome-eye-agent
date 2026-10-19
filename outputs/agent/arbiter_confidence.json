@@ -1,0 +1,179 @@
+{
+  "repeats": 6,
+  "cases": [
+    {
+      "a": "smoking",
+      "b": "amd_late",
+      "factors": null,
+      "why": "borderline (varied ~8% at temp 0)",
+      "levels": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "distinct_levels": 1,
+      "confidence": "0.60",
+      "score": "0.60",
+      "arbiter_confidence": "0.85",
+      "confidence_raw": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "arbiter_confidence_raw": [
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    {
+      "a": "smoking",
+      "b": "cataract_any",
+      "factors": null,
+      "why": "stable",
+      "levels": [
+        "medium",
+        "medium",
+        "medium",
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "distinct_levels": 1,
+      "confidence": "0.60",
+      "score": "0.60",
+      "arbiter_confidence": "0.60-0.75",
+      "confidence_raw": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "arbiter_confidence_raw": [
+        0.72,
+        0.6,
+        0.7,
+        0.6,
+        0.75,
+        0.6
+      ]
+    },
+    {
+      "a": "fasting_glucose",
+      "b": "cataract_any",
+      "factors": [
+        "diabetes"
+      ],
+      "why": "stable, factor escalation",
+      "levels": [
+        "high",
+        "high",
+        "high",
+        "high",
+        "high",
+        "high"
+      ],
+      "distinct_levels": 1,
+      "confidence": "0.80",
+      "score": "0.80",
+      "arbiter_confidence": "0.85",
+      "confidence_raw": [
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8,
+        0.8
+      ],
+      "arbiter_confidence_raw": [
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    {
+      "a": "pm25_exposure",
+      "b": "glaucoma_iop_elevated",
+      "factors": [
+        "hypertension"
+      ],
+      "why": "stable",
+      "levels": [
+        "medium",
+        "medium",
+        "medium",
+        "medium",
+        "medium",
+        "medium"
+      ],
+      "distinct_levels": 1,
+      "confidence": "0.60",
+      "score": "0.60",
+      "arbiter_confidence": "0.60-0.75",
+      "confidence_raw": [
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6,
+        0.6
+      ],
+      "arbiter_confidence_raw": [
+        0.6,
+        0.75,
+        0.75,
+        0.6,
+        0.6,
+        0.75
+      ]
+    },
+    {
+      "a": "aspirin",
+      "b": "cataract_any",
+      "factors": null,
+      "why": "out of scope (no arbiter call)",
+      "levels": [
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "distinct_levels": 1,
+      "confidence": "0.00",
+      "score": "0.00",
+      "arbiter_confidence": "n/a",
+      "confidence_raw": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "arbiter_confidence_raw": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ]
+}

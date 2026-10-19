@@ -1,0 +1,33 @@
+{
+  "repeats": 12,
+  "temperature": 0.0,
+  "model": "deepseek/deepseek-v4.1-flash",
+  "results": [
+    {
+      "a": "smoking",
+      "b": "amd_late",
+      "why": "the pair that varied",
+      "final": {
+        "high": 12
+      },
+      "rule": {
+        "high": 12
+      },
+      "repeats": 12,
+      "distinct_final": 1
+    },
+    {
+      "a": "smoking",
+      "b": "cataract_any",
+      "why": "control: stable before",
+      "final": {
+        "high": 12
+      },
+      "rule": {
+        "high": 12
+      },
+      "repeats": 12,
+      "distinct_final": 1
+    }
+  ]
+}

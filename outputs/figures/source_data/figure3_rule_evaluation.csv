@@ -1,0 +1,13 @@
+﻿method,dataset,metric,estimate,ci_low,ci_high,k,n
+declared-domain precision,NHANES,precision_rule_declared,1.0,0.541,1.0,6,6
+conservative precision,NHANES,precision_rule_uninf_as_fp,0.375,0.152,0.646,6,16
+rule coverage,NHANES,coverage,0.889,0.889,0.889,16,18
+declared-domain precision,KNHANES,precision_rule_declared,1.0,0.478,1.0,5,5
+conservative precision,KNHANES,precision_rule_uninf_as_fp,0.333,0.118,0.616,5,15
+rule coverage,KNHANES,coverage,0.882,0.882,0.882,15,17
+replication rate · level A,NHANES,replication_rate,0.0,0.0,0.7075982261787133,0,3
+replication rate · level A,KNHANES,replication_rate,0.0,0.0,0.7075982261787133,0,3
+replication rate · level A+B,NHANES,replication_rate,0.3076923076923077,0.09092039457209658,0.6142616617507044,4,13
+replication rate · level A+B,KNHANES,replication_rate,0.3076923076923077,0.09092039457209658,0.6142616617507044,4,13
+replication rate · level all,NHANES,replication_rate,0.3157894736842105,0.12576063587298328,0.5655015688461509,6,19
+replication rate · level all,KNHANES,replication_rate,0.3125,0.1101699547171176,0.5866206364513586,5,16

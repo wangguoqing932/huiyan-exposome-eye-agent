@@ -1,0 +1,28 @@
+{
+  "cohort": "HRS",
+  "wave_col": "wave",
+  "n_waves": 2,
+  "results": [
+    {
+      "cohort": "HRS",
+      "rule_id": "r20_smoking_x_vi_mod_severe",
+      "exposure": "current_smoking",
+      "outcome": "vision_impairment_moderate",
+      "bmi_cut": 30,
+      "direction": "risk_up",
+      "status": "ok",
+      "n_imputations": 1,
+      "n": 13511,
+      "n_events": 2807,
+      "n_clusters": 13511,
+      "beta": 0.478975,
+      "se": 0.048446,
+      "odds_ratio": 1.6144,
+      "ci_low": 1.4682,
+      "ci_high": 1.7752,
+      "z": 9.8869,
+      "p_two_sided": 4.745801180232241e-23,
+      "seconds": 0.0
+    }
+  ]
+}

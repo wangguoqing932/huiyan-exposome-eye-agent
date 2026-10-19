@@ -1,0 +1,3709 @@
+{
+  "cohort": "CRELES",
+  "root": "D:\\Desktop\\眼科公共数据库agent搭建\\data\\raw\\creles",
+  "files": 59,
+  "scanned": 59,
+  "candidates": [
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS8_Medications_Pre-1945_W2_V2.dta",
+      "var": "antidiab",
+      "rows": 8505,
+      "n_valid": 8505,
+      "dtype": "category",
+      "label": "Taking drugs against diabetes",
+      "n_distinct": 2,
+      "values": {
+        "No": 7874,
+        "Yes": 631
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS8_Medications_Pre-1945_W2_V2.dta",
+      "var": "antihta",
+      "rows": 8505,
+      "n_valid": 8505,
+      "dtype": "category",
+      "label": "Taking anti-hypertensive drugs",
+      "n_distinct": 2,
+      "values": {
+        "No": 6979,
+        "Yes": 1526
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS8 Biomarkers RC W1 V4.dta",
+      "var": "hba1c",
+      "rows": 3831,
+      "n_valid": 3821,
+      "dtype": "float64",
+      "label": "GlycatedHemoglobinHemoglobinLab",
+      "n_distinct": 113,
+      "values": {
+        "2.9000000953674316": 1,
+        "3.0": 1,
+        "3.799999952316284": 2,
+        "4.099999904632568": 2,
+        "4.199999809265137": 1,
+        "4.300000190734863": 2,
+        "4.400000095367432": 1,
+        "4.5": 5
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS8_Medications_Pre-1945_W3_V2.dta",
+      "var": "antidiab",
+      "rows": 7309,
+      "n_valid": 7309,
+      "dtype": "category",
+      "label": "Taking drugs against diabetes",
+      "n_distinct": 2,
+      "values": {
+        "No": 6800,
+        "Si": 509
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS8_Medications_Pre-1945_W3_V2.dta",
+      "var": "antihta",
+      "rows": 7309,
+      "n_valid": 7309,
+      "dtype": "category",
+      "label": "Taking anti-hypertensive drugs",
+      "n_distinct": 2,
+      "values": {
+        "No": 5853,
+        "Si": 1456
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS8_Medications_Pre-1945_W1_V2.dta",
+      "var": "antidiab",
+      "rows": 8847,
+      "n_valid": 8847,
+      "dtype": "category",
+      "label": "Medicines for diabetes",
+      "n_distinct": 2,
+      "values": {
+        "No": 8231,
+        "Yes": 616
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS8_Medications_Pre-1945_W1_V2.dta",
+      "var": "antihta",
+      "rows": 8847,
+      "n_valid": 8847,
+      "dtype": "category",
+      "label": "Medicenes for Hypertension",
+      "n_distinct": 2,
+      "values": {
+        "No": 7215,
+        "Yes": 1632
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS13_TRACKCRELES_Pre-1945_public_V2.dta",
+      "var": "ponde_r2",
+      "rows": 2827,
+      "n_valid": 2364,
+      "dtype": "float64",
+      "label": "Sampling weight for wave 2",
+      "n_distinct": 61,
+      "values": {
+        "0.0442532077432": 35,
+        "0.0603047460318": 17,
+        "0.0722581669688": 18,
+        "0.0829329565167": 2,
+        "0.0984676778316": 27,
+        "0.1136655509472": 1,
+        "0.1354158222675": 5,
+        "0.2722741663456": 70
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS13_TRACKCRELES_Pre-1945_public_V2.dta",
+      "var": "ponde_r3",
+      "rows": 2827,
+      "n_valid": 1855,
+      "dtype": "float64",
+      "label": "Sampling weight for wave 3",
+      "n_distinct": 58,
+      "values": {
+        "0.0549664013088": 16,
+        "0.0604310184717": 10,
+        "0.0803298801184": 4,
+        "0.0883160829544": 13,
+        "0.1391842067242": 3,
+        "0.2305088788271": 52,
+        "0.2676534056664": 45,
+        "0.3368740081787": 45
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS2_Anthropometry_Pre-1945_W3_V2.dta",
+      "var": "k3",
+      "rows": 1786,
+      "n_valid": 1684,
+      "dtype": "category",
+      "label": "WeightPounds",
+      "n_distinct": 876,
+      "values": {
+        "0.0": 1,
+        "100.0": 1,
+        "100.19999694825": 1,
+        "100.30000305176": 1,
+        "100.40000152588": 3,
+        "100.5": 2,
+        "100.69999694825": 3,
+        "100.80000305176": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS2_Anthropometry_Pre-1945_W3_V2.dta",
+      "var": "k4",
+      "rows": 1786,
+      "n_valid": 1684,
+      "dtype": "category",
+      "label": "HeightCm",
+      "n_distinct": 400,
+      "values": {
+        "0.0": 1,
+        "104.0": 1,
+        "107.5": 1,
+        "110.09999847413": 1,
+        "111.5": 1,
+        "120.0": 1,
+        "127.90000152588": 1,
+        "129.10000610352": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS2_Anthropometry_Pre-1945_W3_V2.dta",
+      "var": "k5",
+      "rows": 1786,
+      "n_valid": 1784,
+      "dtype": "category",
+      "label": "KneeHeightCm",
+      "n_distinct": 169,
+      "values": {
+        "32.40000152588": 1,
+        "40.59999847413": 1,
+        "40.70000076294": 1,
+        "40.79999923707": 1,
+        "41.0": 2,
+        "41.29999923707": 1,
+        "41.5": 2,
+        "41.70000076294": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS2_Anthropometry_Pre-1945_W3_V2.dta",
+      "var": "k6",
+      "rows": 1786,
+      "n_valid": 1784,
+      "dtype": "category",
+      "label": "WaistCm",
+      "n_distinct": 442,
+      "values": {
+        "100.0": 16,
+        "100.09999847413": 2,
+        "100.19999694825": 4,
+        "100.30000305176": 8,
+        "100.5": 22,
+        "100.59999847413": 2,
+        "100.69999694825": 7,
+        "100.80000305176": 5
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS2_Anthropometry_Pre-1945_W3_V2.dta",
+      "var": "l3d",
+      "rows": 1786,
+      "n_valid": 1225,
+      "dtype": "float64",
+      "label": "ChairHeight",
+      "n_distinct": 26,
+      "values": {
+        "34.0": 2,
+        "35.0": 4,
+        "36.0": 10,
+        "37.0": 11,
+        "38.0": 21,
+        "39.0": 23,
+        "40.0": 43,
+        "41.0": 44
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS14 Track RC W2 V3Public.dta",
+      "var": "ponderador",
+      "rows": 4149,
+      "n_valid": 4137,
+      "dtype": "float32",
+      "label": "Sampling weight for wave 1",
+      "n_distinct": 475,
+      "values": {
+        "23.0": 1,
+        "24.0": 3,
+        "25.0": 12,
+        "26.0": 1,
+        "27.0": 1,
+        "28.0": 2,
+        "29.0": 17,
+        "30.0": 12
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS14 Track RC W2 V3Public.dta",
+      "var": "ponde_r2",
+      "rows": 4149,
+      "n_valid": 3539,
+      "dtype": "float32",
+      "label": "Sampling weight for wave 2",
+      "n_distinct": 2189,
+      "values": {
+        "22.351491928100586": 1,
+        "25.587785720825195": 1,
+        "26.540699005126953": 8,
+        "26.700298309326172": 2,
+        "27.479246139526367": 3,
+        "27.57112693786621": 3,
+        "27.976764678955078": 1,
+        "29.40920066833496": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS9_Biomarkers_Pre-1945_W2_V2.dta",
+      "var": "glucosa",
+      "rows": 2364,
+      "n_valid": 2238,
+      "dtype": "float64",
+      "label": "Glucose(mg/dl)Clinical Chemistry lab",
+      "n_distinct": 177,
+      "values": {
+        "29.0": 1,
+        "44.0": 1,
+        "47.0": 1,
+        "49.0": 1,
+        "52.0": 1,
+        "55.0": 2,
+        "57.0": 1,
+        "58.0": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS9_Biomarkers_Pre-1945_W2_V2.dta",
+      "var": "glucaju",
+      "rows": 2364,
+      "n_valid": 2238,
+      "dtype": "float32",
+      "label": "Glucose(mg/dl)adjusted",
+      "n_distinct": 177,
+      "values": {
+        "33.65999984741211": 1,
+        "47.61000061035156": 1,
+        "50.400001525878906": 1,
+        "52.2599983215332": 1,
+        "55.04999923706055": 1,
+        "57.84000015258789": 2,
+        "59.70000076293945": 1,
+        "60.630001068115234": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS9_Biomarkers_Pre-1945_W2_V2.dta",
+      "var": "antihta",
+      "rows": 2364,
+      "n_valid": 2364,
+      "dtype": "category",
+      "label": "Taking anti-hypertensive drugs",
+      "n_distinct": 2,
+      "values": {
+        "No": 1207,
+        "Yes": 1157
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS9_Biomarkers_Pre-1945_W2_V2.dta",
+      "var": "diastolica",
+      "rows": 2364,
+      "n_valid": 2324,
+      "dtype": "float32",
+      "label": "Diastolic Blood Pressure mmHg",
+      "n_distinct": 147,
+      "values": {
+        "43.0": 1,
+        "45.0": 1,
+        "46.5": 2,
+        "47.0": 1,
+        "47.5": 3,
+        "48.5": 1,
+        "49.0": 1,
+        "49.5": 4
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS9_Biomarkers_Pre-1945_W2_V2.dta",
+      "var": "sistolica",
+      "rows": 2364,
+      "n_valid": 2324,
+      "dtype": "float32",
+      "label": "Systolic Blood Pressure mmHg",
+      "n_distinct": 254,
+      "values": {
+        "72.5": 1,
+        "73.0": 1,
+        "73.5": 1,
+        "79.0": 1,
+        "80.5": 1,
+        "82.5": 3,
+        "86.0": 1,
+        "88.0": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS9_Biomarkers_Pre-1945_W2_V2.dta",
+      "var": "risksist",
+      "rows": 2364,
+      "n_valid": 2324,
+      "dtype": "category",
+      "label": "Systolic Blood Pressure>=140mmHg",
+      "n_distinct": 3,
+      "values": {
+        "No": 872,
+        "Yes": 1452,
+        "nan": 40
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS9_Biomarkers_Pre-1945_W2_V2.dta",
+      "var": "imc2",
+      "rows": 2364,
+      "n_valid": 2266,
+      "dtype": "float64",
+      "label": "BMI BodyMassIndex",
+      "n_distinct": 38,
+      "values": {
+        "8.0": 1,
+        "11.0": 3,
+        "12.0": 3,
+        "13.0": 6,
+        "14.0": 9,
+        "15.0": 16,
+        "16.0": 16,
+        "17.0": 35
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS9_Biomarkers_Pre-1945_W2_V2.dta",
+      "var": "rcintcad",
+      "rows": 2364,
+      "n_valid": 2069,
+      "dtype": "float32",
+      "label": "Ratio waist-hip>=1",
+      "n_distinct": 46,
+      "values": {
+        "0.5299999713897705": 1,
+        "0.6299999952316284": 1,
+        "0.7400000095367432": 1,
+        "0.75": 1,
+        "0.7599999904632568": 3,
+        "0.7699999809265137": 1,
+        "0.7799999713897705": 5,
+        "0.7900000214576721": 9
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS9_Biomarkers_Pre-1945_W2_V2.dta",
+      "var": "riskglucr",
+      "rows": 2364,
+      "n_valid": 2163,
+      "dtype": "category",
+      "label": "High fasting glucose adjusted >=126",
+      "n_distinct": 3,
+      "values": {
+        "No": 1969,
+        "Yes": 194,
+        "nan": 201
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W2 V3.dta",
+      "var": "pesokg",
+      "rows": 3569,
+      "n_valid": 3438,
+      "dtype": "float32",
+      "label": "WeightInKg",
+      "n_distinct": 1199,
+      "values": {
+        "20.972387313842773": 1,
+        "36.6363639831543": 1,
+        "38.8636360168457": 1,
+        "39.0": 1,
+        "39.772727966308594": 1,
+        "39.8636360168457": 2,
+        "40.04545211791992": 1,
+        "40.227272033691406": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W2 V3.dta",
+      "var": "tallam",
+      "rows": 3569,
+      "n_valid": 3520,
+      "dtype": "float32",
+      "label": "HeightInMts",
+      "n_distinct": 431,
+      "values": {
+        "1.0429999828338623": 1,
+        "1.3200000524520874": 1,
+        "1.3410000801086426": 1,
+        "1.3560000658035278": 1,
+        "1.3619999885559082": 1,
+        "1.3630000352859497": 1,
+        "1.3760000467300415": 1,
+        "1.378999948501587": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W2 V3.dta",
+      "var": "bmi",
+      "rows": 3569,
+      "n_valid": 3400,
+      "dtype": "float32",
+      "label": "BodyMassIndex (with imputations)",
+      "n_distinct": 297,
+      "values": {
+        "9.699999809265137": 1,
+        "15.699999809265137": 1,
+        "16.299999237060547": 1,
+        "16.5": 2,
+        "16.700000762939453": 1,
+        "16.799999237060547": 1,
+        "16.899999618530273": 1,
+        "17.5": 2
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W2 V3.dta",
+      "var": "waist",
+      "rows": 3569,
+      "n_valid": 3422,
+      "dtype": "float32",
+      "label": "WaistCm",
+      "n_distinct": 527,
+      "values": {
+        "59.0": 1,
+        "62.0": 1,
+        "65.0": 1,
+        "67.0": 1,
+        "67.5": 1,
+        "67.80000305175781": 1,
+        "68.0": 1,
+        "68.30000305175781": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W2 V3.dta",
+      "var": "whipratio",
+      "rows": 3569,
+      "n_valid": 3409,
+      "dtype": "float32",
+      "label": "Waist / hip ratio",
+      "n_distinct": 3052,
+      "values": {
+        "0.4994797110557556": 1,
+        "0.7016393542289734": 1,
+        "0.7142857313156128": 1,
+        "0.7164948582649231": 1,
+        "0.7411167621612549": 1,
+        "0.7456140518188477": 1,
+        "0.7491258382797241": 1,
+        "0.7495164275169373": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W2 V3.dta",
+      "var": "antidiab",
+      "rows": 3569,
+      "n_valid": 1771,
+      "dtype": "category",
+      "label": "DiabetesMeds",
+      "n_distinct": 3,
+      "values": {
+        "No": 1326,
+        "nan": 1798,
+        "yes": 445
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k3b",
+      "rows": 2279,
+      "n_valid": 2085,
+      "dtype": "float64",
+      "label": "wholeweight",
+      "n_distinct": 169,
+      "values": {
+        "59.0": 1,
+        "60.0": 2,
+        "61.0": 1,
+        "62.0": 1,
+        "63.0": 1,
+        "64.0": 1,
+        "65.0": 1,
+        "67.0": 3
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k3c",
+      "rows": 2279,
+      "n_valid": 2085,
+      "dtype": "float64",
+      "label": "DecimalWeight",
+      "n_distinct": 10,
+      "values": {
+        "0.0": 291,
+        "1.0": 180,
+        "2.0": 212,
+        "3.0": 191,
+        "4.0": 208,
+        "5.0": 255,
+        "6.0": 206,
+        "7.0": 199
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k3a",
+      "rows": 2279,
+      "n_valid": 2128,
+      "dtype": "category",
+      "label": "AbleToWeight",
+      "n_distinct": 4,
+      "values": {
+        "Attempted but unable": 12,
+        "Was not attempted": 30,
+        "completed wholedecimal": 2086,
+        "nan": 151
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k4b",
+      "rows": 2279,
+      "n_valid": 2051,
+      "dtype": "float64",
+      "label": "HeightCm",
+      "n_distinct": 60,
+      "values": {
+        "113.0": 1,
+        "115.0": 1,
+        "123.0": 1,
+        "127.0": 2,
+        "128.0": 1,
+        "130.0": 4,
+        "132.0": 6,
+        "133.0": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k4c",
+      "rows": 2279,
+      "n_valid": 2051,
+      "dtype": "float64",
+      "label": "HeightMm",
+      "n_distinct": 10,
+      "values": {
+        "0.0": 408,
+        "1.0": 156,
+        "2.0": 166,
+        "3.0": 164,
+        "4.0": 196,
+        "5.0": 335,
+        "6.0": 184,
+        "7.0": 151
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k4a",
+      "rows": 2279,
+      "n_valid": 2127,
+      "dtype": "category",
+      "label": "Height",
+      "n_distinct": 5,
+      "values": {
+        "Attempted but unable": 32,
+        "Refused": 2,
+        "Was not attempted": 42,
+        "completed Cm Mm": 2051,
+        "nan": 152
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k5b",
+      "rows": 2279,
+      "n_valid": 2268,
+      "dtype": "float64",
+      "label": "KneeHeightCm",
+      "n_distinct": 26,
+      "values": {
+        "33.0": 1,
+        "38.0": 2,
+        "39.0": 1,
+        "40.0": 8,
+        "41.0": 10,
+        "42.0": 30,
+        "43.0": 56,
+        "44.0": 112
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k5c",
+      "rows": 2279,
+      "n_valid": 2268,
+      "dtype": "float64",
+      "label": "KneeHeightMm",
+      "n_distinct": 10,
+      "values": {
+        "0.0": 308,
+        "1.0": 158,
+        "2.0": 234,
+        "3.0": 273,
+        "4.0": 212,
+        "5.0": 309,
+        "6.0": 212,
+        "7.0": 192
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k5a",
+      "rows": 2279,
+      "n_valid": 2276,
+      "dtype": "category",
+      "label": "KneeHeight",
+      "n_distinct": 4,
+      "values": {
+        "Attempted but unable": 6,
+        "Was not attempted": 2,
+        "completed Cm Mm": 2268,
+        "nan": 3
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k6b",
+      "rows": 2279,
+      "n_valid": 2111,
+      "dtype": "float64",
+      "label": "WaistCm",
+      "n_distinct": 77,
+      "values": {
+        "48.0": 1,
+        "61.0": 2,
+        "62.0": 3,
+        "63.0": 2,
+        "64.0": 1,
+        "65.0": 2,
+        "66.0": 2,
+        "67.0": 4
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k6c",
+      "rows": 2279,
+      "n_valid": 2111,
+      "dtype": "float64",
+      "label": "WaistMm",
+      "n_distinct": 10,
+      "values": {
+        "0.0": 870,
+        "1.0": 86,
+        "2.0": 84,
+        "3.0": 133,
+        "4.0": 90,
+        "5.0": 490,
+        "6.0": 81,
+        "7.0": 103
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "k6a",
+      "rows": 2279,
+      "n_valid": 2276,
+      "dtype": "category",
+      "label": "Waist",
+      "n_distinct": 4,
+      "values": {
+        "Attempted but unable": 61,
+        "Was not attempted": 104,
+        "completed Cm Mm": 2111,
+        "nan": 3
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "l3d",
+      "rows": 2279,
+      "n_valid": 1542,
+      "dtype": "float64",
+      "label": "ChairHeight",
+      "n_distinct": 28,
+      "values": {
+        "34.0": 2,
+        "35.0": 1,
+        "36.0": 8,
+        "37.0": 5,
+        "38.0": 3,
+        "39.0": 7,
+        "40.0": 26,
+        "41.0": 35
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W1 V4.dta",
+      "var": "pesokg",
+      "rows": 4678,
+      "n_valid": 4555,
+      "dtype": "float32",
+      "label": "WeightInKg",
+      "n_distinct": 1298,
+      "values": {
+        "0.0": 1,
+        "25.454545974731445": 1,
+        "33.6363639831543": 1,
+        "34.293067932128906": 1,
+        "34.45454788208008": 1,
+        "34.5": 1,
+        "36.227272033691406": 1,
+        "36.68181610107422": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W1 V4.dta",
+      "var": "tallam",
+      "rows": 4678,
+      "n_valid": 4438,
+      "dtype": "float32",
+      "label": "HeightInMts",
+      "n_distinct": 468,
+      "values": {
+        "1.0429999828338623": 1,
+        "1.3200000524520874": 1,
+        "1.3410000801086426": 1,
+        "1.350000023841858": 1,
+        "1.3560000658035278": 1,
+        "1.3619999885559082": 1,
+        "1.3630000352859497": 1,
+        "1.371000051498413": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W1 V4.dta",
+      "var": "bmi",
+      "rows": 4678,
+      "n_valid": 4133,
+      "dtype": "float32",
+      "label": "BodyMassIndex (with imputations)",
+      "n_distinct": 310,
+      "values": {
+        "13.100000381469727": 1,
+        "15.0": 3,
+        "15.899999618530273": 2,
+        "16.299999237060547": 1,
+        "16.5": 1,
+        "16.700000762939453": 1,
+        "17.0": 1,
+        "17.200000762939453": 2
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W1 V4.dta",
+      "var": "bmi_short",
+      "rows": 4678,
+      "n_valid": 253,
+      "dtype": "float32",
+      "label": "BMI short questionnaire",
+      "n_distinct": 27,
+      "values": {
+        "16.0": 1,
+        "18.0": 2,
+        "19.0": 4,
+        "20.0": 7,
+        "21.0": 4,
+        "22.0": 15,
+        "23.0": 17,
+        "24.0": 23
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W1 V4.dta",
+      "var": "waist",
+      "rows": 4678,
+      "n_valid": 4102,
+      "dtype": "float32",
+      "label": "WaistCm",
+      "n_distinct": 561,
+      "values": {
+        "39.0": 1,
+        "60.5": 1,
+        "62.29999923706055": 1,
+        "63.5": 1,
+        "64.0": 1,
+        "64.5": 1,
+        "66.5": 3,
+        "67.0": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W1 V4.dta",
+      "var": "whipratio",
+      "rows": 4678,
+      "n_valid": 4092,
+      "dtype": "float32",
+      "label": "Waist / hip ratio",
+      "n_distinct": 3481,
+      "values": {
+        "0.4088050127029419": 1,
+        "0.6878669857978821": 1,
+        "0.6960784196853638": 1,
+        "0.712195098400116": 1,
+        "0.7207207083702087": 1,
+        "0.7424242496490479": 1,
+        "0.7426900863647461": 1,
+        "0.7452025413513184": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W1 V4.dta",
+      "var": "antidiab",
+      "rows": 4678,
+      "n_valid": 1911,
+      "dtype": "category",
+      "label": "DiabetesMeds",
+      "n_distinct": 3,
+      "values": {
+        "No": 1431,
+        "nan": 2767,
+        "yes": 480
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS9 Recoded variables RC W1 V4.dta",
+      "var": "diabhemo",
+      "rows": 4678,
+      "n_valid": 2589,
+      "dtype": "category",
+      "label": "Diabetes HbA1C 6.5 cutoff",
+      "n_distinct": 5,
+      "values": {
+        "Controlled diab": 183,
+        "Hidden diab": 200,
+        "Not diabetic": 1865,
+        "Uncontrolled diab": 341,
+        "nan": 2089
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "imc",
+      "rows": 2827,
+      "n_valid": 2547,
+      "dtype": "float64",
+      "label": "BMI BodyMassIndex",
+      "n_distinct": 1403,
+      "values": {
+        "1.38": 1,
+        "1.55": 1,
+        "1.7": 1,
+        "1.73": 1,
+        "1.75": 1,
+        "1.88": 1,
+        "4.73": 1,
+        "7.93": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "glucosa",
+      "rows": 2827,
+      "n_valid": 2659,
+      "dtype": "float64",
+      "label": "Glucose(mg/dl)Clinical Chemistry lab",
+      "n_distinct": 201,
+      "values": {
+        "18.0": 1,
+        "33.0": 1,
+        "35.0": 1,
+        "38.0": 1,
+        "43.0": 1,
+        "49.0": 1,
+        "52.0": 2,
+        "56.0": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "glucaju",
+      "rows": 2827,
+      "n_valid": 2659,
+      "dtype": "float64",
+      "label": "Glucose(mg/dl)adjusted",
+      "n_distinct": 402,
+      "values": {
+        "18.0": 1,
+        "20.09": 1,
+        "22.53": 1,
+        "26.2": 1,
+        "39.63": 1,
+        "43.0": 1,
+        "43.29": 1,
+        "48.18": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "diastolica",
+      "rows": 2827,
+      "n_valid": 2793,
+      "dtype": "float64",
+      "label": "Diastolic Blood Pressure mmHg",
+      "n_distinct": 150,
+      "values": {
+        "46.5": 1,
+        "47.0": 3,
+        "48.5": 2,
+        "49.0": 2,
+        "50.0": 3,
+        "50.5": 3,
+        "51.5": 2,
+        "52.0": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "riskdiast",
+      "rows": 2827,
+      "n_valid": 2793,
+      "dtype": "category",
+      "label": "Diastolic blood pressure>=90mmHg",
+      "n_distinct": 3,
+      "values": {
+        "No": 1773,
+        "Yes": 1020,
+        "nan": 34
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "sistolica",
+      "rows": 2827,
+      "n_valid": 2793,
+      "dtype": "float64",
+      "label": "Systolic Blood Pressure mmHg",
+      "n_distinct": 263,
+      "values": {
+        "75.0": 1,
+        "75.5": 1,
+        "81.5": 1,
+        "85.0": 1,
+        "85.5": 1,
+        "86.5": 2,
+        "87.5": 1,
+        "88.0": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "risksist",
+      "rows": 2827,
+      "n_valid": 2793,
+      "dtype": "category",
+      "label": "Systolic Blood Pressure>=140mmHg",
+      "n_distinct": 3,
+      "values": {
+        "No": 986,
+        "Yes": 1807,
+        "nan": 34
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "rcintcad",
+      "rows": 2827,
+      "n_valid": 2563,
+      "dtype": "float64",
+      "label": "Ratio waist-hip>=1",
+      "n_distinct": 56,
+      "values": {
+        "0.26": 1,
+        "0.41": 1,
+        "0.42": 1,
+        "0.5": 1,
+        "0.67": 1,
+        "0.69": 1,
+        "0.71": 1,
+        "0.73": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "riskglucr",
+      "rows": 2827,
+      "n_valid": 2527,
+      "dtype": "category",
+      "label": "High fasting glucose adjusted >=126",
+      "n_distinct": 3,
+      "values": {
+        "No": 2116,
+        "Yes": 411,
+        "nan": 300
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "antihta",
+      "rows": 2827,
+      "n_valid": 2827,
+      "dtype": "category",
+      "label": "Taking anti-hypertensive drugs",
+      "n_distinct": 2,
+      "values": {
+        "No": 1552,
+        "Yes": 1275
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS9_Biomarkers_Pre-1945_W1_V2.dta",
+      "var": "ponderador",
+      "rows": 2827,
+      "n_valid": 2827,
+      "dtype": "float64",
+      "label": "Sampling Nonresponse Weights",
+      "n_distinct": 57,
+      "values": {
+        "0.07": 37,
+        "0.08": 39,
+        "0.09": 76,
+        "0.13": 11,
+        "0.14": 1,
+        "0.15": 17,
+        "0.17": 1,
+        "0.28": 84
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS10_Recoded_Variables_Pre-1945_W2_V2.dta",
+      "var": "htaclasif",
+      "rows": 2364,
+      "n_valid": 2364,
+      "dtype": "object",
+      "label": "Hypertension Measure",
+      "n_distinct": 5,
+      "values": {
+        "": 18,
+        ".00": 948,
+        "1.00": 841,
+        "2.00": 316,
+        "3.00": 241
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS10_Recoded_Variables_Pre-1945_W2_V2.dta",
+      "var": "diabgluccontrol",
+      "rows": 2364,
+      "n_valid": 2364,
+      "dtype": "object",
+      "label": "Diabetes measured by level of glucose",
+      "n_distinct": 5,
+      "values": {
+        "": 200,
+        ".00": 1616,
+        "1.00": 354,
+        "2.00": 163,
+        "3.00": 31
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS10_Recoded_Variables_Pre-1945_W2_V2.dta",
+      "var": "diabhemo",
+      "rows": 2364,
+      "n_valid": 2236,
+      "dtype": "category",
+      "label": "Diabetes measured by level of hemoglobin",
+      "n_distinct": 5,
+      "values": {
+        "Controled diab": 213,
+        "Hidden diab": 170,
+        "No diabetic": 1533,
+        "Uncontrol diab": 320,
+        "nan": 128
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS10_Recoded_Variables_Pre-1945_W2_V2.dta",
+      "var": "hatalco",
+      "rows": 2364,
+      "n_valid": 2362,
+      "dtype": "float64",
+      "label": "Alcohol intake, g/d",
+      "n_distinct": 545,
+      "values": {
+        "-1.79": 1,
+        "-1.53": 1,
+        "-1.35": 1,
+        "-1.22": 1,
+        "-1.15": 1,
+        "-1.14": 1,
+        "-1.06": 1,
+        "-1.03": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS10_Recoded_Variables_Pre-1945_W2_V2.dta",
+      "var": "msnum",
+      "rows": 2364,
+      "n_valid": 2227,
+      "dtype": "float64",
+      "label": "number of metabolic syndrome 4 components except waist",
+      "n_distinct": 5,
+      "values": {
+        "0.0": 230,
+        "1.0": 545,
+        "2.0": 668,
+        "3.0": 550,
+        "4.0": 234
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS10_Recoded_Variables_Pre-1945_W2_V2.dta",
+      "var": "imc2",
+      "rows": 2364,
+      "n_valid": 2265,
+      "dtype": "float64",
+      "label": "BMI",
+      "n_distinct": 2254,
+      "values": {
+        "9.9601411819458": 1,
+        "11.09267807006836": 1,
+        "11.159924507141113": 1,
+        "11.596927642822266": 1,
+        "11.940167427062988": 1,
+        "11.994794845581055": 1,
+        "12.365704536437988": 1,
+        "12.699836730957031": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS10_Recoded_Variables_Pre-1945_W1_V2.dta",
+      "var": "ponderador",
+      "rows": 2827,
+      "n_valid": 2827,
+      "dtype": "float64",
+      "label": "Sampling Nonresponse Weights",
+      "n_distinct": 63,
+      "values": {
+        "0.074359559": 37,
+        "0.075458474": 39,
+        "0.088692918": 49,
+        "0.090003654": 27,
+        "0.127290383": 11,
+        "0.141209915": 1,
+        "0.15182656": 17,
+        "0.168429181": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS10_Recoded_Variables_Pre-1945_W1_V2.dta",
+      "var": "imc2",
+      "rows": 2827,
+      "n_valid": 2698,
+      "dtype": "float64",
+      "label": "BMI",
+      "n_distinct": 44,
+      "values": {
+        "8.0": 2,
+        "9.0": 1,
+        "10.0": 1,
+        "12.0": 3,
+        "13.0": 2,
+        "14.0": 11,
+        "15.0": 11,
+        "16.0": 27
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS10_Recoded_Variables_Pre-1945_W1_V2.dta",
+      "var": "htaclasif",
+      "rows": 2827,
+      "n_valid": 2801,
+      "dtype": "category",
+      "label": "Hypertension Measure",
+      "n_distinct": 5,
+      "values": {
+        "Controlled HTA": 853,
+        "Hidden HTA": 423,
+        "Normal(No hblood pressure)": 1103,
+        "Uncontrolled HTA": 422,
+        "nan": 26
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS10_Recoded_Variables_Pre-1945_W1_V2.dta",
+      "var": "diabgluccontrol",
+      "rows": 2827,
+      "n_valid": 2529,
+      "dtype": "category",
+      "label": "Diabetes measured by level of glucose",
+      "n_distinct": 5,
+      "values": {
+        "Controlled diab": 249,
+        "Hidden diab": 161,
+        "Not diabetic": 1869,
+        "Uncontrolled diab": 250,
+        "nan": 298
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS10_Recoded_Variables_Pre-1945_W1_V2.dta",
+      "var": "diabhemo",
+      "rows": 2827,
+      "n_valid": 2618,
+      "dtype": "category",
+      "label": "Diabetes measured by level of hemoglobin",
+      "n_distinct": 5,
+      "values": {
+        "Controled diab": 278,
+        "Hidden diab": 55,
+        "No diabetic": 2042,
+        "Uncontrol diab": 243,
+        "nan": 209
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS10_Recoded_Variables_Pre-1945_W1_V2.dta",
+      "var": "msnum",
+      "rows": 2827,
+      "n_valid": 2607,
+      "dtype": "float64",
+      "label": "number of metabolic syndrome 4 components except waist",
+      "n_distinct": 5,
+      "values": {
+        "0.0": 365,
+        "1.0": 704,
+        "2.0": 771,
+        "3.0": 602,
+        "4.0": 165
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS10_Recoded_Variables_Pre-1945_W1_V2.dta",
+      "var": "hatalco",
+      "rows": 2827,
+      "n_valid": 2819,
+      "dtype": "float64",
+      "label": "Alcohol intake, g/d",
+      "n_distinct": 2817,
+      "values": {
+        "-1.47000169754": 1,
+        "-1.24029040337": 1,
+        "-1.17754018307": 1,
+        "-0.99115389586": 1,
+        "-0.9820381999": 1,
+        "-0.891505301": 1,
+        "-0.854131639": 1,
+        "-0.84445512295": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k3b",
+      "rows": 2712,
+      "n_valid": 2541,
+      "dtype": "float64",
+      "label": "WHOLEWEIGHT",
+      "n_distinct": 173,
+      "values": {
+        "54.0": 1,
+        "56.0": 1,
+        "57.0": 1,
+        "61.0": 2,
+        "62.0": 2,
+        "65.0": 3,
+        "67.0": 3,
+        "69.0": 4
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k3c",
+      "rows": 2712,
+      "n_valid": 2541,
+      "dtype": "float64",
+      "label": "DECIMALWEIGHT",
+      "n_distinct": 10,
+      "values": {
+        "0.0": 328,
+        "1.0": 205,
+        "2.0": 282,
+        "3.0": 237,
+        "4.0": 226,
+        "5.0": 331,
+        "6.0": 249,
+        "7.0": 243
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k3a",
+      "rows": 2712,
+      "n_valid": 2554,
+      "dtype": "category",
+      "label": "ABLETOWEIGHT",
+      "n_distinct": 4,
+      "values": {
+        "ATTEMPTED BUT UNABLE": 9,
+        "COMPLETED WHOLEDECIMAL": 2540,
+        "WAS NOT ATTEMPTED": 5,
+        "nan": 158
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k4b",
+      "rows": 2712,
+      "n_valid": 2526,
+      "dtype": "float64",
+      "label": "HEIGHTCM",
+      "n_distinct": 68,
+      "values": {
+        "81.0": 1,
+        "83.0": 1,
+        "91.0": 1,
+        "94.0": 1,
+        "101.0": 1,
+        "117.0": 1,
+        "121.0": 1,
+        "125.0": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k4c",
+      "rows": 2712,
+      "n_valid": 2526,
+      "dtype": "float64",
+      "label": "HEIGHTMM",
+      "n_distinct": 10,
+      "values": {
+        "0.0": 535,
+        "1.0": 134,
+        "2.0": 217,
+        "3.0": 191,
+        "4.0": 212,
+        "5.0": 485,
+        "6.0": 200,
+        "7.0": 227
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k4a",
+      "rows": 2712,
+      "n_valid": 2554,
+      "dtype": "category",
+      "label": "HEIGHT",
+      "n_distinct": 5,
+      "values": {
+        "ATTEMPTED BUT UNABLE": 17,
+        "COMPLETED CM MM": 2526,
+        "REFUSED": 1,
+        "WAS NOT ATTEMPTED": 10,
+        "nan": 158
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k5b",
+      "rows": 2712,
+      "n_valid": 2701,
+      "dtype": "float64",
+      "label": "KNEEHEIGHTCM",
+      "n_distinct": 29,
+      "values": {
+        "27.0": 1,
+        "30.0": 1,
+        "35.0": 1,
+        "37.0": 1,
+        "38.0": 3,
+        "39.0": 3,
+        "40.0": 6,
+        "41.0": 20
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k5c",
+      "rows": 2712,
+      "n_valid": 2701,
+      "dtype": "float64",
+      "label": "KNEEHEIGHTMM",
+      "n_distinct": 10,
+      "values": {
+        "0.0": 367,
+        "1.0": 218,
+        "2.0": 303,
+        "3.0": 322,
+        "4.0": 239,
+        "5.0": 374,
+        "6.0": 212,
+        "7.0": 236
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k5a",
+      "rows": 2712,
+      "n_valid": 2708,
+      "dtype": "category",
+      "label": "KNEEHEIGHT",
+      "n_distinct": 5,
+      "values": {
+        "ATTEMPTED BUT UNABLE": 1,
+        "COMPLETED CM MM": 2701,
+        "REFUSED": 1,
+        "WAS NOT ATTEMPTED": 5,
+        "nan": 4
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k6b",
+      "rows": 2712,
+      "n_valid": 2636,
+      "dtype": "float64",
+      "label": "WAISTCM",
+      "n_distinct": 88,
+      "values": {
+        "23.0": 1,
+        "25.0": 1,
+        "36.0": 1,
+        "37.0": 1,
+        "45.0": 1,
+        "56.0": 1,
+        "58.0": 2,
+        "60.0": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k6c",
+      "rows": 2712,
+      "n_valid": 2636,
+      "dtype": "float64",
+      "label": "WAISTMM",
+      "n_distinct": 10,
+      "values": {
+        "0.0": 1022,
+        "1.0": 59,
+        "2.0": 208,
+        "3.0": 187,
+        "4.0": 99,
+        "5.0": 598,
+        "6.0": 84,
+        "7.0": 111
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "k6a",
+      "rows": 2712,
+      "n_valid": 2708,
+      "dtype": "category",
+      "label": "WAIST",
+      "n_distinct": 4,
+      "values": {
+        "ATTEMPTED BUT UNABLE": 33,
+        "COMPLETED CM MM": 2635,
+        "WAS NOT ATTEMPTED": 40,
+        "nan": 4
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "l3d",
+      "rows": 2712,
+      "n_valid": 2072,
+      "dtype": "float64",
+      "label": "CHAIRHEIGHT",
+      "n_distinct": 27,
+      "values": {
+        "4.0": 1,
+        "30.0": 2,
+        "33.0": 4,
+        "34.0": 2,
+        "35.0": 3,
+        "36.0": 5,
+        "37.0": 5,
+        "38.0": 14
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W1 V4.dta",
+      "var": "c4",
+      "rows": 50,
+      "n_valid": 50,
+      "dtype": "category",
+      "label": "HaveHypertension",
+      "n_distinct": 2,
+      "values": {
+        "No": 34,
+        "Yes": 16
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W1 V4.dta",
+      "var": "c10",
+      "rows": 50,
+      "n_valid": 50,
+      "dtype": "category",
+      "label": "HaveDiabetes",
+      "n_distinct": 2,
+      "values": {
+        "No": 43,
+        "Yes": 7
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W1 V4.dta",
+      "var": "c17",
+      "rows": 50,
+      "n_valid": 50,
+      "dtype": "category",
+      "label": "TestOfDiabetes",
+      "n_distinct": 5,
+      "values": {
+        "From 1 to 2 Years": 6,
+        "From 6 to 11 Months": 6,
+        "Less than 6 Months": 27,
+        "Never": 5,
+        "On the previous visit": 6
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W1 V4.dta",
+      "var": "k3",
+      "rows": 50,
+      "n_valid": 50,
+      "dtype": "category",
+      "label": "WeightPounds",
+      "n_distinct": 49,
+      "values": {
+        "95.80000305175781": 1,
+        "117.19999694824219": 1,
+        "118.4000015258789": 1,
+        "121.5999984741211": 1,
+        "126.5999984741211": 1,
+        "128.6999969482422": 1,
+        "133.3000030517578": 1,
+        "136.89999389648438": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W1 V4.dta",
+      "var": "k4",
+      "rows": 50,
+      "n_valid": 50,
+      "dtype": "category",
+      "label": "HeightCm",
+      "n_distinct": 45,
+      "values": {
+        "141.6999969482422": 1,
+        "147.0": 1,
+        "148.5": 1,
+        "149.0": 1,
+        "149.89999389648438": 2,
+        "150.5": 1,
+        "151.0": 1,
+        "151.3000030517578": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W1 V4.dta",
+      "var": "k5",
+      "rows": 50,
+      "n_valid": 50,
+      "dtype": "category",
+      "label": "KneeHeightCm",
+      "n_distinct": 36,
+      "values": {
+        "43.400001525878906": 1,
+        "43.79999923706055": 1,
+        "45.599998474121094": 2,
+        "46.0": 1,
+        "46.20000076293945": 2,
+        "46.900001525878906": 1,
+        "47.0": 2,
+        "47.099998474121094": 3
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W1 V4.dta",
+      "var": "k6",
+      "rows": 50,
+      "n_valid": 50,
+      "dtype": "category",
+      "label": "WaistCm",
+      "n_distinct": 46,
+      "values": {
+        "75.0": 1,
+        "79.0": 1,
+        "80.5": 1,
+        "82.5": 1,
+        "83.4000015258789": 1,
+        "83.5": 1,
+        "86.30000305175781": 1,
+        "86.69999694824219": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W1 V4.dta",
+      "var": "l3d",
+      "rows": 50,
+      "n_valid": 49,
+      "dtype": "float64",
+      "label": "ChairHeight",
+      "n_distinct": 15,
+      "values": {
+        "30.0": 1,
+        "35.0": 1,
+        "39.0": 2,
+        "40.0": 1,
+        "41.0": 4,
+        "42.0": 1,
+        "43.0": 4,
+        "44.0": 4
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "c4",
+      "rows": 1339,
+      "n_valid": 1339,
+      "dtype": "category",
+      "label": "HaveHypertension",
+      "n_distinct": 3,
+      "values": {
+        "DK": 2,
+        "No": 726,
+        "Yes": 611
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "c10",
+      "rows": 1339,
+      "n_valid": 1339,
+      "dtype": "category",
+      "label": "HaveDiabetes",
+      "n_distinct": 3,
+      "values": {
+        "DK": 8,
+        "No": 1087,
+        "Yes": 244
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "c17",
+      "rows": 1339,
+      "n_valid": 1339,
+      "dtype": "category",
+      "label": "TestOfDiabetes",
+      "n_distinct": 6,
+      "values": {
+        "DK": 21,
+        "From 1 to 2 Years": 155,
+        "From 6 to 11 Months": 116,
+        "Less than 6 Months": 814,
+        "Never": 90,
+        "On the previous visit": 143
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "k3",
+      "rows": 1339,
+      "n_valid": 1304,
+      "dtype": "category",
+      "label": "WeightPounds",
+      "n_distinct": 778,
+      "values": {
+        "0.0": 1,
+        "83.4000015258789": 1,
+        "87.5999984741211": 1,
+        "90.9000015258789": 1,
+        "92.0999984741211": 1,
+        "92.19999694824219": 1,
+        "95.69999694824219": 1,
+        "97.5": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "k4",
+      "rows": 1339,
+      "n_valid": 1310,
+      "dtype": "category",
+      "label": "HeightCm",
+      "n_distinct": 337,
+      "values": {
+        "138.0": 1,
+        "138.3000030517578": 1,
+        "139.0": 1,
+        "139.39999389648438": 1,
+        "139.89999389648438": 2,
+        "140.0": 2,
+        "141.0": 1,
+        "141.89999389648438": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "k5",
+      "rows": 1339,
+      "n_valid": 1317,
+      "dtype": "category",
+      "label": "KneeHeightCm",
+      "n_distinct": 159,
+      "values": {
+        "31.899999618530273": 1,
+        "41.900001525878906": 1,
+        "42.20000076293945": 1,
+        "42.29999923706055": 1,
+        "42.400001525878906": 1,
+        "42.5": 1,
+        "42.599998474121094": 1,
+        "42.70000076293945": 3
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "k6",
+      "rows": 1339,
+      "n_valid": 1308,
+      "dtype": "category",
+      "label": "WaistCm",
+      "n_distinct": 389,
+      "values": {
+        "60.5": 1,
+        "63.5": 1,
+        "66.5": 2,
+        "68.0": 1,
+        "69.0": 2,
+        "69.9000015258789": 1,
+        "70.0": 1,
+        "70.30000305175781": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "l3d",
+      "rows": 1339,
+      "n_valid": 1206,
+      "dtype": "float64",
+      "label": "ChairHeight",
+      "n_distinct": 27,
+      "values": {
+        "31.0": 2,
+        "32.0": 2,
+        "34.0": 2,
+        "35.0": 7,
+        "36.0": 9,
+        "37.0": 5,
+        "38.0": 17,
+        "39.0": 16
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "factor_cony",
+      "rows": 1339,
+      "n_valid": 1339,
+      "dtype": "int16",
+      "label": "SamplingWeightSpouse",
+      "n_distinct": 378,
+      "values": {
+        "29": 1,
+        "30": 3,
+        "32": 1,
+        "35": 2,
+        "37": 2,
+        "38": 4,
+        "39": 2,
+        "40": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W2 V3.dta",
+      "var": "c4m",
+      "rows": 30,
+      "n_valid": 30,
+      "dtype": "category",
+      "label": "HaveHypertension",
+      "n_distinct": 2,
+      "values": {
+        "No": 19,
+        "Yes": 11
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W2 V3.dta",
+      "var": "c10m",
+      "rows": 30,
+      "n_valid": 30,
+      "dtype": "category",
+      "label": "HaveDiabetes",
+      "n_distinct": 2,
+      "values": {
+        "No": 27,
+        "Yes": 3
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W2 V3.dta",
+      "var": "c17",
+      "rows": 30,
+      "n_valid": 27,
+      "dtype": "category",
+      "label": "TestOfDiabetes",
+      "n_distinct": 6,
+      "values": {
+        "DK": 2,
+        "From 1 to 2 Years": 6,
+        "From 6 to 11 Months": 2,
+        "Less than 6 Months": 15,
+        "On the previous visit": 2,
+        "nan": 3
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W2 V3.dta",
+      "var": "k3",
+      "rows": 30,
+      "n_valid": 29,
+      "dtype": "category",
+      "label": "WeightPounds",
+      "n_distinct": 29,
+      "values": {
+        "93.19999694824219": 1,
+        "120.30000305175781": 1,
+        "126.0999984741211": 1,
+        "135.8000030517578": 1,
+        "137.10000610351562": 1,
+        "138.0": 1,
+        "138.1999969482422": 1,
+        "143.3000030517578": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W2 V3.dta",
+      "var": "k4",
+      "rows": 30,
+      "n_valid": 30,
+      "dtype": "category",
+      "label": "HeightCm",
+      "n_distinct": 19,
+      "values": {
+        "141.0": 1,
+        "148.0": 1,
+        "150.0": 1,
+        "151.0": 3,
+        "152.0": 2,
+        "153.0": 2,
+        "154.0": 4,
+        "155.0": 2
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W2 V3.dta",
+      "var": "k5",
+      "rows": 30,
+      "n_valid": 30,
+      "dtype": "category",
+      "label": "KneeHeightCm",
+      "n_distinct": 10,
+      "values": {
+        "43.0": 2,
+        "45.0": 1,
+        "46.0": 3,
+        "47.0": 4,
+        "48.0": 6,
+        "49.0": 3,
+        "50.0": 3,
+        "51.0": 3
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W2 V3.dta",
+      "var": "k6",
+      "rows": 30,
+      "n_valid": 29,
+      "dtype": "category",
+      "label": "WaistCm",
+      "n_distinct": 28,
+      "values": {
+        "68.5": 1,
+        "89.0": 1,
+        "90.19999694824219": 1,
+        "93.0": 1,
+        "93.4000015258789": 1,
+        "93.5": 1,
+        "94.19999694824219": 1,
+        "94.5": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W2 V3.dta",
+      "var": "l3d",
+      "rows": 30,
+      "n_valid": 27,
+      "dtype": "float64",
+      "label": "ChairHeight",
+      "n_distinct": 10,
+      "values": {
+        "38.0": 2,
+        "41.0": 1,
+        "42.0": 2,
+        "44.0": 1,
+        "45.0": 5,
+        "46.0": 8,
+        "47.0": 3,
+        "48.0": 2
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "c4m",
+      "rows": 1109,
+      "n_valid": 1109,
+      "dtype": "category",
+      "label": "HaveHypertension",
+      "n_distinct": 2,
+      "values": {
+        "No": 616,
+        "Yes": 493
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "c10m",
+      "rows": 1109,
+      "n_valid": 1109,
+      "dtype": "category",
+      "label": "HaveDiabetes",
+      "n_distinct": 3,
+      "values": {
+        "DK": 2,
+        "No": 909,
+        "Yes": 198
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "c17",
+      "rows": 1109,
+      "n_valid": 915,
+      "dtype": "category",
+      "label": "TestOfDiabetes",
+      "n_distinct": 8,
+      "values": {
+        "6.0": 91,
+        "DK": 10,
+        "From 1 to 2 Years": 118,
+        "From 6 to 11 Months": 94,
+        "Less than 6 Months": 555,
+        "Never": 14,
+        "On the previous visit": 33,
+        "nan": 194
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "k3",
+      "rows": 1109,
+      "n_valid": 1002,
+      "dtype": "category",
+      "label": "WeightPounds",
+      "n_distinct": 657,
+      "values": {
+        "85.80000305175781": 1,
+        "89.5999984741211": 1,
+        "91.19999694824219": 1,
+        "94.19999694824219": 1,
+        "98.19999694824219": 1,
+        "100.0": 1,
+        "101.19999694824219": 1,
+        "101.9000015258789": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "k4",
+      "rows": 1109,
+      "n_valid": 1073,
+      "dtype": "category",
+      "label": "HeightCm",
+      "n_distinct": 48,
+      "values": {
+        "138.0": 1,
+        "139.0": 4,
+        "140.0": 2,
+        "141.0": 2,
+        "142.0": 4,
+        "143.0": 7,
+        "144.0": 3,
+        "145.0": 17
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "k5",
+      "rows": 1109,
+      "n_valid": 1080,
+      "dtype": "category",
+      "label": "KneeHeightCm",
+      "n_distinct": 19,
+      "values": {
+        "41.0": 1,
+        "42.0": 7,
+        "43.0": 17,
+        "44.0": 26,
+        "45.0": 69,
+        "46.0": 99,
+        "47.0": 124,
+        "48.0": 152
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "k6",
+      "rows": 1109,
+      "n_valid": 1014,
+      "dtype": "category",
+      "label": "WaistCm",
+      "n_distinct": 356,
+      "values": {
+        "59.0": 1,
+        "67.80000305175781": 1,
+        "69.5": 1,
+        "70.80000305175781": 1,
+        "71.0": 1,
+        "71.0999984741211": 1,
+        "72.0": 1,
+        "72.0999984741211": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "l3d",
+      "rows": 1109,
+      "n_valid": 952,
+      "dtype": "float64",
+      "label": "ChairHeight",
+      "n_distinct": 25,
+      "values": {
+        "34.0": 2,
+        "35.0": 2,
+        "36.0": 5,
+        "37.0": 7,
+        "38.0": 15,
+        "39.0": 15,
+        "40.0": 50,
+        "41.0": 25
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "factorcony2wave",
+      "rows": 1109,
+      "n_valid": 1109,
+      "dtype": "float32",
+      "label": "SecondWaveSamplingWeights",
+      "n_distinct": 955,
+      "values": {
+        "22.351491928100586": 1,
+        "27.57112693786621": 3,
+        "29.40920066833496": 1,
+        "30.058902740478516": 1,
+        "32.26890182495117": 2,
+        "32.47547149658203": 1,
+        "32.58583068847656": 1,
+        "34.88529968261719": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS3_Diet_Pre-1945_W2_V2.dta",
+      "var": "dn2",
+      "rows": 2362,
+      "n_valid": 2362,
+      "dtype": "int8",
+      "label": "How many cups of coffee drink per day?",
+      "n_distinct": 14,
+      "values": {
+        "0": 242,
+        "1": 432,
+        "2": 1177,
+        "3": 297,
+        "4": 124,
+        "5": 54,
+        "6": 12,
+        "7": 4
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS3_Diet_Pre-1945_W3_V2.dta",
+      "var": "dn2",
+      "rows": 1841,
+      "n_valid": 1839,
+      "dtype": "float64",
+      "label": "How many cups of coffee drink per day?",
+      "n_distinct": 11,
+      "values": {
+        "0.0": 178,
+        "1.0": 353,
+        "2.0": 879,
+        "3.0": 269,
+        "4.0": 89,
+        "5.0": 37,
+        "6.0": 21,
+        "7.0": 2
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "ev10c",
+      "rows": 491,
+      "n_valid": 331,
+      "dtype": "category",
+      "label": "SpouseCurrentlySmoke",
+      "n_distinct": 3,
+      "values": {
+        "No": 305,
+        "Yes": 26,
+        "nan": 160
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "c4",
+      "rows": 491,
+      "n_valid": 491,
+      "dtype": "category",
+      "label": "HaveHypertension",
+      "n_distinct": 3,
+      "values": {
+        "DK": 1,
+        "No": 258,
+        "Yes": 232
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "c6a",
+      "rows": 491,
+      "n_valid": 491,
+      "dtype": "category",
+      "label": "MedicineForHypertension",
+      "n_distinct": 2,
+      "values": {
+        "No": 272,
+        "Yes": 219
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "c10",
+      "rows": 491,
+      "n_valid": 491,
+      "dtype": "category",
+      "label": "HaveDiabetes",
+      "n_distinct": 3,
+      "values": {
+        "DK": 2,
+        "No": 392,
+        "Yes": 97
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "c17",
+      "rows": 491,
+      "n_valid": 491,
+      "dtype": "category",
+      "label": "TestOfDiabetes",
+      "n_distinct": 6,
+      "values": {
+        "DK": 2,
+        "From 1 to 2 Years": 74,
+        "From 6 to 11 Months": 39,
+        "Less than 6 Months": 285,
+        "Never": 23,
+        "On the previous visit": 68
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "ev8",
+      "rows": 491,
+      "n_valid": 491,
+      "dtype": "category",
+      "label": "HaveSmoke",
+      "n_distinct": 3,
+      "values": {
+        "DK/NR": 2,
+        "No": 309,
+        "Yes": 180
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "ev10",
+      "rows": 491,
+      "n_valid": 180,
+      "dtype": "category",
+      "label": "Smokes",
+      "n_distinct": 3,
+      "values": {
+        "No": 135,
+        "Yes": 45,
+        "nan": 311
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "ev12a",
+      "rows": 491,
+      "n_valid": 129,
+      "dtype": "category",
+      "label": "AgeStoppedSmoking",
+      "n_distinct": 41,
+      "values": {
+        "16.0": 1,
+        "19.0": 1,
+        "20.0": 6,
+        "25.0": 5,
+        "26.0": 3,
+        "27.0": 3,
+        "28.0": 3,
+        "29.0": 5
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "ev12b",
+      "rows": 491,
+      "n_valid": 7,
+      "dtype": "category",
+      "label": "YearStoppedSmoking",
+      "n_distinct": 5,
+      "values": {
+        "1989.0": 1,
+        "2000.0": 1,
+        "2004.0": 3,
+        "2010.0": 1,
+        "2011.0": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "ev15a",
+      "rows": 491,
+      "n_valid": 404,
+      "dtype": "category",
+      "label": "WeightKilos",
+      "n_distinct": 64,
+      "values": {
+        "100.0": 3,
+        "102.0": 1,
+        "105.0": 2,
+        "109.0": 1,
+        "110.0": 2,
+        "112.0": 1,
+        "114.0": 2,
+        "115.0": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "ev15b",
+      "rows": 491,
+      "n_valid": 116,
+      "dtype": "category",
+      "label": "WeightPounds",
+      "n_distinct": 43,
+      "values": {
+        "100.0": 1,
+        "108.0": 1,
+        "109.0": 1,
+        "112.0": 1,
+        "115.0": 1,
+        "118.0": 2,
+        "120.0": 2,
+        "121.0": 2
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "ev17",
+      "rows": 491,
+      "n_valid": 491,
+      "dtype": "category",
+      "label": "CurrentHeight",
+      "n_distinct": 44,
+      "values": {
+        "135": 1,
+        "140": 1,
+        "145": 2,
+        "148": 1,
+        "149": 6,
+        "150": 9,
+        "151": 1,
+        "152": 11
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "k3",
+      "rows": 491,
+      "n_valid": 421,
+      "dtype": "category",
+      "label": "WeightPounds",
+      "n_distinct": 350,
+      "values": {
+        "82.30000305175781": 1,
+        "82.69999694824219": 1,
+        "84.5": 1,
+        "92.5999984741211": 1,
+        "93.5": 1,
+        "98.80000305175781": 1,
+        "103.30000305175781": 1,
+        "103.5": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS10 Short form RC W1 V4.dta",
+      "var": "k5",
+      "rows": 491,
+      "n_valid": 420,
+      "dtype": "category",
+      "label": "KneeHeightCm",
+      "n_distinct": 127,
+      "values": {
+        "41.20000076293945": 1,
+        "41.29999923706055": 1,
+        "42.0": 1,
+        "42.099998474121094": 1,
+        "42.5": 2,
+        "42.599998474121094": 2,
+        "43.0": 2,
+        "43.099998474121094": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS11_Deceased_Main_Elderly_Pre-1945_W3_V2.dta",
+      "var": "sc17",
+      "rows": 255,
+      "n_valid": 255,
+      "dtype": "category",
+      "label": "Smokes",
+      "n_distinct": 2,
+      "values": {
+        "No": 242,
+        "Yes": 13
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS11_Deceased_Main_Elderly_Pre-1945_W3_V2.dta",
+      "var": "sc18",
+      "rows": 255,
+      "n_valid": 13,
+      "dtype": "category",
+      "label": "Smoking Frequency",
+      "n_distinct": 3,
+      "values": {
+        "Daily": 12,
+        "Non daily": 1,
+        "nan": 242
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS11_Deceased_Main_Elderly_Pre-1945_W3_V2.dta",
+      "var": "sc19",
+      "rows": 255,
+      "n_valid": 13,
+      "dtype": "category",
+      "label": "Cigarettes per day",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 4,
+        "10.0": 1,
+        "2.0": 2,
+        "20.0": 1,
+        "40.0": 2,
+        "60.0": 1,
+        "NS/NR": 2,
+        "nan": 242
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS11_Deceased_Main_Elderly_Pre-1945_W3_V2.dta",
+      "var": "sc20",
+      "rows": 255,
+      "n_valid": 255,
+      "dtype": "category",
+      "label": "weight",
+      "n_distinct": 4,
+      "values": {
+        "About same": 121,
+        "DK/NR": 9,
+        "Gained 5+ Kg": 2,
+        "Lost 5+ Kg": 123
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS11_Deceased_Main_Elderly_Pre-1945_W2_V2.dta",
+      "var": "sc17",
+      "rows": 268,
+      "n_valid": 268,
+      "dtype": "category",
+      "label": "Smokes",
+      "n_distinct": 2,
+      "values": {
+        "No": 246,
+        "Yes": 22
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS11_Deceased_Main_Elderly_Pre-1945_W2_V2.dta",
+      "var": "sc18",
+      "rows": 268,
+      "n_valid": 22,
+      "dtype": "category",
+      "label": "Smoking Frequency",
+      "n_distinct": 3,
+      "values": {
+        "Daily": 19,
+        "Not every day": 3,
+        "nan": 246
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS11_Deceased_Main_Elderly_Pre-1945_W2_V2.dta",
+      "var": "sc19",
+      "rows": 268,
+      "n_valid": 22,
+      "dtype": "category",
+      "label": "Cigarettes per day",
+      "n_distinct": 11,
+      "values": {
+        "10.0": 4,
+        "12.0": 1,
+        "2.0": 1,
+        "20.0": 6,
+        "30.0": 1,
+        "4.0": 1,
+        "40.0": 2,
+        "5.0": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS11_Deceased_Main_Elderly_Pre-1945_W2_V2.dta",
+      "var": "sc20",
+      "rows": 268,
+      "n_valid": 268,
+      "dtype": "category",
+      "label": "weight",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 4,
+        "Had decreased 5 Kilos or more": 109,
+        "Had increased 5 Kilos or more": 11,
+        "Was more or less the same": 144
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "a13",
+      "rows": 1859,
+      "n_valid": 898,
+      "dtype": "category",
+      "label": "SpouseSmokes",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 1,
+        "No": 846,
+        "Yes": 51,
+        "nan": 961
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c4m",
+      "rows": 1859,
+      "n_valid": 781,
+      "dtype": "category",
+      "label": "HaveHypertension",
+      "n_distinct": 4,
+      "values": {
+        "No": 643,
+        "Yes": 132,
+        "dk": 6,
+        "nan": 1078
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c5m",
+      "rows": 1859,
+      "n_valid": 132,
+      "dtype": "category",
+      "label": "How long ago Hypertension diagnostic",
+      "n_distinct": 5,
+      "values": {
+        "DK/NR": 1,
+        "Less than a year ago": 67,
+        "More than a year ago": 63,
+        "nan": 1727,
+        "with the results of this study": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c10m",
+      "rows": 1859,
+      "n_valid": 1438,
+      "dtype": "category",
+      "label": "HaveDiabetes",
+      "n_distinct": 4,
+      "values": {
+        "No": 1367,
+        "Yes": 67,
+        "dk": 4,
+        "nan": 421
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c11m",
+      "rows": 1859,
+      "n_valid": 67,
+      "dtype": "category",
+      "label": "How long of diabetes diagnostic",
+      "n_distinct": 5,
+      "values": {
+        "DK/NR": 2,
+        "Less than a year ago": 35,
+        "More than a year ago": 28,
+        "nan": 1792,
+        "with the results of this study": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c12",
+      "rows": 1859,
+      "n_valid": 477,
+      "dtype": "category",
+      "label": "PillsDiabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 7,
+        "No": 146,
+        "Yes": 324,
+        "nan": 1382
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c13",
+      "rows": 1859,
+      "n_valid": 473,
+      "dtype": "category",
+      "label": "InsulinDiabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 1,
+        "No": 346,
+        "Yes": 126,
+        "nan": 1386
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c14",
+      "rows": 1859,
+      "n_valid": 473,
+      "dtype": "category",
+      "label": "ChecksLevelDiabetes",
+      "n_distinct": 8,
+      "values": {
+        "Less than once per week": 39,
+        "More than once a day": 2,
+        "Never": 359,
+        "Once a day": 10,
+        "Once per week": 35,
+        "Other": 25,
+        "dk": 3,
+        "nan": 1386
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c15",
+      "rows": 1859,
+      "n_valid": 473,
+      "dtype": "category",
+      "label": "ConsultDiabetes",
+      "n_distinct": 7,
+      "values": {
+        "Does not have control": 73,
+        "Less than once per year": 3,
+        "Once a year": 8,
+        "Once every 3 months": 347,
+        "Once every 6 months": 38,
+        "dk": 4,
+        "nan": 1386
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c17m",
+      "rows": 1859,
+      "n_valid": 1844,
+      "dtype": "category",
+      "label": "TestofDiabetes",
+      "n_distinct": 7,
+      "values": {
+        "From 1 to 2 Years": 176,
+        "From 6 to 11 Months": 134,
+        "Less than 6 Months": 1312,
+        "Never": 63,
+        "dk": 55,
+        "nan": 15,
+        "on the previous visit": 104
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "ev1m",
+      "rows": 1859,
+      "n_valid": 1844,
+      "dtype": "category",
+      "label": "DrinkAlcohol",
+      "n_distinct": 7,
+      "values": {
+        "DK/NR": 2,
+        "Daily": 31,
+        "Does not currently drinkt": 756,
+        "Has never drunk": 581,
+        "Occasionally": 276,
+        "nan": 15,
+        "special occasions": 198
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "ev10",
+      "rows": 1859,
+      "n_valid": 1844,
+      "dtype": "category",
+      "label": "Smokes",
+      "n_distinct": 3,
+      "values": {
+        "No": 1739,
+        "Yes": 105,
+        "nan": 15
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "ev11a",
+      "rows": 1859,
+      "n_valid": 105,
+      "dtype": "category",
+      "label": "NumberofCigarettes",
+      "n_distinct": 18,
+      "values": {
+        "0.0": 10,
+        "1.0": 8,
+        "10.0": 27,
+        "12.0": 1,
+        "15.0": 2,
+        "2.0": 5,
+        "20.0": 16,
+        "3.0": 4
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "ev15a",
+      "rows": 1859,
+      "n_valid": 1517,
+      "dtype": "category",
+      "label": "WeightKilos",
+      "n_distinct": 91,
+      "values": {
+        "100.0": 3,
+        "105.0": 1,
+        "108.0": 2,
+        "110.0": 2,
+        "112.0": 1,
+        "115.0": 1,
+        "120.0": 1,
+        "121.0": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "ev15b",
+      "rows": 2364,
+      "n_valid": 720,
+      "dtype": "category",
+      "label": "WeightPounds",
+      "n_distinct": 101,
+      "values": {
+        "100.0": 14,
+        "101.0": 1,
+        "102.0": 1,
+        "105.0": 6,
+        "108.0": 1,
+        "109.0": 1,
+        "110.0": 13,
+        "111.0": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "ev15a",
+      "rows": 2364,
+      "n_valid": 1921,
+      "dtype": "category",
+      "label": "WeightKilos",
+      "n_distinct": 91,
+      "values": {
+        "100.0": 5,
+        "103.0": 1,
+        "104.0": 2,
+        "105.0": 3,
+        "106.0": 1,
+        "110.0": 1,
+        "112.0": 1,
+        "114.0": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "ev11a",
+      "rows": 2364,
+      "n_valid": 168,
+      "dtype": "category",
+      "label": "NumberofCigarettes",
+      "n_distinct": 21,
+      "values": {
+        "0.0": 18,
+        "1.0": 10,
+        "10.0": 33,
+        "12.0": 4,
+        "15.0": 6,
+        "17.0": 1,
+        "18.0": 1,
+        "2.0": 11
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "ev23",
+      "rows": 2364,
+      "n_valid": 2363,
+      "dtype": "category",
+      "label": "LostWeight",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 161,
+        "No": 1991,
+        "Yes": 211,
+        "nan": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "ev10",
+      "rows": 2364,
+      "n_valid": 2363,
+      "dtype": "category",
+      "label": "Smokes",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 1,
+        "No": 2194,
+        "Yes": 168,
+        "nan": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "ev1m",
+      "rows": 2364,
+      "n_valid": 2363,
+      "dtype": "category",
+      "label": "DrinkAlcohol",
+      "n_distinct": 7,
+      "values": {
+        "DK/NR": 3,
+        "Daily": 69,
+        "Does not currently drinkt": 1003,
+        "Has never drunk": 672,
+        "Occasionally": 306,
+        "nan": 1,
+        "special occasions": 310
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c16m",
+      "rows": 2364,
+      "n_valid": 548,
+      "dtype": "category",
+      "label": "LimitationDiabetes",
+      "n_distinct": 5,
+      "values": {
+        "DK/NR": 5,
+        "Havent had the disease": 6,
+        "No": 372,
+        "Yes": 165,
+        "nan": 1816
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "cn6",
+      "rows": 2364,
+      "n_valid": 1345,
+      "dtype": "category",
+      "label": "LimitationHypertension",
+      "n_distinct": 5,
+      "values": {
+        "DK/NR": 2,
+        "Havent had the disease": 8,
+        "No": 1009,
+        "Yes": 326,
+        "nan": 1019
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c17m",
+      "rows": 2364,
+      "n_valid": 2363,
+      "dtype": "category",
+      "label": "TestofDiabetes",
+      "n_distinct": 8,
+      "values": {
+        "DK": 12,
+        "From 1 to 2 Years": 189,
+        "From 6 to 11 Months": 179,
+        "Less than 6 Months": 1756,
+        "NR": 7,
+        "Never": 16,
+        "nan": 1,
+        "on the previous visit": 204
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c15",
+      "rows": 2364,
+      "n_valid": 100,
+      "dtype": "category",
+      "label": "ConsultDiabetes",
+      "n_distinct": 6,
+      "values": {
+        "Does not have control": 17,
+        "Less than once per year": 1,
+        "Once a year": 2,
+        "Once every 3 months": 71,
+        "Once every 6 months": 9,
+        "nan": 2264
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c14",
+      "rows": 2364,
+      "n_valid": 100,
+      "dtype": "category",
+      "label": "ChecksLevelDiabetes",
+      "n_distinct": 6,
+      "values": {
+        "Less than once per week": 15,
+        "More than once a day": 1,
+        "NR": 1,
+        "Never": 81,
+        "Once per week": 2,
+        "nan": 2264
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c13",
+      "rows": 2364,
+      "n_valid": 100,
+      "dtype": "category",
+      "label": "InsulinDiabetes",
+      "n_distinct": 3,
+      "values": {
+        "No": 96,
+        "Yes": 4,
+        "nan": 2264
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c12",
+      "rows": 2364,
+      "n_valid": 100,
+      "dtype": "category",
+      "label": "PillsDiabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 3,
+        "No": 36,
+        "Yes": 61,
+        "nan": 2264
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "ponderador",
+      "rows": 2827,
+      "n_valid": 2827,
+      "dtype": "float64",
+      "label": "Sampling Nonresponse Weights",
+      "n_distinct": 57,
+      "values": {
+        "0.07": 37,
+        "0.08": 39,
+        "0.09": 76,
+        "0.13": 11,
+        "0.14": 1,
+        "0.15": 17,
+        "0.17": 1,
+        "0.28": 84
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "a13",
+      "rows": 2827,
+      "n_valid": 2572,
+      "dtype": "category",
+      "label": "SpouseSmokes",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 27,
+        "No": 1597,
+        "Yes": 948,
+        "nan": 255
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c4",
+      "rows": 2827,
+      "n_valid": 2823,
+      "dtype": "category",
+      "label": "HaveHypertension",
+      "n_distinct": 5,
+      "values": {
+        "DK": 10,
+        "NR": 1,
+        "No": 1434,
+        "Yes": 1378,
+        "nan": 4
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c5a",
+      "rows": 2827,
+      "n_valid": 1322,
+      "dtype": "category",
+      "label": "AgeHypertension",
+      "n_distinct": 81,
+      "values": {
+        "1.0": 1,
+        "101.0": 3,
+        "18.0": 2,
+        "19.0": 1,
+        "20.0": 4,
+        "22.0": 1,
+        "25.0": 3,
+        "26.0": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c5b",
+      "rows": 2827,
+      "n_valid": 67,
+      "dtype": "category",
+      "label": "YearHypertension",
+      "n_distinct": 30,
+      "values": {
+        "1959.0": 1,
+        "1960.0": 1,
+        "1965.0": 2,
+        "1969.0": 1,
+        "1970.0": 2,
+        "1971.0": 1,
+        "1973.0": 1,
+        "1976.0": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c10",
+      "rows": 2827,
+      "n_valid": 2823,
+      "dtype": "category",
+      "label": "HaveDiabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK": 11,
+        "No": 2270,
+        "Yes": 542,
+        "nan": 4
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c11a",
+      "rows": 2827,
+      "n_valid": 527,
+      "dtype": "category",
+      "label": "AgeDiabetes",
+      "n_distinct": 70,
+      "values": {
+        "10.0": 1,
+        "100.0": 1,
+        "15.0": 1,
+        "16.0": 1,
+        "25.0": 2,
+        "26.0": 1,
+        "29.0": 1,
+        "30.0": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c11b",
+      "rows": 2827,
+      "n_valid": 21,
+      "dtype": "category",
+      "label": "YearDiabetes",
+      "n_distinct": 13,
+      "values": {
+        "1940.0": 1,
+        "1979.0": 1,
+        "1984.0": 3,
+        "1985.0": 1,
+        "1988.0": 1,
+        "1990.0": 1,
+        "1994.0": 1,
+        "1995.0": 2
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c12",
+      "rows": 2827,
+      "n_valid": 542,
+      "dtype": "category",
+      "label": "PillsDiabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 2,
+        "No": 173,
+        "Yes": 367,
+        "nan": 2285
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c13",
+      "rows": 2827,
+      "n_valid": 542,
+      "dtype": "category",
+      "label": "InsulinDiabetes",
+      "n_distinct": 3,
+      "values": {
+        "No": 375,
+        "Yes": 167,
+        "nan": 2285
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c14",
+      "rows": 2827,
+      "n_valid": 542,
+      "dtype": "category",
+      "label": "ChecksLevelDiabetes",
+      "n_distinct": 7,
+      "values": {
+        "Less than once per week": 162,
+        "More than once a day": 4,
+        "Never": 324,
+        "Once a day": 4,
+        "Once per week": 35,
+        "Other": 13,
+        "nan": 2285
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c15",
+      "rows": 2827,
+      "n_valid": 542,
+      "dtype": "category",
+      "label": "Consult for Diabetes",
+      "n_distinct": 7,
+      "values": {
+        "DK": 5,
+        "Does not have check-ups": 49,
+        "Less than once per year": 2,
+        "Once a year": 6,
+        "Once every 3 months": 449,
+        "Once every 6 months": 31,
+        "nan": 2285
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c16",
+      "rows": 2827,
+      "n_valid": 542,
+      "dtype": "category",
+      "label": "LimitationDiabetes",
+      "n_distinct": 5,
+      "values": {
+        "DK/NR": 6,
+        "Little": 142,
+        "None": 243,
+        "Very much": 151,
+        "nan": 2285
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c17",
+      "rows": 2827,
+      "n_valid": 2281,
+      "dtype": "category",
+      "label": "TestofDiabetes",
+      "n_distinct": 8,
+      "values": {
+        "DK": 25,
+        "From 1 to 2 Years": 223,
+        "From 6 to 11 Months": 239,
+        "Less than 6 Months": 1503,
+        "More than 2 Years": 252,
+        "NR": 10,
+        "Never": 29,
+        "nan": 546
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "a13",
+      "rows": 2430,
+      "n_valid": 1487,
+      "dtype": "category",
+      "label": "SpouseSmokes",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 1,
+        "No": 1347,
+        "Yes": 139,
+        "nan": 943
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c4m",
+      "rows": 2430,
+      "n_valid": 2430,
+      "dtype": "category",
+      "label": "HypertensionDuringLastTwoYears",
+      "n_distinct": 4,
+      "values": {
+        "DK": 9,
+        "NR": 1,
+        "No": 1246,
+        "Yes": 1174
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c6a",
+      "rows": 2430,
+      "n_valid": 2417,
+      "dtype": "category",
+      "label": "MedicineForHypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 1201,
+        "Yes": 1216,
+        "nan": 13
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c6b",
+      "rows": 2430,
+      "n_valid": 1216,
+      "dtype": "category",
+      "label": "ChangeMedicineForHypertension",
+      "n_distinct": 8,
+      "values": {
+        "6.0": 163,
+        "DK": 15,
+        "From 1 to 2 Years": 182,
+        "From 6 to 11 Months": 62,
+        "Less than 6 Months": 161,
+        "More than 2 Years": 9,
+        "Never": 624,
+        "nan": 1214
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c10m",
+      "rows": 2430,
+      "n_valid": 2430,
+      "dtype": "category",
+      "label": "HaveDiabetes",
+      "n_distinct": 3,
+      "values": {
+        "DK": 9,
+        "No": 1936,
+        "Yes": 485
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c12",
+      "rows": 2430,
+      "n_valid": 559,
+      "dtype": "category",
+      "label": "InsulinDiabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK": 2,
+        "No": 89,
+        "Yes": 468,
+        "nan": 1871
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c13a",
+      "rows": 2430,
+      "n_valid": 468,
+      "dtype": "category",
+      "label": "ChangeMedicineForDiabetes",
+      "n_distinct": 8,
+      "values": {
+        "6.0": 26,
+        "DK": 3,
+        "From 1 to 2 Years": 66,
+        "From 6 to 11 Months": 31,
+        "Less than 6 Months": 104,
+        "More than 2 Years": 2,
+        "Never": 236,
+        "nan": 1962
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c14",
+      "rows": 2430,
+      "n_valid": 559,
+      "dtype": "category",
+      "label": "ChecksLevelDiabetes",
+      "n_distinct": 7,
+      "values": {
+        "Less than once per week": 121,
+        "More than  once a day": 3,
+        "Never": 377,
+        "Once a day": 8,
+        "Once per week": 42,
+        "Other": 8,
+        "nan": 1871
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c15",
+      "rows": 2430,
+      "n_valid": 559,
+      "dtype": "category",
+      "label": "ConsultForDiabetes",
+      "n_distinct": 6,
+      "values": {
+        "Does not have control": 74,
+        "Less than once per year": 2,
+        "Once a year": 4,
+        "Once every 3 months": 427,
+        "Once every 6 months": 52,
+        "nan": 1871
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c17",
+      "rows": 2430,
+      "n_valid": 2430,
+      "dtype": "category",
+      "label": "TestOfDiabetes",
+      "n_distinct": 7,
+      "values": {
+        "6": 40,
+        "DK": 27,
+        "From 1 to 2 Years": 295,
+        "From 6 to 11 Months": 201,
+        "Less than 6 Months": 1537,
+        "Never": 28,
+        "On the previous visit": 302
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "ev1m",
+      "rows": 2430,
+      "n_valid": 2430,
+      "dtype": "category",
+      "label": "DrinkingRegulary",
+      "n_distinct": 6,
+      "values": {
+        "DK/NR": 1,
+        "Daily": 14,
+        "Does not currently drink but drank in the past": 803,
+        "Has never drunk": 803,
+        "Occasionally": 409,
+        "Only on special occasions": 400
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "ev10",
+      "rows": 2430,
+      "n_valid": 2430,
+      "dtype": "category",
+      "label": "Smokes",
+      "n_distinct": 3,
+      "values": {
+        "DK/NR": 1,
+        "No": 2217,
+        "Yes": 212
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "ev11a",
+      "rows": 2430,
+      "n_valid": 210,
+      "dtype": "category",
+      "label": "NumberOfCigarettes",
+      "n_distinct": 18,
+      "values": {
+        "0.0": 57,
+        "1.0": 7,
+        "2.0": 4,
+        "3.0": 13,
+        "4.0": 7,
+        "5.0": 10,
+        "6.0": 4,
+        "7.0": 6
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "ev15a",
+      "rows": 2430,
+      "n_valid": 1987,
+      "dtype": "category",
+      "label": "WeightKilos",
+      "n_distinct": 95,
+      "values": {
+        "100.0": 9,
+        "101.0": 5,
+        "102.0": 6,
+        "103.0": 1,
+        "104.0": 2,
+        "105.0": 6,
+        "106.0": 1,
+        "107.0": 2
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "a13",
+      "rows": 2798,
+      "n_valid": 2572,
+      "dtype": "category",
+      "label": "SpouseSmokes",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 20,
+        "No": 1835,
+        "Yes": 717,
+        "nan": 226
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c4",
+      "rows": 2798,
+      "n_valid": 2797,
+      "dtype": "category",
+      "label": "HaveHypertension",
+      "n_distinct": 4,
+      "values": {
+        "DK": 9,
+        "No": 1415,
+        "Yes": 1373,
+        "nan": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c5a",
+      "rows": 2798,
+      "n_valid": 1308,
+      "dtype": "category",
+      "label": "AgeHypertension",
+      "n_distinct": 53,
+      "values": {
+        "14.0": 1,
+        "18.0": 6,
+        "19.0": 1,
+        "20.0": 8,
+        "21.0": 2,
+        "22.0": 2,
+        "23.0": 3,
+        "24.0": 2
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c5b",
+      "rows": 2798,
+      "n_valid": 69,
+      "dtype": "category",
+      "label": "YearHypertension",
+      "n_distinct": 31,
+      "values": {
+        "1972.0": 1,
+        "1974.0": 1,
+        "1978.0": 1,
+        "1980.0": 3,
+        "1983.0": 2,
+        "1984.0": 4,
+        "1985.0": 2,
+        "1986.0": 2
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c6a",
+      "rows": 2798,
+      "n_valid": 1373,
+      "dtype": "category",
+      "label": "MedicineForHypertension",
+      "n_distinct": 3,
+      "values": {
+        "No": 154,
+        "Yes": 1219,
+        "nan": 1425
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c6b",
+      "rows": 2798,
+      "n_valid": 1219,
+      "dtype": "category",
+      "label": "ChangeMedicineForHypertension",
+      "n_distinct": 7,
+      "values": {
+        "DK": 16,
+        "From 1 to 2 Years": 139,
+        "From 6 to 11 Months": 57,
+        "Less than 6 Months": 200,
+        "More than 2 Years": 230,
+        "Never": 577,
+        "nan": 1579
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c10",
+      "rows": 2798,
+      "n_valid": 2797,
+      "dtype": "category",
+      "label": "HaveDiabetes",
+      "n_distinct": 5,
+      "values": {
+        "DK": 27,
+        "NR": 1,
+        "No": 2245,
+        "Yes": 524,
+        "nan": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c10a",
+      "rows": 2798,
+      "n_valid": 346,
+      "dtype": "category",
+      "label": "DiabetesPregnancy",
+      "n_distinct": 4,
+      "values": {
+        "DK": 1,
+        "No": 331,
+        "Yes": 14,
+        "nan": 2452
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c11a",
+      "rows": 2798,
+      "n_valid": 504,
+      "dtype": "category",
+      "label": "AgeDiabetes",
+      "n_distinct": 44,
+      "values": {
+        "15.0": 2,
+        "18.0": 2,
+        "2.0": 1,
+        "20.0": 2,
+        "24.0": 2,
+        "27.0": 1,
+        "28.0": 1,
+        "30.0": 10
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c11b",
+      "rows": 2798,
+      "n_valid": 23,
+      "dtype": "category",
+      "label": "YearDiabetes",
+      "n_distinct": 20,
+      "values": {
+        "1950.0": 1,
+        "1976.0": 1,
+        "1978.0": 1,
+        "1980.0": 1,
+        "1981.0": 1,
+        "1988.0": 1,
+        "1990.0": 1,
+        "1993.0": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c12",
+      "rows": 2798,
+      "n_valid": 524,
+      "dtype": "category",
+      "label": "InsulinDiabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK": 2,
+        "No": 78,
+        "Yes": 444,
+        "nan": 2274
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c13a",
+      "rows": 2798,
+      "n_valid": 444,
+      "dtype": "category",
+      "label": "ChangeMedicineForDiabetes",
+      "n_distinct": 7,
+      "values": {
+        "DK": 6,
+        "From 1 to 2 Years": 41,
+        "From 6 to 11 Months": 32,
+        "Less than 6 Months": 127,
+        "More than 2 Years": 43,
+        "Never": 195,
+        "nan": 2354
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c14",
+      "rows": 2798,
+      "n_valid": 524,
+      "dtype": "category",
+      "label": "ChecksLevelDiabetes",
+      "n_distinct": 8,
+      "values": {
+        "DK": 1,
+        "Less than once per week": 111,
+        "More than  once a day": 2,
+        "Never": 355,
+        "Once a day": 10,
+        "Once per week": 21,
+        "Other": 24,
+        "nan": 2274
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c15",
+      "rows": 2798,
+      "n_valid": 524,
+      "dtype": "category",
+      "label": "ConsultForDiabetes",
+      "n_distinct": 7,
+      "values": {
+        "DK": 3,
+        "Does not have control": 53,
+        "Less than once per year": 4,
+        "Once a year": 2,
+        "Once every 3 months": 408,
+        "Once every 6 months": 54,
+        "nan": 2274
+      }
+    }
+  ],
+  "notes": []
+}

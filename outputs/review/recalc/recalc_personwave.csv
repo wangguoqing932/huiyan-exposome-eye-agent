@@ -1,0 +1,9 @@
+cohort,rows,n_implicates,unique_person_wave,distinct_person_wave_after_collapsing_implicates,duplicate_rows,pct_duplicate
+SHARE,1693515,5,338703,67740,1354812,80.0
+HRS,42946,1,42946,42946,0,0.0
+ELSA,9771,1,9771,9771,0,0.0
+KLoSA,40406,1,40406,40406,0,0.0
+LASI,73408,1,73408,73408,0,0.0
+MHAS,78537,1,15217,15217,63320,80.6
+CLHLS,72744,1,72744,72744,0,0.0
+CRELES,5191,1,5191,5191,0,0.0

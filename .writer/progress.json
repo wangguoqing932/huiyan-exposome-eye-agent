@@ -1,0 +1,100 @@
+{
+  "schema_version": "v3.0",
+  "phases": {
+    "7_1": {
+      "status": "confirmed",
+      "begun_at": "2026-10-15",
+      "submitted_at": "2026-10-15",
+      "artifacts": [
+        "outputs/paper/figure_table_qc_report.md"
+      ],
+      "confirmed_at": "2026-10-15",
+      "note": "作者授权代理确认（2026-10-15）：作者已明确授权 agent 自主推进科学方向（'你不用问我，按照你认为科学的方向不断前进'）。本次确认为 AGENT 代为确认，非作者本人审阅图表。7_1 产物在盘上：figure_table_qc_report.md（自动 QC PASS + 人工目视 PASS + figure7/8 各 4 轮迭代记录 + P1 已解决 + 剩余 6 张图无压缩 TIFF 记为投稿前清单项）。作者可随时回看并 reject。"
+    },
+    "7_2": {
+      "status": "confirmed",
+      "begun_at": "2026-10-15",
+      "submitted_at": "2026-10-15",
+      "artifacts": [
+        "outputs/paper/figure_legends.md"
+      ],
+      "confirmed_at": "2026-10-15",
+      "note": "作者授权代理确认（AGENT 代为确认，非作者本人审阅）。8 张图图例已由契约生成并人工核对：修掉 3 处 '(**a**) . ' 孤立句点、填满 8 处 Abbreviations 占位符、并修正 figure7 图例与渲染不符的一处（图例称参考线为 OR=1/1.5/2.0，而渲染只画了 OR=1）——按纪律让渲染器服从契约（补画 1.5x/2.0x 线）而非削弱图例。中文段按流水线设计留给 7_8 双语润色，避免翻译 7_4-7_7 仍会改动的文字。"
+    },
+    "7_3": {
+      "status": "confirmed",
+      "begun_at": "2026-10-15",
+      "submitted_at": "2026-10-15",
+      "artifacts": [
+        "outputs/paper/figure_prompts.md"
+      ],
+      "confirmed_at": "2026-10-15",
+      "note": "代理确认（AGENT 代为确认）。修掉两处：(1) figure5 提示词原先完全缺失——生成器硬编码只做 Figure 1，不扫描契约里的 archetype: schematic_led_composite，而 figure1 与 figure5 都是该类型；已据 figure5 契约的三个面板（泳道轨迹/时延堆叠条/KG 路径网络）补写中英双版提示词。(2) Variant A 标注为英文提示词却在正文嵌中文实体名，与末尾 'All labels in English' 自相矛盾；已改为英文并复验两份英文提示词中文字符数为 0。"
+    },
+    "7_4": {
+      "status": "awaiting_author_confirmation",
+      "begun_at": "2026-10-15",
+      "submitted_at": "2026-10-15",
+      "artifacts": [
+        "outputs/paper/sections/results.md"
+      ],
+      "confirmed_at": "2026-10-15",
+      "note": "代理确认（AGENT 代为确认，非作者本人审阅）。Results 首稿 9,299 B / 8 节。文中每个数字经 scripts/verify_results_numbers.py 从源 CSV 重新导出比对：70/70 PASS（含 10 组 OR+CI 逐值、5 个 q 值、5 种敏感性规则集、8 个 frame 行数、队列层三态分布）。新增队列层小节：6/21 规则可检验并列出 15 条不可检验的原因分类；r02/r20 可迁移、r10 方向翻转（4 队列 1:3 分裂）、r12 被否证、r13 单队列、r11 无证据；并明确写出队列层 contradicted=2 与 R11 两层 contradicted=0 的差异。r10 的三种竞争解释留待 Discussion，Results 只陈述计数。",
+      "change_requests": [
+        {
+          "date": "2026-10-15",
+          "note": "AGENT 撤回确认：本轮加入一体化 IPD 交互检验（Table 5b），改写了两队列规则的异质性判读——r13 交互 p=0.57 vs 两阶段 0.027，r12 0.14 vs 0.027。原确认由 AGENT 代理作出，非作者审阅；此改动需作者复核。scripts/ipd_interaction.py + outputs/tables/table5b_ipd_interaction.md"
+        }
+      ]
+    },
+    "7_5": {
+      "status": "confirmed",
+      "begun_at": "2026-10-15",
+      "submitted_at": "2026-10-15",
+      "artifacts": [
+        "outputs/paper/sections/methods.md"
+      ],
+      "confirmed_at": "2026-10-15",
+      "note": "代理确认（AGENT 代为确认）。Methods 9,388 B / 9 节，按 TRIPOD+AI/DECIDE-AI/STROBE 结构。引用池 13 条全部经实时 API 双源交叉核验（Crossref+OpenAlex），核验结果为：13/13 池内条目被引用、池外引用 0 处、8 队列行数与文中数字相符。核验过程中拒掉了四类错引用：(1) 429 限流被误记未找到；(2) 收错文献类型（数据条目/学位论文/peer-review）；(3) 标题相近但无关（CRELES 曾命中 Nutrients 营养学论文）；(4) 韩国期刊 2024 年转载的 STROBE 因年份容差被拒。CLHLS 与 CRELES 无可用队列画像文献，如实记为 NOT FOUND 且不引用。"
+    },
+    "7_6": {
+      "status": "confirmed",
+      "begun_at": "2026-10-15",
+      "submitted_at": "2026-10-15",
+      "artifacts": [
+        "outputs/paper/sections/introduction.md"
+      ],
+      "confirmed_at": "2026-10-15",
+      "note": "代理确认（AGENT 代为确认）。Introduction 4,834 B，引用 6 条全部来自核验池（池外引用 0）。写作中自查发现并修正了一处规则6违规：初稿写了青光眼'2040年超过1亿人'等具体数字但未取摘要；取回摘要后确认 (1) C016 实为评论而非负担原始文献 (2) C022 摘要不支持'上升最快' (3) C023 无摘要可取，按规则6删去其数字仅按主题引用。另修正 failed_claims 从手工累加改为从条目派生（原列表误含4条已解决项，会导致稿子不引用它手上拥有的文献）。"
+    },
+    "7_7": {
+      "status": "confirmed",
+      "begun_at": "2026-10-15",
+      "submitted_at": "2026-10-15",
+      "artifacts": [
+        "outputs/paper/sections/discussion.md"
+      ],
+      "confirmed_at": "2026-10-15",
+      "note": "代理确认（AGENT 代为确认）。Discussion 12,522 B / 8 节（含独立 Conclusion 小节）。核心论点：可迁移性不能靠数复现队列数建立；合并不解决方向冲突而是掩盖冲突（r10 合并 OR 0.84 描述的是没有任何一个被研究人群）；约束是测量不是样本量。r10 三种解释逐一定标证据状态：选择性存活（该解释预测保护向随年龄增强，但元回归 p=0.52 未观察到梯度，故未获证实）、未测混杂（E-value 1.46-2.01，强度 1.5-2 的混杂即足够）、真实效应修饰（唯一能支持人群特定规则的，也是本设计最无法检验的）。明确声明不偏好任何一种解释。Limitations 写明'实际达到的独立性'：队列彼此独立且独立于 NHANES/KNHANES/CHARLS，但与产生规则的文献不独立。引用 6 条全部来自核验池，池外 0 处；24 条池内条目已全部被引用。"
+    },
+    "7_8": {
+      "status": "confirmed",
+      "begun_at": "2026-10-15",
+      "submitted_at": "2026-10-15",
+      "artifacts": [
+        "outputs/paper/manuscript.md"
+      ],
+      "confirmed_at": "2026-10-15",
+      "note": "7_8 完成。注：技能的 polish_bilingual.py 是给'中文稿+英译'设计的，本项目稿件为英文原生，该双语对不适用（工具只生成了一个空 .en.md 存根，已删除）。因此本阶段的实质工作是：(1) 补齐图例的 8 处中文 TODO，并用脚本在写入前逐数字比对中英图例（不一致则拒绝写入）；(2) 组装 manuscript.md（83,349 B，含标题/摘要/IMRaD/图例/7 张表）并生成含各节 SHA-256 的组装清单；(3) 以 scripts/qc_english_manuscript.py 做英文稿 QC，20/20 PASS。QC 抓出并修正了两处真缺陷：组装时 Methods 与 Discussion 的小节标题被静默丢弃；Table 1/2 存在却从未在正文引用。另修正 QC 自身正则漏匹配 'Tables 1 and 4' 复数形式。"
+    },
+    "7_9": {
+      "status": "awaiting_author_confirmation",
+      "begun_at": "2026-10-15",
+      "submitted_at": "2026-10-15",
+      "artifacts": [
+        "outputs/submission/package_manifest.json",
+        "outputs/submission/submission_pkg.zip"
+      ]
+    }
+  }
+}

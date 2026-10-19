@@ -1,0 +1,14 @@
+{
+ "date": "2026-10-16",
+ "n_rates": 9,
+ "findings": [
+  {
+   "dataset": "nhanes",
+   "exposure": "hyperglycemia_126",
+   "observed": 0.2192,
+   "reference": 0.14,
+   "rel_deviation": 0.566,
+   "severity": "warn"
+  }
+ ]
+}

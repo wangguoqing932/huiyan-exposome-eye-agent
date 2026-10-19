@@ -1,0 +1,556 @@
+{
+  "cohort": "ELSA",
+  "n_targets": 46,
+  "findings": [
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 9432,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 9432,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 9771,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 9771,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 11050,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 11050,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 10274,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 10274,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 10601,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 10601,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 9666,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 9666,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 9432,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 9432,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 9771,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 9771,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 11050,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 11050,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 10274,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 10274,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 10601,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 10601,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 9666,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 9666,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 12099,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 12099,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 12099,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 12099,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 8445,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0973,
+          "gate_file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta"
+        },
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0973,
+          "gate_file": "wave1\\wave_1_core_data_v3.dta"
+        }
+      ]
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 8445,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0973,
+          "gate_file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta"
+        },
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0973,
+          "gate_file": "wave1\\wave_1_core_data_v3.dta"
+        }
+      ]
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 8736,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 8736,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 8445,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0973,
+          "gate_file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta"
+        },
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0973,
+          "gate_file": "wave1\\wave_1_core_data_v3.dta"
+        }
+      ]
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 8445,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0973,
+          "gate_file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta"
+        },
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0973,
+          "gate_file": "wave1\\wave_1_core_data_v3.dta"
+        }
+      ]
+    },
+    {
+      "var": "smoker",
+      "label": "whether current smoker",
+      "n_valid": 8736,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "smokerstat",
+      "label": "smoker status (past or present)",
+      "n_valid": 8736,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "rhska",
+      "label": "Whether smoke cigarettes nowadays",
+      "n_valid": 7855,
+      "own_positives": 1120,
+      "own_positive_rate_if_naive": 0.1426,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0295,
+          "gate_file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta"
+        },
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0295,
+          "gate_file": "wave1\\wave_1_core_data_v3.dta"
+        }
+      ]
+    },
+    {
+      "var": "rhska",
+      "label": "Whether smoke cigarettes nowadays",
+      "n_valid": 7855,
+      "own_positives": 1120,
+      "own_positive_rate_if_naive": 0.1426,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0295,
+          "gate_file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta"
+        },
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0295,
+          "gate_file": "wave1\\wave_1_core_data_v3.dta"
+        }
+      ]
+    },
+    {
+      "var": "hemda",
+      "label": "Are you currently taking any medicines, tablets or pills for high blood pressure",
+      "n_valid": 12099,
+      "own_positives": 3399,
+      "own_positive_rate_if_naive": 0.2809,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "heins",
+      "label": "Do you currently inject insulin for diabetes?",
+      "n_valid": 12099,
+      "own_positives": 182,
+      "own_positive_rate_if_naive": 0.015,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "heska",
+      "label": "Do you smoke cigarettes at all nowadays?",
+      "n_valid": 12099,
+      "own_positives": 2162,
+      "own_positive_rate_if_naive": 0.1787,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "hemda",
+      "label": "Are you currently taking any medicines, tablets or pills for high blood pressure",
+      "n_valid": 12099,
+      "own_positives": 3399,
+      "own_positive_rate_if_naive": 0.2809,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "heins",
+      "label": "Do you currently inject insulin for diabetes?",
+      "n_valid": 12099,
+      "own_positives": 182,
+      "own_positive_rate_if_naive": 0.015,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "heska",
+      "label": "Do you smoke cigarettes at all nowadays?",
+      "n_valid": 12099,
+      "own_positives": 2162,
+      "own_positive_rate_if_naive": 0.1787,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "HESka",
+      "label": "Whether smokes cigarettes at all nowadays",
+      "n_valid": 7586,
+      "own_positives": 608,
+      "own_positive_rate_if_naive": 0.0801,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0049,
+          "gate_file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta"
+        },
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0049,
+          "gate_file": "wave1\\wave_1_core_data_v3.dta"
+        }
+      ]
+    },
+    {
+      "var": "HESka",
+      "label": "Whether smokes cigarettes at all nowadays",
+      "n_valid": 7586,
+      "own_positives": 608,
+      "own_positive_rate_if_naive": 0.0801,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0049,
+          "gate_file": "UKDA-5050-stata\\stata\\stata13_se\\wave1\\wave_1_core_data_v3.dta"
+        },
+        {
+          "gate_var": "hesmk",
+          "gate_label": "Have you ever smoked cigarettes?",
+          "gate_n": 12099,
+          "gate_positives": 7623,
+          "rel_diff": 0.0049,
+          "gate_file": "wave1\\wave_1_core_data_v3.dta"
+        }
+      ]
+    }
+  ]
+}

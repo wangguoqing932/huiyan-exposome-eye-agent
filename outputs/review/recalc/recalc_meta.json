@@ -1,0 +1,432 @@
+{
+  "r02_hyperglycemia_x_cataract": {
+    "k": 4,
+    "Q": 31.4183,
+    "Q_df": 3,
+    "Q_p": 6.939887302448155e-07,
+    "I2_percent": 90.45,
+    "tau2_DL": 0.016951,
+    "tau2_REML": 0.148689,
+    "pooled_OR_REML": 1.954,
+    "pooled_CI_REML": [
+      1.3245,
+      2.8828
+    ],
+    "PI_normal_REML": [
+      0.8352,
+      4.5716
+    ],
+    "PI_t_REML": [
+      0.4916,
+      7.7677
+    ],
+    "pooled_OR_DL": 1.8601,
+    "pooled_CI_DL": [
+      1.6027,
+      2.1589
+    ],
+    "PI_normal_DL": [
+      1.3843,
+      2.4996
+    ],
+    "PI_t_DL": [
+      1.1513,
+      3.0054
+    ],
+    "w_DL_pct": [
+      13.61,
+      20.86,
+      32.15,
+      33.38
+    ],
+    "cohorts": [
+      "CLHLS",
+      "CRELES",
+      "LASI",
+      "SHARE"
+    ],
+    "per_cohort_OR": {
+      "CLHLS": 3.5887,
+      "CRELES": 1.3116,
+      "LASI": 1.8782,
+      "SHARE": 1.7539
+    },
+    "per_cohort_CI": {
+      "CLHLS": [
+        2.6244,
+        4.9074
+      ],
+      "CRELES": [
+        1.0706,
+        1.6069
+      ],
+      "LASI": [
+        1.7646,
+        1.9991
+      ],
+      "SHARE": [
+        1.6908,
+        1.8194
+      ]
+    },
+    "subgroup_by_region": {
+      "testable": true,
+      "groups": [
+        "Americas",
+        "Asia",
+        "Europe"
+      ],
+      "per_group_OR": {
+        "Americas": 1.3116,
+        "Asia": 1.9253,
+        "Europe": 1.7539
+      },
+      "Q_between": 15.6029,
+      "df": 2,
+      "p_between": 0.0004091366741595088
+    },
+    "meta_reg_mean_age": {
+      "slope_per_year": 0.01676,
+      "se": 0.0166,
+      "p": 0.4190291364438634
+    }
+  },
+  "r10_smoking_x_cataract": {
+    "k": 4,
+    "Q": 33.417,
+    "Q_df": 3,
+    "Q_p": 2.6301520370000137e-07,
+    "I2_percent": 91.02,
+    "tau2_DL": 0.066372,
+    "tau2_REML": 0.042141,
+    "pooled_OR_REML": 0.839,
+    "pooled_CI_REML": [
+      0.6698,
+      1.0511
+    ],
+    "PI_normal_REML": [
+      0.5291,
+      1.3306
+    ],
+    "PI_t_REML": [
+      0.3968,
+      1.774
+    ],
+    "pooled_OR_DL": 0.8323,
+    "pooled_CI_DL": [
+      0.6334,
+      1.0937
+    ],
+    "PI_normal_DL": [
+      0.4688,
+      1.4777
+    ],
+    "PI_t_DL": [
+      0.3277,
+      2.1139
+    ],
+    "w_DL_pct": [
+      26.86,
+      20.29,
+      24.05,
+      28.79
+    ],
+    "cohorts": [
+      "CLHLS",
+      "CRELES",
+      "ELSA",
+      "SHARE"
+    ],
+    "per_cohort_OR": {
+      "CLHLS": 0.748,
+      "CRELES": 0.7023,
+      "ELSA": 0.7675,
+      "SHARE": 1.109
+    },
+    "per_cohort_CI": {
+      "CLHLS": [
+        0.6435,
+        0.8694
+      ],
+      "CRELES": [
+        0.5021,
+        0.9822
+      ],
+      "ELSA": [
+        0.6069,
+        0.9705
+      ],
+      "SHARE": [
+        1.041,
+        1.1815
+      ]
+    },
+    "subgroup_by_region": {
+      "testable": true,
+      "groups": [
+        "Americas",
+        "Asia",
+        "Europe"
+      ],
+      "per_group_OR": {
+        "Americas": 0.7023,
+        "Asia": 0.748,
+        "Europe": 1.0817
+      },
+      "Q_between": 24.6101,
+      "df": 2,
+      "p_between": 4.5288775358728525e-06
+    },
+    "meta_reg_mean_age": {
+      "slope_per_year": -0.00831,
+      "se": 0.01061,
+      "p": 0.5154890262677487
+    }
+  },
+  "r11_smoking_x_amd_late": {
+    "k": 1,
+    "note": "single cohort, not pooled",
+    "OR": 0.8586
+  },
+  "r12_alcohol_x_cataract": {
+    "k": 2,
+    "Q": 4.8697,
+    "Q_df": 1,
+    "Q_p": 0.027333033381078387,
+    "I2_percent": 79.46,
+    "tau2_DL": 0.012036,
+    "tau2_REML": 0.012036,
+    "pooled_OR_REML": 0.8924,
+    "pooled_CI_REML": [
+      0.7535,
+      1.0569
+    ],
+    "PI_normal_REML": [
+      0.6788,
+      1.1732
+    ],
+    "PI_t_REML": [
+      0.1514,
+      5.2585
+    ],
+    "pooled_OR_DL": 0.8924,
+    "pooled_CI_DL": [
+      0.7535,
+      1.0569
+    ],
+    "PI_normal_DL": [
+      0.6788,
+      1.1732
+    ],
+    "PI_t_DL": [
+      0.1514,
+      5.2585
+    ],
+    "w_DL_pct": [
+      43.65,
+      56.35
+    ],
+    "cohorts": [
+      "CLHLS",
+      "SHARE"
+    ],
+    "per_cohort_OR": {
+      "CLHLS": 0.809,
+      "SHARE": 0.9628
+    },
+    "per_cohort_CI": {
+      "CLHLS": [
+        0.704,
+        0.9297
+      ],
+      "SHARE": [
+        0.8999,
+        1.0301
+      ]
+    },
+    "subgroup_by_region": {
+      "testable": true,
+      "groups": [
+        "Asia",
+        "Europe"
+      ],
+      "per_group_OR": {
+        "Asia": 0.809,
+        "Europe": 0.9628
+      },
+      "Q_between": 4.8697,
+      "df": 1,
+      "p_between": 0.027333033381078366
+    }
+  },
+  "r13_bmi_x_cataract": {
+    "k": 2,
+    "Q": 4.8772,
+    "Q_df": 1,
+    "Q_p": 0.027213685868212035,
+    "I2_percent": 79.5,
+    "tau2_DL": 0.020516,
+    "tau2_REML": 0.020516,
+    "pooled_OR_REML": 1.1349,
+    "pooled_CI_REML": [
+      0.9121,
+      1.412
+    ],
+    "PI_normal_REML": [
+      0.7952,
+      1.6197
+    ],
+    "PI_t_REML": [
+      0.1131,
+      11.3896
+    ],
+    "pooled_OR_DL": 1.1349,
+    "pooled_CI_DL": [
+      0.9121,
+      1.412
+    ],
+    "PI_normal_DL": [
+      0.7952,
+      1.6197
+    ],
+    "PI_t_DL": [
+      0.1131,
+      11.3896
+    ],
+    "w_DL_pct": [
+      40.38,
+      59.62
+    ],
+    "cohorts": [
+      "CRELES",
+      "SHARE"
+    ],
+    "per_cohort_OR": {
+      "CRELES": 0.9911,
+      "SHARE": 1.2439
+    },
+    "per_cohort_CI": {
+      "CRELES": [
+        0.8126,
+        1.2087
+      ],
+      "SHARE": [
+        1.2008,
+        1.2886
+      ]
+    },
+    "subgroup_by_region": {
+      "testable": true,
+      "groups": [
+        "Americas",
+        "Europe"
+      ],
+      "per_group_OR": {
+        "Americas": 0.9911,
+        "Europe": 1.2439
+      },
+      "Q_between": 4.8772,
+      "df": 1,
+      "p_between": 0.027213685868212035
+    }
+  },
+  "r20_smoking_x_vi_mod_severe": {
+    "k": 5,
+    "Q": 64.6657,
+    "Q_df": 4,
+    "Q_p": 3.026211417692634e-13,
+    "I2_percent": 93.81,
+    "tau2_DL": 0.035714,
+    "tau2_REML": 0.038137,
+    "pooled_OR_REML": 1.2367,
+    "pooled_CI_REML": [
+      1.0325,
+      1.4812
+    ],
+    "PI_normal_REML": [
+      0.81,
+      1.8881
+    ],
+    "PI_t_REML": [
+      0.6791,
+      2.2521
+    ],
+    "pooled_OR_DL": 1.2364,
+    "pooled_CI_DL": [
+      1.0377,
+      1.4731
+    ],
+    "PI_normal_DL": [
+      0.8207,
+      1.8625
+    ],
+    "PI_t_DL": [
+      0.692,
+      2.2092
+    ],
+    "w_DL_pct": [
+      18.8,
+      17.14,
+      20.99,
+      20.99,
+      22.09
+    ],
+    "cohorts": [
+      "CLHLS",
+      "ELSA",
+      "HRS",
+      "KLoSA",
+      "SHARE"
+    ],
+    "per_cohort_OR": {
+      "CLHLS": 1.0267,
+      "ELSA": 1.4883,
+      "HRS": 1.6144,
+      "KLoSA": 1.1002,
+      "SHARE": 1.0875
+    },
+    "per_cohort_CI": {
+      "CLHLS": [
+        0.8736,
+        1.2066
+      ],
+      "ELSA": [
+        1.2128,
+        1.8263
+      ],
+      "HRS": [
+        1.4682,
+        1.7752
+      ],
+      "KLoSA": [
+        1.0004,
+        1.21
+      ],
+      "SHARE": [
+        1.0429,
+        1.1339
+      ]
+    },
+    "subgroup_by_region": {
+      "testable": true,
+      "groups": [
+        "Americas",
+        "Asia",
+        "Europe"
+      ],
+      "per_group_OR": {
+        "Americas": 1.6144,
+        "Asia": 1.0808,
+        "Europe": 1.1013
+      },
+      "Q_between": 55.4797,
+      "df": 2,
+      "p_between": 8.968808160466784e-13
+    },
+    "meta_reg_mean_age": {
+      "slope_per_year": -0.00979,
+      "se": 0.00877,
+      "p": 0.34591397020723047
+    }
+  }
+}

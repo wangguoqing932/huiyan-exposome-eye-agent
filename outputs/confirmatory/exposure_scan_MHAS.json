@@ -1,0 +1,7181 @@
+{
+  "cohort": "MHAS",
+  "root": "E:\\BaiduNetdiskDownload\\所有数据库\\06. MHAS 墨西哥健康与老龄化研究\\MHAS_墨西哥\\Raw_data",
+  "files": 178,
+  "scanned": 178,
+  "candidates": [
+    {
+      "file": "wave4\\Core survey Data\\sect_cover_int_2015.dta",
+      "var": "factori_15",
+      "rows": 15988,
+      "n_valid": 15988,
+      "dtype": "int32",
+      "label": "Individual weight 2015",
+      "n_distinct": 3186,
+      "values": {
+        "0": 521,
+        "19": 2,
+        "26": 6,
+        "27": 1,
+        "28": 2,
+        "29": 10,
+        "31": 1,
+        "32": 17
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\b_house.dta",
+      "var": "fac_viv",
+      "rows": 9861,
+      "n_valid": 9861,
+      "dtype": "float32",
+      "label": "household-level weight",
+      "n_distinct": 1840,
+      "values": {
+        "16.0": 1,
+        "17.0": 4,
+        "21.0": 1,
+        "26.0": 3,
+        "27.0": 2,
+        "28.0": 12,
+        "31.0": 15,
+        "32.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_cover_int_2012.dta",
+      "var": "factori_12",
+      "rows": 18465,
+      "n_valid": 18465,
+      "dtype": "int32",
+      "label": "Individual weight 2012",
+      "n_distinct": 3209,
+      "values": {
+        "0": 1578,
+        "20": 4,
+        "21": 2,
+        "24": 1,
+        "28": 6,
+        "30": 13,
+        "31": 3,
+        "32": 1
+      }
+    },
+    {
+      "file": "wave3\\Imputations of Weight & Height\\MHAS_2012_Weight_and_Height_IMPUTED.dta",
+      "var": "factori_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int32",
+      "label": "Individual weight 2012",
+      "n_distinct": 3080,
+      "values": {
+        "0": 1460,
+        "20": 2,
+        "21": 2,
+        "24": 1,
+        "28": 6,
+        "30": 11,
+        "31": 1,
+        "32": 1
+      }
+    },
+    {
+      "file": "wave3\\Imputations of Weight & Height\\MHAS_2012_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "float32",
+      "label": "Imputed/observed height without shoes (cm) 2012",
+      "n_distinct": 330,
+      "values": {
+        "110.0": 4,
+        "115.0": 1,
+        "116.0": 1,
+        "120.0": 5,
+        "121.0": 1,
+        "125.0": 2,
+        "127.0": 1,
+        "130.0": 18
+      }
+    },
+    {
+      "file": "wave3\\Imputations of Weight & Height\\MHAS_2012_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_sd_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of height 2012",
+      "n_distinct": 1339,
+      "values": {
+        "0.0": 13553,
+        "1.2649110555648804": 1,
+        "1.686548113822937": 1,
+        "1.8408935070037842": 1,
+        "2.0789954662323": 1,
+        "2.3190035820007324": 1,
+        "2.357022523880005": 1,
+        "2.3593783378601074": 1
+      }
+    },
+    {
+      "file": "wave3\\Imputations of Weight & Height\\MHAS_2012_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_flag_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int8",
+      "label": "Height was imputed 2012",
+      "n_distinct": 2,
+      "values": {
+        "0": 13553,
+        "1": 2170
+      }
+    },
+    {
+      "file": "wave3\\Imputations of Weight & Height\\MHAS_2012_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "float32",
+      "label": "Imputed/observed weight (kg) 2012",
+      "n_distinct": 446,
+      "values": {
+        "30.0": 7,
+        "31.0": 1,
+        "32.0": 3,
+        "33.0": 2,
+        "34.0": 1,
+        "35.0": 12,
+        "36.0": 7,
+        "37.0": 6
+      }
+    },
+    {
+      "file": "wave3\\Imputations of Weight & Height\\MHAS_2012_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_sd_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of weight 2012",
+      "n_distinct": 898,
+      "values": {
+        "0.0": 14746,
+        "1.3703203201293945": 1,
+        "1.4757295846939087": 1,
+        "1.5491933822631836": 1,
+        "2.7162065505981445": 1,
+        "2.748737096786499": 1,
+        "2.756809711456299": 1,
+        "2.796823501586914": 1
+      }
+    },
+    {
+      "file": "wave3\\Imputations of Weight & Height\\MHAS_2012_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_flag_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int8",
+      "label": "Weight was imputed 2012",
+      "n_distinct": 2,
+      "values": {
+        "0": 14746,
+        "1": 977
+      }
+    },
+    {
+      "file": "wave3\\Imputations of Weight & Height\\MHAS_2012_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "float32",
+      "label": "Imputed/observed BMI (kg/m^2) 2012",
+      "n_distinct": 4740,
+      "values": {
+        "12.486992835998535": 1,
+        "13.333333015441895": 1,
+        "13.51290512084961": 1,
+        "14.0625": 1,
+        "14.202752113342285": 1,
+        "14.325068473815918": 1,
+        "14.342572212219238": 1,
+        "14.453125": 1
+      }
+    },
+    {
+      "file": "wave3\\Imputations of Weight & Height\\MHAS_2012_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_sd_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of BMI 2012",
+      "n_distinct": 2619,
+      "values": {
+        "0.0": 13104,
+        "0.3795897662639618": 1,
+        "0.447018027305603": 1,
+        "0.5270963311195374": 1,
+        "0.5424153804779053": 1,
+        "0.5628353953361511": 1,
+        "0.6305674314498901": 1,
+        "0.6785799264907837": 1
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Master_Follow_up_File_Mex_Cog_2016.dta",
+      "var": "factor_mxcog_16",
+      "rows": 3250,
+      "n_valid": 2265,
+      "dtype": "float32",
+      "label": "Final Mex-Cog 2016 weight (3 age groups)",
+      "n_distinct": 1996,
+      "values": {
+        "0.0": 34,
+        "52.0": 1,
+        "54.0": 1,
+        "57.0": 1,
+        "61.0": 1,
+        "62.0": 2,
+        "67.0": 1,
+        "68.0": 2
+      }
+    },
+    {
+      "file": "wave4\\Imputations of Weight & Height\\MHAS_2015_Weight_and_Height_IMPUTED.dta",
+      "var": "factori_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "int32",
+      "label": "Individual weight 2015",
+      "n_distinct": 3130,
+      "values": {
+        "0": 497,
+        "19": 2,
+        "26": 6,
+        "27": 1,
+        "28": 2,
+        "29": 9,
+        "31": 1,
+        "32": 15
+      }
+    },
+    {
+      "file": "wave4\\Imputations of Weight & Height\\MHAS_2015_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "float32",
+      "label": "Imputed/observed height without shoes (cm) 2015",
+      "n_distinct": 340,
+      "values": {
+        "106.0": 1,
+        "115.0": 2,
+        "120.0": 9,
+        "125.0": 4,
+        "130.0": 4,
+        "131.0": 1,
+        "131.5": 1,
+        "132.0": 1
+      }
+    },
+    {
+      "file": "wave4\\Imputations of Weight & Height\\MHAS_2015_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_sd_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of height 2015",
+      "n_distinct": 1429,
+      "values": {
+        "0.0": 12327,
+        "0.7378647923469543": 1,
+        "1.5238839387893677": 1,
+        "1.911950707435608": 1,
+        "2.0027759075164795": 1,
+        "2.0789954662323": 1,
+        "2.149935483932495": 1,
+        "2.33095121383667": 1
+      }
+    },
+    {
+      "file": "wave4\\Imputations of Weight & Height\\MHAS_2015_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_flag_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "int8",
+      "label": "Height was imputed 2015",
+      "n_distinct": 2,
+      "values": {
+        "0": 12327,
+        "1": 2452
+      }
+    },
+    {
+      "file": "wave4\\Imputations of Weight & Height\\MHAS_2015_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "float32",
+      "label": "Imputed/observed weight (kg) 2015",
+      "n_distinct": 458,
+      "values": {
+        "30.0": 10,
+        "31.0": 2,
+        "32.0": 4,
+        "33.0": 3,
+        "35.0": 12,
+        "36.0": 9,
+        "37.0": 4,
+        "37.5": 1
+      }
+    },
+    {
+      "file": "wave4\\Imputations of Weight & Height\\MHAS_2015_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_sd_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of weight 2015",
+      "n_distinct": 907,
+      "values": {
+        "0.0": 13808,
+        "2.3944380283355713": 1,
+        "2.58198881149292": 1,
+        "2.7162065505981445": 1,
+        "2.960855722427368": 1,
+        "3.119828939437866": 1,
+        "3.4576807022094727": 1,
+        "3.502380132675171": 1
+      }
+    },
+    {
+      "file": "wave4\\Imputations of Weight & Height\\MHAS_2015_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_flag_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "int8",
+      "label": "Weight was imputed 2015",
+      "n_distinct": 2,
+      "values": {
+        "0": 13808,
+        "1": 971
+      }
+    },
+    {
+      "file": "wave4\\Imputations of Weight & Height\\MHAS_2015_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "float32",
+      "label": "Imputed/observed BMI (kg/m^2) 2015",
+      "n_distinct": 4938,
+      "values": {
+        "11.812223434448242": 1,
+        "12.017305374145508": 1,
+        "12.32741641998291": 1,
+        "12.482463836669922": 1,
+        "13.333333015441895": 2,
+        "14.02018928527832": 1,
+        "14.222222328186035": 1,
+        "14.459095001220703": 1
+      }
+    },
+    {
+      "file": "wave4\\Imputations of Weight & Height\\MHAS_2015_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_sd_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of BMI 2015",
+      "n_distinct": 2871,
+      "values": {
+        "0.0": 11909,
+        "0.23995055258274078": 1,
+        "0.46043097972869873": 1,
+        "0.5789411664009094": 1,
+        "0.5834751725196838": 1,
+        "0.605381190776825": 1,
+        "0.6807976961135864": 1,
+        "0.692283570766449": 1
+      }
+    },
+    {
+      "file": "wave5\\Imputations of Weight & Height\\MHAS_2018_Weight_and_Height_IMPUTED.dta",
+      "var": "factori_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "int32",
+      "label": "Individual weight 2018",
+      "n_distinct": 4611,
+      "values": {
+        "0": 30,
+        "14": 1,
+        "19": 1,
+        "23": 1,
+        "24": 2,
+        "25": 1,
+        "26": 1,
+        "27": 3
+      }
+    },
+    {
+      "file": "wave5\\Imputations of Weight & Height\\MHAS_2018_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "float32",
+      "label": "Imputed/observed height without shoes (cm) 2018",
+      "n_distinct": 353,
+      "values": {
+        "110.0": 4,
+        "115.0": 2,
+        "119.0": 1,
+        "120.0": 9,
+        "125.0": 2,
+        "127.0": 1,
+        "129.0": 1,
+        "130.0": 13
+      }
+    },
+    {
+      "file": "wave5\\Imputations of Weight & Height\\MHAS_2018_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_sd_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of height 2018",
+      "n_distinct": 1402,
+      "values": {
+        "0.0": 14730,
+        "1.9465068578720093": 1,
+        "2.0655910968780518": 1,
+        "2.201009750366211": 1,
+        "2.2211108207702637": 1,
+        "2.2509257793426514": 1,
+        "2.3475756645202637": 1,
+        "2.357022523880005": 1
+      }
+    },
+    {
+      "file": "wave5\\Imputations of Weight & Height\\MHAS_2018_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_flag_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "int8",
+      "label": "Height was imputed 2018",
+      "n_distinct": 2,
+      "values": {
+        "0": 14730,
+        "1": 2384
+      }
+    },
+    {
+      "file": "wave5\\Imputations of Weight & Height\\MHAS_2018_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "float32",
+      "label": "Imputed/observed weight (kg) 2018",
+      "n_distinct": 366,
+      "values": {
+        "30.0": 6,
+        "31.0": 2,
+        "32.0": 3,
+        "33.0": 3,
+        "34.0": 5,
+        "35.0": 10,
+        "36.0": 4,
+        "37.0": 8
+      }
+    },
+    {
+      "file": "wave5\\Imputations of Weight & Height\\MHAS_2018_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_sd_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of weight 2018",
+      "n_distinct": 711,
+      "values": {
+        "0.0": 16361,
+        "3.8600518703460693": 1,
+        "4.273952007293701": 1,
+        "4.785394668579102": 1,
+        "4.998888969421387": 1,
+        "5.0376362800598145": 1,
+        "5.116422176361084": 1,
+        "5.147815227508545": 1
+      }
+    },
+    {
+      "file": "wave5\\Imputations of Weight & Height\\MHAS_2018_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_flag_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "int8",
+      "label": "Weight was imputed 2018",
+      "n_distinct": 2,
+      "values": {
+        "0": 16361,
+        "1": 753
+      }
+    },
+    {
+      "file": "wave5\\Imputations of Weight & Height\\MHAS_2018_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "float32",
+      "label": "Imputed/observed BMI (kg/m^2) 2018",
+      "n_distinct": 4915,
+      "values": {
+        "9.908838272094727": 1,
+        "10.100754737854004": 1,
+        "11.753902435302734": 1,
+        "12.32741641998291": 1,
+        "12.928119659423828": 1,
+        "13.333333015441895": 1,
+        "13.449684143066406": 1,
+        "13.576580047607422": 1
+      }
+    },
+    {
+      "file": "wave5\\Imputations of Weight & Height\\MHAS_2018_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_sd_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of BMI 2018",
+      "n_distinct": 2690,
+      "values": {
+        "0.0": 14424,
+        "0.46806100010871887": 1,
+        "0.5929712653160095": 1,
+        "0.6614364981651306": 1,
+        "0.6779118776321411": 1,
+        "0.6854904890060425": 1,
+        "0.7302205562591553": 1,
+        "0.7557817697525024": 1
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_ps.dta",
+      "var": "fac_per",
+      "rows": 15402,
+      "n_valid": 15402,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2125,
+      "values": {
+        "0.0": 1939,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 4,
+        "27.0": 19,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "wave1\\Imputations of Weight & Height\\MHAS_2001_Weight_and_Height_IMPUTED.dta",
+      "var": "factori_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "int32",
+      "label": "Individual weight 2001",
+      "n_distinct": 2125,
+      "values": {
+        "0": 1723,
+        "15": 1,
+        "17": 6,
+        "20": 1,
+        "24": 1,
+        "25": 4,
+        "27": 19,
+        "29": 1
+      }
+    },
+    {
+      "file": "wave1\\Imputations of Weight & Height\\MHAS_2001_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "float32",
+      "label": "Imputed/observed height without shoes (cm) 2001",
+      "n_distinct": 369,
+      "values": {
+        "100.0": 4,
+        "102.0": 1,
+        "104.0": 1,
+        "105.0": 1,
+        "106.0": 1,
+        "109.0": 2,
+        "110.0": 2,
+        "113.0": 1
+      }
+    },
+    {
+      "file": "wave1\\Imputations of Weight & Height\\MHAS_2001_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_sd_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of height 2001",
+      "n_distinct": 2027,
+      "values": {
+        "0.0": 11693,
+        "1.4337208271026611": 1,
+        "1.6363916397094727": 1,
+        "1.6633299589157104": 1,
+        "1.8737958669662476": 1,
+        "1.9578900337219238": 1,
+        "2.0682790279388428": 1,
+        "2.149935483932495": 1
+      }
+    },
+    {
+      "file": "wave1\\Imputations of Weight & Height\\MHAS_2001_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_flag_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "int8",
+      "label": "Height was imputed 2001",
+      "n_distinct": 2,
+      "values": {
+        "0": 11693,
+        "1": 3493
+      }
+    },
+    {
+      "file": "wave1\\Imputations of Weight & Height\\MHAS_2001_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "float32",
+      "label": "Imputed/observed weight (kg) 2001",
+      "n_distinct": 493,
+      "values": {
+        "30.0": 8,
+        "31.0": 1,
+        "32.0": 3,
+        "33.0": 2,
+        "34.0": 5,
+        "35.0": 14,
+        "36.0": 4,
+        "37.0": 5
+      }
+    },
+    {
+      "file": "wave1\\Imputations of Weight & Height\\MHAS_2001_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_sd_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of weight 2001",
+      "n_distinct": 1679,
+      "values": {
+        "0.0": 13249,
+        "2.4060111045837402": 1,
+        "2.451756715774536": 1,
+        "2.485513687133789": 1,
+        "2.540778636932373": 1,
+        "2.8067378997802734": 1,
+        "2.907843828201294": 1,
+        "2.9832868576049805": 1
+      }
+    },
+    {
+      "file": "wave1\\Imputations of Weight & Height\\MHAS_2001_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_flag_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "int8",
+      "label": "Weight was imputed 2001",
+      "n_distinct": 2,
+      "values": {
+        "0": 13249,
+        "1": 1937
+      }
+    },
+    {
+      "file": "wave1\\Imputations of Weight & Height\\MHAS_2001_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "float32",
+      "label": "Imputed/observed BMI (kg/m^2) 2001",
+      "n_distinct": 5980,
+      "values": {
+        "10.493826866149902": 1,
+        "13.148788452148438": 1,
+        "13.333333015441895": 3,
+        "13.671875": 2,
+        "13.696128845214844": 1,
+        "13.777777671813965": 1,
+        "13.957759857177734": 1,
+        "14.096318244934082": 1
+      }
+    },
+    {
+      "file": "wave1\\Imputations of Weight & Height\\MHAS_2001_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_sd_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of BMI 2001",
+      "n_distinct": 4070,
+      "values": {
+        "0.0": 11117,
+        "0.3664083778858185": 1,
+        "0.4345370829105377": 1,
+        "0.46315163373947144": 1,
+        "0.5709198713302612": 1,
+        "0.5842556953430176": 1,
+        "0.6855026483535767": 1,
+        "0.6871039271354675": 1
+      }
+    },
+    {
+      "file": "wave2\\Imputations of Weight & Height\\MHAS_2003_Weight_and_Height_IMPUTED.dta",
+      "var": "factori_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "int32",
+      "label": "Individual weight 2003",
+      "n_distinct": 2112,
+      "values": {
+        "0": 1540,
+        "16": 1,
+        "19": 4,
+        "21": 1,
+        "24": 1,
+        "27": 6,
+        "29": 15,
+        "31": 3
+      }
+    },
+    {
+      "file": "wave2\\Imputations of Weight & Height\\MHAS_2003_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "float32",
+      "label": "Imputed/observed height without shoes (cm) 2003",
+      "n_distinct": 368,
+      "values": {
+        "100.0": 2,
+        "105.0": 1,
+        "110.0": 2,
+        "111.0": 1,
+        "115.0": 3,
+        "120.0": 9,
+        "122.0": 1,
+        "125.0": 1
+      }
+    },
+    {
+      "file": "wave2\\Imputations of Weight & Height\\MHAS_2003_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_imp_sd_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of height 2003",
+      "n_distinct": 2131,
+      "values": {
+        "0.0": 9357,
+        "0.9428090453147888": 1,
+        "1.7763882875442505": 1,
+        "2.057506561279297": 1,
+        "2.1705093383789062": 1,
+        "2.233582019805908": 1,
+        "2.2509257793426514": 1,
+        "2.309401035308838": 1
+      }
+    },
+    {
+      "file": "wave2\\Imputations of Weight & Height\\MHAS_2003_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_flag_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "int8",
+      "label": "Height was imputed 2003",
+      "n_distinct": 2,
+      "values": {
+        "0": 9357,
+        "1": 4347
+      }
+    },
+    {
+      "file": "wave2\\Imputations of Weight & Height\\MHAS_2003_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "float32",
+      "label": "Imputed/observed weight (kg) 2003",
+      "n_distinct": 500,
+      "values": {
+        "20.0": 1,
+        "30.0": 4,
+        "31.0": 2,
+        "32.0": 3,
+        "33.0": 3,
+        "34.0": 3,
+        "35.0": 14,
+        "36.0": 16
+      }
+    },
+    {
+      "file": "wave2\\Imputations of Weight & Height\\MHAS_2003_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_imp_sd_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of weight 2003",
+      "n_distinct": 1589,
+      "values": {
+        "0.0": 11871,
+        "2.2509257793426514": 1,
+        "2.699794292449951": 1,
+        "3.020301580429077": 1,
+        "3.198958158493042": 1,
+        "3.2676868438720703": 1,
+        "3.3065590858459473": 1,
+        "3.3149492740631104": 1
+      }
+    },
+    {
+      "file": "wave2\\Imputations of Weight & Height\\MHAS_2003_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_flag_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "int8",
+      "label": "Weight was imputed 2003",
+      "n_distinct": 2,
+      "values": {
+        "0": 11871,
+        "1": 1833
+      }
+    },
+    {
+      "file": "wave2\\Imputations of Weight & Height\\MHAS_2003_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "float32",
+      "label": "Imputed/observed body mass index (kg/m^2) 2003",
+      "n_distinct": 6583,
+      "values": {
+        "10.062591552734375": 1,
+        "10.122448921203613": 1,
+        "12.855831146240234": 1,
+        "13.810779571533203": 1,
+        "13.845060348510742": 1,
+        "13.84776496887207": 1,
+        "13.95521068572998": 1,
+        "14.018709182739258": 1
+      }
+    },
+    {
+      "file": "wave2\\Imputations of Weight & Height\\MHAS_2003_Weight_and_Height_IMPUTED.dta",
+      "var": "bmi_imp_sd_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "float32",
+      "label": "Between-imputation standard deviation of BMI 2003",
+      "n_distinct": 4775,
+      "values": {
+        "0.0": 8929,
+        "0.27173319458961487": 1,
+        "0.508624792098999": 1,
+        "0.6254046559333801": 1,
+        "0.6686357259750366": 1,
+        "0.6875725388526917": 1,
+        "0.6969532370567322": 1,
+        "0.7066580653190613": 1
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_b_deceased_new_sample_2018.dta",
+      "var": "factorh_18",
+      "rows": 321,
+      "n_valid": 321,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 233,
+      "values": {
+        "56": 1,
+        "73": 1,
+        "91": 1,
+        "92": 2,
+        "108": 1,
+        "110": 1,
+        "113": 1,
+        "121": 1
+      }
+    },
+    {
+      "file": "wave1\\Anthropometric Measures\\sect_l.dta",
+      "var": "fac_per",
+      "rows": 2944,
+      "n_valid": 2944,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 1290,
+      "values": {
+        "0.0": 647,
+        "172.0": 2,
+        "186.0": 8,
+        "189.0": 2,
+        "200.0": 1,
+        "209.0": 2,
+        "210.0": 6,
+        "222.0": 2
+      }
+    },
+    {
+      "file": "wave1\\Anthropometric Measures\\sect_l.dta",
+      "var": "l3",
+      "rows": 2944,
+      "n_valid": 2707,
+      "dtype": "float32",
+      "label": "weight",
+      "n_distinct": 89,
+      "values": {
+        "24.0": 1,
+        "33.0": 1,
+        "34.0": 2,
+        "35.0": 3,
+        "36.0": 2,
+        "37.0": 4,
+        "38.0": 5,
+        "39.0": 12
+      }
+    },
+    {
+      "file": "wave1\\Anthropometric Measures\\sect_l.dta",
+      "var": "l4",
+      "rows": 2944,
+      "n_valid": 2707,
+      "dtype": "float32",
+      "label": "height",
+      "n_distinct": 72,
+      "values": {
+        "98.0": 1,
+        "107.0": 1,
+        "110.0": 1,
+        "114.0": 1,
+        "115.0": 1,
+        "127.0": 1,
+        "128.0": 1,
+        "130.0": 3
+      }
+    },
+    {
+      "file": "wave1\\Anthropometric Measures\\sect_l.dta",
+      "var": "l5",
+      "rows": 2944,
+      "n_valid": 2707,
+      "dtype": "float32",
+      "label": "waist",
+      "n_distinct": 94,
+      "values": {
+        "40.0": 2,
+        "46.0": 2,
+        "48.0": 1,
+        "49.0": 3,
+        "55.0": 1,
+        "60.0": 1,
+        "61.0": 1,
+        "63.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_b_deceased_follow_up_2012.dta",
+      "var": "factorh_12",
+      "rows": 3611,
+      "n_valid": 3611,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 1094,
+      "values": {
+        "0": 129,
+        "18": 1,
+        "26": 4,
+        "28": 6,
+        "30": 1,
+        "32": 7,
+        "34": 12,
+        "36": 13
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_b_deceased_new_sample_2012.dta",
+      "var": "factorh_12",
+      "rows": 825,
+      "n_valid": 825,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 497,
+      "values": {
+        "127": 1,
+        "129": 1,
+        "172": 2,
+        "179": 1,
+        "236": 1,
+        "248": 1,
+        "266": 1,
+        "270": 1
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "factorh_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "int32",
+      "label": "Household weight 2021",
+      "n_distinct": 3166,
+      "values": {
+        "26": 1,
+        "27": 2,
+        "29": 1,
+        "30": 4,
+        "32": 1,
+        "33": 2,
+        "34": 8,
+        "35": 3
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "factori_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "int32",
+      "label": "Individual weight 2021",
+      "n_distinct": 4565,
+      "values": {
+        "13": 1,
+        "14": 1,
+        "16": 2,
+        "17": 1,
+        "20": 1,
+        "22": 1,
+        "23": 1,
+        "24": 4
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "wt_flag_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "category",
+      "label": "Weight (kg) was imputed 2021",
+      "n_distinct": 2,
+      "values": {
+        "0.No": 15050,
+        "1.Yes": 689
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "imp_wt_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "float32",
+      "label": "Weight (kg) 2021 (mean across 10 imputations)",
+      "n_distinct": 351,
+      "values": {
+        "30.0": 7,
+        "32.0": 2,
+        "33.0": 2,
+        "34.0": 3,
+        "35.0": 10,
+        "36.0": 4,
+        "37.0": 5,
+        "38.0": 9
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "imp_wt_sd_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "float32",
+      "label": "Weight (kg) 2021 (standard deviation across 10 imputations)",
+      "n_distinct": 660,
+      "values": {
+        "0.0": 15050,
+        "3.735713481903076": 1,
+        "3.9735233783721924": 1,
+        "4.033195495605469": 1,
+        "4.315347194671631": 1,
+        "4.448470592498779": 1,
+        "4.58984375": 1,
+        "4.756282329559326": 1
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "ht_flag_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "category",
+      "label": "Height w/o shoes (m) was imputed 2021",
+      "n_distinct": 2,
+      "values": {
+        "0.No": 13597,
+        "1.Yes": 2142
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "imp_ht_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "float32",
+      "label": "Height without shoes (cm) 2021 (mean across 10 imputations)",
+      "n_distinct": 369,
+      "values": {
+        "107.00000762939453": 1,
+        "110.0": 1,
+        "120.00000762939453": 3,
+        "130.0": 5,
+        "134.0": 4,
+        "135.0": 9,
+        "136.0": 3,
+        "137.0": 5
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "imp_ht_sd_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "float32",
+      "label": "Height without shoes (cm) 2021 (standard deviation across 10 imputations)",
+      "n_distinct": 1955,
+      "values": {
+        "0.0": 13597,
+        "1.1972178220748901": 1,
+        "1.3498958349227905": 1,
+        "1.6329916715621948": 1,
+        "1.649914264678955": 1,
+        "1.766979455947876": 1,
+        "2.024843692779541": 1,
+        "2.1081831455230713": 1
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "imp_bmi_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "float32",
+      "label": "BMI 2021 (median across 10 imputations)",
+      "n_distinct": 3451,
+      "values": {
+        "11.868387222290039": 1,
+        "11.944814682006836": 1,
+        "13.15086555480957": 1,
+        "13.333333015441895": 1,
+        "13.423118591308594": 1,
+        "13.88888931274414": 1,
+        "14.141057014465332": 1,
+        "14.222222328186035": 1
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "imp_bmi_sd_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "float32",
+      "label": "BMI 2021 (standard deviation across 10 imputations)",
+      "n_distinct": 2436,
+      "values": {
+        "0.0": 13304,
+        "0.3531719446182251": 1,
+        "0.3736177384853363": 1,
+        "0.39233162999153137": 1,
+        "0.4550166726112366": 1,
+        "0.4970216453075409": 1,
+        "0.549027681350708": 1,
+        "0.5728269815444946": 1
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "imp_log_bmi_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "float32",
+      "label": "log-transformed BMI 2021 (mean across 10 imputations)",
+      "n_distinct": 4614,
+      "values": {
+        "2.4738783836364746": 1,
+        "2.4790053367614746": 1,
+        "2.5535027980804443": 1,
+        "2.5902671813964844": 1,
+        "2.621877670288086": 1,
+        "2.631089210510254": 1,
+        "2.6490824222564697": 1,
+        "2.652003765106201": 1
+      }
+    },
+    {
+      "file": "wave6\\Imputations of Weight & Height\\MHAS_2021_Weight_and_Height_IMPUTED.dta",
+      "var": "imp_log_bmi_sd_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "float32",
+      "label": "log-transformed BMI 2021 (standard deviation across 10 imputations)",
+      "n_distinct": 2436,
+      "values": {
+        "0.0": 13304,
+        "0.016046682372689247": 1,
+        "0.01822192221879959": 1,
+        "0.02072996459901333": 1,
+        "0.02177467942237854": 1,
+        "0.02387080155313015": 1,
+        "0.026750760152935982": 1,
+        "0.027400989085435867": 1
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_b_deceased_follow_up_2015.dta",
+      "var": "factorh_15",
+      "rows": 4020,
+      "n_valid": 4020,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 1417,
+      "values": {
+        "0": 79,
+        "22": 3,
+        "31": 4,
+        "34": 5,
+        "39": 7,
+        "41": 14,
+        "43": 5,
+        "48": 2
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_b_deceased_new_sample_2015.dta",
+      "var": "factorh_15",
+      "rows": 36,
+      "n_valid": 36,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 29,
+      "values": {
+        "0": 1,
+        "184": 3,
+        "207": 1,
+        "210": 1,
+        "280": 2,
+        "328": 1,
+        "369": 1,
+        "403": 1
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_trh_new_sample_2018.dta",
+      "var": "factorh_18",
+      "rows": 6200,
+      "n_valid": 6200,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 1091,
+      "values": {
+        "37": 2,
+        "43": 2,
+        "50": 4,
+        "51": 2,
+        "53": 2,
+        "56": 3,
+        "62": 4,
+        "66": 7
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_b_non_resident_new_sample_2018.dta",
+      "var": "factorh_18",
+      "rows": 4619,
+      "n_valid": 4619,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 985,
+      "values": {
+        "43": 1,
+        "50": 1,
+        "51": 2,
+        "52": 1,
+        "53": 1,
+        "55": 2,
+        "56": 2,
+        "57": 3
+      }
+    },
+    {
+      "file": "wave5\\Hair Samples\\MHAS 2018 - Heavy Metals Exposure.dta",
+      "var": "sample_wgt",
+      "rows": 2671,
+      "n_valid": 2671,
+      "dtype": "float32",
+      "label": "Hair sample weight (g)",
+      "n_distinct": 61,
+      "values": {
+        "0.0": 64,
+        "0.009999999776482582": 127,
+        "0.019999999552965164": 143,
+        "0.029999999329447746": 132,
+        "0.03999999910593033": 144,
+        "0.05000000074505806": 110,
+        "0.05999999865889549": 105,
+        "0.07000000029802322": 104
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_b_non_resident_follow_up_2018.dta",
+      "var": "factorh_18",
+      "rows": 32525,
+      "n_valid": 32525,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 2573,
+      "values": {
+        "0": 8,
+        "19": 13,
+        "25": 2,
+        "26": 17,
+        "27": 4,
+        "29": 48,
+        "31": 6,
+        "32": 40
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_b_non_resident_follow_up_2012.dta",
+      "var": "factorh_12",
+      "rows": 28461,
+      "n_valid": 28461,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 1667,
+      "values": {
+        "0": 1648,
+        "18": 14,
+        "26": 25,
+        "28": 69,
+        "30": 3,
+        "32": 45,
+        "33": 3,
+        "34": 76
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_trh_new_sample_2012.dta",
+      "var": "factorh_12",
+      "rows": 7700,
+      "n_valid": 7700,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 1530,
+      "values": {
+        "127": 7,
+        "129": 5,
+        "141": 4,
+        "144": 13,
+        "172": 8,
+        "177": 3,
+        "179": 6,
+        "189": 3
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_b_non_resident_new_sample_2012.dta",
+      "var": "factorh_12",
+      "rows": 7624,
+      "n_valid": 7624,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 1450,
+      "values": {
+        "127": 7,
+        "129": 9,
+        "144": 3,
+        "172": 12,
+        "177": 3,
+        "179": 16,
+        "189": 9,
+        "214": 5
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_trh_follow_up_2018.dta",
+      "var": "factorh_18",
+      "rows": 19831,
+      "n_valid": 19831,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 2433,
+      "values": {
+        "0": 14,
+        "19": 4,
+        "25": 1,
+        "26": 16,
+        "27": 2,
+        "29": 12,
+        "32": 20,
+        "33": 11
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_b_non_resident_follow_up_2021.dta",
+      "var": "factorh_21",
+      "rows": 36085,
+      "n_valid": 36085,
+      "dtype": "int32",
+      "label": "Household weight 2021",
+      "n_distinct": 3147,
+      "values": {
+        "26": 2,
+        "27": 7,
+        "29": 4,
+        "30": 41,
+        "32": 6,
+        "33": 5,
+        "34": 20,
+        "35": 4
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_trh_follow_up_2021.dta",
+      "var": "factorh_21",
+      "rows": 26314,
+      "n_valid": 26314,
+      "dtype": "int32",
+      "label": "Household weight 2021",
+      "n_distinct": 3147,
+      "values": {
+        "26": 1,
+        "27": 8,
+        "29": 2,
+        "30": 4,
+        "32": 1,
+        "33": 2,
+        "34": 19,
+        "35": 8
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_i.dta",
+      "var": "fac_per",
+      "rows": 15144,
+      "n_valid": 15144,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2124,
+      "values": {
+        "0.0": 1718,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 4,
+        "27.0": 19,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_b_non_resident_new_sample_2015.dta",
+      "var": "factorh_15",
+      "rows": 551,
+      "n_valid": 551,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 175,
+      "values": {
+        "0": 10,
+        "66": 1,
+        "77": 2,
+        "166": 2,
+        "182": 1,
+        "184": 2,
+        "186": 3,
+        "188": 2
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_trh_new_sample_2015.dta",
+      "var": "factorh_15",
+      "rows": 418,
+      "n_valid": 418,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 157,
+      "values": {
+        "0": 5,
+        "66": 1,
+        "77": 1,
+        "182": 1,
+        "184": 1,
+        "186": 3,
+        "188": 1,
+        "195": 2
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\g_house.dta",
+      "var": "fac_viv",
+      "rows": 9834,
+      "n_valid": 9834,
+      "dtype": "float32",
+      "label": "household-level weight",
+      "n_distinct": 1839,
+      "values": {
+        "16.0": 1,
+        "17.0": 4,
+        "21.0": 1,
+        "26.0": 3,
+        "27.0": 2,
+        "28.0": 12,
+        "31.0": 15,
+        "32.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_trh_follow_up_2012.dta",
+      "var": "factorh_12",
+      "rows": 20720,
+      "n_valid": 20720,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 1689,
+      "values": {
+        "0": 1238,
+        "26": 29,
+        "28": 23,
+        "30": 3,
+        "32": 30,
+        "34": 38,
+        "36": 28,
+        "37": 18
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_b_non_resident_follow_up_2015.dta",
+      "var": "factorh_15",
+      "rows": 36298,
+      "n_valid": 36298,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 2509,
+      "values": {
+        "0": 859,
+        "22": 15,
+        "31": 21,
+        "34": 70,
+        "39": 45,
+        "41": 97,
+        "42": 1,
+        "43": 35
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sg_sj_2021.dta",
+      "var": "factorh_21",
+      "rows": 1799,
+      "n_valid": 1799,
+      "dtype": "int32",
+      "label": "Household weight 2021",
+      "n_distinct": 1097,
+      "values": {
+        "0": 2,
+        "20": 2,
+        "27": 2,
+        "30": 2,
+        "33": 1,
+        "34": 4,
+        "35": 1,
+        "36": 2
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sg_sj_2021.dta",
+      "var": "factori_21",
+      "rows": 1799,
+      "n_valid": 1799,
+      "dtype": "int32",
+      "label": "Individual weight 2021",
+      "n_distinct": 1239,
+      "values": {
+        "14": 1,
+        "19": 1,
+        "24": 1,
+        "27": 1,
+        "28": 1,
+        "29": 2,
+        "30": 1,
+        "32": 3
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sg_sj_2021.dta",
+      "var": "sj7a_21",
+      "rows": 1799,
+      "n_valid": 241,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$1,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 150,
+        "2.No": 3,
+        "9.DK": 88,
+        "nan": 1558
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sg_sj_2021.dta",
+      "var": "sj7b_21",
+      "rows": 1799,
+      "n_valid": 3,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$750 pesos",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 1,
+        "2.No": 2,
+        "nan": 1796
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sg_sj_2021.dta",
+      "var": "sj7c_21",
+      "rows": 1799,
+      "n_valid": 150,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$6,000 pesos",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 146,
+        "2.No": 4,
+        "nan": 1649
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sg_sj_2018.dta",
+      "var": "factorh_18",
+      "rows": 1135,
+      "n_valid": 1135,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 752,
+      "values": {
+        "26": 1,
+        "29": 2,
+        "32": 2,
+        "34": 5,
+        "37": 1,
+        "40": 3,
+        "42": 1,
+        "43": 2
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sg_sj_2018.dta",
+      "var": "factori_18",
+      "rows": 1135,
+      "n_valid": 1135,
+      "dtype": "int32",
+      "label": "Individual weight 2018",
+      "n_distinct": 764,
+      "values": {
+        "26": 1,
+        "29": 2,
+        "32": 2,
+        "34": 3,
+        "37": 1,
+        "40": 2,
+        "42": 1,
+        "43": 2
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sg_sj_2018.dta",
+      "var": "sj7a_18",
+      "rows": 1135,
+      "n_valid": 111,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$1,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 85,
+        "2.No": 6,
+        "9.DK": 20,
+        "nan": 1024
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sg_sj_2018.dta",
+      "var": "sj7b_18",
+      "rows": 1135,
+      "n_valid": 6,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$750 pesos",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 2,
+        "2.No": 4,
+        "nan": 1129
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sg_sj_2018.dta",
+      "var": "sj7c_18",
+      "rows": 1135,
+      "n_valid": 85,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$6,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 75,
+        "2.No": 9,
+        "9.DK": 1,
+        "nan": 1050
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_2001_Cognitive_Function_Measures.dta",
+      "var": "factori_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "int32",
+      "label": "Individual weight 2001",
+      "n_distinct": 2125,
+      "values": {
+        "0": 1723,
+        "15": 1,
+        "17": 6,
+        "20": 1,
+        "24": 1,
+        "25": 4,
+        "27": 19,
+        "29": 1
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_trh_follow_up_2015.dta",
+      "var": "factorh_15",
+      "rows": 24343,
+      "n_valid": 24343,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 2444,
+      "values": {
+        "0": 511,
+        "22": 5,
+        "31": 27,
+        "34": 18,
+        "39": 22,
+        "41": 35,
+        "43": 21,
+        "48": 34
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sg_sj_2012.dta",
+      "var": "factorh_12",
+      "rows": 2742,
+      "n_valid": 2742,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 1143,
+      "values": {
+        "0": 129,
+        "18": 2,
+        "28": 3,
+        "30": 2,
+        "32": 4,
+        "34": 5,
+        "37": 1,
+        "38": 4
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sg_sj_2012.dta",
+      "var": "sj7a_12",
+      "rows": 2742,
+      "n_valid": 409,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$1,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 99,
+        "No 2": 15,
+        "Yes 1": 295,
+        "nan": 2333
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sg_sj_2012.dta",
+      "var": "sj7b_12",
+      "rows": 2742,
+      "n_valid": 15,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$750 pesos",
+      "n_distinct": 3,
+      "values": {
+        "No 2": 11,
+        "Yes 1": 4,
+        "nan": 2727
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sg_sj_2012.dta",
+      "var": "sj7c_12",
+      "rows": 2742,
+      "n_valid": 295,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$6,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 12,
+        "No 2": 24,
+        "Yes 1": 259,
+        "nan": 2447
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_2003_Cognitive_Function_Measures.dta",
+      "var": "factori_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "int32",
+      "label": "Individual weight 2003",
+      "n_distinct": 2112,
+      "values": {
+        "0": 1540,
+        "16": 1,
+        "19": 4,
+        "21": 1,
+        "24": 1,
+        "27": 6,
+        "29": 15,
+        "31": 3
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sg_sj_2015.dta",
+      "var": "factorh_15",
+      "rows": 1209,
+      "n_valid": 1209,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 786,
+      "values": {
+        "0": 22,
+        "34": 1,
+        "39": 3,
+        "41": 1,
+        "43": 5,
+        "48": 1,
+        "49": 1,
+        "51": 2
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sg_sj_2015.dta",
+      "var": "sj7a_15",
+      "rows": 1209,
+      "n_valid": 129,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$1,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 58,
+        "No 2": 6,
+        "Yes 1": 65,
+        "nan": 1080
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sg_sj_2015.dta",
+      "var": "sj7b_15",
+      "rows": 1209,
+      "n_valid": 6,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$750 pesos",
+      "n_distinct": 2,
+      "values": {
+        "No 2": 6,
+        "nan": 1203
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sg_sj_2015.dta",
+      "var": "sj7c_15",
+      "rows": 1209,
+      "n_valid": 65,
+      "dtype": "category",
+      "label": "Funeral cost and other expenses >$6,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 1,
+        "No 2": 5,
+        "Yes 1": 59,
+        "nan": 1144
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_j.dta",
+      "var": "fac_viv",
+      "rows": 9815,
+      "n_valid": 9815,
+      "dtype": "int32",
+      "label": "household-level weight",
+      "n_distinct": 1838,
+      "values": {
+        "16": 1,
+        "17": 4,
+        "21": 1,
+        "26": 3,
+        "27": 2,
+        "28": 12,
+        "31": 15,
+        "32": 1
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_a.dta",
+      "var": "fac_per",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2125,
+      "values": {
+        "0.0": 1723,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 4,
+        "27.0": 19,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\sect_k_ind_2001.dta",
+      "var": "fac_per",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2125,
+      "values": {
+        "0.0": 1723,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 4,
+        "27.0": 19,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\h_indiv.dta",
+      "var": "fac_per",
+      "rows": 15146,
+      "n_valid": 15146,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2124,
+      "values": {
+        "0.0": 1718,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 4,
+        "27.0": 19,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\sect_k_ind_2012.dta",
+      "var": "factori_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int32",
+      "label": "Individual weight 2012",
+      "n_distinct": 3080,
+      "values": {
+        "0": 1460,
+        "20": 2,
+        "21": 2,
+        "24": 1,
+        "28": 6,
+        "30": 11,
+        "31": 1,
+        "32": 1
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_2012_Cognitive_Function_Measures.dta",
+      "var": "factori_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int32",
+      "label": "Individual weight 2012",
+      "n_distinct": 3080,
+      "values": {
+        "0": 1460,
+        "20": 2,
+        "21": 2,
+        "24": 1,
+        "28": 6,
+        "30": 11,
+        "31": 1,
+        "32": 1
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_pc.dta",
+      "var": "pc62",
+      "rows": 1031,
+      "n_valid": 1031,
+      "dtype": "object",
+      "label": "drinking alcohol",
+      "n_distinct": 5,
+      "values": {
+        "1": 31,
+        "2": 57,
+        "3": 876,
+        "8": 11,
+        "9": 56
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_pc.dta",
+      "var": "fac_per",
+      "rows": 1031,
+      "n_valid": 1031,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 646,
+      "values": {
+        "0.0": 54,
+        "25.0": 2,
+        "27.0": 2,
+        "30.0": 1,
+        "32.0": 4,
+        "34.0": 1,
+        "37.0": 2,
+        "39.0": 2
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_2015_Cognitive_Function_Measures.dta",
+      "var": "factori_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "int32",
+      "label": "Individual weight 2015",
+      "n_distinct": 3130,
+      "values": {
+        "0": 497,
+        "19": 2,
+        "26": 6,
+        "27": 1,
+        "28": 2,
+        "29": 9,
+        "31": 1,
+        "32": 15
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "factori_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "int32",
+      "label": "Individual weight 2001",
+      "n_distinct": 2125,
+      "values": {
+        "0": 1723,
+        "15": 1,
+        "17": 6,
+        "20": 1,
+        "24": 1,
+        "25": 4,
+        "27": 19,
+        "29": 1
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "factorh_01",
+      "rows": 15186,
+      "n_valid": 15186,
+      "dtype": "int32",
+      "label": "Household weight 2001",
+      "n_distinct": 1840,
+      "values": {
+        "16": 1,
+        "17": 7,
+        "21": 2,
+        "26": 4,
+        "27": 4,
+        "28": 20,
+        "31": 24,
+        "32": 1
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "hipertension_01",
+      "rows": 15186,
+      "n_valid": 14704,
+      "dtype": "category",
+      "label": "R has been diagnosed with hypertension/high blood pressure 2001",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 9153,
+        "1.Yes": 5551,
+        "nan": 482
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "diabetes_01",
+      "rows": 15186,
+      "n_valid": 14721,
+      "dtype": "category",
+      "label": "R has been diagnosed with diabetes 2001",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 12437,
+        "1.Yes": 2284,
+        "nan": 465
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "imc_cat_01",
+      "rows": 15186,
+      "n_valid": 11361,
+      "dtype": "category",
+      "label": "BMI category 2001",
+      "n_distinct": 6,
+      "values": {
+        "1.Underweight": 200,
+        "2.Normal weight": 3669,
+        "3.Overweight": 4754,
+        "4.Obese": 2527,
+        "5.Morbidly obese": 211,
+        "nan": 3825
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "alcohol_01",
+      "rows": 15186,
+      "n_valid": 15175,
+      "dtype": "category",
+      "label": "Currently drinks alcohol 2001",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 10441,
+        "1.Yes": 4734,
+        "nan": 11
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "tabaco_01",
+      "rows": 15186,
+      "n_valid": 15169,
+      "dtype": "category",
+      "label": "Currently smokes tobacco 2001",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 12522,
+        "1.Yes": 2647,
+        "nan": 17
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "prueba_diab_01",
+      "rows": 15186,
+      "n_valid": 14100,
+      "dtype": "category",
+      "label": "Last 2 years: R has been tested for diabetes 2001",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 5027,
+        "1.Yes": 9073,
+        "nan": 1086
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "prueba_pres_01",
+      "rows": 15186,
+      "n_valid": 14101,
+      "dtype": "category",
+      "label": "Last 2 years: R has been tested for hypertension\\high blood pressure 2001",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 3832,
+        "1.Yes": 10269,
+        "nan": 1085
+      }
+    },
+    {
+      "file": "wave1\\Constructed Data\\MHAS_ENASEM_2001_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_famil_01",
+      "rows": 15186,
+      "n_valid": 10143,
+      "dtype": "category",
+      "label": "Who has more weight in family decisions: R or their spouse/partner 2001",
+      "n_distinct": 4,
+      "values": {
+        "1.R has more weight": 1937,
+        "2.Approximately equal weight": 6706,
+        "3.Spouse/partner has more weight": 1500,
+        "nan": 5043
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q1_s_16",
+      "rows": 2054,
+      "n_valid": 2051,
+      "dtype": "category",
+      "label": "Sistolic pressure. 1st measurement / Medida de presion sistolica. 1era medicion",
+      "n_distinct": 132,
+      "values": {
+        "100.0": 2,
+        "101.0": 6,
+        "102.0": 2,
+        "103.0": 5,
+        "104.0": 5,
+        "105.0": 9,
+        "106.0": 10,
+        "107.0": 12
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q1_d_16",
+      "rows": 2054,
+      "n_valid": 2051,
+      "dtype": "category",
+      "label": "Diastolic pressure. 1st measurement / Medida de presion diastolica. 1era medicio",
+      "n_distinct": 73,
+      "values": {
+        "100.0": 14,
+        "101.0": 18,
+        "102.0": 11,
+        "103.0": 6,
+        "104.0": 7,
+        "105.0": 9,
+        "106.0": 1,
+        "107.0": 3
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q2_h_16",
+      "rows": 2054,
+      "n_valid": 2054,
+      "dtype": "object",
+      "label": "Time 1st blood pressure measurement. Hour / Hora de la 1era toma. Hora",
+      "n_distinct": 18,
+      "values": {
+        ".r": 3,
+        ".s": 9,
+        "01": 221,
+        "02": 217,
+        "03": 169,
+        "04": 165,
+        "05": 151,
+        "06": 150
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q2_m_16",
+      "rows": 2054,
+      "n_valid": 2054,
+      "dtype": "object",
+      "label": "Time 1st blood pressure measurement. Minutes / Hora de la 1era toma. Minutos",
+      "n_distinct": 62,
+      "values": {
+        ".r": 3,
+        ".s": 9,
+        "00": 107,
+        "01": 27,
+        "02": 23,
+        "03": 33,
+        "04": 25,
+        "05": 56
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q2_ap_16",
+      "rows": 2054,
+      "n_valid": 2054,
+      "dtype": "object",
+      "label": "Time 1st blood pressure measurement. AM/PM / Hora de la 1era toma. AM/PM",
+      "n_distinct": 4,
+      "values": {
+        ".r": 3,
+        ".s": 9,
+        "AM": 517,
+        "PM": 1525
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q7_16",
+      "rows": 2054,
+      "n_valid": 1971,
+      "dtype": "category",
+      "label": "Height. First measurement / Estatura. Primera medicion",
+      "n_distinct": 420,
+      "values": {
+        "125.30000305175781": 1,
+        "128.1999969482422": 1,
+        "129.3000030517578": 1,
+        "130.39999389648438": 1,
+        "130.5": 1,
+        "130.89999389648438": 1,
+        "131.1999969482422": 2,
+        "131.5": 1
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q7_1_16",
+      "rows": 2054,
+      "n_valid": 1971,
+      "dtype": "category",
+      "label": "Height. Second measurement / Estatura. Segunda medicion",
+      "n_distinct": 423,
+      "values": {
+        "125.19999694824219": 1,
+        "128.39999389648438": 1,
+        "129.3000030517578": 1,
+        "130.39999389648438": 1,
+        "130.5": 1,
+        "131.0": 2,
+        "131.3000030517578": 1,
+        "131.6999969482422": 2
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q8_16",
+      "rows": 2054,
+      "n_valid": 1990,
+      "dtype": "category",
+      "label": "Weight. First measurement / Peso. Primera medicion",
+      "n_distinct": 933,
+      "values": {
+        "100.0": 1,
+        "100.5": 1,
+        "100.80000305175781": 1,
+        "100.94999694824219": 1,
+        "101.0999984741211": 1,
+        "101.55000305175781": 1,
+        "101.69999694824219": 1,
+        "102.0999984741211": 1
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q8_1_16",
+      "rows": 2054,
+      "n_valid": 1990,
+      "dtype": "category",
+      "label": "Weight. Second measurement / Peso. Segunda medicion",
+      "n_distinct": 942,
+      "values": {
+        "100.05000305175781": 1,
+        "100.44999694824219": 1,
+        "100.9000015258789": 1,
+        "101.0": 1,
+        "101.0999984741211": 1,
+        "101.5": 1,
+        "101.69999694824219": 1,
+        "102.0999984741211": 1
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q9_16",
+      "rows": 2054,
+      "n_valid": 1990,
+      "dtype": "category",
+      "label": "Waist. First measurement / Cintura. Primera medicion",
+      "n_distinct": 506,
+      "values": {
+        "100.0": 12,
+        "100.0999984741211": 2,
+        "100.19999694824219": 7,
+        "100.30000305175781": 5,
+        "100.4000015258789": 3,
+        "100.5": 9,
+        "100.5999984741211": 5,
+        "100.80000305175781": 3
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q9_1_16",
+      "rows": 2054,
+      "n_valid": 1990,
+      "dtype": "category",
+      "label": "Waist. Second measurement / Cintura. Segunda medicion",
+      "n_distinct": 513,
+      "values": {
+        "100.0": 8,
+        "100.0999984741211": 3,
+        "100.19999694824219": 8,
+        "100.30000305175781": 4,
+        "100.4000015258789": 4,
+        "100.5": 7,
+        "100.5999984741211": 3,
+        "100.69999694824219": 5
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q13_s_16",
+      "rows": 2054,
+      "n_valid": 2051,
+      "dtype": "category",
+      "label": "Sistolic pressure. 2nd measurement / Medida de presion sistolica. 2da medicion",
+      "n_distinct": 136,
+      "values": {
+        "100.0": 6,
+        "101.0": 2,
+        "102.0": 10,
+        "103.0": 5,
+        "104.0": 11,
+        "105.0": 7,
+        "106.0": 9,
+        "107.0": 8
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q13_d_16",
+      "rows": 2054,
+      "n_valid": 2051,
+      "dtype": "category",
+      "label": "Diastolic pressure. 2nd measurement / Medida de presion diastolica. 2da medicion",
+      "n_distinct": 73,
+      "values": {
+        "100.0": 8,
+        "101.0": 14,
+        "102.0": 11,
+        "103.0": 12,
+        "104.0": 6,
+        "105.0": 5,
+        "106.0": 2,
+        "107.0": 5
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Anthropometrics_and_Biomarkers_Mex_Cog_2016.dta",
+      "var": "ma_q14_h_16",
+      "rows": 2054,
+      "n_valid": 2054,
+      "dtype": "object",
+      "label": "Time 2nd blood pressure measurement. Hour / Hora de la 2da toma. Hora",
+      "n_distinct": 19,
+      "values": {
+        ".r": 3,
+        ".s": 18,
+        "01": 218,
+        "02": 214,
+        "03": 198,
+        "04": 169,
+        "05": 148,
+        "06": 159
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_f.dta",
+      "var": "fac_per",
+      "rows": 15152,
+      "n_valid": 15152,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2124,
+      "values": {
+        "0.0": 1718,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 4,
+        "27.0": 19,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "factori_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "int32",
+      "label": "Person weight 2003",
+      "n_distinct": 2112,
+      "values": {
+        "0": 1540,
+        "16": 1,
+        "19": 4,
+        "21": 1,
+        "24": 1,
+        "27": 6,
+        "29": 15,
+        "31": 3
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "factorh_03",
+      "rows": 13704,
+      "n_valid": 13704,
+      "dtype": "int32",
+      "label": "Household weight 2003",
+      "n_distinct": 2063,
+      "values": {
+        "0": 1640,
+        "16": 1,
+        "19": 4,
+        "21": 1,
+        "24": 1,
+        "27": 6,
+        "29": 16,
+        "31": 3
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "hipertension_03",
+      "rows": 13704,
+      "n_valid": 13698,
+      "dtype": "category",
+      "label": "R has been diagnosed with hypertension/high blood pressure 2003",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 7224,
+        "1.Yes": 6474,
+        "nan": 6
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "diabetes_03",
+      "rows": 13704,
+      "n_valid": 13690,
+      "dtype": "category",
+      "label": "R has been diagnosed with diabetes 2003",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 11099,
+        "1.Yes": 2591,
+        "nan": 14
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "imc_cat_03",
+      "rows": 13704,
+      "n_valid": 9431,
+      "dtype": "category",
+      "label": "BMI category 2003",
+      "n_distinct": 6,
+      "values": {
+        "1.Underweight": 163,
+        "2.Normal weight": 2923,
+        "3.Overweight": 3925,
+        "4.Obese": 2220,
+        "5.Morbidly obese": 200,
+        "nan": 4273
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "alcohol_03",
+      "rows": 13704,
+      "n_valid": 13700,
+      "dtype": "category",
+      "label": "Currently drinks alcohol 2003",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 10159,
+        "1.Yes": 3541,
+        "nan": 4
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "tabaco_03",
+      "rows": 13704,
+      "n_valid": 13693,
+      "dtype": "category",
+      "label": "Currently smokes tobacco 2003",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 11493,
+        "1.Yes": 2200,
+        "nan": 11
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "prueba_diab_03",
+      "rows": 13704,
+      "n_valid": 12502,
+      "dtype": "category",
+      "label": "Last 2 years: R has been tested for diabetes 2003",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 4085,
+        "1.Yes": 8417,
+        "nan": 1202
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "prueba_pres_03",
+      "rows": 13704,
+      "n_valid": 12510,
+      "dtype": "category",
+      "label": "Last 2 years: R has been tested for hypertension\\high blood pressure 2003",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 3148,
+        "1.Yes": 9362,
+        "nan": 1194
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_famil_03",
+      "rows": 13704,
+      "n_valid": 8720,
+      "dtype": "category",
+      "label": "Who has more weight in family decisions: Respondent or spouse 2003",
+      "n_distinct": 4,
+      "values": {
+        "1.Respondent": 2033,
+        "2.Approximately equal weight": 5133,
+        "3.Spouse": 1554,
+        "nan": 4984
+      }
+    },
+    {
+      "file": "wave2\\Constructed Data\\MHAS_ENASEM_2003_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_personal_03",
+      "rows": 13704,
+      "n_valid": 12459,
+      "dtype": "category",
+      "label": "How much weight does R have in personal decisions 2003",
+      "n_distinct": 4,
+      "values": {
+        "1.A lot": 10757,
+        "2.A little": 1531,
+        "3.None": 171,
+        "nan": 1245
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "factorh_12",
+      "rows": 2086,
+      "n_valid": 2086,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 811,
+      "values": {
+        "0": 85,
+        "59": 1,
+        "62": 5,
+        "67": 1,
+        "68": 2,
+        "70": 1,
+        "81": 1,
+        "82": 2
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "factori_12",
+      "rows": 2086,
+      "n_valid": 2086,
+      "dtype": "int32",
+      "label": "Individual weight 2012",
+      "n_distinct": 847,
+      "values": {
+        "0": 174,
+        "35": 1,
+        "65": 1,
+        "69": 3,
+        "73": 1,
+        "75": 3,
+        "84": 1,
+        "89": 1
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "factora_12",
+      "rows": 2086,
+      "n_valid": 2086,
+      "dtype": "int32",
+      "label": "Biomarkers weight 2012",
+      "n_distinct": 848,
+      "values": {
+        "0": 175,
+        "57": 1,
+        "105": 1,
+        "112": 3,
+        "113": 1,
+        "118": 1,
+        "121": 2,
+        "141": 6
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "estatu1_12",
+      "rows": 2086,
+      "n_valid": 2049,
+      "dtype": "category",
+      "label": "Height - first measurement",
+      "n_distinct": 419,
+      "values": {
+        "128.1999969482422": 1,
+        "128.6999969482422": 1,
+        "129.6999969482422": 1,
+        "130.39999389648438": 1,
+        "130.6999969482422": 1,
+        "130.89999389648438": 1,
+        "131.60000610351562": 1,
+        "132.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "estatu2_12",
+      "rows": 2086,
+      "n_valid": 2049,
+      "dtype": "category",
+      "label": "Height - second measurement",
+      "n_distinct": 418,
+      "values": {
+        "128.1999969482422": 1,
+        "128.5": 1,
+        "129.8000030517578": 1,
+        "130.1999969482422": 1,
+        "130.89999389648438": 1,
+        "131.0": 1,
+        "131.60000610351562": 1,
+        "132.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "peso1_12",
+      "rows": 2086,
+      "n_valid": 2059,
+      "dtype": "category",
+      "label": "Weight - first measurement",
+      "n_distinct": 606,
+      "values": {
+        "100.0": 1,
+        "100.0999984741211": 1,
+        "100.19999694824219": 1,
+        "100.30000305175781": 1,
+        "100.5": 1,
+        "100.9000015258789": 1,
+        "101.0999984741211": 1,
+        "101.19999694824219": 2
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "peso2_12",
+      "rows": 2086,
+      "n_valid": 2059,
+      "dtype": "category",
+      "label": "Weight - second measurement",
+      "n_distinct": 609,
+      "values": {
+        "100.19999694824219": 2,
+        "100.30000305175781": 1,
+        "100.5999984741211": 1,
+        "100.69999694824219": 1,
+        "101.0999984741211": 1,
+        "101.19999694824219": 3,
+        "101.5": 1,
+        "101.5999984741211": 2
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "cintura1_12",
+      "rows": 2086,
+      "n_valid": 2059,
+      "dtype": "category",
+      "label": "Waist circumference - first measurement",
+      "n_distinct": 517,
+      "values": {
+        "100.0": 6,
+        "100.0999984741211": 6,
+        "100.19999694824219": 2,
+        "100.30000305175781": 6,
+        "100.4000015258789": 1,
+        "100.5": 7,
+        "100.5999984741211": 2,
+        "100.69999694824219": 4
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "cintura2_12",
+      "rows": 2086,
+      "n_valid": 2059,
+      "dtype": "category",
+      "label": "Waist circumference - second measurement",
+      "n_distinct": 524,
+      "values": {
+        "100.0": 10,
+        "100.0999984741211": 4,
+        "100.19999694824219": 5,
+        "100.30000305175781": 4,
+        "100.4000015258789": 2,
+        "100.5": 5,
+        "100.5999984741211": 3,
+        "100.69999694824219": 8
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "asent1_12",
+      "rows": 2086,
+      "n_valid": 2049,
+      "dtype": "category",
+      "label": "Sitting height - first measurement",
+      "n_distinct": 321,
+      "values": {
+        "100.5": 1,
+        "101.69999694824219": 1,
+        "102.5": 2,
+        "103.0999984741211": 1,
+        "103.9000015258789": 1,
+        "104.9000015258789": 1,
+        "105.4000015258789": 1,
+        "105.5": 2
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "asent2_12",
+      "rows": 2086,
+      "n_valid": 2049,
+      "dtype": "category",
+      "label": "Sitting height - second measurement",
+      "n_distinct": 321,
+      "values": {
+        "100.69999694824219": 1,
+        "101.69999694824219": 1,
+        "102.4000015258789": 2,
+        "103.0999984741211": 1,
+        "103.80000305175781": 1,
+        "104.9000015258789": 1,
+        "105.5": 2,
+        "105.5999984741211": 1
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "rodilla1_12",
+      "rows": 2086,
+      "n_valid": 2086,
+      "dtype": "category",
+      "label": "Knee height - first measurement",
+      "n_distinct": 178,
+      "values": {
+        "40.0": 3,
+        "40.5": 2,
+        "40.599998474121094": 1,
+        "40.70000076293945": 1,
+        "41.0": 2,
+        "41.29999923706055": 1,
+        "41.5": 4,
+        "41.900001525878906": 1
+      }
+    },
+    {
+      "file": "wave3\\Biomarkers and Anthropometric Measures\\sect_l_biomarkers_2012.dta",
+      "var": "rodilla2_12",
+      "rows": 2086,
+      "n_valid": 2086,
+      "dtype": "category",
+      "label": "Knee height - second measurement",
+      "n_distinct": 182,
+      "values": {
+        "40.0": 3,
+        "40.400001525878906": 1,
+        "40.5": 1,
+        "40.599998474121094": 1,
+        "40.79999923706055": 1,
+        "41.0": 2,
+        "41.29999923706055": 1,
+        "41.400001525878906": 1
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_e.dta",
+      "var": "fac_per",
+      "rows": 14129,
+      "n_valid": 14129,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2078,
+      "values": {
+        "0.0": 1666,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 2,
+        "27.0": 17,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "factorh_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 2893,
+      "values": {
+        "0": 593,
+        "18": 2,
+        "26": 6,
+        "28": 13,
+        "30": 1,
+        "32": 17,
+        "33": 1,
+        "34": 26
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "factori_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int32",
+      "label": "Individual weight 2012",
+      "n_distinct": 3080,
+      "values": {
+        "0": 1460,
+        "20": 2,
+        "21": 2,
+        "24": 1,
+        "28": 6,
+        "30": 11,
+        "31": 1,
+        "32": 1
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "hipertension_12",
+      "rows": 15723,
+      "n_valid": 15683,
+      "dtype": "category",
+      "label": "R has been diagnosed with hypertension/high blood pressure 2012",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 8967,
+        "1.Yes": 6716,
+        "nan": 40
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "diabetes_12",
+      "rows": 15723,
+      "n_valid": 15689,
+      "dtype": "category",
+      "label": "R has been diagnosed with diabetes 2012",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 12164,
+        "1.Yes": 3525,
+        "nan": 34
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "imc_cat_12",
+      "rows": 15723,
+      "n_valid": 13831,
+      "dtype": "category",
+      "label": "BMI category 2012",
+      "n_distinct": 6,
+      "values": {
+        "1.Underweight": 204,
+        "2.Normal weight": 4380,
+        "3.Overweight": 5650,
+        "4.Obese": 3329,
+        "5.Morbidly obese": 268,
+        "nan": 1892
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "alcohol_12",
+      "rows": 15723,
+      "n_valid": 15719,
+      "dtype": "category",
+      "label": "Currently drinks alcohol 2012",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 12147,
+        "1.Yes": 3572,
+        "nan": 4
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "tabaco_12",
+      "rows": 15723,
+      "n_valid": 15717,
+      "dtype": "category",
+      "label": "Currently smokes tabacco 2012",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 13841,
+        "1.Yes": 1876,
+        "nan": 6
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "prueba_diab_12",
+      "rows": 15723,
+      "n_valid": 14436,
+      "dtype": "category",
+      "label": "Last 2 years: R has been tested for diabetes 2012",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 3341,
+        "1.Yes": 11095,
+        "nan": 1287
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "prueba_pres_12",
+      "rows": 15723,
+      "n_valid": 14438,
+      "dtype": "category",
+      "label": "Last 2 years: R has been tested for hypertension\\high blood pressure 2012",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 3040,
+        "1.Yes": 11398,
+        "nan": 1285
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_famil_12",
+      "rows": 15723,
+      "n_valid": 10160,
+      "dtype": "category",
+      "label": "Who has more weight in family decisions: Respondent or spouse 2012",
+      "n_distinct": 4,
+      "values": {
+        "1.Respondent": 2566,
+        "2.Approximately equal weight": 6145,
+        "3.Spouse": 1449,
+        "nan": 5563
+      }
+    },
+    {
+      "file": "wave3\\Constructed Data\\MHAS_ENASEM_2012_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_personal_12",
+      "rows": 15723,
+      "n_valid": 14371,
+      "dtype": "category",
+      "label": "How much weight does R have in personal decisions 2012",
+      "n_distinct": 4,
+      "values": {
+        "1.A lot": 12406,
+        "2.A little": 1809,
+        "3.None": 156,
+        "nan": 1352
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_d.dta",
+      "var": "fac_per",
+      "rows": 15176,
+      "n_valid": 15176,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2125,
+      "values": {
+        "0.0": 1721,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 4,
+        "27.0": 19,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "factorh_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 2754,
+      "values": {
+        "0": 353,
+        "22": 3,
+        "31": 6,
+        "34": 13,
+        "39": 14,
+        "41": 33,
+        "42": 1,
+        "43": 13
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "factori_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "int32",
+      "label": "Individual weight 2015",
+      "n_distinct": 3130,
+      "values": {
+        "0": 497,
+        "19": 2,
+        "26": 6,
+        "27": 1,
+        "28": 2,
+        "29": 9,
+        "31": 1,
+        "32": 15
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "hipertension_15",
+      "rows": 14779,
+      "n_valid": 14756,
+      "dtype": "category",
+      "label": "R has been diagnosed with hypertension/high blood pressure 2015",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 7757,
+        "1.Yes": 6999,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "diabetes_15",
+      "rows": 14779,
+      "n_valid": 14759,
+      "dtype": "category",
+      "label": "R has been diagnosed with diabetes 2015",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 11112,
+        "1.Yes": 3647,
+        "nan": 20
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "imc_cat_15",
+      "rows": 14779,
+      "n_valid": 12813,
+      "dtype": "category",
+      "label": "BMI category 2015",
+      "n_distinct": 6,
+      "values": {
+        "1.Underweight": 203,
+        "2.Normal weight": 3920,
+        "3.Overweight": 5252,
+        "4.Obese": 3158,
+        "5.Morbidly obese": 280,
+        "nan": 1966
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "alcohol_15",
+      "rows": 14779,
+      "n_valid": 14770,
+      "dtype": "category",
+      "label": "R currently drinks alcohol 2015",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 11382,
+        "1.Yes": 3388,
+        "nan": 9
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "tabaco_15",
+      "rows": 14779,
+      "n_valid": 14759,
+      "dtype": "category",
+      "label": "R currently smokes tobacco 2015",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 13053,
+        "1.Yes": 1706,
+        "nan": 20
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "prueba_diab_15",
+      "rows": 14779,
+      "n_valid": 14755,
+      "dtype": "category",
+      "label": "Preventive care: R has been tested for diabetes in past 2 years 2015",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 3625,
+        "1.Yes": 11130,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "prueba_pres_15",
+      "rows": 14779,
+      "n_valid": 14767,
+      "dtype": "category",
+      "label": "Preventive care: R has been tested for hypertension in past 2 years 2015",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 3342,
+        "1.Yes": 11425,
+        "nan": 12
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_famil_15",
+      "rows": 14779,
+      "n_valid": 9364,
+      "dtype": "category",
+      "label": "Who has more weight in important family decisions: R or their spouse? 2015",
+      "n_distinct": 4,
+      "values": {
+        "1.Respondent": 2352,
+        "2.Approximately equal weight": 5382,
+        "3.Spouse": 1630,
+        "nan": 5415
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\MHAS_ENASEM_2015_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_personal_15",
+      "rows": 14779,
+      "n_valid": 13775,
+      "dtype": "category",
+      "label": "How much weight does R believe they have in personal decisions? 2015",
+      "n_distinct": 4,
+      "values": {
+        "1.A lot": 11152,
+        "2.A little": 2385,
+        "3.None": 238,
+        "nan": 1004
+      }
+    },
+    {
+      "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+      "var": "factori_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "int32",
+      "label": "Individual weight 2018",
+      "n_distinct": 4611,
+      "values": {
+        "0": 30,
+        "14": 1,
+        "19": 1,
+        "23": 1,
+        "24": 2,
+        "25": 1,
+        "26": 1,
+        "27": 3
+      }
+    },
+    {
+      "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+      "var": "factorh_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 3085,
+      "values": {
+        "0": 11,
+        "19": 2,
+        "25": 1,
+        "26": 5,
+        "27": 1,
+        "29": 7,
+        "31": 1,
+        "32": 14
+      }
+    },
+    {
+      "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+      "var": "hipertension_18",
+      "rows": 17114,
+      "n_valid": 17093,
+      "dtype": "category",
+      "label": "Alguna vez le han dicho que tiene hipertension/presion arterial alta 2018",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 9657,
+        "1.Si": 7436,
+        "nan": 21
+      }
+    },
+    {
+      "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+      "var": "diabetes_18",
+      "rows": 17114,
+      "n_valid": 17084,
+      "dtype": "category",
+      "label": "Alguna vez le han dicho que tiene diabetes 2018",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 12891,
+        "1.Si": 4193,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+      "var": "alcohol_18",
+      "rows": 17114,
+      "n_valid": 17105,
+      "dtype": "category",
+      "label": "Actualmente consume alcohol 2018",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 12414,
+        "1.Si": 4691,
+        "nan": 9
+      }
+    },
+    {
+      "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+      "var": "tabaco_18",
+      "rows": 17114,
+      "n_valid": 17096,
+      "dtype": "category",
+      "label": "Actualmente fuma 2018",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 15136,
+        "1.Si": 1960,
+        "nan": 18
+      }
+    },
+    {
+      "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+      "var": "prueba_diab_18",
+      "rows": 17114,
+      "n_valid": 17075,
+      "dtype": "category",
+      "label": "Cuidados preventivos: Prueba para la diabetes 2018",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 4906,
+        "1.Si": 12169,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+      "var": "prueba_pres_18",
+      "rows": 17114,
+      "n_valid": 17085,
+      "dtype": "category",
+      "label": "Cuidados preventivos: Prueba para la hipertension o presion alta 2018",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 4929,
+        "1.Si": 12156,
+        "nan": 29
+      }
+    },
+    {
+      "file": "wave5\\Constructed Data\\MHAS_ENASEM_2018_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_personal_18",
+      "rows": 17114,
+      "n_valid": 15669,
+      "dtype": "category",
+      "label": "Cuánto peso tiene R en decisiones personales 2018",
+      "n_distinct": 4,
+      "values": {
+        "1.Mucho": 13153,
+        "2.Poco": 2228,
+        "3.Nada": 288,
+        "nan": 1445
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factorh_01",
+      "rows": 82138,
+      "n_valid": 59969,
+      "dtype": "float64",
+      "label": "2001 Household weight",
+      "n_distinct": 1840,
+      "values": {
+        "16.0": 2,
+        "17.0": 23,
+        "21.0": 4,
+        "26.0": 20,
+        "27.0": 14,
+        "28.0": 83,
+        "31.0": 100,
+        "32.0": 2
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factori_01",
+      "rows": 82138,
+      "n_valid": 59969,
+      "dtype": "float64",
+      "label": "2001 Individual weight",
+      "n_distinct": 2125,
+      "values": {
+        "0.0": 7147,
+        "15.0": 2,
+        "17.0": 18,
+        "20.0": 2,
+        "24.0": 2,
+        "25.0": 20,
+        "27.0": 80,
+        "29.0": 2
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factori_03",
+      "rows": 82138,
+      "n_valid": 60313,
+      "dtype": "float64",
+      "label": "2003 Individual weight",
+      "n_distinct": 2112,
+      "values": {
+        "0.0": 9909,
+        "16.0": 2,
+        "19.0": 16,
+        "21.0": 2,
+        "24.0": 2,
+        "27.0": 30,
+        "29.0": 63,
+        "31.0": 11
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factorh_03",
+      "rows": 82138,
+      "n_valid": 60313,
+      "dtype": "float64",
+      "label": "2003 Household weight",
+      "n_distinct": 2063,
+      "values": {
+        "0.0": 9995,
+        "16.0": 2,
+        "19.0": 16,
+        "21.0": 2,
+        "24.0": 2,
+        "27.0": 30,
+        "29.0": 70,
+        "31.0": 11
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factorh_12",
+      "rows": 82138,
+      "n_valid": 75147,
+      "dtype": "float64",
+      "label": "2012 Household weight",
+      "n_distinct": 3049,
+      "values": {
+        "0.0": 5322,
+        "16.0": 2,
+        "18.0": 16,
+        "23.0": 2,
+        "26.0": 30,
+        "28.0": 73,
+        "30.0": 11,
+        "32.0": 95
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factori_12",
+      "rows": 82138,
+      "n_valid": 75147,
+      "dtype": "float64",
+      "label": "2012 Individual weight",
+      "n_distinct": 3209,
+      "values": {
+        "0.0": 11771,
+        "20.0": 16,
+        "21.0": 6,
+        "24.0": 3,
+        "28.0": 30,
+        "30.0": 57,
+        "31.0": 11,
+        "32.0": 2
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factorh_15",
+      "rows": 82138,
+      "n_valid": 66677,
+      "dtype": "float64",
+      "label": "2015 Household weight",
+      "n_distinct": 2892,
+      "values": {
+        "0.0": 2431,
+        "22.0": 15,
+        "23.0": 2,
+        "31.0": 30,
+        "34.0": 67,
+        "38.0": 2,
+        "39.0": 81,
+        "40.0": 8
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factori_15",
+      "rows": 82138,
+      "n_valid": 66677,
+      "dtype": "float64",
+      "label": "2015 Individual weight",
+      "n_distinct": 3186,
+      "values": {
+        "0.0": 5200,
+        "19.0": 10,
+        "26.0": 30,
+        "27.0": 5,
+        "28.0": 6,
+        "29.0": 48,
+        "31.0": 5,
+        "32.0": 77
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factori_18",
+      "rows": 82138,
+      "n_valid": 65660,
+      "dtype": "float64",
+      "label": "2018 Individual weight",
+      "n_distinct": 4712,
+      "values": {
+        "0.0": 5649,
+        "14.0": 5,
+        "19.0": 5,
+        "23.0": 5,
+        "24.0": 10,
+        "25.0": 5,
+        "26.0": 10,
+        "27.0": 15
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "factorh_18",
+      "rows": 82138,
+      "n_valid": 65660,
+      "dtype": "float64",
+      "label": "2018 Household weight",
+      "n_distinct": 3143,
+      "values": {
+        "0.0": 5050,
+        "19.0": 10,
+        "25.0": 5,
+        "26.0": 30,
+        "27.0": 5,
+        "29.0": 42,
+        "31.0": 6,
+        "32.0": 75
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "hipertension",
+      "rows": 82138,
+      "n_valid": 75934,
+      "dtype": "category",
+      "label": "Doctor/medical personnel has told R that R has hypertension/high blood pressure",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 42758,
+        "1.Yes": 33176,
+        "nan": 6204
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "diabetes",
+      "rows": 82138,
+      "n_valid": 75943,
+      "dtype": "category",
+      "label": "Doctor/medical personnel has told R that R has diabetes",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 59703,
+        "1.Yes": 16240,
+        "nan": 6195
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "bmi_imp",
+      "rows": 82138,
+      "n_valid": 76506,
+      "dtype": "float32",
+      "label": "Mean of body mass index (kg/m^2) across 10 imputations",
+      "n_distinct": 19852,
+      "values": {
+        "9.908838272094727": 1,
+        "10.062591552734375": 1,
+        "10.100754737854004": 1,
+        "10.122448921203613": 1,
+        "10.493826866149902": 1,
+        "11.753902435302734": 1,
+        "11.812223434448242": 1,
+        "12.017305374145508": 1
+      }
+    },
+    {
+      "file": "SimpleMHAS （ENASEMsimple）\\simpleMHAS.dta",
+      "var": "imc_imp_cat",
+      "rows": 82138,
+      "n_valid": 76506,
+      "dtype": "category",
+      "label": "Body mass index (5 categories)",
+      "n_distinct": 6,
+      "values": {
+        "1.Underweight": 1107,
+        "2.Normal weight": 23607,
+        "3.Overweight": 33304,
+        "4.Obese": 17272,
+        "5.Morbidly obese": 1216,
+        "nan": 5632
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "factori_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "int32",
+      "label": "Individual weight 2021",
+      "n_distinct": 4565,
+      "values": {
+        "13": 1,
+        "14": 1,
+        "16": 2,
+        "17": 1,
+        "20": 1,
+        "22": 1,
+        "23": 1,
+        "24": 4
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "factorh_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "int32",
+      "label": "Household weight 2021",
+      "n_distinct": 3166,
+      "values": {
+        "26": 1,
+        "27": 2,
+        "29": 1,
+        "30": 4,
+        "32": 1,
+        "33": 2,
+        "34": 8,
+        "35": 3
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "hipertension_21",
+      "rows": 15739,
+      "n_valid": 15734,
+      "dtype": "category",
+      "label": "R has been diagnosed with hypertension/high blood pressure 2021",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 8370,
+        "1.Yes": 7364,
+        "nan": 5
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "diabetes_21",
+      "rows": 15739,
+      "n_valid": 15724,
+      "dtype": "category",
+      "label": "R has been diagnosed with diabetes 2021",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 11594,
+        "1.Yes": 4130,
+        "nan": 15
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "imc_cat_21",
+      "rows": 15739,
+      "n_valid": 14412,
+      "dtype": "category",
+      "label": "BMI category 2021",
+      "n_distinct": 6,
+      "values": {
+        "1.Underweight": 285,
+        "2.Normal weight": 4353,
+        "3.Overweight": 5819,
+        "4.Obese": 3633,
+        "5.Morbidly obese": 322,
+        "nan": 1327
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "alcohol_21",
+      "rows": 15739,
+      "n_valid": 15736,
+      "dtype": "category",
+      "label": "Currently drinks alcohol 2021",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 11448,
+        "1.Yes": 4288,
+        "nan": 3
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "tabaco_21",
+      "rows": 15739,
+      "n_valid": 15725,
+      "dtype": "category",
+      "label": "Currently smokes tobacco 2021",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 14067,
+        "1.Yes": 1658,
+        "nan": 14
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "prueba_diab_21",
+      "rows": 15739,
+      "n_valid": 15726,
+      "dtype": "category",
+      "label": "Last 2 years: R has been tested for diabetes 2021",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 5702,
+        "1.Yes": 10024,
+        "nan": 13
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "prueba_pres_21",
+      "rows": 15739,
+      "n_valid": 15726,
+      "dtype": "category",
+      "label": "Last 2 years: R has been tested for hypertension/high blood pressure 2021",
+      "n_distinct": 3,
+      "values": {
+        "0.No": 5509,
+        "1.Yes": 10217,
+        "nan": 13
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_famil_21",
+      "rows": 15739,
+      "n_valid": 9611,
+      "dtype": "category",
+      "label": "Who has more weight in family decisions: Respondent or spouse 2021",
+      "n_distinct": 4,
+      "values": {
+        "1.Respondent": 2210,
+        "2.Approximately equal weight": 5989,
+        "3.Spouse": 1412,
+        "nan": 6128
+      }
+    },
+    {
+      "file": "wave6\\Constructed Data\\MHAS_ENASEM_2021_Constructed_Variables_Creadas.dta",
+      "var": "peso_decis_personal_21",
+      "rows": 15739,
+      "n_valid": 14444,
+      "dtype": "category",
+      "label": "How much weight does R have in personal decisions 2021",
+      "n_distinct": 4,
+      "values": {
+        "1.A lot": 11963,
+        "2.A little": 2117,
+        "3.None": 364,
+        "nan": 1295
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "fac_per",
+      "rows": 15182,
+      "n_valid": 15182,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2125,
+      "values": {
+        "0.0": 1722,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 4,
+        "27.0": 19,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c4",
+      "rows": 15182,
+      "n_valid": 14787,
+      "dtype": "float32",
+      "label": "hypertension",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 5551,
+        "2.0": 9153,
+        "8.0": 38,
+        "9.0": 45
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c5",
+      "rows": 15182,
+      "n_valid": 5551,
+      "dtype": "float32",
+      "label": "medication for blood pressure",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 3927,
+        "2.0": 1598,
+        "8.0": 14,
+        "9.0": 12
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c6",
+      "rows": 15182,
+      "n_valid": 14787,
+      "dtype": "float32",
+      "label": "diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 2284,
+        "2.0": 12437,
+        "8.0": 33,
+        "9.0": 33
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c7",
+      "rows": 15182,
+      "n_valid": 2284,
+      "dtype": "float32",
+      "label": "medication for diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 1919,
+        "2.0": 357,
+        "8.0": 2,
+        "9.0": 6
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c9",
+      "rows": 15182,
+      "n_valid": 2129,
+      "dtype": "float32",
+      "label": "diet for diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 1326,
+        "2.0": 793,
+        "8.0": 3,
+        "9.0": 7
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c10",
+      "rows": 15182,
+      "n_valid": 2129,
+      "dtype": "float32",
+      "label": "diabetes under control",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 1882,
+        "2.0": 212,
+        "8.0": 8,
+        "9.0": 27
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c51d",
+      "rows": 15182,
+      "n_valid": 14150,
+      "dtype": "float32",
+      "label": "diabetes test",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 9073,
+        "2.0": 5027,
+        "8.0": 15,
+        "9.0": 35
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c51e",
+      "rows": 15182,
+      "n_valid": 14150,
+      "dtype": "float32",
+      "label": "blood pressure test",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 10269,
+        "2.0": 3832,
+        "8.0": 14,
+        "9.0": 35
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c54",
+      "rows": 15182,
+      "n_valid": 15182,
+      "dtype": "float32",
+      "label": "ever smoked",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 6521,
+        "2.0": 8652,
+        "8.0": 1,
+        "9.0": 8
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c55",
+      "rows": 15182,
+      "n_valid": 6521,
+      "dtype": "float32",
+      "label": "smoke now",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 2647,
+        "2.0": 3870,
+        "8.0": 1,
+        "9.0": 3
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c56",
+      "rows": 15182,
+      "n_valid": 2647,
+      "dtype": "float32",
+      "label": "how much smoke",
+      "n_distinct": 32,
+      "values": {
+        "1.0": 483,
+        "2.0": 300,
+        "3.0": 289,
+        "4.0": 173,
+        "5.0": 204,
+        "6.0": 131,
+        "7.0": 58,
+        "8.0": 88
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c57",
+      "rows": 15182,
+      "n_valid": 6043,
+      "dtype": "float32",
+      "label": "age first smoke",
+      "n_distinct": 70,
+      "values": {
+        "9.0": 155,
+        "10.0": 162,
+        "11.0": 52,
+        "12.0": 291,
+        "13.0": 234,
+        "14.0": 333,
+        "15.0": 739,
+        "16.0": 399
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c58",
+      "rows": 15182,
+      "n_valid": 3593,
+      "dtype": "float32",
+      "label": "the most ever smoked",
+      "n_distinct": 37,
+      "values": {
+        "1.0": 585,
+        "2.0": 429,
+        "3.0": 455,
+        "4.0": 223,
+        "5.0": 185,
+        "6.0": 95,
+        "7.0": 41,
+        "8.0": 72
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factorh_01",
+      "rows": 28483,
+      "n_valid": 15402,
+      "dtype": "float64",
+      "label": "Household weight 2001",
+      "n_distinct": 1840,
+      "values": {
+        "16.0": 1,
+        "17.0": 7,
+        "21.0": 2,
+        "26.0": 4,
+        "27.0": 4,
+        "28.0": 20,
+        "31.0": 24,
+        "32.0": 1
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factori_01",
+      "rows": 28483,
+      "n_valid": 15402,
+      "dtype": "float64",
+      "label": "Individual weight 2001",
+      "n_distinct": 2125,
+      "values": {
+        "0.0": 1939,
+        "15.0": 1,
+        "17.0": 6,
+        "20.0": 1,
+        "24.0": 1,
+        "25.0": 4,
+        "27.0": 19,
+        "29.0": 1
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factora_01",
+      "rows": 28483,
+      "n_valid": 15402,
+      "dtype": "float64",
+      "label": "Biomarkers weight 2001",
+      "n_distinct": 1290,
+      "values": {
+        "0.0": 13105,
+        "172.0": 2,
+        "186.0": 8,
+        "189.0": 2,
+        "200.0": 1,
+        "209.0": 2,
+        "210.0": 6,
+        "222.0": 2
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factori_03",
+      "rows": 28483,
+      "n_valid": 15527,
+      "dtype": "float64",
+      "label": "Individual weight 2003",
+      "n_distinct": 2114,
+      "values": {
+        "0.0": 3361,
+        "16.0": 1,
+        "19.0": 4,
+        "21.0": 1,
+        "24.0": 1,
+        "27.0": 6,
+        "29.0": 15,
+        "31.0": 3
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factorh_03",
+      "rows": 28483,
+      "n_valid": 15527,
+      "dtype": "float64",
+      "label": "Household weight 2003",
+      "n_distinct": 2063,
+      "values": {
+        "0.0": 3390,
+        "16.0": 1,
+        "19.0": 4,
+        "21.0": 1,
+        "24.0": 1,
+        "27.0": 6,
+        "29.0": 17,
+        "31.0": 3
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factora_03",
+      "rows": 28483,
+      "n_valid": 15527,
+      "dtype": "float64",
+      "label": "Biomarkers weight 2003",
+      "n_distinct": 1193,
+      "values": {
+        "0.0": 13479,
+        "180.0": 2,
+        "194.0": 6,
+        "207.0": 1,
+        "233.0": 1,
+        "240.0": 1,
+        "249.0": 4,
+        "254.0": 3
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factorh_12",
+      "rows": 28483,
+      "n_valid": 20998,
+      "dtype": "float64",
+      "label": "Household weight 2012",
+      "n_distinct": 3049,
+      "values": {
+        "0.0": 2384,
+        "16.0": 1,
+        "18.0": 4,
+        "23.0": 1,
+        "26.0": 6,
+        "28.0": 18,
+        "30.0": 3,
+        "32.0": 22
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factori_12",
+      "rows": 28483,
+      "n_valid": 20998,
+      "dtype": "float64",
+      "label": "Individual weight 2012",
+      "n_distinct": 3209,
+      "values": {
+        "0.0": 4111,
+        "20.0": 4,
+        "21.0": 2,
+        "24.0": 1,
+        "28.0": 6,
+        "30.0": 13,
+        "31.0": 3,
+        "32.0": 1
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factora_12",
+      "rows": 28483,
+      "n_valid": 20998,
+      "dtype": "float64",
+      "label": "Biomarkers/Anthropometrics weight 2012",
+      "n_distinct": 848,
+      "values": {
+        "0.0": 19087,
+        "57.0": 1,
+        "105.0": 1,
+        "112.0": 3,
+        "113.0": 1,
+        "118.0": 1,
+        "121.0": 2,
+        "141.0": 6
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "res_hba1c_12",
+      "rows": 28483,
+      "n_valid": 18465,
+      "dtype": "category",
+      "label": "Result for glycosylated hemoglobine (HbA1c) 2012",
+      "n_distinct": 4,
+      "values": {
+        "0. Not selected or did not agree": 16160,
+        "1. Agreed, not collected": 242,
+        "2. Agreed, collected, processed": 2063,
+        "nan": 10018
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factorh_15",
+      "rows": 28483,
+      "n_valid": 17986,
+      "dtype": "float64",
+      "label": "Household weight 2015",
+      "n_distinct": 2893,
+      "values": {
+        "0.0": 1373,
+        "22.0": 3,
+        "23.0": 1,
+        "31.0": 6,
+        "34.0": 16,
+        "38.0": 1,
+        "39.0": 17,
+        "40.0": 4
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factori_15",
+      "rows": 28483,
+      "n_valid": 17986,
+      "dtype": "float64",
+      "label": "Individual weight 2015",
+      "n_distinct": 3186,
+      "values": {
+        "0.0": 2519,
+        "19.0": 2,
+        "26.0": 6,
+        "27.0": 1,
+        "28.0": 2,
+        "29.0": 10,
+        "31.0": 1,
+        "32.0": 17
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "res_hba1c_16",
+      "rows": 28483,
+      "n_valid": 3250,
+      "dtype": "category",
+      "label": "Result for glycosylated hemoglobine (HbA1c) 2016",
+      "n_distinct": 4,
+      "values": {
+        "0. Not selected or did not agree": 2107,
+        "1. Agreed, not collected": 2,
+        "2. Agreed, collected, processed": 1141,
+        "nan": 25233
+      }
+    },
+    {
+      "file": "Master Follow-up File\\master_follow_up_file_2021.dta",
+      "var": "factori_18",
+      "rows": 28483,
+      "n_valid": 21539,
+      "dtype": "float64",
+      "label": "Individual weight 2018",
+      "n_distinct": 4712,
+      "values": {
+        "0.0": 3320,
+        "14.0": 1,
+        "19.0": 1,
+        "23.0": 1,
+        "24.0": 2,
+        "25.0": 1,
+        "26.0": 2,
+        "27.0": 3
+      }
+    },
+    {
+      "file": "wave4\\Constructed Data\\sect_k_ind_2015.dta",
+      "var": "factori_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "int32",
+      "label": "Individual weight 2015",
+      "n_distinct": 2982,
+      "values": {
+        "0": 503,
+        "19": 2,
+        "26": 6,
+        "27": 1,
+        "28": 2,
+        "29": 9,
+        "31": 1,
+        "32": 13
+      }
+    },
+    {
+      "file": "wave6\\Cognitive Aging Ancillary Study (Mex-Cog)\\Informant_Interview_Mex_Cog_2021.dta",
+      "var": "factor_mxcog_21",
+      "rows": 4027,
+      "n_valid": 4027,
+      "dtype": "int32",
+      "label": "Mex-Cog 2021 Weight",
+      "n_distinct": 2876,
+      "values": {
+        "37": 1,
+        "39": 1,
+        "47": 1,
+        "48": 1,
+        "49": 2,
+        "50": 1,
+        "51": 1,
+        "54": 2
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "factorh_21",
+      "rows": 1799,
+      "n_valid": 1799,
+      "dtype": "int32",
+      "label": "Household weight 2021",
+      "n_distinct": 1097,
+      "values": {
+        "0": 2,
+        "20": 2,
+        "27": 2,
+        "30": 2,
+        "33": 1,
+        "34": 4,
+        "35": 1,
+        "36": 2
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "factori_21",
+      "rows": 1799,
+      "n_valid": 1799,
+      "dtype": "int32",
+      "label": "Individual weight 2021",
+      "n_distinct": 1239,
+      "values": {
+        "14": 1,
+        "19": 1,
+        "24": 1,
+        "27": 1,
+        "28": 1,
+        "29": 2,
+        "30": 1,
+        "32": 3
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sc3_21",
+      "rows": 1799,
+      "n_valid": 1799,
+      "dtype": "category",
+      "label": "Before Death, Dr./medical personnel diagnosed deceased with DM/high blood sugar",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 741,
+        "2.No": 1050,
+        "8.RF": 3,
+        "9.DK": 5
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sc4_21",
+      "rows": 1799,
+      "n_valid": 741,
+      "dtype": "category",
+      "label": "Before Death, did the deceased take oral medication to control his/her diabetes",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 660,
+        "2.No": 81,
+        "nan": 1058
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sc6_21",
+      "rows": 1799,
+      "n_valid": 741,
+      "dtype": "category",
+      "label": "Did the deceased follow a special diet to control his/her diabetes",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 439,
+        "2.No": 302,
+        "nan": 1058
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sc26_21",
+      "rows": 1799,
+      "n_valid": 1799,
+      "dtype": "category",
+      "label": "Last year of life: Did the deceased smoke",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 181,
+        "2.No": 1613,
+        "8.RF": 1,
+        "9.DK": 4
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sc27_21",
+      "rows": 1799,
+      "n_valid": 181,
+      "dtype": "category",
+      "label": "Frequency of the deceased smoking",
+      "n_distinct": 4,
+      "values": {
+        "1.Daily": 117,
+        "2.Not daily": 63,
+        "9.DK": 1,
+        "nan": 1618
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sc29_21",
+      "rows": 1799,
+      "n_valid": 1799,
+      "dtype": "category",
+      "label": "Last year of life: Number of days the deceased had alcoholic drinks",
+      "n_distinct": 10,
+      "values": {
+        "0.None": 1592,
+        "1": 91,
+        "2": 33,
+        "3": 17,
+        "4": 14,
+        "5": 2,
+        "6": 1,
+        "7": 39
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sc30a_21",
+      "rows": 1799,
+      "n_valid": 1799,
+      "dtype": "category",
+      "label": "Compared to a year before death: Deceased weight at time of death",
+      "n_distinct": 5,
+      "values": {
+        "1.Had increased by 5/more kilos": 115,
+        "2.Had decreased by 5/more kilos": 884,
+        "3.Was more or less the same": 793,
+        "8.RF": 1,
+        "9.DK": 6
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sd6a_21",
+      "rows": 1799,
+      "n_valid": 80,
+      "dtype": "category",
+      "label": "Total hospital expense > $6,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 50,
+        "2.No": 13,
+        "9.DK": 17,
+        "nan": 1719
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sd6b_21",
+      "rows": 1799,
+      "n_valid": 13,
+      "dtype": "category",
+      "label": "Total hospital expense > $3,000 pesos",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 10,
+        "2.No": 3,
+        "nan": 1786
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sd6c_21",
+      "rows": 1799,
+      "n_valid": 50,
+      "dtype": "category",
+      "label": "Total hospital expense > $24,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 30,
+        "2.No": 17,
+        "9.DK": 3,
+        "nan": 1749
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sd9a_21",
+      "rows": 1799,
+      "n_valid": 145,
+      "dtype": "category",
+      "label": "Medical visit(s) expense > than $1,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 112,
+        "2.No": 11,
+        "9.DK": 22,
+        "nan": 1654
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2021.dta",
+      "var": "sd9b_21",
+      "rows": 1799,
+      "n_valid": 11,
+      "dtype": "category",
+      "label": "Medical visit(s) expense > $300 pesos",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 10,
+        "2.No": 1,
+        "nan": 1788
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "factorh_18",
+      "rows": 1135,
+      "n_valid": 1135,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 752,
+      "values": {
+        "26": 1,
+        "29": 2,
+        "32": 2,
+        "34": 5,
+        "37": 1,
+        "40": 3,
+        "42": 1,
+        "43": 2
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "factori_18",
+      "rows": 1135,
+      "n_valid": 1135,
+      "dtype": "int32",
+      "label": "Individual weight 2018",
+      "n_distinct": 764,
+      "values": {
+        "26": 1,
+        "29": 2,
+        "32": 2,
+        "34": 3,
+        "37": 1,
+        "40": 2,
+        "42": 1,
+        "43": 2
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sc3_18",
+      "rows": 1135,
+      "n_valid": 1135,
+      "dtype": "category",
+      "label": "Before Death, Dr./medical personnel diagnosed deceased with DM/high blood sugar",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 411,
+        "2.No": 718,
+        "8.RF": 1,
+        "9.DK": 5
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sc4_18",
+      "rows": 1135,
+      "n_valid": 411,
+      "dtype": "category",
+      "label": "Before Death, did the deceased take oral medication to control his/her diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 374,
+        "2.No": 36,
+        "9.DK": 1,
+        "nan": 724
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sc6_18",
+      "rows": 1135,
+      "n_valid": 411,
+      "dtype": "category",
+      "label": "Did the deceased follow a special diet to control his/her diabetes",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 263,
+        "2.No": 148,
+        "nan": 724
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sc26_18",
+      "rows": 1135,
+      "n_valid": 1135,
+      "dtype": "category",
+      "label": "Last year of life: Did the deceased smoke",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 135,
+        "2.No": 997,
+        "8.RF": 2,
+        "9.DK": 1
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sc27_18",
+      "rows": 1135,
+      "n_valid": 135,
+      "dtype": "category",
+      "label": "Frequency of the deceased smoking",
+      "n_distinct": 4,
+      "values": {
+        "1.Daily": 98,
+        "2.Not daily": 35,
+        "9.DK": 2,
+        "nan": 1000
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sc29_18",
+      "rows": 1135,
+      "n_valid": 1135,
+      "dtype": "category",
+      "label": "Last year of life: Number of days the deceased had alcoholic drinks",
+      "n_distinct": 10,
+      "values": {
+        "0.None": 978,
+        "1": 46,
+        "2": 20,
+        "3": 12,
+        "4": 3,
+        "5": 6,
+        "6": 3,
+        "7": 40
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sc30a_18",
+      "rows": 1135,
+      "n_valid": 1135,
+      "dtype": "category",
+      "label": "Compared to a year before death: Deceased weight at time of death",
+      "n_distinct": 5,
+      "values": {
+        "1.Had increased by 5/more kilos": 68,
+        "2.Had decreased by 5/more kilos": 585,
+        "3.Was more orless the same": 476,
+        "8.RF": 1,
+        "9.DK": 5
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sd6a_18",
+      "rows": 1135,
+      "n_valid": 65,
+      "dtype": "category",
+      "label": "Total hospital expense > $6,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 45,
+        "2.No": 11,
+        "9.DK": 9,
+        "nan": 1070
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sd6b_18",
+      "rows": 1135,
+      "n_valid": 11,
+      "dtype": "category",
+      "label": "Total hospital expense > $3,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 6,
+        "2.No": 4,
+        "9.DK": 1,
+        "nan": 1124
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sd6c_18",
+      "rows": 1135,
+      "n_valid": 45,
+      "dtype": "category",
+      "label": "Total hospital expense > $24,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 22,
+        "2.No": 20,
+        "9.DK": 3,
+        "nan": 1090
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sd9a_18",
+      "rows": 1135,
+      "n_valid": 109,
+      "dtype": "category",
+      "label": "Medical visit(s) expense > than $1,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 77,
+        "2.No": 13,
+        "9.DK": 19,
+        "nan": 1026
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2018.dta",
+      "var": "sd9b_18",
+      "rows": 1135,
+      "n_valid": 13,
+      "dtype": "category",
+      "label": "Medical visit(s) expense > $300 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 8,
+        "2.No": 4,
+        "9.DK": 1,
+        "nan": 1122
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "factorh_15",
+      "rows": 1209,
+      "n_valid": 1209,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 786,
+      "values": {
+        "0": 22,
+        "34": 1,
+        "39": 3,
+        "41": 1,
+        "43": 5,
+        "48": 1,
+        "49": 1,
+        "51": 2
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "factori_15",
+      "rows": 1209,
+      "n_valid": 1209,
+      "dtype": "int32",
+      "label": "Individual weight 2015",
+      "n_distinct": 720,
+      "values": {
+        "0": 24,
+        "29": 1,
+        "32": 2,
+        "33": 1,
+        "34": 1,
+        "36": 6,
+        "37": 1,
+        "39": 1
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sc4_15",
+      "rows": 1209,
+      "n_valid": 449,
+      "dtype": "category",
+      "label": "Before Death, did the deceased take oral medication to control his/her diabetes",
+      "n_distinct": 3,
+      "values": {
+        "No 2": 46,
+        "Yes 1": 403,
+        "nan": 760
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sc6_15",
+      "rows": 1209,
+      "n_valid": 449,
+      "dtype": "category",
+      "label": "Did the deceased follow a special diet to control his/her diabetes",
+      "n_distinct": 3,
+      "values": {
+        "No 2": 145,
+        "Yes 1": 304,
+        "nan": 760
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sc26_15",
+      "rows": 1209,
+      "n_valid": 1208,
+      "dtype": "category",
+      "label": "Last year of life: Did the deceased smoke",
+      "n_distinct": 5,
+      "values": {
+        "DK 9": 1,
+        "No 2": 1085,
+        "RF 8": 1,
+        "Yes 1": 121,
+        "nan": 1
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sc27_15",
+      "rows": 1209,
+      "n_valid": 121,
+      "dtype": "category",
+      "label": "Frequency of the deceased smoking",
+      "n_distinct": 3,
+      "values": {
+        "Daily 1": 89,
+        "Not daily 2": 32,
+        "nan": 1088
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sc28_1_15",
+      "rows": 1209,
+      "n_valid": 121,
+      "dtype": "category",
+      "label": "Amount of cigarettes the deceased smoked daily",
+      "n_distinct": 21,
+      "values": {
+        "0.0": 2,
+        "1.0": 11,
+        "10.0": 7,
+        "12.0": 3,
+        "14.0": 2,
+        "15.0": 3,
+        "2.0": 21,
+        "20.0": 23
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sc28_2_15",
+      "rows": 1209,
+      "n_valid": 101,
+      "dtype": "category",
+      "label": "Amount of cigarette packs the deceased smoked daily",
+      "n_distinct": 6,
+      "values": {
+        "0.0": 39,
+        "1.0": 38,
+        "2.0": 13,
+        "3.0": 4,
+        "DK 99": 7,
+        "nan": 1108
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sc29_15",
+      "rows": 1209,
+      "n_valid": 1208,
+      "dtype": "category",
+      "label": "Last year of life: Number of days the deceased had alcoholic drinks",
+      "n_distinct": 11,
+      "values": {
+        "1.0": 51,
+        "2.0": 15,
+        "3.0": 9,
+        "4.0": 2,
+        "5.0": 2,
+        "6.0": 1,
+        "7.0": 37,
+        "DK 9": 7
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sc30a_15",
+      "rows": 1209,
+      "n_valid": 1208,
+      "dtype": "category",
+      "label": "Compared to a year before death: Deceased weight at time of death",
+      "n_distinct": 6,
+      "values": {
+        "DK 9": 4,
+        "Had decreased by 5/more kilos 2": 620,
+        "Had increased by 5/more kilos 1": 66,
+        "RF 8": 2,
+        "Was more/less the same 3": 516,
+        "nan": 1
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sd6a_15",
+      "rows": 1209,
+      "n_valid": 36,
+      "dtype": "category",
+      "label": "Total hospital expense > $6,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 8,
+        "No 2": 7,
+        "Yes 1": 21,
+        "nan": 1173
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sd6b_15",
+      "rows": 1209,
+      "n_valid": 7,
+      "dtype": "category",
+      "label": "Total hospital expense > $3,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 1,
+        "No 2": 3,
+        "Yes 1": 3,
+        "nan": 1202
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sd6c_15",
+      "rows": 1209,
+      "n_valid": 21,
+      "dtype": "category",
+      "label": "Total hospital expense > $24,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 3,
+        "No 2": 7,
+        "Yes 1": 11,
+        "nan": 1188
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2015.dta",
+      "var": "sd9a_15",
+      "rows": 1209,
+      "n_valid": 67,
+      "dtype": "category",
+      "label": "Medical visit(s) expense > than $1,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 18,
+        "No 2": 10,
+        "Yes 1": 39,
+        "nan": 1142
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2016.dta",
+      "var": "mc_q29_16",
+      "rows": 2042,
+      "n_valid": 2039,
+      "dtype": "category",
+      "label": "29: Can you tell me where I can buy a drink nearby? Como llegar a una tienda?  ",
+      "n_distinct": 5,
+      "values": {
+        "1: Gave instructions or directions to some place / Dijo instrucciones o direcciones para ir a un lugar": 999,
+        "2: Did not give instruction or directions / No dio instrucciones o direcciones": 1006,
+        "8: Does not know / No sabe": 21,
+        "9: Refused / No responde": 13,
+        "nan": 3
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2016.dta",
+      "var": "mc_q33_16_16",
+      "rows": 2042,
+      "n_valid": 1923,
+      "dtype": "category",
+      "label": "33: Repeats story 2. 520 pesos Repite historia 2. 520 pesos  ",
+      "n_distinct": 4,
+      "values": {
+        "0: No / No": 1147,
+        "1: Yes, approximately / Si, aproximada": 325,
+        "2: Yes, exactly / Si, exacta": 451,
+        "nan": 119
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2016.dta",
+      "var": "mc_q34_7_16",
+      "rows": 2042,
+      "n_valid": 1922,
+      "dtype": "category",
+      "label": "34: Word recognition. Weight Recuerda palabras. Peso  ",
+      "n_distinct": 5,
+      "values": {
+        "1: Yes / Si": 408,
+        "2: No / No": 1463,
+        "8: Does not know / No sabe": 31,
+        "9: Refused / No responde": 20,
+        "nan": 120
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2016.dta",
+      "var": "mc_q39_16_16",
+      "rows": 2042,
+      "n_valid": 1922,
+      "dtype": "category",
+      "label": "39: Recalls story 2. 520 pesos Recuerda historia 2. 520 pesos  ",
+      "n_distinct": 4,
+      "values": {
+        "0: No / No": 1175,
+        "1: Yes, approximately / Si, aproximada": 330,
+        "2: Yes, exactly / Si, exacta": 417,
+        "nan": 120
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_k.dta",
+      "var": "fac_per",
+      "rows": 9811,
+      "n_valid": 9811,
+      "dtype": "float32",
+      "label": "individual-level weight",
+      "n_distinct": 2080,
+      "values": {
+        "0.0": 854,
+        "15.0": 1,
+        "17.0": 3,
+        "24.0": 1,
+        "25.0": 3,
+        "27.0": 12,
+        "29.0": 1,
+        "30.0": 12
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_k.dta",
+      "var": "fac_viv",
+      "rows": 9811,
+      "n_valid": 9811,
+      "dtype": "float32",
+      "label": "household-level weight",
+      "n_distinct": 1838,
+      "values": {
+        "16.0": 1,
+        "17.0": 4,
+        "21.0": 1,
+        "26.0": 3,
+        "27.0": 2,
+        "28.0": 12,
+        "31.0": 15,
+        "32.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sc3_12",
+      "rows": 2742,
+      "n_valid": 2742,
+      "dtype": "category",
+      "label": "Before Death: Did a physician...deceased with diabetes/high blood sugar",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 9,
+        "No 2": 1806,
+        "RF 8": 2,
+        "Yes 1": 925
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sc4_12",
+      "rows": 2742,
+      "n_valid": 925,
+      "dtype": "category",
+      "label": "Before Death:Did the deceased take oral medication to control his/her diabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 2,
+        "No 2": 70,
+        "Yes 1": 853,
+        "nan": 1817
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sc6_12",
+      "rows": 2742,
+      "n_valid": 925,
+      "dtype": "category",
+      "label": "Did the deceased follow a special diet to control diabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 3,
+        "No 2": 301,
+        "Yes 1": 621,
+        "nan": 1817
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sc26_12",
+      "rows": 2742,
+      "n_valid": 2742,
+      "dtype": "category",
+      "label": "Last year of life:Did the deceased smoke",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 3,
+        "No 2": 2338,
+        "RF 8": 1,
+        "Yes 1": 400
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sc27_12",
+      "rows": 2742,
+      "n_valid": 400,
+      "dtype": "category",
+      "label": "Last year of life:Frequency of the deceased smoking",
+      "n_distinct": 5,
+      "values": {
+        "DK 9": 2,
+        "Daily 1": 307,
+        "Not daily 2": 90,
+        "RF 8": 1,
+        "nan": 2342
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sc28_1_12",
+      "rows": 2742,
+      "n_valid": 306,
+      "dtype": "category",
+      "label": "Last year of life:Amount of cigarettes the deceased smoked daily",
+      "n_distinct": 24,
+      "values": {
+        "1.0": 57,
+        "10.0": 35,
+        "12.0": 3,
+        "14.0": 1,
+        "15.0": 2,
+        "2.0": 32,
+        "20.0": 32,
+        "21.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sc28_2_12",
+      "rows": 2742,
+      "n_valid": 106,
+      "dtype": "category",
+      "label": "Last year of life:Amount of cigarette packs the deceased smoked daily",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 75,
+        "2.0": 21,
+        "3.0": 7,
+        "4.0": 2,
+        "5.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sc29_12",
+      "rows": 2742,
+      "n_valid": 2742,
+      "dtype": "category",
+      "label": "Last year of life:Number of days the deceased had alcoholic drinks",
+      "n_distinct": 10,
+      "values": {
+        "1": 129,
+        "2": 46,
+        "3": 26,
+        "4": 8,
+        "5": 15,
+        "6": 2,
+        "7": 91,
+        "DK 9": 27
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sc30a_12",
+      "rows": 2742,
+      "n_valid": 2742,
+      "dtype": "category",
+      "label": "Compared to year before death:Deceased weight at time of death",
+      "n_distinct": 5,
+      "values": {
+        "DK 9": 17,
+        "Had decreased by 5/more kilos 2": 1337,
+        "Had increased by 5/more kilos 1": 126,
+        "RF 8": 1,
+        "Was more/less the same 3": 1261
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sd6a_12",
+      "rows": 2742,
+      "n_valid": 187,
+      "dtype": "category",
+      "label": "Total hospital expense > $6,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 46,
+        "No 2": 37,
+        "Yes 1": 104,
+        "nan": 2555
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sd6b_12",
+      "rows": 2742,
+      "n_valid": 37,
+      "dtype": "category",
+      "label": "Total hospital expense > $3,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 1,
+        "No 2": 18,
+        "Yes 1": 18,
+        "nan": 2705
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sd6c_12",
+      "rows": 2742,
+      "n_valid": 104,
+      "dtype": "category",
+      "label": "Total hospital expense > $24,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 1,
+        "No 2": 52,
+        "Yes 1": 51,
+        "nan": 2638
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sd9a_12",
+      "rows": 2742,
+      "n_valid": 232,
+      "dtype": "category",
+      "label": "Medical visit(s) expense > than $1,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 61,
+        "No 2": 27,
+        "Yes 1": 144,
+        "nan": 2510
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_sa_sb_sc_sd_se_sh_si_2012.dta",
+      "var": "sd9b_12",
+      "rows": 2742,
+      "n_valid": 27,
+      "dtype": "category",
+      "label": "Medical visit(s) expense >$300 pesos",
+      "n_distinct": 3,
+      "values": {
+        "No 2": 11,
+        "Yes 1": 16,
+        "nan": 2715
+      }
+    },
+    {
+      "file": "wave6\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2021.dta",
+      "var": "factor_mxcog_21",
+      "rows": 3575,
+      "n_valid": 3575,
+      "dtype": "int32",
+      "label": "Mex-Cog 2021 Weight",
+      "n_distinct": 2668,
+      "values": {
+        "37": 1,
+        "47": 1,
+        "49": 1,
+        "50": 1,
+        "54": 2,
+        "55": 1,
+        "57": 1,
+        "60": 2
+      }
+    },
+    {
+      "file": "wave6\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2021.dta",
+      "var": "mc_p32_16_21",
+      "rows": 3575,
+      "n_valid": 3435,
+      "dtype": "category",
+      "label": "32: Repeats long story. 520 pesos",
+      "n_distinct": 6,
+      "values": {
+        "0: No": 1176,
+        "1: Yes, approximately": 712,
+        "2: Yes, exactly": 793,
+        "7: Ran out of time": 629,
+        "8: Refused": 125,
+        "nan": 140
+      }
+    },
+    {
+      "file": "wave6\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2021.dta",
+      "var": "mc_p33_04_21",
+      "rows": 3575,
+      "n_valid": 3435,
+      "dtype": "category",
+      "label": "33: Word recognition. Weight",
+      "n_distinct": 4,
+      "values": {
+        "1: Yes": 375,
+        "2: No": 3036,
+        "8: Refused": 24,
+        "nan": 140
+      }
+    },
+    {
+      "file": "wave6\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2021.dta",
+      "var": "mc_p38_16_21",
+      "rows": 3575,
+      "n_valid": 3435,
+      "dtype": "category",
+      "label": "38: Long story recall. 520 pesos",
+      "n_distinct": 6,
+      "values": {
+        "0: No": 1116,
+        "1: Yes, approximately": 748,
+        "2: Yes, exactly": 694,
+        "7: Ran out of time": 569,
+        "8: Refused": 308,
+        "nan": 140
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "factorh_21",
+      "rows": 10716,
+      "n_valid": 10716,
+      "dtype": "int32",
+      "label": "Household weight 2021",
+      "n_distinct": 3165,
+      "values": {
+        "26": 1,
+        "27": 2,
+        "29": 1,
+        "30": 4,
+        "32": 1,
+        "33": 2,
+        "34": 6,
+        "35": 2
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "g8d1_21",
+      "rows": 10716,
+      "n_valid": 108,
+      "dtype": "category",
+      "label": "Respondent's total expense >$5,000 pesos or about 250 pesos per month",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 44,
+        "2.No": 12,
+        "8.RF": 43,
+        "9.DK": 9,
+        "nan": 10608
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "g8d2_21",
+      "rows": 10716,
+      "n_valid": 44,
+      "dtype": "category",
+      "label": "Respondent's total expense >$10,000 pesos or about 500 pesos per month",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 17,
+        "2.No": 27,
+        "nan": 10672
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "g18b1_21",
+      "rows": 10716,
+      "n_valid": 226,
+      "dtype": "category",
+      "label": "Respondent's total assistance received >$5,000 pesos/about 250 pesos per month",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 81,
+        "2.No": 46,
+        "8.RF": 16,
+        "9.DK": 83,
+        "nan": 10490
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "g18b2_21",
+      "rows": 10716,
+      "n_valid": 81,
+      "dtype": "category",
+      "label": "Respondent's total assistance received >$10,000 pesos/about 500 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 28,
+        "2.No": 52,
+        "9.DK": 1,
+        "nan": 10635
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "j16b_21",
+      "rows": 10716,
+      "n_valid": 10716,
+      "dtype": "category",
+      "label": "Last 3 months: How often...food/drinks prepared, stored, or served in ceramics",
+      "n_distinct": 8,
+      "values": {
+        "1.Never": 6821,
+        "2.Less than once per month": 617,
+        "3.Once per month": 496,
+        "4.Twice per month": 376,
+        "5.Once per week": 667,
+        "6.Two or three times per week": 628,
+        "7.Daily or almost daily": 1105,
+        "9.DK": 6
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "j21a_21",
+      "rows": 10716,
+      "n_valid": 12,
+      "dtype": "category",
+      "label": "Monthly rent >$6,000 pesos",
+      "n_distinct": 2,
+      "values": {
+        "9.DK": 12,
+        "nan": 10704
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "j27a_21",
+      "rows": 10716,
+      "n_valid": 58,
+      "dtype": "category",
+      "label": "Monthly house cost > $7,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 10,
+        "2.No": 33,
+        "9.DK": 15,
+        "nan": 10658
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "j27b_21",
+      "rows": 10716,
+      "n_valid": 33,
+      "dtype": "category",
+      "label": "Monthly house cost > $2,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 21,
+        "2.No": 10,
+        "9.DK": 2,
+        "nan": 10683
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "j27c_21",
+      "rows": 10716,
+      "n_valid": 10,
+      "dtype": "category",
+      "label": "Monthly house cost > $20,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 4,
+        "2.No": 5,
+        "9.DK": 1,
+        "nan": 10706
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "j29a_21",
+      "rows": 10716,
+      "n_valid": 135,
+      "dtype": "category",
+      "label": "Amount owed on house >$180,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 68,
+        "2.No": 37,
+        "9.DK": 30,
+        "nan": 10581
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_g_j_k_sa_2021.dta",
+      "var": "j29b_21",
+      "rows": 10716,
+      "n_valid": 37,
+      "dtype": "category",
+      "label": "Amount owed on house >$95,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 22,
+        "2.No": 14,
+        "9.DK": 1,
+        "nan": 10679
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "factorh_18",
+      "rows": 11401,
+      "n_valid": 11401,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 3085,
+      "values": {
+        "0": 10,
+        "19": 2,
+        "25": 1,
+        "26": 4,
+        "27": 1,
+        "29": 6,
+        "31": 1,
+        "32": 11
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "g8d1_18",
+      "rows": 11401,
+      "n_valid": 309,
+      "dtype": "category",
+      "label": "Respondent's total expense >$5,000 pesos or about 250 pesos per month",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 151,
+        "2.No": 57,
+        "8.RF": 9,
+        "9.DK": 92,
+        "nan": 11092
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "g8d2_18",
+      "rows": 11401,
+      "n_valid": 151,
+      "dtype": "category",
+      "label": "Respondent's total expense >$10,000 pesos or about 500 pesos per month",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 70,
+        "2.No": 75,
+        "8.RF": 3,
+        "9.DK": 3,
+        "nan": 11250
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "g18b1_18",
+      "rows": 11401,
+      "n_valid": 395,
+      "dtype": "category",
+      "label": "Respondent's total assistance received >$5,000 pesos/about 250 pesos per month",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 140,
+        "2.No": 61,
+        "8.RF": 7,
+        "9.DK": 187,
+        "nan": 11006
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "g18b2_18",
+      "rows": 11401,
+      "n_valid": 140,
+      "dtype": "category",
+      "label": "Respondent's total assistance received >$10,000 pesos/about 500 pesos per month",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 56,
+        "2.No": 82,
+        "8.RF": 1,
+        "9.DK": 1,
+        "nan": 11261
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "j16b_18",
+      "rows": 11401,
+      "n_valid": 11401,
+      "dtype": "category",
+      "label": "Last 3 months: How often...food/drinks prepared, stored, or served in ceramics",
+      "n_distinct": 9,
+      "values": {
+        "1.Never": 7215,
+        "2.Less than once per month": 751,
+        "3.Once per month": 530,
+        "4.Twice per month": 388,
+        "5.Once per week": 754,
+        "6.Two or three times per week": 662,
+        "7.Daily or almost daily": 1081,
+        "8.RF": 9
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "j21a_18",
+      "rows": 11401,
+      "n_valid": 33,
+      "dtype": "category",
+      "label": "Monthly rent >$6,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 8,
+        "2.No": 7,
+        "9.DK": 18,
+        "nan": 11368
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "j21b_18",
+      "rows": 11401,
+      "n_valid": 7,
+      "dtype": "category",
+      "label": "Monthly rent >$2,000 pesos",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 4,
+        "2.No": 3,
+        "nan": 11394
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "j21c_18",
+      "rows": 11401,
+      "n_valid": 8,
+      "dtype": "category",
+      "label": "Monthly rent >$18,000 pesos",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 1,
+        "2.No": 7,
+        "nan": 11393
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "j27a_18",
+      "rows": 11401,
+      "n_valid": 93,
+      "dtype": "category",
+      "label": "Monthly house cost > $7,500 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 13,
+        "2.No": 35,
+        "9.DK": 45,
+        "nan": 11308
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "j27b_18",
+      "rows": 11401,
+      "n_valid": 35,
+      "dtype": "category",
+      "label": "Monthly house cost > $2,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 24,
+        "2.No": 10,
+        "9.DK": 1,
+        "nan": 11366
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "j27c_18",
+      "rows": 11401,
+      "n_valid": 13,
+      "dtype": "category",
+      "label": "Monthly house cost > $20,000 pesos",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 8,
+        "2.No": 5,
+        "nan": 11388
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "j29a_18",
+      "rows": 11401,
+      "n_valid": 215,
+      "dtype": "category",
+      "label": "Amount owed on house >$180,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 88,
+        "2.No": 45,
+        "9.DK": 82,
+        "nan": 11186
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_g_j_k_sa_2018.dta",
+      "var": "j29b_18",
+      "rows": 11401,
+      "n_valid": 45,
+      "dtype": "category",
+      "label": "Amount owed on house >$95,000 pesos",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 24,
+        "2.No": 18,
+        "9.DK": 3,
+        "nan": 11356
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "factorh_12",
+      "rows": 10427,
+      "n_valid": 10427,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 2893,
+      "values": {
+        "0": 464,
+        "18": 2,
+        "26": 4,
+        "28": 10,
+        "30": 1,
+        "32": 12,
+        "33": 1,
+        "34": 15
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9a1_12",
+      "rows": 10427,
+      "n_valid": 213,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 54,
+        "No 2": 53,
+        "Yes 1": 106,
+        "nan": 10214
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9b1_12",
+      "rows": 10427,
+      "n_valid": 106,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 1,
+        "No 2": 52,
+        "Yes 1": 53,
+        "nan": 10321
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9a2_12",
+      "rows": 10427,
+      "n_valid": 108,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 31,
+        "No 2": 27,
+        "Yes 1": 50,
+        "nan": 10319
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9b2_12",
+      "rows": 10427,
+      "n_valid": 50,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 3,
+      "values": {
+        "No 2": 27,
+        "Yes 1": 23,
+        "nan": 10377
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9a3_12",
+      "rows": 10427,
+      "n_valid": 46,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 14,
+        "No 2": 12,
+        "Yes 1": 20,
+        "nan": 10381
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9b3_12",
+      "rows": 10427,
+      "n_valid": 20,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 3,
+      "values": {
+        "No 2": 9,
+        "Yes 1": 11,
+        "nan": 10407
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9a4_12",
+      "rows": 10427,
+      "n_valid": 13,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 4,
+        "No 2": 6,
+        "Yes 1": 3,
+        "nan": 10414
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9b4_12",
+      "rows": 10427,
+      "n_valid": 3,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 2,
+      "values": {
+        "No 2": 3,
+        "nan": 10424
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9a5_12",
+      "rows": 10427,
+      "n_valid": 5,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 2,
+        "No 2": 2,
+        "Yes 1": 1,
+        "nan": 10422
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9b5_12",
+      "rows": 10427,
+      "n_valid": 1,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 2,
+      "values": {
+        "No 2": 1,
+        "nan": 10426
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9a6_12",
+      "rows": 10427,
+      "n_valid": 3,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 3,
+      "values": {
+        "DK 9": 2,
+        "No 2": 1,
+        "nan": 10424
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_g_j_k_sa_2012.dta",
+      "var": "g9a7_12",
+      "rows": 10427,
+      "n_valid": 1,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 2,
+      "values": {
+        "No 2": 1,
+        "nan": 10426
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "factorh_15",
+      "rows": 9953,
+      "n_valid": 9953,
+      "dtype": "float64",
+      "label": "Household weight 2015",
+      "n_distinct": 2754,
+      "values": {
+        "0.0": 244,
+        "22.0": 3,
+        "31.0": 4,
+        "34.0": 9,
+        "39.0": 11,
+        "41.0": 20,
+        "42.0": 1,
+        "43.0": 9
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9a1_15",
+      "rows": 9953,
+      "n_valid": 135,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 61,
+        "2.No": 29,
+        "9.DK": 45,
+        "nan": 9818
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9b1_15",
+      "rows": 9953,
+      "n_valid": 61,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 21,
+        "2.No": 38,
+        "9.DK": 2,
+        "nan": 9892
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9a2_15",
+      "rows": 9953,
+      "n_valid": 66,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 26,
+        "2.No": 14,
+        "9.DK": 26,
+        "nan": 9887
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9b2_15",
+      "rows": 9953,
+      "n_valid": 26,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 13,
+        "2.No": 13,
+        "nan": 9927
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9a3_15",
+      "rows": 9953,
+      "n_valid": 33,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 13,
+        "2.No": 9,
+        "9.DK": 11,
+        "nan": 9920
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9b3_15",
+      "rows": 9953,
+      "n_valid": 13,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 8,
+        "2.No": 5,
+        "nan": 9940
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9a4_15",
+      "rows": 9953,
+      "n_valid": 16,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 7,
+        "2.No": 2,
+        "9.DK": 7,
+        "nan": 9937
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9b4_15",
+      "rows": 9953,
+      "n_valid": 7,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 5,
+        "2.No": 2,
+        "nan": 9946
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9a5_15",
+      "rows": 9953,
+      "n_valid": 7,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 2,
+        "2.No": 2,
+        "9.DK": 3,
+        "nan": 9946
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9b5_15",
+      "rows": 9953,
+      "n_valid": 2,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 2,
+      "values": {
+        "1.Yes": 2,
+        "nan": 9951
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9a6_15",
+      "rows": 9953,
+      "n_valid": 6,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 1,
+        "2.No": 2,
+        "9.DK": 3,
+        "nan": 9947
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9b6_15",
+      "rows": 9953,
+      "n_valid": 1,
+      "dtype": "category",
+      "label": "Respondent's total expense >$7,500 pesos or about 300 pesos per month",
+      "n_distinct": 2,
+      "values": {
+        "1.Yes": 1,
+        "nan": 9952
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_g_j_k_sa_2015.dta",
+      "var": "g9a7_15",
+      "rows": 9953,
+      "n_valid": 3,
+      "dtype": "category",
+      "label": "Respondent's total expense >$4,000 pesos or about 150 pesos per month",
+      "n_distinct": 3,
+      "values": {
+        "2.No": 1,
+        "9.DK": 2,
+        "nan": 9950
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "factorh_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "int32",
+      "label": "Household weight 2015",
+      "n_distinct": 2754,
+      "values": {
+        "0": 353,
+        "22": 3,
+        "31": 6,
+        "34": 13,
+        "39": 14,
+        "41": 33,
+        "42": 1,
+        "43": 13
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "factori_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "int32",
+      "label": "Individual weight 2015",
+      "n_distinct": 3130,
+      "values": {
+        "0": 497,
+        "19": 2,
+        "26": 6,
+        "27": 1,
+        "28": 2,
+        "29": 9,
+        "31": 1,
+        "32": 15
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "a12b_15",
+      "rows": 14779,
+      "n_valid": 13254,
+      "dtype": "category",
+      "label": "Before age 10, respondent's parents or guardians smoked",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 7159,
+        "2.No": 5903,
+        "8.RF": 6,
+        "9.DK": 186,
+        "nan": 1525
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "a12c_15",
+      "rows": 14779,
+      "n_valid": 13254,
+      "dtype": "category",
+      "label": "Before age 10, someone else smoked in his/her home",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 2228,
+        "2.No": 10885,
+        "8.RF": 4,
+        "9.DK": 137,
+        "nan": 1525
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "aa9h_15",
+      "rows": 14779,
+      "n_valid": 596,
+      "dtype": "category",
+      "label": "Before age 10, respondent's parents or guardians smoked",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 224,
+        "2.No": 368,
+        "8.RF": 1,
+        "9.DK": 3,
+        "nan": 14183
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "aa9i_15",
+      "rows": 14779,
+      "n_valid": 596,
+      "dtype": "category",
+      "label": "Before age 10, someone else smoked in his/her home",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 151,
+        "2.No": 443,
+        "9.DK": 2,
+        "nan": 14183
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c4_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "category",
+      "label": "Has a doctor or medical personnel ever diagnosed R with hypertension/high blood ",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 6999,
+        "2.No": 7757,
+        "8.RF": 3,
+        "9.DK": 20
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c5_15",
+      "rows": 14779,
+      "n_valid": 6999,
+      "dtype": "category",
+      "label": "Does R take medication to lower his/her blood pressure",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 5989,
+        "2.No": 1008,
+        "9.DK": 2,
+        "nan": 7780
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c6_15",
+      "rows": 14779,
+      "n_valid": 14779,
+      "dtype": "category",
+      "label": "Has a doctor or medical personnel ever diagnosed R with diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 3647,
+        "2.No": 11112,
+        "8.RF": 4,
+        "9.DK": 16
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c7_15",
+      "rows": 14779,
+      "n_valid": 3647,
+      "dtype": "category",
+      "label": "Does R take medication to control his/her diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 3284,
+        "2.No": 362,
+        "9.DK": 1,
+        "nan": 11132
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c9_15",
+      "rows": 14779,
+      "n_valid": 3417,
+      "dtype": "category",
+      "label": "Does R follow a special diet to control his/her diabetes",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 1985,
+        "2.No": 1432,
+        "nan": 11362
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c10_15",
+      "rows": 14779,
+      "n_valid": 3417,
+      "dtype": "category",
+      "label": "Is R's current diabetes under control",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 3141,
+        "2.No": 236,
+        "9.DK": 40,
+        "nan": 11362
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c11_1_15",
+      "rows": 14779,
+      "n_valid": 3647,
+      "dtype": "category",
+      "label": "R's frequency measuring his/her blood sugar level",
+      "n_distinct": 22,
+      "values": {
+        "0.0": 102,
+        "1.0": 1993,
+        "10.0": 2,
+        "11.0": 1,
+        "12.0": 49,
+        "14.0": 3,
+        "15.0": 2,
+        "19.0": 1
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c48d_15",
+      "rows": 14779,
+      "n_valid": 14777,
+      "dtype": "category",
+      "label": "In the last 2 years: R had a diabetes test",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 11130,
+        "2.No": 3625,
+        "8.RF": 2,
+        "9.DK": 20,
+        "nan": 2
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "factorh_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "int32",
+      "label": "Household weight 2018",
+      "n_distinct": 3085,
+      "values": {
+        "0": 11,
+        "19": 2,
+        "25": 1,
+        "26": 5,
+        "27": 1,
+        "29": 7,
+        "31": 1,
+        "32": 14
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "factori_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "int32",
+      "label": "Individual weight 2018",
+      "n_distinct": 4611,
+      "values": {
+        "0": 30,
+        "14": 1,
+        "19": 1,
+        "23": 1,
+        "24": 2,
+        "25": 1,
+        "26": 1,
+        "27": 3
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "aa9h_18",
+      "rows": 17114,
+      "n_valid": 4603,
+      "dtype": "category",
+      "label": "Before age 10, R's parents or guardians smoked",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 2450,
+        "2.No": 2129,
+        "8.RF": 4,
+        "9.DK": 20,
+        "nan": 12511
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "aa9i_18",
+      "rows": 17114,
+      "n_valid": 4603,
+      "dtype": "category",
+      "label": "Before age 10, someone else smoked in his/her home",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 842,
+        "2.No": 3739,
+        "8.RF": 6,
+        "9.DK": 16,
+        "nan": 12511
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c4_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "category",
+      "label": "Has R ever been diagnosed with hypertension/high blood pressure?",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 7436,
+        "2.No": 9657,
+        "8.RF": 4,
+        "9.DK": 17
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c5_18",
+      "rows": 17114,
+      "n_valid": 7436,
+      "dtype": "category",
+      "label": "Does R take medication to lower his/her blood pressure",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 6513,
+        "2.No": 920,
+        "8.RF": 2,
+        "9.DK": 1,
+        "nan": 9678
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c6_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "category",
+      "label": "Has a doctor or medical personnel ever diagnosed R with diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 4193,
+        "2.No": 12891,
+        "8.RF": 4,
+        "9.DK": 26
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c7_18",
+      "rows": 17114,
+      "n_valid": 4193,
+      "dtype": "category",
+      "label": "Does R take medication to control his/her diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 3771,
+        "2.No": 421,
+        "9.DK": 1,
+        "nan": 12921
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c9_18",
+      "rows": 17114,
+      "n_valid": 3846,
+      "dtype": "category",
+      "label": "Does R follow a special diet to control his/her diabetes",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 2271,
+        "2.No": 1570,
+        "8.RF": 2,
+        "9.DK": 3,
+        "nan": 13268
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c10_18",
+      "rows": 17114,
+      "n_valid": 3846,
+      "dtype": "category",
+      "label": "Is R's current diabetes under control",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 3464,
+        "2.No": 340,
+        "8.RF": 1,
+        "9.DK": 41,
+        "nan": 13268
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c11_1_18",
+      "rows": 17114,
+      "n_valid": 4193,
+      "dtype": "category",
+      "label": "R's frequency measuring his/her blood sugar level",
+      "n_distinct": 21,
+      "values": {
+        "0.0": 147,
+        "1.0": 2401,
+        "10.0": 3,
+        "12.0": 4,
+        "13.0": 1,
+        "14.0": 12,
+        "15.0": 3,
+        "2.0": 616
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c48d_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "category",
+      "label": "In the last 2 years: R had a diabetes test",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 12169,
+        "2.No": 4906,
+        "8.RF": 10,
+        "9.DK": 29
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c48e_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "category",
+      "label": "In the last 2 years: R had a hypertension or a blood pressure test",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 12156,
+        "2.No": 4929,
+        "8.RF": 9,
+        "9.DK": 20
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c51_18",
+      "rows": 17114,
+      "n_valid": 17114,
+      "dtype": "category",
+      "label": "Has R ever smoked cigarettes",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 6300,
+        "2.No": 10800,
+        "8.RF": 5,
+        "9.DK": 9
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "factorh_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "int32",
+      "label": "Household weight 2021",
+      "n_distinct": 3166,
+      "values": {
+        "26": 1,
+        "27": 2,
+        "29": 1,
+        "30": 4,
+        "32": 1,
+        "33": 2,
+        "34": 8,
+        "35": 3
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "factori_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "int32",
+      "label": "Individual weight 2021",
+      "n_distinct": 4565,
+      "values": {
+        "13": 1,
+        "14": 1,
+        "16": 2,
+        "17": 1,
+        "20": 1,
+        "22": 1,
+        "23": 1,
+        "24": 4
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "aa9h_21",
+      "rows": 15739,
+      "n_valid": 148,
+      "dtype": "category",
+      "label": "Before age 10, his/her parents or guardians smoked",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 80,
+        "2.No": 67,
+        "8.RF": 1,
+        "nan": 15591
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "aa9i_21",
+      "rows": 15739,
+      "n_valid": 148,
+      "dtype": "category",
+      "label": "Before age 10, someone else smoked in his/her home",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 37,
+        "2.No": 109,
+        "8.RF": 1,
+        "9.DK": 1,
+        "nan": 15591
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c4_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "category",
+      "label": "Has a doctor or medical personnel ever diagnosed him/her hypertension/high blood",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 7364,
+        "2.No": 8370,
+        "8.RF": 1,
+        "9.DK": 4
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c5_21",
+      "rows": 15739,
+      "n_valid": 7364,
+      "dtype": "category",
+      "label": "Does he/she take medication to lower his/her blood pressure",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 6591,
+        "2.No": 772,
+        "9.DK": 1,
+        "nan": 8375
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c6_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "category",
+      "label": "Has a doctor or medical personnel ever diagnosed him/her with diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 4130,
+        "2.No": 11594,
+        "8.RF": 2,
+        "9.DK": 13
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c7_21",
+      "rows": 15739,
+      "n_valid": 4130,
+      "dtype": "category",
+      "label": "Does he/she take medication to control his/her diabetes",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 3724,
+        "2.No": 406,
+        "nan": 11609
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c9_21",
+      "rows": 15739,
+      "n_valid": 3813,
+      "dtype": "category",
+      "label": "Does he/she follow a special diet to control his/her diabetes",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 2159,
+        "2.No": 1653,
+        "9.DK": 1,
+        "nan": 11926
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c10_21",
+      "rows": 15739,
+      "n_valid": 3813,
+      "dtype": "category",
+      "label": "Is his/her diabetes currently under control",
+      "n_distinct": 5,
+      "values": {
+        "1.Yes": 3426,
+        "2.No": 353,
+        "8.RF": 1,
+        "9.DK": 33,
+        "nan": 11926
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c11_1_21",
+      "rows": 15739,
+      "n_valid": 4130,
+      "dtype": "category",
+      "label": "Frequency he/she measures his/her blood sugar level",
+      "n_distinct": 20,
+      "values": {
+        "0.0": 236,
+        "1.0": 2087,
+        "10.0": 4,
+        "12.0": 18,
+        "14.0": 12,
+        "15.0": 3,
+        "2.0": 694,
+        "20.0": 2
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c11_2_21",
+      "rows": 15739,
+      "n_valid": 4130,
+      "dtype": "category",
+      "label": "Period he/she measures his/her blood sugar level",
+      "n_distinct": 7,
+      "values": {
+        "1.Week": 1259,
+        "2.Month": 1777,
+        "3.Year": 835,
+        "5.Never": 236,
+        "8.RF": 5,
+        "9.DK": 18,
+        "nan": 11609
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c48d_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "category",
+      "label": "Last 2 years: he/she had a diabetes test",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 10024,
+        "2.No": 5702,
+        "8.RF": 3,
+        "9.DK": 10
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c48e_21",
+      "rows": 15739,
+      "n_valid": 15739,
+      "dtype": "category",
+      "label": "Last 2 years: he/she had a hypertension or a blood pressure test",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 10217,
+        "2.No": 5509,
+        "8.RF": 3,
+        "9.DK": 10
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "factorh_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int32",
+      "label": "Household weight 2012",
+      "n_distinct": 2893,
+      "values": {
+        "0": 593,
+        "18": 2,
+        "26": 6,
+        "28": 13,
+        "30": 1,
+        "32": 17,
+        "33": 1,
+        "34": 26
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "factori_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int32",
+      "label": "Individual weight 2012",
+      "n_distinct": 3080,
+      "values": {
+        "0": 1460,
+        "20": 2,
+        "21": 2,
+        "24": 1,
+        "28": 6,
+        "30": 11,
+        "31": 1,
+        "32": 1
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c4_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "category",
+      "label": "Has a physician diagnosedhypertension/high blood pressure",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 37,
+        "No 2": 8967,
+        "RF 8": 3,
+        "Yes 1": 6716
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c5_12",
+      "rows": 15723,
+      "n_valid": 6716,
+      "dtype": "category",
+      "label": "Does respondent take medication to lower his/her blood pressure",
+      "n_distinct": 4,
+      "values": {
+        "No 2": 948,
+        "RF 8": 1,
+        "Yes 1": 5767,
+        "nan": 9007
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c6_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "category",
+      "label": "Has a physician diagnosed respondentdiabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 29,
+        "No 2": 12164,
+        "RF 8": 5,
+        "Yes 1": 3525
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c7_12",
+      "rows": 15723,
+      "n_valid": 3525,
+      "dtype": "category",
+      "label": "Does respondent take medication to control his/her diabetes",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 1,
+        "No 2": 331,
+        "Yes 1": 3193,
+        "nan": 12198
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c9_12",
+      "rows": 15723,
+      "n_valid": 3241,
+      "dtype": "category",
+      "label": "Does respondent diet to control his/her diabetes",
+      "n_distinct": 3,
+      "values": {
+        "No 2": 1296,
+        "Yes 1": 1945,
+        "nan": 12482
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c10_12",
+      "rows": 15723,
+      "n_valid": 3241,
+      "dtype": "category",
+      "label": "Respondent's current diabetes status",
+      "n_distinct": 5,
+      "values": {
+        "DK 9": 20,
+        "No 2": 220,
+        "RF 8": 2,
+        "Yes 1": 2999,
+        "nan": 12482
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c11_1_12",
+      "rows": 15723,
+      "n_valid": 3525,
+      "dtype": "category",
+      "label": "Respondent's frequency for measuring his/her blood sugar",
+      "n_distinct": 22,
+      "values": {
+        "0.0": 124,
+        "1.0": 2123,
+        "10.0": 1,
+        "12.0": 32,
+        "14.0": 3,
+        "15.0": 3,
+        "2.0": 450,
+        "21.0": 1
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c48d_12",
+      "rows": 15723,
+      "n_valid": 14448,
+      "dtype": "category",
+      "label": "Last 2 years:Respondent had diabetes test",
+      "n_distinct": 5,
+      "values": {
+        "DK 9": 10,
+        "No 2": 3341,
+        "RF 8": 2,
+        "Yes 1": 11095,
+        "nan": 1275
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c48e_12",
+      "rows": 15723,
+      "n_valid": 14448,
+      "dtype": "category",
+      "label": "Last 2 years:Respondent blood pressure test",
+      "n_distinct": 5,
+      "values": {
+        "DK 9": 7,
+        "No 2": 3040,
+        "RF 8": 3,
+        "Yes 1": 11398,
+        "nan": 1275
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c51_12",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "category",
+      "label": "Has respondent ever smoked cigarettes",
+      "n_distinct": 4,
+      "values": {
+        "DK 9": 4,
+        "No 2": 9957,
+        "RF 8": 1,
+        "Yes 1": 5761
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c52_1_12",
+      "rows": 15723,
+      "n_valid": 5173,
+      "dtype": "category",
+      "label": "Age respondent started smoking",
+      "n_distinct": 75,
+      "values": {
+        "1.0": 2,
+        "10.0": 123,
+        "11.0": 44,
+        "12.0": 297,
+        "13.0": 224,
+        "14.0": 318,
+        "15.0": 670,
+        "16.0": 360
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c52_2_12",
+      "rows": 15723,
+      "n_valid": 1015,
+      "dtype": "float64",
+      "label": "Year respondent started smoking",
+      "n_distinct": 80,
+      "values": {
+        "1925.0": 1,
+        "1927.0": 1,
+        "1932.0": 1,
+        "1935.0": 1,
+        "1936.0": 2,
+        "1937.0": 1,
+        "1938.0": 2,
+        "1939.0": 3
+      }
+    }
+  ],
+  "notes": []
+}

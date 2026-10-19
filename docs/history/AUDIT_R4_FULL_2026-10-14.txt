@@ -1,0 +1,156 @@
+【全量复审 R4 · 2026-10-14】（审核方式：从头实跑，非目录浏览）
+================================================================
+结论: 执行层产物全部在盘且多为真实数据、口径诚实度显著提升；
+      但有两道 skill 硬门不过 —— 引用门 FAIL（r22 引文主题错配）、
+      索引新鲜度门 FAIL（phase3/phase4 缺 rules sha 绑定记录）。
+      另有 CI 口径三套并存、基线文件混 4 代、若干状态文件与磁盘不符。
+      距 writer 阶段只差：修 r22 引文 → 记录 sha 链路 → 状态对齐。
+================================================================
+
+---- 零、审核方式（可复现）----
+- venv 实跑 pytest: 15/15 PASS
+- 全部关键数字独立重算（不采信声明）：证据池 / 规则 / 索引 / 确证 CSV / 基线 JSONL
+- 实跑三道 skill 硬门：verify_rule_citations(strict) / check_index_freshness / validate_handoff
+- 联网 Crossref 复核关键 DOI 主题；比对 state.json vs progress.json vs 磁盘三方
+
+---- 一、逐阶段验收（实测）----
+
+P0  环境       venv Python 3.10.4（skill 建议 3.11+，实测可用）；pytest 15/15 PASS
+P1  注册表     entity_a 41 行 / flags 18；entity_b 15 行；4 个数据集 meta+cases 齐
+P2  证据池     1060 chunks，chunk_id 唯一 1060/1060，PMID 901 唯一无重复
+              分级: A47(34 PPP指南+13文献) / B125 / C129 / D125(PPP) / E634
+              cases: dev 134 + NHANES 110 + KNHANES 56 + CHARLS 14 = 314
+              （progress.json 写 total=180 只含 3 个验证集，口径差异，注记）
+P3  规则集     21 条 = A3/B13/C5；severity high3/medium13/low5；r22 在列
+              引用报告在我实跑前仍是 v1.1 旧版（20 条、sha 39ab18… ≠ 当前 8ea01b…）
+              实跑引用门 strict: 20/21 过，r22 FAIL(authentic_only) —— 详见 P1 问题
+P4  索引       文件合计 778MB；graphml 实测 23,826 节点 / 18,062 边（与声明一致）
+              doc_status 1057 条 = 1044 processed + 13 failed；text_chunks 1047
+              证据池 1060 中 16 块不在索引（6 块从未提交 + 10 块 failed，
+              均为 E 级无规则关联背景块/勘误，排除理由成立）→ 实际覆盖 98.5%
+P5  确证       NHANES 71 tested / 17 predicted（7 复证+10 uninformative，0 反证）
+              metrics 口径: 14 rule pairs（排除 1 负控+2 非可判），P=1.0 CP[0.59,1.0]，cov 0.269
+              KNHANES 49 tested / 11 covered → metrics 10，2 复证 0 反证 CP[0.158,1.0]，cov 0.263
+              CHARLS 14 tested / 5 covered → metrics 4，0 复证 null，cov 0.667
+              与 metrics_v11.json / 交付表 / CSV 三方一致 ✓
+   基线（从 JSONL valid 行独立重算）:
+              pure_llm   TP4 FP8 FN3  F1=0.421  |  naive_rag TP1 FP3 FN6  F1=0.182
+              lightrag   TP5 FP26 FN2 F1=0.263  |  full_system TP7 FP10 FN0 F1=0.583
+              与 baseline_summary_v12.json 完全一致 ✓；0 失败 ✓；TEMPERATURE=0.7 已落代码 ✓
+              （上轮"三基线全 NO"阻塞项：已修复并验证）
+P6  可视化     853 行 3-tab app；st.chat_input 与 index_built_against_rules_sha256 标记在；
+              AST 解析 OK；phase6 子门 PASS；demo_cases 9 条（含 unknown 弃权例）
+Handoff        validate_handoff --transition executor-to-writer 实跑 OK
+              （注意：其检查级别为"存在+非空"，通过 ≠ 内容合规）
+新鲜度门       实跑 FAIL exit 1（见 P2 问题）
+引用门         实跑 FAIL exit 1（见 P1 问题）
+来源类别门     find_authoritative_sources: PASS 21/21（仅查类别存在，不查主题相关性）
+
+---- 二、必须修（阻塞 writer 阶段）----
+
+P1 | r22 引文张冠李戴 —— 引用门 FAIL（硬阻塞）
+   证据: r22(bmi_high × retinopathy) 的 citation = 10.1371/journal.pone.0089923，
+         经 Crossref 核实该 DOI 是 "BMI and risk of age-related cataract: a
+         meta-analysis"（白内障，且与 r13 共用同一 DOI）。
+         引用门 strict 实测: r22 = authentic_only，
+         LLM 层判定 "Meta-analysis on BMI and cataract, not retinopathy;
+         wrong eye disease outcome."
+         违反 analysis_plan §0 自身冻结纪律 + skill 的 claim-匹配要求。
+   修法: ① 检索真实的 BMI×视网膜病变文献（如 obesity-DR 的 meta）替换 r22 引文；
+         ② 或按"探索性规则、无合格外引"处置：从 headline 移出并显式声明；
+         须重跑 verify_rule_citations 直到 21/21 PASS。
+   附带: 若选②则与 analysis_plan §0 记录一致化。
+
+P2 | phase3/phase4 缺 rules sha 绑定 —— 新鲜度门 FAIL + App 显示异常
+   证据: progress.json phase3.rules_yaml_sha256 与
+         phase4.index_built_against_rules_sha256 均缺失；
+         check_index_freshness 实跑: "STALE / NOT VERIFIED"（exit 1）；
+         App 的 freshness pill 因此恒显示“未构建/未绑定”。
+   时间线: 证据池最终版 10-11 22:19 → 索引 10-12 05:00（索引内容对证据是新的 ✓）
+         → rules.yaml v1.2 改动 10-12 07:12（晚于索引，触发 sha 失配）。
+   修法: 修完 P1 后按 skill 协议链执行：
+         verify_rule_citations → phase3 记录 sha → phase4 重建索引记录绑定 sha。
+         注: 索引内容不受规则影响（索引的是证据块），若不重建，
+         至少须把两个 sha 字段如实写入 progress.json 并由 freshness 门验证通过。
+
+P3 | CI 口径三套并存（同一 headline 指标）
+   证据: analysis_plan §3 = "bootstrap 1000 次"（预注册文本，未随实现更新）
+         metrics_v11.json / performance_matrix.csv = Clopper-Pearson [0.59,1.0]
+         performance_by_dataset.csv = Wilson [0.65,1.00]（ci_lo=0.646）
+         两种算法各自算对，但同一指标两套数值并列交付物 = 口径漂移。
+   修法: 选一（建议 CP，即代码里 v1.2 metrics fix 的选定方法），
+         统一三处 + 把"bootstrap→CP"作为方法学变更补记进 analysis_plan §0。
+
+---- 三、应当修（重要，进 writer 前）----
+
+P4 | baseline_predictions.jsonl 混 4 代数据（568 行 = 284 逻辑行 + 重复）
+   构成: 旧代全 NO(无 provider) 284 行；pure_llm/naive_rag 新代各 71；
+         lightrag 新代两版（71 行 valid:false + 71 行 valid:true）。
+   危害: 消费方按 r.get("valid", True) 读文件会把旧行当有效 —— 实测这样重算
+         会把 pure_llm FN 从 3 变 10（F1 0.421→0.308），数字即刻被污染。
+   修法: 清理旧代行（保留唯一有效代），或在文件首行加显式读取说明；
+         建议同时落一份 _valid.jsonl 视图。
+
+P5 | dataset_summary.csv 的 confirmatory_run 全写 "pending"
+   证据: 4 行均 pending，但 phase5 v1.2 确证已完成（07:44 落盘）。
+   修法: 按实况改为 done/ran（或改列语义并注明）。
+
+P6 | baseline_fullsystem_bootstrap_ci.json 内嵌过期备注
+   证据: llm_baselines_note 仍写 "全 NO 属降级输出…重跑待 API 恢复"，
+         与现状（本地 qwen 已重跑、0 失败）矛盾。
+   修法: 更新备注或删旧字段。
+
+P7 | state.json 与磁盘不一致
+   证据: ① completed[] 缺 executor.phase3/4/5（progress.json 三者均 complete，
+            master status 报 "Done: 10 phases"，实际应为 13）；
+         ② artifacts.latest_validation 指向 outputs/exploratory/nhanes_pair_results.csv
+            —— 已被定性为 exploratory 隔离的文件，应指向 confirmatory；
+         ③ state.json.bak 存在（备份可留，注明）。
+   修法: 一次 update_state 批量修正三处。
+
+P8 | figure2 契约与 v1.2 数据不符（writer 渲染前必改）
+   证据: 契约写 "5 seeds ± SD"、"paired t-test"、"significantly higher"、
+         "BOTH internal and external datasets"；
+         实况: 单种子（n_seeds=1）、基线仅 NHANES、无显著性检验、
+         full_system F1 CI [0.286,0.800] 与他基线（无 CI）无法判定显著。
+   修法: 改写契约核心结论与 panels（dataset 维度改单库、撤 t-test 标注），
+         与 limitations.md §5 的表述保持一致。
+
+P9 | figure2 source_data 缺 dataset_id / dataset_role 列（v3.0 退出标准要求）
+
+P10| generalization gap 无 v1.2 交付物
+   证据: 仅 outputs/exploratory/generalization_gap_pairs.csv（旧二态金标准时代）；
+         performance_by_dataset.csv 无 gap_ 行。
+   修法: 以 v1.2 三态口径补一张 confirmatory gap 表（NHANES→KNHANES）。
+
+P11| v1.1 指标未落盘
+   证据: analysis_plan §0 与 limitations §1 均承诺"同时呈现 v1.1/v1.2 两版指标"，
+         磁盘无 v1.1 版（仅 git 历史 03cec9a 中）。
+   修法: 从 git 恢复归档到 outputs/confirmatory/archive/ 或改计划措辞。
+
+P12| progress.json phase4.docs_indexed=1054 与磁盘不符
+   证据: 磁盘实况 1044 processed（+13 failed/doc entries）。
+   修法: 改 1044 并注明 "16 块未入索引（6 未提交+10 failed，均低价值 E 级）"。
+
+---- 四、次要（记录在案，不阻塞）----
+M1 rules.yaml 头注释仍写 "20 rules … C4"，实际 21 条 / B13 C5（文档漂移）。
+M2 r13/r22 同引一 DOI；r22 rationale 已自述源自测试集（在偏离记录内）；随 P1 一并处理。
+M3 基线单种子且无 CI（limitations §5 已诚实声明；DeepSeek 额度 10-14 恢复后可补 ≥5 seeds）。
+M4 outputs/expert_review/ 空 + figure3 为 NOT_COLLECTABLE 占位（拒造假的诚实处理 ✓，
+   writer 阶段需替换为确证三态图或删除该图）。
+M5 venv Python 3.10.4（skill 建议 3.11+；当前脚本均可跑）。
+M6 本次审核产生的文件变更：outputs/citation_verification_report.json 已被引用门实跑
+   重生成（sha 对齐当前规则、overall=fail——诚实的现状版）；
+   outputs/source_coverage_report.json 新增（来源类别门产物）。二文件建议一并提交。
+
+---- 五、修复顺序（建议）----
+第 1 步: P1 修 r22 引文 → verify_rule_citations 复跑至 21/21 PASS
+第 2 步: P3 CI 口径统一（CP）+ analysis_plan 补记方法学变更
+第 3 步: P2 sha 链路补齐（phase3 记录 + 索引 sha 绑定；重建与否按协议定）
+第 4 步: P4-P7 文件清理与状态对齐（基线文件、dataset_summary、bootstrap 备注、state.json）
+第 5 步: P8-P12 writer 前置（契约修订、source_data 列、gap 表、v1.1 归档、docs_indexed）
+验收: 引用门 + 新鲜度门 + handoff 三门全绿；进度/状态/磁盘三方一致；基线文件单代可读。
+
+---- 六、一句话 ----
+系统骨架与数字这版是真的、可用的；真正卡住 writer 的只剩"r22 引文"与
+"sha 绑定"两件硬门，其余是一轮文件清理与口径统一的收尾工作。

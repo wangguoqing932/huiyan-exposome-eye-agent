@@ -5,7 +5,7 @@
     "chinese_name": "慧眼",
     "created_date": "2026-10-11"
   },
-  "lifecycle_stage": "executor",
+  "lifecycle_stage": "writer",
   "completed": [
     "planner.phase0",
     "planner.phase1",
@@ -16,16 +16,27 @@
     "executor.phase0",
     "executor.phase1",
     "executor.phase2",
-    "executor.phase6"
+    "executor.phase6",
+    "executor.phase3",
+    "executor.phase4",
+    "executor.phase5",
+    "writer.phase7_1",
+    "writer.phase7_2",
+    "writer.phase7_3",
+    "writer.phase7_4",
+    "writer.phase7_5",
+    "writer.phase7_6",
+    "writer.phase7_7",
+    "writer.phase7_8"
   ],
-  "in_progress": null,
+  "in_progress": "writer.phase7_9",
   "blocked": [],
   "artifacts": {
     "config": ".planner.config.json",
     "plan_md": "PLAN.md",
     "executor_progress": ".executor/progress.json",
     "writer_progress": ".writer/progress.json",
-    "latest_validation": "outputs/exploratory/nhanes_pair_results.csv",
+    "latest_validation": "outputs/confirmatory/nhanes_confirmatory.csv",
     "latest_manuscript": ""
   },
   "history": [
@@ -128,6 +139,96 @@
       "date": "2026-10-12",
       "event": "executor.phase6 completed (streamlit verified)",
       "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "R4复审修复批次(2026-10-14): r22 引文更正（10.1097/MD.0000000000011807，题文匹配）→ 引用门 strict 21/21 稳定通过（skill 词表补 huiyan 扩展，.zcode/.dsh 同步）；phase3 sha=5aee851d 绑定；CI 统一 Clopper-Pearson；v1.1 指标归档 + v1.2 gap 表 + 基线 valid 视图；figure2 契约按数据实况重写",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "executor.phase4 补记: 索引在盘 23,826 nodes/18,062 edges；docs_indexed=1044（实况）；注记覆盖 126/1047=12%（声称52%未成立，R4实测）；freshness 绑定待重建决策（见 AUDIT_R4 §P2）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "executor.phase5 补记: v1.2 三层确证已完成（NHANES 7/14、KNHANES 2/10、CHARLS 0/4；均 0 反证）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "LightRAG 索引全量重建完成（27,136 节点/23,722 边/注记 548/1054=52%/1054 processed；旧索引备份 pre_r4_backup-20261014）；freshness 门 exit 0 全绿（三 sha 一致）；lightrag 基线在重建索引上重跑（P=0.167 R=0.714 F1=0.270）；级联更新完成",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "R5 五专家评审+应修尽修批次：P0×3 数据口径修复（KNHANES 8/9→缺失、coverage 按库 judgeable、NHANES VI→VIDRVA 较差眼）+ survey svyglm 方差升主口径（r22 降级，NHANES 7→5 复证）+ 方向审计第四态 + 基线公平协议 5-seed 重跑（full_system 0.417 显著优于 pure_llm/naive_rag，vs lightrag n.s.）+ v1.1 回放双呈 0.111 + rationale 重写对齐 yaml + analysis_plan §0.2 更正 4-9 + limitations R5 修订 + figure2 双呈契约；三门+pytest 全绿",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R5.1 文献层外部验证完成（作者指令：PubMed 文献外部验证，各研究类型均可）：§12 预注册先行（阈值/检索/排除/敏感性落盘后才跑）；750 篇抽取（两步判定协议，3 轮全量重抽入册）；precision_lit=0.889 [0.653,0.986]，16 复证 0 反证；r07/r08 文献层分歧=mixed；交付表+limitations 级联",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R5.2 系统性能优化完成（§13 预注册先验门控框架：规则冻结不动、三库 gold 不调参、dev 集 rule_defined 循环弃用）：基线口径对齐 judgeable；G2 融合系统（规则+证据门控+LLM 仲裁）F1 0.500 居首且对全部 3 个 LLM 基线显著（p≤0.023）；证据检索词源 bug 一次（registry 名→文献词表修正，首跑 0.143 修订记录在册）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R5.3 系统优化II完成（§14 预注册）：G3 文献共识门控无操作、G4 证据直推有害（负结果全量报告），正式系统定格 G2（F1 0.500）；优化边界已划定（证据池检索特异度不足是无规则发言的瓶颈）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R6.0 大工程优化完成（§15 预注册，语义检索层 G5a/G5b）：G5a 0.476 无净增益（B3 注记使关键词≈语义检索，检索层非瓶颈）、G5b 零触发（双注记门槛自锁）、τ 三档不敏感——负结果全量入册，正式系统定格 G2（0.500）；结论：提升需新数据扩容或 v1.3+盲测，非推理层工程；新增 semantic_retrieval.py 资产",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R6.1 时间外验证层完成（§16 预注册）：CHARLS 2015 波（规则未见过的数据，zda035/zda037 清洗变量实现修正入册）——12 对 tested 全 uninformative 0 反证，hba1c×cataract OR=1.71 q=0.096 临界同向；自报白内障 1.7% 患病率为根本限制；数据侧扩容穷尽（NHANES 新周期不可用/KNHANES 全用/CHARLS 2015 入册）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_1 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_2 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_3 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_4 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_5 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_6 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_7 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_8 confirmed by author",
+      "skill": "medical-agent-writer"
     }
   ]
 }

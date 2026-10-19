@@ -1,0 +1,152 @@
+{
+  "generated": "2026-10-15 (R11)",
+  "leaky_rules": [
+    "r22_bmi_x_retinopathy"
+  ],
+  "negative_controls": [
+    "r01_uric_acid_x_cataract"
+  ],
+  "note": "r22 is documented in its own rationale as added after seeing the NHANES result; it replicates in KNHANES. Dropping it is the conservative choice. Both rows are reported so the decision is explicit rather than buried.",
+  "table": [
+    {
+      "dataset": "NHANES",
+      "rule_set": "all_rules (current)",
+      "rule_pairs_tested": 19,
+      "replicated": 6,
+      "contradicted": 0,
+      "uninformative": 13,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.316
+    },
+    {
+      "dataset": "NHANES",
+      "rule_set": "exclude_r22_test_set_leakage",
+      "rule_pairs_tested": 17,
+      "replicated": 6,
+      "contradicted": 0,
+      "uninformative": 11,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.353
+    },
+    {
+      "dataset": "NHANES",
+      "rule_set": "exclude_negative_control_r01",
+      "rule_pairs_tested": 18,
+      "replicated": 6,
+      "contradicted": 0,
+      "uninformative": 12,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.333
+    },
+    {
+      "dataset": "NHANES",
+      "rule_set": "exclude_both_r22_and_r01",
+      "rule_pairs_tested": 16,
+      "replicated": 6,
+      "contradicted": 0,
+      "uninformative": 10,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.375
+    },
+    {
+      "dataset": "NHANES",
+      "rule_set": "A_level_only",
+      "rule_pairs_tested": 3,
+      "replicated": 0,
+      "contradicted": 0,
+      "uninformative": 3,
+      "precision_rule_declared": NaN,
+      "precision_rule_uninf_as_fp": 0.0
+    },
+    {
+      "dataset": "NHANES",
+      "rule_set": "A_and_B_level_only",
+      "rule_pairs_tested": 13,
+      "replicated": 4,
+      "contradicted": 0,
+      "uninformative": 9,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.308
+    },
+    {
+      "dataset": "NHANES",
+      "rule_set": "exclude_C_level",
+      "rule_pairs_tested": 13,
+      "replicated": 4,
+      "contradicted": 0,
+      "uninformative": 9,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.308
+    },
+    {
+      "dataset": "KNHANES",
+      "rule_set": "all_rules (current)",
+      "rule_pairs_tested": 16,
+      "replicated": 5,
+      "contradicted": 0,
+      "uninformative": 11,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.312
+    },
+    {
+      "dataset": "KNHANES",
+      "rule_set": "exclude_r22_test_set_leakage",
+      "rule_pairs_tested": 15,
+      "replicated": 4,
+      "contradicted": 0,
+      "uninformative": 11,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.267
+    },
+    {
+      "dataset": "KNHANES",
+      "rule_set": "exclude_negative_control_r01",
+      "rule_pairs_tested": 15,
+      "replicated": 5,
+      "contradicted": 0,
+      "uninformative": 10,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.333
+    },
+    {
+      "dataset": "KNHANES",
+      "rule_set": "exclude_both_r22_and_r01",
+      "rule_pairs_tested": 14,
+      "replicated": 4,
+      "contradicted": 0,
+      "uninformative": 10,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.286
+    },
+    {
+      "dataset": "KNHANES",
+      "rule_set": "A_level_only",
+      "rule_pairs_tested": 3,
+      "replicated": 0,
+      "contradicted": 0,
+      "uninformative": 3,
+      "precision_rule_declared": NaN,
+      "precision_rule_uninf_as_fp": 0.0
+    },
+    {
+      "dataset": "KNHANES",
+      "rule_set": "A_and_B_level_only",
+      "rule_pairs_tested": 13,
+      "replicated": 4,
+      "contradicted": 0,
+      "uninformative": 9,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.308
+    },
+    {
+      "dataset": "KNHANES",
+      "rule_set": "exclude_C_level",
+      "rule_pairs_tested": 13,
+      "replicated": 4,
+      "contradicted": 0,
+      "uninformative": 9,
+      "precision_rule_declared": 1.0,
+      "precision_rule_uninf_as_fp": 0.308
+    }
+  ]
+}

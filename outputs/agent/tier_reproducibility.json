@@ -1,0 +1,59 @@
+{
+  "repeats": 5,
+  "pairs": [
+    {
+      "a": "smoking",
+      "b": "amd_late",
+      "factors": null,
+      "final_levels": {
+        "medium": 4,
+        "high": 1
+      },
+      "rule_levels": {
+        "medium": 5
+      },
+      "stable": false
+    },
+    {
+      "a": "smoking",
+      "b": "cataract_any",
+      "factors": null,
+      "final_levels": {
+        "medium": 5
+      },
+      "rule_levels": {
+        "medium": 5
+      },
+      "stable": true
+    },
+    {
+      "a": "fasting_glucose",
+      "b": "cataract_any",
+      "factors": [
+        "diabetes"
+      ],
+      "final_levels": {
+        "high": 5
+      },
+      "rule_levels": {
+        "high": 5
+      },
+      "stable": true
+    },
+    {
+      "a": "pm25_exposure",
+      "b": "glaucoma_iop_elevated",
+      "factors": [
+        "hypertension"
+      ],
+      "final_levels": {
+        "medium": 5
+      },
+      "rule_levels": {
+        "medium": 5
+      },
+      "stable": true
+    }
+  ],
+  "varies": 1
+}

@@ -1,0 +1,237 @@
+{
+  "corpus_total": 1060,
+  "rule_supporting_chunks": 101,
+  "rule_supporting_grade_mix": {
+    "B": 24,
+    "A": 8,
+    "C": 69
+  },
+  "per_rule": [
+    {
+      "rule": "r01_uric_acid_x_cataract",
+      "declared": "C",
+      "n_linked": 5,
+      "best_linked_grade": "C",
+      "mix": {
+        "C": 5
+      }
+    },
+    {
+      "rule": "r02_hyperglycemia_x_cataract",
+      "declared": "B",
+      "n_linked": 6,
+      "best_linked_grade": "B",
+      "mix": {
+        "B": 1,
+        "C": 5
+      }
+    },
+    {
+      "rule": "r03_hba1c_x_retinopathy_any",
+      "declared": "B",
+      "n_linked": 6,
+      "best_linked_grade": "A",
+      "mix": {
+        "B": 3,
+        "C": 2,
+        "A": 1
+      }
+    },
+    {
+      "rule": "r04_hba1c_x_dr_pdr",
+      "declared": "C",
+      "n_linked": 6,
+      "best_linked_grade": "C",
+      "mix": {
+        "C": 6
+      }
+    },
+    {
+      "rule": "r05_dyslipidemia_x_amd_late",
+      "declared": "C",
+      "n_linked": 5,
+      "best_linked_grade": "C",
+      "mix": {
+        "C": 5
+      }
+    },
+    {
+      "rule": "r06_crp_x_amd_late",
+      "declared": "B",
+      "n_linked": 6,
+      "best_linked_grade": "B",
+      "mix": {
+        "B": 1,
+        "C": 5
+      }
+    },
+    {
+      "rule": "r07_vitamind_x_dr_npdr",
+      "declared": "B",
+      "n_linked": 5,
+      "best_linked_grade": "B",
+      "mix": {
+        "B": 3,
+        "C": 2
+      }
+    },
+    {
+      "rule": "r08_low_antioxidant_x_cataract",
+      "declared": "B",
+      "n_linked": 6,
+      "best_linked_grade": "B",
+      "mix": {
+        "B": 1,
+        "C": 5
+      }
+    },
+    {
+      "rule": "r09_mediterranean_diet_x_amd_late",
+      "declared": "B",
+      "n_linked": 4,
+      "best_linked_grade": "A",
+      "mix": {
+        "C": 2,
+        "B": 1,
+        "A": 1
+      }
+    },
+    {
+      "rule": "r10_smoking_x_cataract",
+      "declared": "A",
+      "n_linked": 6,
+      "best_linked_grade": "A",
+      "mix": {
+        "A": 1,
+        "B": 1,
+        "C": 4
+      }
+    },
+    {
+      "rule": "r11_smoking_x_amd_late",
+      "declared": "A",
+      "n_linked": 4,
+      "best_linked_grade": "B",
+      "mix": {
+        "B": 1,
+        "C": 3
+      }
+    },
+    {
+      "rule": "r12_alcohol_x_cataract",
+      "declared": "B",
+      "n_linked": 4,
+      "best_linked_grade": "B",
+      "mix": {
+        "B": 3,
+        "C": 1
+      }
+    },
+    {
+      "rule": "r13_bmi_x_cataract",
+      "declared": "A",
+      "n_linked": 4,
+      "best_linked_grade": "A",
+      "mix": {
+        "A": 1,
+        "B": 2,
+        "C": 1
+      }
+    },
+    {
+      "rule": "r14_lead_x_cataract",
+      "declared": "B",
+      "n_linked": 3,
+      "best_linked_grade": "B",
+      "mix": {
+        "B": 1,
+        "C": 2
+      }
+    },
+    {
+      "rule": "r16_pm25_x_glaucoma_iop_cdr",
+      "declared": "B",
+      "n_linked": 5,
+      "best_linked_grade": "A",
+      "mix": {
+        "B": 1,
+        "C": 2,
+        "A": 2
+      }
+    },
+    {
+      "rule": "r17_pm25_x_amd_early",
+      "declared": "B",
+      "n_linked": 5,
+      "best_linked_grade": "A",
+      "mix": {
+        "B": 1,
+        "C": 3,
+        "A": 1
+      }
+    },
+    {
+      "rule": "r18_uv_x_cataract",
+      "declared": "B",
+      "n_linked": 5,
+      "best_linked_grade": "A",
+      "mix": {
+        "A": 1,
+        "C": 3,
+        "B": 1
+      }
+    },
+    {
+      "rule": "r22_bmi_x_retinopathy",
+      "declared": "C",
+      "n_linked": 0,
+      "best_linked_grade": null,
+      "mix": {}
+    },
+    {
+      "rule": "r19_proinflam_diet_x_dr_npdr",
+      "declared": "C",
+      "n_linked": 5,
+      "best_linked_grade": "C",
+      "mix": {
+        "C": 5
+      }
+    },
+    {
+      "rule": "r20_smoking_x_vi_mod_severe",
+      "declared": "B",
+      "n_linked": 5,
+      "best_linked_grade": "B",
+      "mix": {
+        "B": 1,
+        "C": 4
+      }
+    },
+    {
+      "rule": "r21_pm25_x_vi_mod_severe",
+      "declared": "B",
+      "n_linked": 5,
+      "best_linked_grade": "B",
+      "mix": {
+        "B": 1,
+        "C": 4
+      }
+    }
+  ],
+  "rules_without_linked_chunk": [
+    "r22_bmi_x_retinopathy"
+  ],
+  "rules_below_declared_grade": [
+    {
+      "rule": "r11_smoking_x_amd_late",
+      "declared": "A",
+      "best": "B",
+      "n": 4,
+      "mix": {
+        "B": 1,
+        "C": 3
+      }
+    }
+  ],
+  "rules_best_is_D_or_E": []
+}

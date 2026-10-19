@@ -1,0 +1,280 @@
+{
+  "method": "title-only matching",
+  "per_rule": [
+    {
+      "rule": "r01_uric_acid_x_cataract",
+      "declared": "C",
+      "n_title_hits": 2,
+      "mix": {
+        "C": 2
+      },
+      "best": "C",
+      "best_title": "Uric acid-driven NLRP3 inflammasome activation triggers lens epithelial cell senescence and cataract formation."
+    },
+    {
+      "rule": "r02_hyperglycemia_x_cataract",
+      "declared": "B",
+      "n_title_hits": 1,
+      "mix": {
+        "C": 1
+      },
+      "best": "C",
+      "best_title": "Hyperglycemia and Hypo-HDL-cholesterolemia Are Primary Risk Factors for Age-related Cataract, and a Korean-style Balance"
+    },
+    {
+      "rule": "r03_hba1c_x_retinopathy_any",
+      "declared": "B",
+      "n_title_hits": 6,
+      "mix": {
+        "B": 2,
+        "E": 1,
+        "C": 3
+      },
+      "best": "B",
+      "best_title": "The Role of Glycemic Control and Variability in Diabetic Retinopathy."
+    },
+    {
+      "rule": "r04_hba1c_x_dr_pdr",
+      "declared": "C",
+      "n_title_hits": 6,
+      "mix": {
+        "B": 2,
+        "E": 1,
+        "C": 3
+      },
+      "best": "B",
+      "best_title": "The Role of Glycemic Control and Variability in Diabetic Retinopathy."
+    },
+    {
+      "rule": "r05_dyslipidemia_x_amd_late",
+      "declared": "C",
+      "n_title_hits": 3,
+      "mix": {
+        "C": 3
+      },
+      "best": "C",
+      "best_title": "Relationships between Lipid-Related Metabolites and Age-Related Macular Degeneration Vary with Complement Genotype."
+    },
+    {
+      "rule": "r06_crp_x_amd_late",
+      "declared": "B",
+      "n_title_hits": 8,
+      "mix": {
+        "B": 1,
+        "C": 6,
+        "E": 1
+      },
+      "best": "B",
+      "best_title": "A review and meta-analysis of the association between C-reactive protein and age-related macular degeneration."
+    },
+    {
+      "rule": "r07_vitamind_x_dr_npdr",
+      "declared": "B",
+      "n_title_hits": 5,
+      "mix": {
+        "B": 3,
+        "C": 2
+      },
+      "best": "B",
+      "best_title": "Vitamin D and Diabetic Retinopathy."
+    },
+    {
+      "rule": "r08_low_antioxidant_x_cataract",
+      "declared": "B",
+      "n_title_hits": 4,
+      "mix": {
+        "B": 2,
+        "C": 2
+      },
+      "best": "B",
+      "best_title": "Antioxidants and cataract."
+    },
+    {
+      "rule": "r09_mediterranean_diet_x_amd_late",
+      "declared": "B",
+      "n_title_hits": 4,
+      "mix": {
+        "E": 1,
+        "C": 2,
+        "B": 1
+      },
+      "best": "B",
+      "best_title": "Mediterranean Diet on Development and Progression of Age-Related Macular Degeneration: Systematic Review and Meta-Analys"
+    },
+    {
+      "rule": "r10_smoking_x_cataract",
+      "declared": "A",
+      "n_title_hits": 4,
+      "mix": {
+        "E": 2,
+        "B": 1,
+        "C": 1
+      },
+      "best": "B",
+      "best_title": "Smoking and risk of age-related cataract: a meta-analysis."
+    },
+    {
+      "rule": "r11_smoking_x_amd_late",
+      "declared": "A",
+      "n_title_hits": 4,
+      "mix": {
+        "E": 2,
+        "B": 2
+      },
+      "best": "B",
+      "best_title": "Smoking and the risk of age-related macular degeneration: a meta-analysis."
+    },
+    {
+      "rule": "r12_alcohol_x_cataract",
+      "declared": "B",
+      "n_title_hits": 3,
+      "mix": {
+        "C": 1,
+        "B": 2
+      },
+      "best": "B",
+      "best_title": "Alcohol intake and the risk of age-related cataracts: a meta-analysis of prospective cohort studies."
+    },
+    {
+      "rule": "r13_bmi_x_cataract",
+      "declared": "A",
+      "n_title_hits": 2,
+      "mix": {
+        "B": 2
+      },
+      "best": "B",
+      "best_title": "Body mass index and risk of age-related cataract: a meta-analysis of prospective cohort studies."
+    },
+    {
+      "rule": "r14_lead_x_cataract",
+      "declared": "B",
+      "n_title_hits": 1,
+      "mix": {
+        "B": 1
+      },
+      "best": "B",
+      "best_title": "Cadmium and lead exposure and risk of cataract surgery in U.S. adults."
+    },
+    {
+      "rule": "r16_pm25_x_glaucoma_iop_cdr",
+      "declared": "B",
+      "n_title_hits": 8,
+      "mix": {
+        "B": 2,
+        "E": 4,
+        "C": 2
+      },
+      "best": "B",
+      "best_title": "Airborne particulate matter (PM2.5) triggers ocular hypertension and glaucoma through pyroptosis."
+    },
+    {
+      "rule": "r17_pm25_x_amd_early",
+      "declared": "B",
+      "n_title_hits": 5,
+      "mix": {
+        "B": 1,
+        "C": 3,
+        "E": 1
+      },
+      "best": "B",
+      "best_title": "Association between ambient air pollution and age-related macular degeneration: a meta-analysis."
+    },
+    {
+      "rule": "r18_uv_x_cataract",
+      "declared": "B",
+      "n_title_hits": 5,
+      "mix": {
+        "C": 2,
+        "B": 1,
+        "E": 2
+      },
+      "best": "B",
+      "best_title": "Correlation of Sunlight Exposure and Different Morphological Types of Age-Related Cataract."
+    },
+    {
+      "rule": "r22_bmi_x_retinopathy",
+      "declared": "C",
+      "n_title_hits": 0,
+      "mix": {},
+      "best": null,
+      "best_title": null
+    },
+    {
+      "rule": "r19_proinflam_diet_x_dr_npdr",
+      "declared": "C",
+      "n_title_hits": 2,
+      "mix": {
+        "C": 2
+      },
+      "best": "C",
+      "best_title": "Association of standard dietary inflammatory index with diabetic retinopathy in diabetes: A prospective cohort study."
+    },
+    {
+      "rule": "r20_smoking_x_vi_mod_severe",
+      "declared": "B",
+      "n_title_hits": 2,
+      "mix": {
+        "B": 1,
+        "E": 1
+      },
+      "best": "B",
+      "best_title": "Smoking, urinary cotinine levels and incidence of visual impairment."
+    },
+    {
+      "rule": "r21_pm25_x_vi_mod_severe",
+      "declared": "B",
+      "n_title_hits": 3,
+      "mix": {
+        "B": 1,
+        "E": 2
+      },
+      "best": "B",
+      "best_title": "Residential greenness, air pollution and visual impairment: a prospective cohort study."
+    }
+  ],
+  "flagged": [
+    {
+      "rule": "r02_hyperglycemia_x_cataract",
+      "declared": "B",
+      "n_title_hits": 1,
+      "mix": {
+        "C": 1
+      },
+      "best": "C",
+      "best_title": "Hyperglycemia and Hypo-HDL-cholesterolemia Are Primary Risk Factors for Age-related Cataract, and a Korean-style Balance"
+    },
+    {
+      "rule": "r10_smoking_x_cataract",
+      "declared": "A",
+      "n_title_hits": 4,
+      "mix": {
+        "E": 2,
+        "B": 1,
+        "C": 1
+      },
+      "best": "B",
+      "best_title": "Smoking and risk of age-related cataract: a meta-analysis."
+    },
+    {
+      "rule": "r11_smoking_x_amd_late",
+      "declared": "A",
+      "n_title_hits": 4,
+      "mix": {
+        "E": 2,
+        "B": 2
+      },
+      "best": "B",
+      "best_title": "Smoking and the risk of age-related macular degeneration: a meta-analysis."
+    },
+    {
+      "rule": "r13_bmi_x_cataract",
+      "declared": "A",
+      "n_title_hits": 2,
+      "mix": {
+        "B": 2
+      },
+      "best": "B",
+      "best_title": "Body mass index and risk of age-related cataract: a meta-analysis of prospective cohort studies."
+    }
+  ]
+}

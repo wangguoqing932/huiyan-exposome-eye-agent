@@ -1,0 +1,63 @@
+{
+  "generated": "2026-10-15 (R11)",
+  "dataset": "NHANES",
+  "system": "full_system",
+  "pairs": 80,
+  "confusion_R5_gold": {
+    "TP": 5,
+    "FP": 12,
+    "FN": 2,
+    "TN": 61,
+    "P": 0.2941,
+    "R": 0.7143,
+    "F1": 0.4167
+  },
+  "confusion_R11_gold": {
+    "TP": 6,
+    "FP": 11,
+    "FN": 0,
+    "TN": 63,
+    "P": 0.3529,
+    "R": 1.0,
+    "F1": 0.5217
+  },
+  "productive_rules": [
+    "r02_hyperglycemia_x_cataract",
+    "r03_hba1c_x_retinopathy_any",
+    "r04_hba1c_x_dr_pdr"
+  ],
+  "pure_false_positive_rules": [
+    "r01_uric_acid_x_cataract",
+    "r05_dyslipidemia_x_amd_late",
+    "r06_crp_x_amd_late",
+    "r10_smoking_x_cataract",
+    "r12_alcohol_x_cataract",
+    "r13_bmi_x_cataract",
+    "r14_lead_x_cataract",
+    "r20_smoking_x_vi_mod_severe",
+    "r22_bmi_x_retinopathy"
+  ],
+  "true_positives_by_rule": {
+    "r02_hyperglycemia_x_cataract": 2,
+    "r03_hba1c_x_retinopathy_any": 2,
+    "r04_hba1c_x_dr_pdr": 2
+  },
+  "false_positives_by_rule": {
+    "r01_uric_acid_x_cataract": 1,
+    "r05_dyslipidemia_x_amd_late": 1,
+    "r06_crp_x_amd_late": 1,
+    "r13_bmi_x_cataract": 1,
+    "r22_bmi_x_retinopathy": 2,
+    "r10_smoking_x_cataract": 1,
+    "r20_smoking_x_vi_mod_severe": 2,
+    "r12_alcohol_x_cataract": 1,
+    "r14_lead_x_cataract": 1
+  },
+  "confidence_threshold_helps": false,
+  "dev_set_labels": {
+    "rule_defined": 24,
+    "no_rule": 110
+  },
+  "unbiased_tuning_set_available": false,
+  "conclusion": "The bottleneck is precision, and it is structural: one rule family (glycaemia) produces every true positive while twelve rules produce only false positives. Neither the system's own confidence/risk_level nor any re-thresholding improves F1, and no unbiased tuning set exists (dev labels are rule_defined; tuning on the validation gold is test-set fitting). Legitimate gains therefore require NEW independent data or a blind prospective test, not further engineering."
+}

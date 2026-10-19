@@ -1,0 +1,24 @@
+{
+  "cohort": "LASI",
+  "n_targets": 1,
+  "findings": [
+    {
+      "var": "ht002c",
+      "label": "Currently on medication_hypertension",
+      "n_valid": 20315,
+      "own_positives": 14450,
+      "own_positive_rate_if_naive": 0.7113,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "ht002",
+          "gate_label": "Ever diagnosed_hypertension",
+          "gate_n": 73207,
+          "gate_positives": 20320,
+          "rel_diff": 0.0002,
+          "gate_file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "min_n": 200,
+  "possible_cells": 168,
+  "feasible_cells": 18,
+  "feasible_fraction": 0.1071,
+  "blocked_by": {
+    "both_sides": 83,
+    "exposure_missing": 41,
+    "outcome_missing": 26
+  },
+  "rules_total": 21,
+  "rules_testable_somewhere": 6,
+  "unlock_if_modality_added": {
+    "OUTCOME:fundus_imaging": 15,
+    "blood_assay": 13,
+    "geocoded_environment": 13,
+    "dietary_index": 6,
+    "questionnaire_behaviour": 6,
+    "OUTCOME:fundus_imaging_or_grading": 5,
+    "OUTCOME:selfreport_ocular_diagnosis": 5,
+    "anthropometry": 3,
+    "selfreport_or_assay_metabolic": 1,
+    "OUTCOME:vision_rating": 1
+  },
+  "feasible_pairs": [
+    "r02_hyperglycemia_x_cataract@CLHLS",
+    "r02_hyperglycemia_x_cataract@CRELES",
+    "r02_hyperglycemia_x_cataract@LASI",
+    "r02_hyperglycemia_x_cataract@SHARE",
+    "r10_smoking_x_cataract@CLHLS",
+    "r10_smoking_x_cataract@CRELES",
+    "r10_smoking_x_cataract@ELSA",
+    "r10_smoking_x_cataract@SHARE",
+    "r11_smoking_x_amd_late@ELSA",
+    "r12_alcohol_x_cataract@CLHLS",
+    "r12_alcohol_x_cataract@SHARE",
+    "r13_bmi_x_cataract@CRELES",
+    "r13_bmi_x_cataract@SHARE",
+    "r20_smoking_x_vi_mod_severe@CLHLS",
+    "r20_smoking_x_vi_mod_severe@ELSA",
+    "r20_smoking_x_vi_mod_severe@HRS",
+    "r20_smoking_x_vi_mod_severe@KLoSA",
+    "r20_smoking_x_vi_mod_severe@SHARE"
+  ],
+  "note": "Cells are (rule x cohort) pairs. Presence is derived from the built frames at MIN_N; nothing is listed by hand. blocked_by separates a missing exposure from a missing outcome because the two imply different investments.",
+  "consistency_with_coverage": {
+    "audit_feasible": 18,
+    "coverage_testable": 18,
+    "identical": true,
+    "only_in_audit": [],
+    "only_in_coverage": []
+  }
+}

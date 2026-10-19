@@ -1,0 +1,175 @@
+{
+  "factors": [
+    "chronic_kidney_disease",
+    "diabetes",
+    "elderly",
+    "hypertension"
+  ],
+  "n_tested": 272,
+  "raised": [
+    {
+      "exposure": "serum_uric_acid",
+      "disease": "cataract_any",
+      "factor": "chronic_kidney_disease",
+      "level_base": "low",
+      "level_with_factor": "medium",
+      "should_apply": true
+    },
+    {
+      "exposure": "fasting_glucose",
+      "disease": "cataract_any",
+      "factor": "diabetes",
+      "level_base": "medium",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "fasting_glucose",
+      "disease": "retinopathy_any",
+      "factor": "diabetes",
+      "level_base": "medium",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "fasting_glucose",
+      "disease": "dr_npdr",
+      "factor": "diabetes",
+      "level_base": "low",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "fasting_glucose",
+      "disease": "dr_pdr",
+      "factor": "diabetes",
+      "level_base": "low",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "hba1c",
+      "disease": "cataract_any",
+      "factor": "diabetes",
+      "level_base": "medium",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "hba1c",
+      "disease": "retinopathy_any",
+      "factor": "diabetes",
+      "level_base": "medium",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "hba1c",
+      "disease": "dr_npdr",
+      "factor": "diabetes",
+      "level_base": "low",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "hba1c",
+      "disease": "dr_pdr",
+      "factor": "diabetes",
+      "level_base": "low",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "homa_ir",
+      "disease": "cataract_any",
+      "factor": "diabetes",
+      "level_base": "medium",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "homa_ir",
+      "disease": "retinopathy_any",
+      "factor": "diabetes",
+      "level_base": "medium",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "homa_ir",
+      "disease": "dr_npdr",
+      "factor": "diabetes",
+      "level_base": "low",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "homa_ir",
+      "disease": "dr_pdr",
+      "factor": "diabetes",
+      "level_base": "low",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "dietary_glycemic_index",
+      "disease": "cataract_any",
+      "factor": "diabetes",
+      "level_base": "medium",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "dietary_glycemic_index",
+      "disease": "retinopathy_any",
+      "factor": "diabetes",
+      "level_base": "medium",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "dietary_glycemic_index",
+      "disease": "dr_npdr",
+      "factor": "diabetes",
+      "level_base": "low",
+      "level_with_factor": "high",
+      "should_apply": true
+    },
+    {
+      "exposure": "dietary_glycemic_index",
+      "disease": "dr_pdr",
+      "factor": "diabetes",
+      "level_base": "low",
+      "level_with_factor": "high",
+      "should_apply": true
+    }
+  ],
+  "applicable_but_inert": [
+    {
+      "exposure": "blood_lead",
+      "disease": "cataract_any",
+      "factor": "chronic_kidney_disease",
+      "level_base": "medium",
+      "level_with_factor": "medium",
+      "should_apply": true
+    },
+    {
+      "exposure": "pm25_exposure",
+      "disease": "glaucoma_iop_elevated",
+      "factor": "hypertension",
+      "level_base": "medium",
+      "level_with_factor": "medium",
+      "should_apply": true
+    },
+    {
+      "exposure": "pm25_exposure",
+      "disease": "glaucoma_suspect_cdr",
+      "factor": "hypertension",
+      "level_base": "medium",
+      "level_with_factor": "medium",
+      "should_apply": true
+    }
+  ],
+  "spurious_escalations": [],
+  "n_inert_not_applicable": 252
+}

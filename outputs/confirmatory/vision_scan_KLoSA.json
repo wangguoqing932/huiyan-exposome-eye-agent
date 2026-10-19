@@ -1,0 +1,2791 @@
+{
+  "cohort": "KLoSA",
+  "root": "E:\\BaiduNetdiskDownload\\所有数据库\\04. KLoSA 韩国老龄化纵向研究\\KLoSA_韩国\\Raw_data",
+  "files": 39,
+  "scanned": 39,
+  "candidates": [
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01C081",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 9389,
+        " Yes": 840,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\Lt01_e.dta",
+      "var": "w01d_com076",
+      "rows": 10254,
+      "n_valid": 3922,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Agree": 1778,
+        "Disagree": 1566,
+        "Don't know": 10,
+        "Strongly agree": 358,
+        "Strongly disagree": 210,
+        "nan": 6332
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02C081",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 8165,
+        " Yes": 501,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave2\\Lt02_e.dta",
+      "var": "w02d_com076",
+      "rows": 8688,
+      "n_valid": 3596,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Agree": 1727,
+        "Disagree": 1346,
+        "Don't know": 6,
+        "Strongly agree": 322,
+        "Strongly disagree": 195,
+        "nan": 5092
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03C081",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7560,
+        " Yes": 337,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\Lt03_e.dta",
+      "var": "w03d_com076",
+      "rows": 7920,
+      "n_valid": 3358,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Agree": 1743,
+        "Disagree": 1159,
+        "Don't know": 15,
+        "Strongly agree": 321,
+        "Strongly disagree": 120,
+        "nan": 4562
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04C081",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7161,
+        " Yes": 295,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\Lt04_e.dta",
+      "var": "w04d_com076",
+      "rows": 7486,
+      "n_valid": 2939,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Agree": 1685,
+        "Disagree": 866,
+        "Strongly agree": 316,
+        "Strongly disagree": 72,
+        "nan": 4547
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05C081",
+      "rows": 7029,
+      "n_valid": 6982,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6714,
+        " Yes": 268,
+        "nan": 47
+      }
+    },
+    {
+      "file": "wave5\\Lt05_e.dta",
+      "var": "w05d_com076",
+      "rows": 7029,
+      "n_valid": 2658,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Agree": 1388,
+        "Disagree": 880,
+        "Refuse to answer": 1,
+        "Strongly agree": 281,
+        "Strongly disagree": 108,
+        "nan": 4371
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06C081",
+      "rows": 6618,
+      "n_valid": 6579,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6358,
+        " Yes": 221,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave6\\Lt06_e.dta",
+      "var": "w06d_com076",
+      "rows": 6618,
+      "n_valid": 2329,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Agree": 1242,
+        "Disagree": 700,
+        "Strongly agree": 299,
+        "Strongly disagree": 88,
+        "nan": 4289
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08C081",
+      "rows": 5717,
+      "n_valid": 5697,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 5525,
+        " Yes": 172,
+        "nan": 20
+      }
+    },
+    {
+      "file": "wave8\\Lt08_e.dta",
+      "var": "w08d_com076",
+      "rows": 5717,
+      "n_valid": 1736,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Agree": 913,
+        "Disagree": 507,
+        "Strongly agree": 223,
+        "Strongly disagree": 93,
+        "nan": 3981
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07C081",
+      "rows": 6136,
+      "n_valid": 6102,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 5867,
+        " Yes": 235,
+        "nan": 34
+      }
+    },
+    {
+      "file": "wave7\\Lt07_e.dta",
+      "var": "w07d_com076",
+      "rows": 6136,
+      "n_valid": 2037,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Agree": 1101,
+        "Disagree": 615,
+        "Strongly agree": 223,
+        "Strongly disagree": 98,
+        "nan": 4099
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C075",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2327,
+        "Fair": 4271,
+        "Good": 3193,
+        "Very bad": 273,
+        "Very good": 165,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C076",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2037,
+        "Fair": 4103,
+        "Good": 3718,
+        "Very bad": 177,
+        "Very good": 194,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C077",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 3158,
+        "Fair": 3870,
+        "Good": 2730,
+        "Very bad": 352,
+        "Very good": 119,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C078",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 9402,
+        "Yes": 827,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C079",
+      "rows": 10254,
+      "n_valid": 827,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Both eyes": 473,
+        "Only one eye": 354,
+        "nan": 9427
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C080",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 10117,
+        "Yes": 112,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01C081",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 9389,
+        "Yes": 840,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\str01_e.dta",
+      "var": "w01d_com076",
+      "rows": 10254,
+      "n_valid": 3922,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Agree": 1778,
+        "Disagree": 1566,
+        "Don't know": 10,
+        "Strongly agree": 358,
+        "Strongly disagree": 210,
+        "nan": 6332
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C075",
+      "rows": 920,
+      "n_valid": 914,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 77,
+        "Fair": 409,
+        "Good": 405,
+        "Very bad": 5,
+        "Very good": 18,
+        "nan": 6
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C076",
+      "rows": 920,
+      "n_valid": 914,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 77,
+        "Fair": 408,
+        "Good": 412,
+        "Very bad": 5,
+        "Very good": 12,
+        "nan": 6
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C077",
+      "rows": 920,
+      "n_valid": 914,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 156,
+        "Fair": 374,
+        "Good": 367,
+        "Very bad": 4,
+        "Very good": 13,
+        "nan": 6
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C078",
+      "rows": 920,
+      "n_valid": 914,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 904,
+        " Yes": 10,
+        "nan": 6
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C079",
+      "rows": 920,
+      "n_valid": 10,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 8,
+        " Only one eye": 2,
+        "nan": 910
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C080",
+      "rows": 920,
+      "n_valid": 914,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        " No": 914,
+        "nan": 6
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05C081",
+      "rows": 920,
+      "n_valid": 914,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 908,
+        " Yes": 6,
+        "nan": 6
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05D158",
+      "rows": 920,
+      "n_valid": 390,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 200,
+        " Disagree": 129,
+        " Strongly agree": 44,
+        " Strongly disagree": 17,
+        "nan": 530
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05D232",
+      "rows": 920,
+      "n_valid": 306,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 153,
+        " Disagree": 101,
+        " Strongly agree": 38,
+        " Strongly disagree": 14,
+        "nan": 614
+      }
+    },
+    {
+      "file": "wave5\\w05_new_e.dta",
+      "var": "w05D322",
+      "rows": 920,
+      "n_valid": 34,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        " Agree": 18,
+        " Disagree": 12,
+        " Strongly agree": 4,
+        "nan": 886
+      }
+    },
+    {
+      "file": "wave5\\e_imp_w05_new.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C075",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1391,
+        "Fair": 4070,
+        "Good": 1838,
+        "Very bad": 100,
+        "Very good": 48,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C076",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1572,
+        "Fair": 3851,
+        "Good": 1910,
+        "Very bad": 83,
+        "Very good": 31,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C077",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2399,
+        "Fair": 3363,
+        "Good": 1530,
+        "Very bad": 135,
+        "Very good": 20,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C078",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7239,
+        " Yes": 208,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C079",
+      "rows": 7490,
+      "n_valid": 208,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 153,
+        " Only one eye": 55,
+        "nan": 7282
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C080",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7411,
+        " Yes": 36,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06C081",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7218,
+        " Yes": 229,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\str06_e.dta",
+      "var": "w06d_com076",
+      "rows": 7490,
+      "n_valid": 2995,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Agree": 1605,
+        "Disagree": 900,
+        "Strongly agree": 373,
+        "Strongly disagree": 117,
+        "nan": 4495
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C075",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1169,
+        "Fair": 3829,
+        "Good": 1314,
+        "Very bad": 105,
+        "Very good": 47,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C076",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1445,
+        "Fair": 3587,
+        "Good": 1323,
+        "Very bad": 81,
+        "Very good": 28,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C077",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1864,
+        "Fair": 3361,
+        "Good": 1083,
+        "Very bad": 135,
+        "Very good": 21,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C078",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6291,
+        " Yes": 173,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C079",
+      "rows": 6488,
+      "n_valid": 173,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 130,
+        " Only one eye": 43,
+        "nan": 6315
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C080",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6429,
+        " Yes": 35,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08C081",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6285,
+        " Yes": 179,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\str08_e.dta",
+      "var": "w08d_com076",
+      "rows": 6488,
+      "n_valid": 2269,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Agree": 1188,
+        "Disagree": 656,
+        "Strongly agree": 297,
+        "Strongly disagree": 128,
+        "nan": 4219
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C075",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1346,
+        "Fair": 3932,
+        "Good": 1466,
+        "Very bad": 111,
+        "Very good": 46,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C076",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1440,
+        "Fair": 3873,
+        "Good": 1472,
+        "Very bad": 90,
+        "Very good": 26,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C077",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2076,
+        "Fair": 3455,
+        "Good": 1218,
+        "Very bad": 128,
+        "Very good": 24,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C078",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6635,
+        " Yes": 266,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C079",
+      "rows": 6940,
+      "n_valid": 266,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 192,
+        " Only one eye": 74,
+        "nan": 6674
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C080",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6868,
+        " Yes": 33,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07C081",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6654,
+        " Yes": 247,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\str07_e.dta",
+      "var": "w07d_com076",
+      "rows": 6940,
+      "n_valid": 2628,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Agree": 1402,
+        "Disagree": 782,
+        "Strongly agree": 302,
+        "Strongly disagree": 142,
+        "nan": 4312
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C075",
+      "rows": 7949,
+      "n_valid": 7896,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1535,
+        "Fair": 4215,
+        "Good": 1983,
+        "Very bad": 114,
+        "Very good": 49,
+        "nan": 53
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C076",
+      "rows": 7949,
+      "n_valid": 7896,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1711,
+        "Fair": 4075,
+        "Good": 1980,
+        "Very bad": 99,
+        "Very good": 31,
+        "nan": 53
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C077",
+      "rows": 7949,
+      "n_valid": 7896,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2288,
+        "Fair": 3739,
+        "Good": 1700,
+        "Very bad": 138,
+        "Very good": 31,
+        "nan": 53
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C078",
+      "rows": 7949,
+      "n_valid": 7896,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 7609,
+        " Yes": 286,
+        "nan": 53
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C079",
+      "rows": 7949,
+      "n_valid": 286,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 187,
+        " Only one eye": 99,
+        "nan": 7663
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C080",
+      "rows": 7949,
+      "n_valid": 7896,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 7860,
+        " Yes": 35,
+        "nan": 53
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05C081",
+      "rows": 7949,
+      "n_valid": 7896,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7622,
+        " Yes": 274,
+        "nan": 53
+      }
+    },
+    {
+      "file": "wave5\\str05_e.dta",
+      "var": "w05d_com076",
+      "rows": 7949,
+      "n_valid": 3388,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Agree": 1759,
+        "Disagree": 1122,
+        "Refuse to answer": 1,
+        "Strongly agree": 367,
+        "Strongly disagree": 139,
+        "nan": 4561
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C075",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2155,
+        "Fair": 4014,
+        "Good": 2276,
+        "Very bad": 157,
+        "Very good": 64,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C076",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2020,
+        "Fair": 4015,
+        "Good": 2454,
+        "Very bad": 115,
+        "Very good": 62,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C077",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2906,
+        "Fair": 3604,
+        "Good": 1900,
+        "Very bad": 209,
+        "Very good": 47,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C078",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 8338,
+        "Yes": 328,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C079",
+      "rows": 8688,
+      "n_valid": 328,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Both eyes": 187,
+        "Only one eye": 141,
+        "nan": 8360
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C080",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 8608,
+        "Yes": 58,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02C081",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 8165,
+        "Yes": 501,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave2\\str02_e.dta",
+      "var": "w02d_com076",
+      "rows": 8688,
+      "n_valid": 3596,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Agree": 1727,
+        "Disagree": 1346,
+        "Don't know": 6,
+        "Strongly agree": 322,
+        "Strongly disagree": 195,
+        "nan": 5092
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C075",
+      "rows": 7029,
+      "n_valid": 6982,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1458,
+        "Fair": 3806,
+        "Good": 1578,
+        "Very bad": 109,
+        "Very good": 31,
+        "nan": 47
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C076",
+      "rows": 7029,
+      "n_valid": 6982,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1634,
+        "Fair": 3667,
+        "Good": 1568,
+        "Very bad": 94,
+        "Very good": 19,
+        "nan": 47
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C077",
+      "rows": 7029,
+      "n_valid": 6982,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2132,
+        "Fair": 3365,
+        "Good": 1333,
+        "Very bad": 134,
+        "Very good": 18,
+        "nan": 47
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C078",
+      "rows": 7029,
+      "n_valid": 6982,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 6705,
+        " Yes": 276,
+        "nan": 47
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C079",
+      "rows": 7029,
+      "n_valid": 276,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 179,
+        " Only one eye": 97,
+        "nan": 6753
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C080",
+      "rows": 7029,
+      "n_valid": 6982,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 6946,
+        " Yes": 35,
+        "nan": 47
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05C081",
+      "rows": 7029,
+      "n_valid": 6982,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6714,
+        " Yes": 268,
+        "nan": 47
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05D158",
+      "rows": 7029,
+      "n_valid": 1227,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 654,
+        " Disagree": 383,
+        " Strongly agree": 132,
+        " Strongly disagree": 58,
+        "nan": 5802
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05D235",
+      "rows": 7029,
+      "n_valid": 1148,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 177,
+        " Disagree": 290,
+        " Strongly agree": 25,
+        " Strongly disagree": 656,
+        "nan": 5881
+      }
+    },
+    {
+      "file": "wave5\\w05_e.dta",
+      "var": "w05D325",
+      "rows": 7029,
+      "n_valid": 283,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 24,
+        " Disagree": 66,
+        " Strongly agree": 3,
+        " Strongly disagree": 190,
+        "nan": 6746
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C075",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1842,
+        "Fair": 3856,
+        "Good": 2053,
+        "Very bad": 117,
+        "Very good": 29,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C076",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1662,
+        "Fair": 3864,
+        "Good": 2249,
+        "Very bad": 94,
+        "Very good": 28,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C077",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2521,
+        "Fair": 3462,
+        "Good": 1734,
+        "Very bad": 154,
+        "Very good": 26,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C078",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 7567,
+        " Yes": 329,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C079",
+      "rows": 7920,
+      "n_valid": 329,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 219,
+        " Only one eye": 110,
+        "nan": 7591
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C080",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7856,
+        " Yes": 41,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03C081",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7560,
+        " Yes": 337,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\str03_e.dta",
+      "var": "w03d_com076",
+      "rows": 7920,
+      "n_valid": 3358,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Agree": 1743,
+        "Disagree": 1159,
+        "Don't know": 15,
+        "Strongly agree": 321,
+        "Strongly disagree": 120,
+        "nan": 4562
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C075",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1391,
+        "Fair": 3929,
+        "Good": 2011,
+        "Very bad": 82,
+        "Very good": 43,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C076",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1326,
+        "Fair": 3964,
+        "Good": 2064,
+        "Very bad": 72,
+        "Very good": 30,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C077",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2007,
+        "Fair": 3607,
+        "Good": 1636,
+        "Very bad": 179,
+        "Very good": 27,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C078",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 7168,
+        "Yes": 288,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C079",
+      "rows": 7486,
+      "n_valid": 288,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Both eyes": 180,
+        "Only one eye": 108,
+        "nan": 7198
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C080",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 7410,
+        "Yes": 46,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04C081",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 7161,
+        "Yes": 295,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\str04_e.dta",
+      "var": "w04d_com076",
+      "rows": 7486,
+      "n_valid": 2939,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Agree": 1685,
+        "Disagree": 866,
+        "Strongly agree": 316,
+        "Strongly disagree": 72,
+        "nan": 4547
+      }
+    },
+    {
+      "file": "wave5\\e_imp_w05.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C075",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1169,
+        "Fair": 3829,
+        "Good": 1314,
+        "Very bad": 105,
+        "Very good": 47,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C076",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1445,
+        "Fair": 3587,
+        "Good": 1323,
+        "Very bad": 81,
+        "Very good": 28,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C077",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1864,
+        "Fair": 3361,
+        "Good": 1083,
+        "Very bad": 135,
+        "Very good": 21,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C078",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6291,
+        " Yes": 173,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C079",
+      "rows": 6488,
+      "n_valid": 173,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 130,
+        " Only one eye": 43,
+        "nan": 6315
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C080",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6429,
+        " Yes": 35,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08C081",
+      "rows": 6488,
+      "n_valid": 6464,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6285,
+        " Yes": 179,
+        "nan": 24
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08D158",
+      "rows": 6488,
+      "n_valid": 1132,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 609,
+        " Disagree": 323,
+        " Strongly agree": 147,
+        " Strongly disagree": 53,
+        "nan": 5356
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08D232",
+      "rows": 6488,
+      "n_valid": 950,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 482,
+        " Disagree": 277,
+        " Strongly agree": 136,
+        " Strongly disagree": 55,
+        "nan": 5538
+      }
+    },
+    {
+      "file": "wave8\\w08_e.dta",
+      "var": "w08D322",
+      "rows": 6488,
+      "n_valid": 187,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 97,
+        " Disagree": 56,
+        " Strongly agree": 14,
+        " Strongly disagree": 20,
+        "nan": 6301
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C075",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1346,
+        "Fair": 3932,
+        "Good": 1466,
+        "Very bad": 111,
+        "Very good": 46,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C076",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1440,
+        "Fair": 3873,
+        "Good": 1472,
+        "Very bad": 90,
+        "Very good": 26,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C077",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2076,
+        "Fair": 3455,
+        "Good": 1218,
+        "Very bad": 128,
+        "Very good": 24,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C078",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6635,
+        " Yes": 266,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C079",
+      "rows": 6940,
+      "n_valid": 266,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 192,
+        " Only one eye": 74,
+        "nan": 6674
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C080",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6868,
+        " Yes": 33,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07C081",
+      "rows": 6940,
+      "n_valid": 6901,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 6654,
+        " Yes": 247,
+        "nan": 39
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07D158",
+      "rows": 6940,
+      "n_valid": 1318,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 712,
+        " Disagree": 390,
+        " Strongly agree": 155,
+        " Strongly disagree": 61,
+        "nan": 5622
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07D232",
+      "rows": 6940,
+      "n_valid": 1077,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 567,
+        " Disagree": 309,
+        " Strongly agree": 133,
+        " Strongly disagree": 68,
+        "nan": 5863
+      }
+    },
+    {
+      "file": "wave7\\w07_e.dta",
+      "var": "w07D322",
+      "rows": 6940,
+      "n_valid": 233,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 123,
+        " Disagree": 83,
+        " Strongly agree": 14,
+        " Strongly disagree": 13,
+        "nan": 6707
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C075",
+      "rows": 34700,
+      "n_valid": 34505,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 6730,
+        "Fair": 19660,
+        "Good": 7330,
+        "Very bad": 555,
+        "Very good": 230,
+        "nan": 195
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C076",
+      "rows": 34700,
+      "n_valid": 34505,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 7200,
+        "Fair": 19365,
+        "Good": 7360,
+        "Very bad": 450,
+        "Very good": 130,
+        "nan": 195
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C077",
+      "rows": 34700,
+      "n_valid": 34505,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 10380,
+        "Fair": 17275,
+        "Good": 6090,
+        "Very bad": 640,
+        "Very good": 120,
+        "nan": 195
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C078",
+      "rows": 34700,
+      "n_valid": 34505,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 33175,
+        " Yes": 1330,
+        "nan": 195
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C079",
+      "rows": 34700,
+      "n_valid": 1330,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 960,
+        " Only one eye": 370,
+        "nan": 33370
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C080",
+      "rows": 34700,
+      "n_valid": 34505,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 34340,
+        " Yes": 165,
+        "nan": 195
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07C081",
+      "rows": 34700,
+      "n_valid": 34505,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 33270,
+        " Yes": 1235,
+        "nan": 195
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07D158",
+      "rows": 34700,
+      "n_valid": 6590,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 3560,
+        " Disagree": 1950,
+        " Strongly agree": 775,
+        " Strongly disagree": 305,
+        "nan": 28110
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07D232",
+      "rows": 34700,
+      "n_valid": 5385,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 2835,
+        " Disagree": 1545,
+        " Strongly agree": 665,
+        " Strongly disagree": 340,
+        "nan": 29315
+      }
+    },
+    {
+      "file": "wave7\\e_imp_w07.dta",
+      "var": "w07D322",
+      "rows": 34700,
+      "n_valid": 1165,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 615,
+        " Disagree": 415,
+        " Strongly agree": 70,
+        " Strongly disagree": 65,
+        "nan": 33535
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C075",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1391,
+        "Fair": 4070,
+        "Good": 1838,
+        "Very bad": 100,
+        "Very good": 48,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C076",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1572,
+        "Fair": 3851,
+        "Good": 1910,
+        "Very bad": 83,
+        "Very good": 31,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C077",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2399,
+        "Fair": 3363,
+        "Good": 1530,
+        "Very bad": 135,
+        "Very good": 20,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C078",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7239,
+        " Yes": 208,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C079",
+      "rows": 7490,
+      "n_valid": 208,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 153,
+        " Only one eye": 55,
+        "nan": 7282
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C080",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7411,
+        " Yes": 36,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06C081",
+      "rows": 7490,
+      "n_valid": 7447,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7218,
+        " Yes": 229,
+        "nan": 43
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06D158",
+      "rows": 7490,
+      "n_valid": 1474,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 811,
+        " Disagree": 430,
+        " Strongly agree": 179,
+        " Strongly disagree": 54,
+        "nan": 6016
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06D232",
+      "rows": 7490,
+      "n_valid": 1252,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 659,
+        " Disagree": 370,
+        " Strongly agree": 166,
+        " Strongly disagree": 57,
+        "nan": 6238
+      }
+    },
+    {
+      "file": "wave6\\w06_e.dta",
+      "var": "w06D322",
+      "rows": 7490,
+      "n_valid": 269,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 135,
+        " Disagree": 100,
+        " Strongly agree": 28,
+        " Strongly disagree": 6,
+        "nan": 7221
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C075",
+      "rows": 37450,
+      "n_valid": 37235,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 6955,
+        "Fair": 20350,
+        "Good": 9190,
+        "Very bad": 500,
+        "Very good": 240,
+        "nan": 215
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C076",
+      "rows": 37450,
+      "n_valid": 37235,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 7860,
+        "Fair": 19255,
+        "Good": 9550,
+        "Very bad": 415,
+        "Very good": 155,
+        "nan": 215
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C077",
+      "rows": 37450,
+      "n_valid": 37235,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 11995,
+        "Fair": 16815,
+        "Good": 7650,
+        "Very bad": 675,
+        "Very good": 100,
+        "nan": 215
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C078",
+      "rows": 37450,
+      "n_valid": 37235,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 36195,
+        " Yes": 1040,
+        "nan": 215
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C079",
+      "rows": 37450,
+      "n_valid": 1040,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 765,
+        " Only one eye": 275,
+        "nan": 36410
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C080",
+      "rows": 37450,
+      "n_valid": 37235,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 37055,
+        " Yes": 180,
+        "nan": 215
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06C081",
+      "rows": 37450,
+      "n_valid": 37235,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 36090,
+        " Yes": 1145,
+        "nan": 215
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06D158",
+      "rows": 37450,
+      "n_valid": 7370,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 4055,
+        " Disagree": 2150,
+        " Strongly agree": 895,
+        " Strongly disagree": 270,
+        "nan": 30080
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06D232",
+      "rows": 37450,
+      "n_valid": 6270,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 3300,
+        " Disagree": 1855,
+        " Strongly agree": 830,
+        " Strongly disagree": 285,
+        "nan": 31180
+      }
+    },
+    {
+      "file": "wave6\\e_imp_w06.dta",
+      "var": "w06D322",
+      "rows": 37450,
+      "n_valid": 1335,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 670,
+        " Disagree": 495,
+        " Strongly agree": 140,
+        " Strongly disagree": 30,
+        "nan": 36115
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C075",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2155,
+        "Fair": 4014,
+        "Good": 2276,
+        "Very bad": 157,
+        "Very good": 64,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C076",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2020,
+        "Fair": 4015,
+        "Good": 2454,
+        "Very bad": 115,
+        "Very good": 62,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C077",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2906,
+        "Fair": 3604,
+        "Good": 1900,
+        "Very bad": 209,
+        "Very good": 47,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C078",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 8338,
+        "Yes": 328,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C079",
+      "rows": 8688,
+      "n_valid": 328,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Both eyes": 187,
+        "Only one eye": 141,
+        "nan": 8360
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C080",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 8608,
+        "Yes": 58,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02C081",
+      "rows": 8688,
+      "n_valid": 8666,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 8165,
+        "Yes": 501,
+        "nan": 22
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02D158",
+      "rows": 8688,
+      "n_valid": 1586,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 803,
+        " Disagree": 551,
+        " Strongly agree": 142,
+        " Strongly disagree": 90,
+        "nan": 7102
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02D232",
+      "rows": 8688,
+      "n_valid": 1615,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        " Agree": 751,
+        " Disagree": 622,
+        " Don't know": 3,
+        " Strongly agree": 159,
+        " Strongly disagree": 80,
+        "nan": 7073
+      }
+    },
+    {
+      "file": "wave1\\w02_e.dta",
+      "var": "w02D322",
+      "rows": 8688,
+      "n_valid": 395,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        " Agree": 173,
+        " Disagree": 173,
+        " Don't know": 3,
+        " Strongly agree": 21,
+        " Strongly disagree": 25,
+        "nan": 8293
+      }
+    },
+    {
+      "file": "wave2\\e_imp_w02.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C075",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1842,
+        "Fair": 3856,
+        "Good": 2053,
+        "Very bad": 117,
+        "Very good": 29,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C076",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1662,
+        "Fair": 3864,
+        "Good": 2249,
+        "Very bad": 94,
+        "Very good": 28,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C077",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2521,
+        "Fair": 3462,
+        "Good": 1734,
+        "Very bad": 154,
+        "Very good": 26,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C078",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        " Don't know": 1,
+        " No": 7567,
+        " Yes": 329,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C079",
+      "rows": 7920,
+      "n_valid": 329,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 219,
+        " Only one eye": 110,
+        "nan": 7591
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C080",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7856,
+        " Yes": 41,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03C081",
+      "rows": 7920,
+      "n_valid": 7897,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 7560,
+        " Yes": 337,
+        "nan": 23
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03D158",
+      "rows": 7920,
+      "n_valid": 1493,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        " Agree": 797,
+        " Disagree": 491,
+        " Don't know": 3,
+        " Strongly agree": 142,
+        " Strongly disagree": 60,
+        "nan": 6427
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03D232",
+      "rows": 7920,
+      "n_valid": 1468,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        " Agree": 741,
+        " Disagree": 511,
+        " Don't know": 10,
+        " Strongly agree": 154,
+        " Strongly disagree": 52,
+        "nan": 6452
+      }
+    },
+    {
+      "file": "wave3\\w03_e.dta",
+      "var": "w03D322",
+      "rows": 7920,
+      "n_valid": 397,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        " Agree": 205,
+        " Disagree": 157,
+        " Don't know": 2,
+        " Strongly agree": 25,
+        " Strongly disagree": 8,
+        "nan": 7523
+      }
+    },
+    {
+      "file": "wave3\\e_imp_w03.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C075",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1391,
+        "Fair": 3929,
+        "Good": 2011,
+        "Very bad": 82,
+        "Very good": 43,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C076",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 1326,
+        "Fair": 3964,
+        "Good": 2064,
+        "Very bad": 72,
+        "Very good": 30,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C077",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2007,
+        "Fair": 3607,
+        "Good": 1636,
+        "Very bad": 179,
+        "Very good": 27,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C078",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 7168,
+        "Yes": 288,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C079",
+      "rows": 7486,
+      "n_valid": 288,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Both eyes": 180,
+        "Only one eye": 108,
+        "nan": 7198
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C080",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 7410,
+        "Yes": 46,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04C081",
+      "rows": 7486,
+      "n_valid": 7456,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 7161,
+        "Yes": 295,
+        "nan": 30
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04D158",
+      "rows": 7486,
+      "n_valid": 1334,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 772,
+        " Disagree": 377,
+        " Strongly agree": 145,
+        " Strongly disagree": 40,
+        "nan": 6152
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04D232",
+      "rows": 7486,
+      "n_valid": 1282,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 731,
+        " Disagree": 370,
+        " Strongly agree": 153,
+        " Strongly disagree": 28,
+        "nan": 6204
+      }
+    },
+    {
+      "file": "wave4\\w04_e.dta",
+      "var": "w04D322",
+      "rows": 7486,
+      "n_valid": 323,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 182,
+        " Disagree": 119,
+        " Strongly agree": 18,
+        " Strongly disagree": 4,
+        "nan": 7163
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C075",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2327,
+        "Fair": 4271,
+        "Good": 3193,
+        "Very bad": 273,
+        "Very good": 165,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C076",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 2037,
+        "Fair": 4103,
+        "Good": 3718,
+        "Very bad": 177,
+        "Very good": 194,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C077",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Bad": 3158,
+        "Fair": 3870,
+        "Good": 2730,
+        "Very bad": 352,
+        "Very good": 119,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C078",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 9402,
+        " Yes": 827,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C079",
+      "rows": 10254,
+      "n_valid": 827,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " Both eyes": 473,
+        " Only one eye": 354,
+        "nan": 9427
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C080",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 10117,
+        " Yes": 112,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01C081",
+      "rows": 10254,
+      "n_valid": 10229,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        " No": 9389,
+        " Yes": 840,
+        "nan": 25
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01D179",
+      "rows": 10254,
+      "n_valid": 1865,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Agree": 888,
+        "Disagree": 718,
+        "Don't know": 10,
+        "Strongly agree": 161,
+        "Strongly disagree": 88,
+        "nan": 8389
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01D338",
+      "rows": 10254,
+      "n_valid": 1761,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        " Agree": 765,
+        " Disagree": 714,
+        " Strongly agree": 179,
+        " Strongly disagree": 103,
+        "nan": 8493
+      }
+    },
+    {
+      "file": "wave1\\w01_e.dta",
+      "var": "w01D431",
+      "rows": 10254,
+      "n_valid": 296,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Agree": 125,
+        "Disagree": 134,
+        "Strongly agree": 18,
+        "Strongly disagree": 19,
+        "nan": 9958
+      }
+    },
+    {
+      "file": "wave4\\e_imp_w04.dta",
+      "error": "UnicodeDecodeError"
+    },
+    {
+      "file": "wave1\\e_imp_w01.dta",
+      "error": "UnicodeDecodeError"
+    }
+  ],
+  "notes": [],
+  "files_with_candidates": 33
+}

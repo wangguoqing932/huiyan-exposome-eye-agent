@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-15 (R11 gold correction A1/A2)",
+  "note": "dual report: identical frozen R5 predictions scored against (a) the gold embedded in baseline_predictions.jsonl (R5, survey variance) and (b) the corrected gold in nhanes_confirmatory.csv after the R11 smoking/alcohol operationalization fixes (analysis_plan §0.3). NHANES tested=81 after correction; the 1 new pair has no baseline predictions and is excluded from both arms.",
+  "metrics": {
+    "full_system": {
+      "R5_gold": {
+        "P": 0.294,
+        "R": 0.714,
+        "F1": 0.417,
+        "per_seed_F1": [
+          0.417,
+          0.417,
+          0.417,
+          0.417,
+          0.417
+        ]
+      },
+      "R11_gold": {
+        "P": 0.353,
+        "R": 1.0,
+        "F1": 0.522,
+        "per_seed_F1": [
+          0.522,
+          0.522,
+          0.522,
+          0.522,
+          0.522
+        ]
+      }
+    },
+    "pure_llm": {
+      "R5_gold": {
+        "P": 0.215,
+        "R": 0.914,
+        "F1": 0.347,
+        "per_seed_F1": [
+          0.368,
+          0.333,
+          0.333,
+          0.368,
+          0.333
+        ]
+      },
+      "R11_gold": {
+        "P": 0.202,
+        "R": 1.0,
+        "F1": 0.335,
+        "per_seed_F1": [
+          0.324,
+          0.343,
+          0.343,
+          0.324,
+          0.343
+        ]
+      }
+    },
+    "naive_rag": {
+      "R5_gold": {
+        "P": 0.1,
+        "R": 0.057,
+        "F1": 0.073,
+        "per_seed_F1": [
+          0.182,
+          0.0,
+          0.0,
+          0.182,
+          0.0
+        ]
+      },
+      "R11_gold": {
+        "P": 0.1,
+        "R": 0.067,
+        "F1": 0.08,
+        "per_seed_F1": [
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    "lightrag": {
+      "R5_gold": {
+        "P": 0.203,
+        "R": 0.714,
+        "F1": 0.316,
+        "per_seed_F1": [
+          0.323,
+          0.312,
+          0.312,
+          0.323,
+          0.312
+        ]
+      },
+      "R11_gold": {
+        "P": 0.244,
+        "R": 1.0,
+        "F1": 0.392,
+        "per_seed_F1": [
+          0.4,
+          0.387,
+          0.387,
+          0.4,
+          0.387
+        ]
+      }
+    }
+  },
+  "mcnemar_R11_gold": {
+    "pure_llm": {
+      "p_exact_range": [
+        0.00434,
+        0.01182
+      ],
+      "sig_at_005_any_seed": true
+    },
+    "naive_rag": {
+      "p_exact_range": [
+        0.00024,
+        0.01294
+      ],
+      "sig_at_005_any_seed": true
+    },
+    "lightrag": {
+      "p_exact_range": [
+        0.05737,
+        0.09229
+      ],
+      "sig_at_005_any_seed": false
+    }
+  }
+}

@@ -1,0 +1,399 @@
+{
+  "note": "random-effects pooling with REML tau^2; I^2 and Cochran Q for heterogeneity; prediction interval = where a NEW cohort's true effect would be expected",
+  "by_rule": {
+    "r02_hyperglycemia_x_cataract": {
+      "k": 4,
+      "tau2": 0.14869,
+      "tau": 0.3856,
+      "Q": 31.418,
+      "Q_df": 3,
+      "Q_p": 6.941913172287982e-07,
+      "I2_percent": 90.5,
+      "pooled_OR": 1.954,
+      "pooled_ci": [
+        1.3245,
+        2.8828
+      ],
+      "pooled_ci_unbounded": false,
+      "prediction_interval": [
+        0.3024,
+        12.6259
+      ],
+      "prediction_interval_computable": true,
+      "prediction_interval_multiplier": 4.303,
+      "prediction_interval_unbounded": false,
+      "log_OR": 0.66989,
+      "log_OR_se": 0.19841,
+      "cohorts": [
+        "CLHLS",
+        "CRELES",
+        "SHARE",
+        "LASI"
+      ],
+      "per_cohort_OR": {
+        "CLHLS": 3.5887,
+        "CRELES": 1.3116,
+        "SHARE": 1.7539,
+        "LASI": 1.8782
+      },
+      "subgroup_by_region": {
+        "testable": true,
+        "groups": [
+          "Americas",
+          "Asia",
+          "Europe"
+        ],
+        "n_per_group": [
+          1,
+          2,
+          1
+        ],
+        "per_group_OR": [
+          1.3116,
+          2.5476,
+          1.7539
+        ],
+        "Q_between": 9.015,
+        "df": 2,
+        "p_between": 0.011023804601815925,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": true
+      },
+      "meta_regression_mean_age": {
+        "slope_per_year_logOR": 0.01679,
+        "se": 0.01658,
+        "p": 0.417753081886564,
+        "note": "weighted by 1/(v + tau^2); CLHLS (mean age 92) is the only cohort far above the rest"
+      }
+    },
+    "r10_smoking_x_cataract": {
+      "k": 4,
+      "tau2": 0.04214,
+      "tau": 0.2053,
+      "Q": 33.417,
+      "Q_df": 3,
+      "Q_p": 2.630398529163495e-07,
+      "I2_percent": 91.0,
+      "pooled_OR": 0.839,
+      "pooled_ci": [
+        0.6698,
+        1.0511
+      ],
+      "pooled_ci_unbounded": false,
+      "prediction_interval": [
+        0.3049,
+        2.309
+      ],
+      "prediction_interval_computable": true,
+      "prediction_interval_multiplier": 4.303,
+      "prediction_interval_unbounded": false,
+      "log_OR": -0.17549,
+      "log_OR_se": 0.11495,
+      "cohorts": [
+        "SHARE",
+        "CLHLS",
+        "ELSA",
+        "CRELES"
+      ],
+      "per_cohort_OR": {
+        "SHARE": 1.109,
+        "CLHLS": 0.748,
+        "ELSA": 0.7675,
+        "CRELES": 0.7023
+      },
+      "subgroup_by_region": {
+        "testable": true,
+        "groups": [
+          "Americas",
+          "Asia",
+          "Europe"
+        ],
+        "n_per_group": [
+          1,
+          1,
+          2
+        ],
+        "per_group_OR": [
+          0.7023,
+          0.748,
+          0.9394
+        ],
+        "Q_between": 1.591,
+        "df": 2,
+        "p_between": 0.45134851270544596,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": true
+      },
+      "meta_regression_mean_age": {
+        "slope_per_year_logOR": -0.0083,
+        "se": 0.01064,
+        "p": 0.5169071114117956,
+        "note": "weighted by 1/(v + tau^2); CLHLS (mean age 92) is the only cohort far above the rest"
+      }
+    },
+    "r11_smoking_x_amd_late": {
+      "k": 1,
+      "note": "single cohort; not pooled",
+      "cohorts": [
+        "ELSA"
+      ],
+      "OR": 0.8586
+    },
+    "r12_alcohol_x_cataract": {
+      "k": 2,
+      "tau2": 0.01204,
+      "tau": 0.1097,
+      "Q": 4.87,
+      "Q_df": 1,
+      "Q_p": 0.027333989203474632,
+      "I2_percent": 79.5,
+      "pooled_OR": 0.8924,
+      "pooled_ci": [
+        0.7535,
+        1.0569
+      ],
+      "pooled_ci_unbounded": false,
+      "prediction_interval": null,
+      "prediction_interval_computable": false,
+      "prediction_interval_multiplier": null,
+      "prediction_interval_unbounded": true,
+      "log_OR": -0.11388,
+      "log_OR_se": 0.08632,
+      "cohorts": [
+        "SHARE",
+        "CLHLS"
+      ],
+      "per_cohort_OR": {
+        "SHARE": 0.9628,
+        "CLHLS": 0.809
+      },
+      "subgroup_by_region": {
+        "testable": true,
+        "groups": [
+          "Asia",
+          "Europe"
+        ],
+        "n_per_group": [
+          1,
+          1
+        ],
+        "per_group_OR": [
+          0.809,
+          0.9628
+        ],
+        "Q_between": 4.87,
+        "df": 1,
+        "p_between": 0.027333989203474567,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": false
+      },
+      "meta_regression_mean_age": {
+        "note": "not fitted: k=2 leaves no residual df"
+      }
+    },
+    "r13_bmi_x_cataract": {
+      "k": 2,
+      "tau2": 0.02052,
+      "tau": 0.1432,
+      "Q": 4.877,
+      "Q_df": 1,
+      "Q_p": 0.027220359150254,
+      "I2_percent": 79.5,
+      "pooled_OR": 1.1349,
+      "pooled_ci": [
+        0.9121,
+        1.412
+      ],
+      "pooled_ci_unbounded": false,
+      "prediction_interval": null,
+      "prediction_interval_computable": false,
+      "prediction_interval_multiplier": null,
+      "prediction_interval_unbounded": true,
+      "log_OR": 0.12652,
+      "log_OR_se": 0.11147,
+      "cohorts": [
+        "SHARE",
+        "CRELES"
+      ],
+      "per_cohort_OR": {
+        "SHARE": 1.2439,
+        "CRELES": 0.9911
+      },
+      "subgroup_by_region": {
+        "testable": true,
+        "groups": [
+          "Americas",
+          "Europe"
+        ],
+        "n_per_group": [
+          1,
+          1
+        ],
+        "per_group_OR": [
+          0.9911,
+          1.2439
+        ],
+        "Q_between": 4.877,
+        "df": 1,
+        "p_between": 0.027220359150253948,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": false
+      },
+      "meta_regression_mean_age": {
+        "note": "not fitted: k=2 leaves no residual df"
+      }
+    },
+    "r20_smoking_x_vi_mod_severe": {
+      "k": 5,
+      "tau2": 0.03814,
+      "tau": 0.1953,
+      "Q": 64.66,
+      "Q_df": 4,
+      "Q_p": 3.0346615840478164e-13,
+      "I2_percent": 93.8,
+      "pooled_OR": 1.2367,
+      "pooled_ci": [
+        1.0325,
+        1.4812
+      ],
+      "pooled_ci_unbounded": false,
+      "prediction_interval": [
+        0.6221,
+        2.4584
+      ],
+      "prediction_interval_computable": true,
+      "prediction_interval_multiplier": 3.182,
+      "prediction_interval_unbounded": false,
+      "log_OR": 0.21242,
+      "log_OR_se": 0.09207,
+      "cohorts": [
+        "SHARE",
+        "KLoSA",
+        "ELSA",
+        "HRS",
+        "CLHLS"
+      ],
+      "per_cohort_OR": {
+        "SHARE": 1.0875,
+        "KLoSA": 1.1002,
+        "ELSA": 1.4883,
+        "HRS": 1.6144,
+        "CLHLS": 1.0267
+      },
+      "subgroup_by_region": {
+        "testable": true,
+        "groups": [
+          "Americas",
+          "Asia",
+          "Europe"
+        ],
+        "n_per_group": [
+          1,
+          2,
+          2
+        ],
+        "per_group_OR": [
+          1.6144,
+          1.0808,
+          1.2512
+        ],
+        "Q_between": 39.347,
+        "df": 2,
+        "p_between": 2.856365548557585e-09,
+        "within_subgroup_pooling": "random_effects",
+        "independent_of_Q": true
+      },
+      "meta_regression_mean_age": {
+        "slope_per_year_logOR": -0.00977,
+        "se": 0.00878,
+        "p": 0.3471520544080687,
+        "note": "weighted by 1/(v + tau^2); CLHLS (mean age 92) is the only cohort far above the rest"
+      }
+    }
+  },
+  "e_values": {
+    "r10_smoking_x_cataract@CLHLS": {
+      "point": 2.008,
+      "ci_bound_nearest_null": 1.566
+    },
+    "r10_smoking_x_cataract@SHARE": {
+      "point": 1.457,
+      "ci_bound_nearest_null": 1.248
+    },
+    "r12_alcohol_x_cataract@CLHLS": {
+      "point": 1.776,
+      "ci_bound_nearest_null": 1.361
+    },
+    "r02_hyperglycemia_x_cataract@CLHLS": {
+      "point": 6.637,
+      "ci_bound_nearest_null": 4.689
+    }
+  },
+  "reclassification": {
+    "r02_hyperglycemia_x_cataract": {
+      "pre_registered": "transportable",
+      "heterogeneity_aware": "heterogeneous_unreliable_pool",
+      "agreement": "DISAGREE",
+      "I2_percent": 90.5,
+      "prediction_interval": [
+        0.3024,
+        12.6259
+      ],
+      "prediction_interval_crosses_null": true,
+      "pre_registered_verdict_source": "cohort_transportability.json",
+      "k": 4
+    },
+    "r10_smoking_x_cataract": {
+      "pre_registered": "mixed",
+      "heterogeneity_aware": "heterogeneous_unreliable_pool",
+      "agreement": "agree",
+      "I2_percent": 91.0,
+      "prediction_interval": [
+        0.3049,
+        2.309
+      ],
+      "prediction_interval_crosses_null": true,
+      "pre_registered_verdict_source": "cohort_transportability.json",
+      "k": 4
+    },
+    "r11_smoking_x_amd_late": {
+      "pre_registered": "single_cohort",
+      "heterogeneity_aware": "not_poolable",
+      "agreement": "n/a"
+    },
+    "r12_alcohol_x_cataract": {
+      "pre_registered": "non_transportable",
+      "heterogeneity_aware": "heterogeneous_unreliable_pool",
+      "agreement": "agree",
+      "I2_percent": 79.5,
+      "prediction_interval": null,
+      "prediction_interval_crosses_null": null,
+      "pre_registered_verdict_source": "cohort_transportability.json",
+      "k": 2
+    },
+    "r13_bmi_x_cataract": {
+      "pre_registered": "single_cohort",
+      "heterogeneity_aware": "heterogeneous_unreliable_pool",
+      "agreement": "agree",
+      "I2_percent": 79.5,
+      "prediction_interval": null,
+      "prediction_interval_crosses_null": null,
+      "pre_registered_verdict_source": "cohort_transportability.json",
+      "k": 2
+    },
+    "r20_smoking_x_vi_mod_severe": {
+      "pre_registered": "transportable",
+      "heterogeneity_aware": "heterogeneous_unreliable_pool",
+      "agreement": "DISAGREE",
+      "I2_percent": 93.8,
+      "prediction_interval": [
+        0.6221,
+        2.4584
+      ],
+      "prediction_interval_crosses_null": true,
+      "pre_registered_verdict_source": "cohort_transportability.json",
+      "k": 5
+    }
+  },
+  "n_influence_rows": 13
+}

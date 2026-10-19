@@ -1,0 +1,1237 @@
+{
+  "cohort": "LASI",
+  "root": "E:\\BaiduNetdiskDownload\\所有数据库\\05. LASI 印度老龄化纵向研究\\LASI_印度\\Raw_data",
+  "files": 11,
+  "scanned": 11,
+  "candidates": [
+    {
+      "file": "Dementia Imputation Data in LASI\\LASI_dem_imp.dta",
+      "var": "r1wtresp",
+      "rows": 31477,
+      "n_valid": 31477,
+      "dtype": "float32",
+      "label": "r1wtresp:w1 r person-level post-stratified analysis weight",
+      "n_distinct": 19864,
+      "values": {
+        "0.0009606663952581584": 1,
+        "0.0010444687213748693": 1,
+        "0.0010449246037751436": 1,
+        "0.001049016253091395": 1,
+        "0.0010499779600650072": 1,
+        "0.0010512549197301269": 1,
+        "0.0010534144239500165": 1,
+        "0.0010550696169957519": 2
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_vbs_w1a.dta",
+      "var": "dadlab_weight",
+      "rows": 2892,
+      "n_valid": 2892,
+      "dtype": "category",
+      "label": "DAD weight for lab data",
+      "n_distinct": 2601,
+      "values": {
+        "0.07609140127897263": 2,
+        "0.07609161734580994": 2,
+        "0.07609289884567261": 4,
+        "0.07609293609857559": 2,
+        "0.07609295845031738": 22,
+        "0.07609318196773529": 7,
+        "0.07609445601701736": 32,
+        "0.09171807765960693": 4
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_vbs_w1a.dta",
+      "var": "hba1c__glycated_haemogl2",
+      "rows": 2892,
+      "n_valid": 2831,
+      "dtype": "category",
+      "label": "Glycosylated haemoglobin (HbA1c)",
+      "n_distinct": 108,
+      "values": {
+        "3.799999952316284": 10,
+        "4.099999904632568": 1,
+        "4.199999809265137": 3,
+        "4.300000190734863": 6,
+        "4.400000095367432": 5,
+        "4.5": 8,
+        "4.599999904632568": 11,
+        "4.699999809265137": 17
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_vbs_w1a.dta",
+      "var": "estimated_average_glucose__eag2",
+      "rows": 2892,
+      "n_valid": 2831,
+      "dtype": "category",
+      "label": "Glucose",
+      "n_distinct": 107,
+      "values": {
+        "62.36000061035156": 10,
+        "70.97000122070312": 1,
+        "73.83999633789062": 3,
+        "76.70999908447266": 6,
+        "79.58000183105469": 5,
+        "82.44999694824219": 8,
+        "85.31999969482422": 11,
+        "88.19000244140625": 17
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "ga101",
+      "rows": 4092,
+      "n_valid": 4077,
+      "dtype": "float64",
+      "label": "Blood Pressure",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 4063,
+        "5.0": 14
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "ga123a",
+      "rows": 4092,
+      "n_valid": 1260,
+      "dtype": "category",
+      "label": "RESPONDENT HEIGHT",
+      "n_distinct": 366,
+      "values": {
+        "50.0": 26,
+        "50.5": 1,
+        "50.7": 1,
+        "51.0": 1,
+        "52.1": 1,
+        "53.0": 1,
+        "53.7": 1,
+        "54.0": 1
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "ga123b",
+      "rows": 4092,
+      "n_valid": 3845,
+      "dtype": "category",
+      "label": "Measurement height",
+      "n_distinct": 474,
+      "values": {
+        "50.0": 26,
+        "50.5": 1,
+        "50.70000076293945": 1,
+        "51.0": 1,
+        "52.099998474121094": 1,
+        "53.0": 1,
+        "53.70000076293945": 1,
+        "54.0": 1
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "bm067a1",
+      "rows": 4092,
+      "n_valid": 3733,
+      "dtype": "category",
+      "label": "Height",
+      "n_distinct": 459,
+      "values": {
+        "57.9": 1,
+        "60.1": 1,
+        "61.5": 1,
+        "85.0": 1,
+        "92.5": 1,
+        "99.5": 1,
+        "116.6": 1,
+        "119.2": 1
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "ht_flag",
+      "rows": 4092,
+      "n_valid": 4092,
+      "dtype": "category",
+      "label": "Measured height from LASI (bm067)",
+      "n_distinct": 2,
+      "values": {
+        "0": 1507,
+        "1": 2585
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "ga127",
+      "rows": 4092,
+      "n_valid": 3822,
+      "dtype": "category",
+      "label": "WEIGHT",
+      "n_distinct": 660,
+      "values": {
+        "12.3": 1,
+        "20.6": 1,
+        "21.0": 1,
+        "21.4": 1,
+        "21.62": 1,
+        "22.0": 1,
+        "23.0": 1,
+        "23.3": 1
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "ga127b",
+      "rows": 4092,
+      "n_valid": 4025,
+      "dtype": "category",
+      "label": "Measurement weight",
+      "n_distinct": 667,
+      "values": {
+        "12.300000190734863": 1,
+        "20.049999237060547": 1,
+        "20.600000381469727": 1,
+        "21.0": 1,
+        "21.399999618530273": 1,
+        "21.6200008392334": 1,
+        "22.0": 1,
+        "23.0": 1
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "bm071a1",
+      "rows": 4092,
+      "n_valid": 3732,
+      "dtype": "category",
+      "label": "Weight measurement",
+      "n_distinct": 627,
+      "values": {
+        "20.05": 1,
+        "24.7": 1,
+        "25.3": 1,
+        "26.2": 1,
+        "26.3": 1,
+        "26.5": 2,
+        "26.7": 1,
+        "26.8": 1
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "wt_flag",
+      "rows": 4092,
+      "n_valid": 4092,
+      "dtype": "category",
+      "label": "Measured weight from LASI (bm071)",
+      "n_distinct": 2,
+      "values": {
+        "0": 3889,
+        "1": 203
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_ga_w1a.dta",
+      "var": "ga603",
+      "rows": 4092,
+      "n_valid": 4029,
+      "dtype": "float64",
+      "label": "EXPERIENCED WEIGHT LOSS",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 357,
+        "2.0": 1904,
+        "3.0": 564,
+        "4.0": 1204
+      }
+    },
+    {
+      "file": "Raw LASI-DAD\\dad_cog_w1a.dta",
+      "var": "dad_weight",
+      "rows": 4096,
+      "n_valid": 4096,
+      "dtype": "category",
+      "label": "DAD weight",
+      "n_distinct": 3680,
+      "values": {
+        "0.07179182022809982": 10,
+        "0.07179197669029236": 5,
+        "0.0717921257019043": 6,
+        "0.0717921331524849": 4,
+        "0.07179346680641174": 11,
+        "0.07179362326860428": 40,
+        "0.07179363071918488": 25,
+        "0.08242876082658768": 8
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_cv.dta",
+      "var": "cv_stateweight",
+      "rows": 66233,
+      "n_valid": 66233,
+      "dtype": "float64",
+      "label": "CV_State weight",
+      "n_distinct": 4847,
+      "values": {
+        "2.918570041656494": 24,
+        "3.531715154647827": 23,
+        "4.022231101989746": 14,
+        "4.062176704406738": 3,
+        "4.2154741287231445": 13,
+        "4.23945951461792": 21,
+        "4.463695526123047": 1,
+        "5.124694347381592": 22
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_cv.dta",
+      "var": "cv_indiaweight",
+      "rows": 66233,
+      "n_valid": 66233,
+      "dtype": "float32",
+      "label": "CV_India weight",
+      "n_distinct": 4847,
+      "values": {
+        "0.6383757591247559": 21,
+        "0.6559995412826538": 19,
+        "0.7168266177177429": 3,
+        "0.7348114848136902": 20,
+        "0.7561343312263489": 19,
+        "0.7684565782546997": 20,
+        "0.7871235013008118": 22,
+        "0.7964739799499512": 3
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rd001_hp_9",
+      "rows": 2440,
+      "n_valid": 1502,
+      "dtype": "category",
+      "label": "National programme for prevention and control of cancer, diabetes, cardiovascula",
+      "n_distinct": 3,
+      "values": {
+        "0 No": 1393,
+        "1 Yes": 109,
+        "nan": 938
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rd008a_a",
+      "rows": 2440,
+      "n_valid": 1502,
+      "dtype": "category",
+      "label": "Addiction in village_alcohol",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 1337,
+        "2 No": 165,
+        "nan": 938
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rd008a_b",
+      "rows": 2440,
+      "n_valid": 1502,
+      "dtype": "category",
+      "label": "Addiction in village_tobacco (smokeless)",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 1412,
+        "2 No": 90,
+        "nan": 938
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rd008a_c",
+      "rows": 2440,
+      "n_valid": 1502,
+      "dtype": "category",
+      "label": "Addiction in village_smoking",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 1452,
+        "2 No": 50,
+        "nan": 938
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rd008b_a",
+      "rows": 2440,
+      "n_valid": 1337,
+      "dtype": "category",
+      "label": "Frequency of addiction in village_alcohol",
+      "n_distinct": 5,
+      "values": {
+        "1 Very common": 532,
+        "2 Somewhat common": 606,
+        "3 Not that common": 196,
+        "997 RF": 3,
+        "nan": 1103
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rd008b_b",
+      "rows": 2440,
+      "n_valid": 1412,
+      "dtype": "category",
+      "label": "Frequency of addiction in village_tobacco (smokeless)",
+      "n_distinct": 6,
+      "values": {
+        "1 Very common": 654,
+        "2 Somewhat common": 641,
+        "3 Not that common": 114,
+        "997 RF": 1,
+        "998 DK": 2,
+        "nan": 1028
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rd008b_c",
+      "rows": 2440,
+      "n_valid": 1452,
+      "dtype": "category",
+      "label": "Frequency of addiction in village_smoking",
+      "n_distinct": 5,
+      "values": {
+        "1 Very common": 636,
+        "2 Somewhat common": 683,
+        "3 Not that common": 132,
+        "998 DK": 1,
+        "nan": 988
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "ua010a_hp_i",
+      "rows": 2440,
+      "n_valid": 938,
+      "dtype": "category",
+      "label": "National programme for prevention and control of cancer, diabetes, cardiova",
+      "n_distinct": 3,
+      "values": {
+        "0 No": 784,
+        "1 Yes": 154,
+        "nan": 1502
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "ua010b_hp_i",
+      "rows": 2440,
+      "n_valid": 150,
+      "dtype": "float64",
+      "label": "National programme for prevention and control of cancer, diabetes, cardiova",
+      "n_distinct": 28,
+      "values": {
+        "998.0": 44,
+        "1978.0": 1,
+        "1985.0": 1,
+        "1988.0": 2,
+        "1990.0": 3,
+        "1991.0": 1,
+        "1992.0": 1,
+        "1995.0": 4
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "uc023a_a",
+      "rows": 2440,
+      "n_valid": 938,
+      "dtype": "category",
+      "label": "Alcohol",
+      "n_distinct": 4,
+      "values": {
+        "1 Yes": 839,
+        "2 No": 98,
+        "998 DK": 1,
+        "nan": 1502
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "uc023a_b",
+      "rows": 2440,
+      "n_valid": 938,
+      "dtype": "category",
+      "label": "Tobacco (smokeless)",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 869,
+        "2 No": 69,
+        "nan": 1502
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "uc023a_c",
+      "rows": 2440,
+      "n_valid": 938,
+      "dtype": "category",
+      "label": "Smoking",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 894,
+        "2 No": 44,
+        "nan": 1502
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "uc023b_a",
+      "rows": 2440,
+      "n_valid": 838,
+      "dtype": "category",
+      "label": "Alcohol",
+      "n_distinct": 4,
+      "values": {
+        "1 Very common": 350,
+        "2 Common": 367,
+        "3 Not that common": 121,
+        "nan": 1602
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "uc023b_b",
+      "rows": 2440,
+      "n_valid": 868,
+      "dtype": "category",
+      "label": "Tobacco (smokeless)",
+      "n_distinct": 5,
+      "values": {
+        "1 Very common": 416,
+        "2 Common": 377,
+        "3 Not that common": 74,
+        "998 DK": 1,
+        "nan": 1572
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "indiaindividualweight",
+      "rows": 73408,
+      "n_valid": 73408,
+      "dtype": "float64",
+      "label": "India level Individual weight",
+      "n_distinct": 4834,
+      "values": {
+        "0.525617241859436": 3,
+        "0.5680781602859497": 26,
+        "0.6394760012626648": 21,
+        "0.6724827885627747": 6,
+        "0.6766617894172668": 22,
+        "0.6929681897163391": 26,
+        "0.7093584537506104": 24,
+        "0.7129960656166077": 26
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "stateindividualweight",
+      "rows": 73408,
+      "n_valid": 73408,
+      "dtype": "float64",
+      "label": "State level Individual weight",
+      "n_distinct": 4841,
+      "values": {
+        "0.9535996913909912": 2,
+        "1.2690762281417847": 2,
+        "1.5845528841018677": 2,
+        "1.663421869277954": 6,
+        "2.3799922466278076": 26,
+        "2.9324982166290283": 1,
+        "3.0704660415649414": 28,
+        "3.1691057682037354": 4
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht002",
+      "rows": 73408,
+      "n_valid": 73207,
+      "dtype": "category",
+      "label": "Ever diagnosed_hypertension",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 20320,
+        "2 No": 52887,
+        "nan": 201
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht002a",
+      "rows": 73408,
+      "n_valid": 20292,
+      "dtype": "category",
+      "label": "First person to diagnose hypertension_health professional",
+      "n_distinct": 4,
+      "values": {
+        "1 A doctor (MBBS degree)": 19395,
+        "2 Ayurvedic/Unani/Homeopathic/Siddha": 479,
+        "3 Others": 418,
+        "nan": 53116
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht002a_other",
+      "rows": 73408,
+      "n_valid": 73408,
+      "dtype": "object",
+      "label": "First person to diagnose hypertension_other specified",
+      "n_distinct": 33,
+      "values": {
+        "": 53084,
+        ".d": 38,
+        ".e": 20007,
+        ".r": 8,
+        "0": 1,
+        "ASHA": 1,
+        "DUE TO FINANCIAL PROBLEM": 1,
+        "NOT DIAGNOSED BY THE DOCTOR": 1
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht002b_age",
+      "rows": 73408,
+      "n_valid": 2457,
+      "dtype": "float64",
+      "label": "Age of diagnosis_hypertension",
+      "n_distinct": 71,
+      "values": {
+        "5.0": 1,
+        "18.0": 5,
+        "19.0": 1,
+        "20.0": 14,
+        "21.0": 2,
+        "22.0": 5,
+        "23.0": 3,
+        "24.0": 2
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht002b_year",
+      "rows": 73408,
+      "n_valid": 17668,
+      "dtype": "float64",
+      "label": "Year of diagnosis_hypertension",
+      "n_distinct": 57,
+      "values": {
+        "1959.0": 1,
+        "1960.0": 1,
+        "1962.0": 1,
+        "1966.0": 1,
+        "1967.0": 1,
+        "1969.0": 2,
+        "1970.0": 2,
+        "1971.0": 1
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht002c",
+      "rows": 73408,
+      "n_valid": 20315,
+      "dtype": "category",
+      "label": "Currently on medication_hypertension",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 14450,
+        "2 No": 5865,
+        "nan": 53093
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht002d",
+      "rows": 73408,
+      "n_valid": 20315,
+      "dtype": "category",
+      "label": "Diet restriction_hypertension",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 14311,
+        "2 No": 6004,
+        "nan": 53093
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht003",
+      "rows": 73408,
+      "n_valid": 73204,
+      "dtype": "category",
+      "label": "Ever diagnosed_diabetes",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 8857,
+        "2 No": 64347,
+        "nan": 204
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht003a",
+      "rows": 73408,
+      "n_valid": 8848,
+      "dtype": "category",
+      "label": "First person to diagnose diabetes_health professional",
+      "n_distinct": 4,
+      "values": {
+        "1 A doctor (MBBS degree)": 8668,
+        "2 Ayurvedic/Unani/Homeopathic/Siddha": 134,
+        "3 Others": 46,
+        "nan": 64560
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht003a_other",
+      "rows": 73408,
+      "n_valid": 73408,
+      "dtype": "object",
+      "label": "First person to diagnose diabetes_other specified",
+      "n_distinct": 20,
+      "values": {
+        "": 64549,
+        ".d": 17,
+        ".e": 8802,
+        "anm": 1,
+        "bengali doctor": 1,
+        "compounder": 1,
+        "doctor": 1,
+        "health worker": 1
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht003b_age",
+      "rows": 73408,
+      "n_valid": 1220,
+      "dtype": "float64",
+      "label": "Age of diagnosis_diabetes",
+      "n_distinct": 64,
+      "values": {
+        "6.0": 2,
+        "7.0": 2,
+        "10.0": 2,
+        "12.0": 1,
+        "16.0": 2,
+        "20.0": 5,
+        "22.0": 1,
+        "23.0": 1
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht003b_year",
+      "rows": 73408,
+      "n_valid": 7588,
+      "dtype": "float64",
+      "label": "Year of diagnosis_diabetes",
+      "n_distinct": 53,
+      "values": {
+        "1957.0": 1,
+        "1960.0": 1,
+        "1964.0": 1,
+        "1967.0": 2,
+        "1970.0": 1,
+        "1972.0": 1,
+        "1973.0": 1,
+        "1974.0": 1
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "he007d",
+      "rows": 1683,
+      "n_valid": 691,
+      "dtype": "category",
+      "label": "is this water your household uses for drinking",
+      "n_distinct": 3,
+      "values": {
+        "1 yes": 633,
+        "2 no": 58,
+        "nan": 992
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "he009",
+      "rows": 1683,
+      "n_valid": 1683,
+      "dtype": "category",
+      "label": "treat water for safe drinking",
+      "n_distinct": 2,
+      "values": {
+        "1 yes": 693,
+        "2 no": 990
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "he018",
+      "rows": 1683,
+      "n_valid": 1682,
+      "dtype": "category",
+      "label": "indoor smoking in household",
+      "n_distinct": 3,
+      "values": {
+        "1 yes": 431,
+        "2 no": 1251,
+        "nan": 1
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "co010a",
+      "rows": 1683,
+      "n_valid": 1646,
+      "dtype": "category",
+      "label": "purchasing frequency of non alcoholic drinks",
+      "n_distinct": 4,
+      "values": {
+        "2 week": 39,
+        "3 month": 1580,
+        "4.0": 27,
+        "nan": 37
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "co010b",
+      "rows": 1683,
+      "n_valid": 1628,
+      "dtype": "float64",
+      "label": "rupees spent on purchased non alcoholic drinks",
+      "n_distinct": 56,
+      "values": {
+        "0.0": 163,
+        "10.0": 5,
+        "14.0": 1,
+        "15.0": 11,
+        "20.0": 27,
+        "25.0": 7,
+        "26.0": 5,
+        "27.0": 3
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "co010c",
+      "rows": 1683,
+      "n_valid": 18,
+      "dtype": "float64",
+      "label": "rupees spent on home grown non alcoholic drinks",
+      "n_distinct": 6,
+      "values": {
+        "0.0": 4,
+        "20.0": 7,
+        "30.0": 2,
+        "40.0": 1,
+        "50.0": 2,
+        "60.0": 2
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "co013",
+      "rows": 1683,
+      "n_valid": 1630,
+      "dtype": "float64",
+      "label": "spent on tobacco past month",
+      "n_distinct": 40,
+      "values": {
+        "0.0": 1117,
+        "5.0": 3,
+        "7.0": 2,
+        "10.0": 5,
+        "15.0": 2,
+        "20.0": 4,
+        "25.0": 3,
+        "30.0": 5
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "co014",
+      "rows": 1683,
+      "n_valid": 1628,
+      "dtype": "float64",
+      "label": "spent on alcohol in last month",
+      "n_distinct": 29,
+      "values": {
+        "0.0": 1296,
+        "5.0": 2,
+        "30.0": 1,
+        "50.0": 4,
+        "65.0": 2,
+        "100.0": 15,
+        "150.0": 9,
+        "180.0": 1
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "state_hh_wt",
+      "rows": 1683,
+      "n_valid": 1683,
+      "dtype": "float32",
+      "label": "state household weight",
+      "n_distinct": 8,
+      "values": {
+        "0.8070979714393616": 134,
+        "0.959758996963501": 88,
+        "0.9787200093269348": 286,
+        "0.9836969971656799": 268,
+        "1.0111780166625977": 329,
+        "1.0308159589767456": 134,
+        "1.0452569723129272": 116,
+        "1.086630940437317": 328
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "hh_wt_pooled",
+      "rows": 1683,
+      "n_valid": 1683,
+      "dtype": "float32",
+      "label": "pooled household weight",
+      "n_distinct": 8,
+      "values": {
+        "0.5227245688438416": 286,
+        "0.5582613348960876": 116,
+        "0.6596347093582153": 134,
+        "0.8880948424339294": 328,
+        "1.2002842426300049": 88,
+        "1.2645893096923828": 329,
+        "1.3716907501220703": 268,
+        "1.437394618988037": 134
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "ht002",
+      "rows": 1683,
+      "n_valid": 1672,
+      "dtype": "category",
+      "label": "health professional told you that you have hbp or hypertension",
+      "n_distinct": 3,
+      "values": {
+        "1 yes": 291,
+        "2 no": 1381,
+        "nan": 11
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "ht003_other",
+      "rows": 1683,
+      "n_valid": 1683,
+      "dtype": "object",
+      "label": "who diagnosed you with hbp or hypertension other",
+      "n_distinct": 5,
+      "values": {
+        "": 1679,
+        ".d": 1,
+        "SELF IDENTI FICATION": 1,
+        "compaonder": 1,
+        "pharmacist": 1
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "ht003",
+      "rows": 1683,
+      "n_valid": 291,
+      "dtype": "category",
+      "label": "who diagnosed you with hbp or hypertension",
+      "n_distinct": 4,
+      "values": {
+        "1 a doctor mbbs degree": 273,
+        "2 ayurvedic, unani, or homeopathic doctor; rmp; siddha": 12,
+        "3 other, please specify:": 6,
+        "nan": 1392
+      }
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "ht004_intro",
+      "rows": 1683,
+      "n_valid": 1683,
+      "dtype": "object",
+      "label": "when were you first diagosed with hbp or hypertension",
+      "n_distinct": 2,
+      "values": {
+        "": 1677,
+        ".d": 6
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "statehhweight",
+      "rows": 43586,
+      "n_valid": 43586,
+      "dtype": "float64",
+      "label": "state weight at HH level",
+      "n_distinct": 4816,
+      "values": {
+        "3.259999990463257": 13,
+        "3.5299999713897705": 2,
+        "3.6591617051237937": 6,
+        "3.6700000762939453": 17,
+        "4.179999828338623": 12,
+        "4.630000114440918": 1,
+        "4.650000095367432": 18,
+        "5.579999923706055": 15
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "indiahhweight",
+      "rows": 43586,
+      "n_valid": 43586,
+      "dtype": "float32",
+      "label": "india weight at HH level",
+      "n_distinct": 4807,
+      "values": {
+        "0.6299999952316284": 28,
+        "0.6499999761581421": 3,
+        "0.7099999785423279": 14,
+        "0.7200000286102295": 3,
+        "0.75": 15,
+        "0.7699999809265137": 13,
+        "0.7799999713897705": 15,
+        "0.7900000214576721": 13
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "he018",
+      "rows": 43586,
+      "n_valid": 43368,
+      "dtype": "category",
+      "label": "HH member smoke inside home",
+      "n_distinct": 3,
+      "values": {
+        "1 Yes": 10325,
+        "2 No": 33043,
+        "nan": 218
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "he018a_hours",
+      "rows": 43586,
+      "n_valid": 10280,
+      "dtype": "float64",
+      "label": "Time smoke inside home - hours",
+      "n_distinct": 22,
+      "values": {
+        "0.0": 6131,
+        "1.0": 2013,
+        "2.0": 994,
+        "3.0": 444,
+        "4.0": 237,
+        "5.0": 153,
+        "6.0": 75,
+        "7.0": 25
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "he018a_minutes",
+      "rows": 43586,
+      "n_valid": 10276,
+      "dtype": "float64",
+      "label": "Time smoke inside home - minutes",
+      "n_distinct": 56,
+      "values": {
+        "0.0": 3079,
+        "1.0": 26,
+        "2.0": 46,
+        "3.0": 32,
+        "4.0": 26,
+        "5.0": 337,
+        "6.0": 36,
+        "7.0": 12
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "co002g",
+      "rows": 43586,
+      "n_valid": 42350,
+      "dtype": "float64",
+      "label": "Non-alcoholic drinks and beverages in INR",
+      "n_distinct": 309,
+      "values": {
+        "0.0": 7907,
+        "1.0": 2,
+        "2.0": 5,
+        "3.0": 3,
+        "4.0": 6,
+        "5.0": 208,
+        "6.0": 5,
+        "7.0": 30
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "co002h",
+      "rows": 43586,
+      "n_valid": 42340,
+      "dtype": "float64",
+      "label": "Alcoholic drinks in INR",
+      "n_distinct": 186,
+      "values": {
+        "0.0": 36421,
+        "1.0": 5,
+        "2.0": 3,
+        "5.0": 1,
+        "7.0": 1,
+        "9.0": 2,
+        "10.0": 32,
+        "15.0": 8
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "co002g_i",
+      "rows": 43586,
+      "n_valid": 43586,
+      "dtype": "int16",
+      "label": "IMP: Non-alcoholic drinks and beverages in INR",
+      "n_distinct": 309,
+      "values": {
+        "0": 8319,
+        "1": 2,
+        "2": 5,
+        "3": 3,
+        "4": 6,
+        "5": 210,
+        "6": 5,
+        "7": 31
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "co002g_i_f",
+      "rows": 43586,
+      "n_valid": 43586,
+      "dtype": "category",
+      "label": "IMP Flag: Non-alcoholic drinks and beverages in INR",
+      "n_distinct": 4,
+      "values": {
+        "1.continuous value": 42350,
+        "2.closed bracket": 945,
+        "5.no value/bracket": 24,
+        "8.module not answered": 267
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "co002h_i",
+      "rows": 43586,
+      "n_valid": 43586,
+      "dtype": "int16",
+      "label": "IMP: Alcoholic drinks in INR",
+      "n_distinct": 196,
+      "values": {
+        "0": 37553,
+        "1": 5,
+        "2": 3,
+        "5": 2,
+        "7": 1,
+        "9": 2,
+        "10": 33,
+        "15": 8
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "co002h_i_f",
+      "rows": 43586,
+      "n_valid": 43586,
+      "dtype": "category",
+      "label": "IMP Flag: Alcoholic drinks in INR",
+      "n_distinct": 5,
+      "values": {
+        "1.continuous value": 42340,
+        "2.closed bracket": 944,
+        "3.open bracket": 11,
+        "5.no value/bracket": 24,
+        "8.module not answered": 267
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "co104",
+      "rows": 43586,
+      "n_valid": 43032,
+      "dtype": "float64",
+      "label": "Tobacco and tobacco products in INR",
+      "n_distinct": 358,
+      "values": {
+        "0.0": 21954,
+        "1.0": 9,
+        "2.0": 3,
+        "3.0": 2,
+        "4.0": 2,
+        "5.0": 21,
+        "6.0": 5,
+        "7.0": 1
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "co104_i",
+      "rows": 43586,
+      "n_valid": 43586,
+      "dtype": "int16",
+      "label": "IMP: Tobacco and tobacco products in INR",
+      "n_distinct": 359,
+      "values": {
+        "0": 22297,
+        "1": 9,
+        "2": 3,
+        "3": 2,
+        "4": 2,
+        "5": 22,
+        "6": 5,
+        "7": 1
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_hh.dta",
+      "var": "co104_i_f",
+      "rows": 43586,
+      "n_valid": 43586,
+      "dtype": "category",
+      "label": "IMP Flag: Tobacco and tobacco products in INR",
+      "n_distinct": 5,
+      "values": {
+        "1.continuous value": 43032,
+        "2.closed bracket": 240,
+        "3.open bracket": 13,
+        "5.no value/bracket": 13,
+        "8.module not answered": 288
+      }
+    }
+  ],
+  "notes": []
+}

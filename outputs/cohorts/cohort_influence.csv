@@ -1,0 +1,14 @@
+rule_id,dropped,pooled_OR,pooled_ci_low,pooled_ci_high,I2_percent,tau2
+r02_hyperglycemia_x_cataract,CLHLS,1.6649,1.3751,2.0157,83.4,0.02522
+r02_hyperglycemia_x_cataract,CRELES,2.2205,1.4585,3.3805,91.1,0.12994
+r02_hyperglycemia_x_cataract,SHARE,2.0434,1.1658,3.5815,93.0,0.23392
+r02_hyperglycemia_x_cataract,LASI,1.9956,1.1294,3.5263,92.9,0.24132
+r10_smoking_x_cataract,SHARE,0.747,0.6636,0.841,0.0,0.0
+r10_smoking_x_cataract,CLHLS,0.8701,0.6493,1.166,86.6,0.05394
+r10_smoking_x_cataract,ELSA,0.8563,0.6378,1.1496,92.8,0.05765
+r10_smoking_x_cataract,CRELES,0.8722,0.67,1.1354,93.0,0.04778
+r20_smoking_x_vi_mod_severe,SHARE,1.2823,1.0289,1.5982,92.8,0.04514
+r20_smoking_x_vi_mod_severe,KLoSA,1.2762,1.0217,1.5942,95.3,0.04672
+r20_smoking_x_vi_mod_severe,ELSA,1.1896,0.9707,1.4578,94.9,0.04018
+r20_smoking_x_vi_mod_severe,HRS,1.14,1.0031,1.2956,67.9,0.0128
+r20_smoking_x_vi_mod_severe,CLHLS,1.2917,1.0534,1.5839,95.2,0.03963

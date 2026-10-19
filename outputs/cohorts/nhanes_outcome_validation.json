@@ -1,0 +1,48 @@
+{
+  "why": "NHANES 2005-2008 measured the same people with a self-reported cataract item and an objective acuity test; this isolates whether the outcome construct is the weak measurement",
+  "wave_files": [
+    "2005-2006",
+    "2007-2008"
+  ],
+  "n_pooled": 14440,
+  "results": {
+    "VIQ071": {
+      "n": 7074,
+      "event_prevalence": 0.1494,
+      "OR_per_decade": 4.273,
+      "ci_low": 3.91,
+      "ci_high": 4.669,
+      "p": 4.058419752993747e-226,
+      "label": "self-reported cataract operation (questionnaire)"
+    },
+    "VIQ200": {
+      "n": 6429,
+      "event_prevalence": 0.1361,
+      "OR_per_decade": 4.3,
+      "ci_low": 3.904,
+      "ci_high": 4.736,
+      "p": 1.2911329218761671e-192,
+      "label": "self-reported cataract surgery (at the exam)"
+    },
+    "VIQ031": {
+      "n": 7065,
+      "event_prevalence": 0.2511,
+      "OR_per_decade": 1.154,
+      "ci_low": 1.107,
+      "ci_high": 1.203,
+      "p": 1.4112911474450408e-11,
+      "label": "self-rated fair/poor eyesight"
+    },
+    "VIXNC1": {
+      "n": 4786,
+      "event_prevalence": 0.1912,
+      "OR_per_decade": 1.317,
+      "ci_low": 1.224,
+      "ci_high": 1.416,
+      "p": 1.1364069589884032e-13,
+      "label": "objective near-card acuity, below median"
+    }
+  },
+  "objective_over_selfreport_ratio": 0.308,
+  "verdict": "self_report_stronger"
+}

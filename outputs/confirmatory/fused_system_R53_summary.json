@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-15",
+  "protocol": "analysis_plan §14 (pre-registered before run)",
+  "metrics_by_dataset": {
+    "nhanes": {
+      "G0": {
+        "TP": 5,
+        "FP": 11,
+        "FN": 1,
+        "P": 0.312,
+        "R": 0.833,
+        "F1": 0.455
+      },
+      "G2": {
+        "TP": 5,
+        "FP": 9,
+        "FN": 1,
+        "P": 0.357,
+        "R": 0.833,
+        "F1": 0.5
+      },
+      "G3": {
+        "TP": 5,
+        "FP": 9,
+        "FN": 1,
+        "P": 0.357,
+        "R": 0.833,
+        "F1": 0.5
+      },
+      "G4": {
+        "TP": 5,
+        "FP": 13,
+        "FN": 1,
+        "P": 0.278,
+        "R": 0.833,
+        "F1": 0.417
+      }
+    },
+    "knhanes": {
+      "G0": {
+        "TP": 2,
+        "FP": 5,
+        "FN": 1,
+        "P": 0.286,
+        "R": 0.667,
+        "F1": 0.4
+      },
+      "G2": {
+        "TP": 2,
+        "FP": 4,
+        "FN": 1,
+        "P": 0.333,
+        "R": 0.667,
+        "F1": 0.444
+      },
+      "G3": {
+        "TP": 2,
+        "FP": 4,
+        "FN": 1,
+        "P": 0.333,
+        "R": 0.667,
+        "F1": 0.444
+      },
+      "G4": {
+        "TP": 2,
+        "FP": 5,
+        "FN": 1,
+        "P": 0.286,
+        "R": 0.667,
+        "F1": 0.4
+      }
+    },
+    "charls": {
+      "G0": {
+        "TP": 0,
+        "FP": 5,
+        "FN": 0,
+        "P": null,
+        "R": null,
+        "F1": 0.0
+      },
+      "G2": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 0,
+        "P": null,
+        "R": null,
+        "F1": 0.0
+      },
+      "G3": {
+        "TP": 0,
+        "FP": 4,
+        "FN": 0,
+        "P": null,
+        "R": null,
+        "F1": 0.0
+      },
+      "G4": {
+        "TP": 0,
+        "FP": 5,
+        "FN": 0,
+        "P": null,
+        "R": null,
+        "F1": 0.0
+      }
+    }
+  },
+  "mcnemar_nhanes": {
+    "G3_vs_G2": {
+      "b": 0,
+      "c": 0,
+      "p_exact": 1.0
+    },
+    "G4_vs_G2": {
+      "b": 4,
+      "c": 0,
+      "p_exact": 0.125
+    },
+    "G4_vs_G0": {
+      "b": 4,
+      "c": 2,
+      "p_exact": 0.6875
+    }
+  },
+  "gate_distribution_G4": {
+    "nc_abstain": 2,
+    "no_rule": 79,
+    "arbiter_yes": 3,
+    "evidence_Bplus": 23,
+    "no_relevant_evidence": 2,
+    "direct_evidence_yes": 6,
+    "direct_evidence_no": 13
+  },
+  "records": 128
+}

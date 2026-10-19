@@ -1,0 +1,82 @@
+{
+ "date": "2026-10-16",
+ "quality": {
+  "P_pooled_conservative": {
+   "full_system": 0.393,
+   "pure_llm": 0.25,
+   "naive_rag": 0.25,
+   "lightrag": 0.282,
+   "G2": 0.55
+  },
+  "R_pooled": {
+   "full_system": 1.0,
+   "pure_llm": 1.0,
+   "naive_rag": 0.182,
+   "lightrag": 1.0,
+   "G2": 1.0
+  },
+  "F1_pooled": {
+   "full_system": 0.564,
+   "pure_llm": 0.4,
+   "naive_rag": 0.211,
+   "lightrag": 0.44,
+   "G2": 0.71
+  },
+  "McNemar_full_vs_lightrag_p": 0.0347,
+  "McNemar_full_vs_lightrag_p_with_P1gate": 0.0023,
+  "note_McNemar_vs_purellm_naiverag": "见 make_baseline_summary_R11_corrected_gold / R5 汇总:均显著(p≤0.013)",
+  "G2_vs_G0_pooled": "b=0 c=4 p=0.125——级联严格占优(TP 零损失、纯砍 4 FP),未达显著"
+ },
+ "determinism": {
+  "rule_layer_repeat_stability": "3 次重跑 20 对零差异(AGENT_AUDIT round 36)",
+  "arbiter_local_temp0_flips": "0/12(R13-D 实测;1/12 翻转系 DeepSeek 服务端)",
+  "seed_std_F1": {
+   "full_system": 0.0,
+   "lightrag": 0.0049,
+   "naive_rag": 0.0891,
+   "pure_llm": 0.0172
+  }
+ },
+ "robustness": {
+  "prompt_sensitivity_pure_llm": "措辞级改动使均值 F1 0.540→0.347(R5 round1→round2,README_baseline_predictions)",
+  "prompt_sensitivity_system": "规则引擎零 prompt——结构性免疫",
+  "backend_swap": "系统 predictions 与后端无关(规则层);LLM 基线换后端即变(DeepSeek→本地 qwen 已实测)"
+ },
+ "frugality_selective_prediction": {
+  "full_system": {
+   "speak_rate": 0.061,
+   "P_when_speaking": 0.393,
+   "hits_per_10_claims": 3.9
+  },
+  "pure_llm": {
+   "speak_rate": 0.096,
+   "P_when_speaking": 0.25,
+   "hits_per_10_claims": 2.5
+  },
+  "naive_rag": {
+   "speak_rate": 0.017,
+   "P_when_speaking": 0.25,
+   "hits_per_10_claims": 2.5
+  },
+  "lightrag": {
+   "speak_rate": 0.085,
+   "P_when_speaking": 0.282,
+   "hits_per_10_claims": 2.8
+  },
+  "G2": {
+   "speak_rate": 0.043,
+   "P_when_speaking": 0.55,
+   "hits_per_10_claims": 5.5
+  }
+ },
+ "explainability_audit": {
+  "YES_trace_coverage": "100%(每个 YES → rule_id → 引文 DOI → 证据 chunk;基线 0%)",
+  "chain_reproducibility": "R10/R11 全链重跑逐字节一致;citation 零编造门 21/21",
+  "preregistration": "三态金标准/方差标准/双呈义务预注册于 analysis_plan"
+ },
+ "ordering_verdict": {
+  "成立": "G2(0.710) > full_system(0.564) > lightrag(0.440) > naive_rag(0.211);vs lightrag p=0.0023(门控后)",
+  "例外": "pure_llm(0.400) > naive_rag:检索噪声+证据池阴性稀缺+任务形态(关联判定)所致,文献已知现象,非实现缺陷;削弱基线凑排序=稻草人,禁止",
+  "未达显著": "G2 vs G0 p=0.125(占优方向纯:TP 零损失砍 4 FP)"
+ }
+}

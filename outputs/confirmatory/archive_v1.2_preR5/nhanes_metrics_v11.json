@@ -1,0 +1,20 @@
+{
+  "rule_pairs_tested": 14,
+  "replicated": 7,
+  "contradicted": 0,
+  "uninformative": 7,
+  "separation": 0,
+  "precision_rule": 1.0,
+  "precision_rule_ci95": [
+    0.59,
+    1.0
+  ],
+  "coverage": 0.269,
+  "uncovered_significant": 0,
+  "uncovered_pairs": 38,
+  "negative_control_pairs": 1,
+  "negative_control_outcome": {
+    "uninformative": 1
+  },
+  "ci_method": "Clopper-Pearson exact binomial (v1.2 metrics fix 2026-10-12; replaces degenerate bootstrap)"
+}

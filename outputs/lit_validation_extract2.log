@@ -1,0 +1,37 @@
+[extract] 50 new extractions (fails so far: 0)
+[extract] 100 new extractions (fails so far: 0)
+[extract] 150 new extractions (fails so far: 0)
+[extract] 200 new extractions (fails so far: 0)
+[extract] 250 new extractions (fails so far: 0)
+[extract] 300 new extractions (fails so far: 0)
+[extract] 350 new extractions (fails so far: 0)
+[extract] 400 new extractions (fails so far: 0)
+[extract] 450 new extractions (fails so far: 0)
+[extract] 500 new extractions (fails so far: 0)
+[extract] 550 new extractions (fails so far: 0)
+[extract] 600 new extractions (fails so far: 0)
+[extract] 650 new extractions (fails so far: 0)
+[extract] 700 new extractions (fails so far: 0)
+[extract] 750 new extractions (fails so far: 0)
+[extract] done: 750 new, 0 parse failures → D:\Desktop\眼科公共数据库agent搭建\data\processed\lit_validation_extracts.jsonl
+{
+ "precision_lit": 0.944,
+ "precision_lit_ci95_clopper_pearson": [
+  0.727,
+  0.999
+ ],
+ "counts": {
+  "replicated_lit": 17,
+  "contradicted_lit": 0,
+  "mixed_lit": 1,
+  "null_dominant": 0,
+  "uninformative": 2,
+  "main_rules": 20
+ },
+ "S3_stability": {
+  "second_pass_pairs": 67,
+  "agree": 67,
+  "agreement_rate": 1.0
+ }
+}
+[summary] → D:\Desktop\眼科公共数据库agent搭建\outputs\confirmatory\literature_validation_R5.csv & literature_validation_summary.json

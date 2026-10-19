@@ -1,0 +1,28 @@
+{
+  "cohort": "LASI",
+  "wave_col": null,
+  "n_waves": 1,
+  "results": [
+    {
+      "cohort": "LASI",
+      "rule_id": "r02_hyperglycemia_x_cataract",
+      "exposure": "diabetes",
+      "outcome": "cataract_any",
+      "bmi_cut": 25,
+      "direction": "risk_up",
+      "status": "ok",
+      "n_imputations": 1,
+      "n": 73204,
+      "n_events": 8218,
+      "n_clusters": 73204,
+      "beta": 0.630298,
+      "se": 0.031827,
+      "odds_ratio": 1.8782,
+      "ci_low": 1.7646,
+      "ci_high": 1.9991,
+      "z": 19.8037,
+      "p_two_sided": 2.7664889613266352e-87,
+      "seconds": 0.1
+    }
+  ]
+}

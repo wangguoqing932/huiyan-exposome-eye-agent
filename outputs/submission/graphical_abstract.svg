@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500"
+     font-family="Helvetica, Arial, sans-serif">
+  <rect width="900" height="500" fill="#ffffff"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="21" font-weight="bold"
+        fill="#111111">Pooled exposome estimates do not transport between populations</text>
+  <text x="450" y="64" text-anchor="middle" font-size="14" fill="#4D4D4D">
+    21 literature-derived rules, 8 ageing cohorts, 598,386 person-waves
+  </text>
+
+  <!-- Step 1: rule construction -->
+  <rect x="40" y="96" width="240" height="150" rx="8" fill="#F2F7FB"
+        stroke="#0072B2" stroke-width="1.5"/>
+  <text x="160" y="122" text-anchor="middle" font-size="14" font-weight="bold"
+        fill="#0072B2">1. Rules from the literature</text>
+  <text x="60" y="148" font-size="12" fill="#333333">21 exposure-outcome rules</text>
+  <text x="60" y="170" font-size="12" fill="#333333">4 of 21 graded A, later</text>
+  <text x="60" y="188" font-size="12" fill="#333333">regraded after citation</text>
+  <text x="60" y="206" font-size="12" fill="#333333">verification showed the</text>
+  <text x="60" y="224" font-size="12" fill="#333333">grades were not supported</text>
+
+  <!-- arrow -->
+  <line x1="285" y1="171" x2="325" y2="171" stroke="#4D4D4D" stroke-width="1.5"
+        marker-end="url(#a)"/>
+
+  <!-- Step 2: cohorts -->
+  <rect x="330" y="96" width="240" height="150" rx="8" fill="#F2F7FB"
+        stroke="#0072B2" stroke-width="1.5"/>
+  <text x="450" y="122" text-anchor="middle" font-size="14" font-weight="bold"
+        fill="#0072B2">2. Tested in 8 cohorts</text>
+  <text x="350" y="148" font-size="12" fill="#333333">SHARE HRS ELSA KLoSA</text>
+  <text x="350" y="168" font-size="12" fill="#333333">LASI MHAS CLHLS CRELES</text>
+  <text x="350" y="194" font-size="12" fill="#333333">18 of 168 (rule x cohort)</text>
+  <text x="350" y="212" font-size="12" fill="#333333">cells were feasible</text>
+  <text x="350" y="234" font-size="12" font-weight="bold" fill="#D55E00">
+    only 6 of 21 rules testable</text>
+
+  <!-- arrow -->
+  <line x1="575" y1="171" x2="615" y2="171" stroke="#4D4D4D" stroke-width="1.5"
+        marker-end="url(#a)"/>
+
+  <!-- Step 3: result -->
+  <rect x="620" y="96" width="240" height="150" rx="8" fill="#FDF3EE"
+        stroke="#D55E00" stroke-width="1.5"/>
+  <text x="740" y="122" text-anchor="middle" font-size="14" font-weight="bold"
+        fill="#D55E00">3. Estimates do not carry</text>
+  <text x="640" y="148" font-size="12" fill="#333333">I-squared 79.5-93.8%</text>
+  <text x="640" y="168" font-size="12" fill="#333333">prediction intervals span</text>
+  <text x="640" y="186" font-size="12" fill="#333333">the null for every rule</text>
+  <text x="640" y="212" font-size="12" fill="#333333">no rule describes any</text>
+  <text x="640" y="230" font-size="12" fill="#333333">single studied population</text>
+
+  <!-- Positive control -->
+  <rect x="40" y="286" width="390" height="176" rx="8" fill="#F1F8F5"
+        stroke="#009E73" stroke-width="1.5"/>
+  <text x="235" y="312" text-anchor="middle" font-size="14" font-weight="bold"
+        fill="#009E73">Positive control: even age does not transport</text>
+  <text x="60" y="340" font-size="12" fill="#333333">Age to cataract, pooled OR 1.99 per decade</text>
+  <text x="60" y="360" font-size="12" fill="#333333">I-squared 99.2% - MORE heterogeneous than</text>
+  <text x="60" y="378" font-size="12" fill="#333333">any exposure rule</text>
+  <text x="60" y="404" font-size="12" fill="#333333">per cohort: SHARE 2.25, ELSA 3.14, LASI 2.16,</text>
+  <text x="60" y="422" font-size="12" fill="#333333">CRELES 1.81, CLHLS 1.15</text>
+  <text x="60" y="448" font-size="12" font-weight="bold" fill="#009E73">
+    So the constraint is the outcome definition, not the sample size</text>
+
+  <!-- Mechanism -->
+  <rect x="470" y="286" width="390" height="176" rx="8" fill="#FFFBF0"
+        stroke="#E69F00" stroke-width="1.5"/>
+  <text x="665" y="312" text-anchor="middle" font-size="14" font-weight="bold"
+        fill="#B87700">Why: the item measures diagnosis</text>
+  <text x="490" y="340" font-size="12" fill="#333333">NHANES 2005-2008, same people measured twice</text>
+  <text x="490" y="364" font-size="12" fill="#333333">self-reported cataract vs age: OR 4.27</text>
+  <text x="490" y="384" font-size="12" fill="#333333">objective near acuity vs age: OR 1.32</text>
+  <text x="490" y="410" font-size="12" fill="#333333">Self-report is NOT the weaker instrument - it</text>
+  <text x="490" y="428" font-size="12" fill="#333333">tracks age more strongly, through diagnosis</text>
+  <text x="490" y="452" font-size="12" font-weight="bold" fill="#B87700">
+    Pooling it pools access to care</text>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6"
+            markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4D4D4D"/>
+    </marker>
+  </defs>
+</svg>

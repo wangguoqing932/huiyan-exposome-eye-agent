@@ -1,0 +1,108 @@
+{
+  "results": [
+    {
+      "rule": "r02_hyperglycemia_x_cataract",
+      "cohorts": [
+        "CLHLS",
+        "CRELES",
+        "LASI",
+        "SHARE"
+      ],
+      "n": 431026,
+      "n_cohorts": 4,
+      "interaction_p": 3.203410736158776e-08,
+      "two_stage_q_p": 1.5278032616706982e-14,
+      "interaction_terms": [
+        "x:C(cohort)[T.CRELES]",
+        "x:C(cohort)[T.LASI]",
+        "x:C(cohort)[T.SHARE]"
+      ],
+      "per_cohort_or": {
+        "CLHLS": 4.462056386289727
+      }
+    },
+    {
+      "rule": "r10_smoking_x_cataract",
+      "cohorts": [
+        "CLHLS",
+        "CRELES",
+        "ELSA",
+        "SHARE"
+      ],
+      "n": 165365,
+      "n_cohorts": 4,
+      "interaction_p": 0.002231130819493254,
+      "two_stage_q_p": 0.0095069722565175,
+      "interaction_terms": [
+        "x:C(cohort)[T.CRELES]",
+        "x:C(cohort)[T.ELSA]",
+        "x:C(cohort)[T.SHARE]"
+      ],
+      "per_cohort_or": {
+        "CLHLS": 0.9263235567204609
+      }
+    },
+    {
+      "rule": "r11_smoking_x_amd_late",
+      "note": "not fittable after cleaning: x_nunique=2 y_nunique=2 cohort_nunique=1 n=3991",
+      "n": 3991
+    },
+    {
+      "rule": "r12_alcohol_x_cataract",
+      "cohorts": [
+        "CLHLS",
+        "SHARE"
+      ],
+      "n": 131271,
+      "n_cohorts": 2,
+      "interaction_p": 0.14137299858286356,
+      "two_stage_q_p": 1.0,
+      "interaction_terms": [
+        "x:C(cohort)[T.SHARE]"
+      ],
+      "per_cohort_or": {
+        "CLHLS": 0.8267536093077757
+      }
+    },
+    {
+      "rule": "r13_bmi_x_cataract",
+      "cohorts": [
+        "CRELES",
+        "SHARE"
+      ],
+      "n": 342157,
+      "n_cohorts": 2,
+      "interaction_p": 0.14864867874802762,
+      "two_stage_q_p": 1.6936705824921215e-32,
+      "interaction_terms": [
+        "x:C(cohort)[T.SHARE]"
+      ],
+      "per_cohort_or": {
+        "CRELES": 1.062487750107515
+      }
+    },
+    {
+      "rule": "r20_smoking_x_vi_mod_severe",
+      "cohorts": [
+        "CLHLS",
+        "ELSA",
+        "HRS",
+        "KLoSA",
+        "SHARE"
+      ],
+      "n": 212705,
+      "n_cohorts": 5,
+      "interaction_p": 2.383115942770181e-29,
+      "two_stage_q_p": 0.0009056190802629,
+      "interaction_terms": [
+        "x:C(cohort)[T.ELSA]",
+        "x:C(cohort)[T.HRS]",
+        "x:C(cohort)[T.KLoSA]",
+        "x:C(cohort)[T.SHARE]"
+      ],
+      "per_cohort_or": {
+        "CLHLS": 0.8815915118400739
+      }
+    }
+  ]
+}

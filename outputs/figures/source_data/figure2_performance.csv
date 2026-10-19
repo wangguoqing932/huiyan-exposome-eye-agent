@@ -1,5 +1,21 @@
-﻿method,provider,run_config,TP,FP,FN,n_pairs,n_pred_yes,precision,recall,F1
-pure_llm,local:qwen3.8-27b,temp=0.7 seed=11,4,8,3,71,12,0.333,0.571,0.421
-naive_rag,local:qwen3.8-27b,temp=0.7 seed=11,1,3,6,71,4,0.25,0.143,0.182
-lightrag,local:qwen3.8-27b,temp=0.7 seed=11,5,26,2,71,31,0.161,0.714,0.263
-full_system,deepseek:legacy,deterministic,7,10,0,71,17,0.412,1.0,0.583
+﻿method,dataset,dataset_id,dataset_role,ruleset,seed,estimate,F1,ci_low,ci_high,P,R,mean_F1
+full_system,NHANES,NHANES,internal_validation,v1.2,11,0.435,0.435,0.435,0.435,0.294,0.833,0.435
+full_system,NHANES,NHANES,internal_validation,v1.2,22,0.435,0.435,0.435,0.435,0.294,0.833,0.435
+full_system,NHANES,NHANES,internal_validation,v1.2,33,0.435,0.435,0.435,0.435,0.294,0.833,0.435
+full_system,NHANES,NHANES,internal_validation,v1.2,44,0.435,0.435,0.435,0.435,0.294,0.833,0.435
+full_system,NHANES,NHANES,internal_validation,v1.2,55,0.435,0.435,0.435,0.435,0.294,0.833,0.435
+pure_llm,NHANES,NHANES,internal_validation,n/a,11,0.324,0.324,0.324,0.324,0.181,0.9,0.301
+pure_llm,NHANES,NHANES,internal_validation,n/a,22,0.286,0.286,0.286,0.286,0.181,0.9,0.301
+pure_llm,NHANES,NHANES,internal_validation,n/a,33,0.286,0.286,0.286,0.286,0.181,0.9,0.301
+pure_llm,NHANES,NHANES,internal_validation,n/a,44,0.324,0.324,0.324,0.324,0.181,0.9,0.301
+pure_llm,NHANES,NHANES,internal_validation,n/a,55,0.286,0.286,0.286,0.286,0.181,0.9,0.301
+lightrag,NHANES,NHANES,internal_validation,n/a,11,0.333,0.333,0.333,0.333,0.203,0.833,0.327
+lightrag,NHANES,NHANES,internal_validation,n/a,22,0.323,0.323,0.323,0.323,0.203,0.833,0.327
+lightrag,NHANES,NHANES,internal_validation,n/a,33,0.323,0.323,0.323,0.323,0.203,0.833,0.327
+lightrag,NHANES,NHANES,internal_validation,n/a,44,0.333,0.333,0.333,0.333,0.203,0.833,0.327
+lightrag,NHANES,NHANES,internal_validation,n/a,55,0.323,0.323,0.323,0.323,0.203,0.833,0.327
+naive_rag,NHANES,NHANES,internal_validation,n/a,11,0.2,0.2,0.2,0.2,0.1,0.067,0.08
+naive_rag,NHANES,NHANES,internal_validation,n/a,22,0.0,0.0,0.0,0.0,0.1,0.067,0.08
+naive_rag,NHANES,NHANES,internal_validation,n/a,33,0.0,0.0,0.0,0.0,0.1,0.067,0.08
+naive_rag,NHANES,NHANES,internal_validation,n/a,44,0.2,0.2,0.2,0.2,0.1,0.067,0.08
+naive_rag,NHANES,NHANES,internal_validation,n/a,55,0.0,0.0,0.0,0.0,0.1,0.067,0.08

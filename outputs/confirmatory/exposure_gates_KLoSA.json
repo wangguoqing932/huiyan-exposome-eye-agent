@@ -1,0 +1,24 @@
+{
+  "cohort": "KLoSA",
+  "n_targets": 2,
+  "findings": [
+    {
+      "var": "w01C117",
+      "label": "Currently, whether or not smoking",
+      "n_valid": 2956,
+      "own_positives": 1977,
+      "own_positive_rate_if_naive": 0.6688,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "w01C117",
+      "label": "Currently, whether or not smoking",
+      "n_valid": 2956,
+      "own_positives": 1977,
+      "own_positive_rate_if_naive": 0.6688,
+      "looks_gated": false,
+      "gate_candidates": []
+    }
+  ]
+}

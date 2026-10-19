@@ -1,0 +1,19 @@
+cohort,rule,state_label,state_code,three_state,method,dataset,estimate,ci_low,ci_high,n,q_rule,q_exploratory,case_id,layer,count
+SHARE,r02 hyperglycaemia→cataract,replicated,1,replicated,replicated · r02 hyperglycaemia→cataract,SHARE,1.7539,1.6908,1.8194,337274,2.030745881817531e-196,5.272415784302889e-196,r02 hyperglycaemia→cataract,replicated,1
+LASI,r02 hyperglycaemia→cataract,replicated,1,replicated,replicated · r02 hyperglycaemia→cataract,LASI,1.8782,1.7646,1.9991,73204,8.649399579255929e-86,2.994185947454048e-85,r02 hyperglycaemia→cataract,replicated,1
+CLHLS,r02 hyperglycaemia→cataract,replicated,1,replicated,replicated · r02 hyperglycaemia→cataract,CLHLS,3.5887,2.6244,4.9074,15462,1.5278032616706982e-14,2.644418849338436e-14,r02 hyperglycaemia→cataract,replicated,1
+CRELES,r02 hyperglycaemia→cataract,uninformative,0,uninformative,uninformative · r02 hyperglycaemia→cataract,CRELES,1.3116,1.0705,1.6069,5086,0.0505850961376709,0.0932046622539134,r02 hyperglycaemia→cataract,uninformative,1
+SHARE,r10 smoking→cataract,replicated,1,replicated,replicated · r10 smoking→cataract,SHARE,1.109,1.041,1.1815,142084,0.0095069722565175,0.0164552709540499,r10 smoking→cataract,replicated,1
+ELSA,r10 smoking→cataract,uninformative,0,uninformative,uninformative · r10 smoking→cataract,ELSA,0.7675,0.6069,0.9705,4013,0.1421032075357906,0.252988714665752,r10 smoking→cataract,uninformative,1
+CLHLS,r10 smoking→cataract,contradicted,-1,contradicted,contradicted · r10 smoking→cataract,CLHLS,0.748,0.6435,0.8694,15757,0.0012136329441638,0.0020166076075834,r10 smoking→cataract,contradicted,1
+CRELES,r10 smoking→cataract,uninformative,0,uninformative,uninformative · r10 smoking→cataract,CRELES,0.7023,0.5021,0.9822,3511,0.1883632053548776,0.3436542873325032,r10 smoking→cataract,uninformative,1
+ELSA,r11 smoking→late AMD,uninformative,0,uninformative,uninformative · r11 smoking→late AMD,ELSA,0.8586,0.5483,1.3444,3991,1.0,1.0,r11 smoking→late AMD,uninformative,1
+SHARE,r12 alcohol→cataract,uninformative,0,uninformative,uninformative · r12 alcohol→cataract,SHARE,0.9628,0.8999,1.0301,123478,1.0,1.0,r12 alcohol→cataract,uninformative,1
+CLHLS,r12 alcohol→cataract,contradicted,-1,contradicted,contradicted · r12 alcohol→cataract,CLHLS,0.809,0.704,0.9297,7793,0.0177241649186354,0.0318399395156423,r12 alcohol→cataract,contradicted,1
+SHARE,r13 BMI→cataract,replicated,1,replicated,replicated · r13 BMI→cataract,SHARE,1.2439,1.2008,1.2886,337274,1.6936705824921215e-32,4.397268802804985e-32,r13 BMI→cataract,replicated,1
+CRELES,r13 BMI→cataract,uninformative,0,uninformative,uninformative · r13 BMI→cataract,CRELES,0.9911,0.8126,1.2087,4883,1.0,1.0,r13 BMI→cataract,uninformative,1
+SHARE,r20 smoking→vision impairment,replicated,1,replicated,replicated · r20 smoking→vision impairment,SHARE,1.0875,1.0429,1.1339,142229,0.0009056190802629,0.0012267414629392,r20 smoking→vision impairment,replicated,1
+HRS,r20 smoking→vision impairment,replicated,1,replicated,replicated · r20 smoking→vision impairment,HRS,1.6144,1.4682,1.7752,13511,7.45538465666081e-22,1.720567057269167e-21,r20 smoking→vision impairment,replicated,1
+ELSA,r20 smoking→vision impairment,replicated,1,replicated,replicated · r20 smoking→vision impairment,ELSA,1.4883,1.2128,1.8263,4513,0.0012136329441638,0.0019146307451609,r20 smoking→vision impairment,replicated,1
+KLoSA,r20 smoking→vision impairment,uninformative,0,uninformative,uninformative · r20 smoking→vision impairment,KLoSA,1.1002,1.0004,1.21,40260,0.2199810138333751,0.4208367948766676,r20 smoking→vision impairment,uninformative,1
+CLHLS,r20 smoking→vision impairment,uninformative,0,uninformative,uninformative · r20 smoking→vision impairment,CLHLS,1.0267,0.8736,1.2066,12192,1.0,1.0,r20 smoking→vision impairment,uninformative,1

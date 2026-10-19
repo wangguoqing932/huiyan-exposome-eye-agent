@@ -1,0 +1,141 @@
+{
+  "diagnostics": {
+    "cohort": "MHAS",
+    "waves": [
+      {
+        "wave": 1,
+        "status": "ok",
+        "rows": 15182,
+        "vars_found": [
+          "c45"
+        ]
+      },
+      {
+        "wave": 3,
+        "status": "ok",
+        "rows": 15723,
+        "vars_found": [
+          "c42_12"
+        ]
+      },
+      {
+        "wave": 4,
+        "status": "ok",
+        "rows": 14779,
+        "vars_found": [
+          "c42_15"
+        ]
+      },
+      {
+        "wave": 5,
+        "status": "ok",
+        "rows": 17114,
+        "vars_found": [
+          "c42_18"
+        ]
+      },
+      {
+        "wave": 6,
+        "status": "ok",
+        "rows": 15739,
+        "vars_found": [
+          "c42_21"
+        ]
+      }
+    ]
+  },
+  "gate": {
+    "cohort": "MHAS",
+    "n_rows": 78537,
+    "flags": {
+      "vision_impairment_moderate": {
+        "n": 58097,
+        "prevalence": 0.3865,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.03,
+          0.35
+        ],
+        "within_typical": false
+      },
+      "vision_impairment_severe": {
+        "n": 58097,
+        "prevalence": 0.0773,
+        "hard_band": [
+          0.0005,
+          0.25
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.005,
+          0.1
+        ],
+        "within_typical": true
+      }
+    },
+    "imputation_replicates": [
+      1
+    ],
+    "rows_per_replicate": 78537,
+    "gate_passed": true,
+    "failed": [],
+    "outside_typical": [
+      "vision_impairment_moderate"
+    ],
+    "per_wave": {
+      "1": {
+        "vision_impairment_moderate": {
+          "n": 14049,
+          "prevalence": 0.3481
+        },
+        "vision_impairment_severe": {
+          "n": 14049,
+          "prevalence": 0.0953
+        }
+      },
+      "3": {},
+      "4": {
+        "vision_impairment_moderate": {
+          "n": 13837,
+          "prevalence": 0.398
+        },
+        "vision_impairment_severe": {
+          "n": 13837,
+          "prevalence": 0.0741
+        }
+      },
+      "5": {
+        "vision_impairment_moderate": {
+          "n": 15748,
+          "prevalence": 0.4094
+        },
+        "vision_impairment_severe": {
+          "n": 15748,
+          "prevalence": 0.0728
+        }
+      },
+      "6": {
+        "vision_impairment_moderate": {
+          "n": 14463,
+          "prevalence": 0.3877
+        },
+        "vision_impairment_severe": {
+          "n": 14463,
+          "prevalence": 0.0676
+        }
+      }
+    },
+    "wave_outliers": [],
+    "age_context": {
+      "n": 15182,
+      "mean": 60.3,
+      "min": 18.0,
+      "max": 105.0,
+      "pct_60plus": 0.4723
+    }
+  }
+}

@@ -1,0 +1,9 @@
+﻿dataset,x,y,m,status,n,n_x,n_y,n_m,or_total,or_total_ci,or_direct,or_direct_ci,or_mediator_in_model,indirect_log_or,indirect_se,indirect_p,proportion_mediated,attenuation_pct,stability
+nhanes,hba1c_elevated,vision_impairment_mild,retinopathy_any,ok,5105,677,1152,631,1.424,"[1.137, 1.784]",1.475,"[1.167, 1.863]",0.873,-0.2454,0.2277,0.28113756580106863,-0.098,-3.5,stable
+nhanes,hba1c_elevated,vision_impairment_mild,cataract_any,ok,5641,787,1322,759,1.498,"[1.222, 1.837]",1.491,"[1.215, 1.828]",1.126,0.0698,0.0686,0.3087879294161686,0.012,0.5,stable
+nhanes,hba1c_elevated,vision_impairment_moderate,retinopathy_any,ok,5105,677,323,631,1.593,"[1.12, 2.265]",1.456,"[1.007, 2.105]",1.378,0.5788,0.3377,0.08652831445246356,0.193,8.6,stable
+nhanes,hba1c_elevated,vision_impairment_severe,retinopathy_any,ok,5105,677,111,631,1.85,"[1.018, 3.363]",1.797,"[0.96, 3.364]",1.112,0.1916,0.6221,0.7581249516502209,0.047,2.9,stable
+knhanes,hba1c_elevated,vision_impairment_any,retinopathy_any,ok,6922,890,39,204,1.527,"[0.622, 3.745]",0.99,"[0.351, 2.791]",4.854,6.0303,2.4139,0.012482891185600753,1.024,35.2,UNSTABLE: n_events=39; total_CI_width_or=6.0; prop_mediated=1.024
+knhanes,hba1c_elevated,vision_impairment_any,cataract_any,underpowered,0,0,0,0,,,,,,,,,,,underpowered
+knhanes,hyperglycemia,vision_impairment_any,retinopathy_any,ok,16351,1391,110,391,3.092,"[1.818, 5.259]",2.538,"[1.419, 4.538]",2.375,2.8307,1.3302,0.03333391865134172,0.175,17.9,stable
+knhanes,hyperglycemia,vision_impairment_any,cataract_any,ok,6641,568,66,826,4.09,"[2.152, 7.774]",4.085,"[2.149, 7.764]",1.173,0.0361,0.0821,0.659827455524377,0.001,0.1,UNSTABLE: n_events=66

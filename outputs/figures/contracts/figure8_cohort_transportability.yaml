@@ -1,0 +1,212 @@
+# Figure contract: Figure 8 — cross-cohort transportability of the rules
+# Project: huiyan (慧眼)
+#
+# NEW in R12. Carries the result of the cohort external-validation layer
+# (analysis_plan.md section 19), pre-registered and frozen BEFORE the analysis
+# ran. This is the figure the paper's central claim rests on:
+#
+#   Of the six rules the eight ageing cohorts can actually test, two transport
+#   (r02, r20), one reverses direction by region (r10: risk-increasing in
+#   SHARE but significantly PROTECTIVE in CLHLS, and protective though not
+#   significant in ELSA and CRELES), one is contradicted (r12), one rests on a
+#   single cohort (r13) and one has no evidence at all (r11).
+#
+# RENDER HISTORY (why this contract looks the way it does)
+# -------------------------------------------------------
+# v1 declared a diverging heatmap (rows=cohort, cols=rule, cells=state_code).
+# Rendering it and then LOOKING at the render exposed two defects that the
+# contract text could not have revealed:
+#   1. the forest row labels came out duplicated ("... · SHARE · SHARE"),
+#      because the renderer appends " · <dataset>" to the method label and the
+#      method label already contained the cohort;
+#   2. the heatmap rendered in the renderer's default sequential "Blues", so the
+#      `contradicted` and `uninformative` cells were nearly the same colour --
+#      which asserts a direction for uninformative pairs that the data do not
+#      support, exactly what this figure must not do.
+# The renderer does accept `cmap`, but it never forwards it from the contract,
+# and the writer skill tree is outside the project workspace (read-only), so
+# the fix was made inside the contract instead:
+#   * the three-state now leads the forest row label, which colour-codes rows
+#     BY STATE (the renderer colours on the prefix before the first " · ") and
+#     removes the duplicated cohort;
+#   * the cohort x rule matrix became a per-rule composition bar, which is a
+#     supported plot type and keeps `uninformative` visually its own state.
+
+figure_id: figure8_cohort_transportability
+title: "Cross-cohort transportability of the literature-derived exposome rules across eight ageing cohorts"
+figure_number: 6
+manuscript_section: Results → external validation across ageing cohorts
+
+core_conclusion: >-
+  Only 6 of the 21 literature-derived rules can be tested in the eight ageing
+  cohorts, and of those just two transport. r02 (hyperglycaemia → cataract)
+  replicates in three of four testable cohorts (LASI OR 1.88, SHARE 1.75,
+  CLHLS 3.59; CRELES 1.31, q=0.051). r20 (smoking → vision impairment)
+  replicates in three of five with ALL five pointing the same way (HRS 1.61,
+  ELSA 1.49, SHARE 1.09; KLoSA 1.10 and CLHLS 1.03 uninformative). By contrast
+  r10 (smoking → cataract) does not transport and its direction reverses with
+  region: risk-increasing in SHARE (1.11, q=0.0095) but significantly
+  PROTECTIVE in CLHLS (0.748, q=0.0012), with ELSA (0.77) and CRELES (0.70)
+  also protective. r12 (alcohol → cataract) is contradicted in CLHLS (0.809,
+  q=0.018) and not replicated in SHARE.
+
+archetype: quantitative_grid
+
+panels:
+  - id: panel_a_state_composition
+    role: supporting
+    layout: full_width
+    title: "Three-state composition per rule across the cohorts that can test it"
+    content: >-
+      Stacked horizontal bar, one bar per testable rule, segmented by outcome
+      state: replicated, uninformative, contradicted. Counts are the number of
+      cohorts contributing that state. r02 = 3 replicated + 1 uninformative;
+      r20 = 3 replicated + 2 uninformative; r10 = 1 replicated + 2
+      uninformative + 1 contradicted; r12 = 1 uninformative + 1 contradicted;
+      r13 = 1 replicated + 1 uninformative; r11 = 1 uninformative. The
+      uninformative segment is drawn as its own colour and is never merged into
+      either other segment.
+    plot_type: stacked_bar
+    x_axis: count
+    stacks: [replicated, uninformative, contradicted]
+    x_axis_label: number of cohorts
+    annotations:
+      - "13 of the 21 rules cannot be tested at all and therefore have no bar — see the caption"
+      - "uninformative is a state, not weak evidence for a direction"
+
+  - id: panel_b_odds_ratios
+    role: primary
+    layout: full_width
+    title: "Odds ratio per (rule, cohort) pair, coloured by outcome state"
+    content: >-
+      Forest plot, one row per pre-registered confirmatory pair (18 rows).
+      Row label = "<state> · <rule> · <cohort>" so that the leading token both
+      names the state and drives the row colour. x = odds ratio. Estimates span
+      0.702 (CRELES r10) to 3.589
+      (CLHLS r02). Intervals are cluster-robust by person; SHARE is pooled over
+      five imputation replicates by Rubin's rules. Rows whose interval crosses 1
+      while the point estimate points away from the other cohorts (r10 in ELSA
+      and CRELES, r12 in SHARE) are visible as such and must not be read as
+      disagreement.
+    plot_type: forest
+    x_axis: odds ratio, cluster-robust 95% CI
+    annotations:
+      - "SHARE pooled over 5 imputation replicates (Rubin); all others single-fit"
+      - "covariates: age + sex + wave fixed effects, clustered by person"
+      - "q values are BHY over the 18-pair confirmatory family, not the exploratory sweep"
+
+backend:
+  value: python
+  lock: true
+  fallback_policy: stop_and_report
+# MANUALLY RENDERED (see review_risks -> log_axis_and_reference_RESOLVED).
+# The shared renderer's forest branch cannot draw a log axis or a null line, so
+# this figure is drawn by the project-local scripts/render_manual_figures.py,
+# which reads THIS contract's source_data CSV. Export spec is identical
+# (180 mm wide, 600 dpi, svg/pdf/tiff/png, TIFF LZW).
+renderer: scripts/render_manual_figures.py
+dependencies:
+  - matplotlib >= 3.7
+  - numpy
+  - pandas
+
+export:
+  dimensions_mm: [180, 150]
+  dpi: 600
+  formats: [svg, pdf, tiff, png]
+  editable_text: true
+  svg_fonttype: none
+  pdf_fonttype: 42
+  font_type: arial
+  font_size_range_pt: [6, 11]
+  color_mode: cmyk_friendly
+
+style:
+  theme: nmi_pastel
+  font_family: Arial
+  font_size_pt: 7
+  axes_linewidth: 0.8
+
+color_palette:
+  name: NMI_pastel
+  metrics:
+    replicated: "#9D2933"
+    uninformative: "#BFBFBF"
+    contradicted: "#2F5C8F"
+
+source_data:
+  csv_path: outputs/figures/source_data/figure8_cohort_transportability.csv
+  schema:
+    - column: cohort
+      values: [SHARE, HRS, ELSA, KLoSA, LASI, MHAS, CLHLS, CRELES]
+    - column: rule
+    - column: state_label
+    - column: state_code
+      note: "+1 replicated, 0 uninformative, -1 contradicted"
+    - column: three_state
+    - column: method
+      note: "'<state> · <rule>' — the forest row label; the leading state token drives the row colour"
+    - column: dataset
+      note: "= cohort; the forest renderer appends it to the row label"
+    - column: estimate
+      note: "odds ratio"
+    - column: ci_low
+    - column: ci_high
+    - column: n
+    - column: q_rule
+      note: "BHY over the 18-pair confirmatory family"
+    - column: q_exploratory
+      note: "BHY over all pairs tested in that cohort"
+    - column: case_id
+      note: "= rule; the stacked_bar case"
+    - column: layer
+      note: "= three_state; the stacked_bar segment"
+    - column: count
+      note: "1 per pair, so the stack tallies cohorts per state"
+  # Supporting sources (comments only — `additional_files` is not permitted by
+  # figure_contract.schema.json):
+  #   outputs/cohorts/cohort_rule_results.csv
+  #   outputs/cohorts/cohort_transportability.json
+  #   outputs/confirmatory/cohort_rule_coverage.json
+
+review_risks:
+  - id: coverage_misread
+    risk: "only 6 of 21 rules appear; a reader may take the absent rules as tested-and-null"
+    mitigation: "the title says 'can be tested', the caption lists all 15 untestable rules grouped by the five missing data types, and no bar exists for them"
+  - id: r10_direction_flip
+    risk: "the CLHLS protective estimate invites a causal reading ('smoking protects the lens')"
+    mitigation: "reported as a failure of transport with three competing explanations stated (competing-risk/survivorship, confounding, subtype-specific effect modification) and an explicit statement that this layer cannot distinguish them"
+  - id: selfreport_vs_exam
+    risk: "cataract/glaucoma here are self-reported physician diagnosis, while the NHANES layer used OPXRET examination grading"
+    mitigation: "caption states the two are not directly comparable in effect size; no cross-layer effect comparison is drawn"
+  - id: multiplicity
+    risk: "18 confirmatory pairs invite selective emphasis of the largest OR (CLHLS r02 = 3.59)"
+    mitigation: "every pair carries its interval and its confirmatory-family q; the transportability verdict, not the largest OR, carries the claim"
+  - id: clhls_severe_vision
+    risk: "the CLHLS severe-vision flag sits outside the age-unstratified plausibility band (25.7% at mean age 92)"
+    mitigation: "that flag is secondary-only in CLHLS (analysis_plan section 19.8) and no r20 result rests on it"
+  - id: log_axis_and_reference_RESOLVED
+    risk: "A forest plot of odds ratios should use a log axis and draw the null line at OR = 1. The renderer does NEITHER: its forest branch never sets xscale='log' and never passes `ref`, so make_forest_plot falls back to its default ref=0.0, a line that lands outside the plotted range and is therefore invisible. Established by reading the renderer source AFTER inspecting the render, not assumed."
+    mitigation: "RESOLVED by option (b). scripts/render_manual_figures.py draws this figure with a true log x axis, a dashed null line at OR = 1, and one colour per state chosen to differ in LIGHTNESS as well as hue so the three remain separable in greyscale. Verified by inspecting the render and cross-checking several rows against cohort_rule_results.csv (r02 CLHLS 3.59 [2.62,4.91]; r10 CLHLS 0.75 [0.64,0.87]; r13 SHARE 1.24 [1.20,1.29]). The shared renderer was left untouched because it is shared across projects and is outside this workspace. TIFF is written with lossless LZW, cutting it from 57.5 MB to 1.03 MB."
+
+legend:
+  position: below
+  font_size_pt: 7
+  items:
+    - "Unit = pre-registered (rule, cohort) pair; 18 pairs across 6 rules and 7 cohorts"
+    - "three states: replicated / uninformative / contradicted (R11 definition, analysis_plan section 19.7)"
+    - "transportable = replicated with q<0.05 in >=2 cohorts (pre-declared in section 19.7)"
+    - "13 rules have no bar at all: 5 need fundus imaging, 1 needs tonometry/optic-disc grading, 3 need geocoded exposure, 3 need blood assays, 2 need dietary indices"
+    - "forest intervals are cluster-robust by person; SHARE pooled over 5 imputations (Rubin)"
+    - "forest drawn on a log axis with the null line at OR = 1 (project-local renderer; see backend.renderer)"
+
+accessibility:
+  alt_text: >-
+    Two panels. Panel A stacks, per testable rule, how many cohorts ended
+    replicated, uninformative or contradicted: hyperglycaemia-to-cataract and
+    smoking-to-vision-impairment each have three replicated cohorts, while
+    smoking-to-cataract has one replicated and one contradicted. Panel B is a
+    forest plot of the 18 pairs, odds ratios from 0.70 to 3.59, with rows
+    coloured by state; the smoking-to-cataract rows show a risk-increasing
+    estimate in SHARE and protective estimates in CLHLS, ELSA and CRELES.
+  color_blind_safe: true

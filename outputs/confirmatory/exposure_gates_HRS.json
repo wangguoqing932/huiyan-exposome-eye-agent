@@ -1,0 +1,151 @@
+{
+  "cohort": "HRS",
+  "n_targets": 5,
+  "findings": [
+    {
+      "var": "XRC117",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_valid": 1214,
+      "own_positives": 183,
+      "own_positive_rate_if_naive": 0.1507,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "OC117",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_valid": 10391,
+      "own_positives": 2442,
+      "own_positive_rate_if_naive": 0.235,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "KZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 18256,
+          "gate_positives": 10340,
+          "rel_diff": 0.0049,
+          "gate_file": "2006 HRS\\H06PR_R.dta"
+        },
+        {
+          "gate_var": "OZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 18564,
+          "gate_positives": 10274,
+          "rel_diff": 0.0113,
+          "gate_file": "2014 HRS\\H14PR_R.dta"
+        },
+        {
+          "gate_var": "LZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 17074,
+          "gate_positives": 9610,
+          "rel_diff": 0.0752,
+          "gate_file": "2008 HRS\\H08PR_R.dta"
+        }
+      ]
+    },
+    {
+      "var": "PC117",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_valid": 11298,
+      "own_positives": 3053,
+      "own_positive_rate_if_naive": 0.2702,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "NZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 20117,
+          "gate_positives": 11258,
+          "rel_diff": 0.0035,
+          "gate_file": "2012 HRS\\H12PR_R.dta"
+        },
+        {
+          "gate_var": "KZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 18256,
+          "gate_positives": 10340,
+          "rel_diff": 0.0848,
+          "gate_file": "2006 HRS\\H06PR_R.dta"
+        },
+        {
+          "gate_var": "OZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 18564,
+          "gate_positives": 10274,
+          "rel_diff": 0.0906,
+          "gate_file": "2014 HRS\\H14PR_R.dta"
+        }
+      ]
+    },
+    {
+      "var": "RC117",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_valid": 8212,
+      "own_positives": 1851,
+      "own_positive_rate_if_naive": 0.2254,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "RZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 15258,
+          "gate_positives": 8113,
+          "rel_diff": 0.0121,
+          "gate_file": "2020 HRS\\2020 HRS Core\\h20sta\\H20PR_R.dta"
+        },
+        {
+          "gate_var": "MZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 15572,
+          "gate_positives": 8729,
+          "rel_diff": 0.063,
+          "gate_file": "2010 HRS\\H10PR_R.dta"
+        },
+        {
+          "gate_var": "PZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 16345,
+          "gate_positives": 8988,
+          "rel_diff": 0.0945,
+          "gate_file": "2016 HRS\\H16PR_R.dta"
+        }
+      ]
+    },
+    {
+      "var": "QC117",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_valid": 9192,
+      "own_positives": 2248,
+      "own_positive_rate_if_naive": 0.2446,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "QZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 16924,
+          "gate_positives": 9064,
+          "rel_diff": 0.0139,
+          "gate_file": "2018 HRS\\2018 HRS Core\\h18sta\\h18pr_r.dta"
+        },
+        {
+          "gate_var": "PZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 16345,
+          "gate_positives": 8988,
+          "rel_diff": 0.0222,
+          "gate_file": "2016 HRS\\H16PR_R.dta"
+        },
+        {
+          "gate_var": "LZ205",
+          "gate_label": "R REPORTED THAT S/HE EVER SMOKED",
+          "gate_n": 17074,
+          "gate_positives": 9610,
+          "rel_diff": 0.0455,
+          "gate_file": "2008 HRS\\H08PR_R.dta"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "cohort": "MHAS",
+  "n_targets": 15,
+  "findings": [
+    {
+      "var": "alcohol_01",
+      "label": "Currently drinks alcohol 2001",
+      "n_valid": 15175,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "tabaco_01",
+      "label": "Currently smokes tobacco 2001",
+      "n_valid": 15169,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "alcohol_03",
+      "label": "Currently drinks alcohol 2003",
+      "n_valid": 13700,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "tabaco_03",
+      "label": "Currently smokes tobacco 2003",
+      "n_valid": 13693,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "alcohol_12",
+      "label": "Currently drinks alcohol 2012",
+      "n_valid": 15719,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "tabaco_12",
+      "label": "Currently smokes tabacco 2012",
+      "n_valid": 15717,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "alcohol_15",
+      "label": "R currently drinks alcohol 2015",
+      "n_valid": 14770,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "tabaco_15",
+      "label": "R currently smokes tobacco 2015",
+      "n_valid": 14759,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "alcohol_21",
+      "label": "Currently drinks alcohol 2021",
+      "n_valid": 15736,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "tabaco_21",
+      "label": "Currently smokes tobacco 2021",
+      "n_valid": 15725,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "c55",
+      "label": "smoke now",
+      "n_valid": 6521,
+      "own_positives": 2647,
+      "own_positive_rate_if_naive": 0.4059,
+      "looks_gated": true,
+      "gate_candidates": [
+        {
+          "gate_var": "c54",
+          "gate_label": "ever smoked",
+          "gate_n": 15182,
+          "gate_positives": 6521,
+          "rel_diff": 0.0,
+          "gate_file": "wave1\\Core survey Data\\sect_c.dta"
+        }
+      ]
+    },
+    {
+      "var": "c10_15",
+      "label": "Is R's current diabetes under control",
+      "n_valid": 3417,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "c10_18",
+      "label": "Is R's current diabetes under control",
+      "n_valid": 3846,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "c10_21",
+      "label": "Is his/her diabetes currently under control",
+      "n_valid": 3813,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    },
+    {
+      "var": "c10_12",
+      "label": "Respondent's current diabetes status",
+      "n_valid": 3241,
+      "own_positives": null,
+      "own_positive_rate_if_naive": null,
+      "looks_gated": false,
+      "gate_candidates": []
+    }
+  ]
+}

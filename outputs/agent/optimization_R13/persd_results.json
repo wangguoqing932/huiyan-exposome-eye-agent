@@ -1,0 +1,47 @@
+{
+ "n_pairs_with_both_channels": 25,
+ "metrics_full_system": {
+  "binary": {
+   "TP": 11,
+   "FP": 14,
+   "FN": 0,
+   "P": 0.44,
+   "R": 1.0,
+   "F1": 0.611
+  },
+  "per_sd": {
+   "TP": 14,
+   "FP": 11,
+   "FN": 0,
+   "P": 0.56,
+   "R": 1.0,
+   "F1": 0.718
+  },
+  "union": {
+   "TP": 14,
+   "FP": 11,
+   "FN": 0,
+   "P": 0.56,
+   "R": 1.0,
+   "F1": 0.718
+  }
+ },
+ "flips": [
+  {
+   "ds": "nhanes",
+   "pair": "bmi_high x retinopathy_any",
+   "verdict": "FP→TP 候选(per-SD 复现)"
+  },
+  {
+   "ds": "nhanes",
+   "pair": "bmi_high x dr_npdr",
+   "verdict": "FP→TP 候选(per-SD 复现)"
+  },
+  {
+   "ds": "knhanes",
+   "pair": "bmi_high x cataract_any",
+   "verdict": "FP→TP 候选(per-SD 复现)"
+  }
+ ],
+ "note": "union=任一通道 replicated 即 replicated;per-SD 层已含 FDR(q_primary)"
+}

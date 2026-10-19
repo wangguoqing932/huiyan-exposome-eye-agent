@@ -1,0 +1,51 @@
+{
+  "alpha": 0.05,
+  "power": 0.8,
+  "method": "Wald log-OR, exact p0 solve, design effect derived from survey/model CI-width ratio",
+  "clinical_targets": [
+    1.5,
+    2.0
+  ],
+  "by_dataset": {
+    "nhanes": {
+      "dataset": "nhanes",
+      "tested_pairs": 159,
+      "median_design_effect": 1.069,
+      "median_mde_or_80": 1.337,
+      "rule_relevant_tested": 19,
+      "rule_power_class": {
+        "powered_for_1.5x": 14,
+        "not_assessable": 2,
+        "powered_for_2.0x": 2,
+        "powered_for_3.0x": 1
+      },
+      "rule_nulls": 13,
+      "rule_null_type": {
+        "powered_null": 10,
+        "not_assessable": 2,
+        "underpowered_null": 1
+      },
+      "informative_null_rate": 0.769
+    },
+    "knhanes": {
+      "dataset": "knhanes",
+      "tested_pairs": 301,
+      "median_design_effect": 1.262,
+      "median_mde_or_80": 1.159,
+      "rule_relevant_tested": 16,
+      "rule_power_class": {
+        "powered_for_1.5x": 11,
+        "not_assessable": 3,
+        "powered_for_3.0x": 1,
+        "powered_for_2.0x": 1
+      },
+      "rule_nulls": 11,
+      "rule_null_type": {
+        "powered_null": 7,
+        "not_assessable": 3,
+        "underpowered_null": 1
+      },
+      "informative_null_rate": 0.636
+    }
+  }
+}

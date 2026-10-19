@@ -1,0 +1,248 @@
+{
+  "cohort": "MHAS",
+  "root": "E:\\BaiduNetdiskDownload\\所有数据库\\06. MHAS 墨西哥健康与老龄化研究\\MHAS_墨西哥\\Raw_data",
+  "files": 178,
+  "scanned": 178,
+  "candidates": [
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c29c",
+      "rows": 15182,
+      "n_valid": 391,
+      "dtype": "float32",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 213,
+        "2.0": 177,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "wave1\\Core survey Data\\sect_c.dta",
+      "var": "c45",
+      "rows": 15182,
+      "n_valid": 14150,
+      "dtype": "float32",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 427,
+        "2.0": 1363,
+        "3.0": 6029,
+        "4.0": 4891,
+        "5.0": 1295,
+        "6.0": 44,
+        "8.0": 58,
+        "9.0": 43
+      }
+    },
+    {
+      "file": "wave4\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2016.dta",
+      "var": "mc_q11_1_l_16",
+      "rows": 2042,
+      "n_valid": 2040,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "1: Yes / Si": 54,
+        "2: No / No": 1986,
+        "nan": 2
+      }
+    },
+    {
+      "file": "wave6\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2021.dta",
+      "var": "mc_filtro_2_21",
+      "rows": 3575,
+      "n_valid": 3575,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "1: Yes": 82,
+        "2: No": 3493
+      }
+    },
+    {
+      "file": "wave6\\Cognitive Aging Ancillary Study (Mex-Cog)\\Cognitive_Assessment_Mex_Cog_2021.dta",
+      "var": "mc_filtro_3_21",
+      "rows": 3575,
+      "n_valid": 3435,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "1: Yes": 58,
+        "2: No": 3377,
+        "nan": 140
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c27_3_15",
+      "rows": 14779,
+      "n_valid": 356,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 157,
+        "2.No": 198,
+        "9.DK": 1,
+        "nan": 14423
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "c42_15",
+      "rows": 14779,
+      "n_valid": 13848,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "1.Excellent": 580,
+        "2.Very good": 909,
+        "3.Good": 5815,
+        "4.Fair": 5507,
+        "5.Poor": 979,
+        "6.Legally blind": 47,
+        "9.DK": 11,
+        "nan": 931
+      }
+    },
+    {
+      "file": "wave4\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2015.dta",
+      "var": "e2_15",
+      "rows": 14779,
+      "n_valid": 13767,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 11213,
+        "2.No": 2554,
+        "nan": 1012
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c27_3_18",
+      "rows": 17114,
+      "n_valid": 437,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 213,
+        "2.No": 223,
+        "8.RF": 1,
+        "nan": 16677
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "c42_18",
+      "rows": 17114,
+      "n_valid": 15786,
+      "dtype": "category",
+      "n_distinct": 9,
+      "values": {
+        "1.Excellent": 910,
+        "2.Very good": 1366,
+        "3.Good": 5879,
+        "4.Fair": 6447,
+        "5.Poor": 1097,
+        "6.Legally blind": 49,
+        "8.RF": 13,
+        "9.DK": 25,
+        "nan": 1328
+      }
+    },
+    {
+      "file": "wave5\\Core survey Data\\sect_a_c_d_f_e_pc_h_i_2018.dta",
+      "var": "e2_18",
+      "rows": 17114,
+      "n_valid": 15762,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "1.Yes": 12232,
+        "2.No": 3530,
+        "nan": 1352
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c27_3_21",
+      "rows": 15739,
+      "n_valid": 405,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "1.Yes": 191,
+        "2.No": 213,
+        "9.DK": 1,
+        "nan": 15334
+      }
+    },
+    {
+      "file": "wave6\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_2021.dta",
+      "var": "c42_21",
+      "rows": 15739,
+      "n_valid": 14484,
+      "dtype": "category",
+      "n_distinct": 9,
+      "values": {
+        "1.Excellent": 859,
+        "2.Very good": 1200,
+        "3.Good": 5819,
+        "4.Fair": 5608,
+        "5.Poor": 915,
+        "6.Legally blind": 62,
+        "8.RF": 2,
+        "9.DK": 19,
+        "nan": 1255
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c27_3_12",
+      "rows": 15723,
+      "n_valid": 369,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No 2": 188,
+        "Yes 1": 181,
+        "nan": 15354
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "c42_12",
+      "rows": 15723,
+      "n_valid": 14448,
+      "dtype": "category",
+      "n_distinct": 9,
+      "values": {
+        "DK 9": 271,
+        "Excellent 1": 604,
+        "Fair 4": 5071,
+        "Good 3": 6203,
+        "Legally blind 6": 41,
+        "Poor 5": 1014,
+        "RF 8": 76,
+        "Very Good 2": 1168,
+        "nan": 1275
+      }
+    },
+    {
+      "file": "wave3\\Core survey Data\\sect_a_c_d_e_pc_f_h_i_em_2012.dta",
+      "var": "e2_12",
+      "rows": 15723,
+      "n_valid": 14157,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No 2": 3408,
+        "Yes 1": 10749,
+        "nan": 1566
+      }
+    }
+  ],
+  "notes": [],
+  "files_with_candidates": 7
+}

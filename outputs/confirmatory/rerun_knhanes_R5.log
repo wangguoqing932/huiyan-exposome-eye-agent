@@ -1,0 +1,23 @@
+
+============================================================
+KNHANES confirmatory (analysis_plan v1.1)
+============================================================
+frame: n=38426, waves=10
+[metrics] D5: excluded 6 non-judgeable pairs
+{
+  "rule_pairs_tested": 10,
+  "replicated": 2,
+  "contradicted": 0,
+  "uninformative": 8,
+  "separation": 0,
+  "precision_rule": 1.0,
+  "precision_rule_ci95": [
+    0.158,
+    1.0
+  ],
+  "coverage": 0.233,
+  "uncovered_significant": 1,
+  "uncovered_pairs": 33,
+  "negative_control_pairs": 0,
+  "negative_control_outcome": {}
+}

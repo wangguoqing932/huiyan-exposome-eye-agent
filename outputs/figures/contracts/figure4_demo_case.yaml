@@ -4,7 +4,7 @@
 
 figure_id: figure4_demo_case
 title: "Demo case: 暴露组（代谢-营养-生活方式-环境） × 主要致盲眼病 risk evaluation"
-figure_number: 4
+figure_number: S1
 manuscript_section: Results → Qualitative Case Demonstration
 
 core_conclusion: >-
@@ -165,3 +165,9 @@ accessibility:
     Four-panel case demonstration showing input summary, triggered rule bars,
     evidence level pyramid, and traceability flow from inputs to final risk.
   color_blind_safe: true
+
+disposition: withdrawn
+withdrawn_reason: >
+  Panels contained only the renderer's placeholder text. Not
+  rendered, and not needed for the cohort-layer argument. Retained
+  here so the placeholder scan keeps reporting it.

@@ -1,20 +1,62 @@
 {
-  "rule_pairs_tested": 14,
-  "replicated": 7,
+  "rule_pairs_tested": 16,
+  "replicated": 6,
   "contradicted": 0,
-  "uninformative": 7,
+  "uninformative": 10,
   "separation": 0,
   "precision_rule": 1.0,
   "precision_rule_ci95": [
-    0.59,
+    0.541,
     1.0
   ],
-  "coverage": 0.269,
+  "coverage": 0.889,
+  "coverage_definition": "P(tested | rule exists, judgeable, non-negative-control) — R11 fixed; the old formula divided by ALL testable pairs",
+  "coverage_of_full_matrix": 0.131,
+  "rule_relevant_pairs": 18,
+  "precision_binary_uninf_as_fp": 0.375,
+  "precision_binary_ci95": [
+    0.152,
+    0.646
+  ],
   "uncovered_significant": 0,
-  "uncovered_pairs": 38,
+  "uncovered_pairs": 106,
+  "matrix_tested_pairs": 122,
+  "matrix_significant_pairs": 6,
+  "matrix_significant_uncovered": 0,
   "negative_control_pairs": 1,
   "negative_control_outcome": {
     "uninformative": 1
   },
-  "ci_method": "Clopper-Pearson exact binomial (v1.2 metrics fix 2026-10-12; replaces degenerate bootstrap)"
+  "variance_standard": "survey svyglm (analysis_plan §6, pre-registered)",
+  "sensitivity_freq_weights": {
+    "rule_pairs_tested": 16,
+    "replicated": 8,
+    "contradicted": 0,
+    "uninformative": 8,
+    "separation": 0,
+    "precision_rule": 1.0,
+    "precision_rule_ci95": [
+      0.631,
+      1.0
+    ],
+    "coverage": 0.889,
+    "coverage_definition": "P(tested | rule exists, judgeable, non-negative-control) — R11 fixed; the old formula divided by ALL testable pairs",
+    "coverage_of_full_matrix": 0.131,
+    "rule_relevant_pairs": 18,
+    "precision_binary_uninf_as_fp": 0.5,
+    "precision_binary_ci95": [
+      0.247,
+      0.753
+    ],
+    "uncovered_significant": 2,
+    "uncovered_pairs": 106,
+    "matrix_tested_pairs": 122,
+    "matrix_significant_pairs": 10,
+    "matrix_significant_uncovered": 2,
+    "negative_control_pairs": 1,
+    "negative_control_outcome": {
+      "uninformative": 1
+    }
+  },
+  "note": "R5 2026-10-14: headline labels use survey-design variance (svyglm strata/PSU, scripts/survey_sensitivity_R5.R); the Python freq_weights GLM is retained as sensitivity. q_svy computed over all tested pairs (same BHY denominator as main analysis)."
 }

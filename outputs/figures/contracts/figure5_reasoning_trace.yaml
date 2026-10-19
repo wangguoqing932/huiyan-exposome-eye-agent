@@ -4,7 +4,7 @@
 
 figure_id: figure5_reasoning_trace
 title: "Step-by-step reasoning trace across the three architectural layers"
-figure_number: 5
+figure_number: S2
 manuscript_section: Results → Interpretability / Supplementary
 
 core_conclusion: >-
@@ -182,3 +182,9 @@ accessibility:
     Three-panel figure showing reasoning swim-lanes, latency breakdown, and
     knowledge-graph path network for a demo case.
   color_blind_safe: true
+
+disposition: withdrawn
+withdrawn_reason: >
+  Panels contained only the renderer's placeholder text. Not
+  rendered, and not needed for the cohort-layer argument. Retained
+  here so the placeholder scan keeps reporting it.

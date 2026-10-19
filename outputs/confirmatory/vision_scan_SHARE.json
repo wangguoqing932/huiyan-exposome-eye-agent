@@ -1,0 +1,1285 @@
+{
+  "cohort": "SHARE",
+  "root": "E:\\BaiduNetdiskDownload\\所有数据库\\07. SHARE 欧洲健康退休与老龄化调查\\SHARE_欧洲\\Raw_data",
+  "files": 331,
+  "scanned": 331,
+  "candidates": [
+    {
+      "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_ph.dta",
+      "var": "ph006d13",
+      "rows": 30416,
+      "n_valid": 30283,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 19,
+        "Not selected": 27977,
+        "Refusal": 13,
+        "Selected": 2274,
+        "nan": 133
+      }
+    },
+    {
+      "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_ph.dta",
+      "var": "ph009_13",
+      "rows": 30416,
+      "n_valid": 2275,
+      "dtype": "category",
+      "n_distinct": 81,
+      "values": {
+        "0.0": 5,
+        "1.0": 9,
+        "12.0": 1,
+        "13.0": 2,
+        "15.0": 2,
+        "16.0": 2,
+        "18.0": 3,
+        "19.0": 1,
+        "2.0": 5,
+        "20.0": 2
+      }
+    },
+    {
+      "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_ph.dta",
+      "var": "ph042_",
+      "rows": 30416,
+      "n_valid": 30275,
+      "dtype": "category",
+      "n_distinct": 9,
+      "values": {
+        "Don't know": 6,
+        "Excellent": 4447,
+        "Fair": 3788,
+        "Good": 12797,
+        "Poor": 973,
+        "Refusal": 12,
+        "SPONTANEOUS registered or legally blind": 63,
+        "Very good": 8189,
+        "nan": 141
+      }
+    },
+    {
+      "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_ph.dta",
+      "var": "ph043_",
+      "rows": 30416,
+      "n_valid": 30193,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 24,
+        "Excellent": 6670,
+        "Fair": 2594,
+        "Good": 10651,
+        "Poor": 1083,
+        "Refusal": 11,
+        "Very good": 9160,
+        "nan": 223
+      }
+    },
+    {
+      "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_ph.dta",
+      "var": "ph044_",
+      "rows": 30416,
+      "n_valid": 30193,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 14,
+        "Excellent": 4791,
+        "Fair": 4544,
+        "Good": 10602,
+        "Poor": 2625,
+        "Refusal": 2,
+        "Very good": 7615,
+        "nan": 223
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_hs.dta",
+      "var": "hs056d6_1",
+      "rows": 77181,
+      "n_valid": 8962,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 15,
+        "Not selected": 8210,
+        "Refusal": 2,
+        "Selected": 735,
+        "nan": 68219
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_hs.dta",
+      "var": "hs056d6_2",
+      "rows": 77181,
+      "n_valid": 1711,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 4,
+        "Not selected": 1613,
+        "Refusal": 2,
+        "Selected": 92,
+        "nan": 75470
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_hs.dta",
+      "var": "hs056d6_3",
+      "rows": 77181,
+      "n_valid": 373,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 5,
+        "Not selected": 352,
+        "Refusal": 1,
+        "Selected": 15,
+        "nan": 76808
+      }
+    },
+    {
+      "file": "Wave 2 Release 9.0.0\\sharew2_rel9-0-0_ph.dta",
+      "var": "ph006d13",
+      "rows": 37132,
+      "n_valid": 37013,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 29,
+        "Not selected": 34277,
+        "Refusal": 17,
+        "Selected": 2690,
+        "nan": 119
+      }
+    },
+    {
+      "file": "Wave 2 Release 9.0.0\\sharew2_rel9-0-0_ph.dta",
+      "var": "ph009_13",
+      "rows": 37132,
+      "n_valid": 1166,
+      "dtype": "category",
+      "n_distinct": 68,
+      "values": {
+        "0.0": 2,
+        "1.0": 3,
+        "15.0": 1,
+        "18.0": 2,
+        "2.0": 1,
+        "20.0": 2,
+        "25.0": 1,
+        "3.0": 2,
+        "35.0": 6,
+        "38.0": 1
+      }
+    },
+    {
+      "file": "Wave 2 Release 9.0.0\\sharew2_rel9-0-0_ph.dta",
+      "var": "ph043_",
+      "rows": 37132,
+      "n_valid": 37020,
+      "dtype": "category",
+      "n_distinct": 9,
+      "values": {
+        "Don't know": 56,
+        "Excellent": 7819,
+        "Fair": 3634,
+        "Good": 13325,
+        "Poor": 1773,
+        "Refusal": 6,
+        "SPONTANEOUS registered or legally blind": 4,
+        "Very good": 10403,
+        "nan": 112
+      }
+    },
+    {
+      "file": "Wave 2 Release 9.0.0\\sharew2_rel9-0-0_ph.dta",
+      "var": "ph044_",
+      "rows": 37132,
+      "n_valid": 37020,
+      "dtype": "category",
+      "n_distinct": 9,
+      "values": {
+        "Don't know": 59,
+        "Excellent": 6001,
+        "Fair": 5197,
+        "Good": 12902,
+        "Poor": 3686,
+        "Refusal": 4,
+        "SPONTANEOUS registered or legally blind": 4,
+        "Very good": 9167,
+        "nan": 112
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hs.dta",
+      "var": "sl_hs056d6_1",
+      "rows": 28454,
+      "n_valid": 6034,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 5,
+        "Not selected": 5530,
+        "Selected": 499,
+        "nan": 22420
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hs.dta",
+      "var": "sl_hs056d6_2",
+      "rows": 28454,
+      "n_valid": 1210,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 1,
+        "Not selected": 1141,
+        "Selected": 68,
+        "nan": 27244
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hs.dta",
+      "var": "sl_hs056d6_3",
+      "rows": 28454,
+      "n_valid": 306,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Not selected": 290,
+        "Refusal": 2,
+        "Selected": 14,
+        "nan": 28148
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc076_",
+      "rows": 28454,
+      "n_valid": 28369,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 30,
+        "No": 10028,
+        "Refusal": 3,
+        "Yes": 18308,
+        "nan": 85
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc077_",
+      "rows": 28454,
+      "n_valid": 18308,
+      "dtype": "category",
+      "n_distinct": 87,
+      "values": {
+        "1922.0": 1,
+        "1926.0": 2,
+        "1927.0": 2,
+        "1929.0": 4,
+        "1930.0": 6,
+        "1931.0": 7,
+        "1932.0": 5,
+        "1933.0": 7,
+        "1934.0": 14,
+        "1935.0": 18
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc078_",
+      "rows": 28454,
+      "n_valid": 18308,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 4,
+        "No": 1371,
+        "Refusal": 1,
+        "Yes": 16932,
+        "nan": 10146
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc078ad1",
+      "rows": 28454,
+      "n_valid": 1371,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 19,
+        "Not selected": 901,
+        "Refusal": 3,
+        "Selected": 448,
+        "nan": 27083
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc078ad2",
+      "rows": 28454,
+      "n_valid": 1371,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 19,
+        "Not selected": 867,
+        "Refusal": 3,
+        "Selected": 482,
+        "nan": 27083
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc078ad3",
+      "rows": 28454,
+      "n_valid": 1371,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 19,
+        "Not selected": 811,
+        "Refusal": 3,
+        "Selected": 538,
+        "nan": 27083
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc078ad4",
+      "rows": 28454,
+      "n_valid": 1371,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 19,
+        "Not selected": 791,
+        "Refusal": 3,
+        "Selected": 558,
+        "nan": 27083
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc078ad5",
+      "rows": 28454,
+      "n_valid": 1371,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 19,
+        "Not selected": 907,
+        "Refusal": 3,
+        "Selected": 442,
+        "nan": 27083
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc078ad6",
+      "rows": 28454,
+      "n_valid": 1371,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 19,
+        "Not selected": 1089,
+        "Refusal": 3,
+        "Selected": 260,
+        "nan": 27083
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc078ad7",
+      "rows": 28454,
+      "n_valid": 1371,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 19,
+        "Not selected": 1203,
+        "Refusal": 3,
+        "Selected": 146,
+        "nan": 27083
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc085_",
+      "rows": 28454,
+      "n_valid": 18308,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "At least once a year": 8500,
+        "Don't know": 20,
+        "Less often": 4130,
+        "Not every year, but at least every two years": 5658,
+        "nan": 10146
+      }
+    },
+    {
+      "file": "Wave 3 Release 9.0.0\\sharew3_rel9-0-0_hc.dta",
+      "var": "sl_hc086d1",
+      "rows": 28454,
+      "n_valid": 11399,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 10,
+        "Not selected": 11192,
+        "Selected": 197,
+        "nan": 17055
+      }
+    },
+    {
+      "file": "Wave 4 Release 9.0.0\\sharew4_rel9-0-0_ph.dta",
+      "var": "ph006d13",
+      "rows": 57982,
+      "n_valid": 57755,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 45,
+        "Not selected": 52740,
+        "Refusal": 42,
+        "Selected": 4928,
+        "nan": 227
+      }
+    },
+    {
+      "file": "Wave 4 Release 9.0.0\\sharew4_rel9-0-0_ph.dta",
+      "var": "ph009_13",
+      "rows": 57982,
+      "n_valid": 3278,
+      "dtype": "category",
+      "n_distinct": 87,
+      "values": {
+        "0.0": 3,
+        "1.0": 9,
+        "10.0": 7,
+        "11.0": 2,
+        "12.0": 1,
+        "15.0": 1,
+        "18.0": 1,
+        "19.0": 2,
+        "2.0": 2,
+        "20.0": 4
+      }
+    },
+    {
+      "file": "Wave 4 Release 9.0.0\\sharew4_rel9-0-0_ph.dta",
+      "var": "ph043_",
+      "rows": 57982,
+      "n_valid": 57745,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 110,
+        "Excellent": 10477,
+        "Fair": 6977,
+        "Good": 21934,
+        "Poor": 2880,
+        "Refusal": 20,
+        "Very good": 15347,
+        "nan": 237
+      }
+    },
+    {
+      "file": "Wave 4 Release 9.0.0\\sharew4_rel9-0-0_ph.dta",
+      "var": "ph044_",
+      "rows": 57982,
+      "n_valid": 57745,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 111,
+        "Excellent": 7568,
+        "Fair": 9873,
+        "Good": 20589,
+        "Poor": 6607,
+        "Refusal": 23,
+        "Very good": 12974,
+        "nan": 237
+      }
+    },
+    {
+      "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_ph.dta",
+      "var": "ph006d13",
+      "rows": 66038,
+      "n_valid": 65873,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 38,
+        "Not selected": 60052,
+        "Refusal": 25,
+        "Selected": 5758,
+        "nan": 165
+      }
+    },
+    {
+      "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_ph.dta",
+      "var": "ph009_13",
+      "rows": 66038,
+      "n_valid": 2074,
+      "dtype": "category",
+      "n_distinct": 79,
+      "values": {
+        "0.0": 71,
+        "1.0": 4,
+        "12.0": 1,
+        "17.0": 1,
+        "18.0": 1,
+        "2.0": 1,
+        "20.0": 1,
+        "22.0": 1,
+        "24.0": 2,
+        "25.0": 1
+      }
+    },
+    {
+      "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_ph.dta",
+      "var": "ph043_",
+      "rows": 66038,
+      "n_valid": 65834,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 89,
+        "Excellent": 13910,
+        "Fair": 6893,
+        "Good": 23849,
+        "Poor": 2785,
+        "Refusal": 13,
+        "Very good": 18295,
+        "nan": 204
+      }
+    },
+    {
+      "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_ph.dta",
+      "var": "ph044_",
+      "rows": 66038,
+      "n_valid": 65844,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 66,
+        "Excellent": 11196,
+        "Fair": 9049,
+        "Good": 23831,
+        "Poor": 4704,
+        "Refusal": 9,
+        "Very good": 16989,
+        "nan": 194
+      }
+    },
+    {
+      "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_ph.dta",
+      "var": "ph006d13",
+      "rows": 68055,
+      "n_valid": 67945,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 22,
+        "Not selected": 62349,
+        "Refusal": 24,
+        "Selected": 5550,
+        "nan": 110
+      }
+    },
+    {
+      "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_ph.dta",
+      "var": "ph009_13",
+      "rows": 68055,
+      "n_valid": 734,
+      "dtype": "category",
+      "n_distinct": 66,
+      "values": {
+        "1.0": 2,
+        "15.0": 1,
+        "2.0": 2,
+        "20.0": 2,
+        "25.0": 1,
+        "27.0": 1,
+        "28.0": 1,
+        "3.0": 1,
+        "33.0": 2,
+        "35.0": 3
+      }
+    },
+    {
+      "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_ph.dta",
+      "var": "ph043_",
+      "rows": 68055,
+      "n_valid": 67941,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 66,
+        "Excellent": 12630,
+        "Fair": 7649,
+        "Good": 25373,
+        "Poor": 2611,
+        "Refusal": 18,
+        "Very good": 19594,
+        "nan": 114
+      }
+    },
+    {
+      "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_ph.dta",
+      "var": "ph044_",
+      "rows": 68055,
+      "n_valid": 67941,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 77,
+        "Excellent": 10589,
+        "Fair": 8650,
+        "Good": 25750,
+        "Poor": 3913,
+        "Refusal": 17,
+        "Very good": 18945,
+        "nan": 114
+      }
+    },
+    {
+      "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_ph.dta",
+      "var": "ph690d2",
+      "rows": 68055,
+      "n_valid": 56609,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 15,
+        "Not selected": 26860,
+        "Refusal": 2,
+        "Selected": 29732,
+        "nan": 11446
+      }
+    },
+    {
+      "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_ph.dta",
+      "var": "ph690d3",
+      "rows": 68055,
+      "n_valid": 56609,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 15,
+        "Not selected": 45581,
+        "Refusal": 2,
+        "Selected": 11011,
+        "nan": 11446
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_ph.dta",
+      "var": "ph006d13",
+      "rows": 77181,
+      "n_valid": 76806,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 118,
+        "Not selected": 70156,
+        "Refusal": 39,
+        "Selected": 6493,
+        "nan": 375
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_ph.dta",
+      "var": "ph009_13",
+      "rows": 77181,
+      "n_valid": 47,
+      "dtype": "category",
+      "n_distinct": 28,
+      "values": {
+        "50.0": 1,
+        "52.0": 1,
+        "55.0": 2,
+        "56.0": 1,
+        "57.0": 1,
+        "59.0": 1,
+        "60.0": 1,
+        "61.0": 1,
+        "62.0": 1,
+        "63.0": 3
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_ph.dta",
+      "var": "ph043_",
+      "rows": 77181,
+      "n_valid": 13939,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 18,
+        "Excellent": 2497,
+        "Fair": 1522,
+        "Good": 5395,
+        "Poor": 536,
+        "Refusal": 1,
+        "Very good": 3970,
+        "nan": 63242
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_ph.dta",
+      "var": "ph044_",
+      "rows": 77181,
+      "n_valid": 13939,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 31,
+        "Excellent": 2184,
+        "Fair": 1755,
+        "Good": 5295,
+        "Poor": 773,
+        "Refusal": 1,
+        "Very good": 3900,
+        "nan": 63242
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_ph.dta",
+      "var": "ph690d2",
+      "rows": 77181,
+      "n_valid": 11689,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 10,
+        "Not selected": 6048,
+        "Selected": 5631,
+        "nan": 65492
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_ph.dta",
+      "var": "ph690d3",
+      "rows": 77181,
+      "n_valid": 11689,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "Don't know": 10,
+        "Not selected": 9381,
+        "Selected": 2298,
+        "nan": 65492
+      }
+    },
+    {
+      "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_ph.dta",
+      "var": "ph006d13",
+      "rows": 53695,
+      "n_valid": 53589,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 45,
+        "Not selected": 48541,
+        "Refusal": 22,
+        "Selected": 4981,
+        "nan": 106
+      }
+    },
+    {
+      "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_ph.dta",
+      "var": "ph009_13",
+      "rows": 53695,
+      "n_valid": 1267,
+      "dtype": "category",
+      "n_distinct": 70,
+      "values": {
+        "0.0": 2,
+        "1.0": 1,
+        "10.0": 3,
+        "15.0": 2,
+        "18.0": 1,
+        "19.0": 2,
+        "20.0": 6,
+        "25.0": 2,
+        "3.0": 1,
+        "30.0": 4
+      }
+    },
+    {
+      "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_ph.dta",
+      "var": "ph043_",
+      "rows": 53695,
+      "n_valid": 53581,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 117,
+        "Excellent": 9413,
+        "Fair": 5901,
+        "Good": 20557,
+        "Poor": 1890,
+        "Refusal": 27,
+        "Very good": 15676,
+        "nan": 114
+      }
+    },
+    {
+      "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_ph.dta",
+      "var": "ph044_",
+      "rows": 53695,
+      "n_valid": 53581,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 118,
+        "Excellent": 8306,
+        "Fair": 6454,
+        "Good": 20728,
+        "Poor": 2725,
+        "Refusal": 26,
+        "Very good": 15224,
+        "nan": 114
+      }
+    },
+    {
+      "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_ph.dta",
+      "var": "ph690d2",
+      "rows": 53695,
+      "n_valid": 44598,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 21,
+        "Not selected": 19913,
+        "Refusal": 1,
+        "Selected": 24663,
+        "nan": 9097
+      }
+    },
+    {
+      "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_ph.dta",
+      "var": "ph690d3",
+      "rows": 53695,
+      "n_valid": 44598,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 21,
+        "Not selected": 36134,
+        "Refusal": 1,
+        "Selected": 8442,
+        "nan": 9097
+      }
+    },
+    {
+      "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_ph.dta",
+      "var": "ph006d13",
+      "rows": 69447,
+      "n_valid": 69351,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 51,
+        "Not selected": 63659,
+        "Refusal": 52,
+        "Selected": 5589,
+        "nan": 96
+      }
+    },
+    {
+      "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_ph.dta",
+      "var": "ph009_13",
+      "rows": 69447,
+      "n_valid": 1035,
+      "dtype": "category",
+      "n_distinct": 66,
+      "values": {
+        "0.0": 1,
+        "1.0": 1,
+        "12.0": 1,
+        "15.0": 1,
+        "19.0": 1,
+        "2.0": 3,
+        "20.0": 2,
+        "28.0": 1,
+        "29.0": 1,
+        "30.0": 3
+      }
+    },
+    {
+      "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_ph.dta",
+      "var": "ph043_",
+      "rows": 69447,
+      "n_valid": 69345,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 193,
+        "Excellent": 11285,
+        "Fair": 8007,
+        "Good": 28615,
+        "Poor": 2267,
+        "Refusal": 28,
+        "Very good": 18950,
+        "nan": 102
+      }
+    },
+    {
+      "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_ph.dta",
+      "var": "ph044_",
+      "rows": 69447,
+      "n_valid": 69345,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "Don't know": 188,
+        "Excellent": 9957,
+        "Fair": 8916,
+        "Good": 28305,
+        "Poor": 3132,
+        "Refusal": 28,
+        "Very good": 18819,
+        "nan": 102
+      }
+    },
+    {
+      "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_ph.dta",
+      "var": "ph690d2",
+      "rows": 69447,
+      "n_valid": 57673,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 16,
+        "Not selected": 24426,
+        "Refusal": 3,
+        "Selected": 33228,
+        "nan": 11774
+      }
+    },
+    {
+      "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_ph.dta",
+      "var": "ph690d3",
+      "rows": 69447,
+      "n_valid": 57673,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Don't know": 16,
+        "Not selected": 46708,
+        "Refusal": 3,
+        "Selected": 10946,
+        "nan": 11774
+      }
+    },
+    {
+      "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr",
+      "rows": 152080,
+      "n_valid": 152080,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Excellent": 24130,
+        "Fair": 22923,
+        "Good": 53452,
+        "Poor": 13259,
+        "Very good": 38316
+      }
+    },
+    {
+      "file": "Wave 1 Release 9.0.0\\sharew1_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr_f",
+      "rows": 152080,
+      "n_valid": 152080,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Imp: missing value": 1195,
+        "Regular obs.": 150885
+      }
+    },
+    {
+      "file": "Wave 4 Release 9.0.0\\sharew4_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr",
+      "rows": 289910,
+      "n_valid": 289910,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Excellent": 38087,
+        "Fair": 49668,
+        "Good": 103607,
+        "Poor": 33256,
+        "Very good": 65292
+      }
+    },
+    {
+      "file": "Wave 4 Release 9.0.0\\sharew4_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr_f",
+      "rows": 289910,
+      "n_valid": 289910,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Imp: missing value": 1855,
+        "Regular obs.": 288055
+      }
+    },
+    {
+      "file": "Wave 2 Release 9.0.0\\sharew2_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr",
+      "rows": 185660,
+      "n_valid": 185660,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Excellent": 30138,
+        "Fair": 26131,
+        "Good": 64806,
+        "Poor": 18554,
+        "Very good": 46031
+      }
+    },
+    {
+      "file": "Wave 2 Release 9.0.0\\sharew2_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr_f",
+      "rows": 185660,
+      "n_valid": 185660,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Imp: missing value": 895,
+        "Regular obs.": 184765
+      }
+    },
+    {
+      "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr",
+      "rows": 340275,
+      "n_valid": 340275,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Excellent": 53066,
+        "Fair": 43426,
+        "Good": 129152,
+        "Poor": 19665,
+        "Very good": 94966
+      }
+    },
+    {
+      "file": "Wave 6 Release 9.0.0\\sharew6_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr_f",
+      "rows": 340275,
+      "n_valid": 340275,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Imp: missing value": 1040,
+        "Regular obs.": 339235
+      }
+    },
+    {
+      "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr",
+      "rows": 330190,
+      "n_valid": 330190,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Excellent": 56160,
+        "Fair": 45453,
+        "Good": 119647,
+        "Poor": 23644,
+        "Very good": 85286
+      }
+    },
+    {
+      "file": "Wave 5 Release 9.0.0\\sharew5_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr_f",
+      "rows": 330190,
+      "n_valid": 330190,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Imp: missing value": 1345,
+        "Regular obs.": 328845
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr",
+      "rows": 385905,
+      "n_valid": 385905,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Excellent": 10953,
+        "Fair": 8808,
+        "Good": 26542,
+        "Not applicable": 316165,
+        "Poor": 3880,
+        "Very good": 19557
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr_f",
+      "rows": 385905,
+      "n_valid": 385905,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "Imp: missing value": 205,
+        "Missing by design": 316165,
+        "Regular obs.": 69535
+      }
+    },
+    {
+      "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr",
+      "rows": 347235,
+      "n_valid": 347235,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Excellent": 49964,
+        "Fair": 44821,
+        "Good": 142194,
+        "Poor": 15778,
+        "Very good": 94478
+      }
+    },
+    {
+      "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr_f",
+      "rows": 347235,
+      "n_valid": 347235,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Imp: missing value": 1590,
+        "Regular obs.": 345645
+      }
+    },
+    {
+      "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr",
+      "rows": 268475,
+      "n_valid": 268475,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "Excellent": 41677,
+        "Fair": 32467,
+        "Good": 104145,
+        "Poor": 13733,
+        "Very good": 76453
+      }
+    },
+    {
+      "file": "Wave 8 Release 9.0.0\\sharew8_rel9-0-0_gv_imputations.dta",
+      "var": "eyesightr_f",
+      "rows": 268475,
+      "n_valid": 268475,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "Imp: missing value": 1290,
+        "Regular obs.": 267185
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_dropoff.dta",
+      "var": "fi_g15_1",
+      "rows": 24677,
+      "n_valid": 1280,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "2.5": 1,
+        "Every now and then": 259,
+        "Never": 334,
+        "Not applicable or Cannot say": 13,
+        "Often": 37,
+        "Seldom": 526,
+        "Sometimes": 110,
+        "nan": 23397
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_dropoff.dta",
+      "var": "pl_q8_eyesight_distance",
+      "rows": 24677,
+      "n_valid": 4118,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Excellent": 228,
+        "Fair": 636,
+        "Good": 2271,
+        "Poor": 239,
+        "Very good": 744,
+        "nan": 20559
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_dropoff.dta",
+      "var": "pl_q9_eyesight_close",
+      "rows": 24677,
+      "n_valid": 4119,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Excellent": 176,
+        "Fair": 682,
+        "Good": 2300,
+        "Poor": 259,
+        "Very good": 702,
+        "nan": 20558
+      }
+    },
+    {
+      "file": "Wave 7 Release 9.0.0\\sharew7_rel9-0-0_dropoff.dta",
+      "var": "pl_q20_c_test_vision",
+      "rows": 24677,
+      "n_valid": 3652,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 748,
+        "Yes": 2904,
+        "nan": 21025
+      }
+    },
+    {
+      "file": "Wave 9 Release 9.0.0\\sharew9_rel9-0-0_dropoff.dta",
+      "var": "il_Q2_3",
+      "rows": 34152,
+      "n_valid": 582,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "No answer": 12,
+        "Not at all agree": 73,
+        "Slightly Agree": 86,
+        "Somewhat Agree": 132,
+        "Strongly Agree": 279,
+        "nan": 33570
+      }
+    }
+  ],
+  "notes": [],
+  "files_with_candidates": 21
+}

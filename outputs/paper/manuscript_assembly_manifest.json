@@ -1,0 +1,99 @@
+{
+  "assembled_on": "2026-10-16",
+  "title": "Even age does not transport: a pooled multi-cohort exposome estimate describes no population, in 285,878 participants and 21 literature-derived rules",
+  "sections": [
+    {
+      "section": "abstract",
+      "bytes": 2889,
+      "sha256_16": "c8426af546261d4f"
+    },
+    {
+      "section": "introduction",
+      "bytes": 4834,
+      "sha256_16": "e9c27542fdded3ee"
+    },
+    {
+      "section": "methods",
+      "bytes": 23410,
+      "sha256_16": "9cc3d5abc5c36ae5"
+    },
+    {
+      "section": "results",
+      "bytes": 20754,
+      "sha256_16": "887cd8acdbb7be03"
+    },
+    {
+      "section": "discussion",
+      "bytes": 18981,
+      "sha256_16": "39090166c48cd498"
+    },
+    {
+      "section": "declarations",
+      "bytes": 6769,
+      "sha256_16": "9b05761f54bad2ef"
+    },
+    {
+      "section": "figure_legends",
+      "bytes": 27752,
+      "sha256_16": "eff01285149df2bf"
+    }
+  ],
+  "tables": [
+    {
+      "table": "Table 1",
+      "file": "table1_registry.md",
+      "bytes": 1644,
+      "sha256_16": "0d56dde6c9c8d58c"
+    },
+    {
+      "table": "Table 1b",
+      "file": "table1b_descriptives.md",
+      "bytes": 3924,
+      "sha256_16": "0ed94b2792dd7d86"
+    },
+    {
+      "table": "Table 2",
+      "file": "table2_rules.md",
+      "bytes": 2828,
+      "sha256_16": "21ea13d9ce9f1af9"
+    },
+    {
+      "table": "Table 3",
+      "file": "table3_performance.md",
+      "bytes": 880,
+      "sha256_16": "098a8e2471dbb7f2"
+    },
+    {
+      "table": "Table 4",
+      "file": "table4_validation.md",
+      "bytes": 1086,
+      "sha256_16": "7415c6424383cffa"
+    },
+    {
+      "table": "Table 5",
+      "file": "table5_heterogeneity.md",
+      "bytes": 3409,
+      "sha256_16": "575c213c25d2138a"
+    },
+    {
+      "table": "Table 5b",
+      "file": "table5b_ipd_interaction.md",
+      "bytes": 2705,
+      "sha256_16": "24fc5ced321760b9"
+    },
+    {
+      "table": "Table 6",
+      "file": "table6_power.md",
+      "bytes": 3283,
+      "sha256_16": "76ab7a48ecaee498"
+    },
+    {
+      "table": "Table 7",
+      "file": "table7_evidence_audit.md",
+      "bytes": 1215,
+      "sha256_16": "bee84f9aa540c446"
+    }
+  ],
+  "missing": [],
+  "assembled_bytes": 126196
+}

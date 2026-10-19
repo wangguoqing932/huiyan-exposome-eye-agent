@@ -1,11 +1,25 @@
-﻿dataset_id,dataset_role,method,metric,mean,std,n_cases,n_seeds,ci_lo,ci_hi,ci_note
-NHANES,internal_validation,full_system_v1.2,coverage,0.269,,14,1,,,
-NHANES,internal_validation,full_system_v1.2,precision_rule,1.0,,7,1,0.646,1,"Wilson 95% CI [0.65, 1.00]"
-KNHANES,external_validation,full_system_v1.2,coverage,0.263,,10,1,,,
-KNHANES,external_validation,full_system_v1.2,precision_rule,1.0,,2,1,0.342,1,"Wilson 95% CI [0.34, 1.00]"
-CHARLS,external_validation,full_system_v1.2,coverage,0.667,,4,1,,,
+dataset_id,dataset_role,method,metric,mean,std,n_cases,n_seeds,ci_lo,ci_hi,ci_note
+NHANES,internal_validation,full_system_v1.2,coverage,0.889,,16,1,,,R5: survey svyglm variance (plan §6); judgeable set=nhanes
+NHANES,internal_validation,full_system_v1.2,precision_rule,1.0,,6,1,0.541,1.0,"R5: Clopper-Pearson exact 95% CI [0.478, 1.00] (survey variance headline; freq_weights sensitivity=7/7 [0.59,1.0])"
+KNHANES,external_validation,full_system_v1.2,coverage,0.882,,15,1,,,"R5: judgeable set=knhanes (was nhanes-hardcoded, 0.263 inflated)"
+KNHANES,external_validation,full_system_v1.2,precision_rule,1.0,,5,1,0.478,1.0,"R5: Clopper-Pearson exact 95% CI [0.158, 1.00]; 8/9 codes now missing"
+CHARLS,external_validation,full_system_v1.2,coverage,1.0,,4,1,,,"R5: judgeable set=cohort (was nhanes-hardcoded, 0.667 inflated)"
 CHARLS,external_validation,full_system_v1.2,precision_rule,,,0,1,,,"n=0, CI undefined"
-NHANES_baseline,baseline_comparison,pure_llm,F1,0.421,,71,1,,,"provider=local:qwen3.8-27b, temp=0.7 seed=11, 0 failures"
-NHANES_baseline,baseline_comparison,naive_rag,F1,0.182,,71,1,,,"provider=local:qwen3.8-27b, temp=0.7 seed=11, 0 failures"
-NHANES_baseline,baseline_comparison,lightrag,F1,0.263,,71,1,,,"provider=local:qwen3.8-27b, temp=0.7 seed=11, 0 failures"
-NHANES_baseline,baseline_comparison,full_system,F1,0.583,,71,1,,,deterministic; bootstrap CI in baseline_fullsystem_bootstrap_ci.json
+NHANES_baseline,baseline_comparison,pure_llm,F1,0.418,0.0051,62,5,,,"R5.2 judgeable scope (62 pairs, aligned with confirmatory metrics denominator): F1 0.418; McNemar vs G2 fused p=0.001-0.012"
+NHANES_baseline,baseline_comparison,naive_rag,F1,0.073,0.0891,62,5,,,R5.2 judgeable scope: F1 0.073; McNemar vs G2 fused p=0.012-0.023
+NHANES_baseline,baseline_comparison,lightrag,F1,0.35,0.006,62,5,,,R5.2 judgeable scope: F1 0.350; McNemar vs G2 fused p=0.012-0.022 (G0 bare rules was n.s. p=0.057-0.092)
+NHANES_baseline,baseline_comparison,full_system,F1,0.455,0.0,62,5,,,R5.2 judgeable scope: G0 bare rules F1=0.455 (was 0.417 on 80-pair mixed scope; scope aligned with metrics); bootstrap CI superseded by fused row
+NHANES_minus_KNHANES,generalization_gap,full_system_v1.2,coverage_gap,0.007,,16,1,,,R5: internal − external; 0.889 − 0.882（survey 方差三态口径）
+NHANES_minus_KNHANES,generalization_gap,full_system_v1.2,precision_rule_gap,0.0,,6,1,,,R5: internal − external; 1.0 − 1.0（两层 CI 均宽，见各库行）
+Literature_PubMed,external_validation_lit,rules_v1.2,precision_lit,0.889,,18,1,0.653,0.986,"R5.1 lit layer (plan §12, rounds 1-3 full reruns + round-4 human adjudication): 16 replicated / 0 contradicted / 2 mixed / 2 uninformative of 20 rules; 750 articles, rule own-citations excluded; S1 20/20 unchanged, S2 16/20, S3 97.1%; details in literature_validation_summary.json"
+Literature_PubMed,external_validation_lit,rules_v1.2,n_relevant_articles,750.0,,750,1,,,"searched 40/rule, extracted by local qwen temp=0 seed=20261015, 0 parse failures, 3 full reruns documented (round1-3 archives)"
+NHANES_baseline,baseline_comparison,fused_G1_nc_gated,F1,0.476,0.0,62,1,,,R5.2 §13 G1: negative-control abstention only (deterministic); plan-pre-registered ablation
+NHANES_baseline,baseline_comparison,fused_G2_evidence_gated,F1,0.5,0.0,62,1,,,R5.2 §13 G2: NC gate + EvidenceStore confirmation + LLM arbiter (qwen temp=0 seed=20261015); P=0.385 R=0.714; vs G0 McNemar p=0.50; vs 3 LLM baselines all p<=0.023; KNHANES F1 0.308->0.333
+NHANES_baseline,ablation_negative_result,fused_G3_lit_gated,F1,0.5,0.0,62,1,,,R5.3 §14 G3: literature-consensus gate = NO-OP (mixed rules r07/r08 have no speaking pairs in tested sets); identical to G2; dual-role concern dissolved
+NHANES_baseline,ablation_negative_result,fused_G4_evidence_direct,F1,0.417,0.0,62,1,,,R5.3 §14 G4: evidence-only direct inference = HARMFUL (4 direct speeches all uninformative AMD pairs; both target FN pairs failed dual-chunk threshold); negative result reported in full; official system stays G2
+NHANES_baseline,ablation_negative_result,fused_G5a_semantic,F1,0.476,0.0,62,1,,,R6.0 §15 G5a semantic confirmation: F1 0.476 vs G2 0.500 (single differing pair dyslipidemia x amd_late; B3 annotations make keyword linked-rule matching ~= semantic retrieval). tau 0.45/0.55/0.65 all identical
+NHANES_baseline,ablation_negative_result,fused_G5b_semantic_direct,F1,0.476,0.0,62,1,,,R6.0 §15 G5b semantic direct path: ZERO triggers (dual-annotation threshold logically self-locking for no-rule pairs). With §14 G4 this proves no usable prior threshold exists for rule-free speech; official system = G2
+CHARLS_2015_temporal,external_validation_temporal,rules_v1.2,coverage,0.273,,12,1,,,"R6.1 §16 temporal layer (2015 wave, rules never saw these data): 12 tested pairs ALL uninformative, 0 contradicted; hba1c x cataract OR=1.71 [1.21,2.43] q=0.096 near-threshold concordant; self-report cataract prevalence 1.7% is the binding limitation"
+CHARLS_2015_temporal,external_validation_temporal,rules_v1.2,precision_rule,,,0,1,,,"n=0 informative pairs, precision undefined (feasibility-tier, same as 2011 layer)"
+NHANES_minus_KNHANES,generalization_gap,full_system_v1.2,gap_coverage,0.007,,16,1,,,alias of coverage_gap (writer QC T4 naming)
+NHANES_minus_KNHANES,generalization_gap,full_system_v1.2,gap_precision_rule,0.0,,6,1,,,alias of precision_rule_gap (writer QC T4 naming)

@@ -1,0 +1,228 @@
+{
+  "method": "binary X, binary mediator, binary Y; product-of-coefficients on the log-OR scale with delta-method SE; survey weights; proportion mediated from the difference method. Approximate.",
+  "models_attempted": 8,
+  "models_fitted": 7,
+  "models_stable": 5,
+  "median_proportion_mediated_stable": 0.047,
+  "stability_rule": "UNSTABLE if <80 outcome events or <80 mediator cases, or the total-effect CI spans >6-fold, or proportion mediated outside [-0.5, 0.9]",
+  "results": [
+    {
+      "dataset": "nhanes",
+      "x": "hba1c_elevated",
+      "y": "vision_impairment_mild",
+      "m": "retinopathy_any",
+      "status": "ok",
+      "n": 5105,
+      "n_x": 677,
+      "n_y": 1152,
+      "n_m": 631,
+      "or_total": 1.424,
+      "or_total_ci": [
+        1.137,
+        1.784
+      ],
+      "or_direct": 1.475,
+      "or_direct_ci": [
+        1.167,
+        1.863
+      ],
+      "or_mediator_in_model": 0.873,
+      "indirect_log_or": -0.2454,
+      "indirect_se": 0.2277,
+      "indirect_p": 0.28113756580106863,
+      "proportion_mediated": -0.098,
+      "attenuation_pct": -3.5,
+      "stability": "stable"
+    },
+    {
+      "dataset": "nhanes",
+      "x": "hba1c_elevated",
+      "y": "vision_impairment_mild",
+      "m": "cataract_any",
+      "status": "ok",
+      "n": 5641,
+      "n_x": 787,
+      "n_y": 1322,
+      "n_m": 759,
+      "or_total": 1.498,
+      "or_total_ci": [
+        1.222,
+        1.837
+      ],
+      "or_direct": 1.491,
+      "or_direct_ci": [
+        1.215,
+        1.828
+      ],
+      "or_mediator_in_model": 1.126,
+      "indirect_log_or": 0.0698,
+      "indirect_se": 0.0686,
+      "indirect_p": 0.3087879294161686,
+      "proportion_mediated": 0.012,
+      "attenuation_pct": 0.5,
+      "stability": "stable"
+    },
+    {
+      "dataset": "nhanes",
+      "x": "hba1c_elevated",
+      "y": "vision_impairment_moderate",
+      "m": "retinopathy_any",
+      "status": "ok",
+      "n": 5105,
+      "n_x": 677,
+      "n_y": 323,
+      "n_m": 631,
+      "or_total": 1.593,
+      "or_total_ci": [
+        1.12,
+        2.265
+      ],
+      "or_direct": 1.456,
+      "or_direct_ci": [
+        1.007,
+        2.105
+      ],
+      "or_mediator_in_model": 1.378,
+      "indirect_log_or": 0.5788,
+      "indirect_se": 0.3377,
+      "indirect_p": 0.08652831445246356,
+      "proportion_mediated": 0.193,
+      "attenuation_pct": 8.6,
+      "stability": "stable"
+    },
+    {
+      "dataset": "nhanes",
+      "x": "hba1c_elevated",
+      "y": "vision_impairment_severe",
+      "m": "retinopathy_any",
+      "status": "ok",
+      "n": 5105,
+      "n_x": 677,
+      "n_y": 111,
+      "n_m": 631,
+      "or_total": 1.85,
+      "or_total_ci": [
+        1.018,
+        3.363
+      ],
+      "or_direct": 1.797,
+      "or_direct_ci": [
+        0.96,
+        3.364
+      ],
+      "or_mediator_in_model": 1.112,
+      "indirect_log_or": 0.1916,
+      "indirect_se": 0.6221,
+      "indirect_p": 0.7581249516502209,
+      "proportion_mediated": 0.047,
+      "attenuation_pct": 2.9,
+      "stability": "stable"
+    },
+    {
+      "dataset": "knhanes",
+      "x": "hba1c_elevated",
+      "y": "vision_impairment_any",
+      "m": "retinopathy_any",
+      "status": "ok",
+      "n": 6922,
+      "n_x": 890,
+      "n_y": 39,
+      "n_m": 204,
+      "or_total": 1.527,
+      "or_total_ci": [
+        0.622,
+        3.745
+      ],
+      "or_direct": 0.99,
+      "or_direct_ci": [
+        0.351,
+        2.791
+      ],
+      "or_mediator_in_model": 4.854,
+      "indirect_log_or": 6.0303,
+      "indirect_se": 2.4139,
+      "indirect_p": 0.012482891185600753,
+      "proportion_mediated": 1.024,
+      "attenuation_pct": 35.2,
+      "stability": "UNSTABLE: n_events=39; total_CI_width_or=6.0; prop_mediated=1.024"
+    },
+    {
+      "dataset": "knhanes",
+      "x": "hba1c_elevated",
+      "y": "vision_impairment_any",
+      "m": "cataract_any",
+      "status": "underpowered",
+      "n": 0,
+      "n_x": 0,
+      "n_y": 0,
+      "n_m": 0,
+      "or_total": NaN,
+      "or_total_ci": NaN,
+      "or_direct": NaN,
+      "or_direct_ci": NaN,
+      "or_mediator_in_model": NaN,
+      "indirect_log_or": NaN,
+      "indirect_se": NaN,
+      "indirect_p": NaN,
+      "proportion_mediated": NaN,
+      "attenuation_pct": NaN,
+      "stability": "underpowered"
+    },
+    {
+      "dataset": "knhanes",
+      "x": "hyperglycemia",
+      "y": "vision_impairment_any",
+      "m": "retinopathy_any",
+      "status": "ok",
+      "n": 16351,
+      "n_x": 1391,
+      "n_y": 110,
+      "n_m": 391,
+      "or_total": 3.092,
+      "or_total_ci": [
+        1.818,
+        5.259
+      ],
+      "or_direct": 2.538,
+      "or_direct_ci": [
+        1.419,
+        4.538
+      ],
+      "or_mediator_in_model": 2.375,
+      "indirect_log_or": 2.8307,
+      "indirect_se": 1.3302,
+      "indirect_p": 0.03333391865134172,
+      "proportion_mediated": 0.175,
+      "attenuation_pct": 17.9,
+      "stability": "stable"
+    },
+    {
+      "dataset": "knhanes",
+      "x": "hyperglycemia",
+      "y": "vision_impairment_any",
+      "m": "cataract_any",
+      "status": "ok",
+      "n": 6641,
+      "n_x": 568,
+      "n_y": 66,
+      "n_m": 826,
+      "or_total": 4.09,
+      "or_total_ci": [
+        2.152,
+        7.774
+      ],
+      "or_direct": 4.085,
+      "or_direct_ci": [
+        2.149,
+        7.764
+      ],
+      "or_mediator_in_model": 1.173,
+      "indirect_log_or": 0.0361,
+      "indirect_se": 0.0821,
+      "indirect_p": 0.659827455524377,
+      "proportion_mediated": 0.001,
+      "attenuation_pct": 0.1,
+      "stability": "UNSTABLE: n_events=66"
+    }
+  ]
+}

@@ -144,7 +144,12 @@ class LightRAGAdapter:
             for attempt in range(4):
                 try:
                     resp = await _asyncio.to_thread(
-                        self.chat.complete, prompt=prompt, system=call_sys
+                        # R5 fix: raise_on_error=True so transport failures reach
+                        # the retry/raise path below — previously complete()
+                        # swallowed them into "[llm error] ..." text that was
+                        # then used AS evidence (silent fail-open).
+                        self.chat.complete, prompt=prompt, system=call_sys,
+                        raise_on_error=True,
                     )
                     out = resp.text
                     if is_extraction:

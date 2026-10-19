@@ -1,0 +1,210 @@
+{
+  "diagnostics": {
+    "cohort": "CRELES",
+    "waves": [
+      {
+        "wave": 1,
+        "status": "ok",
+        "rows": 2827,
+        "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+        "vars_found": [
+          "c10",
+          "c4",
+          "c54",
+          "c55",
+          "c56",
+          "c57",
+          "c58",
+          "c59",
+          "c60",
+          "ev10",
+          "idsujeto"
+        ]
+      },
+      {
+        "wave": 2,
+        "status": "ok",
+        "rows": 2364,
+        "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+        "vars_found": [
+          "c10",
+          "c4",
+          "c54",
+          "c55",
+          "c56",
+          "c57",
+          "ev10",
+          "idsujeto"
+        ]
+      },
+      {
+        "wave": 3,
+        "status": "no DS1 file carrying c55/c57",
+        "candidates": [
+          "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta"
+        ]
+      }
+    ]
+  },
+  "gate": {
+    "cohort": "CRELES",
+    "n_rows": 5191,
+    "flags": {
+      "bmi_high_25": {
+        "n": 4963,
+        "prevalence": 0.5755,
+        "hard_band": [
+          0.05,
+          0.8
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.15,
+          0.6
+        ],
+        "within_typical": true
+      },
+      "bmi_high_30": {
+        "n": 4963,
+        "prevalence": 0.2005,
+        "hard_band": [
+          0.005,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.03,
+          0.45
+        ],
+        "within_typical": true
+      },
+      "cataract_any": {
+        "n": 5102,
+        "prevalence": 0.3853,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.03,
+          0.3
+        ],
+        "within_typical": false
+      },
+      "current_smoking": {
+        "n": 3572,
+        "prevalence": 0.1103,
+        "hard_band": [
+          0.01,
+          0.6
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.05,
+          0.35
+        ],
+        "within_typical": true
+      },
+      "diabetes": {
+        "n": 5167,
+        "prevalence": 0.1914,
+        "hard_band": [
+          0.01,
+          0.5
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.04,
+          0.35
+        ],
+        "within_typical": true
+      },
+      "hypertension": {
+        "n": 5168,
+        "prevalence": 0.4892,
+        "hard_band": [
+          0.05,
+          0.85
+        ],
+        "passes_hard_gate": true,
+        "typical_band": [
+          0.2,
+          0.7
+        ],
+        "within_typical": true
+      }
+    },
+    "imputation_replicates": [
+      1
+    ],
+    "rows_per_replicate": 5191,
+    "gate_passed": true,
+    "failed": [],
+    "outside_typical": [
+      "cataract_any"
+    ],
+    "per_wave": {
+      "1": {
+        "bmi_high_25": {
+          "n": 2698,
+          "prevalence": 0.5986
+        },
+        "bmi_high_30": {
+          "n": 2698,
+          "prevalence": 0.2135
+        },
+        "cataract_any": {
+          "n": 2771,
+          "prevalence": 0.3887
+        },
+        "current_smoking": {
+          "n": 1210,
+          "prevalence": 0.1868
+        },
+        "diabetes": {
+          "n": 2812,
+          "prevalence": 0.1927
+        },
+        "hypertension": {
+          "n": 2812,
+          "prevalence": 0.49
+        }
+      },
+      "2": {
+        "bmi_high_25": {
+          "n": 2265,
+          "prevalence": 0.5479
+        },
+        "bmi_high_30": {
+          "n": 2265,
+          "prevalence": 0.185
+        },
+        "cataract_any": {
+          "n": 2331,
+          "prevalence": 0.3814
+        },
+        "current_smoking": {
+          "n": 2362,
+          "prevalence": 0.0711
+        },
+        "diabetes": {
+          "n": 2355,
+          "prevalence": 0.1898
+        },
+        "hypertension": {
+          "n": 2356,
+          "prevalence": 0.4881
+        }
+      }
+    },
+    "wave_outliers": [],
+    "age_context": {
+      "n": 5191,
+      "mean": 76.7,
+      "min": 60.0,
+      "max": 111.0,
+      "pct_60plus": 1.0
+    }
+  }
+}

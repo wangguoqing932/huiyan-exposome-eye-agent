@@ -1,0 +1,263 @@
+{
+  "cohort": "LASI",
+  "root": "E:\\BaiduNetdiskDownload\\所有数据库\\05. LASI 印度老龄化纵向研究\\LASI_印度\\Raw_data",
+  "files": 11,
+  "scanned": 11,
+  "candidates": [
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rc001a_j",
+      "rows": 2440,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rc001b_j",
+      "rows": 2440,
+      "n_valid": 1370,
+      "n_distinct": 71,
+      "values": {
+        "0.0": 18,
+        "0.5": 1,
+        "1.0": 19,
+        "1.5": 5,
+        "2.0": 45,
+        "3.0": 69,
+        "3.5": 2,
+        "4.0": 49,
+        "5.0": 95,
+        "6.0": 66
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rc001c_j",
+      "rows": 2440,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "rc003",
+      "rows": 2440,
+      "n_valid": 127,
+      "n_distinct": 29,
+      "values": {
+        "0.0": 1,
+        "100.0": 7,
+        "150.0": 4,
+        "200.0": 10,
+        "230.0": 1,
+        "250.0": 5,
+        "300.0": 18,
+        "340.0": 1,
+        "350.0": 4,
+        "400.0": 9
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "ua011a_j",
+      "rows": 2440,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "ua011b_j",
+      "rows": 2440,
+      "n_valid": 451,
+      "n_distinct": 30,
+      "values": {
+        "0.0": 38,
+        "1.0": 83,
+        "1.5": 7,
+        "1.7": 2,
+        "2.0": 98,
+        "2.3": 1,
+        "2.5": 3,
+        "3.0": 70,
+        "3.5": 1,
+        "4.0": 10
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "uc020a_j",
+      "rows": 2440,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_community.dta",
+      "var": "uc020b_j",
+      "rows": 2440,
+      "n_valid": 550,
+      "n_distinct": 31,
+      "values": {
+        "0.0": 85,
+        "0.5": 1,
+        "1.0": 123,
+        "1.5": 4,
+        "2.0": 104,
+        "2.3": 1,
+        "2.5": 2,
+        "3.0": 77,
+        "3.5": 1,
+        "4.0": 22
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "we028d",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "we313d",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht007j",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht015",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht016",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht017",
+      "rows": 73408,
+      "n_valid": 60283,
+      "n_distinct": 6,
+      "values": {
+        "1.0": 2776,
+        "2.0": 6087,
+        "3.0": 764,
+        "4.0": 6283,
+        "5.0": 5328,
+        "6.0": 39045
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht017_other",
+      "rows": 73408,
+      "n_valid": 7,
+      "n_distinct": 1,
+      "values": {
+        "0.0": 7
+      }
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht017s1",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht017s2",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht017s3",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht017s4",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI Wave 1 (Version B) Data\\lasi_w1b_ind_bm.dta",
+      "var": "ht017s5",
+      "rows": 73408,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "ht039",
+      "rows": 1683,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "ht076",
+      "rows": 1683,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "ht077",
+      "rows": 1683,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "ht078",
+      "rows": 1683,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    },
+    {
+      "file": "LASI 2010 Pilot\\LASI-Pilot_all.dta",
+      "var": "we322",
+      "rows": 1683,
+      "n_valid": 0,
+      "n_distinct": 0,
+      "values": {}
+    }
+  ],
+  "notes": [],
+  "files_with_candidates": 3
+}

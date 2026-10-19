@@ -1,0 +1,7128 @@
+{
+  "cohort": "HRS",
+  "root": "E:\\BaiduNetdiskDownload\\所有数据库\\03. HRS 美国健康与退休研究\\HRS_美国\\Raw_data",
+  "files": 374,
+  "scanned": 374,
+  "candidates": [
+    {
+      "file": "2010 HRS\\biomkr10\\BIOMK10BL_R.dta",
+      "var": "MBIOWGTR",
+      "rows": 7782,
+      "n_valid": 7782,
+      "dtype": "int32",
+      "label": "2010 RESPONDENT WEIGHT FOR BIOMARKERS",
+      "n_distinct": 5738,
+      "values": {
+        "0": 73,
+        "2234": 1,
+        "2350": 2,
+        "2380": 1,
+        "2381": 1,
+        "2390": 1,
+        "2409": 1,
+        "2412": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\biomkr12\\BIOMK12BL_R.dta",
+      "var": "NBIOWGTR",
+      "rows": 7244,
+      "n_valid": 7242,
+      "dtype": "float64",
+      "label": "2012 RESPONDENT WEIGHT FOR BIOMARKERS",
+      "n_distinct": 5422,
+      "values": {
+        "0.0": 203,
+        "2265.0": 1,
+        "2310.0": 1,
+        "2313.0": 18,
+        "2326.0": 5,
+        "2329.0": 8,
+        "2342.0": 1,
+        "2346.0": 43
+      }
+    },
+    {
+      "file": "2014 HRS\\BIOMK14BL\\BIOMK14BL.dta",
+      "var": "OBIOWGTR",
+      "rows": 7352,
+      "n_valid": 7352,
+      "dtype": "float64",
+      "label": "2014 RESPONDENT WEIGHT FOR BIOMARKERS",
+      "n_distinct": 5295,
+      "values": {
+        "0.0": 480,
+        "2096.0": 8,
+        "2110.0": 9,
+        "2118.0": 2,
+        "2128.0": 2,
+        "2144.0": 4,
+        "2156.0": 6,
+        "2159.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\biomkr06\\BIOMK06BL_R.dta",
+      "var": "KBIOWGTR",
+      "rows": 6735,
+      "n_valid": 6735,
+      "dtype": "int32",
+      "label": "2006 RESPONDENT WEIGHT FOR BIOMARKERS",
+      "n_distinct": 4549,
+      "values": {
+        "0": 531,
+        "3505": 2,
+        "3648": 4,
+        "3660": 3,
+        "3678": 5,
+        "3693": 21,
+        "3704": 1,
+        "3713": 3
+      }
+    },
+    {
+      "file": "2008 HRS\\biomkr08\\BIOMK08BL_R.dta",
+      "var": "LBIOWGTR",
+      "rows": 6329,
+      "n_valid": 6329,
+      "dtype": "int32",
+      "label": "2008 RESPONDENT WEIGHT FOR BIOMARKERS",
+      "n_distinct": 4444,
+      "values": {
+        "0": 430,
+        "2820": 2,
+        "2884": 10,
+        "2904": 1,
+        "2910": 1,
+        "2957": 1,
+        "2967": 1,
+        "2972": 1
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20C_R.dta",
+      "var": "XRC117",
+      "rows": 1266,
+      "n_valid": 1214,
+      "dtype": "float64",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 183,
+        "5.0": 1030,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20C_R.dta",
+      "var": "XRC118",
+      "rows": 1266,
+      "n_valid": 183,
+      "dtype": "float64",
+      "label": "NUM CIGARETTES SMOKED PER DAY",
+      "n_distinct": 21,
+      "values": {
+        "0.0": 3,
+        "1.0": 3,
+        "2.0": 14,
+        "3.0": 5,
+        "4.0": 8,
+        "5.0": 17,
+        "6.0": 7,
+        "7.0": 2
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20C_R.dta",
+      "var": "XRC128",
+      "rows": 1266,
+      "n_valid": 1214,
+      "dtype": "float64",
+      "label": "EVER DRINK ALCOHOL",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 443,
+        "3.0": 6,
+        "5.0": 758,
+        "8.0": 7
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20C_R.dta",
+      "var": "XRC139",
+      "rows": 1266,
+      "n_valid": 1214,
+      "dtype": "float64",
+      "label": "WEIGHT IN POUNDS",
+      "n_distinct": 133,
+      "values": {
+        "50.0": 2,
+        "56.0": 1,
+        "60.0": 1,
+        "70.0": 4,
+        "75.0": 5,
+        "76.0": 1,
+        "80.0": 12,
+        "82.0": 1
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20C_R.dta",
+      "var": "XRC140",
+      "rows": 1266,
+      "n_valid": 1214,
+      "dtype": "float64",
+      "label": "WEIGHT GAIN/LOSS 10 LBS. SINCE PREV WAVE",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 93,
+        "2.0": 742,
+        "3.0": 76,
+        "5.0": 281,
+        "8.0": 22
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18C_R.dta",
+      "var": "XQC117",
+      "rows": 980,
+      "n_valid": 979,
+      "dtype": "float64",
+      "label": "SMOKED CIGARETTES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 153,
+        "5.0": 825,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18C_R.dta",
+      "var": "XQC118",
+      "rows": 980,
+      "n_valid": 153,
+      "dtype": "float64",
+      "label": "NUM CIGARETTES SMOKED PER DAY",
+      "n_distinct": 18,
+      "values": {
+        "0.0": 1,
+        "1.0": 4,
+        "2.0": 6,
+        "3.0": 5,
+        "4.0": 9,
+        "5.0": 11,
+        "6.0": 13,
+        "7.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18C_R.dta",
+      "var": "XQC128",
+      "rows": 980,
+      "n_valid": 980,
+      "dtype": "int8",
+      "label": "EVER DRINK ALCOHOL",
+      "n_distinct": 4,
+      "values": {
+        "1": 341,
+        "3": 14,
+        "5": 622,
+        "8": 3
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18C_R.dta",
+      "var": "XQC139",
+      "rows": 980,
+      "n_valid": 980,
+      "dtype": "int16",
+      "label": "WEIGHT IN POUNDS",
+      "n_distinct": 126,
+      "values": {
+        "60": 1,
+        "70": 3,
+        "72": 1,
+        "75": 5,
+        "77": 1,
+        "79": 2,
+        "80": 12,
+        "83": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18C_R.dta",
+      "var": "XQC140",
+      "rows": 980,
+      "n_valid": 979,
+      "dtype": "float64",
+      "label": "WEIGHT GAIN/LOSS 10 LBS. SINCE PREV WAVE",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 87,
+        "2.0": 603,
+        "3.0": 62,
+        "5.0": 216,
+        "8.0": 11
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_BMI_GIANT15",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA BODY MASS INDEX (BMI) PGS (GIANT 2015)",
+      "n_distinct": 2190,
+      "values": {
+        "-5.10797": 1,
+        "-4.32066": 1,
+        "-4.30514": 1,
+        "-3.74708": 1,
+        "-3.57445": 1,
+        "-3.44658": 1,
+        "-3.44019": 1,
+        "-3.33515": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_HEIGHT_GIANT14",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA HEIGHT PGS (GIANT 2014)",
+      "n_distinct": 2603,
+      "values": {
+        "-2.20159": 1,
+        "-2.1271": 1,
+        "-2.09316": 1,
+        "-1.99097": 1,
+        "-1.98863": 1,
+        "-1.97381": 1,
+        "-1.89659": 1,
+        "-1.88996": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_EVRSMK_TAG10",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA EVER SMOKER PGS (TAG 2010)",
+      "n_distinct": 1036,
+      "values": {
+        "-3.76671": 1,
+        "-3.05283": 1,
+        "-3.01084": 1,
+        "-2.97266": 1,
+        "-2.9154": 1,
+        "-2.90013": 1,
+        "-2.86195": 1,
+        "-2.83523": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_WC_GIANT15",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA WAIST CIRCUMFERENCE PGS (GIANT 2015)",
+      "n_distinct": 1985,
+      "values": {
+        "-3.65078": 1,
+        "-3.52266": 1,
+        "-2.96591": 1,
+        "-2.89836": 1,
+        "-2.89487": 1,
+        "-2.85061": 1,
+        "-2.8145": 1,
+        "-2.73064": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_WHR_GIANT15",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA WAIST-TO-HIP RATIO (WHR) PGS (GIANT 2015)",
+      "n_distinct": 1968,
+      "values": {
+        "-3.35491": 1,
+        "-3.10844": 1,
+        "-2.83769": 1,
+        "-2.73692": 1,
+        "-2.71749": 1,
+        "-2.64464": 1,
+        "-2.59486": 1,
+        "-2.58879": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_T2D_DIAGRAM12",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA TYPE 2 DIABETES (T2D) PGS (DIAGRAM 2012)",
+      "n_distinct": 1666,
+      "values": {
+        "-4.11517": 1,
+        "-4.06854": 1,
+        "-3.88682": 1,
+        "-3.85466": 1,
+        "-3.80963": 1,
+        "-3.70672": 1,
+        "-3.63274": 1,
+        "-3.58932": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_CPD_TAG10",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA NUMBER OF CIGARETTES PER DAY PGS (TAG 2010)",
+      "n_distinct": 2553,
+      "values": {
+        "-3.01473": 1,
+        "-2.9225": 1,
+        "-2.83718": 1,
+        "-2.8132": 1,
+        "-2.79061": 1,
+        "-2.77032": 1,
+        "-2.74172": 1,
+        "-2.72051": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_DBP_COGENT17",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA DIASTOLIC BLOOD PRESSURE PGS (COGENT 2017)",
+      "n_distinct": 3083,
+      "values": {
+        "-4.25035": 1,
+        "-4.03601": 1,
+        "-3.99377": 1,
+        "-3.85626": 1,
+        "-3.83444": 1,
+        "-3.82918": 1,
+        "-3.82111": 1,
+        "-3.72618": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_BMI2_GIANT18",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA BODY MASS INDEX 2 PGS (GIANT 2018)",
+      "n_distinct": 3089,
+      "values": {
+        "-5.35575": 1,
+        "-4.86498": 1,
+        "-3.65049": 1,
+        "-3.39607": 1,
+        "-3.35049": 1,
+        "-3.29174": 1,
+        "-3.08942": 1,
+        "-3.05397": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_HEIGHT2_GIANT18",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA HEIGHT 2 PGS (GIANT 2018)",
+      "n_distinct": 3088,
+      "values": {
+        "-3.39556": 1,
+        "-3.01104": 1,
+        "-2.93988": 1,
+        "-2.89792": 1,
+        "-2.83869": 1,
+        "-2.83742": 1,
+        "-2.79557": 1,
+        "-2.69017": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_AI_GSCAN19",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA AGE AT SMOKING INITIATION PGS (GSCAN 2019)",
+      "n_distinct": 3089,
+      "values": {
+        "-3.30616": 1,
+        "-3.19237": 1,
+        "-3.04979": 1,
+        "-3.00018": 1,
+        "-2.9959": 1,
+        "-2.94252": 1,
+        "-2.93512": 1,
+        "-2.9278": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_CPD_GSCAN19",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA CIGARETTES PER DAY PGS (GSCAN 2019)",
+      "n_distinct": 3079,
+      "values": {
+        "-4.09956": 1,
+        "-3.85721": 1,
+        "-3.70206": 1,
+        "-3.33102": 1,
+        "-3.22848": 1,
+        "-3.08359": 1,
+        "-3.05553": 1,
+        "-3.04134": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_DPW_GSCAN19",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA DRINKS PER WEEK PGS (GSCAN 2019)",
+      "n_distinct": 3084,
+      "values": {
+        "-3.23213": 1,
+        "-3.11233": 1,
+        "-2.95758": 1,
+        "-2.86823": 1,
+        "-2.85502": 1,
+        "-2.77": 1,
+        "-2.706": 1,
+        "-2.69817": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4a_r.dta",
+      "var": "A4_SC_GSCAN19",
+      "rows": 3100,
+      "n_valid": 3100,
+      "dtype": "float64",
+      "label": "AA SMOKING CESSATION PGS (GSCAN 2019)",
+      "n_distinct": 3086,
+      "values": {
+        "-3.71679": 1,
+        "-3.47503": 1,
+        "-3.42678": 1,
+        "-3.29359": 1,
+        "-3.05002": 1,
+        "-2.94225": 1,
+        "-2.90264": 1,
+        "-2.8759": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_BMI_GIANT15",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA BODY MASS INDEX (BMI) PGS (GIANT 2015)",
+      "n_distinct": 4213,
+      "values": {
+        "-3.63577": 1,
+        "-3.63303": 1,
+        "-3.53616": 1,
+        "-3.3205": 1,
+        "-3.29674": 1,
+        "-3.294": 1,
+        "-3.28578": 1,
+        "-3.28212": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_HEIGHT_GIANT14",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA HEIGHT PGS (GIANT 2014)",
+      "n_distinct": 6282,
+      "values": {
+        "-4.48296": 1,
+        "-4.33707": 1,
+        "-4.29055": 1,
+        "-4.19193": 1,
+        "-4.19007": 1,
+        "-4.16885": 1,
+        "-4.16699": 1,
+        "-4.16625": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_EVRSMK_TAG10",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA EVER SMOKER PGS (TAG 2010)",
+      "n_distinct": 1630,
+      "values": {
+        "-3.68398": 1,
+        "-3.67143": 1,
+        "-3.44561": 1,
+        "-3.29819": 1,
+        "-3.20724": 1,
+        "-3.1696": 1,
+        "-3.16646": 1,
+        "-3.05042": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_WC_GIANT15",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA WAIST CIRCUMFERENCE PGS (GIANT 2015)",
+      "n_distinct": 4630,
+      "values": {
+        "-4.47223": 1,
+        "-4.44036": 1,
+        "-4.23239": 1,
+        "-4.04275": 1,
+        "-3.99255": 1,
+        "-3.89614": 1,
+        "-3.87383": 1,
+        "-3.85471": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_WHR_GIANT15",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA WAIST-TO-HIP RATIO (WHR) PGS (GIANT 2015)",
+      "n_distinct": 4324,
+      "values": {
+        "-3.84735": 1,
+        "-3.83231": 1,
+        "-3.82612": 1,
+        "-3.72436": 1,
+        "-3.69251": 1,
+        "-3.68986": 1,
+        "-3.67127": 1,
+        "-3.63588": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_T2D_DIAGRAM12",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA TYPE 2 DIABETES (T2D) PGS (DIAGRAM 2012)",
+      "n_distinct": 2528,
+      "values": {
+        "-3.29764": 1,
+        "-2.93271": 1,
+        "-2.87129": 1,
+        "-2.8478": 1,
+        "-2.8189": 1,
+        "-2.71592": 1,
+        "-2.70508": 1,
+        "-2.69424": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_CPD_TAG10",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA NUMBER OF CIGARETTES PER DAY PGS (TAG 2010)",
+      "n_distinct": 6188,
+      "values": {
+        "-4.63884": 1,
+        "-4.0605": 1,
+        "-3.86952": 1,
+        "-3.74415": 1,
+        "-3.67608": 1,
+        "-3.57961": 1,
+        "-3.57912": 1,
+        "-3.54631": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_DBP_COGENT17",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA DIASTOLIC BLOOD PRESSURE PGS (COGENT 2017)",
+      "n_distinct": 11556,
+      "values": {
+        "-3.75224": 1,
+        "-3.57792": 1,
+        "-3.44684": 1,
+        "-3.35938": 1,
+        "-3.20483": 1,
+        "-3.09375": 1,
+        "-3.08779": 1,
+        "-3.07705": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_BMI2_GIANT18",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA BODY MASS INDEX 2 PGS (GIANT 2018)",
+      "n_distinct": 11840,
+      "values": {
+        "-3.88513": 1,
+        "-3.59831": 1,
+        "-3.52715": 1,
+        "-3.51325": 1,
+        "-3.51189": 1,
+        "-3.4302": 1,
+        "-3.38493": 1,
+        "-3.30916": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_HEIGHT2_GIANT18",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA HEIGHT 2 PGS (GIANT 2018)",
+      "n_distinct": 11849,
+      "values": {
+        "-4.96506": 1,
+        "-4.44412": 1,
+        "-3.88358": 1,
+        "-3.76699": 1,
+        "-3.66592": 1,
+        "-3.5658": 1,
+        "-3.33802": 1,
+        "-3.33205": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_AI_GSCAN19",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA AGE AT SMOKING INITIATION PGS (GSCAN 2019)",
+      "n_distinct": 11862,
+      "values": {
+        "-3.73643": 1,
+        "-3.55555": 1,
+        "-3.42532": 1,
+        "-3.21066": 1,
+        "-3.1687": 1,
+        "-3.12078": 1,
+        "-3.02917": 1,
+        "-3.002": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_CPD_GSCAN19",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA CIGARETTES PER DAY PGS (GSCAN 2019)",
+      "n_distinct": 11890,
+      "values": {
+        "-4.1033": 1,
+        "-3.86058": 1,
+        "-3.85117": 1,
+        "-3.48275": 1,
+        "-3.40111": 1,
+        "-3.40063": 1,
+        "-3.33886": 1,
+        "-3.29553": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_DPW_GSCAN19",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA DRINKS PER WEEK PGS (GSCAN 2019)",
+      "n_distinct": 11863,
+      "values": {
+        "-3.90347": 1,
+        "-3.89848": 1,
+        "-3.84257": 1,
+        "-3.57283": 1,
+        "-3.52576": 1,
+        "-3.50402": 1,
+        "-3.45185": 1,
+        "-3.40421": 1
+      }
+    },
+    {
+      "file": "多基因评分（PGS）\\pgenscore4e_r.dta",
+      "var": "E4_SC_GSCAN19",
+      "rows": 12090,
+      "n_valid": 12090,
+      "dtype": "float64",
+      "label": "EA SMOKING CESSATION PGS (GSCAN 2019)",
+      "n_distinct": 11852,
+      "values": {
+        "-4.27136": 1,
+        "-4.22967": 1,
+        "-4.21978": 1,
+        "-4.15679": 1,
+        "-3.94532": 1,
+        "-3.93005": 1,
+        "-3.88689": 1,
+        "-3.87388": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18PR_R.dta",
+      "var": "XQZ102",
+      "rows": 980,
+      "n_valid": 980,
+      "dtype": "int8",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1": 314,
+        "5": 666
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18PR_R.dta",
+      "var": "XQZ204",
+      "rows": 980,
+      "n_valid": 332,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 54,
+      "values": {
+        "1940.0": 1,
+        "1949.0": 1,
+        "1950.0": 1,
+        "1952.0": 1,
+        "1955.0": 1,
+        "1959.0": 1,
+        "1962.0": 2,
+        "1965.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Exit\\x18sta\\X18PR_R.dta",
+      "var": "XQZ205",
+      "rows": 980,
+      "n_valid": 980,
+      "dtype": "int8",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1": 599,
+        "5": 381
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20PR_R.dta",
+      "var": "XRZ101",
+      "rows": 1266,
+      "n_valid": 1257,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS HIGH BLOOD PRESSURE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 943,
+        "5.0": 314
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20PR_R.dta",
+      "var": "XRZ102",
+      "rows": 1266,
+      "n_valid": 1260,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 463,
+        "5.0": 797
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20PR_R.dta",
+      "var": "XRZ204",
+      "rows": 1266,
+      "n_valid": 356,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 52,
+      "values": {
+        "1926.0": 1,
+        "1933.0": 1,
+        "1942.0": 1,
+        "1954.0": 1,
+        "1955.0": 1,
+        "1959.0": 1,
+        "1962.0": 1,
+        "1965.0": 2
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Exit\\x20sta\\X20PR_R.dta",
+      "var": "XRZ205",
+      "rows": 1266,
+      "n_valid": 1262,
+      "dtype": "float64",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 752,
+        "5.0": 510
+      }
+    },
+    {
+      "file": "2006 HRS\\H06G_R.dta",
+      "var": "KG011",
+      "rows": 18469,
+      "n_valid": 18462,
+      "dtype": "float64",
+      "label": "DIFFICULTY- LIFTING WEIGHTS",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 3840,
+        "5.0": 13476,
+        "6.0": 571,
+        "7.0": 566,
+        "8.0": 7,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2008 HRS\\H08G_R.dta",
+      "var": "LG011",
+      "rows": 17217,
+      "n_valid": 17208,
+      "dtype": "float64",
+      "label": "DIFFICULTY- LIFTING WEIGHTS",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 3701,
+        "5.0": 12449,
+        "6.0": 509,
+        "7.0": 541,
+        "8.0": 7,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10G_R.dta",
+      "var": "MG011",
+      "rows": 22034,
+      "n_valid": 21903,
+      "dtype": "float64",
+      "label": "DIFFICULTY- LIFTING WEIGHTS",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 5288,
+        "5.0": 15811,
+        "6.0": 423,
+        "7.0": 355,
+        "8.0": 17,
+        "9.0": 9
+      }
+    },
+    {
+      "file": "2014 HRS\\H14G_R.dta",
+      "var": "OG011",
+      "rows": 18747,
+      "n_valid": 18731,
+      "dtype": "float64",
+      "label": "DIFFICULTY- LIFTING WEIGHTS",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 4871,
+        "5.0": 13288,
+        "6.0": 302,
+        "7.0": 249,
+        "8.0": 18,
+        "9.0": 3
+      }
+    },
+    {
+      "file": "2012 HRS\\H12G_R.dta",
+      "var": "NG011",
+      "rows": 20554,
+      "n_valid": 20536,
+      "dtype": "float64",
+      "label": "DIFFICULTY- LIFTING WEIGHTS",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 4984,
+        "5.0": 14819,
+        "6.0": 363,
+        "7.0": 349,
+        "8.0": 17,
+        "9.0": 4
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20G_R.dta",
+      "var": "RG011",
+      "rows": 15723,
+      "n_valid": 15649,
+      "dtype": "float64",
+      "label": "DIFFICULTY- LIFTING WEIGHTS",
+      "n_distinct": 7,
+      "values": {
+        "-8.0": 3,
+        "1.0": 3786,
+        "5.0": 11492,
+        "6.0": 196,
+        "7.0": 141,
+        "8.0": 27,
+        "9.0": 4
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18g_r.dta",
+      "var": "QG011",
+      "rows": 17146,
+      "n_valid": 17120,
+      "dtype": "float64",
+      "label": "DIFFICULTY- LIFTING WEIGHTS",
+      "n_distinct": 7,
+      "values": {
+        "-8.0": 4,
+        "1.0": 4231,
+        "5.0": 12507,
+        "6.0": 221,
+        "7.0": 140,
+        "8.0": 11,
+        "9.0": 6
+      }
+    },
+    {
+      "file": "2016 HRS\\H16G_R.dta",
+      "var": "PG011",
+      "rows": 20912,
+      "n_valid": 20876,
+      "dtype": "float64",
+      "label": "DIFFICULTY- LIFTING WEIGHTS",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 5090,
+        "5.0": 15202,
+        "6.0": 314,
+        "7.0": 245,
+        "8.0": 20,
+        "9.0": 5
+      }
+    },
+    {
+      "file": "2012 HRS\\H12PR_R.dta",
+      "var": "NZ102",
+      "rows": 20554,
+      "n_valid": 20188,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 4442,
+        "5.0": 15746
+      }
+    },
+    {
+      "file": "2012 HRS\\H12PR_R.dta",
+      "var": "NZ204",
+      "rows": 20554,
+      "n_valid": 4658,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 62,
+      "values": {
+        "1932.0": 1,
+        "1940.0": 3,
+        "1943.0": 1,
+        "1950.0": 2,
+        "1954.0": 1,
+        "1955.0": 1,
+        "1956.0": 2,
+        "1957.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12PR_R.dta",
+      "var": "NZ205",
+      "rows": 20554,
+      "n_valid": 20117,
+      "dtype": "float64",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 11258,
+        "5.0": 8859
+      }
+    },
+    {
+      "file": "2012 HRS\\H12PR_R.dta",
+      "var": "NZ231",
+      "rows": 20554,
+      "n_valid": 20388,
+      "dtype": "float64",
+      "label": "R STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 41,
+        "5.0": 20347
+      }
+    },
+    {
+      "file": "2012 HRS\\H12PR_R.dta",
+      "var": "NZ232",
+      "rows": 20554,
+      "n_valid": 20388,
+      "dtype": "float64",
+      "label": "R STOPPED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 3619,
+        "5.0": 16769
+      }
+    },
+    {
+      "file": "2012 HRS\\H12PR_R.dta",
+      "var": "NZ254",
+      "rows": 20554,
+      "n_valid": 20388,
+      "dtype": "float64",
+      "label": "CHANGES TO ALCOHOL -2",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 13343,
+        "5.0": 2635,
+        "7.0": 4410
+      }
+    },
+    {
+      "file": "2006 HRS\\H06PR_R.dta",
+      "var": "KZ102",
+      "rows": 18469,
+      "n_valid": 18232,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 3193,
+        "5.0": 15039
+      }
+    },
+    {
+      "file": "2006 HRS\\H06PR_R.dta",
+      "var": "KZ204",
+      "rows": 18469,
+      "n_valid": 3141,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 59,
+      "values": {
+        "1919.0": 1,
+        "1932.0": 1,
+        "1940.0": 3,
+        "1943.0": 1,
+        "1944.0": 1,
+        "1950.0": 1,
+        "1951.0": 1,
+        "1952.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06PR_R.dta",
+      "var": "KZ205",
+      "rows": 18469,
+      "n_valid": 18256,
+      "dtype": "float64",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 10340,
+        "5.0": 7916
+      }
+    },
+    {
+      "file": "2006 HRS\\H06PR_R.dta",
+      "var": "KZ231",
+      "rows": 18469,
+      "n_valid": 18256,
+      "dtype": "float64",
+      "label": "R STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 6263,
+        "5.0": 11993
+      }
+    },
+    {
+      "file": "2006 HRS\\H06PR_R.dta",
+      "var": "KZ232",
+      "rows": 18469,
+      "n_valid": 18256,
+      "dtype": "float64",
+      "label": "R STOPPED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 10164,
+        "5.0": 8092
+      }
+    },
+    {
+      "file": "2010 HRS\\H10PR_R.dta",
+      "var": "MZ102",
+      "rows": 22034,
+      "n_valid": 15567,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 3282,
+        "5.0": 12285
+      }
+    },
+    {
+      "file": "2010 HRS\\H10PR_R.dta",
+      "var": "MZ204",
+      "rows": 22034,
+      "n_valid": 3453,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 61,
+      "values": {
+        "1932.0": 1,
+        "1940.0": 4,
+        "1943.0": 1,
+        "1950.0": 2,
+        "1951.0": 1,
+        "1954.0": 1,
+        "1955.0": 1,
+        "1956.0": 2
+      }
+    },
+    {
+      "file": "2010 HRS\\H10PR_R.dta",
+      "var": "MZ205",
+      "rows": 22034,
+      "n_valid": 15572,
+      "dtype": "float64",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8729,
+        "5.0": 6843
+      }
+    },
+    {
+      "file": "2010 HRS\\H10PR_R.dta",
+      "var": "MZ231",
+      "rows": 22034,
+      "n_valid": 15608,
+      "dtype": "float64",
+      "label": "R STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 120,
+        "5.0": 15488
+      }
+    },
+    {
+      "file": "2010 HRS\\H10PR_R.dta",
+      "var": "MZ232",
+      "rows": 22034,
+      "n_valid": 15608,
+      "dtype": "float64",
+      "label": "R STOPPED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 2407,
+        "5.0": 13201
+      }
+    },
+    {
+      "file": "2014 HRS\\H14B_R.dta",
+      "var": "OB104",
+      "rows": 18747,
+      "n_valid": 220,
+      "dtype": "float64",
+      "label": "PARENTS/GUARDIANS SMOKE",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 91,
+        "2.0": 56,
+        "5.0": 72,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14B_R.dta",
+      "var": "OB106",
+      "rows": 18747,
+      "n_valid": 220,
+      "dtype": "float64",
+      "label": "DIABETES BEFORE AGE 16",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 1,
+        "5.0": 218,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14B_R.dta",
+      "var": "OB117",
+      "rows": 18747,
+      "n_valid": 220,
+      "dtype": "float64",
+      "label": "DRUGS/ALCOHOL PROBLEMS BEFORE AGE 16",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 5,
+        "5.0": 215
+      }
+    },
+    {
+      "file": "2014 HRS\\H14B_R.dta",
+      "var": "OB122",
+      "rows": 18747,
+      "n_valid": 221,
+      "dtype": "float64",
+      "label": "CHILDHOOD-SMOKING",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 52,
+        "5.0": 168,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14B_R.dta",
+      "var": "OB127_2",
+      "rows": 18747,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "AGE FIRST DIAGNOSED -DIABETES",
+      "n_distinct": 1,
+      "values": {
+        "11.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14B_R.dta",
+      "var": "OB129_2",
+      "rows": 18747,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "AGE STOP HAVING -DIABETES",
+      "n_distinct": 1,
+      "values": {
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18b_r.dta",
+      "var": "QB104",
+      "rows": 17146,
+      "n_valid": 198,
+      "dtype": "float64",
+      "label": "PARENTS/GUARDIANS SMOKE",
+      "n_distinct": 5,
+      "values": {
+        "-8.0": 1,
+        "1.0": 69,
+        "2.0": 59,
+        "5.0": 68,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18b_r.dta",
+      "var": "QB106",
+      "rows": 17146,
+      "n_valid": 198,
+      "dtype": "float64",
+      "label": "DIABETES BEFORE AGE 16",
+      "n_distinct": 3,
+      "values": {
+        "-8.0": 2,
+        "1.0": 1,
+        "5.0": 195
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18b_r.dta",
+      "var": "QB117",
+      "rows": 17146,
+      "n_valid": 198,
+      "dtype": "float64",
+      "label": "DRUGS/ALCOHOL PROBLEMS BEFORE AGE 16",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 6,
+        "5.0": 192
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18b_r.dta",
+      "var": "QB122",
+      "rows": 17146,
+      "n_valid": 198,
+      "dtype": "float64",
+      "label": "CHILDHOOD-SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 51,
+        "5.0": 147
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18b_r.dta",
+      "var": "QB127_2",
+      "rows": 17146,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "AGE FIRST DIAGNOSED -DIABETES",
+      "n_distinct": 1,
+      "values": {
+        "10.0": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18b_r.dta",
+      "var": "QB129_2",
+      "rows": 17146,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "AGE STOP HAVING -DIABETES",
+      "n_distinct": 1,
+      "values": {
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14PR_R.dta",
+      "var": "OZ102",
+      "rows": 18747,
+      "n_valid": 18523,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 4235,
+        "5.0": 14288
+      }
+    },
+    {
+      "file": "2014 HRS\\H14PR_R.dta",
+      "var": "OZ204",
+      "rows": 18747,
+      "n_valid": 4611,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 64,
+      "values": {
+        "1932.0": 1,
+        "1940.0": 2,
+        "1943.0": 1,
+        "1950.0": 2,
+        "1954.0": 1,
+        "1955.0": 1,
+        "1956.0": 2,
+        "1957.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14PR_R.dta",
+      "var": "OZ205",
+      "rows": 18747,
+      "n_valid": 18564,
+      "dtype": "float64",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 10274,
+        "5.0": 8290
+      }
+    },
+    {
+      "file": "2014 HRS\\H14PR_R.dta",
+      "var": "OZ231",
+      "rows": 18747,
+      "n_valid": 18564,
+      "dtype": "float64",
+      "label": "R STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 93,
+        "5.0": 18471
+      }
+    },
+    {
+      "file": "2014 HRS\\H14PR_R.dta",
+      "var": "OZ232",
+      "rows": 18747,
+      "n_valid": 18564,
+      "dtype": "float64",
+      "label": "R STOPPED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 3365,
+        "5.0": 15199
+      }
+    },
+    {
+      "file": "2014 HRS\\H14PR_R.dta",
+      "var": "OZ254",
+      "rows": 18747,
+      "n_valid": 18607,
+      "dtype": "float64",
+      "label": "CHANGES TO ALCOHOL -2",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 12556,
+        "5.0": 2525,
+        "7.0": 3526
+      }
+    },
+    {
+      "file": "2016 HRS\\H16B_R.dta",
+      "var": "PB104",
+      "rows": 20912,
+      "n_valid": 4510,
+      "dtype": "float64",
+      "label": "PARENTS/GUARDIANS SMOKE",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 1707,
+        "2.0": 1138,
+        "5.0": 1652,
+        "8.0": 12,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16B_R.dta",
+      "var": "PB106",
+      "rows": 20912,
+      "n_valid": 4510,
+      "dtype": "float64",
+      "label": "DIABETES BEFORE AGE 16",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 15,
+        "5.0": 4493,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2016 HRS\\H16B_R.dta",
+      "var": "PB117",
+      "rows": 20912,
+      "n_valid": 4510,
+      "dtype": "float64",
+      "label": "DRUGS/ALCOHOL PROBLEMS BEFORE AGE 16",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 142,
+        "5.0": 4367,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16B_R.dta",
+      "var": "PB122",
+      "rows": 20912,
+      "n_valid": 4510,
+      "dtype": "float64",
+      "label": "CHILDHOOD-SMOKING",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 1002,
+        "5.0": 3504,
+        "8.0": 3,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16B_R.dta",
+      "var": "PB127_2",
+      "rows": 20912,
+      "n_valid": 15,
+      "dtype": "float64",
+      "label": "AGE FIRST DIAGNOSED -DIABETES",
+      "n_distinct": 10,
+      "values": {
+        "4.0": 2,
+        "8.0": 1,
+        "10.0": 3,
+        "11.0": 2,
+        "12.0": 2,
+        "13.0": 1,
+        "14.0": 1,
+        "15.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16B_R.dta",
+      "var": "PB128_2",
+      "rows": 20912,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "AGE FIRST DIAGNOSED-DK-DIABETES",
+      "n_distinct": 1,
+      "values": {
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16B_R.dta",
+      "var": "PB129_2",
+      "rows": 20912,
+      "n_valid": 14,
+      "dtype": "float64",
+      "label": "AGE STOP HAVING -DIABETES",
+      "n_distinct": 6,
+      "values": {
+        "13.0": 1,
+        "17.0": 1,
+        "51.0": 1,
+        "55.0": 1,
+        "97.0": 9,
+        "98.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08PR_R.dta",
+      "var": "LZ102",
+      "rows": 17217,
+      "n_valid": 17050,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 3317,
+        "5.0": 13733
+      }
+    },
+    {
+      "file": "2008 HRS\\H08PR_R.dta",
+      "var": "LZ204",
+      "rows": 17217,
+      "n_valid": 3431,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 60,
+      "values": {
+        "1932.0": 1,
+        "1940.0": 4,
+        "1943.0": 1,
+        "1950.0": 1,
+        "1951.0": 1,
+        "1952.0": 1,
+        "1954.0": 1,
+        "1955.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08PR_R.dta",
+      "var": "LZ205",
+      "rows": 17217,
+      "n_valid": 17074,
+      "dtype": "float64",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 9610,
+        "5.0": 7464
+      }
+    },
+    {
+      "file": "2008 HRS\\H08PR_R.dta",
+      "var": "LZ231",
+      "rows": 17217,
+      "n_valid": 17107,
+      "dtype": "float64",
+      "label": "R STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 221,
+        "5.0": 16886
+      }
+    },
+    {
+      "file": "2008 HRS\\H08PR_R.dta",
+      "var": "LZ232",
+      "rows": 17217,
+      "n_valid": 17107,
+      "dtype": "float64",
+      "label": "R STOPPED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 2658,
+        "5.0": 14449
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20B_R.dta",
+      "var": "RB104",
+      "rows": 15723,
+      "n_valid": 167,
+      "dtype": "float64",
+      "label": "PARENTS/GUARDIANS SMOKE",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 63,
+        "2.0": 43,
+        "5.0": 59,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20B_R.dta",
+      "var": "RB106",
+      "rows": 15723,
+      "n_valid": 167,
+      "dtype": "float64",
+      "label": "DIABETES BEFORE AGE 16",
+      "n_distinct": 2,
+      "values": {
+        "-8.0": 9,
+        "5.0": 158
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20B_R.dta",
+      "var": "RB117",
+      "rows": 15723,
+      "n_valid": 167,
+      "dtype": "float64",
+      "label": "DRUGS/ALCOHOL PROBLEMS BEFORE AGE 16",
+      "n_distinct": 3,
+      "values": {
+        "-8.0": 1,
+        "1.0": 6,
+        "5.0": 160
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20B_R.dta",
+      "var": "RB122",
+      "rows": 15723,
+      "n_valid": 167,
+      "dtype": "float64",
+      "label": "CHILDHOOD-SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 29,
+        "5.0": 138
+      }
+    },
+    {
+      "file": "2016 HRS\\H16PR_R.dta",
+      "var": "PZ102",
+      "rows": 20912,
+      "n_valid": 16345,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 3947,
+        "5.0": 12398
+      }
+    },
+    {
+      "file": "2016 HRS\\H16PR_R.dta",
+      "var": "PZ204",
+      "rows": 20912,
+      "n_valid": 4333,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 63,
+      "values": {
+        "1926.0": 1,
+        "1940.0": 2,
+        "1949.0": 1,
+        "1950.0": 1,
+        "1954.0": 1,
+        "1956.0": 3,
+        "1958.0": 1,
+        "1959.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16PR_R.dta",
+      "var": "PZ205",
+      "rows": 20912,
+      "n_valid": 16345,
+      "dtype": "float64",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8988,
+        "5.0": 7357
+      }
+    },
+    {
+      "file": "2016 HRS\\H16PR_R.dta",
+      "var": "PZ231",
+      "rows": 20912,
+      "n_valid": 16345,
+      "dtype": "float64",
+      "label": "R STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8,
+        "5.0": 16337
+      }
+    },
+    {
+      "file": "2016 HRS\\H16PR_R.dta",
+      "var": "PZ232",
+      "rows": 20912,
+      "n_valid": 16345,
+      "dtype": "float64",
+      "label": "R STOPPED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 2905,
+        "5.0": 13440
+      }
+    },
+    {
+      "file": "2016 HRS\\H16PR_R.dta",
+      "var": "PZ254",
+      "rows": 20912,
+      "n_valid": 16275,
+      "dtype": "float64",
+      "label": "CHANGES TO ALCOHOL",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 11099,
+        "5.0": 2249,
+        "7.0": 2927
+      }
+    },
+    {
+      "file": "2012 HRS\\H12B_R.dta",
+      "var": "NB104",
+      "rows": 20554,
+      "n_valid": 611,
+      "dtype": "float64",
+      "label": "PARENTS/GUARDIANS SMOKE",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 245,
+        "2.0": 131,
+        "5.0": 234,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12B_R.dta",
+      "var": "NB106",
+      "rows": 20554,
+      "n_valid": 611,
+      "dtype": "float64",
+      "label": "DIABETES BEFORE AGE 16",
+      "n_distinct": 2,
+      "values": {
+        "5.0": 610,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12B_R.dta",
+      "var": "NB117",
+      "rows": 20554,
+      "n_valid": 611,
+      "dtype": "float64",
+      "label": "DRUGS/ALCOHOL PROBLEMS BEFORE AGE 16",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 11,
+        "5.0": 600
+      }
+    },
+    {
+      "file": "2012 HRS\\H12B_R.dta",
+      "var": "NB122",
+      "rows": 20554,
+      "n_valid": 616,
+      "dtype": "float64",
+      "label": "CHILDHOOD-SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 127,
+        "5.0": 489
+      }
+    },
+    {
+      "file": "2008 HRS\\H08B_R.dta",
+      "var": "LB104",
+      "rows": 17217,
+      "n_valid": 12274,
+      "dtype": "float64",
+      "label": "PARENTS/GUARDIANS SMOKE",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 5661,
+        "2.0": 2112,
+        "5.0": 4451,
+        "8.0": 49,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08B_R.dta",
+      "var": "LB106",
+      "rows": 17217,
+      "n_valid": 12274,
+      "dtype": "float64",
+      "label": "DIABETES BEFORE AGE 16",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 25,
+        "5.0": 12243,
+        "8.0": 5,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08B_R.dta",
+      "var": "LB117",
+      "rows": 17217,
+      "n_valid": 12274,
+      "dtype": "float64",
+      "label": "DRUGS/ALCOHOL PROBLEMS BEFORE AGE 16",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 62,
+        "5.0": 12209,
+        "8.0": 2,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08B_R.dta",
+      "var": "LB122",
+      "rows": 17217,
+      "n_valid": 16077,
+      "dtype": "float64",
+      "label": "CHILDHOOD-SMOKING",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 2956,
+        "5.0": 13114,
+        "8.0": 6,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08B_R.dta",
+      "var": "LB127_2",
+      "rows": 17217,
+      "n_valid": 25,
+      "dtype": "float64",
+      "label": "AGE FIRST DIAGNOSED -DIABETES",
+      "n_distinct": 10,
+      "values": {
+        "1.0": 1,
+        "5.0": 1,
+        "8.0": 1,
+        "9.0": 1,
+        "10.0": 3,
+        "12.0": 2,
+        "13.0": 3,
+        "15.0": 3
+      }
+    },
+    {
+      "file": "2008 HRS\\H08B_R.dta",
+      "var": "LB128_2",
+      "rows": 17217,
+      "n_valid": 10,
+      "dtype": "float64",
+      "label": "AGE FIRST DIAGNOSED-DK-DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "3.0": 3,
+        "8.0": 6,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08B_R.dta",
+      "var": "LB129_2",
+      "rows": 17217,
+      "n_valid": 25,
+      "dtype": "float64",
+      "label": "AGE STOP HAVING -DIABETES",
+      "n_distinct": 8,
+      "values": {
+        "6.0": 1,
+        "10.0": 1,
+        "14.0": 1,
+        "21.0": 1,
+        "55.0": 1,
+        "997.0": 14,
+        "998.0": 5,
+        "999.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI854",
+      "rows": 18469,
+      "n_valid": 7788,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE COMPLETE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7455,
+        "5.0": 333
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI855M1",
+      "rows": 18469,
+      "n_valid": 346,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-1",
+      "n_distinct": 10,
+      "values": {
+        "1.0": 20,
+        "2.0": 5,
+        "3.0": 190,
+        "4.0": 57,
+        "5.0": 1,
+        "6.0": 23,
+        "11.0": 32,
+        "14.0": 3
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI855M2",
+      "rows": 18469,
+      "n_valid": 63,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-2",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 2,
+        "2.0": 12,
+        "3.0": 7,
+        "4.0": 8,
+        "5.0": 2,
+        "6.0": 4,
+        "11.0": 24,
+        "97.0": 4
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI855M3",
+      "rows": 18469,
+      "n_valid": 10,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-3",
+      "n_distinct": 4,
+      "values": {
+        "3.0": 1,
+        "6.0": 4,
+        "11.0": 4,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI862",
+      "rows": 18469,
+      "n_valid": 18469,
+      "dtype": "object",
+      "label": "BLOOD PRESSURE 2 TIME",
+      "n_distinct": 1037,
+      "values": {
+        "": 11059,
+        "00:00:00": 12,
+        "00:01:00": 1,
+        "00:02:00": 4,
+        "00:03:00": 1,
+        "00:04:00": 4,
+        "00:05:00": 1,
+        "00:06:00": 2
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI875",
+      "rows": 18469,
+      "n_valid": 7433,
+      "dtype": "float64",
+      "label": "BLOODPRESSURE SMOKE ETC",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 537,
+        "5.0": 6884,
+        "8.0": 12
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI831",
+      "rows": 18469,
+      "n_valid": 7788,
+      "dtype": "float64",
+      "label": "MEASURE R HEIGHT",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7429,
+        "5.0": 359
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI832M1",
+      "rows": 18469,
+      "n_valid": 359,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE-1",
+      "n_distinct": 11,
+      "values": {
+        "1.0": 99,
+        "2.0": 15,
+        "3.0": 177,
+        "4.0": 3,
+        "5.0": 2,
+        "6.0": 8,
+        "7.0": 16,
+        "11.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI832M2",
+      "rows": 18469,
+      "n_valid": 87,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE-2",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 1,
+        "2.0": 67,
+        "3.0": 6,
+        "4.0": 1,
+        "5.0": 1,
+        "13.0": 11
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI832M3",
+      "rows": 18469,
+      "n_valid": 37,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE-3",
+      "n_distinct": 5,
+      "values": {
+        "3.0": 8,
+        "6.0": 4,
+        "7.0": 1,
+        "13.0": 21,
+        "97.0": 3
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI832M4",
+      "rows": 18469,
+      "n_valid": 4,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE-4",
+      "n_distinct": 2,
+      "values": {
+        "7.0": 1,
+        "13.0": 3
+      }
+    },
+    {
+      "file": "2006 HRS\\H06I_R.dta",
+      "var": "KI834",
+      "rows": 18469,
+      "n_valid": 7429,
+      "dtype": "float32",
+      "label": "HEIGHT MEASURMENT",
+      "n_distinct": 97,
+      "values": {
+        "50.25": 1,
+        "53.75": 1,
+        "54.25": 1,
+        "54.5": 2,
+        "54.75": 1,
+        "55.0": 3,
+        "55.25": 1,
+        "55.5": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18pr_r.dta",
+      "var": "QZ102",
+      "rows": 17146,
+      "n_valid": 16916,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 4329,
+        "5.0": 12587
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18pr_r.dta",
+      "var": "QZ204",
+      "rows": 17146,
+      "n_valid": 4102,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 70,
+      "values": {
+        "1900.0": 1,
+        "1911.0": 1,
+        "1935.0": 1,
+        "1942.0": 1,
+        "1944.0": 1,
+        "1951.0": 1,
+        "1954.0": 3,
+        "1955.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18pr_r.dta",
+      "var": "QZ205",
+      "rows": 17146,
+      "n_valid": 16924,
+      "dtype": "float64",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 9064,
+        "5.0": 7860
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18pr_r.dta",
+      "var": "QZ231",
+      "rows": 17146,
+      "n_valid": 16924,
+      "dtype": "float64",
+      "label": "R STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 2,
+        "5.0": 16922
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18pr_r.dta",
+      "var": "QZ232",
+      "rows": 17146,
+      "n_valid": 16924,
+      "dtype": "float64",
+      "label": "R STOPPED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 3166,
+        "5.0": 13758
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18pr_r.dta",
+      "var": "QZ281",
+      "rows": 17146,
+      "n_valid": 16162,
+      "dtype": "float64",
+      "label": "PW DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 2990,
+        "5.0": 13172
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18pr_r.dta",
+      "var": "QZ254",
+      "rows": 17146,
+      "n_valid": 14232,
+      "dtype": "float64",
+      "label": "CHANGES TO ALCOHOL",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 9807,
+        "5.0": 2159,
+        "7.0": 2266
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20PR_R.dta",
+      "var": "RZ102",
+      "rows": 15723,
+      "n_valid": 15394,
+      "dtype": "float64",
+      "label": "PREV WAVE R HAS DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 4074,
+        "5.0": 11320
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20PR_R.dta",
+      "var": "RZ204",
+      "rows": 15723,
+      "n_valid": 1880,
+      "dtype": "float64",
+      "label": "FIRST YEAR R WAS DIAGNOSED WITH DIABETES",
+      "n_distinct": 60,
+      "values": {
+        "1911.0": 1,
+        "1956.0": 1,
+        "1958.0": 1,
+        "1959.0": 1,
+        "1960.0": 1,
+        "1962.0": 1,
+        "1963.0": 1,
+        "1964.0": 2
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20PR_R.dta",
+      "var": "RZ205",
+      "rows": 15723,
+      "n_valid": 15258,
+      "dtype": "float64",
+      "label": "R REPORTED THAT S/HE EVER SMOKED",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8113,
+        "5.0": 7145
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20PR_R.dta",
+      "var": "RZ231",
+      "rows": 15723,
+      "n_valid": 15182,
+      "dtype": "float64",
+      "label": "R STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 361,
+        "5.0": 14821
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20PR_R.dta",
+      "var": "RZ232",
+      "rows": 15723,
+      "n_valid": 15183,
+      "dtype": "float64",
+      "label": "R STOPPED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 1219,
+        "5.0": 13964
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20PR_R.dta",
+      "var": "RZ254",
+      "rows": 15723,
+      "n_valid": 11333,
+      "dtype": "float64",
+      "label": "CHANGES TO ALCOHOL",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 6909,
+        "5.0": 1293,
+        "7.0": 3131
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20PR_R.dta",
+      "var": "RZ281",
+      "rows": 15723,
+      "n_valid": 11703,
+      "dtype": "float64",
+      "label": "PW DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 2187,
+        "5.0": 9516
+      }
+    },
+    {
+      "file": "2010 HRS\\H10B_R.dta",
+      "var": "MB104",
+      "rows": 22034,
+      "n_valid": 6726,
+      "dtype": "float64",
+      "label": "PARENTS/GUARDIANS SMOKE",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 2706,
+        "2.0": 1559,
+        "5.0": 2433,
+        "8.0": 28
+      }
+    },
+    {
+      "file": "2010 HRS\\H10B_R.dta",
+      "var": "MB106",
+      "rows": 22034,
+      "n_valid": 6726,
+      "dtype": "float64",
+      "label": "DIABETES BEFORE AGE 16",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 19,
+        "5.0": 6703,
+        "8.0": 4
+      }
+    },
+    {
+      "file": "2010 HRS\\H10B_R.dta",
+      "var": "MB117",
+      "rows": 22034,
+      "n_valid": 6726,
+      "dtype": "float64",
+      "label": "DRUGS/ALCOHOL PROBLEMS BEFORE AGE 16",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 126,
+        "5.0": 6599,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10B_R.dta",
+      "var": "MB122",
+      "rows": 22034,
+      "n_valid": 6750,
+      "dtype": "float64",
+      "label": "CHILDHOOD-SMOKING",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 1467,
+        "5.0": 5277,
+        "8.0": 4,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2010 HRS\\H10B_R.dta",
+      "var": "MB127_2",
+      "rows": 22034,
+      "n_valid": 19,
+      "dtype": "float64",
+      "label": "AGE FIRST DIAGNOSED -DIABETES",
+      "n_distinct": 12,
+      "values": {
+        "1.0": 2,
+        "2.0": 1,
+        "8.0": 1,
+        "9.0": 1,
+        "10.0": 1,
+        "11.0": 1,
+        "12.0": 1,
+        "14.0": 3
+      }
+    },
+    {
+      "file": "2010 HRS\\H10B_R.dta",
+      "var": "MB128_2",
+      "rows": 22034,
+      "n_valid": 2,
+      "dtype": "float64",
+      "label": "AGE FIRST DIAGNOSED-DK-DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 1,
+        "3.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10B_R.dta",
+      "var": "MB129_2",
+      "rows": 22034,
+      "n_valid": 16,
+      "dtype": "float64",
+      "label": "AGE STOP HAVING -DIABETES",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 1,
+        "15.0": 1,
+        "47.0": 1,
+        "97.0": 13
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI855M1",
+      "rows": 17217,
+      "n_valid": 215,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-1",
+      "n_distinct": 9,
+      "values": {
+        "1.0": 22,
+        "2.0": 1,
+        "3.0": 84,
+        "4.0": 31,
+        "5.0": 1,
+        "6.0": 19,
+        "7.0": 3,
+        "8.0": 52
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI855M2",
+      "rows": 17217,
+      "n_valid": 43,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-2",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 1,
+        "2.0": 2,
+        "3.0": 12,
+        "4.0": 4,
+        "6.0": 7,
+        "7.0": 1,
+        "8.0": 15,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI855M3",
+      "rows": 17217,
+      "n_valid": 5,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-3",
+      "n_distinct": 4,
+      "values": {
+        "4.0": 1,
+        "6.0": 1,
+        "8.0": 2,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI862",
+      "rows": 17217,
+      "n_valid": 17217,
+      "dtype": "object",
+      "label": "BLOOD PRESSURE 2 TIME",
+      "n_distinct": 717,
+      "values": {
+        "": 10522,
+        "10:00:00": 15,
+        "10:01:00": 9,
+        "10:02:00": 9,
+        "10:03:00": 19,
+        "10:04:00": 11,
+        "10:05:00": 10,
+        "10:06:00": 16
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI875",
+      "rows": 17217,
+      "n_valid": 6695,
+      "dtype": "float64",
+      "label": "BLOODPRESSURE SMOKE ETC",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 382,
+        "5.0": 6300,
+        "8.0": 13
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI831",
+      "rows": 17217,
+      "n_valid": 6926,
+      "dtype": "float64",
+      "label": "MEASURE R HEIGHT",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 6674,
+        "5.0": 252
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI832M1",
+      "rows": 17217,
+      "n_valid": 252,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -1",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 82,
+        "2.0": 10,
+        "3.0": 83,
+        "6.0": 55,
+        "7.0": 11,
+        "8.0": 6,
+        "9.0": 2,
+        "97.0": 3
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI832M2",
+      "rows": 17217,
+      "n_valid": 84,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -2",
+      "n_distinct": 7,
+      "values": {
+        "1.0": 2,
+        "2.0": 48,
+        "3.0": 12,
+        "4.0": 2,
+        "6.0": 16,
+        "7.0": 2,
+        "97.0": 2
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI832M3",
+      "rows": 17217,
+      "n_valid": 43,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -3",
+      "n_distinct": 6,
+      "values": {
+        "2.0": 2,
+        "3.0": 7,
+        "4.0": 1,
+        "6.0": 31,
+        "8.0": 1,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI832M4",
+      "rows": 17217,
+      "n_valid": 5,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -4",
+      "n_distinct": 3,
+      "values": {
+        "6.0": 3,
+        "7.0": 1,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI832M5",
+      "rows": 17217,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -5",
+      "n_distinct": 1,
+      "values": {
+        "7.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08I_R.dta",
+      "var": "LI832M6",
+      "rows": 17217,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -6",
+      "n_distinct": 1,
+      "values": {
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI937",
+      "rows": 20554,
+      "n_valid": 8952,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE COMPLETE",
+      "n_distinct": 1,
+      "values": {
+        "1.0": 8952
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI854",
+      "rows": 20554,
+      "n_valid": 8512,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE COMPLETE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8281,
+        "5.0": 231
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI855M1",
+      "rows": 20554,
+      "n_valid": 244,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-1",
+      "n_distinct": 9,
+      "values": {
+        "1.0": 15,
+        "2.0": 4,
+        "3.0": 64,
+        "4.0": 42,
+        "5.0": 1,
+        "6.0": 34,
+        "7.0": 4,
+        "8.0": 78
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI855M2",
+      "rows": 20554,
+      "n_valid": 60,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-2",
+      "n_distinct": 7,
+      "values": {
+        "2.0": 5,
+        "3.0": 7,
+        "4.0": 9,
+        "6.0": 11,
+        "7.0": 1,
+        "8.0": 26,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI855M3",
+      "rows": 20554,
+      "n_valid": 8,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-3",
+      "n_distinct": 3,
+      "values": {
+        "4.0": 2,
+        "6.0": 4,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI862",
+      "rows": 20554,
+      "n_valid": 20554,
+      "dtype": "object",
+      "label": "BLOOD PRESSURE 2 TIME",
+      "n_distinct": 812,
+      "values": {
+        "": 12299,
+        "0:00:00": 2,
+        "10:00:00": 15,
+        "10:01:00": 31,
+        "10:02:00": 17,
+        "10:03:00": 13,
+        "10:04:00": 7,
+        "10:05:00": 13
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI875",
+      "rows": 20554,
+      "n_valid": 8255,
+      "dtype": "float64",
+      "label": "BLOODPRESSURE SMOKE ETC",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 477,
+        "5.0": 7752,
+        "8.0": 26
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI831",
+      "rows": 20554,
+      "n_valid": 8512,
+      "dtype": "float64",
+      "label": "MEASURE R HEIGHT",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8246,
+        "5.0": 266
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI832M1",
+      "rows": 20554,
+      "n_valid": 266,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -1",
+      "n_distinct": 9,
+      "values": {
+        "1.0": 77,
+        "2.0": 23,
+        "3.0": 56,
+        "4.0": 4,
+        "6.0": 70,
+        "7.0": 19,
+        "8.0": 7,
+        "9.0": 6
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI832M2",
+      "rows": 20554,
+      "n_valid": 86,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -2",
+      "n_distinct": 4,
+      "values": {
+        "2.0": 46,
+        "3.0": 7,
+        "6.0": 28,
+        "7.0": 5
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI832M3",
+      "rows": 20554,
+      "n_valid": 34,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -3",
+      "n_distinct": 3,
+      "values": {
+        "3.0": 3,
+        "4.0": 1,
+        "6.0": 30
+      }
+    },
+    {
+      "file": "2012 HRS\\H12I_R.dta",
+      "var": "NI832M4",
+      "rows": 20554,
+      "n_valid": 3,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -4",
+      "n_distinct": 2,
+      "values": {
+        "4.0": 1,
+        "6.0": 2
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI937",
+      "rows": 22034,
+      "n_valid": 9389,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE COMPLETE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 9386,
+        "8.0": 3
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI854",
+      "rows": 22034,
+      "n_valid": 8978,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE COMPLETE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8708,
+        "5.0": 270
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI855M1",
+      "rows": 22034,
+      "n_valid": 270,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-1",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 17,
+        "2.0": 3,
+        "3.0": 44,
+        "4.0": 65,
+        "6.0": 43,
+        "8.0": 95,
+        "97.0": 2,
+        "99.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI855M2",
+      "rows": 22034,
+      "n_valid": 66,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-2",
+      "n_distinct": 9,
+      "values": {
+        "1.0": 1,
+        "2.0": 8,
+        "3.0": 1,
+        "4.0": 13,
+        "5.0": 1,
+        "6.0": 5,
+        "7.0": 4,
+        "8.0": 30
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI855M3",
+      "rows": 22034,
+      "n_valid": 12,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-3",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 2,
+        "4.0": 2,
+        "6.0": 4,
+        "8.0": 1,
+        "97.0": 3
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI855M4",
+      "rows": 22034,
+      "n_valid": 2,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-4",
+      "n_distinct": 2,
+      "values": {
+        "2.0": 1,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI862",
+      "rows": 22034,
+      "n_valid": 22034,
+      "dtype": "object",
+      "label": "BLOOD PRESSURE 2 TIME",
+      "n_distinct": 828,
+      "values": {
+        "": 13351,
+        "0": 5,
+        "0:04:00": 1,
+        "10:00:00": 15,
+        "10:01:00": 17,
+        "10:02:00": 21,
+        "10:03:00": 15,
+        "10:04:00": 11
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI875",
+      "rows": 22034,
+      "n_valid": 8683,
+      "dtype": "float64",
+      "label": "BLOODPRESSURE SMOKE ETC",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 533,
+        "5.0": 8130,
+        "8.0": 20
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI831",
+      "rows": 22034,
+      "n_valid": 8978,
+      "dtype": "float64",
+      "label": "MEASURE R HEIGHT",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8778,
+        "5.0": 200
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI832M1",
+      "rows": 22034,
+      "n_valid": 200,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -1",
+      "n_distinct": 10,
+      "values": {
+        "1.0": 57,
+        "2.0": 10,
+        "3.0": 42,
+        "4.0": 5,
+        "6.0": 47,
+        "7.0": 13,
+        "8.0": 8,
+        "9.0": 12
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI832M2",
+      "rows": 22034,
+      "n_valid": 66,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -2",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 3,
+        "2.0": 38,
+        "3.0": 3,
+        "5.0": 1,
+        "6.0": 15,
+        "7.0": 3,
+        "9.0": 1,
+        "97.0": 2
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI832M3",
+      "rows": 22034,
+      "n_valid": 38,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -3",
+      "n_distinct": 4,
+      "values": {
+        "2.0": 1,
+        "3.0": 6,
+        "4.0": 1,
+        "6.0": 30
+      }
+    },
+    {
+      "file": "2010 HRS\\H10I_R.dta",
+      "var": "MI832M4",
+      "rows": 22034,
+      "n_valid": 4,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -4",
+      "n_distinct": 2,
+      "values": {
+        "6.0": 3,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI862",
+      "rows": 18747,
+      "n_valid": 18747,
+      "dtype": "object",
+      "label": "BLOOD PRESSURE 2 TIME",
+      "n_distinct": 794,
+      "values": {
+        "": 10898,
+        "00:43:00": 1,
+        "01:02:00": 2,
+        "01:24:00": 1,
+        "01:39:00": 1,
+        "01:52:00": 1,
+        "01:56:00": 2,
+        "01:58:00": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI854",
+      "rows": 18747,
+      "n_valid": 7904,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE COMPLETE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7820,
+        "5.0": 84
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI855M1",
+      "rows": 18747,
+      "n_valid": 165,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-1",
+      "n_distinct": 9,
+      "values": {
+        "1.0": 20,
+        "2.0": 5,
+        "3.0": 30,
+        "4.0": 46,
+        "6.0": 12,
+        "7.0": 2,
+        "8.0": 48,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI855M2",
+      "rows": 18747,
+      "n_valid": 56,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-2",
+      "n_distinct": 7,
+      "values": {
+        "2.0": 7,
+        "3.0": 3,
+        "4.0": 4,
+        "6.0": 9,
+        "7.0": 3,
+        "8.0": 28,
+        "97.0": 2
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI855M3",
+      "rows": 18747,
+      "n_valid": 7,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-3",
+      "n_distinct": 4,
+      "values": {
+        "3.0": 2,
+        "4.0": 2,
+        "8.0": 2,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI855M4",
+      "rows": 18747,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-4",
+      "n_distinct": 1,
+      "values": {
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI980",
+      "rows": 18747,
+      "n_valid": 7996,
+      "dtype": "float64",
+      "label": "HEIGHT SAFETY QUESTION",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7753,
+        "5.0": 243
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI982",
+      "rows": 18747,
+      "n_valid": 7874,
+      "dtype": "float64",
+      "label": "R UNDERSTANDING OF WEIGHT MEASUREMENT PROCEDURE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7599,
+        "5.0": 275
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI636",
+      "rows": 18747,
+      "n_valid": 7996,
+      "dtype": "float64",
+      "label": "WAIST MEASUREMENT SCREENING QUESTION",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7732,
+        "5.0": 264
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI985",
+      "rows": 18747,
+      "n_valid": 7732,
+      "dtype": "float64",
+      "label": "R UNDERSTANDING OF WAIST MEASUREMENT PROCEDURE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7704,
+        "5.0": 28
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI914",
+      "rows": 18747,
+      "n_valid": 1068,
+      "dtype": "float64",
+      "label": "SALIVA SAMPLE EAT DRINK ETC",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 88,
+        "5.0": 980
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI831",
+      "rows": 18747,
+      "n_valid": 7756,
+      "dtype": "float64",
+      "label": "MEASURE R HEIGHT",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7719,
+        "5.0": 37
+      }
+    },
+    {
+      "file": "2014 HRS\\H14I_R.dta",
+      "var": "OI834",
+      "rows": 18747,
+      "n_valid": 7719,
+      "dtype": "float32",
+      "label": "HEIGHT MEASURMENT",
+      "n_distinct": 122,
+      "values": {
+        "5.0": 4,
+        "48.25": 1,
+        "49.25": 1,
+        "50.5": 2,
+        "50.75": 1,
+        "51.25": 3,
+        "51.75": 2,
+        "52.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI862",
+      "rows": 17146,
+      "n_valid": 17146,
+      "dtype": "object",
+      "label": "BLOOD PRESSURE 2 TIME",
+      "n_distinct": 774,
+      "values": {
+        "": 10045,
+        "00:40:00": 2,
+        "01:05:00": 1,
+        "07:15:00": 1,
+        "07:24:00": 1,
+        "07:35:00": 1,
+        "07:40:00": 1,
+        "07:46:00": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI668",
+      "rows": 17146,
+      "n_valid": 15,
+      "dtype": "float64",
+      "label": "SEVERELY HIGH BLOOD PRESSURE IW ACTION",
+      "n_distinct": 1,
+      "values": {
+        "1.0": 15
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI854",
+      "rows": 17146,
+      "n_valid": 7168,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE COMPLETE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7088,
+        "5.0": 80
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI855M1",
+      "rows": 17146,
+      "n_valid": 197,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-1",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 16,
+        "2.0": 6,
+        "3.0": 39,
+        "4.0": 37,
+        "6.0": 19,
+        "7.0": 9,
+        "8.0": 62,
+        "97.0": 9
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI855M2",
+      "rows": 17146,
+      "n_valid": 54,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-2",
+      "n_distinct": 8,
+      "values": {
+        "1.0": 1,
+        "2.0": 7,
+        "3.0": 5,
+        "4.0": 6,
+        "5.0": 1,
+        "6.0": 5,
+        "8.0": 25,
+        "97.0": 4
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI855M3",
+      "rows": 17146,
+      "n_valid": 12,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-3",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 1,
+        "3.0": 1,
+        "4.0": 1,
+        "6.0": 5,
+        "8.0": 1,
+        "97.0": 3
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI914",
+      "rows": 17146,
+      "n_valid": 2926,
+      "dtype": "float64",
+      "label": "SALIVA SAMPLE EAT DRINK ETC",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 235,
+        "5.0": 2690,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI831",
+      "rows": 17146,
+      "n_valid": 7280,
+      "dtype": "float64",
+      "label": "MEASURE R HEIGHT",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 7020,
+        "5.0": 260
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI834",
+      "rows": 17146,
+      "n_valid": 7020,
+      "dtype": "float64",
+      "label": "HEIGHT MEASURMENT",
+      "n_distinct": 124,
+      "values": {
+        "48.0": 2,
+        "48.5": 1,
+        "49.0": 2,
+        "49.25": 1,
+        "50.0": 1,
+        "50.25": 1,
+        "51.5": 1,
+        "52.0": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI837",
+      "rows": 17146,
+      "n_valid": 7020,
+      "dtype": "float64",
+      "label": "HEIGHT WEARING SHOES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 317,
+        "5.0": 6703
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI832M1",
+      "rows": 17146,
+      "n_valid": 260,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -1",
+      "n_distinct": 10,
+      "values": {
+        "1.0": 96,
+        "2.0": 25,
+        "3.0": 79,
+        "4.0": 5,
+        "5.0": 1,
+        "6.0": 2,
+        "7.0": 16,
+        "8.0": 12
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI832M2",
+      "rows": 17146,
+      "n_valid": 78,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -2",
+      "n_distinct": 9,
+      "values": {
+        "1.0": 1,
+        "2.0": 51,
+        "3.0": 8,
+        "4.0": 1,
+        "5.0": 1,
+        "6.0": 1,
+        "7.0": 3,
+        "9.0": 9
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18i_r.dta",
+      "var": "QI832M3",
+      "rows": 17146,
+      "n_valid": 33,
+      "dtype": "float64",
+      "label": "HEIGHT REASON NOT COMPLETE  -3",
+      "n_distinct": 5,
+      "values": {
+        "3.0": 11,
+        "6.0": 3,
+        "7.0": 1,
+        "9.0": 17,
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC005",
+      "rows": 18469,
+      "n_valid": 18468,
+      "dtype": "float64",
+      "label": "HIGH BLOOD PRESSURE",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 10531,
+        "3.0": 5,
+        "4.0": 220,
+        "5.0": 7681,
+        "8.0": 30,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC006",
+      "rows": 18469,
+      "n_valid": 10536,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE MEDICATION",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 9477,
+        "5.0": 1039,
+        "8.0": 19,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC008",
+      "rows": 18469,
+      "n_valid": 10536,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE UNDER CONTROL",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 10064,
+        "5.0": 412,
+        "8.0": 58,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC009",
+      "rows": 18469,
+      "n_valid": 9334,
+      "dtype": "float64",
+      "label": "HIGH BLOOD PRESSURE- WORSE/SAME",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 3120,
+        "2.0": 5715,
+        "3.0": 442,
+        "8.0": 56,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC211",
+      "rows": 18469,
+      "n_valid": 7932,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE CHECKED SINCE LAST IW",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 7360,
+        "5.0": 562,
+        "8.0": 9,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC212",
+      "rows": 18469,
+      "n_valid": 246,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE CHECKED-YEAR",
+      "n_distinct": 8,
+      "values": {
+        "2000.0": 1,
+        "2001.0": 2,
+        "2003.0": 2,
+        "2004.0": 4,
+        "2005.0": 32,
+        "2006.0": 198,
+        "2007.0": 5,
+        "9998.0": 2
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC010",
+      "rows": 18469,
+      "n_valid": 18468,
+      "dtype": "float64",
+      "label": "DIABETES",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 3716,
+        "3.0": 3,
+        "4.0": 104,
+        "5.0": 14626,
+        "8.0": 17,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC214",
+      "rows": 18469,
+      "n_valid": 761,
+      "dtype": "float64",
+      "label": "YEAR DIABETES FIRST DIAGNOSED",
+      "n_distinct": 40,
+      "values": {
+        "1940.0": 1,
+        "1950.0": 3,
+        "1959.0": 1,
+        "1961.0": 1,
+        "1964.0": 1,
+        "1968.0": 2,
+        "1970.0": 3,
+        "1972.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC011",
+      "rows": 18469,
+      "n_valid": 3719,
+      "dtype": "float64",
+      "label": "SWALLOWED MEDICATION FOR DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 2705,
+        "5.0": 1012,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC012",
+      "rows": 18469,
+      "n_valid": 3719,
+      "dtype": "float64",
+      "label": "TAKING INSULIN - DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 841,
+        "5.0": 2876,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC236",
+      "rows": 18469,
+      "n_valid": 2878,
+      "dtype": "float64",
+      "label": "DOC RECOMMEND INSULIN - DIABETES",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 203,
+        "5.0": 2668,
+        "8.0": 5,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC015",
+      "rows": 18469,
+      "n_valid": 3719,
+      "dtype": "float64",
+      "label": "DIABETES UNDER CONTROL",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 3375,
+        "5.0": 324,
+        "8.0": 19,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2006 HRS\\H06C_R.dta",
+      "var": "KC016",
+      "rows": 18469,
+      "n_valid": 3060,
+      "dtype": "float64",
+      "label": "DIABETES BETTER/WORSE/SAME",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 660,
+        "2.0": 2010,
+        "3.0": 381,
+        "8.0": 7,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI862",
+      "rows": 20912,
+      "n_valid": 20912,
+      "dtype": "object",
+      "label": "BLOOD PRESSURE 2 TIME",
+      "n_distinct": 863,
+      "values": {
+        "": 12775,
+        "00:00:00": 4,
+        "00:01:00": 2,
+        "00:03:00": 1,
+        "00:07:00": 1,
+        "00:09:00": 1,
+        "00:28:00": 1,
+        "00:29:00": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI668",
+      "rows": 20912,
+      "n_valid": 24,
+      "dtype": "float64",
+      "label": "SEVERELY HIGH BLOOD PRESSURE IW ACTION",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 23,
+        "5.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI854",
+      "rows": 20912,
+      "n_valid": 8182,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE COMPLETE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8113,
+        "5.0": 69
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI855M1",
+      "rows": 20912,
+      "n_valid": 207,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-1",
+      "n_distinct": 9,
+      "values": {
+        "1.0": 19,
+        "2.0": 5,
+        "3.0": 50,
+        "4.0": 43,
+        "5.0": 2,
+        "6.0": 22,
+        "7.0": 3,
+        "8.0": 62
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI855M2",
+      "rows": 20912,
+      "n_valid": 45,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-2",
+      "n_distinct": 7,
+      "values": {
+        "1.0": 1,
+        "2.0": 3,
+        "3.0": 1,
+        "4.0": 4,
+        "6.0": 2,
+        "8.0": 31,
+        "97.0": 3
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI855M3",
+      "rows": 20912,
+      "n_valid": 5,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-3",
+      "n_distinct": 3,
+      "values": {
+        "7.0": 1,
+        "8.0": 1,
+        "97.0": 3
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI855M4",
+      "rows": 20912,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE NOT COMPLETE-4",
+      "n_distinct": 1,
+      "values": {
+        "97.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI669",
+      "rows": 20912,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "SUSPEND INTERVIEW DUE TO BLOOD PRESSURE",
+      "n_distinct": 1,
+      "values": {
+        "1.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI980",
+      "rows": 20912,
+      "n_valid": 284,
+      "dtype": "float64",
+      "label": "HEIGHT SAFETY QUESTION",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 277,
+        "5.0": 7
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI985",
+      "rows": 20912,
+      "n_valid": 284,
+      "dtype": "float64",
+      "label": "R UNDERSTANDING OF WAIST MEASUREMENT PROCEDURE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 273,
+        "5.0": 11
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI982",
+      "rows": 20912,
+      "n_valid": 278,
+      "dtype": "float64",
+      "label": "R FELT SAFE TO DO WAIST MEASUREMENT",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 264,
+        "5.0": 14
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI914",
+      "rows": 20912,
+      "n_valid": 2745,
+      "dtype": "float64",
+      "label": "SALIVA SAMPLE EAT DRINK ETC",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 237,
+        "5.0": 2508
+      }
+    },
+    {
+      "file": "2016 HRS\\H16I_R.dta",
+      "var": "PI831",
+      "rows": 20912,
+      "n_valid": 8315,
+      "dtype": "float64",
+      "label": "MEASURE R HEIGHT",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 8059,
+        "5.0": 256
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC005",
+      "rows": 18747,
+      "n_valid": 18747,
+      "dtype": "int8",
+      "label": "HIGH BLOOD PRESSURE",
+      "n_distinct": 6,
+      "values": {
+        "1": 11672,
+        "3": 13,
+        "4": 193,
+        "5": 6838,
+        "8": 29,
+        "9": 2
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC006",
+      "rows": 18747,
+      "n_valid": 11685,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE MEDICATION",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 10323,
+        "5.0": 1306,
+        "8.0": 55,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC010",
+      "rows": 18747,
+      "n_valid": 18747,
+      "dtype": "int8",
+      "label": "DIABETES",
+      "n_distinct": 6,
+      "values": {
+        "1": 4737,
+        "3": 1,
+        "4": 135,
+        "5": 13859,
+        "8": 14,
+        "9": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC214",
+      "rows": 18747,
+      "n_valid": 599,
+      "dtype": "float64",
+      "label": "YEAR DIABETES FIRST DIAGNOSED",
+      "n_distinct": 28,
+      "values": {
+        "1926.0": 1,
+        "1949.0": 1,
+        "1970.0": 1,
+        "1980.0": 2,
+        "1987.0": 2,
+        "1992.0": 1,
+        "1993.0": 1,
+        "1995.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC011",
+      "rows": 18747,
+      "n_valid": 4738,
+      "dtype": "float64",
+      "label": "SWALLOWED MEDICATION FOR DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 3330,
+        "5.0": 1289,
+        "8.0": 119
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC012",
+      "rows": 18747,
+      "n_valid": 4738,
+      "dtype": "float64",
+      "label": "TAKING INSULIN - DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 1158,
+        "5.0": 3461,
+        "8.0": 119
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC236",
+      "rows": 18747,
+      "n_valid": 3580,
+      "dtype": "float64",
+      "label": "DOC RECOMMEND INSULIN - DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 329,
+        "5.0": 3128,
+        "8.0": 123
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC116",
+      "rows": 18747,
+      "n_valid": 183,
+      "dtype": "float64",
+      "label": "EVER SMOKE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 117,
+        "5.0": 66
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC117",
+      "rows": 18747,
+      "n_valid": 10391,
+      "dtype": "float64",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 2442,
+        "5.0": 7945,
+        "8.0": 3,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC118",
+      "rows": 18747,
+      "n_valid": 1942,
+      "dtype": "float64",
+      "label": "NUM CIGARETTES SMOKED PER DAY",
+      "n_distinct": 27,
+      "values": {
+        "0.0": 32,
+        "1.0": 128,
+        "2.0": 89,
+        "3.0": 128,
+        "4.0": 117,
+        "5.0": 163,
+        "6.0": 106,
+        "7.0": 64
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC119",
+      "rows": 18747,
+      "n_valid": 500,
+      "dtype": "float64",
+      "label": "NUM PACKS SMOKED PER DAY",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 444,
+        "2.0": 48,
+        "3.0": 7,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC120",
+      "rows": 18747,
+      "n_valid": 209,
+      "dtype": "float64",
+      "label": "AGE START SMOKING",
+      "n_distinct": 32,
+      "values": {
+        "2.0": 1,
+        "5.0": 1,
+        "7.0": 1,
+        "10.0": 1,
+        "11.0": 6,
+        "12.0": 5,
+        "13.0": 7,
+        "14.0": 10
+      }
+    },
+    {
+      "file": "2014 HRS\\H14C_R.dta",
+      "var": "OC121",
+      "rows": 18747,
+      "n_valid": 1,
+      "dtype": "float64",
+      "label": "YR STARTED SMOKING",
+      "n_distinct": 1,
+      "values": {
+        "1968.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC005",
+      "rows": 17217,
+      "n_valid": 17217,
+      "dtype": "int8",
+      "label": "HIGH BLOOD PRESSURE",
+      "n_distinct": 6,
+      "values": {
+        "1": 10394,
+        "3": 9,
+        "4": 205,
+        "5": 6583,
+        "8": 22,
+        "9": 4
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC006",
+      "rows": 17217,
+      "n_valid": 10403,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE MEDICATION",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 9309,
+        "5.0": 1075,
+        "8.0": 18,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC008",
+      "rows": 17217,
+      "n_valid": 10403,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE UNDER CONTROL",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 9975,
+        "5.0": 374,
+        "8.0": 54
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC009",
+      "rows": 17217,
+      "n_valid": 9293,
+      "dtype": "float64",
+      "label": "HIGH BLOOD PRESSURE- WORSE/SAME",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 3003,
+        "2.0": 5840,
+        "3.0": 411,
+        "8.0": 38,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC211",
+      "rows": 17217,
+      "n_valid": 6814,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE CHECKED SINCE LAST IW",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 6390,
+        "5.0": 414,
+        "8.0": 9,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC212",
+      "rows": 17217,
+      "n_valid": 134,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE CHECKED-YEAR",
+      "n_distinct": 6,
+      "values": {
+        "2004.0": 3,
+        "2006.0": 5,
+        "2007.0": 15,
+        "2008.0": 104,
+        "2009.0": 5,
+        "9998.0": 2
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC010",
+      "rows": 17217,
+      "n_valid": 17217,
+      "dtype": "int8",
+      "label": "DIABETES",
+      "n_distinct": 6,
+      "values": {
+        "1": 3771,
+        "3": 3,
+        "4": 102,
+        "5": 13323,
+        "8": 15,
+        "9": 3
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC214",
+      "rows": 17217,
+      "n_valid": 587,
+      "dtype": "float64",
+      "label": "YEAR DIABETES FIRST DIAGNOSED",
+      "n_distinct": 27,
+      "values": {
+        "1960.0": 1,
+        "1972.0": 2,
+        "1978.0": 2,
+        "1982.0": 1,
+        "1983.0": 1,
+        "1985.0": 1,
+        "1988.0": 3,
+        "1989.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC011",
+      "rows": 17217,
+      "n_valid": 3774,
+      "dtype": "float64",
+      "label": "SWALLOWED MEDICATION FOR DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 2753,
+        "5.0": 1014,
+        "8.0": 7
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC012",
+      "rows": 17217,
+      "n_valid": 3774,
+      "dtype": "float64",
+      "label": "TAKING INSULIN - DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 885,
+        "5.0": 2887,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC236",
+      "rows": 17217,
+      "n_valid": 2889,
+      "dtype": "float64",
+      "label": "DOC RECOMMEND INSULIN - DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 216,
+        "5.0": 2671,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC015",
+      "rows": 17217,
+      "n_valid": 3774,
+      "dtype": "float64",
+      "label": "DIABETES UNDER CONTROL",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 3419,
+        "5.0": 324,
+        "8.0": 31
+      }
+    },
+    {
+      "file": "2008 HRS\\H08C_R.dta",
+      "var": "LC016",
+      "rows": 17217,
+      "n_valid": 3197,
+      "dtype": "float64",
+      "label": "DIABETES BETTER/WORSE/SAME",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 707,
+        "2.0": 2106,
+        "3.0": 375,
+        "8.0": 9
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18v_r.dta",
+      "var": "QV503",
+      "rows": 17146,
+      "n_valid": 1336,
+      "dtype": "float64",
+      "label": "CHANCE SMOKER WILL LIVE TO TARGET AGE",
+      "n_distinct": 36,
+      "values": {
+        "-8.0": 2,
+        "0.0": 224,
+        "1.0": 3,
+        "2.0": 11,
+        "3.0": 4,
+        "5.0": 36,
+        "6.0": 1,
+        "8.0": 4
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18v_r.dta",
+      "var": "QV504",
+      "rows": 17146,
+      "n_valid": 1336,
+      "dtype": "float64",
+      "label": "CHANCE NONSMOKER WILL LIVE TO TARGET AGE",
+      "n_distinct": 42,
+      "values": {
+        "-8.0": 2,
+        "0.0": 50,
+        "1.0": 1,
+        "2.0": 1,
+        "3.0": 1,
+        "5.0": 7,
+        "7.0": 3,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18v_r.dta",
+      "var": "QV505",
+      "rows": 17146,
+      "n_valid": 456,
+      "dtype": "float64",
+      "label": "LIVE LONGER SMOKER VS NONSMOKER",
+      "n_distinct": 6,
+      "values": {
+        "-8.0": 1,
+        "1.0": 355,
+        "2.0": 60,
+        "3.0": 30,
+        "8.0": 6,
+        "9.0": 4
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18v_r.dta",
+      "var": "QV506",
+      "rows": 17146,
+      "n_valid": 385,
+      "dtype": "float64",
+      "label": "NUMBER OF YEARS MORE LESS SMOKING",
+      "n_distinct": 22,
+      "values": {
+        "2.0": 7,
+        "3.0": 5,
+        "4.0": 1,
+        "5.0": 39,
+        "6.0": 5,
+        "7.0": 7,
+        "8.0": 13,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18v_r.dta",
+      "var": "QV513",
+      "rows": 17146,
+      "n_valid": 1336,
+      "dtype": "float64",
+      "label": "CHANCE DIABETIC WILL LIVE TO TARGET AGE",
+      "n_distinct": 42,
+      "values": {
+        "-8.0": 3,
+        "0.0": 108,
+        "1.0": 2,
+        "2.0": 2,
+        "3.0": 2,
+        "4.0": 3,
+        "5.0": 22,
+        "6.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18v_r.dta",
+      "var": "QV514",
+      "rows": 17146,
+      "n_valid": 1336,
+      "dtype": "float64",
+      "label": "CHANCE NON DIABETIC LIVE TO TARGET AGE",
+      "n_distinct": 42,
+      "values": {
+        "-8.0": 5,
+        "0.0": 29,
+        "2.0": 2,
+        "3.0": 1,
+        "5.0": 10,
+        "6.0": 1,
+        "8.0": 2,
+        "10.0": 28
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18v_r.dta",
+      "var": "QV515",
+      "rows": 17146,
+      "n_valid": 448,
+      "dtype": "float64",
+      "label": "LIVE LONGER DIABETIC VS NONDIABETIC",
+      "n_distinct": 6,
+      "values": {
+        "-8.0": 1,
+        "1.0": 303,
+        "2.0": 97,
+        "3.0": 32,
+        "8.0": 13,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18v_r.dta",
+      "var": "QV516",
+      "rows": 17146,
+      "n_valid": 335,
+      "dtype": "float64",
+      "label": "NUMBER OF YEARS DIABETIC VS NON DIABETIC",
+      "n_distinct": 17,
+      "values": {
+        "1.0": 4,
+        "2.0": 5,
+        "3.0": 4,
+        "4.0": 4,
+        "5.0": 61,
+        "6.0": 2,
+        "7.0": 16,
+        "8.0": 17
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC005",
+      "rows": 20912,
+      "n_valid": 20912,
+      "dtype": "int8",
+      "label": "HIGH BLOOD PRESSURE",
+      "n_distinct": 6,
+      "values": {
+        "1": 12373,
+        "3": 11,
+        "4": 254,
+        "5": 8226,
+        "8": 45,
+        "9": 3
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC006",
+      "rows": 20912,
+      "n_valid": 12381,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE MEDICATION",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 10674,
+        "5.0": 1630,
+        "8.0": 77
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC010",
+      "rows": 20912,
+      "n_valid": 20911,
+      "dtype": "float64",
+      "label": "DIABETES",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 5410,
+        "3.0": 8,
+        "4.0": 150,
+        "5.0": 15318,
+        "8.0": 20,
+        "9.0": 5
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC285",
+      "rows": 20912,
+      "n_valid": 5418,
+      "dtype": "float64",
+      "label": "STAGE OF DIABETES",
+      "n_distinct": 7,
+      "values": {
+        "1.0": 3928,
+        "2.0": 241,
+        "3.0": 967,
+        "4.0": 146,
+        "5.0": 8,
+        "7.0": 57,
+        "8.0": 71
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC214",
+      "rows": 20912,
+      "n_valid": 3917,
+      "dtype": "float64",
+      "label": "YEAR DIABETES FIRST DIAGNOSED",
+      "n_distinct": 76,
+      "values": {
+        "1900.0": 1,
+        "1911.0": 1,
+        "1933.0": 1,
+        "1935.0": 1,
+        "1942.0": 1,
+        "1944.0": 1,
+        "1949.0": 1,
+        "1950.0": 2
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC011",
+      "rows": 20912,
+      "n_valid": 5418,
+      "dtype": "float64",
+      "label": "SWALLOWED MEDICATION FOR DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 3731,
+        "5.0": 1604,
+        "8.0": 83
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC012",
+      "rows": 20912,
+      "n_valid": 4551,
+      "dtype": "float64",
+      "label": "TAKING INSULIN - DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 1317,
+        "5.0": 3191,
+        "8.0": 43
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC236",
+      "rows": 20912,
+      "n_valid": 3234,
+      "dtype": "float64",
+      "label": "DOC RECOMMEND INSULIN - DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 355,
+        "5.0": 2836,
+        "8.0": 43
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC116",
+      "rows": 20912,
+      "n_valid": 4567,
+      "dtype": "float64",
+      "label": "EVER SMOKE",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 2311,
+        "5.0": 2254,
+        "8.0": 1,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC117",
+      "rows": 20912,
+      "n_valid": 11298,
+      "dtype": "float64",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 3053,
+        "5.0": 8240,
+        "8.0": 4,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC118",
+      "rows": 20912,
+      "n_valid": 2628,
+      "dtype": "float64",
+      "label": "NUM CIGARETTES SMOKED PER DAY",
+      "n_distinct": 29,
+      "values": {
+        "0.0": 27,
+        "1.0": 198,
+        "2.0": 117,
+        "3.0": 154,
+        "4.0": 140,
+        "5.0": 207,
+        "6.0": 135,
+        "7.0": 105
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC119",
+      "rows": 20912,
+      "n_valid": 425,
+      "dtype": "float64",
+      "label": "NUM PACKS SMOKED PER DAY",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 373,
+        "2.0": 42,
+        "3.0": 7,
+        "4.0": 1,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC120",
+      "rows": 20912,
+      "n_valid": 2311,
+      "dtype": "float64",
+      "label": "AGE START SMOKING",
+      "n_distinct": 54,
+      "values": {
+        "0.0": 1,
+        "2.0": 1,
+        "5.0": 6,
+        "6.0": 4,
+        "7.0": 6,
+        "8.0": 14,
+        "9.0": 24,
+        "10.0": 33
+      }
+    },
+    {
+      "file": "2016 HRS\\H16C_R.dta",
+      "var": "PC121",
+      "rows": 20912,
+      "n_valid": 6,
+      "dtype": "float64",
+      "label": "YR STARTED SMOKING",
+      "n_distinct": 6,
+      "values": {
+        "1974.0": 1,
+        "1978.0": 1,
+        "1983.0": 1,
+        "1992.0": 1,
+        "2007.0": 1,
+        "9998.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10V_R.dta",
+      "var": "MV054",
+      "rows": 22034,
+      "n_valid": 1646,
+      "dtype": "float64",
+      "label": "IF BLOOD SUGAR IS NORMAL - MODE FTF",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 211,
+        "5.0": 1296,
+        "8.0": 121,
+        "9.0": 18
+      }
+    },
+    {
+      "file": "2010 HRS\\H10V_R.dta",
+      "var": "MV072",
+      "rows": 22034,
+      "n_valid": 144,
+      "dtype": "float64",
+      "label": "IF BLOOD SUGAR IS NORMAL - MODE PHONE",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 10,
+        "5.0": 126,
+        "8.0": 4,
+        "9.0": 4
+      }
+    },
+    {
+      "file": "2010 HRS\\H10V_R.dta",
+      "var": "MV151",
+      "rows": 22034,
+      "n_valid": 1892,
+      "dtype": "float64",
+      "label": "IF SMOKE OR FIRE DETECTOR IN HOME",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 1784,
+        "5.0": 106,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2010 HRS\\H10V_R.dta",
+      "var": "MV152",
+      "rows": 22034,
+      "n_valid": 1784,
+      "dtype": "float64",
+      "label": "IF TESTED SMOKE-FIRE DETECTOR",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 1537,
+        "5.0": 239,
+        "8.0": 8
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20V_R.dta",
+      "var": "RV652",
+      "rows": 15723,
+      "n_valid": 1364,
+      "dtype": "float64",
+      "label": "ALCOHOL FREQUENCY - 1",
+      "n_distinct": 7,
+      "values": {
+        "1.0": 751,
+        "2.0": 205,
+        "3.0": 132,
+        "4.0": 132,
+        "5.0": 122,
+        "8.0": 17,
+        "9.0": 5
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20V_R.dta",
+      "var": "RV653",
+      "rows": 15723,
+      "n_valid": 613,
+      "dtype": "float64",
+      "label": "ALCOHOL FREQUENCY - 2",
+      "n_distinct": 8,
+      "values": {
+        "-8.0": 1,
+        "1.0": 402,
+        "2.0": 97,
+        "3.0": 44,
+        "4.0": 35,
+        "5.0": 24,
+        "8.0": 7,
+        "9.0": 3
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20V_R.dta",
+      "var": "RV654",
+      "rows": 15723,
+      "n_valid": 1364,
+      "dtype": "float64",
+      "label": "TOBACCO FREQUENCY",
+      "n_distinct": 7,
+      "values": {
+        "1.0": 1148,
+        "2.0": 15,
+        "3.0": 15,
+        "4.0": 15,
+        "5.0": 164,
+        "8.0": 4,
+        "9.0": 3
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC005",
+      "rows": 20554,
+      "n_valid": 20553,
+      "dtype": "float64",
+      "label": "HIGH BLOOD PRESSURE",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 12440,
+        "3.0": 10,
+        "4.0": 264,
+        "5.0": 7801,
+        "8.0": 35,
+        "9.0": 3
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC006",
+      "rows": 20554,
+      "n_valid": 12451,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE MEDICATION",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 11048,
+        "5.0": 1346,
+        "8.0": 56,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC008",
+      "rows": 20554,
+      "n_valid": 12451,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE UNDER CONTROL",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 11854,
+        "5.0": 506,
+        "8.0": 90,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC009",
+      "rows": 20554,
+      "n_valid": 11359,
+      "dtype": "float64",
+      "label": "HIGH BLOOD PRESSURE- WORSE/SAME",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 3923,
+        "2.0": 6957,
+        "3.0": 412,
+        "8.0": 66,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC211",
+      "rows": 20554,
+      "n_valid": 8143,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE CHECKED SINCE LAST IW",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 7438,
+        "5.0": 694,
+        "8.0": 11
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC212",
+      "rows": 20554,
+      "n_valid": 267,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE CHECKED-YEAR",
+      "n_distinct": 14,
+      "values": {
+        "1992.0": 1,
+        "1999.0": 1,
+        "2001.0": 2,
+        "2004.0": 1,
+        "2006.0": 2,
+        "2007.0": 2,
+        "2008.0": 5,
+        "2009.0": 2
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC010",
+      "rows": 20554,
+      "n_valid": 20553,
+      "dtype": "float64",
+      "label": "DIABETES",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 4932,
+        "3.0": 4,
+        "4.0": 192,
+        "5.0": 15408,
+        "8.0": 17
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC214",
+      "rows": 20554,
+      "n_valid": 765,
+      "dtype": "float64",
+      "label": "YEAR DIABETES FIRST DIAGNOSED",
+      "n_distinct": 32,
+      "values": {
+        "1959.0": 1,
+        "1962.0": 1,
+        "1970.0": 2,
+        "1980.0": 1,
+        "1982.0": 2,
+        "1985.0": 1,
+        "1987.0": 2,
+        "1988.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC011",
+      "rows": 20554,
+      "n_valid": 4936,
+      "dtype": "float64",
+      "label": "SWALLOWED MEDICATION FOR DIABETES",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 3492,
+        "5.0": 1309,
+        "8.0": 134,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC012",
+      "rows": 20554,
+      "n_valid": 4936,
+      "dtype": "float64",
+      "label": "TAKING INSULIN - DIABETES",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 1216,
+        "5.0": 3585,
+        "8.0": 134,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC236",
+      "rows": 20554,
+      "n_valid": 3720,
+      "dtype": "float64",
+      "label": "DOC RECOMMEND INSULIN - DIABETES",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 329,
+        "5.0": 3251,
+        "8.0": 138,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC015",
+      "rows": 20554,
+      "n_valid": 4936,
+      "dtype": "float64",
+      "label": "DIABETES UNDER CONTROL",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 4368,
+        "5.0": 406,
+        "8.0": 161,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12C_R.dta",
+      "var": "NC016",
+      "rows": 20554,
+      "n_valid": 4282,
+      "dtype": "float64",
+      "label": "DIABETES BETTER/WORSE/SAME",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 1068,
+        "2.0": 2675,
+        "3.0": 410,
+        "8.0": 128,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC005",
+      "rows": 22034,
+      "n_valid": 22034,
+      "dtype": "int8",
+      "label": "HIGH BLOOD PRESSURE",
+      "n_distinct": 6,
+      "values": {
+        "1": 12860,
+        "3": 11,
+        "4": 194,
+        "5": 8922,
+        "8": 45,
+        "9": 2
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC006",
+      "rows": 22034,
+      "n_valid": 12867,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE MEDICATION",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 11362,
+        "5.0": 1472,
+        "8.0": 32,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC008",
+      "rows": 22034,
+      "n_valid": 12867,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE UNDER CONTROL",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 12245,
+        "5.0": 558,
+        "8.0": 64
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC009",
+      "rows": 22034,
+      "n_valid": 8928,
+      "dtype": "float64",
+      "label": "HIGH BLOOD PRESSURE- WORSE/SAME",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 2940,
+        "2.0": 5597,
+        "3.0": 330,
+        "8.0": 61
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC211",
+      "rows": 22034,
+      "n_valid": 9168,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE CHECKED SINCE LAST IW",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 8696,
+        "5.0": 463,
+        "8.0": 8,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC212",
+      "rows": 22034,
+      "n_valid": 3372,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE CHECKED-YEAR",
+      "n_distinct": 27,
+      "values": {
+        "1982.0": 1,
+        "1985.0": 1,
+        "1986.0": 1,
+        "1987.0": 1,
+        "1988.0": 2,
+        "1989.0": 1,
+        "1990.0": 1,
+        "1992.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC213",
+      "rows": 22034,
+      "n_valid": 2,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE CHECK- BF/AFTER LAST IW",
+      "n_distinct": 1,
+      "values": {
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC010",
+      "rows": 22034,
+      "n_valid": 22034,
+      "dtype": "int8",
+      "label": "DIABETES",
+      "n_distinct": 6,
+      "values": {
+        "1": 5037,
+        "3": 4,
+        "4": 107,
+        "5": 16865,
+        "8": 18,
+        "9": 3
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC214",
+      "rows": 22034,
+      "n_valid": 1852,
+      "dtype": "float64",
+      "label": "YEAR DIABETES FIRST DIAGNOSED",
+      "n_distinct": 46,
+      "values": {
+        "1955.0": 1,
+        "1956.0": 1,
+        "1969.0": 1,
+        "1970.0": 1,
+        "1971.0": 1,
+        "1972.0": 1,
+        "1973.0": 2,
+        "1974.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC011",
+      "rows": 22034,
+      "n_valid": 5037,
+      "dtype": "float64",
+      "label": "SWALLOWED MEDICATION FOR DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 3580,
+        "5.0": 1351,
+        "8.0": 106
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC012",
+      "rows": 22034,
+      "n_valid": 5037,
+      "dtype": "float64",
+      "label": "TAKING INSULIN - DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 1144,
+        "5.0": 3784,
+        "8.0": 109
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC236",
+      "rows": 22034,
+      "n_valid": 3893,
+      "dtype": "float64",
+      "label": "DOC RECOMMEND INSULIN - DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 372,
+        "5.0": 3409,
+        "8.0": 112
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC015",
+      "rows": 22034,
+      "n_valid": 5036,
+      "dtype": "float64",
+      "label": "DIABETES UNDER CONTROL",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 4578,
+        "5.0": 420,
+        "8.0": 37,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2010 HRS\\H10C_R.dta",
+      "var": "MC016",
+      "rows": 22034,
+      "n_valid": 3159,
+      "dtype": "float64",
+      "label": "DIABETES BETTER/WORSE/SAME",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 719,
+        "2.0": 2081,
+        "3.0": 311,
+        "8.0": 48
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC005",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int8",
+      "label": "HIGH BLOOD PRESSURE",
+      "n_distinct": 7,
+      "values": {
+        "-8": 4,
+        "1": 9778,
+        "4": 45,
+        "5": 5739,
+        "6": 142,
+        "8": 14,
+        "9": 1
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC006",
+      "rows": 15723,
+      "n_valid": 9965,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE MEDICATION",
+      "n_distinct": 6,
+      "values": {
+        "-8.0": 3,
+        "1.0": 8579,
+        "4.0": 45,
+        "5.0": 1167,
+        "6.0": 142,
+        "8.0": 29
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC010",
+      "rows": 15723,
+      "n_valid": 15723,
+      "dtype": "int8",
+      "label": "DIABETES",
+      "n_distinct": 5,
+      "values": {
+        "1": 4410,
+        "4": 82,
+        "5": 11091,
+        "6": 130,
+        "8": 10
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC285",
+      "rows": 15723,
+      "n_valid": 3628,
+      "dtype": "float64",
+      "label": "STAGE OF DIABETES",
+      "n_distinct": 11,
+      "values": {
+        "-8.0": 3,
+        "1.0": 2257,
+        "2.0": 138,
+        "3.0": 858,
+        "4.0": 118,
+        "5.0": 2,
+        "6.0": 82,
+        "7.0": 73
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC011",
+      "rows": 15723,
+      "n_valid": 4454,
+      "dtype": "float64",
+      "label": "SWALLOWED MEDICATION FOR DIABETES",
+      "n_distinct": 7,
+      "values": {
+        "-8.0": 1,
+        "1.0": 3052,
+        "4.0": 8,
+        "5.0": 1308,
+        "6.0": 33,
+        "8.0": 50,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC012",
+      "rows": 15723,
+      "n_valid": 3507,
+      "dtype": "float64",
+      "label": "TAKING INSULIN - DIABETES",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 954,
+        "5.0": 2542,
+        "8.0": 10,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC236",
+      "rows": 15723,
+      "n_valid": 2553,
+      "dtype": "float64",
+      "label": "DOC RECOMMEND INSULIN - DIABETES",
+      "n_distinct": 4,
+      "values": {
+        "-8.0": 1,
+        "1.0": 242,
+        "5.0": 2304,
+        "8.0": 6
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC214",
+      "rows": 15723,
+      "n_valid": 2251,
+      "dtype": "float64",
+      "label": "YEAR DIABETES FIRST DIAGNOSED",
+      "n_distinct": 68,
+      "values": {
+        "-8.0": 7,
+        "1900.0": 1,
+        "1915.0": 3,
+        "1947.0": 1,
+        "1950.0": 1,
+        "1953.0": 1,
+        "1956.0": 1,
+        "1958.0": 1
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC116",
+      "rows": 15723,
+      "n_valid": 195,
+      "dtype": "float64",
+      "label": "EVER SMOKE",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 99,
+        "5.0": 95,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC117",
+      "rows": 15723,
+      "n_valid": 8212,
+      "dtype": "float64",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_distinct": 5,
+      "values": {
+        "-8.0": 3,
+        "1.0": 1851,
+        "5.0": 6354,
+        "8.0": 2,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC118",
+      "rows": 15723,
+      "n_valid": 1848,
+      "dtype": "float64",
+      "label": "NUM CIGARETTES SMOKED PER DAY",
+      "n_distinct": 29,
+      "values": {
+        "-8.0": 1,
+        "0.0": 21,
+        "1.0": 41,
+        "2.0": 68,
+        "3.0": 110,
+        "4.0": 105,
+        "5.0": 176,
+        "6.0": 90
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC120",
+      "rows": 15723,
+      "n_valid": 458,
+      "dtype": "float64",
+      "label": "AGE START SMOKING",
+      "n_distinct": 35,
+      "values": {
+        "5.0": 1,
+        "9.0": 4,
+        "10.0": 6,
+        "11.0": 6,
+        "12.0": 18,
+        "13.0": 27,
+        "14.0": 33,
+        "15.0": 43
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC121",
+      "rows": 15723,
+      "n_valid": 20,
+      "dtype": "float64",
+      "label": "YR STARTED SMOKING",
+      "n_distinct": 8,
+      "values": {
+        "-8.0": 12,
+        "1958.0": 1,
+        "1966.0": 1,
+        "1968.0": 1,
+        "1977.0": 1,
+        "1978.0": 1,
+        "1980.0": 1,
+        "9998.0": 2
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20C_R.dta",
+      "var": "RC122",
+      "rows": 15723,
+      "n_valid": 19,
+      "dtype": "float64",
+      "label": "YRS AGO STARTED SMOKING",
+      "n_distinct": 4,
+      "values": {
+        "-8.0": 15,
+        "25.0": 1,
+        "40.0": 1,
+        "98.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC005",
+      "rows": 17146,
+      "n_valid": 17146,
+      "dtype": "int8",
+      "label": "HIGH BLOOD PRESSURE",
+      "n_distinct": 7,
+      "values": {
+        "-8": 3,
+        "1": 10474,
+        "4": 61,
+        "5": 6466,
+        "6": 129,
+        "8": 11,
+        "9": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC006",
+      "rows": 17146,
+      "n_valid": 10654,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE MEDICATION",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 9152,
+        "4.0": 55,
+        "5.0": 1297,
+        "6.0": 127,
+        "8.0": 20,
+        "9.0": 3
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC010",
+      "rows": 17146,
+      "n_valid": 17144,
+      "dtype": "float64",
+      "label": "diabetes",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 4686,
+        "4.0": 97,
+        "5.0": 12222,
+        "6.0": 128,
+        "8.0": 9,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC285",
+      "rows": 17146,
+      "n_valid": 1914,
+      "dtype": "float64",
+      "label": "STAGE OF DIABETES",
+      "n_distinct": 11,
+      "values": {
+        "-8.0": 3,
+        "1.0": 557,
+        "2.0": 138,
+        "3.0": 846,
+        "4.0": 128,
+        "5.0": 3,
+        "6.0": 100,
+        "7.0": 88
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC011",
+      "rows": 17146,
+      "n_valid": 4632,
+      "dtype": "float64",
+      "label": "SWALLOWED MEDICATION FOR DIABETES",
+      "n_distinct": 6,
+      "values": {
+        "1.0": 3221,
+        "4.0": 6,
+        "5.0": 1368,
+        "6.0": 27,
+        "8.0": 6,
+        "9.0": 4
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC012",
+      "rows": 17146,
+      "n_valid": 3333,
+      "dtype": "float64",
+      "label": "TAKING INSULIN - DIABETES",
+      "n_distinct": 4,
+      "values": {
+        "-8.0": 1,
+        "1.0": 789,
+        "5.0": 2541,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC236",
+      "rows": 17146,
+      "n_valid": 2543,
+      "dtype": "float64",
+      "label": "DOC RECOMMEND INSULIN - DIABETES",
+      "n_distinct": 4,
+      "values": {
+        "-8.0": 3,
+        "1.0": 230,
+        "5.0": 2307,
+        "8.0": 3
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC214",
+      "rows": 17146,
+      "n_valid": 551,
+      "dtype": "float64",
+      "label": "YEAR DIABETES FIRST DIAGNOSED",
+      "n_distinct": 45,
+      "values": {
+        "-8.0": 8,
+        "1962.0": 1,
+        "1963.0": 1,
+        "1966.0": 1,
+        "1972.0": 1,
+        "1975.0": 1,
+        "1978.0": 1,
+        "1979.0": 1
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC116",
+      "rows": 17146,
+      "n_valid": 215,
+      "dtype": "float64",
+      "label": "EVER SMOKE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 128,
+        "5.0": 87
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC117",
+      "rows": 17146,
+      "n_valid": 9192,
+      "dtype": "float64",
+      "label": "SMOKE CIGARETTES NOW",
+      "n_distinct": 5,
+      "values": {
+        "-8.0": 1,
+        "1.0": 2248,
+        "5.0": 6938,
+        "8.0": 1,
+        "9.0": 4
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC118",
+      "rows": 17146,
+      "n_valid": 2245,
+      "dtype": "float64",
+      "label": "NUM CIGARETTES SMOKED PER DAY",
+      "n_distinct": 32,
+      "values": {
+        "0.0": 30,
+        "1.0": 54,
+        "2.0": 79,
+        "3.0": 133,
+        "4.0": 119,
+        "5.0": 237,
+        "6.0": 141,
+        "7.0": 68
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC120",
+      "rows": 17146,
+      "n_valid": 128,
+      "dtype": "float64",
+      "label": "AGE START SMOKING",
+      "n_distinct": 27,
+      "values": {
+        "5.0": 1,
+        "7.0": 1,
+        "8.0": 1,
+        "10.0": 3,
+        "11.0": 3,
+        "12.0": 7,
+        "13.0": 11,
+        "14.0": 9
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC121",
+      "rows": 17146,
+      "n_valid": 3,
+      "dtype": "float64",
+      "label": "YR STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "2011.0": 1,
+        "9998.0": 2
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18c_r.dta",
+      "var": "QC122",
+      "rows": 17146,
+      "n_valid": 3,
+      "dtype": "float64",
+      "label": "YRS AGO STARTED SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "40.0": 1,
+        "98.0": 2
+      }
+    },
+    {
+      "file": "2006 HRS\\H06LB_R.dta",
+      "var": "KLB037I",
+      "rows": 18469,
+      "n_valid": 7593,
+      "dtype": "float64",
+      "label": "Q37I. DRINK DRUGS CAUSED FAMILY PROBS",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 1119,
+        "5.0": 6474
+      }
+    },
+    {
+      "file": "2006 HRS\\H06LB_R.dta",
+      "var": "KLB040C",
+      "rows": 18469,
+      "n_valid": 7456,
+      "dtype": "float64",
+      "label": "Q40C. ONGOING PROBLEM WITH ALCOHOL -FAM",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 6307,
+        "2.0": 242,
+        "3.0": 537,
+        "4.0": 370
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV561",
+      "rows": 20912,
+      "n_valid": 1715,
+      "dtype": "float64",
+      "label": "FLAG - TAKING BLOOD PRESSURE MEDICATION",
+      "n_distinct": 2,
+      "values": {
+        "0.0": 637,
+        "1.0": 1078
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV562",
+      "rows": 20912,
+      "n_valid": 1715,
+      "dtype": "float64",
+      "label": "FLAG - TAKING ORAL MEDS FOR DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "0.0": 1379,
+        "1.0": 336
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV512",
+      "rows": 20912,
+      "n_valid": 332,
+      "dtype": "float64",
+      "label": "RATE ABILITY TO TAKE DIABETES MEDS AS PRESCRIBED",
+      "n_distinct": 7,
+      "values": {
+        "1.0": 205,
+        "2.0": 57,
+        "3.0": 45,
+        "4.0": 15,
+        "5.0": 2,
+        "7.0": 5,
+        "8.0": 3
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV513",
+      "rows": 20912,
+      "n_valid": 124,
+      "dtype": "float64",
+      "label": "INTRO TO DIABETES SEQUENCE",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 10,
+        "5.0": 112,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV514",
+      "rows": 20912,
+      "n_valid": 124,
+      "dtype": "float64",
+      "label": "R HAVE ENOUGH MONEY FOR DIABETES MEDS",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 97,
+        "5.0": 12,
+        "7.0": 14,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV515",
+      "rows": 20912,
+      "n_valid": 124,
+      "dtype": "float64",
+      "label": "R THINK DIABETES MEDS NOT NEEDED",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 9,
+        "5.0": 110,
+        "8.0": 5
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV516",
+      "rows": 20912,
+      "n_valid": 124,
+      "dtype": "float64",
+      "label": "CONCERN ABOUT LONG-TERM EFFECTS OF DIABETES MEDS",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 30,
+        "5.0": 89,
+        "8.0": 5
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV517",
+      "rows": 20912,
+      "n_valid": 124,
+      "dtype": "float64",
+      "label": "R RUN OUT OF DIABETES MEDS",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 14,
+        "5.0": 108,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV518",
+      "rows": 20912,
+      "n_valid": 124,
+      "dtype": "float64",
+      "label": "R FORGET TO TAKE DIABETES MEDS",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 23,
+        "2.0": 9,
+        "5.0": 90,
+        "8.0": 2
+      }
+    },
+    {
+      "file": "2016 HRS\\H16V_R.dta",
+      "var": "PV553",
+      "rows": 20912,
+      "n_valid": 168,
+      "dtype": "float64",
+      "label": "IF GLUCOSE OR CHOLESTEROL MEASURED",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 1,
+        "5.0": 165,
+        "8.0": 1,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV151",
+      "rows": 17217,
+      "n_valid": 1451,
+      "dtype": "float64",
+      "label": "WEIGHT COMPARED TO OTHERS DURING CHILDHD",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 569,
+        "2.0": 685,
+        "3.0": 186,
+        "8.0": 10,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV153",
+      "rows": 17217,
+      "n_valid": 1451,
+      "dtype": "float64",
+      "label": "WEIGHT AT AGE 18",
+      "n_distinct": 99,
+      "values": {
+        "60.0": 1,
+        "70.0": 1,
+        "75.0": 1,
+        "80.0": 6,
+        "85.0": 4,
+        "87.0": 3,
+        "88.0": 2,
+        "89.0": 2
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV156",
+      "rows": 17217,
+      "n_valid": 1451,
+      "dtype": "float64",
+      "label": "POUNDS BEFORE NOTICE WEIGHT GAIN",
+      "n_distinct": 24,
+      "values": {
+        "0.0": 14,
+        "1.0": 85,
+        "2.0": 120,
+        "3.0": 86,
+        "4.0": 54,
+        "5.0": 558,
+        "6.0": 9,
+        "7.0": 12
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV159",
+      "rows": 17217,
+      "n_valid": 1451,
+      "dtype": "float64",
+      "label": "WEIGHT CYCLING - AT LEAST 3 TIMES",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 621,
+        "5.0": 800,
+        "8.0": 29,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV160",
+      "rows": 17217,
+      "n_valid": 621,
+      "dtype": "float64",
+      "label": "WEIGHT CYCLING - NUMBER OF TIMES",
+      "n_distinct": 18,
+      "values": {
+        "3.0": 253,
+        "4.0": 82,
+        "5.0": 70,
+        "6.0": 35,
+        "7.0": 6,
+        "8.0": 6,
+        "10.0": 28,
+        "12.0": 2
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV163_1",
+      "rows": 17217,
+      "n_valid": 621,
+      "dtype": "float64",
+      "label": "WAS WEIGHT LOSS INTENTIONAL -1",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 419,
+        "5.0": 190,
+        "8.0": 10,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV163_2",
+      "rows": 17217,
+      "n_valid": 568,
+      "dtype": "float64",
+      "label": "WAS WEIGHT LOSS INTENTIONAL -2",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 401,
+        "5.0": 150,
+        "8.0": 17
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV163_3",
+      "rows": 17217,
+      "n_valid": 517,
+      "dtype": "float64",
+      "label": "WAS WEIGHT LOSS INTENTIONAL -3",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 353,
+        "5.0": 140,
+        "8.0": 23,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV163_4",
+      "rows": 17217,
+      "n_valid": 225,
+      "dtype": "float64",
+      "label": "WAS WEIGHT LOSS INTENTIONAL -4",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 155,
+        "5.0": 45,
+        "8.0": 22,
+        "9.0": 3
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV163_5",
+      "rows": 17217,
+      "n_valid": 143,
+      "dtype": "float64",
+      "label": "WAS WEIGHT LOSS INTENTIONAL -5",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 106,
+        "5.0": 29,
+        "8.0": 8
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV164",
+      "rows": 17217,
+      "n_valid": 1368,
+      "dtype": "float64",
+      "label": "WEIGHT AT AGE 25",
+      "n_distinct": 98,
+      "values": {
+        "80.0": 2,
+        "87.0": 1,
+        "89.0": 1,
+        "90.0": 3,
+        "92.0": 2,
+        "95.0": 4,
+        "97.0": 2,
+        "98.0": 9
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV165",
+      "rows": 17217,
+      "n_valid": 1313,
+      "dtype": "float64",
+      "label": "HEIGHT AT AGE 25 - FEET",
+      "n_distinct": 5,
+      "values": {
+        "4.0": 26,
+        "5.0": 1120,
+        "6.0": 146,
+        "98.0": 20,
+        "99.0": 1
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV166",
+      "rows": 17217,
+      "n_valid": 1292,
+      "dtype": "float32",
+      "label": "HEIGHT AT AGE 25 - INCHES",
+      "n_distinct": 40,
+      "values": {
+        "0.0": 113,
+        "0.5": 3,
+        "0.75": 1,
+        "1.0": 70,
+        "1.5": 6,
+        "2.0": 129,
+        "2.5": 3,
+        "3.0": 110
+      }
+    },
+    {
+      "file": "2008 HRS\\H08V_R.dta",
+      "var": "LV167",
+      "rows": 17217,
+      "n_valid": 1414,
+      "dtype": "float64",
+      "label": "WEIGHT AT AGE 45",
+      "n_distinct": 110,
+      "values": {
+        "60.0": 2,
+        "87.0": 1,
+        "89.0": 1,
+        "98.0": 3,
+        "100.0": 6,
+        "103.0": 2,
+        "104.0": 2,
+        "105.0": 7
+      }
+    },
+    {
+      "file": "2008 HRS\\H08LB_R.dta",
+      "var": "LLB037M",
+      "rows": 17217,
+      "n_valid": 6942,
+      "dtype": "float64",
+      "label": "Q37M. DRINK DRUGS CAUSED FAMILY PROBS",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 1068,
+        "5.0": 5874
+      }
+    },
+    {
+      "file": "2014 HRS\\H14LB_R.dta",
+      "var": "OLB035A_3",
+      "rows": 18747,
+      "n_valid": 7290,
+      "dtype": "float64",
+      "label": "Q35A_C. ONGOING DRUG/ALCOHOL PROBS FAM MBR",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 5927,
+        "2.0": 426,
+        "3.0": 633,
+        "4.0": 304
+      }
+    },
+    {
+      "file": "2010 HRS\\H10LB_R.dta",
+      "var": "MLB037M",
+      "rows": 22034,
+      "n_valid": 8181,
+      "dtype": "float64",
+      "label": "Q37M. DRINK DRUGS CAUSED FAMILY PROBS",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 1436,
+        "5.0": 6745
+      }
+    },
+    {
+      "file": "2010 HRS\\H10LB_R.dta",
+      "var": "MLB040A_C",
+      "rows": 22034,
+      "n_valid": 8080,
+      "dtype": "float64",
+      "label": "Q40A_C. ONGOING DRUG/ALCOHOL PROBS FAM MBR",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 6799,
+        "2.0": 382,
+        "3.0": 579,
+        "4.0": 320
+      }
+    },
+    {
+      "file": "2016 HRS\\H16LB_R.dta",
+      "var": "PLB035A_3",
+      "rows": 20912,
+      "n_valid": 6145,
+      "dtype": "float64",
+      "label": "Q35A_C. ONGOING DRUG/ALCOHOL PROBS FAM MBR",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 4851,
+        "2.0": 390,
+        "3.0": 568,
+        "4.0": 336
+      }
+    },
+    {
+      "file": "2018 HRS\\2018 HRS Core\\h18sta\\h18lb_r.dta",
+      "var": "QLB035A_3",
+      "rows": 17146,
+      "n_valid": 5535,
+      "dtype": "float64",
+      "label": "Q35A_3. DRUG/ALCOHOL PROBS FAM MBR",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 4457,
+        "2.0": 345,
+        "3.0": 464,
+        "4.0": 269
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV356",
+      "rows": 18747,
+      "n_valid": 1492,
+      "dtype": "float64",
+      "label": "IF PROBLEMS WITH ALCOHOL",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 104,
+        "5.0": 1387,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV368",
+      "rows": 18747,
+      "n_valid": 1492,
+      "dtype": "float64",
+      "label": "IF FAM PROBLEMS WITH ALCOHOL",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 372,
+        "5.0": 1106,
+        "8.0": 10,
+        "9.0": 4
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV400",
+      "rows": 18747,
+      "n_valid": 4,
+      "dtype": "float64",
+      "label": "IF R HAS NEVER DRUNK ALCOHOL",
+      "n_distinct": 1,
+      "values": {
+        "1.0": 4
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV420",
+      "rows": 18747,
+      "n_valid": 528,
+      "dtype": "float64",
+      "label": "IF R EVER DRANK ALCOHOL",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 312,
+        "5.0": 215,
+        "8.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV401",
+      "rows": 18747,
+      "n_valid": 1011,
+      "dtype": "float64",
+      "label": "HOW OFTEN DRINK BEER - LAST 3 MONTHS",
+      "n_distinct": 8,
+      "values": {
+        "0.0": 176,
+        "1.0": 447,
+        "2.0": 194,
+        "3.0": 87,
+        "4.0": 72,
+        "5.0": 33,
+        "8.0": 1,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV403",
+      "rows": 18747,
+      "n_valid": 388,
+      "dtype": "float64",
+      "label": "IF DRINK BEER WITH MEALS TYPICALLY",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 192,
+        "5.0": 194,
+        "8.0": 1,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV404",
+      "rows": 18747,
+      "n_valid": 835,
+      "dtype": "float64",
+      "label": "HOW OFTEN DRINK WINE - LAST 3 MONTHS",
+      "n_distinct": 7,
+      "values": {
+        "0.0": 22,
+        "1.0": 425,
+        "2.0": 160,
+        "3.0": 72,
+        "4.0": 72,
+        "5.0": 83,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV406",
+      "rows": 18747,
+      "n_valid": 386,
+      "dtype": "float64",
+      "label": "IF DRINK WINE WITH MEALS TYPICALLY",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 294,
+        "5.0": 86,
+        "8.0": 4,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV407",
+      "rows": 18747,
+      "n_valid": 813,
+      "dtype": "float64",
+      "label": "HOW OFTEN DRINK LIQUOR - LAST 3 MONTHS",
+      "n_distinct": 7,
+      "values": {
+        "0.0": 5,
+        "1.0": 493,
+        "2.0": 161,
+        "3.0": 64,
+        "4.0": 52,
+        "5.0": 37,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV409",
+      "rows": 18747,
+      "n_valid": 320,
+      "dtype": "float64",
+      "label": "IF DRINK LIQUOR WITH MEALS TYPICALLY",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 101,
+        "5.0": 212,
+        "8.0": 5,
+        "9.0": 2
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV410",
+      "rows": 18747,
+      "n_valid": 1275,
+      "dtype": "float64",
+      "label": "AGE R FIRST STARTED DRINKING",
+      "n_distinct": 51,
+      "values": {
+        "1.0": 21,
+        "5.0": 3,
+        "6.0": 2,
+        "7.0": 1,
+        "8.0": 1,
+        "9.0": 3,
+        "10.0": 5,
+        "11.0": 3
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV411",
+      "rows": 18747,
+      "n_valid": 1275,
+      "dtype": "float64",
+      "label": "AGE R DRANK ALCOHOL GT ONCE A MONTH",
+      "n_distinct": 57,
+      "values": {
+        "1.0": 60,
+        "5.0": 1,
+        "9.0": 2,
+        "10.0": 2,
+        "11.0": 1,
+        "12.0": 1,
+        "13.0": 10,
+        "14.0": 12
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV412",
+      "rows": 18747,
+      "n_valid": 1275,
+      "dtype": "float64",
+      "label": "LEVEL OF ALCOHOL - TEEN YEARS",
+      "n_distinct": 7,
+      "values": {
+        "1.0": 571,
+        "2.0": 440,
+        "3.0": 203,
+        "4.0": 47,
+        "5.0": 6,
+        "8.0": 3,
+        "9.0": 5
+      }
+    },
+    {
+      "file": "2014 HRS\\H14V_R.dta",
+      "var": "OV413",
+      "rows": 18747,
+      "n_valid": 1275,
+      "dtype": "float64",
+      "label": "LEVEL OF ALCOHOL - AGE 20-35",
+      "n_distinct": 7,
+      "values": {
+        "1.0": 171,
+        "2.0": 587,
+        "3.0": 393,
+        "4.0": 101,
+        "5.0": 18,
+        "8.0": 2,
+        "9.0": 3
+      }
+    },
+    {
+      "file": "2012 HRS\\H12LB_R.dta",
+      "var": "NLB037M",
+      "rows": 20554,
+      "n_valid": 7269,
+      "dtype": "float64",
+      "label": "Q37M. DRINK DRUGS CAUSED FAMILY PROBS",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 1204,
+        "5.0": 6065
+      }
+    },
+    {
+      "file": "2012 HRS\\H12LB_R.dta",
+      "var": "NLB040A_C",
+      "rows": 20554,
+      "n_valid": 7132,
+      "dtype": "float64",
+      "label": "Q40A_C. ONGOING DRUG/ALCOHOL PROBS FAM MBR",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 5994,
+        "2.0": 308,
+        "3.0": 560,
+        "4.0": 270
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV155",
+      "rows": 20554,
+      "n_valid": 703,
+      "dtype": "float64",
+      "label": "LOST WEIGHT WITHOUT TRYING LAST 3 MONTHS",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 156,
+        "5.0": 544,
+        "8.0": 2,
+        "9.0": 1
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV156",
+      "rows": 20554,
+      "n_valid": 156,
+      "dtype": "float64",
+      "label": "HAS WAISTBAND GOTTEN LOOSER",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 119,
+        "5.0": 37
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV210",
+      "rows": 20554,
+      "n_valid": 421,
+      "dtype": "float64",
+      "label": "BLOOD PRESSURE TEST OFFERED AT WORK",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 145,
+        "5.0": 273,
+        "8.0": 3
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV211",
+      "rows": 20554,
+      "n_valid": 145,
+      "dtype": "float64",
+      "label": "TOOK BLOOD PRESSURE TEST AT WORK",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 89,
+        "5.0": 56
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV212",
+      "rows": 20554,
+      "n_valid": 421,
+      "dtype": "float64",
+      "label": "BLOOD SUGAR TEST OFFERED AT WORK",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 99,
+        "5.0": 316,
+        "8.0": 6
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV213",
+      "rows": 20554,
+      "n_valid": 99,
+      "dtype": "float64",
+      "label": "TOOK BLOOD SUGAR TEST AT WORK",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 59,
+        "5.0": 40
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV216",
+      "rows": 20554,
+      "n_valid": 421,
+      "dtype": "float64",
+      "label": "PROGRAM AT WORK TO HELP CONTROL DIABETES",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 109,
+        "5.0": 303,
+        "8.0": 9
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV217",
+      "rows": 20554,
+      "n_valid": 109,
+      "dtype": "float64",
+      "label": "PARTICIPATE IN PROGRAM TO HELP CONTROL DIABETES",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 40,
+        "5.0": 69
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV220",
+      "rows": 20554,
+      "n_valid": 421,
+      "dtype": "float64",
+      "label": "PROGRAM AT WORK TO HELP CONTROL BLOOD PRESSURE",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 90,
+        "5.0": 323,
+        "8.0": 8
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV221",
+      "rows": 20554,
+      "n_valid": 90,
+      "dtype": "float64",
+      "label": "PARTICIPATE IN PROGRAM TO HELP CONTROL BLOOD PRESSURE",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 29,
+        "5.0": 61
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV222",
+      "rows": 20554,
+      "n_valid": 421,
+      "dtype": "float64",
+      "label": "PROGRAM AT WORK TO HELP QUIT SMOKING",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 107,
+        "5.0": 309,
+        "8.0": 5
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV223",
+      "rows": 20554,
+      "n_valid": 54,
+      "dtype": "float64",
+      "label": "PARTICIPATE IN PROGRAM TO HELP QUIT SMOKING",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 5,
+        "5.0": 49
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV224",
+      "rows": 20554,
+      "n_valid": 421,
+      "dtype": "float64",
+      "label": "PROGRAM AT WORK TO HELP LOSE WEIGHT",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 128,
+        "5.0": 289,
+        "8.0": 4
+      }
+    },
+    {
+      "file": "2012 HRS\\H12V_R.dta",
+      "var": "NV225",
+      "rows": 20554,
+      "n_valid": 128,
+      "dtype": "float64",
+      "label": "PARTICIPATE IN PROGRAM TO HELP LOSE WEIGHT",
+      "n_distinct": 2,
+      "values": {
+        "1.0": 33,
+        "5.0": 95
+      }
+    },
+    {
+      "file": "2020 HRS\\2020 HRS Core\\h20sta\\H20LB_R.dta",
+      "var": "RLB035A3",
+      "rows": 15723,
+      "n_valid": 4581,
+      "dtype": "float64",
+      "label": "Q35A3. DRUG/ALCOHOL PROBS FAM MBR",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 3760,
+        "2.0": 286,
+        "3.0": 365,
+        "4.0": 170
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "HHBASEWT",
+      "rows": 43558,
+      "n_valid": 43558,
+      "dtype": "float64",
+      "label": "HOUSEHOLD WEIGHT AT ENTRY",
+      "n_distinct": 7415,
+      "values": {
+        "263.9781494140625": 6,
+        "274.1087341308594": 2,
+        "287.43902587890625": 2,
+        "292.37860107421875": 2,
+        "302.636962890625": 4,
+        "307.83770751953125": 2,
+        "334.372314453125": 2,
+        "356.23138427734375": 2
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "DIAB03",
+      "rows": 43558,
+      "n_valid": 43558,
+      "dtype": "float64",
+      "label": "2003 DIABETES SAMPLE STATUS",
+      "n_distinct": 5,
+      "values": {
+        "1.0": 1233,
+        "2.0": 668,
+        "5.0": 484,
+        "7.0": 129,
+        "99.0": 41044
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "VBS1618WGTR",
+      "rows": 43558,
+      "n_valid": 12517,
+      "dtype": "float64",
+      "label": "2016-2018 WEIGHT: VENOUS BLOOD STUDY",
+      "n_distinct": 8587,
+      "values": {
+        "748.0": 14,
+        "755.0": 8,
+        "764.0": 1,
+        "771.0": 3,
+        "775.0": 1,
+        "781.0": 1,
+        "786.0": 1,
+        "787.0": 2
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "VBSI16WGTRA",
+      "rows": 43558,
+      "n_valid": 3955,
+      "dtype": "float64",
+      "label": "2016 VBS WEIGHT FOR ANALYSES INCLUDING DNA METHYLATION AND EPIGENETIC CLOCKS, TELOMERES, AND HOMOCYSTEINE",
+      "n_distinct": 3374,
+      "values": {
+        "3343.0": 5,
+        "3384.0": 16,
+        "3502.0": 1,
+        "3542.0": 1,
+        "3714.0": 1,
+        "3759.0": 26,
+        "3783.0": 1,
+        "3799.0": 1
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "VBSI16WGTRB",
+      "rows": 43558,
+      "n_valid": 3829,
+      "dtype": "float64",
+      "label": "2016 VBS WEIGHT FOR ANALYSES USING CLUSTERIN OR BRAIN-DERIVED NEUROTROPHIC FACTOR",
+      "n_distinct": 3301,
+      "values": {
+        "3358.0": 7,
+        "3400.0": 18,
+        "3432.0": 1,
+        "3512.0": 1,
+        "3582.0": 1,
+        "3591.0": 1,
+        "3594.0": 14,
+        "3652.0": 1
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "AWGTHH",
+      "rows": 43558,
+      "n_valid": 38181,
+      "dtype": "float64",
+      "label": "1992 WEIGHT: HOUSEHOLD-LEVEL",
+      "n_distinct": 1465,
+      "values": {
+        "0.0": 25371,
+        "486.0": 2,
+        "545.0": 2,
+        "547.0": 4,
+        "556.0": 14,
+        "563.0": 4,
+        "586.0": 2,
+        "588.0": 2
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "AWGTR",
+      "rows": 43558,
+      "n_valid": 38181,
+      "dtype": "float64",
+      "label": "1992 WEIGHT: RESPONDENT-LEVEL",
+      "n_distinct": 2187,
+      "values": {
+        "0.0": 28387,
+        "558.0": 1,
+        "563.0": 1,
+        "565.0": 1,
+        "574.0": 2,
+        "599.0": 1,
+        "631.0": 1,
+        "634.0": 2
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "AWHY0WGT",
+      "rows": 43558,
+      "n_valid": 43558,
+      "dtype": "float64",
+      "label": "1992 WHY ZERO WEIGHT",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 7892,
+        "3.0": 2,
+        "5.0": 8,
+        "7.0": 35656
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "BWGTHH",
+      "rows": 43558,
+      "n_valid": 38181,
+      "dtype": "float64",
+      "label": "1993 WEIGHT: HOUSEHOLD-LEVEL",
+      "n_distinct": 896,
+      "values": {
+        "0.0": 29803,
+        "583.0": 9,
+        "595.0": 2,
+        "634.0": 5,
+        "671.0": 2,
+        "699.0": 10,
+        "713.0": 3,
+        "726.0": 4
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "BWGTR",
+      "rows": 43558,
+      "n_valid": 38181,
+      "dtype": "float64",
+      "label": "1993 WEIGHT: RESPONDENT-LEVEL",
+      "n_distinct": 1194,
+      "values": {
+        "0.0": 30677,
+        "600.0": 1,
+        "605.0": 9,
+        "658.0": 5,
+        "675.0": 1,
+        "693.0": 1,
+        "703.0": 2,
+        "725.0": 10
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "BWHY0WGT",
+      "rows": 43558,
+      "n_valid": 43558,
+      "dtype": "float64",
+      "label": "1993 WHY ZERO WEIGHT",
+      "n_distinct": 3,
+      "values": {
+        "1.0": 5753,
+        "5.0": 36,
+        "7.0": 37769
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "CWGTHH",
+      "rows": 43558,
+      "n_valid": 38181,
+      "dtype": "float64",
+      "label": "1994 WEIGHT: HOUSEHOLD-LEVEL",
+      "n_distinct": 1558,
+      "values": {
+        "0.0": 26574,
+        "346.0": 2,
+        "428.0": 1,
+        "481.0": 2,
+        "491.0": 2,
+        "505.0": 2,
+        "527.0": 2,
+        "550.0": 1
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "CWGTR",
+      "rows": 43558,
+      "n_valid": 38181,
+      "dtype": "float64",
+      "label": "1994 WEIGHT: RESPONDENT-LEVEL",
+      "n_distinct": 2249,
+      "values": {
+        "0.0": 29301,
+        "414.0": 1,
+        "416.0": 1,
+        "437.0": 1,
+        "496.0": 1,
+        "521.0": 1,
+        "543.0": 1,
+        "551.0": 1
+      }
+    },
+    {
+      "file": "Cross-Wave Tracker File\\trk2020tr_r.dta",
+      "var": "CWHY0WGT",
+      "rows": 43558,
+      "n_valid": 43558,
+      "dtype": "float64",
+      "label": "1994 WHY ZERO WEIGHT",
+      "n_distinct": 4,
+      "values": {
+        "1.0": 7568,
+        "3.0": 8,
+        "5.0": 135,
+        "7.0": 35847
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s1wtresp",
+      "rows": 42405,
+      "n_valid": 9900,
+      "dtype": "float64",
+      "label": "s1wtresp:w1 person-level analysis weight",
+      "n_distinct": 1738,
+      "values": {
+        "0.0": 2760,
+        "563.0": 1,
+        "565.0": 1,
+        "574.0": 2,
+        "599.0": 1,
+        "631.0": 1,
+        "634.0": 2,
+        "636.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s1wtcrnh",
+      "rows": 42405,
+      "n_valid": 9900,
+      "dtype": "float64",
+      "label": "s1wtcrnh:w1 combined respondent weight and nurshm resident weight",
+      "n_distinct": 1738,
+      "values": {
+        "0.0": 2760,
+        "563.0": 1,
+        "565.0": 1,
+        "574.0": 2,
+        "599.0": 1,
+        "631.0": 1,
+        "634.0": 2,
+        "636.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s2wtresp",
+      "rows": 42405,
+      "n_valid": 13090,
+      "dtype": "float64",
+      "label": "s2wtresp:w2 person-level analysis weight",
+      "n_distinct": 2151,
+      "values": {
+        "0.0": 3065,
+        "416.0": 1,
+        "437.0": 1,
+        "496.0": 1,
+        "521.0": 1,
+        "543.0": 1,
+        "591.0": 1,
+        "600.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s2wtcrnh",
+      "rows": 42405,
+      "n_valid": 13090,
+      "dtype": "float64",
+      "label": "s2wtcrnh:w2 combined respondent weight and nurshm resident weight",
+      "n_distinct": 2151,
+      "values": {
+        "0.0": 3065,
+        "416.0": 1,
+        "437.0": 1,
+        "496.0": 1,
+        "521.0": 1,
+        "543.0": 1,
+        "591.0": 1,
+        "600.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s3wtresp",
+      "rows": 42405,
+      "n_valid": 11917,
+      "dtype": "float64",
+      "label": "s3wtresp:w3 person-level analysis weight",
+      "n_distinct": 2190,
+      "values": {
+        "0.0": 2931,
+        "432.0": 1,
+        "437.0": 1,
+        "441.0": 1,
+        "463.0": 1,
+        "483.0": 1,
+        "522.0": 1,
+        "528.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s3wtcrnh",
+      "rows": 42405,
+      "n_valid": 11917,
+      "dtype": "float64",
+      "label": "s3wtcrnh:w3 combined respondent weight and nurshm resident weight",
+      "n_distinct": 2190,
+      "values": {
+        "0.0": 2931,
+        "432.0": 1,
+        "437.0": 1,
+        "441.0": 1,
+        "463.0": 1,
+        "483.0": 1,
+        "522.0": 1,
+        "528.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s4wtresp",
+      "rows": 42405,
+      "n_valid": 13980,
+      "dtype": "float64",
+      "label": "s4wtresp:w4 person-level analysis weight",
+      "n_distinct": 2623,
+      "values": {
+        "0.0": 921,
+        "354.0": 1,
+        "366.0": 1,
+        "398.0": 1,
+        "424.0": 1,
+        "453.0": 1,
+        "470.0": 1,
+        "502.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s4wtcrnh",
+      "rows": 42405,
+      "n_valid": 13980,
+      "dtype": "float64",
+      "label": "s4wtcrnh:w4 combined respondent weight and nurshm resident weight",
+      "n_distinct": 2623,
+      "values": {
+        "0.0": 921,
+        "354.0": 1,
+        "366.0": 1,
+        "398.0": 1,
+        "424.0": 1,
+        "453.0": 1,
+        "470.0": 1,
+        "502.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s5wtresp",
+      "rows": 42405,
+      "n_valid": 12730,
+      "dtype": "float64",
+      "label": "s5wtresp:w5 person-level analysis weight",
+      "n_distinct": 2681,
+      "values": {
+        "0.0": 881,
+        "241.0": 1,
+        "244.0": 1,
+        "317.0": 1,
+        "347.0": 1,
+        "357.0": 1,
+        "378.0": 1,
+        "379.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s5wtcrnh",
+      "rows": 42405,
+      "n_valid": 12730,
+      "dtype": "float64",
+      "label": "s5wtcrnh:w5 combined respondent weight and nurshm resident weight",
+      "n_distinct": 2731,
+      "values": {
+        "0.0": 789,
+        "241.0": 1,
+        "244.0": 1,
+        "317.0": 1,
+        "347.0": 1,
+        "357.0": 1,
+        "378.0": 1,
+        "379.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s5wtr_nh",
+      "rows": 42405,
+      "n_valid": 12730,
+      "dtype": "float64",
+      "label": "s5wtr_nh:w5 nurshm resident analysis weight",
+      "n_distinct": 87,
+      "values": {
+        "0.0": 12638,
+        "1210.0": 1,
+        "1234.0": 1,
+        "1422.0": 1,
+        "1499.0": 1,
+        "1584.0": 1,
+        "1592.0": 1,
+        "1760.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s6wtresp",
+      "rows": 42405,
+      "n_valid": 11639,
+      "dtype": "float64",
+      "label": "s6wtresp:w6 person-level analysis weight",
+      "n_distinct": 2664,
+      "values": {
+        "0.0": 873,
+        "403.0": 1,
+        "406.0": 1,
+        "477.0": 1,
+        "479.0": 1,
+        "545.0": 1,
+        "628.0": 1,
+        "643.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s6wtcrnh",
+      "rows": 42405,
+      "n_valid": 11639,
+      "dtype": "float64",
+      "label": "s6wtcrnh:w6 combined respondent weight and nurshm resident weight",
+      "n_distinct": 2711,
+      "values": {
+        "0.0": 791,
+        "403.0": 1,
+        "406.0": 1,
+        "477.0": 1,
+        "479.0": 1,
+        "545.0": 1,
+        "628.0": 1,
+        "643.0": 1
+      }
+    },
+    {
+      "file": "RAND HRS Longitudinal File 2020\\randhrs1992_2020v2.dta",
+      "var": "s6wtr_nh",
+      "rows": 42405,
+      "n_valid": 11639,
+      "dtype": "float64",
+      "label": "s6wtr_nh:w6 nurshm resident analysis weight",
+      "n_distinct": 79,
+      "values": {
+        "0.0": 11557,
+        "996.0": 1,
+        "1012.0": 1,
+        "1193.0": 1,
+        "1448.0": 1,
+        "1469.0": 1,
+        "1560.0": 1,
+        "1581.0": 1
+      }
+    }
+  ],
+  "notes": []
+}

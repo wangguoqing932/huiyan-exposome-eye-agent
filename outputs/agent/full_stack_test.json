@@ -1,0 +1,122 @@
+{
+  "built_seconds": 5.5,
+  "layers": {
+    "rules": 21,
+    "evidence_store": true,
+    "lightrag": true,
+    "llm": true
+  },
+  "degraded": [],
+  "probes": [
+    {
+      "a": "smoking",
+      "b": "cataract_any",
+      "factors": null,
+      "why": "single rule, no patient factors",
+      "level": "high",
+      "n_signals": 1,
+      "rule_ids": [
+        "r10_smoking_x_cataract"
+      ],
+      "signal_levels": [
+        "high"
+      ],
+      "n_evidence": 5,
+      "seconds": 9.34,
+      "out_of_scope": false,
+      "has_report_text": true,
+      "mentions_llm": true
+    },
+    {
+      "a": "fasting_glucose",
+      "b": "cataract_any",
+      "factors": [
+        "diabetes"
+      ],
+      "why": "rule plus a patient factor that should escalate",
+      "level": "high",
+      "n_signals": 1,
+      "rule_ids": [
+        "r02_hyperglycemia_x_cataract"
+      ],
+      "signal_levels": [
+        "high"
+      ],
+      "n_evidence": 5,
+      "seconds": 8.9,
+      "out_of_scope": false,
+      "has_report_text": true,
+      "mentions_llm": true
+    },
+    {
+      "a": "pm25_exposure",
+      "b": "glaucoma_iop_elevated",
+      "factors": [
+        "hypertension"
+      ],
+      "why": "rule plus factor, arbiter previously escalated this one",
+      "level": "medium",
+      "n_signals": 1,
+      "rule_ids": [
+        "r16_pm25_x_glaucoma_iop_cdr"
+      ],
+      "signal_levels": [
+        "medium"
+      ],
+      "n_evidence": 5,
+      "seconds": 9.78,
+      "out_of_scope": false,
+      "has_report_text": true,
+      "mentions_llm": true
+    },
+    {
+      "a": "aspirin",
+      "b": "cataract_any",
+      "factors": null,
+      "why": "out of scope -- no rule covers it",
+      "level": "unknown",
+      "n_signals": 0,
+      "rule_ids": [],
+      "signal_levels": [],
+      "n_evidence": 5,
+      "seconds": 0.52,
+      "out_of_scope": true,
+      "has_report_text": true,
+      "mentions_llm": false
+    },
+    {
+      "a": "totally_unknown_exposure",
+      "b": "cataract_any",
+      "factors": null,
+      "why": "out of scope by construction",
+      "level": "unknown",
+      "n_signals": 0,
+      "rule_ids": [],
+      "signal_levels": [],
+      "n_evidence": 5,
+      "seconds": 0.53,
+      "out_of_scope": true,
+      "has_report_text": true,
+      "mentions_llm": false
+    },
+    {
+      "a": "smoking",
+      "b": "amd_late",
+      "factors": null,
+      "why": "the rule whose grade was corrected",
+      "level": "high",
+      "n_signals": 1,
+      "rule_ids": [
+        "r11_smoking_x_amd_late"
+      ],
+      "signal_levels": [
+        "high"
+      ],
+      "n_evidence": 5,
+      "seconds": 11.75,
+      "out_of_scope": false,
+      "has_report_text": true,
+      "mentions_llm": true
+    }
+  ]
+}

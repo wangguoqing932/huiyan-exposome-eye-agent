@@ -1,0 +1,258 @@
+{
+  "note": "analysis_plan section 19 cohort layer",
+  "n_pairs": 68,
+  "by_rule": {
+    "r02_hyperglycemia_x_cataract": {
+      "cohorts_tested": [
+        "CLHLS",
+        "CRELES",
+        "SHARE",
+        "LASI"
+      ],
+      "n_pairs": 4,
+      "replicated": 3,
+      "contradicted": 0,
+      "states": [
+        "replicated",
+        "uninformative",
+        "replicated",
+        "replicated"
+      ],
+      "verdict": "transportable",
+      "per_cohort": [
+        {
+          "cohort": "CLHLS",
+          "odds_ratio": 3.5887,
+          "ci_low": 2.6244,
+          "ci_high": 4.9074,
+          "q_primary": 1.527803261670698e-14,
+          "three_state": "replicated"
+        },
+        {
+          "cohort": "CRELES",
+          "odds_ratio": 1.3116,
+          "ci_low": 1.0705,
+          "ci_high": 1.6069,
+          "q_primary": 0.050585096137670996,
+          "three_state": "uninformative"
+        },
+        {
+          "cohort": "SHARE",
+          "odds_ratio": 1.7539,
+          "ci_low": 1.6908,
+          "ci_high": 1.8194,
+          "q_primary": 2.0307458818175307e-196,
+          "three_state": "replicated"
+        },
+        {
+          "cohort": "LASI",
+          "odds_ratio": 1.8782,
+          "ci_low": 1.7646,
+          "ci_high": 1.9991,
+          "q_primary": 8.649399579255929e-86,
+          "three_state": "replicated"
+        }
+      ]
+    },
+    "r10_smoking_x_cataract": {
+      "cohorts_tested": [
+        "SHARE",
+        "CLHLS",
+        "ELSA",
+        "CRELES"
+      ],
+      "n_pairs": 4,
+      "replicated": 1,
+      "contradicted": 1,
+      "states": [
+        "replicated",
+        "contradicted",
+        "uninformative",
+        "uninformative"
+      ],
+      "verdict": "mixed",
+      "per_cohort": [
+        {
+          "cohort": "SHARE",
+          "odds_ratio": 1.109,
+          "ci_low": 1.041,
+          "ci_high": 1.1815,
+          "q_primary": 0.009506972256517567,
+          "three_state": "replicated"
+        },
+        {
+          "cohort": "CLHLS",
+          "odds_ratio": 0.748,
+          "ci_low": 0.6435,
+          "ci_high": 0.8694,
+          "q_primary": 0.0012136329441638065,
+          "three_state": "contradicted"
+        },
+        {
+          "cohort": "ELSA",
+          "odds_ratio": 0.7675,
+          "ci_low": 0.6069,
+          "ci_high": 0.9705,
+          "q_primary": 0.14210320753579062,
+          "three_state": "uninformative"
+        },
+        {
+          "cohort": "CRELES",
+          "odds_ratio": 0.7023,
+          "ci_low": 0.5021,
+          "ci_high": 0.9822,
+          "q_primary": 0.18836320535487763,
+          "three_state": "uninformative"
+        }
+      ]
+    },
+    "r11_smoking_x_amd_late": {
+      "cohorts_tested": [
+        "ELSA"
+      ],
+      "n_pairs": 1,
+      "replicated": 0,
+      "contradicted": 0,
+      "states": [
+        "uninformative"
+      ],
+      "verdict": "mixed",
+      "per_cohort": [
+        {
+          "cohort": "ELSA",
+          "odds_ratio": 0.8586,
+          "ci_low": 0.5483,
+          "ci_high": 1.3444,
+          "q_primary": 1.0,
+          "three_state": "uninformative"
+        }
+      ]
+    },
+    "r12_alcohol_x_cataract": {
+      "cohorts_tested": [
+        "SHARE",
+        "CLHLS"
+      ],
+      "n_pairs": 2,
+      "replicated": 0,
+      "contradicted": 1,
+      "states": [
+        "uninformative",
+        "contradicted"
+      ],
+      "verdict": "non_transportable",
+      "per_cohort": [
+        {
+          "cohort": "SHARE",
+          "odds_ratio": 0.9628,
+          "ci_low": 0.8999,
+          "ci_high": 1.0301,
+          "q_primary": 1.0,
+          "three_state": "uninformative"
+        },
+        {
+          "cohort": "CLHLS",
+          "odds_ratio": 0.809,
+          "ci_low": 0.704,
+          "ci_high": 0.9297,
+          "q_primary": 0.01772416491863544,
+          "three_state": "contradicted"
+        }
+      ]
+    },
+    "r13_bmi_x_cataract": {
+      "cohorts_tested": [
+        "SHARE",
+        "CRELES"
+      ],
+      "n_pairs": 2,
+      "replicated": 1,
+      "contradicted": 0,
+      "states": [
+        "replicated",
+        "uninformative"
+      ],
+      "verdict": "single_cohort",
+      "per_cohort": [
+        {
+          "cohort": "SHARE",
+          "odds_ratio": 1.2439,
+          "ci_low": 1.2008,
+          "ci_high": 1.2886,
+          "q_primary": 1.6936705824921215e-32,
+          "three_state": "replicated"
+        },
+        {
+          "cohort": "CRELES",
+          "odds_ratio": 0.9911,
+          "ci_low": 0.8126,
+          "ci_high": 1.2087,
+          "q_primary": 1.0,
+          "three_state": "uninformative"
+        }
+      ]
+    },
+    "r20_smoking_x_vi_mod_severe": {
+      "cohorts_tested": [
+        "SHARE",
+        "KLoSA",
+        "ELSA",
+        "HRS",
+        "CLHLS"
+      ],
+      "n_pairs": 5,
+      "replicated": 3,
+      "contradicted": 0,
+      "states": [
+        "replicated",
+        "uninformative",
+        "replicated",
+        "replicated",
+        "uninformative"
+      ],
+      "verdict": "transportable",
+      "per_cohort": [
+        {
+          "cohort": "SHARE",
+          "odds_ratio": 1.0875,
+          "ci_low": 1.0429,
+          "ci_high": 1.1339,
+          "q_primary": 0.0009056190802629449,
+          "three_state": "replicated"
+        },
+        {
+          "cohort": "KLoSA",
+          "odds_ratio": 1.1002,
+          "ci_low": 1.0004,
+          "ci_high": 1.21,
+          "q_primary": 0.21998101383337518,
+          "three_state": "uninformative"
+        },
+        {
+          "cohort": "ELSA",
+          "odds_ratio": 1.4883,
+          "ci_low": 1.2128,
+          "ci_high": 1.8263,
+          "q_primary": 0.0012136329441638065,
+          "three_state": "replicated"
+        },
+        {
+          "cohort": "HRS",
+          "odds_ratio": 1.6144,
+          "ci_low": 1.4682,
+          "ci_high": 1.7752,
+          "q_primary": 7.455384656660809e-22,
+          "three_state": "replicated"
+        },
+        {
+          "cohort": "CLHLS",
+          "odds_ratio": 1.0267,
+          "ci_low": 0.8736,
+          "ci_high": 1.2066,
+          "q_primary": 1.0,
+          "three_state": "uninformative"
+        }
+      ]
+    }
+  }
+}

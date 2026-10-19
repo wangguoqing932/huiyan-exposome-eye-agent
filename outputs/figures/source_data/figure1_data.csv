@@ -2,9 +2,9 @@
 rule_engine,rules_active,21,configs/rules.yaml v1.2 (frozen)
 rule_engine,entity_a_flags,18,data/seed/entities_a.csv (41 exposures)
 rule_engine,entity_b_items,15,data/seed/entities_b.csv
-knowledge_graph,nodes,23826,data/processed/lightrag_index/graphml
-knowledge_graph,edges,18062,data/processed/lightrag_index/graphml
+knowledge_graph,nodes,27136,data/processed/lightrag_index/graphml (R4 rebuild 2026-10-14)
+knowledge_graph,edges,23722,data/processed/lightrag_index/graphml (R4 rebuild 2026-10-14)
 knowledge_graph,docs_indexed,1054,kv_store_doc_status.json
 knowledge_graph,evidence_chunks,1060,data/seed/evidence_chunks.jsonl
 validation,datasets,3,NHANES(dev)/KNHANES/CHARLS
-validation,pairs_tested_total,95,outputs/confirmatory/*.csv
+validation,pairs_tested_total,143,outputs/confirmatory/*.csv status=tested (R5)

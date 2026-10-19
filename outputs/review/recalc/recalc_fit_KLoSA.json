@@ -1,0 +1,28 @@
+{
+  "cohort": "KLoSA",
+  "wave_col": "wave",
+  "n_waves": 5,
+  "results": [
+    {
+      "cohort": "KLoSA",
+      "rule_id": "r20_smoking_x_vi_mod_severe",
+      "exposure": "current_smoking",
+      "outcome": "vision_impairment_moderate",
+      "bmi_cut": 25,
+      "direction": "risk_up",
+      "status": "ok",
+      "n_imputations": 1,
+      "n": 40260,
+      "n_events": 8432,
+      "n_clusters": 11131,
+      "beta": 0.095534,
+      "se": 0.048519,
+      "odds_ratio": 1.1002,
+      "ci_low": 1.0004,
+      "ci_high": 1.21,
+      "z": 1.969,
+      "p_two_sided": 0.04895229565002051,
+      "seconds": 0.0
+    }
+  ]
+}

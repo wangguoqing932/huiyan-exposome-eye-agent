@@ -1,0 +1,230 @@
+{
+  "registry": {
+    "exposures": 41,
+    "diseases": 15,
+    "possible_pairs": 615
+  },
+  "rules_total": 21,
+  "pairs_with_signal": 68,
+  "pairs_without_signal": 547,
+  "rules_that_fire": 21,
+  "rules_that_never_fire": [],
+  "exposures_with_hit": 36,
+  "diseases_with_hit": 10,
+  "unreachable_diseases": [
+    "amd_selfreport",
+    "cataract_subtype_graded",
+    "glaucoma_selfreport",
+    "optic_disc_abnormality",
+    "vision_impairment_mild"
+  ],
+  "unresolved_entities": [],
+  "nondeterministic_pairs": [],
+  "escalation_examples": [],
+  "hits": {
+    "serum_uric_acid|cataract_any": [
+      "r01_uric_acid_x_cataract"
+    ],
+    "fasting_glucose|cataract_any": [
+      "r02_hyperglycemia_x_cataract"
+    ],
+    "fasting_glucose|retinopathy_any": [
+      "r03_hba1c_x_retinopathy_any"
+    ],
+    "fasting_glucose|dr_npdr": [
+      "r04_hba1c_x_dr_pdr"
+    ],
+    "fasting_glucose|dr_pdr": [
+      "r04_hba1c_x_dr_pdr"
+    ],
+    "hba1c|cataract_any": [
+      "r02_hyperglycemia_x_cataract"
+    ],
+    "hba1c|retinopathy_any": [
+      "r03_hba1c_x_retinopathy_any"
+    ],
+    "hba1c|dr_npdr": [
+      "r04_hba1c_x_dr_pdr"
+    ],
+    "hba1c|dr_pdr": [
+      "r04_hba1c_x_dr_pdr"
+    ],
+    "homa_ir|cataract_any": [
+      "r02_hyperglycemia_x_cataract"
+    ],
+    "homa_ir|retinopathy_any": [
+      "r03_hba1c_x_retinopathy_any"
+    ],
+    "homa_ir|dr_npdr": [
+      "r04_hba1c_x_dr_pdr"
+    ],
+    "homa_ir|dr_pdr": [
+      "r04_hba1c_x_dr_pdr"
+    ],
+    "total_cholesterol|amd_late": [
+      "r05_dyslipidemia_x_amd_late"
+    ],
+    "ldl_cholesterol|amd_late": [
+      "r05_dyslipidemia_x_amd_late"
+    ],
+    "hdl_cholesterol|amd_late": [
+      "r05_dyslipidemia_x_amd_late"
+    ],
+    "triglycerides|amd_late": [
+      "r05_dyslipidemia_x_amd_late"
+    ],
+    "c_reactive_protein|amd_late": [
+      "r06_crp_x_amd_late"
+    ],
+    "bmi|cataract_any": [
+      "r13_bmi_x_cataract"
+    ],
+    "bmi|retinopathy_any": [
+      "r22_bmi_x_retinopathy"
+    ],
+    "bmi|dr_npdr": [
+      "r22_bmi_x_retinopathy"
+    ],
+    "waist_circumference|cataract_any": [
+      "r13_bmi_x_cataract"
+    ],
+    "waist_circumference|retinopathy_any": [
+      "r22_bmi_x_retinopathy"
+    ],
+    "waist_circumference|dr_npdr": [
+      "r22_bmi_x_retinopathy"
+    ],
+    "serum_vitamin_d|dr_npdr": [
+      "r07_vitamind_x_dr_npdr"
+    ],
+    "serum_carotenoids|cataract_any": [
+      "r08_low_antioxidant_x_cataract"
+    ],
+    "dietary_vitamin_c|cataract_any": [
+      "r08_low_antioxidant_x_cataract"
+    ],
+    "dietary_vitamin_e|cataract_any": [
+      "r08_low_antioxidant_x_cataract"
+    ],
+    "dietary_lutein_zeaxanthin|cataract_any": [
+      "r08_low_antioxidant_x_cataract"
+    ],
+    "dietary_beta_carotene|cataract_any": [
+      "r08_low_antioxidant_x_cataract"
+    ],
+    "mediterranean_diet_score|amd_late": [
+      "r09_mediterranean_diet_x_amd_late"
+    ],
+    "dietary_inflammatory_index|dr_npdr": [
+      "r19_proinflam_diet_x_dr_npdr"
+    ],
+    "dietary_glycemic_index|cataract_any": [
+      "r02_hyperglycemia_x_cataract"
+    ],
+    "dietary_glycemic_index|retinopathy_any": [
+      "r03_hba1c_x_retinopathy_any"
+    ],
+    "dietary_glycemic_index|dr_npdr": [
+      "r04_hba1c_x_dr_pdr"
+    ],
+    "dietary_glycemic_index|dr_pdr": [
+      "r04_hba1c_x_dr_pdr"
+    ],
+    "fish_epa_dha_intake|amd_late": [
+      "r09_mediterranean_diet_x_amd_late"
+    ],
+    "whole_grain_intake|amd_late": [
+      "r09_mediterranean_diet_x_amd_late"
+    ],
+    "sugar_sweetened_beverage|dr_npdr": [
+      "r19_proinflam_diet_x_dr_npdr"
+    ],
+    "processed_meat|dr_npdr": [
+      "r19_proinflam_diet_x_dr_npdr"
+    ],
+    "current_smoking|cataract_any": [
+      "r10_smoking_x_cataract"
+    ],
+    "current_smoking|amd_late": [
+      "r11_smoking_x_amd_late"
+    ],
+    "current_smoking|vision_impairment_moderate": [
+      "r20_smoking_x_vi_mod_severe"
+    ],
+    "current_smoking|vision_impairment_severe": [
+      "r20_smoking_x_vi_mod_severe"
+    ],
+    "serum_cotinine|cataract_any": [
+      "r10_smoking_x_cataract"
+    ],
+    "serum_cotinine|amd_late": [
+      "r11_smoking_x_amd_late"
+    ],
+    "serum_cotinine|vision_impairment_moderate": [
+      "r20_smoking_x_vi_mod_severe"
+    ],
+    "serum_cotinine|vision_impairment_severe": [
+      "r20_smoking_x_vi_mod_severe"
+    ],
+    "secondhand_smoke|cataract_any": [
+      "r10_smoking_x_cataract"
+    ],
+    "secondhand_smoke|amd_late": [
+      "r11_smoking_x_amd_late"
+    ],
+    "secondhand_smoke|vision_impairment_moderate": [
+      "r20_smoking_x_vi_mod_severe"
+    ],
+    "secondhand_smoke|vision_impairment_severe": [
+      "r20_smoking_x_vi_mod_severe"
+    ],
+    "alcohol_intake|cataract_any": [
+      "r12_alcohol_x_cataract"
+    ],
+    "serum_ggt|cataract_any": [
+      "r12_alcohol_x_cataract"
+    ],
+    "binge_drinking|cataract_any": [
+      "r12_alcohol_x_cataract"
+    ],
+    "blood_lead|cataract_any": [
+      "r14_lead_x_cataract"
+    ],
+    "pm25_exposure|glaucoma_iop_elevated": [
+      "r16_pm25_x_glaucoma_iop_cdr"
+    ],
+    "pm25_exposure|glaucoma_suspect_cdr": [
+      "r16_pm25_x_glaucoma_iop_cdr"
+    ],
+    "pm25_exposure|amd_early": [
+      "r17_pm25_x_amd_early"
+    ],
+    "pm25_exposure|vision_impairment_moderate": [
+      "r21_pm25_x_vi_mod_severe"
+    ],
+    "pm25_exposure|vision_impairment_severe": [
+      "r21_pm25_x_vi_mod_severe"
+    ],
+    "uv_exposure|cataract_any": [
+      "r18_uv_x_cataract"
+    ],
+    "pack_years|cataract_any": [
+      "r10_smoking_x_cataract"
+    ],
+    "pack_years|amd_late": [
+      "r11_smoking_x_amd_late"
+    ],
+    "pack_years|vision_impairment_moderate": [
+      "r20_smoking_x_vi_mod_severe"
+    ],
+    "pack_years|vision_impairment_severe": [
+      "r20_smoking_x_vi_mod_severe"
+    ],
+    "alcohol_grams_per_day|cataract_any": [
+      "r12_alcohol_x_cataract"
+    ],
+    "sun_exposure_hours|cataract_any": [
+      "r18_uv_x_cataract"
+    ]
+  }
+}

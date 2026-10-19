@@ -1,0 +1,448 @@
+{
+  "cohort": "CRELES",
+  "root": "D:\\Desktop\\眼科公共数据库agent搭建\\data\\raw\\creles",
+  "files": 59,
+  "scanned": 59,
+  "candidates": [
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS2_Anthropometry_Pre-1945_W3_V2.dta",
+      "var": "l4",
+      "rows": 1786,
+      "n_valid": 1390,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 1380,
+        "Yes": 10,
+        "nan": 396
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS2_Anthropometry_Pre-1945_W2_V2.dta",
+      "var": "l4",
+      "rows": 2279,
+      "n_valid": 1727,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 1714,
+        "Yes": 13,
+        "nan": 552
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS2_Anthropometry_Pre-1945_W1_V2.dta",
+      "var": "l4",
+      "rows": 2712,
+      "n_valid": 2259,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "9.0": 2,
+        "NO": 2215,
+        "YES": 42,
+        "nan": 453
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W1 V4.dta",
+      "var": "l4",
+      "rows": 50,
+      "n_valid": 49,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "No": 49,
+        "nan": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W1 V4.dta",
+      "var": "l4",
+      "rows": 1339,
+      "n_valid": 1248,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 8,
+        "No": 1236,
+        "Yes": 4,
+        "nan": 91
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS11 Spouse Without Main RC W2 V3.dta",
+      "var": "l4",
+      "rows": 30,
+      "n_valid": 27,
+      "dtype": "category",
+      "n_distinct": 2,
+      "values": {
+        "No": 27,
+        "nan": 3
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS2 Spouse RC W2 V3.dta",
+      "var": "l4",
+      "rows": 1109,
+      "n_valid": 988,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 985,
+        "Yes": 3,
+        "nan": 121
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c57m",
+      "rows": 1859,
+      "n_valid": 1829,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "No": 1354,
+        "Yes": 448,
+        "dk": 27,
+        "nan": 30
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c58m",
+      "rows": 1859,
+      "n_valid": 448,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 1,
+        "No": 341,
+        "Yes": 106,
+        "nan": 1411
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE3__DS1_Main_Elderly_People_Pre-1945_W3_V2.dta",
+      "var": "c131m",
+      "rows": 1859,
+      "n_valid": 1844,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "NS": 4,
+        "No": 957,
+        "Yes": 883,
+        "nan": 15
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c131m",
+      "rows": 2364,
+      "n_valid": 2363,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "1 to less than 3 Years": 1180,
+        "< 1 Year": 1179,
+        "DK": 4,
+        "nan": 1
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c59m",
+      "rows": 2364,
+      "n_valid": 1066,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "DK/NR": 9,
+        "Havent had the disease": 14,
+        "No": 608,
+        "Yes": 435,
+        "nan": 1298
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c58m",
+      "rows": 2364,
+      "n_valid": 504,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 375,
+        "Yes": 129,
+        "nan": 1860
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c57m",
+      "rows": 2364,
+      "n_valid": 2341,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "DK": 14,
+        "No": 1823,
+        "Yes": 504,
+        "nan": 23
+      }
+    },
+    {
+      "file": "Data-CRELES-Pre-1945-WAVE2__DS1_Main_Elderly_People_Pre-1945_W2_V2.dta",
+      "var": "c57",
+      "rows": 2364,
+      "n_valid": 2364,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "0": 18,
+        "DK": 15,
+        "No": 1442,
+        "Yes": 889
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c57",
+      "rows": 2827,
+      "n_valid": 2796,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "DK": 24,
+        "NR": 1,
+        "No": 1694,
+        "Yes": 1077,
+        "nan": 31
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c58",
+      "rows": 2827,
+      "n_valid": 1077,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "DK/NR": 2,
+        "No": 496,
+        "Yes": 579,
+        "nan": 1750
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c59",
+      "rows": 2827,
+      "n_valid": 1077,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "DK/NR": 11,
+        "Little": 279,
+        "None": 349,
+        "Very much": 438,
+        "nan": 1750
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c60",
+      "rows": 2827,
+      "n_valid": 2796,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "DK": 49,
+        "NR": 2,
+        "No": 2677,
+        "Yes": 68,
+        "nan": 31
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c61",
+      "rows": 2827,
+      "n_valid": 68,
+      "dtype": "category",
+      "n_distinct": 5,
+      "values": {
+        "DK/NR": 1,
+        "Little": 12,
+        "None": 21,
+        "Very much": 34,
+        "nan": 2759
+      }
+    },
+    {
+      "file": "Data-CRELES-pre-1945-WAVE1__DS1_Main_Elderly_People_Pre-1945_W1_V2.dta",
+      "var": "c131",
+      "rows": 2827,
+      "n_valid": 2822,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "1 to less than 3 Years": 764,
+        "3 to less than 5 Years": 242,
+        "5 Years or more": 524,
+        "< 1 Year": 870,
+        "DK": 30,
+        "NR": 4,
+        "Never": 388,
+        "nan": 5
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c55q",
+      "rows": 2430,
+      "n_valid": 1950,
+      "dtype": "category",
+      "n_distinct": 7,
+      "values": {
+        "DK/NR": 3,
+        "Exellent": 211,
+        "Fair": 462,
+        "Good": 924,
+        "Poor": 91,
+        "Very good": 259,
+        "nan": 480
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c56an",
+      "rows": 2430,
+      "n_valid": 2430,
+      "dtype": "category",
+      "n_distinct": 6,
+      "values": {
+        "Better": 142,
+        "DK/NR": 9,
+        "Much Better": 21,
+        "Much Worse": 68,
+        "The same": 1223,
+        "Worse": 967
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c57m",
+      "rows": 2430,
+      "n_valid": 2430,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "DK": 24,
+        "No": 2070,
+        "Yes": 336
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c58m",
+      "rows": 2430,
+      "n_valid": 336,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 290,
+        "Yes": 46,
+        "nan": 2094
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "c131m",
+      "rows": 2430,
+      "n_valid": 2430,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "1 to less than 3 Years": 1135,
+        "< 1 Year": 1291,
+        "NR": 4
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W2 V3.dta",
+      "var": "l4",
+      "rows": 2430,
+      "n_valid": 2297,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 2292,
+        "Yes": 5,
+        "nan": 133
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c57",
+      "rows": 2798,
+      "n_valid": 2797,
+      "dtype": "category",
+      "n_distinct": 4,
+      "values": {
+        "DK": 20,
+        "No": 2289,
+        "Yes": 488,
+        "nan": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c58",
+      "rows": 2798,
+      "n_valid": 488,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 280,
+        "Yes": 208,
+        "nan": 2310
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "c131",
+      "rows": 2798,
+      "n_valid": 2797,
+      "dtype": "category",
+      "n_distinct": 8,
+      "values": {
+        "1 to less than 3 Years": 878,
+        "3 to less than 5 Years": 228,
+        "5 Years or more": 332,
+        "< 1 Year": 985,
+        "DK": 3,
+        "NR": 1,
+        "Never": 370,
+        "nan": 1
+      }
+    },
+    {
+      "file": "Creles_1945-1955_Retirement___DS1 Main form RC W1 V4.dta",
+      "var": "l4",
+      "rows": 2798,
+      "n_valid": 2623,
+      "dtype": "category",
+      "n_distinct": 3,
+      "values": {
+        "No": 2614,
+        "Yes": 9,
+        "nan": 175
+      }
+    }
+  ],
+  "notes": [],
+  "files_with_candidates": 12
+}

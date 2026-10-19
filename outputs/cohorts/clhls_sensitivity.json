@@ -1,0 +1,87 @@
+{
+  "why": "CLHLS's frame treats the release as 8 follow-up waves of 9,093 people; the raw file shows 2014 and 2018 have 44 and 10 respondents, so the wave structure is not defensible and the row count overstates independent observations",
+  "verified_facts": {
+    "trueage_is_baseline_1998": "trueage_14 - trueage = 16y, trueage_18 - trueage = 21y",
+    "respondents_by_wave": {
+      "1998-2011": 9093,
+      "2014": 44,
+      "2018": 10
+    },
+    "age_wave_invariant_pct": 92.74
+  },
+  "results": {
+    "r02_hyperglycemia_x_cataract": {
+      "all_waves": {
+        "n": 15462,
+        "odds_ratio": 3.589,
+        "ci_low": 2.624,
+        "ci_high": 4.907,
+        "p": 0.0
+      },
+      "wave_1998_only": {
+        "n": 7640,
+        "odds_ratio": 4.694,
+        "ci_low": 2.825,
+        "ci_high": 7.797,
+        "p": 0.0
+      },
+      "exposure": "diabetes",
+      "outcome": "cataract_any"
+    },
+    "r10_smoking_x_cataract": {
+      "all_waves": {
+        "n": 15757,
+        "odds_ratio": 0.748,
+        "ci_low": 0.644,
+        "ci_high": 0.869,
+        "p": 0.000154
+      },
+      "wave_1998_only": {
+        "n": 7797,
+        "odds_ratio": 0.725,
+        "ci_low": 0.611,
+        "ci_high": 0.861,
+        "p": 0.000251
+      },
+      "exposure": "current_smoking",
+      "outcome": "cataract_any"
+    },
+    "r12_alcohol_x_cataract": {
+      "all_waves": {
+        "n": 7793,
+        "odds_ratio": 0.809,
+        "ci_low": 0.704,
+        "ci_high": 0.93,
+        "p": 0.002819
+      },
+      "wave_1998_only": {
+        "n": 7793,
+        "odds_ratio": 0.809,
+        "ci_low": 0.704,
+        "ci_high": 0.93,
+        "p": 0.002819
+      },
+      "exposure": "alcohol_intake",
+      "outcome": "cataract_any"
+    },
+    "r20_smoking_x_vi_mod_severe": {
+      "all_waves": {
+        "n": 12192,
+        "odds_ratio": 1.027,
+        "ci_low": 0.874,
+        "ci_high": 1.207,
+        "p": 0.749121
+      },
+      "wave_1998_only": {
+        "n": 8293,
+        "odds_ratio": 1.116,
+        "ci_low": 0.908,
+        "ci_high": 1.371,
+        "p": 0.298362
+      },
+      "exposure": "current_smoking",
+      "outcome": "vision_impairment_moderate"
+    }
+  },
+  "direction_flips": []
+}

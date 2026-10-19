@@ -1,0 +1,46 @@
+{
+  "why": "e_value() fed odds ratios into a formula derived for risk ratios; cataract is not rare, so the naive E-values overstate robustness to unmeasured confounding",
+  "conversion": "RR = OR / (1 - p0 + p0 * OR), p0 = risk among the unexposed",
+  "pairs": {
+    "r10_smoking_x_cataract@CLHLS": {
+      "p0_unexposed": 0.1782,
+      "rr_observed": 0.7386,
+      "or_point": 0.748,
+      "rr_point": 0.7832,
+      "evalue_naive_or_as_rr": 2.008,
+      "evalue_corrected": 1.871,
+      "evalue_corrected_ci_bound": 1.496,
+      "inflation_factor": 1.073
+    },
+    "r10_smoking_x_cataract@SHARE": {
+      "p0_unexposed": 0.0882,
+      "rr_observed": 0.6131,
+      "or_point": 1.109,
+      "rr_point": 1.0984,
+      "evalue_naive_or_as_rr": 1.457,
+      "evalue_corrected": 1.427,
+      "evalue_corrected_ci_bound": 1.234,
+      "inflation_factor": 1.021
+    },
+    "r12_alcohol_x_cataract@CLHLS": {
+      "p0_unexposed": 0.2107,
+      "rr_observed": 0.812,
+      "or_point": 0.809,
+      "rr_point": 0.8429,
+      "evalue_naive_or_as_rr": 1.776,
+      "evalue_corrected": 1.657,
+      "evalue_corrected_ci_bound": 1.311,
+      "inflation_factor": 1.072
+    },
+    "r02_hyperglycemia_x_cataract@CLHLS": {
+      "p0_unexposed": 0.1607,
+      "rr_observed": 2.4024,
+      "or_point": 3.5887,
+      "rr_point": 2.5344,
+      "evalue_naive_or_as_rr": 6.637,
+      "evalue_corrected": 4.506,
+      "evalue_corrected_ci_bound": 3.581,
+      "inflation_factor": 1.473
+    }
+  }
+}

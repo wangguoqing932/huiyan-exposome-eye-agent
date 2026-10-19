@@ -1,0 +1,30 @@
+检验/主张,稿件值,复算值,判定,备注
+r10 SHARE OR [CI],"1.11 [1.04, 1.18]","1.1090 [1.0410, 1.1815]",一致,分析 n=5 replicates
+r10 CLHLS OR [CI],"0.748 [0.64, 0.87]","0.7480 [0.6435, 0.8694]",一致,分析 n=1 replicates
+r02 CLHLS OR,"3.59 [2.62, 4.91]","3.5887 [2.6244, 4.9074]",一致,分析 n=1 replicates
+r02 SHARE OR,"1.75 [1.69, 1.82]","1.7539 [1.6908, 1.8194]",一致,分析 n=5 replicates
+r02 LASI OR,"1.88 [1.76, 2.0]","1.8782 [1.7646, 1.9991]",一致,分析 n=1 replicates
+r02 CRELES OR,"1.31 [1.07, 1.61]","1.3116 [1.0706, 1.6069]",一致,分析 n=1 replicates
+r20 HRS OR,"1.61 [1.47, 1.78]","1.6144 [1.4682, 1.7752]",一致,分析 n=1 replicates
+r20 ELSA OR,"1.49 [1.21, 1.83]","1.4883 [1.2128, 1.8263]",一致,分析 n=1 replicates
+r20 SHARE OR,"1.09 [1.04, 1.13]","1.0875 [1.0429, 1.1339]",一致,分析 n=5 replicates
+r11 ELSA OR,"0.86 [0.55, 1.34]","0.8586 [0.5483, 1.3444]",一致,分析 n=1 replicates
+r12 CLHLS OR,"0.809 [0.7, 0.93]","0.8090 [0.7040, 0.9297]",一致,分析 n=1 replicates
+r12 SHARE OR,0.963,"0.9628 [0.8999, 1.0301]",一致,分析 n=5 replicates
+r13 SHARE OR,"1.24 [1.2, 1.29]","1.2439 [1.2008, 1.2886]",一致,分析 n=5 replicates
+r13 CRELES OR,0.99,"0.9911 [0.8126, 1.2087]",一致,分析 n=1 replicates
+r02_hyperglycemia_x_cataract 合并 OR/CI/I²/PI,1.95 (1.33-2.88) I²=90.5% PI 0.84-4.57,1.954 (1.3245-2.8828) I²=90.45% PI 0.8352-4.5716 (REML τ²=0.148689),一致,k=4 Q_p=6.94e-07
+r02_hyperglycemia_x_cataract 地区亚组 Q_between p,0.0004,0.000409,一致,"Q=15.6029 df=2 各组OR={'Americas': 1.3116, 'Asia': 1.9253, 'Europe': 1.7539}"
+r10_smoking_x_cataract 合并 OR/CI/I²/PI,0.84 (0.67-1.05) I²=91.0% PI 0.53-1.33,0.839 (0.6698-1.0511) I²=91.02% PI 0.5291-1.3306 (REML τ²=0.042141),一致,k=4 Q_p=2.63e-07
+r20_smoking_x_vi_mod_severe 合并 OR/CI/I²/PI,1.24 (1.03-1.48) I²=93.8% PI 0.81-1.89,1.2367 (1.0325-1.4812) I²=93.81% PI 0.81-1.8881 (REML τ²=0.038137),一致,k=5 Q_p=3.03e-13
+r12_alcohol_x_cataract 合并 OR/CI/I²/PI,0.89 (0.75-1.06) I²=79.5% PI 0.68-1.17,0.8924 (0.7535-1.0569) I²=79.46% PI 0.6788-1.1732 (REML τ²=0.012036),一致,k=2 Q_p=0.0273
+r12_alcohol_x_cataract 地区亚组 Q_between p,0.027,0.027333,一致,"Q=4.8697 df=1 各组OR={'Asia': 0.809, 'Europe': 0.9628}"
+r13_bmi_x_cataract 合并 OR/CI/I²/PI,1.14 (0.91-1.41) I²=79.5% PI 0.8-1.62,1.1349 (0.9121-1.412) I²=79.5% PI 0.7952-1.6197 (REML τ²=0.020516),一致,k=2 Q_p=0.0272
+r13_bmi_x_cataract 地区亚组 Q_between p,0.027,0.027214,一致,"Q=4.8772 df=1 各组OR={'Americas': 0.9911, 'Europe': 1.2439}"
+MDE-OR SHARE r13,1.0189,1.0189 (as published) / 1.0427 (analysed n),一致,n 稿 1686370 vs 分析 337274 比值 5.0
+MDE-OR ELSA r11,1.6956,1.6956 (as published) / 1.7017 (analysed n),一致,n 稿 4028 vs 分析 3991 比值 1.009
+MDE-OR CRELES r02,1.2281,1.2281 (as published) / 1.2281 (analysed n),一致,n 稿 5086 vs 分析 5086 比值 1.0
+证据审计：可能单元 / 可行单元,168 / 18,168 / 18,一致,
+证据审计：阻塞分解 both/exposure/outcome,83 / 41 / 26,83 / 41 / 26,一致,
+证据审计：解锁排序首位,fundus imaging +15,fundus_imaging +15,一致,"{'OUTCOME:fundus_imaging': 15, 'blood_assay': 13, 'geocoded_environment': 13, 'dietary_index': 6, 'questionnaire_behaviour': 6, 'OUTCOME:fundus_imaging_or_grading': 5, 'OUTCOME:selfreport_ocular_diagnosis': 5, 'anthropometry': 3, 'selfreport_or_assay_metabolic': 1, 'OUTCOME:vision_rating': 1}"
+三态计数（18 个确认单元）,8 replicated / 8 uninformative / 2 contradicted,8 / 8 / 2,一致,
