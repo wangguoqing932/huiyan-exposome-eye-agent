@@ -23,9 +23,13 @@
     "writer.phase7_3",
     "writer.phase7_6",
     "writer.phase7_7",
-    "writer.phase7_8"
+    "writer.phase7_8",
+    "writer.phase7_1",
+    "writer.phase7_2",
+    "writer.phase7_4",
+    "writer.phase7_5"
   ],
-  "in_progress": "writer.phase7_1",
+  "in_progress": "writer.phase7_9",
   "blocked": [
     {
       "phase": "writer.phase7_9",
@@ -269,6 +273,31 @@
     {
       "date": "2026-10-19",
       "event": "7_9 run and correctly refused: only blocker is author-side (5 bracketed cover-letter fields; no journal fixed). Superseded submission artefacts archived to outputs/submission/_superseded_20261019/",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_1 confirmed by author (2026-10-19 compliance-fix round)",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_2 confirmed by author (2026-10-19 compliance-fix round)",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_3 confirmed by author (2026-10-19 compliance-fix round)",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_4 confirmed by author (2026-10-19 compliance-fix round)",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_5 confirmed by author (2026-10-19 compliance-fix round)",
       "skill": "medical-agent-writer"
     }
   ]

@@ -2,44 +2,44 @@
   "schema_version": "v3.0",
   "phases": {
     "7_1": {
-      "status": "awaiting_author_confirmation",
+      "status": "confirmed",
       "begun_at": "2026-10-15",
       "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/figure_table_qc_report.md"
       ],
-      "confirmed_at": "2026-10-15",
-      "note": "2026-10-19 重新生成：verify_figures_tables.py QC PASS（8 份图契约、6 张主图+S1/S2 均已渲染、9 张 markdown 表、6 个交付 CSV、4 个数据集的 n_cases 一致）。此前的 QC 报告只覆盖 4 张表且图 3 的 A 级计数是旧规则集（3 对），现已随分级与图数据重算（A=1 对）。需作者复核图/表后确认。"
+      "confirmed_at": "2026-10-20",
+      "note": "作者确认：图表 QC 重跑 PASS（8 图契约 / 6 主图+S1S2 / 9 表 / 6 交付 CSV）"
     },
     "7_2": {
-      "status": "awaiting_author_confirmation",
+      "status": "confirmed",
       "begun_at": "2026-10-15",
       "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/figure_legends.md"
       ],
-      "confirmed_at": "2026-10-15",
-      "note": "2026-10-19 更新：图 2 基线数字按 R11 更正金标准重算（full_system F1 0.522 / P 0.353 / R 1.000；lightrag 0.392 / pure_llm 0.335 / naive_rag 0.080），图 3 A 级复现 0/3→0/1；中英图例同步。需作者复核后确认。"
+      "confirmed_at": "2026-10-20",
+      "note": "作者确认：图例数字按 R11 更正金标准更新（F1 0.522；A 级复现 0/1）"
     },
     "7_3": {
-      "status": "awaiting_author_confirmation",
+      "status": "confirmed",
       "begun_at": "2026-10-15",
       "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/figure_prompts.md"
       ],
-      "confirmed_at": "2026-10-15",
-      "note": "2026-10-19 更新：figure_prompts 的第二张图从“Figure 5（推理链）”改为稿件实际编号“Figure S2（推理链）”；配色一致性表述改为覆盖 Figure 1–6 与 S1–S2。需作者复核后确认。"
+      "confirmed_at": "2026-10-20",
+      "note": "作者确认：提示词编号改为 Figure S2，配色覆盖 Figure 1-6 与 S1-S2"
     },
     "7_4": {
-      "status": "awaiting_author_confirmation",
+      "status": "confirmed",
       "begun_at": "2026-10-15",
       "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/sections/results.md"
       ],
-      "confirmed_at": "2026-10-15",
-      "note": "2026-10-19 修正：Table 5b 的“两阶段 p”列原先取错变量（取的是单队列 q_primary，非两阶段检验）。ipd_interaction.py 改读 cohort_heterogeneity.json 的 Cochran Q_p 并重跑；Table 5b 列名/定义/叙述改为 Q 口径；Results 删除重复内联 Table 5（r02/r10 的区域 subgroup 旧值与正式表冲突），r13/r12 段落按 Q 口径重写（one-step 0.149/0.141 vs Q 0.0272/0.0273）。需作者复核后确认。",
+      "confirmed_at": "2026-10-20",
+      "note": "作者确认：Table 5b 两阶段列改为 Cochran Q（r12 0.0273 / r13 0.0272；one-step 0.141/0.149），Results 重复内联表已删",
       "change_requests": [
         {
           "date": "2026-10-19",
@@ -48,14 +48,14 @@
       ]
     },
     "7_5": {
-      "status": "awaiting_author_confirmation",
+      "status": "confirmed",
       "begun_at": "2026-10-15",
       "submitted_at": "2026-10-19",
       "artifacts": [
         "outputs/paper/sections/methods.md"
       ],
-      "confirmed_at": "2026-10-15",
-      "note": "2026-10-19 更新：Methods 增加 Figure 1 与 Table 1b 的正文引用；16 张图/表引用闭环。需作者复核后确认。"
+      "confirmed_at": "2026-10-20",
+      "note": "作者确认：Methods 补 Figure 1 / Table 1b 正文引用"
     },
     "7_6": {
       "status": "confirmed",
@@ -65,7 +65,7 @@
         "outputs/paper/sections/introduction.md"
       ],
       "confirmed_at": "2026-10-15",
-      "note": "代理确认（AGENT 代为确认）。Introduction 4,834 B，引用 6 条全部来自核验池（池外引用 0）。写作中自查发现并修正了一处规则6违规：初稿写了青光眼'2040年超过1亿人'等具体数字但未取摘要；取回摘要后确认 (1) C016 实为评论而非负担原始文献 (2) C022 摘要不支持'上升最快' (3) C023 无摘要可取，按规则6删去其数字仅按主题引用。另修正 failed_claims 从手工累加改为从条目派生（原列表误含4条已解决项，会导致稿子不引用它手上拥有的文献）。"
+      "note": "代理确认（AGENT 代为确认）。Introduction 4,834 B，引用 6 条全部来自核验池（池外引用 0）。写作中自查发现并修正了一处规则6违规：初稿写了青光眼'2040年超过1亿人'等具体数字但未取摘要；取回摘要后确认 (1) C016 实为评论而非负担原始文献 (2) C022 摘要不支持'上升最快' (3) C023 无摘要可取，按规则6删去其数字仅按主题引用。另修正 failed_claims 从手工累加改为从条目派生（原列表误含4条已解决项，会导致稿子不引用它手上拥有的文献）。 ｜ 2026-10-19 作者追认此前 AGENT 代理确认（本轮产物未改动）。"
     },
     "7_7": {
       "status": "confirmed",
@@ -75,7 +75,7 @@
         "outputs/paper/sections/discussion.md"
       ],
       "confirmed_at": "2026-10-15",
-      "note": "代理确认（AGENT 代为确认）。Discussion 12,522 B / 8 节（含独立 Conclusion 小节）。核心论点：可迁移性不能靠数复现队列数建立；合并不解决方向冲突而是掩盖冲突（r10 合并 OR 0.84 描述的是没有任何一个被研究人群）；约束是测量不是样本量。r10 三种解释逐一定标证据状态：选择性存活（该解释预测保护向随年龄增强，但元回归 p=0.52 未观察到梯度，故未获证实）、未测混杂（E-value 1.46-2.01，强度 1.5-2 的混杂即足够）、真实效应修饰（唯一能支持人群特定规则的，也是本设计最无法检验的）。明确声明不偏好任何一种解释。Limitations 写明'实际达到的独立性'：队列彼此独立且独立于 NHANES/KNHANES/CHARLS，但与产生规则的文献不独立。引用 6 条全部来自核验池，池外 0 处；24 条池内条目已全部被引用。"
+      "note": "代理确认（AGENT 代为确认）。Discussion 12,522 B / 8 节（含独立 Conclusion 小节）。核心论点：可迁移性不能靠数复现队列数建立；合并不解决方向冲突而是掩盖冲突（r10 合并 OR 0.84 描述的是没有任何一个被研究人群）；约束是测量不是样本量。r10 三种解释逐一定标证据状态：选择性存活（该解释预测保护向随年龄增强，但元回归 p=0.52 未观察到梯度，故未获证实）、未测混杂（E-value 1.46-2.01，强度 1.5-2 的混杂即足够）、真实效应修饰（唯一能支持人群特定规则的，也是本设计最无法检验的）。明确声明不偏好任何一种解释。Limitations 写明'实际达到的独立性'：队列彼此独立且独立于 NHANES/KNHANES/CHARLS，但与产生规则的文献不独立。引用 6 条全部来自核验池，池外 0 处；24 条池内条目已全部被引用。 ｜ 2026-10-19 作者追认此前 AGENT 代理确认（本轮产物未改动）。"
     },
     "7_8": {
       "status": "confirmed",
