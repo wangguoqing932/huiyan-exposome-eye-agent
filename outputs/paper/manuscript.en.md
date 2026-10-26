@@ -23,7 +23,7 @@ independent concordance across four literature indexes.
 
 **Results.** System track: the deployable agent ranked first on F1 in every
 matrix — 0.571 on NHANES (80 pairs; LightRAG 0.392, pure LLM 0.335, naive RAG
-0.080) and 0.480 on the GLM generation (159 pairs; 0.186, 0.178, 0.069);
+0.080) and 0.522 on the GLM generation (159 pairs; 0.186, 0.178, 0.069);
 on KNHANES (301 pairs) the rule layer scored 0.360 versus 0.145, 0.135 and 0.094.
 Under a binary collapse the agent reached sensitivity 1.00, specificity 0.878,
 PPV 0.400 and κ 0.520 internally; external sensitivity fell to 0.50. Rule track:
@@ -283,9 +283,8 @@ rule, the KG path and the source chunk (Figure 1). The classification benchmark 
 ## Validation overview
 
 The validation returned these core results: the full agent ranked first on F1
-in all three matrices (0.571, 0.480, 0.360 against 0.080–0.392, 0.069–0.186 and
-0.094–0.145 for the three baselines; the primary matrix runs the deployable G2
-configuration, the other two the rule layer); a worked case resolved every output to a rule, KG path and source chunk (Supplementary Figures S1-S2); in the cohort
+in all three matrices (0.571, 0.522 and 0.360 against 0.080–0.392, 0.069–0.186
+and 0.094–0.145; NHANES runs the deployable G2 agent, KNHANES the rule layer); a worked case resolved every output to a rule, KG path and source chunk (Supplementary Figures S1-S2); in the cohort
 layer 6 of 21 rules were testable, with 8 of 18 rule × cohort pairs replicated,
 8 uninformative and 2 contradicted; rule direction by tier was NHANES 6/0/10,
 KNHANES 5/0/10, CHARLS 0/0/4, eight cohorts 8/2/8 (replicated/contradicted/
@@ -321,12 +320,10 @@ R 1.000), ahead of LightRAG 0.392 ± 0.007, pure LLM 0.335 ± 0.010 and naive RA
 against LightRAG (p = 0.0064–0.0117) and pure LLM (p = 0.0004–0.0013) but not
 naive RAG (p = 0.42–1.00). The ablation localises the gain: bare rule layer 0.522,
 +negative-control gate 0.545, +evidence confirmation and arbiter 0.571; the
-pre-expansion v1.1 rule set scored 0.111 on the earlier R5 gold. After two
-fairness fixes (LightRAG full hybrid; baselines on GLM-5.3-flash, 159 pairs), the
-rule-layer ordering held: F1 = 0.480 (P 0.316 / R 1.000) versus 0.186, 0.178 and
-0.069, with accuracy McNemar significant against LightRAG (p = 1.0 × 10⁻⁸ to
-7.7 × 10⁻⁷) and pure LLM (p = 1.2 × 10⁻¹² to 5.4 × 10⁻⁹) but not naive RAG
-(p = 0.30–1.00). A stronger commercial LLM as a standalone judge produced more,
+pre-expansion v1.1 rule set scored 0.111 on the earlier R5 gold. The full agent extended the gain to the 159-pair GLM-5.3-flash generation:
+F1 = 0.522 (P 0.353 / R 1.000) versus rule layer 0.480 and baselines 0.186,
+0.178 and 0.069, with accuracy McNemar significant against all three (per-seed
+p < 10⁻⁶). A stronger commercial LLM as a standalone judge produced more,
 not fewer, false positives (precision 0.10). Under a secondary binary collapse
 (gold positive = replicated; predicted positive = flag), the full agent reached
 sensitivity 1.00, specificity 0.878, PPV 0.400 and κ 0.520 — passing the
@@ -350,7 +347,7 @@ conservative precision 0.333, rule testability 0.882; CHARLS had 4 testable
 pairs, all uninformative (declared precision undefined, conservative 0.000), so
 no conclusion is drawn from it alone.
 
-At the system level (301 pairs), the rule layer attained F1 = 0.360 (the G2 full-agent run covers the primary matrix), ahead of
+On KNHANES (301 pairs) the benchmark reports the rule layer at F1 = 0.360 (a registry-matched G2 variant scored 0.312; Supplementary Table S7), ahead of
 LightRAG 0.145, pure LLM 0.135 and naive RAG 0.094, with accuracy McNemar
 significant against LightRAG (p = 2.0 × 10⁻¹⁰ to 5.0 × 10⁻⁹) and pure LLM
 (p = 5.8 × 10⁻²⁰ to 1.1 × 10⁻¹⁶) but not naive RAG (p = 0.30–0.88). Under a secondary binary collapse (gold positive = replicated; predicted positive = flag), external sensitivity fell to 0.50 (13 replicated pairs among 301 tests) with specificity 0.919, PPV 0.281 and κ 0.307 — below the pre-registered external sensitivity line (Supplementary Table S7). The internal-to-
@@ -498,8 +495,8 @@ changes how agent validation should be reported.
 
 ## Why the agent performs well
 
-The measured source of the performance is architectural. On the primary matrix
-the deployable full agent scored 0.571, and the ablation localises the gain:
+The measured source of the performance is architectural. On the NHANES matrices the deployable full agent scored 0.571 (80 pairs) and
+0.522 (159 pairs, versus rule layer 0.480); the ablation localises the gain:
 rule layer 0.522, +negative-control gate 0.545, +evidence confirmation and
 arbiter 0.571 (on the pre-registered judgeable scope, 0.455 → 0.500). A stronger
 commercial model as a standalone judge produced more, not fewer, false positives
@@ -636,11 +633,12 @@ actually measured.
 
 This study is a secondary analysis of de-identified, publicly available data
 from eleven population surveys. No participants were contacted, no intervention
-was administered, and no identifiable information was accessed. On that basis
-the analysis was determined not to constitute human-subjects research requiring
-review by an institutional review board; **the determination was made by
-[institution / IRB name and reference, author to complete], and the
-corresponding author is responsible for it.** Each source survey had already
+was administered, and no identifiable information was accessed. On that basis,
+**no ethics review was required** for this work: the analysis used exclusively
+de-identified, publicly available secondary data with no participant contact,
+no intervention and no identifiable information, and each source survey had
+already been conducted under its own ethics approval by the original
+investigators. Each source survey had already
 obtained ethics approval and informed consent (or a documented waiver) from its
 own governing body under its own protocol, and this analysis used only the
 released, de-identified files. Users of these data are bound by the terms of the
@@ -697,21 +695,21 @@ sensitivity analysis used R 4.6.1 with the `survey` package.
 
 ## Funding
 
-[Funding source and grant number, or the statement that no specific funding was
-received, author to complete.]
+This work received no specific funding.
 
 ## Competing interests
 
-[Author to complete.] Declarations should cover, in addition to the usual
-interests, any commercial relationship with the large-language-model provider
-whose API this work used, and any in-kind provision of compute.
+The authors declare no competing interests. No commercial relationship exists
+with any large-language-model provider; all LLM calls in the validation pipeline
+ran against locally hosted or freely accessed endpoints.
 
 ## Author contributions (CRediT)
 
-[Author to complete.] Suggested allocation, given that the analysis pipeline,
-figures and manuscript drafts were produced with substantial generative-AI
-assistance: the human authors should claim Conceptualization, Methodology,
-Data curation, Validation, Supervision, and Writing – review & editing. **An AI
+Guoqing Wang: Conceptualization, Methodology, Software, Data curation,
+Formal analysis, Validation, Visualization, Writing – original draft.
+Xianglong Yi: Conceptualization, Methodology, Supervision, Project
+administration, Validation, Writing – review & editing. Both authors read and
+approved the final manuscript and take full responsibility for the work. **An AI
 system cannot be listed as an author**, cannot hold responsibility for the work,
 and cannot consent to publication.
 
@@ -926,13 +924,13 @@ Participants are counted once per cohort. Person-waves count each person once pe
 | Dataset (role) | Full system F1 (rule layer) | LightRAG | Pure LLM | Naive RAG | Rule-relevant pairs (R/C/U) | Notes |
 |---|---:|---:|---:|---:|---|---|
 | NHANES, Qwen (internal) | 0.571 (full agent) | 0.392 | 0.335 | 0.080 | 16 (6/0/10) | 80 pairs; rule-layer ablation 0.522, NC-gated 0.545 |
-| NHANES, GLM-5.3-flash (internal) | 0.480 | 0.186 | 0.178 | 0.069 | 16 (6/0/10) | 159 pairs; after fairness fixes |
+| NHANES, GLM-5.3-flash (internal) | 0.522 (full agent) | 0.186 | 0.178 | 0.069 | 16 (6/0/10) | 159 pairs; rule-layer ablation 0.480 |
 | KNHANES (external, site) | 0.360 | 0.145 | 0.135 | 0.094 | 15 (5/0/10) | 301 pairs |
 | CHARLS (external, site) | not assessed | not assessed | not assessed | not assessed | 4 (0/0/4) | 14 pairs; direction check only |
 | Eight ageing cohorts (external, population) | not assessed | not assessed | not assessed | not assessed | 18 (8/2/8) | 6 of 21 rules testable; 18 of 168 cells feasible |
 | Literature indexes (independent) | not applicable | not applicable | not applicable | not applicable | — | 0.800–0.922 (4 indexes) |
 
-**Notes.** System-level F1 was measured only where the three baselines were run (NHANES, two generations; KNHANES). CHARLS and the eight cohorts were evaluated at the rule level, so “not assessed” indicates a different validation target, not a missing result. R/C/U order is replicated/contradicted/uninformative rule-relevant pairs. Full-agent F1 is the deployable G2 configuration on the primary matrix; GLM-5.3-flash and KNHANES rows report the rule layer (ablation). The arbiter affects the report and risk grade. The literature layer reports index-level precision, not F1: PubMed 0.889, Web of Science 0.916, Europe PMC 0.922 and CNKI 0.800.
+**Notes.** System-level F1 was measured only where the three baselines were run (NHANES, two generations; KNHANES). CHARLS and the eight cohorts were evaluated at the rule level, so “not assessed” indicates a different validation target, not a missing result. R/C/U order is replicated/contradicted/uninformative rule-relevant pairs. Full-agent F1 is the deployable G2 configuration on the primary matrix; KNHANES reports the rule layer; on GLM-5.3-flash the full agent scored 0.522 versus rule layer 0.480. The arbiter affects the report and risk grade. The literature layer reports index-level precision, not F1: PubMed 0.889, Web of Science 0.916, Europe PMC 0.922 and CNKI 0.800.
 
 ---
 

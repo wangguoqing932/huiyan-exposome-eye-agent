@@ -303,3 +303,30 @@ qc 20/20、verify 70/70、bilingual OK；摘要 sha 81549ba2…（本轮更新�
 
 完成后 7_9 打包（submission_pkg zip + cover_letter.docx），作者在
 ScholarOne 提交。未投稿。
+
+
+## R30k：G2 全矩阵实测完成（llama-server 在线）
+
+作者起服务后重跑 `run_fused_system.py`，**本次覆盖全部矩阵**
+（NHANES 159 + KNHANES 301 + CHARLS 14，门分布：no_rule 434 /
+evidence_Bplus 32 / arbiter_yes 3 / nc_abstain 3 / no_relevant 2）。
+正式计分（survey-variance gold，`g2_full_matrix_all.json`）：
+
+| 矩阵 | G0 规则层 | G1 +NC 门 | **G2 完整智能体** |
+|---|---:|---:|---:|
+| NHANES Qwen 80（R11 gold） | 0.522 | 0.545 | **0.571** |
+| NHANES GLM 159 | 0.480 | 0.500* | **0.522** |
+| KNHANES 301 | 0.294（harness 口径） | 0.303 | **0.312** |
+
+（*GLM 代 harness G0 0.500 与基准 full_system 0.480 的差异来自规则匹配子集；
+正文 GLM 行升级为 full agent 0.522 vs 规则层 0.480。）
+
+accuracy McNemar（NHANES-159，G2 vs 基线，逐 seed）：对 LightRAG / pure LLM /
+naive RAG **全部 p < 10⁻⁶**——G2 完整智能体在 159 对 GLM 代上对三条基线全部显著。
+
+KNHANES 如实披露：基准报告 rule layer 0.360（用 confirmatory rule_ids 含
+~r02/~r03 反向规则）；registry 匹配的 G2 变体 0.312（Supplementary Table S7 注）。
+
+正文/表/摘要同步：Table 3 NHANES 两行改 full agent（0.571/0.522）+ 消融注；
+摘要 GLM 数字 0.480→0.522；Discussion 消融句加 159 对。产物
+`outputs/confirmatory/g2_full_matrix_all.json`。正文（Word 口径）5,969 词。

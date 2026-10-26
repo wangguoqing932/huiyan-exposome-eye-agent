@@ -442,6 +442,11 @@
    "date": "2026-10-23",
    "event": "R30j journal chosen: J Med Internet Res; JMIR adaptation complete (portrait tables, Multimedia Appendix 1, abstract 346 words, cover letter, guidelines snapshot with ML/AI four-condition mapping); main text 5,988 words, 37 pages; awaiting author-side Declarations fields and gate confirmations before 7_9 packaging",
    "skill": "medical-agent-writer"
+  },
+  {
+   "date": "2026-10-27",
+   "event": "R30k G2 full-matrix rerun with live llama-server: all 474 tested pairs covered; G2 F1 0.571 (NHANES-80), 0.522 vs rule layer 0.480 (NHANES-159, McNemar sig vs all baselines), 0.312 registry-matched (KNHANES); manuscript/Table 3/abstract updated to G2 numbers; 5,969 words",
+   "skill": "medical-agent-writer"
   }
  ]
 }

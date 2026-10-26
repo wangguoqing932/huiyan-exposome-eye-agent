@@ -12,8 +12,8 @@ changes how agent validation should be reported.
 
 ## Why the agent performs well
 
-The measured source of the performance is architectural. On the primary matrix
-the deployable full agent scored 0.571, and the ablation localises the gain:
+The measured source of the performance is architectural. On the NHANES matrices the deployable full agent scored 0.571 (80 pairs) and
+0.522 (159 pairs, versus rule layer 0.480); the ablation localises the gain:
 rule layer 0.522, +negative-control gate 0.545, +evidence confirmation and
 arbiter 0.571 (on the pre-registered judgeable scope, 0.455 → 0.500). A stronger
 commercial model as a standalone judge produced more, not fewer, false positives

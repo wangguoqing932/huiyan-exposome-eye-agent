@@ -4,9 +4,9 @@
 
 ## Project Status（2026-10-23，R30 多视角审稿修正后）
 
-📋 **Planner 0–4.5、Executor 0–6 完成且四门全绿（planner 自检 3/3、phase3 引用门 21/21、索引 freshness 三 sha 一致、executor→writer 门通过）；Writer 7_8 已从分节源重新装配（96,235 B；正文 5,988 词（Word 口径） Introduction–Discussion，Methods 1,575；abstract 412 词；References 27 条 / 4 表 / 6 主图 + S1/S2）；7_3 已确认；7_1、7_2、7_4、7_5、7_6、7_7、7_8 因 R29 表图压缩与 R30 审稿修正重新提交；7_9 唯一阻塞项在作者侧（目标期刊与通讯作者信息）。**
+📋 **Planner 0–4.5、Executor 0–6 完成且四门全绿（planner 自检 3/3、phase3 引用门 21/21、索引 freshness 三 sha 一致、executor→writer 门通过）；Writer 7_8 已从分节源重新装配（96,235 B；正文 5,969 词（Word 口径） Introduction–Discussion，Methods 1,575；abstract 412 词；References 27 条 / 4 表 / 6 主图 + S1/S2）；7_3 已确认；7_1、7_2、7_4、7_5、7_6、7_7、7_8 因 R29 表图压缩与 R30 审稿修正重新提交；7_9 唯一阻塞项在作者侧（目标期刊与通讯作者信息）。**
 
-**R25–R29 叙事、结果与结构**：先报 agent 强且可用（NHANES 双代 + KNHANES 301 对均优于三条基线，Streamlit/来源可溯报告），再报八队列规则层可转运性失败，最后落在“agent 验证应报告规则层面可转运性，而不只是聚合系统性能”。标题同步改为 “strong system performance and usable reports, but poor rule transportability across eight cohorts”。R26 在 Results 开头新增“五个验证目标的核心结果”总览；R27 按 writer skill 的 dataset-centric 顺序重排 Results；R28 按 imrad_playbook 重写 Introduction、Methods、Discussion；R29 主稿压到 4 表（cohorts/rules/performance/transportability）与 6 图（S1/S2 移入 Supplement），6 张表移入 `outputs/tables/supplementary/` 并汇总到 `outputs/submission/supplementary_tables_figures.md`；正文 5,988 词（Word 口径），37 页。
+**R25–R29 叙事、结果与结构**：先报 agent 强且可用（NHANES 双代 + KNHANES 301 对均优于三条基线，Streamlit/来源可溯报告），再报八队列规则层可转运性失败，最后落在“agent 验证应报告规则层面可转运性，而不只是聚合系统性能”。标题同步改为 “strong system performance and usable reports, but poor rule transportability across eight cohorts”。R26 在 Results 开头新增“五个验证目标的核心结果”总览；R27 按 writer skill 的 dataset-centric 顺序重排 Results；R28 按 imrad_playbook 重写 Introduction、Methods、Discussion；R29 主稿压到 4 表（cohorts/rules/performance/transportability）与 6 图（S1/S2 移入 Supplement），6 张表移入 `outputs/tables/supplementary/` 并汇总到 `outputs/submission/supplementary_tables_figures.md`；正文 5,969 词（Word 口径），37 页。
 
 **agent 三层现状**：
 - 规则层确定；**患者因素升级已修复并有单测锁定**（`tests/test_synthetic_regression.py::test_escalation_fixed`，修复前 272 测试 0 触发 → 现 17 触发且范围受限）；

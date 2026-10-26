@@ -24,9 +24,8 @@ rule, the KG path and the source chunk (Figure 1). The classification benchmark 
 ## Validation overview
 
 The validation returned these core results: the full agent ranked first on F1
-in all three matrices (0.571, 0.480, 0.360 against 0.080–0.392, 0.069–0.186 and
-0.094–0.145 for the three baselines; the primary matrix runs the deployable G2
-configuration, the other two the rule layer); a worked case resolved every output to a rule, KG path and source chunk (Supplementary Figures S1-S2); in the cohort
+in all three matrices (0.571, 0.522 and 0.360 against 0.080–0.392, 0.069–0.186
+and 0.094–0.145; NHANES runs the deployable G2 agent, KNHANES the rule layer); a worked case resolved every output to a rule, KG path and source chunk (Supplementary Figures S1-S2); in the cohort
 layer 6 of 21 rules were testable, with 8 of 18 rule × cohort pairs replicated,
 8 uninformative and 2 contradicted; rule direction by tier was NHANES 6/0/10,
 KNHANES 5/0/10, CHARLS 0/0/4, eight cohorts 8/2/8 (replicated/contradicted/
@@ -62,12 +61,10 @@ R 1.000), ahead of LightRAG 0.392 ± 0.007, pure LLM 0.335 ± 0.010 and naive RA
 against LightRAG (p = 0.0064–0.0117) and pure LLM (p = 0.0004–0.0013) but not
 naive RAG (p = 0.42–1.00). The ablation localises the gain: bare rule layer 0.522,
 +negative-control gate 0.545, +evidence confirmation and arbiter 0.571; the
-pre-expansion v1.1 rule set scored 0.111 on the earlier R5 gold. After two
-fairness fixes (LightRAG full hybrid; baselines on GLM-5.3-flash, 159 pairs), the
-rule-layer ordering held: F1 = 0.480 (P 0.316 / R 1.000) versus 0.186, 0.178 and
-0.069, with accuracy McNemar significant against LightRAG (p = 1.0 × 10⁻⁸ to
-7.7 × 10⁻⁷) and pure LLM (p = 1.2 × 10⁻¹² to 5.4 × 10⁻⁹) but not naive RAG
-(p = 0.30–1.00). A stronger commercial LLM as a standalone judge produced more,
+pre-expansion v1.1 rule set scored 0.111 on the earlier R5 gold. The full agent extended the gain to the 159-pair GLM-5.3-flash generation:
+F1 = 0.522 (P 0.353 / R 1.000) versus rule layer 0.480 and baselines 0.186,
+0.178 and 0.069, with accuracy McNemar significant against all three (per-seed
+p < 10⁻⁶). A stronger commercial LLM as a standalone judge produced more,
 not fewer, false positives (precision 0.10). Under a secondary binary collapse
 (gold positive = replicated; predicted positive = flag), the full agent reached
 sensitivity 1.00, specificity 0.878, PPV 0.400 and κ 0.520 — passing the
@@ -91,7 +88,7 @@ conservative precision 0.333, rule testability 0.882; CHARLS had 4 testable
 pairs, all uninformative (declared precision undefined, conservative 0.000), so
 no conclusion is drawn from it alone.
 
-At the system level (301 pairs), the rule layer attained F1 = 0.360 (the G2 full-agent run covers the primary matrix), ahead of
+On KNHANES (301 pairs) the benchmark reports the rule layer at F1 = 0.360 (a registry-matched G2 variant scored 0.312; Supplementary Table S7), ahead of
 LightRAG 0.145, pure LLM 0.135 and naive RAG 0.094, with accuracy McNemar
 significant against LightRAG (p = 2.0 × 10⁻¹⁰ to 5.0 × 10⁻⁹) and pure LLM
 (p = 5.8 × 10⁻²⁰ to 1.1 × 10⁻¹⁶) but not naive RAG (p = 0.30–0.88). Under a secondary binary collapse (gold positive = replicated; predicted positive = flag), external sensitivity fell to 0.50 (13 replicated pairs among 301 tests) with specificity 0.919, PPV 0.281 and κ 0.307 — below the pre-registered external sensitivity line (Supplementary Table S7). The internal-to-

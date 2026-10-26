@@ -11,7 +11,7 @@
 | `paper/figure_legends_main.md` | 主图 Figure 1–6 的英文图例（主稿使用） |
 | `paper/figure_legends_supp.md` | 补充图 S1/S2 的英文图例 |
 | `paper/figure_legends.md` | 全量图例参考（图 1–6 + S1/S2） |
-| `paper/manuscript_agent_first.docx` | **投稿用整篇 Word（R30 最终英文版）**——37 页，正文 5,988 词（Word 口径）、abstract 412 词，零中文，统一配色/纯白背景，含标题页 + 正文 + 声明 + 文献 + 图例 + 4 表 + 6 图 |
+| `paper/manuscript_agent_first.docx` | **投稿用整篇 Word（R30 最终英文版）**——37 页，正文 5,969 词（Word 口径）、abstract 412 词，零中文，统一配色/纯白背景，含标题页 + 正文 + 声明 + 文献 + 图例 + 4 表 + 6 图 |
 | `paper/manuscript_agent_first.pdf` | **投稿用 PDF（R30 最终版）**——37 页，零中文；与 Word 同源 |
 | `paper/manuscript_agent_first_preview.pdf` | ZCode/预览用栅格 PDF（37 页，RGB，4.9 MB）；投稿请用上一行矢量 PDF |
 | `paper/references.docx` | 27 条参考文献的单独 Word 版（编号列表 + 核验审计表；由 `scripts/build_references_docx.py` 生成） |

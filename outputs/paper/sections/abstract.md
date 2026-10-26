@@ -17,7 +17,7 @@ independent concordance across four literature indexes.
 
 **Results.** System track: the deployable agent ranked first on F1 in every
 matrix — 0.571 on NHANES (80 pairs; LightRAG 0.392, pure LLM 0.335, naive RAG
-0.080) and 0.480 on the GLM generation (159 pairs; 0.186, 0.178, 0.069);
+0.080) and 0.522 on the GLM generation (159 pairs; 0.186, 0.178, 0.069);
 on KNHANES (301 pairs) the rule layer scored 0.360 versus 0.145, 0.135 and 0.094.
 Under a binary collapse the agent reached sensitivity 1.00, specificity 0.878,
 PPV 0.400 and κ 0.520 internally; external sensitivity fell to 0.50. Rule track:

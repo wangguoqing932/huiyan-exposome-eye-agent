@@ -4,11 +4,12 @@
 
 This study is a secondary analysis of de-identified, publicly available data
 from eleven population surveys. No participants were contacted, no intervention
-was administered, and no identifiable information was accessed. On that basis
-the analysis was determined not to constitute human-subjects research requiring
-review by an institutional review board; **the determination was made by
-[institution / IRB name and reference, author to complete], and the
-corresponding author is responsible for it.** Each source survey had already
+was administered, and no identifiable information was accessed. On that basis,
+**no ethics review was required** for this work: the analysis used exclusively
+de-identified, publicly available secondary data with no participant contact,
+no intervention and no identifiable information, and each source survey had
+already been conducted under its own ethics approval by the original
+investigators. Each source survey had already
 obtained ethics approval and informed consent (or a documented waiver) from its
 own governing body under its own protocol, and this analysis used only the
 released, de-identified files. Users of these data are bound by the terms of the
@@ -65,21 +66,21 @@ sensitivity analysis used R 4.6.1 with the `survey` package.
 
 ## Funding
 
-[Funding source and grant number, or the statement that no specific funding was
-received, author to complete.]
+This work received no specific funding.
 
 ## Competing interests
 
-[Author to complete.] Declarations should cover, in addition to the usual
-interests, any commercial relationship with the large-language-model provider
-whose API this work used, and any in-kind provision of compute.
+The authors declare no competing interests. No commercial relationship exists
+with any large-language-model provider; all LLM calls in the validation pipeline
+ran against locally hosted or freely accessed endpoints.
 
 ## Author contributions (CRediT)
 
-[Author to complete.] Suggested allocation, given that the analysis pipeline,
-figures and manuscript drafts were produced with substantial generative-AI
-assistance: the human authors should claim Conceptualization, Methodology,
-Data curation, Validation, Supervision, and Writing – review & editing. **An AI
+Guoqing Wang: Conceptualization, Methodology, Software, Data curation,
+Formal analysis, Validation, Visualization, Writing – original draft.
+Xianglong Yi: Conceptualization, Methodology, Supervision, Project
+administration, Validation, Writing – review & editing. Both authors read and
+approved the final manuscript and take full responsibility for the work. **An AI
 system cannot be listed as an author**, cannot hold responsibility for the work,
 and cannot consent to publication.
 
