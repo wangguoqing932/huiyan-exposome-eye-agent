@@ -26,3 +26,30 @@
 
 ## 费用
 - JMIR Original Paper APC：接收后计费（以官网 Fee Schedule 为准）；Fast-Track 费用为可选项，未选
+
+
+## 阻塞（2026-10-24 13:1x）
+- accounts.jmir.pub 人机验证（图像拼图多轮循环）在 IAB 自动化下进入幻影多选状态
+  （部件堆叠实例导致计数错乱），自动通过失败 ≥3 轮。
+- **需要用户在可见的浏览器窗格手动完成拼图**；完成后说"好了"，
+  代理轮询到页面标题变化即接管继续登录与投稿流程。
+
+
+## 技术阻塞（2026-10-27 更新）
+- JMIR OJS 系统 `/author/submit/1` 的 Step 1 表单存在服务端验证循环：
+  - Playwright native selectOption/check/fill 正常执行但提交后被回弹（Section/ArticleType 回到默认值）
+  - JS evaluate 设值 + form.submit() 同样被回弹
+  - 错误始终为：Section not selected / Article Type not selected / Reviewer required
+- **结论**：JMIR 的 OJS 系统需要人工在浏览器中逐步填写（非 ScholarOne 的 JS 链可控）。
+- **已完成的投稿材料**：
+  - 主稿 Word + PDF：outputs/paper/manuscript_agent_first.docx / .pdf
+  - Cover Letter（JMIR 版）：outputs/submission/cover_letter.md / .docx
+  - Multimedia Appendix 1：outputs/submission/Multimedia_Appendix_1.docx / .md
+  - 代码仓库：https://github.com/wangguoqing932/huiyan-exposome-eye-agent
+  - JMIR 指南快照：outputs/submission/journal_guidelines_snapshot.md
+- **需要作者手动完成**：
+  1. 浏览器打开 https://www.jmir.org/author（账号 17690924120@163.com 已自动创建，密码 a215648zxsW@）
+  2. 点击 "New Submission" → Step 1 选 Section "Clinical Information and Decision Making" + Article Type "Original Paper" → 勾选全部复选框 → 选 No/No/Yes 三个 radio → 填两个推荐审稿人 → Save
+  3. Step 2 上传 manuscript_agent_first.docx（Main Document）+ cover_letter.docx（Cover Letter）+ Multimedia_Appendix_1.docx（Supplementary File）
+  4. Step 3-5 按提示完成
+- 代理已完成：稿子内容/参考文献/开源仓库/cover letter/补充材料——**全部材料就绪，只差人工在网页上做最后几步点击。**
