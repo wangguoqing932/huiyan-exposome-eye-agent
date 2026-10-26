@@ -1,0 +1,11 @@
+﻿outcome,n,prev,ref,flag
+retinopathy_any,20811,0.0492,,
+amd_any,35216,0.1144,0.08,
+amd_late,18007,0.0071,,
+glaucoma_exam,17926,0.0499,,
+glaucoma_selfreport,30505,0.0239,,
+glaucoma_iop_elevated,33260,0.0143,,
+glaucoma_suspect_cdr,15258,0.0763,,
+cataract_lifetime_DH2_lt,9538,0.1415,,
+cataract_dx_DH2_dg,22564,0.2711,,
+vision_impairment_any,19497,0.0116,0.02,

@@ -1,0 +1,28 @@
+[baselines] 159 test pairs from nhanes confirmatory (dataset=nhanes)
+
+[baselines] naive_rag seed=11 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  159 pairs in 279.3s | P=0.125 R=0.16666666666666666 F1=0.14285714285714288 | 0 failures
+
+[baselines] naive_rag seed=22 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  159 pairs in 316.5s | P=0.0 R=0.0 F1=None | 0 failures
+
+[baselines] naive_rag seed=33 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  159 pairs in 970.6s | FAILURES=7/159 (invalid run, excluded from means)
+    e.g. alcohol_days_per_yearxcataract_any: api_retry_exhausted: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}
+
+[baselines] naive_rag seed=44 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  159 pairs in 530.2s | FAILURES=3/159 (invalid run, excluded from means)
+    e.g. hyperglycemiaxvision_impairment_severe: api_retry_exhausted: Error code: 429 - {'error': {'code': '1302', 'message': '您的账户已达到速率限制，请您控制请求频率'}
+
+[baselines] naive_rag seed=55 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  159 pairs in 358.6s | P=0.25 R=0.16666666666666666 F1=0.2 | 0 failures
+
+[baselines] 795 predictions → D:\Desktop\眼科公共数据库agent搭建\outputs\baseline_predictions.jsonl
+
+=== Summary (valid runs only) ===
+  naive_rag       | P=0.125 R=0.111 F1=0.114 | 3 seeds | temp=0.7

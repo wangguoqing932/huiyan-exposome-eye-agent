@@ -80,9 +80,9 @@ def load(c: str) -> pd.DataFrame:
 
 def main() -> int:
     # analysis_plan.md section 19.7 (C58): KLoSA/MHAS/LASI/CLHLS at 25,
-           # SHARE/HRS/ELSA/CRELES at 30. This dict previously said MHAS 30, which
-           # contradicted the pre-registered plan and the confirmatory script.
-           cut = {"SHARE": 30, "HRS": 30, "ELSA": 30, "KLoSA": 25, "LASI": 25,
+    # SHARE/HRS/ELSA/CRELES at 30. This dict previously said MHAS 30, which
+    # contradicted the pre-registered plan and the confirmatory script.
+    cut = {"SHARE": 30, "HRS": 30, "ELSA": 30, "KLoSA": 25, "LASI": 25,
            "MHAS": 25, "CLHLS": 25, "CRELES": 30}
     rows, notes = [], []
     header = ["Cohort", "Person-waves"] + [lab for _, lab in VARS]

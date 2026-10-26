@@ -1,0 +1,10 @@
+﻿construct,n,prev,male,female
+smoke_ever_BS1_1_2,44099,0.3918,0.8059,0.0784
+smoke_current_BS3_1_12,44133,0.2174,0.4359,0.0519
+smoke_former_BS3_1_3,44133,0.1894,0.3913,0.0366
+smoke_current_and_ever_BS1_1_2_BS3_1_12,44095,0.2135,0.4309,0.049
+alcohol_never_BD1_1,44150,0.1684,0.059,0.2512
+alcohol_current_BD1_11_ge2,36652,0.777,0.8289,0.7276
+alcohol_frequent_BD1_11_56,36652,0.2541,0.4103,0.1055
+alcohol_binge_BD2_31_ge2,21748,0.615,0.7514,0.3239
+alcohol_heavy_amount_BD2_1_ge3,28516,0.3569,0.5522,0.1454

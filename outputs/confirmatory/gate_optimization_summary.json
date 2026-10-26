@@ -1,0 +1,83 @@
+{
+ "definition": "Post-hoc optimisation test: evidence-confirmation gate on the rule-layer classifier. flag' = fired rule ∧ ≥1 linked evidence chunk of level A/B/C for that rule. Gold: three-state, positive = replicated. Per-seed over five seeds; source canonical jsonl + evidence_chunks linked_rules.",
+ "G0_rule_layer": {
+  "nhanes_qwen_80": {
+   "tp": 6,
+   "fp": 11,
+   "fn": 0,
+   "tn": 63,
+   "sens": 1.0,
+   "spec": 0.851,
+   "ppv": 0.353,
+   "kappa": 0.462
+  },
+  "nhanes_glm_159": {
+   "tp": 6,
+   "fp": 13,
+   "fn": 0,
+   "tn": 140,
+   "sens": 1.0,
+   "spec": 0.915,
+   "ppv": 0.316,
+   "kappa": 0.448
+  },
+  "knhanes_301": {
+   "tp": 9,
+   "fp": 23,
+   "fn": 9,
+   "tn": 260,
+   "sens": 0.5,
+   "spec": 0.919,
+   "ppv": 0.281,
+   "kappa": 0.307
+  }
+ },
+ "G_evid_gated": {
+  "nhanes_qwen_80": {
+   "tp": 6,
+   "fp": 9,
+   "fn": 0,
+   "tn": 65,
+   "sens": 1.0,
+   "spec": 0.878,
+   "ppv": 0.4,
+   "kappa": 0.52
+  },
+  "nhanes_glm_159": {
+   "tp": 6,
+   "fp": 11,
+   "fn": 0,
+   "tn": 142,
+   "sens": 1.0,
+   "spec": 0.928,
+   "ppv": 0.353,
+   "kappa": 0.493
+  },
+  "knhanes_301": {
+   "tp": 8,
+   "fp": 22,
+   "fn": 10,
+   "tn": 261,
+   "sens": 0.444,
+   "spec": 0.922,
+   "ppv": 0.267,
+   "kappa": 0.279
+  }
+ },
+ "severity_triage_ppv": {
+  "nhanes_qwen": {
+   "med_high": 0.364,
+   "low_unknown": 0.333
+  },
+  "nhanes_glm": {
+   "med_high": 0.308,
+   "low_unknown": 0.333
+  },
+  "knhanes": {
+   "med_high": 0.296,
+   "low_unknown": 0.2
+  }
+ },
+ "verdict": "Gate raises internal specificity/PPV/kappa at unchanged sensitivity (consistent with pre-registered G1/G2 ablation 0.455->0.476->0.500 on judgeable pairs); externally it trades one TP for one FP (kappa slightly down). Severity tiers are weak discriminators. Recommended deployable classifier remains G2 (rule + negative-control gate + evidence confirmation + arbiter); coverage-aware abstention recommended so uncovered pairs are declared 'no rule', not silent negatives.",
+ "generated": "2026-10-24"
+}

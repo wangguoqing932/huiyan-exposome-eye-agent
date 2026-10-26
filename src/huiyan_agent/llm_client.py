@@ -134,9 +134,10 @@ class LLMClient:
             if not self.api_key:
                 raise RuntimeError(
                     "[zhipu] .env 缺 ZHIPU_API_KEY(bigmodel.cn)——拿到 key 后填入即可启用,无需改代码")
-            self.base_url = _ensure_v1(
-                os.getenv("ZHIPU_BASE_URL", "https://open.bigmodel.cn/api/paas"))
-            self.model = os.getenv("ZHIPU_MODEL", "glm-4.5")
+            # bigmodel v4 端点以 /v4 结尾,_ensure_v1 会错拼 /v1——直接原样使用
+            self.base_url = (os.getenv("ZHIPU_BASE_URL", "")
+                             or "https://open.bigmodel.cn/api/paas/v4").rstrip("/")
+            self.model = os.getenv("ZHIPU_MODEL", "glm-4-flash")
         else:  # deepseek 主通道
             self.api_key = (
                 os.getenv("HUANYU_BULK_API_KEY")
@@ -192,6 +193,9 @@ class LLMClient:
         _nc = int(_os.environ.get("HUIYAN_ARBITER_CONSISTENCY", "1"))
         if _nc > 1:
             return self._complete_consistent(prompt, system, _nc, raise_on_error)
+        # R15 修复(2026-10-20):R13-D 抽函数时漏了此分支,complete() 在
+        # _nc=1 时静默返回 None——补回单次委托,并以单测锁定。
+        return self._complete_single(prompt, system, raise_on_error)
 
 
     def _complete_consistent(self, prompt: str, system: str | None, n: int,
@@ -268,7 +272,12 @@ class LLMClient:
             from openai import OpenAI  # type: ignore
             client = OpenAI(api_key=self.api_key, base_url=self.base_url)
             kwargs = {}
-            if self.provider != "local":
+            if self.provider == "zhipu":
+                # bigmodel v4 的思考开关是 thinking.type,reasoning_effort 不被识别
+                # (实测默认 9s/次含 1.4k 字推理,关思考 3.8s;与本地 qwen 的
+                # thinking-disabled 口径一致,论文标注同源)
+                kwargs["extra_body"] = {"thinking": {"type": "disabled"}}
+            elif self.provider != "local":
                 # Command Code 网关的 deepseek-v4.1-flash 对结构化提示词默认启动
                 # 深度推理，max_tokens 被 reasoning 耗尽后 content 为空（Phase 4
                 # 实测 reasoning 64K 字符 content 0）。管线场景不需要推理。

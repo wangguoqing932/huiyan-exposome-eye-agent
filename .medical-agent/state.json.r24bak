@@ -1,0 +1,363 @@
+{
+  "schema_version": "v3.0",
+  "project": {
+    "code_name": "huiyan",
+    "chinese_name": "慧眼",
+    "created_date": "2026-10-11"
+  },
+  "lifecycle_stage": "writer",
+  "completed": [
+    "planner.phase0",
+    "planner.phase1",
+    "planner.phase2",
+    "planner.phase3",
+    "planner.phase4",
+    "planner.phase4_5",
+    "executor.phase0",
+    "executor.phase1",
+    "executor.phase2",
+    "executor.phase6",
+    "executor.phase3",
+    "executor.phase4",
+    "executor.phase5",
+    "writer.phase7_3",
+    "writer.phase7_6",
+    "writer.phase7_7",
+    "writer.phase7_8",
+    "writer.phase7_1",
+    "writer.phase7_2",
+    "writer.phase7_4",
+    "writer.phase7_5"
+  ],
+  "in_progress": "writer.phase7_1",
+  "blocked": [
+    {
+      "phase": "writer.phase7_1",
+      "reason": "awaiting author re-confirmation after the R22 figure fixes and the R23 manuscript shortening (QC report regenerated)."
+    },
+    {
+      "phase": "writer.phase7_2",
+      "reason": "awaiting author re-confirmation: legends were updated for the R22 colour key/k/n and the R23 condensed sections."
+    },
+    {
+      "phase": "writer.phase7_4",
+      "reason": "awaiting author re-confirmation: Results shortened from 3,870 to 2,323 words; exploratory paragraph moved to Supplementary S9."
+    },
+    {
+      "phase": "writer.phase7_5",
+      "reason": "awaiting author re-confirmation: Methods shortened from 3,662 to 1,687 words; full detail moved to Supplementary S0."
+    },
+    {
+      "phase": "writer.phase7_6",
+      "reason": "awaiting author re-confirmation: Introduction shortened from 730 to 508 words."
+    },
+    {
+      "phase": "writer.phase7_7",
+      "reason": "awaiting author re-confirmation: Discussion shortened from 3,067 to 1,944 words."
+    },
+    {
+      "phase": "writer.phase7_9",
+      "reason": "awaiting author: target journal + corresponding author name/affiliation/email + submission date; 7_9 cannot be confirmed until the reopened gates are re-confirmed."
+    }
+  ],
+  "artifacts": {
+    "config": ".planner.config.json",
+    "plan_md": "PLAN.md",
+    "executor_progress": ".executor/progress.json",
+    "writer_progress": ".writer/progress.json",
+    "latest_validation": "outputs/confirmatory/nhanes_confirmatory.csv",
+    "latest_manuscript": "outputs/paper/manuscript.md"
+  },
+  "history": [
+    {
+      "date": "2026-10-11",
+      "event": "project initialized",
+      "skill": "medical-agent"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase0 bootstrap: fit-check PERFECT_FIT (Q1/Q2/Q3=yes)",
+      "skill": "medical-agent"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase1 interview complete: exposure x eye-disease config v1.5 written (A=40 exposures / B=6 eye diseases; 4 datasets enabled; ethics=public-data no-IRB)",
+      "skill": "medical-agent-planner"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase1 config amended (batch4): A-flags=18 exposure attributes / B=15 eye items (600 pairs) / 4 dataset notes (pair-unit) / timeline=24w / funding=无(待作者确认)",
+      "skill": "medical-agent-planner"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase2 online validation complete: 5 checks PASS (prospect strong: exposome-eye 22 all-time/17 5y accelerating; data availability strong: 3 DBs raw-verified; prior art: no existing exposure-eye explainable system; journal fit strong w/ DOIs; datasets 4 feasible >=2). Landscape -> PHASE2_Literature_Landscape.md; config online_validation backfilled",
+      "skill": "medical-agent-planner"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase2 hardened: probe D/E full-title screening done (eye=5/228 in EWAS space; must-cite PRER 2026 review; must-differentiate CKB-ACG & NHANES-DR); 15x3 coverage matrix filled; config online_validation strengthened",
+      "skill": "medical-agent-planner"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase2 revision R2 (author review): probes F/G screened (211+33; F found 7 must-differentiate incl NHANES metals-glaucoma ML & CHARLS VI ML; G PMIDs verified); 4-probe-space clarification; cohort-arm per-item coverage declared; cohorts expected_size 200->120; SSX.1 hedged (trend low-base, NEI negative-as-missing); BJO exemplar replaced (bjo-2025-328446)",
+      "skill": "medical-agent-planner"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase3 batch-1 delivered (authorized scope): architecture confirmed (rule+KG+LLM, 5 increments); rules 18 registered + 2 observation + Hg abstention cases, 7 mechanisms covered, each with DOI citation; risk register Top-10 -> PHASE3_Methodology_Recommendation.md",
+      "skill": "medical-agent-planner"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase3 batch-1 v2 (adjudication applied): r19 registered C-level; PA-glaucoma -> evidence-gap type2; two-type abstention metrics; r02/r03/r06 citations fixed to claim-matching + study-design gate added to executor spec; r04 VEGF mechanism cite + downgraded C; r16 pinned to iop+CDR; dedup semantics plan-2; vision rules r20/r21 (option A); A4/B14/C3",
+      "skill": "medical-agent-planner"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "planner.phase4 scaffold + phase4.5 ethics emitted + PLAN SSX merged (TBD/{{}} cleared, 3/3 PASS); executor started: registries 40A/15B, rules.yaml 21 (A4/B14/C3), rationale with study-design gate, evidence 36 chunks (30 PMIDs); venv building",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "executor phase1 (registries 40A/15B) + phase2 (evidence 36 chunks) + phase3 (rules.yaml 21 rules + rationale + uric counter-evidence) complete; phase5 NHANES pipeline built+debugged (4 bug fixes: units/modules/weights) and FIRST PASS RUN: 101 pairs tested, rule pairs 13, TP2/FP11/FN11/TN77, P=R=F1=0.154",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "phase5 NHANES+KNHANES pair-level runs complete: NHANES F1=0.154 (101 pairs), KNHANES F1=0.154 (39 pairs, cross-country zero degradation); gap table written; cohort layer + baselines + LightRAG pending",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "phase5 three layers now real: NHANES F1=0.154 / KNHANES F1=0.154 / CHARLS 0-4 rule pairs replicate (cohort layer 1/9). CHARLS bugs fixed: age from birth-year ba002_1, labeled-categorical codes, gender coding",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "AUDIT R3 (49-item full-stage review) accepted: retracted executor.phase3/phase5 completions (gates not run / metrics invalid); state aligned to disk truth; exploratory outputs quarantined to outputs/exploratory/; pre-registered docs/analysis_plan.md v1.0 BEFORE any further validation runs",
+      "skill": "medical-agent"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "audit R3 full fix batch: A3 9 modules migrated+adapted (15/15 tests); A4 Streamlit imports OK; A2 13/13 deliverable files on disk; evaluate.py implements analysis_plan v1.0 (three-state gold/bootstrap CI/engine independence); handoff honest BLOCKED (phase2 in_progress/phase3 blocked/phase5 exploratory_only); state matches disk truth",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "executor.phase2 complete: evidence 749 chunks (C15 fixed, 3x target); cases.jsonl all 4 datasets populated (B5 fixed, 314 total); citation gate 21/21 PASS (A1 resolved)",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-11",
+      "event": "direction audit quarantine PARTIALLY LIFTED after bias investigation (docs/bias_investigation_smoking_cataract.md): smoking×cataract reversal = age confounding + reverse causation + survivorship (all 3 groups 11% in 60-69 stratum); BMI×cataract OR=0.986 is null not reversed; rules retained, cross-sectional limitation documented",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-12",
+      "event": "W1-W7 complete: analysis_plan v1.2 (protocol deviation); r22 C/low; 3-layer v1.2 rerun; temp=0.0 (deterministic); Wilson CI added; 6 tables regenerated; stale quarantine removed. LLM API 429 (resets 10-14).",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-12",
+      "event": "C4 修复：progress.json 按磁盘实况重写（1060 chunks/180 cases/索引 23826 节点/20-20 引用）；state.json 清除过期 blocked（phase3 引用门已 20/20，phase5 v1.2 确证已完成）；基线 fail-loud 修复+本地 qwen 重跑",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-12",
+      "event": "executor.phase6 completed (streamlit verified)",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "R4复审修复批次(2026-10-14): r22 引文更正（10.1097/MD.0000000000011807，题文匹配）→ 引用门 strict 21/21 稳定通过（skill 词表补 huiyan 扩展，.zcode/.dsh 同步）；phase3 sha=5aee851d 绑定；CI 统一 Clopper-Pearson；v1.1 指标归档 + v1.2 gap 表 + 基线 valid 视图；figure2 契约按数据实况重写",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "executor.phase4 补记: 索引在盘 23,826 nodes/18,062 edges；docs_indexed=1044（实况）；注记覆盖 126/1047=12%（声称52%未成立，R4实测）；freshness 绑定待重建决策（见 AUDIT_R4 §P2）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "executor.phase5 补记: v1.2 三层确证已完成（NHANES 7/14、KNHANES 2/10、CHARLS 0/4；均 0 反证）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "LightRAG 索引全量重建完成（27,136 节点/23,722 边/注记 548/1054=52%/1054 processed；旧索引备份 pre_r4_backup-20261014）；freshness 门 exit 0 全绿（三 sha 一致）；lightrag 基线在重建索引上重跑（P=0.167 R=0.714 F1=0.270）；级联更新完成",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-14",
+      "event": "R5 五专家评审+应修尽修批次：P0×3 数据口径修复（KNHANES 8/9→缺失、coverage 按库 judgeable、NHANES VI→VIDRVA 较差眼）+ survey svyglm 方差升主口径（r22 降级，NHANES 7→5 复证）+ 方向审计第四态 + 基线公平协议 5-seed 重跑（full_system 0.417 显著优于 pure_llm/naive_rag，vs lightrag n.s.）+ v1.1 回放双呈 0.111 + rationale 重写对齐 yaml + analysis_plan §0.2 更正 4-9 + limitations R5 修订 + figure2 双呈契约；三门+pytest 全绿",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R5.1 文献层外部验证完成（作者指令：PubMed 文献外部验证，各研究类型均可）：§12 预注册先行（阈值/检索/排除/敏感性落盘后才跑）；750 篇抽取（两步判定协议，3 轮全量重抽入册）；precision_lit=0.889 [0.653,0.986]，16 复证 0 反证；r07/r08 文献层分歧=mixed；交付表+limitations 级联",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R5.2 系统性能优化完成（§13 预注册先验门控框架：规则冻结不动、三库 gold 不调参、dev 集 rule_defined 循环弃用）：基线口径对齐 judgeable；G2 融合系统（规则+证据门控+LLM 仲裁）F1 0.500 居首且对全部 3 个 LLM 基线显著（p≤0.023）；证据检索词源 bug 一次（registry 名→文献词表修正，首跑 0.143 修订记录在册）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R5.3 系统优化II完成（§14 预注册）：G3 文献共识门控无操作、G4 证据直推有害（负结果全量报告），正式系统定格 G2（F1 0.500）；优化边界已划定（证据池检索特异度不足是无规则发言的瓶颈）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R6.0 大工程优化完成（§15 预注册，语义检索层 G5a/G5b）：G5a 0.476 无净增益（B3 注记使关键词≈语义检索，检索层非瓶颈）、G5b 零触发（双注记门槛自锁）、τ 三档不敏感——负结果全量入册，正式系统定格 G2（0.500）；结论：提升需新数据扩容或 v1.3+盲测，非推理层工程；新增 semantic_retrieval.py 资产",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "R6.1 时间外验证层完成（§16 预注册）：CHARLS 2015 波（规则未见过的数据，zda035/zda037 清洗变量实现修正入册）——12 对 tested 全 uninformative 0 反证，hba1c×cataract OR=1.71 q=0.096 临界同向；自报白内障 1.7% 患病率为根本限制；数据侧扩容穷尽（NHANES 新周期不可用/KNHANES 全用/CHARLS 2015 入册）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_1 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_2 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_3 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_4 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_5 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_6 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_7 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-15",
+      "event": "writer.phase7_8 confirmed by author",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "compliance fix: git freeze commit 6bba42e + tag freeze-r13-2026-10-19 (HEAD had been 2026-10-12; 593 files committed, data/frames excluded as regenerable)",
+      "skill": "medical-agent"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "executor.phase3 re-verified with skill verify_rule_citations.py (strict 21/21 rules, 24/24 citations, llm+network); rules.yaml normalized by --fix + re-authored header; sha 95ebf0a9; phase3->phase4 gate OK",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "executor.phase4 freshness restored by content-equivalence: resume pass 1054/1054 processed, 27136/23722 nodes/edges unchanged, evidence sha unchanged; binding updated with documented note (no from-scratch rebuild; 16627s rebuild would reproduce identical inputs)",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "executor.phase5/6 artefacts refreshed by canonical chain run_all.py --with-baseline + headline_sensitivity.py (R tempdir fixed via TMPDIR); confirmatory 16/6 and 15/5, direction_review and headline sensitivity rebuilt; figures source_data rebuilt and 6 main figures re-rendered",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "r13/Table 5b correction: ipd_interaction.py was reading a single-cohort q_primary under a two-stage label; now reads Cochran Q_p (r12 0.0273, r13 0.0272 vs one-step 0.141/0.149); table5b regenerated; Results duplicate inline Table 5 removed; AGENT_AUDIT section 36 records the erratum",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "References section generated from the verified citation pool (27 entries, Vancouver order, 26 markers incl. one range) and injected by 7_8 assembly; qc_english_manuscript 20/20, verify_results_numbers 70/70",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "7_1 QC regenerated PASS (9 tables, 8 figure contracts, S1/S2 rendered); 7_2 legends numbers updated; 7_4/7_5 reopened for author re-confirmation; 7_8 assembled 137,288 B with references",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-19",
+      "event": "7_9 run and correctly refused: only blocker is author-side (5 bracketed cover-letter fields; no journal fixed). Superseded submission artefacts archived to outputs/submission/_superseded_20261019/",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_1 confirmed by author (2026-10-19 compliance-fix round)",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_2 confirmed by author (2026-10-19 compliance-fix round)",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_3 confirmed by author (2026-10-19 compliance-fix round)",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_4 confirmed by author (2026-10-19 compliance-fix round)",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "writer.phase7_5 confirmed by author (2026-10-19 compliance-fix round)",
+      "skill": "medical-agent-writer"
+    },
+    {
+      "date": "2026-10-20",
+      "event": "R15 智谱通道落地：zhipu:glm-5.3-flash 接入基线/仲裁通道，5 seeds 0 失败（provider 记录入 baseline_predictions）",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-21",
+      "event": "R17 基线公平修复+满血重跑：LightRAG 升级 hybrid KG 遍历，zhipu GLM-5.3-flash 159 对矩阵 full 0.480 > lightrag 0.186 > pure_llm 0.178 > naive_rag 0.069，McNemar 对全部基线显著",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-23",
+      "event": "R18 三库文献验证：WoS 核心合集（100 篇/2 规则，0.916）+ Europe PMC（521 篇/17 有信息规则，0.922），与 PubMed 0.889 一致；单篇反向（r09/r17 EPMC）入方向审计",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-23",
+      "event": "R19 CNKI 中文库验证：8 规则标题级判定，CNKI 0.800（5 有信息规则）；r12 饮酒×白内障中文库反向与 PubMed/横断面/前瞻层一致，四库文献层闭合",
+      "skill": "medical-agent-executor"
+    },
+    {
+      "date": "2026-10-23",
+      "event": "R20 全链合规终审初版：Planner/Executor 全绿、Writer 7_1-7_8 confirmed、7_9 阻塞于作者字段；产物刷新（limitations/README/契约/稿件）",
+      "skill": "medical-agent"
+    },
+    {
+      "date": "2026-10-23",
+      "event": "R21 复审修复：build_descriptive_table 语法修复（planner 自检 3/3 PASS）；figure2 源数据 qwen full_system 0.522 更正 + 契约重写 + 双代分组柱 + 四格式重渲染；panel b 停止跨代合并；sections 回写（Results 双代段、四库段、Discussion Phase-4 豁免段）+ 7_8 重装配（References sha 83948ecb 复现）；四库计数更正（WoS 100 篇/EPMC 521 篇）；7_1/7_2/7_4/7_7 按硬门重开待作者确认",
+      "skill": "medical-agent"
+    },
+    {
+      "date": "2026-10-23",
+      "event": "R23 手稿压缩（作者指令）：正文 Introduction–Discussion 11,329→6,462 词（-43%）；Methods 3,662→1,687，Results 3,870→2,323，Discussion 3,067→1,944，Intro 730→508；完整方法移入 Supplementary S0，探索性结果移入 S9；最终 Word 44 页、0 中文；7_1/7_2/7_4/7_5/7_6/7_7 重新提交待作者复核",
+      "skill": "medical-agent-writer"
+    }
+  ]
+}

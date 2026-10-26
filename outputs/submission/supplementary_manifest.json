@@ -1,6 +1,13 @@
 {
-  "assembled_on": "2026-10-19",
+  "assembled_on": "2026-10-23",
   "items": [
+    {
+      "item": "S0. Supplementary Methods",
+      "status": "included",
+      "path": "docs\\supplementary_methods.md",
+      "bytes": 23897,
+      "produced_by": "--"
+    },
     {
       "item": "S1. Variable operationalisation and quality-control log",
       "status": "included",
@@ -56,6 +63,13 @@
       "path": "outputs\\figures\\source_data\\figure8_cohort_transportability.csv",
       "bytes": 3900,
       "produced_by": "scripts/build_source_data_cohort.py"
+    },
+    {
+      "item": "S9. Exploratory cohort associations",
+      "status": "included",
+      "path": "docs\\supplementary_results.md",
+      "bytes": 762,
+      "produced_by": "--"
     }
   ],
   "note": "supplementary item S1 is a hand-maintained ledger rather than a generated artefact; all others are regenerable from the named script"

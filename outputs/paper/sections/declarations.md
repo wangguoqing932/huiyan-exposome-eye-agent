@@ -7,7 +7,7 @@ from eleven population surveys. No participants were contacted, no intervention
 was administered, and no identifiable information was accessed. On that basis
 the analysis was determined not to constitute human-subjects research requiring
 review by an institutional review board; **the determination was made by
-[institution / IRB name and reference — author to complete], and the
+[institution / IRB name and reference, author to complete], and the
 corresponding author is responsible for it.** Each source survey had already
 obtained ethics approval and informed consent (or a documented waiver) from its
 own governing body under its own protocol, and this analysis used only the
@@ -27,36 +27,35 @@ each dataset directly from its provider.
 
 | Source | Provider / access route |
 |---|---|
-| NHANES | US Centers for Disease Control and Prevention, National Center for Health Statistics — public download |
-| KNHANES | Korea Disease Control and Prevention Agency — application required |
-| CHARLS | Peking University National School of Development — application required |
-| SHARE | SHARE Research Data Center, share-project.org — free registration for scientific use |
-| HRS | Health and Retirement Study, University of Michigan — free registration |
-| ELSA | UK Data Service — registration required |
-| KLoSA | Korea Employment Information Service (KEIS) — application required |
-| LASI | Longitudinal Ageing Study in India, International Institute for Population Sciences — application required |
-| MHAS | Mexican Health and Aging Study, mhasweb.org — free registration |
-| CLHLS | Chinese Longitudinal Healthy Longevity Survey, Duke University / ICPSR — application required |
-| CRELES | Costa Rican Study on Longevity and Healthy Ageing, ICPSR study 26681 — public download |
+| NHANES | US Centers for Disease Control and Prevention, National Center for Health Statistics, public download |
+| KNHANES | Korea Disease Control and Prevention Agency, application required |
+| CHARLS | Peking University National School of Development, application required |
+| SHARE | SHARE Research Data Center, share-project.org, free registration for scientific use |
+| HRS | Health and Retirement Study, University of Michigan, free registration |
+| ELSA | UK Data Service, registration required |
+| KLoSA | Korea Employment Information Service (KEIS), application required |
+| LASI | Longitudinal Ageing Study in India, International Institute for Population Sciences, application required |
+| MHAS | Mexican Health and Aging Study, mhasweb.org, free registration |
+| CLHLS | Chinese Longitudinal Healthy Longevity Survey, Duke University / ICPSR, application required |
+| CRELES | Costa Rican Study on Longevity and Healthy Ageing, ICPSR study 26681, public download |
 
-**Derived data.** The cohort analysis frames, the harmomonisation-free
+**Derived data.** The cohort analysis frames, the harmonisation-free
 construction of which is the point of the study, are not redistributed here
 because their redistribution would breach the source agreements. They are
 regenerable from the raw provider files by the scripts listed below.
 
 **Exact access URLs and any dataset version numbers must be confirmed against
-the providers' current pages at submission** — access routes change, and this
+the providers' current pages at submission**, access routes change, and this
 table was compiled from the data-release documentation held with the project
 rather than from a live check of each provider's site.
 
 ## Code availability
 
-All analysis code is in the project repository, which contains, in order: the
-rule definitions (`configs/rules.yaml`), the cohort frame builders, the
-availability and gate audits, the confirmatory model, the heterogeneity
-meta-analysis, the power calculation, the evidence-base audit, and the figure
-renderers. An archived snapshot with a DOI will be deposited at
-[repository / Zenodo DOI — author to complete]. The entry points are
+All analysis code, the machine-readable rule and variable definitions
+(`configs/rules.yaml`, `configs/variable_map.yaml`), the Streamlit interface and
+the full reproducibility pipeline are publicly available at
+https://github.com/wangguoqing932/huiyan-exposome-eye-agent (archived snapshot
+with a DOI will be deposited at Zenodo upon acceptance). The entry points are
 `scripts/build_cohort_frames.py` (frames) → `scripts/cohort_confirmatory.py`
 (primary estimates) → `scripts/cohort_heterogeneity.py` (pooling, I², prediction
 intervals, E-values, leave-one-out) → `scripts/cohort_power.py` and
@@ -67,7 +66,7 @@ sensitivity analysis used R 4.6.1 with the `survey` package.
 ## Funding
 
 [Funding source and grant number, or the statement that no specific funding was
-received — author to complete.]
+received, author to complete.]
 
 ## Competing interests
 
@@ -92,7 +91,7 @@ implementing the statistical pipeline; generating figure and table artefacts;
 and drafting and editing the manuscript text and its translations. The
 quantitative results were produced by executing the code against the source
 data; the code, the data-provider files and the audit trail are available as
-described above, so every reported number can be recomputed independently.
+described above, so the reported numbers can be recomputed from the archived outputs; the pre-expansion v1.1 replay figures are reported from a logged run and are not regenerable by the current pipeline.
 
 **All scientific decisions were made and verified by the human authors**, who
 take full responsibility for the content. That includes, specifically: the

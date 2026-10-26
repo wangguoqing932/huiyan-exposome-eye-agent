@@ -1,46 +1,46 @@
 {
-  "assembled_on": "2026-10-19",
-  "title": "Even age does not transport: a pooled multi-cohort exposome estimate describes no population, in 285,878 participants and 21 literature-derived rules",
+  "assembled_on": "2026-10-26",
+  "title": "An explainable rule-knowledge-graph-LLM agent for exposome-eye risk stratification: strong benchmarks, operable reports, limited rule transportability",
   "sections": [
     {
       "section": "abstract",
-      "bytes": 2889,
-      "sha256_16": "c8426af546261d4f"
+      "bytes": 2447,
+      "sha256_16": "81549ba23832dd89"
     },
     {
       "section": "introduction",
-      "bytes": 4834,
-      "sha256_16": "e9c27542fdded3ee"
+      "bytes": 4254,
+      "sha256_16": "b920c5f1312b33bc"
     },
     {
       "section": "methods",
-      "bytes": 23647,
-      "sha256_16": "f6d3d0c6b2a968b7"
+      "bytes": 12996,
+      "sha256_16": "7cb084bb9426db13"
     },
     {
       "section": "results",
-      "bytes": 21078,
-      "sha256_16": "fc80b62581e291bf"
+      "bytes": 15374,
+      "sha256_16": "834cb0bcb3787c62"
     },
     {
       "section": "discussion",
-      "bytes": 18981,
-      "sha256_16": "39090166c48cd498"
+      "bytes": 8867,
+      "sha256_16": "90ccff7fef54d633"
     },
     {
       "section": "declarations",
-      "bytes": 6769,
-      "sha256_16": "9b05761f54bad2ef"
-    },
-    {
-      "section": "figure_legends",
-      "bytes": 27752,
-      "sha256_16": "1443cf93721853d6"
+      "bytes": 6905,
+      "sha256_16": "961e3a0490039393"
     },
     {
       "section": "references",
-      "bytes": 9317,
-      "sha256_16": "83948ecb4503f524"
+      "bytes": 10626,
+      "sha256_16": "fcb29c133d14e539"
+    },
+    {
+      "section": "figure_legends",
+      "bytes": 14902,
+      "sha256_16": "b95fc07ac6921dba"
     }
   ],
   "tables": [
@@ -51,12 +51,6 @@
       "sha256_16": "0d56dde6c9c8d58c"
     },
     {
-      "table": "Table 1b",
-      "file": "table1b_descriptives.md",
-      "bytes": 3924,
-      "sha256_16": "0ed94b2792dd7d86"
-    },
-    {
       "table": "Table 2",
       "file": "table2_rules.md",
       "bytes": 2828,
@@ -64,41 +58,17 @@
     },
     {
       "table": "Table 3",
-      "file": "table3_performance.md",
-      "bytes": 880,
-      "sha256_16": "098a8e2471dbb7f2"
+      "file": "table3_performance_by_dataset.md",
+      "bytes": 1682,
+      "sha256_16": "c1ef21ac3080541a"
     },
     {
       "table": "Table 4",
-      "file": "table4_validation.md",
-      "bytes": 1086,
-      "sha256_16": "7415c6424383cffa"
-    },
-    {
-      "table": "Table 5",
-      "file": "table5_heterogeneity.md",
-      "bytes": 3409,
-      "sha256_16": "575c213c25d2138a"
-    },
-    {
-      "table": "Table 5b",
-      "file": "table5b_ipd_interaction.md",
-      "bytes": 3975,
-      "sha256_16": "74898426e4025caf"
-    },
-    {
-      "table": "Table 6",
-      "file": "table6_power.md",
-      "bytes": 3283,
-      "sha256_16": "76ab7a48ecaee498"
-    },
-    {
-      "table": "Table 7",
-      "file": "table7_evidence_audit.md",
-      "bytes": 1215,
-      "sha256_16": "bee84f9aa540c446"
+      "file": "table4_transportability.md",
+      "bytes": 3422,
+      "sha256_16": "b7446978d5f607e2"
     }
   ],
   "missing": [],
-  "assembled_bytes": 137288
+  "assembled_bytes": 85924
 }

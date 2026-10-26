@@ -1,0 +1,63 @@
+{
+ "date": "2026-10-20 (R14)",
+ "design": "baseline disease-free by self-report at first measured wave; incident = any later wave reports diagnosis; exposure at baseline; logistic, covariates age+sex; BHY q within this layer; all rules risk_up",
+ "n_tests": 15,
+ "status_counts": {
+  "tested": 12,
+  "underpowered": 3
+ },
+ "three_state_counts": {
+  "uninformative": 8,
+  "replicated": 4
+ },
+ "per_rule": {
+  "r02": {
+   "states": {
+    "replicated": 2,
+    "uninformative": 1
+   },
+   "ors": [
+    1.53,
+    1.71,
+    3.74
+   ]
+  },
+  "r10": {
+   "states": {
+    "uninformative": 3
+   },
+   "ors": [
+    0.93,
+    0.97,
+    0.78
+   ]
+  },
+  "r12": {
+   "states": {
+    "uninformative": 2
+   },
+   "ors": [
+    0.99,
+    0.92
+   ]
+  },
+  "r13": {
+   "states": {
+    "replicated": 2
+   },
+   "ors": [
+    1.13,
+    1.31
+   ]
+  },
+  "r20": {
+   "states": {
+    "uninformative": 2
+   },
+   "ors": [
+    1.09,
+    1.18
+   ]
+  }
+ }
+}

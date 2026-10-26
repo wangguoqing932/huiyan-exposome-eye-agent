@@ -1,21 +1,9 @@
-﻿method,dataset,dataset_id,dataset_role,ruleset,seed,estimate,F1,ci_low,ci_high,P,R,mean_F1
-full_system,NHANES,NHANES,internal_validation,v1.2,11,0.522,0.522,0.522,0.522,0.353,1.0,0.522
-full_system,NHANES,NHANES,internal_validation,v1.2,22,0.522,0.522,0.522,0.522,0.353,1.0,0.522
-full_system,NHANES,NHANES,internal_validation,v1.2,33,0.522,0.522,0.522,0.522,0.353,1.0,0.522
-full_system,NHANES,NHANES,internal_validation,v1.2,44,0.522,0.522,0.522,0.522,0.353,1.0,0.522
-full_system,NHANES,NHANES,internal_validation,v1.2,55,0.522,0.522,0.522,0.522,0.353,1.0,0.522
-pure_llm,NHANES,NHANES,internal_validation,n/a,11,0.324,0.324,0.324,0.324,0.202,1.0,0.335
-pure_llm,NHANES,NHANES,internal_validation,n/a,22,0.343,0.343,0.343,0.343,0.202,1.0,0.335
-pure_llm,NHANES,NHANES,internal_validation,n/a,33,0.343,0.343,0.343,0.343,0.202,1.0,0.335
-pure_llm,NHANES,NHANES,internal_validation,n/a,44,0.324,0.324,0.324,0.324,0.202,1.0,0.335
-pure_llm,NHANES,NHANES,internal_validation,n/a,55,0.343,0.343,0.343,0.343,0.202,1.0,0.335
-lightrag,NHANES,NHANES,internal_validation,n/a,11,0.4,0.4,0.4,0.4,0.244,1.0,0.392
-lightrag,NHANES,NHANES,internal_validation,n/a,22,0.387,0.387,0.387,0.387,0.244,1.0,0.392
-lightrag,NHANES,NHANES,internal_validation,n/a,33,0.387,0.387,0.387,0.387,0.244,1.0,0.392
-lightrag,NHANES,NHANES,internal_validation,n/a,44,0.4,0.4,0.4,0.4,0.244,1.0,0.392
-lightrag,NHANES,NHANES,internal_validation,n/a,55,0.387,0.387,0.387,0.387,0.244,1.0,0.392
-naive_rag,NHANES,NHANES,internal_validation,n/a,11,0.2,0.2,0.2,0.2,0.1,0.067,0.08
-naive_rag,NHANES,NHANES,internal_validation,n/a,22,0.0,0.0,0.0,0.0,0.1,0.067,0.08
-naive_rag,NHANES,NHANES,internal_validation,n/a,33,0.0,0.0,0.0,0.0,0.1,0.067,0.08
-naive_rag,NHANES,NHANES,internal_validation,n/a,44,0.2,0.2,0.2,0.2,0.1,0.067,0.08
-naive_rag,NHANES,NHANES,internal_validation,n/a,55,0.0,0.0,0.0,0.0,0.1,0.067,0.08
+﻿method,ruleset,dataset,dataset_id,dataset_role,F1_mean,P_mean,R_mean,n_seeds
+full_system,"v1.2 (qwen, 80-pair gold)",NHANES,intval-nhanes,internal_validation,0.522,0.353,1.0,5
+pure_llm,"v1.2 (qwen, 80-pair gold)",NHANES,intval-nhanes,internal_validation,0.3355,0.2015,1.0,5
+naive_rag,"v1.2 (qwen, 80-pair gold)",NHANES,intval-nhanes,internal_validation,0.08,0.1,0.0667,5
+lightrag,"v1.2 (qwen, 80-pair gold)",NHANES,intval-nhanes,internal_validation,0.3923,0.244,1.0,5
+full_system,"v1.2 (zhipu GLM-5.3-flash, 159-pair gold)",NHANES,intval-nhanes,internal_validation,0.48,0.3158,1.0,5
+lightrag,"v1.2 (zhipu GLM-5.3-flash, 159-pair gold)",NHANES,intval-nhanes,internal_validation,0.1861,0.1047,0.8333,5
+pure_llm,"v1.2 (zhipu GLM-5.3-flash, 159-pair gold)",NHANES,intval-nhanes,internal_validation,0.1782,0.0978,1.0,5
+naive_rag,"v1.2 (zhipu GLM-5.3-flash, 159-pair gold)",NHANES,intval-nhanes,internal_validation,0.0686,0.075,0.0667,5

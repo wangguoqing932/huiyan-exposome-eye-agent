@@ -1,0 +1,83 @@
+[baselines] 301 test pairs from knhanes confirmatory (dataset=knhanes)
+
+[baselines] pure_llm seed=11 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 828.0s | P=0.07142857142857142 R=0.6923076923076923 F1=0.12949640287769784 | 0 failures
+
+[baselines] pure_llm seed=22 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 940.8s | P=0.078125 R=0.7692307692307693 F1=0.14184397163120568 | 0 failures
+
+[baselines] pure_llm seed=33 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 700.3s | P=0.06870229007633588 R=0.6923076923076923 F1=0.125 | 0 failures
+
+[baselines] pure_llm seed=44 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 610.4s | P=0.07627118644067797 R=0.6923076923076923 F1=0.13740458015267176 | 0 failures
+
+[baselines] pure_llm seed=55 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 620.3s | P=0.07936507936507936 R=0.7692307692307693 F1=0.14388489208633093 | 0 failures
+
+[baselines] naive_rag seed=11 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 515.7s | P=0.034482758620689655 R=0.07692307692307693 F1=0.04761904761904762 | 0 failures
+
+[baselines] naive_rag seed=22 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 565.7s | P=0.08 R=0.15384615384615385 F1=0.10526315789473685 | 0 failures
+
+[baselines] naive_rag seed=33 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 662.0s | P=0.06666666666666667 R=0.15384615384615385 F1=0.09302325581395349 | 0 failures
+
+[baselines] naive_rag seed=44 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 606.0s | P=0.08 R=0.15384615384615385 F1=0.10526315789473685 | 0 failures
+
+[baselines] naive_rag seed=55 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  301 pairs in 637.3s | P=0.1 R=0.15384615384615385 F1=0.12121212121212123 | 0 failures
+
+[baselines] lightrag seed=11 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  ABORTED: ImportError: LightRAGAdapter requires lightrag-hku. Install with: pip install 'lightrag-hku>=1.0,<2.0'
+
+[baselines] lightrag seed=22 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  ABORTED: ImportError: LightRAGAdapter requires lightrag-hku. Install with: pip install 'lightrag-hku>=1.0,<2.0'
+
+[baselines] lightrag seed=33 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  ABORTED: ImportError: LightRAGAdapter requires lightrag-hku. Install with: pip install 'lightrag-hku>=1.0,<2.0'
+
+[baselines] lightrag seed=44 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  ABORTED: ImportError: LightRAGAdapter requires lightrag-hku. Install with: pip install 'lightrag-hku>=1.0,<2.0'
+
+[baselines] lightrag seed=55 provider=zhipu...
+[canary] OK (zhipu:glm-5.3-flash)
+  ABORTED: ImportError: LightRAGAdapter requires lightrag-hku. Install with: pip install 'lightrag-hku>=1.0,<2.0'
+
+[baselines] full_system seed=11 provider=zhipu...
+  301 pairs in 0.0s | P=0.3125 R=0.38461538461538464 F1=0.3448275862068966 | 0 failures
+
+[baselines] full_system seed=22 provider=zhipu...
+  301 pairs in 0.0s | P=0.3125 R=0.38461538461538464 F1=0.3448275862068966 | 0 failures
+
+[baselines] full_system seed=33 provider=zhipu...
+  301 pairs in 0.0s | P=0.3125 R=0.38461538461538464 F1=0.3448275862068966 | 0 failures
+
+[baselines] full_system seed=44 provider=zhipu...
+  301 pairs in 0.0s | P=0.3125 R=0.38461538461538464 F1=0.3448275862068966 | 0 failures
+
+[baselines] full_system seed=55 provider=zhipu...
+  301 pairs in 0.0s | P=0.3125 R=0.38461538461538464 F1=0.3448275862068966 | 0 failures
+
+[baselines] 4515 predictions → D:\Desktop\眼科公共数据库agent搭建\outputs\baseline_predictions_knhanes.jsonl
+
+=== Summary (valid runs only) ===
+  full_system     | P=0.312 R=0.385 F1=0.345 | 5 seeds | temp=0.7
+  naive_rag       | P=0.072 R=0.138 F1=0.094 | 5 seeds | temp=0.7
+  pure_llm        | P=0.075 R=0.723 F1=0.136 | 5 seeds | temp=0.7

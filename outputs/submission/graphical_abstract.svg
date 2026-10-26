@@ -15,10 +15,10 @@
   <text x="160" y="122" text-anchor="middle" font-size="14" font-weight="bold"
         fill="#0072B2">1. Rules from the literature</text>
   <text x="60" y="148" font-size="12" fill="#333333">21 exposure-outcome rules</text>
-  <text x="60" y="170" font-size="12" fill="#333333">4 of 21 graded A, later</text>
-  <text x="60" y="188" font-size="12" fill="#333333">regraded after citation</text>
-  <text x="60" y="206" font-size="12" fill="#333333">verification showed the</text>
-  <text x="60" y="224" font-size="12" fill="#333333">grades were not supported</text>
+  <text x="60" y="170" font-size="12" fill="#333333">citation verification</text>
+  <text x="60" y="188" font-size="12" fill="#333333">regraded evidence levels</text>
+  <text x="60" y="206" font-size="12" fill="#333333">to A1 / B15 / C5</text>
+  <text x="60" y="224" font-size="12" fill="#333333">(final grading)</text>
 
   <!-- arrow -->
   <line x1="285" y1="171" x2="325" y2="171" stroke="#4D4D4D" stroke-width="1.5"

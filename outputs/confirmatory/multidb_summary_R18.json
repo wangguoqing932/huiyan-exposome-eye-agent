@@ -1,0 +1,892 @@
+{
+ "pubmed": {
+  "r01": {
+   "conc": 8,
+   "disc": 3,
+   "prec": 0.727,
+   "verdict": "mixed_lit"
+  },
+  "r02": {
+   "conc": 27,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r03": {
+   "conc": 10,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r04": {
+   "conc": 10,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r05": {
+   "conc": 16,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r06": {
+   "conc": 6,
+   "disc": 1,
+   "prec": 0.857,
+   "verdict": "replicated_lit"
+  },
+  "r07": {
+   "conc": 7,
+   "disc": 4,
+   "prec": 0.636,
+   "verdict": "mixed_lit"
+  },
+  "r08": {
+   "conc": 14,
+   "disc": 5,
+   "prec": 0.737,
+   "verdict": "mixed_lit"
+  },
+  "r09": {
+   "conc": 17,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r10": {
+   "conc": 10,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r11": {
+   "conc": 13,
+   "disc": 1,
+   "prec": 0.929,
+   "verdict": "replicated_lit"
+  },
+  "r12": {
+   "conc": 0,
+   "disc": 1,
+   "prec": 0.0,
+   "verdict": "uninformative_lit"
+  },
+  "r13": {
+   "conc": 6,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r14": {
+   "conc": 2,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r16": {
+   "conc": 20,
+   "disc": 1,
+   "prec": 0.952,
+   "verdict": "replicated_lit"
+  },
+  "r17": {
+   "conc": 21,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r18": {
+   "conc": 21,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r22": {
+   "conc": 3,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "replicated_lit"
+  },
+  "r19": {
+   "conc": 1,
+   "disc": 0,
+   "prec": 1.0,
+   "verdict": "uninformative_lit"
+  },
+  "r20": {
+   "conc": 8,
+   "disc": 1,
+   "prec": 0.889,
+   "verdict": "replicated_lit"
+  },
+  "r21": {
+   "conc": 22,
+   "disc": 1,
+   "prec": 0.957,
+   "verdict": "replicated_lit"
+  }
+ },
+ "wos": {
+  "r03": {
+   "n_papers": 50,
+   "n_judged": 48,
+   "etiological": 9,
+   "concordant": 4,
+   "discordant": 0,
+   "precision_lit": 1.0,
+   "judged": [
+    {
+     "ut": "WOS:001902008200001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "无"
+    },
+    {
+     "ut": "WOS:001872727200001",
+     "type": "other",
+     "direction": "CONCORDANT",
+     "evidence": "NULL"
+    },
+    {
+     "ut": "WOS:001806036300001",
+     "type": "回顾",
+     "direction": "一致",
+     "evidence": "中等"
+    },
+    {
+     "ut": "WOS:001848308500001",
+     "type": "综述",
+     "direction": "不明确",
+     "evidence": "系统综述针对晶状体并发症（糖尿病性白内障）中的 lncRNAs，而非视网膜病变；虽然高血糖驱动机制大体一致，但并未直接评"
+    },
+    {
+     "ut": "WOS:001821905700002",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "review — 该综述支持高血糖通过多元醇通路 (AR/sorbitol、氧化应激、AGEs) 导致糖尿病视网膜病变，"
+    },
+    {
+     "ut": "WOS:001805899600001",
+     "type": "type: etiological",
+     "direction": "DIRECTION: UNCLEAR",
+     "evidence": "EVIDENCE: 机制研究针对糖尿病性白内障（晶状体上皮细胞铁死亡），非 DR；虽支持高血糖致病通路，但不涉及视网膜病"
+    },
+    {
+     "ut": "WOS:001814274600005",
+     "type": "type: etiological",
+     "direction": "DIRECTION: UNCLEAR",
+     "evidence": "EVIDENCE: 动物机制研究针对糖尿病性白内障（Senp1 O-GlcNAcylation/Fis1 线粒体分裂），"
+    },
+    {
+     "ut": "WOS:001741803000001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "研究结局为糖尿病白内障（晶状体/FTO-RMRP轴），非 DR，无法评价血糖控制与视网膜病变关系，但高糖致病方向与 cl"
+    },
+    {
+     "ut": "WOS:001695193300001",
+     "type": "type: other",
+     "direction": "DIRECTION: UNCLEAR",
+     "evidence": "EVIDENCE: 体外糖基化机制研究聚焦白内障（αA-晶体蛋白）而非 DR，结局（retinopathy_any）不匹"
+    },
+    {
+     "ut": "WOS:001690598100001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "支持"
+    },
+    {
+     "ut": "WOS:001638639200001",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "Animal study (STZ rats) showing hyperglycemia drives catarac"
+    },
+    {
+     "ut": "WOS:001628993500036",
+     "type": "其他",
+     "direction": "方向不明确",
+     "evidence": "一项针对复合化合物对白内障/糖尿病的体外和体内研究；未直接评估 HbA1c 与视网膜病变之间的关联。"
+    },
+    {
+     "ut": "WOS:001628013100001",
+     "type": "其他",
+     "direction": "不清楚",
+     "evidence": "证据"
+    },
+    {
+     "ut": "WOS:001616063100019",
+     "type": "interventional",
+     "direction": "CONCORDANT",
+     "evidence": "other"
+    },
+    {
+     "ut": "WOS:001606353200001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "该论文研究的是大鼠白内障（而非视网膜病变），属于干预性研究；不支持评估 HbA1c 与 DR 之间的关系"
+    },
+    {
+     "ut": "WOS:001575119800001",
+     "type": "综述",
+     "direction": "不一致",
+     "evidence": "未标注"
+    },
+    {
+     "ut": "WOS:001535739400001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "LOW"
+    },
+    {
+     "ut": "WOS:001535024800001",
+     "type": "etiological",
+     "direction": "UNCLEAR",
+     "evidence": "该论文研究天然生物碱抑制醛糖还原酶（机制/体外），未直接检验 HbA1c/血糖控制与视网膜病变的关联，无法为该暴露-结局"
+    },
+    {
+     "ut": "WOS:001524667600001",
+     "type": "其他",
+     "direction": "不确定",
+     "evidence": "低：体外和大鼠半乳糖性白内障模型中针对白内障（而非视网膜病变）的研究，与 HbA1c 与糖尿病视网膜病变的关联无直接关系"
+    },
+    {
+     "ut": "WOS:001511767700007",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "不相关——该论文是体外/计算性的醛糖还原酶抑制剂化学研究，未涉及人类血糖控制（HbA1c）与视网膜病变风险的数据。"
+    },
+    {
+     "ut": "WOS:001516013400001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "INDIRECT"
+    },
+    {
+     "ut": "WOS:001502937600001",
+     "type": "其他",
+     "direction": "一致",
+     "evidence": "低"
+    },
+    {
+     "ut": "WOS:001545637800022",
+     "type": "interventional",
+     "direction": "UNCLEAR",
+     "evidence": "研究为富氢水对STZ糖尿病大鼠的干预（结局为生存质量与肾肿瘤），并未直接检验HbA1c与视网膜病变的暴露-结局关系，故对"
+    },
+    {
+     "ut": "WOS:001485909900001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "无关"
+    },
+    {
+     "ut": "WOS:001413510800013",
+     "type": "review",
+     "direction": "DISCORDANT",
+     "evidence": "low"
+    },
+    {
+     "ut": "WOS:001397426500001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "间接：高血糖与白内障研究中出现了 ERK1/2、甲基化和 TAC 等结果；无 DR 终点或 hba1c 视网膜病变相关性"
+    },
+    {
+     "ut": "WOS:001450577100017",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "Weak — narrative review states hyperglycemia-induced ocular "
+    },
+    {
+     "ut": "WOS:001385471400001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": ""
+    },
+    {
+     "ut": "WOS:001364440500001",
+     "type": "其他",
+     "direction": "一致",
+     "evidence": "低"
+    },
+    {
+     "ut": "WOS:001353278900001",
+     "type": "评论",
+     "direction": "不明确",
+     "evidence": "仅回顾性叙述；关于糖尿病性白内障（而非视网膜病变）的机制/治疗，未提供 hba1c 与 retinopathy_any "
+    },
+    {
+     "ut": "WOS:001343130800001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "low"
+    },
+    {
+     "ut": "WOS:001267352200003",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "证据：房水组学研究评估了眼部混杂因素（人工晶状体、总蛋白），而非 HbA1c/血糖控制与视网膜病变的关系；未提供关于该论"
+    },
+    {
+     "ut": "WOS:001182715400001",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "low"
+    },
+    {
+     "ut": "WOS:001152455800001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "low"
+    },
+    {
+     "ut": "WOS:001145989400056",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "WEAK"
+    },
+    {
+     "ut": "WOS:001138108000005",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "CONTRADICTS — 该动物模型研究探讨 Trex1 缺乏导致 1 型糖尿病的发病机制，并未评估 hba1c_el"
+    },
+    {
+     "ut": "WOS:001099979100001",
+     "type": "interventional",
+     "direction": "DISCORDANT",
+     "evidence": "这篇论文研究的是SGLT2抑制剂（达格列净纳米颗粒）通过抑制EMT来延缓糖尿病性白内障的进展——结局是白内障（晶状体/L"
+    },
+    {
+     "ut": "WOS:001024925700001",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "animal"
+    },
+    {
+     "ut": "WOS:001016622100001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "论文研究的是 AI 预测的药物再利用对糖尿病患者白内障摘除的影响，而非 HbA1c 与视网膜病变的关系；尽管提到了高血糖"
+    },
+    {
+     "ut": "WOS:001018358200015",
+     "type": "其他",
+     "direction": "不确定",
+     "evidence": "NULL"
+    },
+    {
+     "ut": "WOS:000959698400001",
+     "type": "type: etiological",
+     "direction": "DIRECTION: CONCORDANT",
+     "evidence": "EVIDENCE: 动物实验中高血糖驱动的视网膜病变，胰岛素/纳米颗粒联合治疗改善血糖并延缓DR进展，间接支持血糖与DR"
+    },
+    {
+     "ut": "WOS:000958898600001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "low"
+    },
+    {
+     "ut": "WOS:000940761600001",
+     "type": "不相关（ivcm角膜神经/犬模型）",
+     "direction": "不清楚",
+     "evidence": "无"
+    },
+    {
+     "ut": "WOS:000917825800001",
+     "type": "other",
+     "direction": "UNCLEAR",
+     "evidence": "该文研究糖尿病性白内障的免疫细胞浸润与 EMT 机制，未评估 HbA1c/血糖控制与 DR（视网膜病变）的发生或进展，无"
+    },
+    {
+     "ut": "WOS:000990150900001",
+     "type": "type: etiological",
+     "direction": "DIRECTION: CONCORDANT",
+     "evidence": "EVIDENCE: MODY3猪模型显示高血糖与DR早期病变相关，支持血糖控制与DR关联，但为动物预实验，证据强度有限"
+    },
+    {
+     "ut": "WOS:001066568400010",
+     "type": "other",
+     "direction": "UNCLEAR",
+     "evidence": "None — intervention study on cataract, not DR; does not test"
+    },
+    {
+     "ut": "WOS:000903259400001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "low"
+    },
+    {
+     "ut": "WOS:000887511700001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "关于FMSC的降血糖、抗白内障作用的叙述性综述；间接支持高血糖-视网膜病变关联（白内障而非视网膜病变），仅背景性。"
+    }
+   ]
+  },
+  "r10": {
+   "n_papers": 50,
+   "n_judged": 47,
+   "etiological": 15,
+   "concordant": 10,
+   "discordant": 2,
+   "precision_lit": 0.833,
+   "judged": [
+    {
+     "ut": "WOS:000230088300010",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "前瞻性队列(n=34,595女性)显示当前吸烟者白内障摘除风险增加，呈显著剂量-反应关系，戒烟后风险随时间下降，支持吸烟"
+    },
+    {
+     "ut": "WOS:000383577200017",
+     "type": "type",
+     "direction": "DIRECTION",
+     "evidence": "EVIDENCE"
+    },
+    {
+     "ut": "WOS:001158470800008",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "Secondary: 该综述为关于吸烟与青光眼的叙述性综述，仅在背景中提及吸烟与白内障的因果关系，并非针对吸烟-白内曝的"
+    },
+    {
+     "ut": "WOS:000332774000003",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "prospective cohort of 44,371 men; higher smoking intensity a"
+    },
+    {
+     "ut": "WOS:000889990500001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "moderate"
+    },
+    {
+     "ut": "WOS:000274564600004",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "支持：综述指出吸烟是核性白内障（senile cataract）及多种老年疾病的重要危险因素，方向与声明一致；但为叙述性"
+    },
+    {
+     "ut": "WOS:000395685300013",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "moderate"
+    },
+    {
+     "ut": "WOS:001374746900014",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "prospective cohort (n=330,528) 支持吸烟暴露与老年白内障的关联，与 MR 确认的吸烟-白内"
+    },
+    {
+     "ut": "WOS:000258937000018",
+     "type": "此等",
+     "direction": "不一致",
+     "evidence": "较弱"
+    },
+    {
+     "ut": "WOS:000759127500016",
+     "type": "etiological",
+     "direction": "UNCLEAR",
+     "evidence": "The paper's exposure is cannabis smoking, not current cigare"
+    },
+    {
+     "ut": "WOS:001163642300001",
+     "type": "other",
+     "direction": "UNCLEAR",
+     "evidence": "NO"
+    },
+    {
+     "ut": "WOS:000512482400009",
+     "type": "type",
+     "direction": "DIRECTION",
+     "evidence": "EVIDENCE"
+    },
+    {
+     "ut": "WOS:000291708800009",
+     "type": "other",
+     "direction": "UNCLEAR",
+     "evidence": "低"
+    },
+    {
+     "ut": "WOS:000296541200007",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "moderate"
+    },
+    {
+     "ut": "WOS:000235585400046",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "strong"
+    },
+    {
+     "ut": "WOS:000536577600021",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "The review concludes smoking is a risk factor for cataract a"
+    },
+    {
+     "ut": "WOS:000314569700001",
+     "type": "其他",
+     "direction": "不清楚",
+     "evidence": "低"
+    },
+    {
+     "ut": "WOS:000495221000001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "无效"
+    },
+    {
+     "ut": "WOS:000694018300021",
+     "type": "etiological",
+     "direction": "DISCORDANT",
+     "evidence": "weak"
+    },
+    {
+     "ut": "WOS:001462839900009",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "间接证据"
+    },
+    {
+     "ut": "WOS:000258893600016",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "WEAK"
+    },
+    {
+     "ut": "WOS:000257069300004",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "OBSERVATIONAL"
+    },
+    {
+     "ut": "WOS:001541996000001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "medium"
+    },
+    {
+     "ut": "WOS:000247474600008",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "WEAK"
+    },
+    {
+     "ut": "WOS:000678539900001",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "横断面患者认知研究；未评估吸烟-白内障关联"
+    },
+    {
+     "ut": "WOS:000829756300004",
+     "type": "type",
+     "direction": "DIRECTION",
+     "evidence": "EVIDENCE"
+    },
+    {
+     "ut": "WOS:000259503600002",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "medium — 该文为环境烟草烟雾（被动吸烟）与眼病（含白内障）的系统综述，方向上与吸烟增加白内障风险的声明一致（CO"
+    },
+    {
+     "ut": "WOS:001714007700001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "medium"
+    },
+    {
+     "ut": "WOS:000298969100014",
+     "type": "other",
+     "direction": "UNCLEAR",
+     "evidence": "observational cross-sectional (BRFSS 2005–2008, self-reporte"
+    },
+    {
+     "ut": "WOS:000510865300030",
+     "type": "etiological",
+     "direction": "UNCLEAR",
+     "evidence": "不支持也不反驳：该研究仅针对糖尿病患者白内障手术，摘要结果被截断（未给出 HR 及当前吸烟者风险方向），无法确认与 MR"
+    },
+    {
+     "ut": "WOS:000291166600015",
+     "type": "etiological",
+     "direction": "DISCORDANT",
+     "evidence": "weak"
+    },
+    {
+     "ut": "WOS:001025229100001",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "WEAK"
+    },
+    {
+     "ut": "WOS:000609614300012",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "不相关——本文研究的是提供者层面的戒烟率差异，而非吸烟与白内障之间的因果关系。"
+    },
+    {
+     "ut": "WOS:001414605800020",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "Burden-of-disease study using GBD data treats smoking as a c"
+    },
+    {
+     "ut": "WOS:000290794200014",
+     "type": "other",
+     "direction": "UNCLEAR",
+     "evidence": "NULL"
+    },
+    {
+     "ut": "WOS:000343167400004",
+     "type": "type",
+     "direction": "DIRECTION",
+     "evidence": "UNCLEAR"
+    },
+    {
+     "ut": "WOS:000226469100011",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "WEAK"
+    },
+    {
+     "ut": "WOS:000303520200074",
+     "type": "other",
+     "direction": "CONCORDANT",
+     "evidence": "WEAK"
+    },
+    {
+     "ut": "WOS:000305502900013",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "low — 医院based病例对照研究（n=362/362），方向上支持吸烟增加年龄相关性白内障风险，与MR综述结论一致"
+    },
+    {
+     "ut": "WOS:001334992300001",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "OBSERVATIONAL — 瑞典人群队列显示吸烟与白内障患病/手术风险升高相关，与因果性危险因素声明方向一致。"
+    },
+    {
+     "ut": "WOS:001820034900001",
+     "type": "type",
+     "direction": "DIRECTION",
+     "evidence": "EVIDENCE"
+    },
+    {
+     "ut": "WOS:000280909700011",
+     "type": "etiological",
+     "direction": "CONCORDANT",
+     "evidence": "Medium"
+    },
+    {
+     "ut": "WOS:000270002800005",
+     "type": "review",
+     "direction": "DISCORDANT",
+     "evidence": "论文支持吸烟与AMD（黄斑变性）的因果关系，但结局是AMD而非白内障，不支持 CLAIM 所述的吸烟-白内障关系。"
+    },
+    {
+     "ut": "WOS:000276701300021",
+     "type": "etiological",
+     "direction": "UNCLEAR",
+     "evidence": ""
+    },
+    {
+     "ut": "WOS:000368273600027",
+     "type": "other",
+     "direction": "UNCLEAR",
+     "evidence": "NULL"
+    },
+    {
+     "ut": "WOS:000255302800013",
+     "type": "其他",
+     "direction": "不明确",
+     "evidence": "证据不足"
+    },
+    {
+     "ut": "WOS:001469806800001",
+     "type": "review",
+     "direction": "CONCORDANT",
+     "evidence": "此为系统综述+元元分析（AMSTAR-2评估），支持吸烟增加眼部疾病风险（AMD、POAG风险显著升高）；摘要截断未见白"
+    }
+   ]
+  }
+ },
+ "epmc": {
+  "r01": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 3,
+   "concordant": 2,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r02": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 1,
+   "concordant": 0,
+   "discordant": 0,
+   "precision_epmc": null
+  },
+  "r03": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 5,
+   "concordant": 4,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r04": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 7,
+   "concordant": 6,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r05": {
+   "n_epmc": 24,
+   "n_judged": 23,
+   "etiological": 5,
+   "concordant": 2,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r06": {
+   "n_epmc": 25,
+   "n_judged": 24,
+   "etiological": 4,
+   "concordant": 2,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r07": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 3,
+   "concordant": 2,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r08": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 1,
+   "concordant": 1,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r09": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 2,
+   "concordant": 0,
+   "discordant": 1,
+   "precision_epmc": 0.0
+  },
+  "r10": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 3,
+   "concordant": 1,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r11": {
+   "n_epmc": 24,
+   "n_judged": 24,
+   "etiological": 3,
+   "concordant": 1,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r12": {
+   "n_epmc": 25,
+   "n_judged": 24,
+   "etiological": 2,
+   "concordant": 0,
+   "discordant": 0,
+   "precision_epmc": null
+  },
+  "r13": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 5,
+   "concordant": 3,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r14": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 0,
+   "concordant": 0,
+   "discordant": 0,
+   "precision_epmc": null
+  },
+  "r16": {
+   "n_epmc": 24,
+   "n_judged": 24,
+   "etiological": 12,
+   "concordant": 6,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r17": {
+   "n_epmc": 24,
+   "n_judged": 24,
+   "etiological": 6,
+   "concordant": 2,
+   "discordant": 1,
+   "precision_epmc": 0.667
+  },
+  "r18": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 2,
+   "concordant": 1,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r19": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 3,
+   "concordant": 1,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r20": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 8,
+   "concordant": 3,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r21": {
+   "n_epmc": 25,
+   "n_judged": 23,
+   "etiological": 10,
+   "concordant": 5,
+   "discordant": 0,
+   "precision_epmc": 1.0
+  },
+  "r22": {
+   "n_epmc": 25,
+   "n_judged": 25,
+   "etiological": 2,
+   "concordant": 0,
+   "discordant": 0,
+   "precision_epmc": null
+  }
+ }
+}

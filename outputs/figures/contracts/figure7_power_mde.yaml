@@ -42,12 +42,14 @@ panels:
     content: >-
       Scatter, both axes on a log scale, one point per rule-relevant pair
       (NHANES n=17, KNHANES n=13). x = minimum detectable OR at 80% power;
-      y = observed OR. Points are coloured by layer and three-state label so the
-      reader can see that replicated pairs cluster at high observed OR and low
-      detectable OR while uninformative pairs cluster near OR = 1 across the
-      whole detectable range. Reference lines at OR = 1.0, 1.5 and 2.0 on both
-      axes, plus the y = x identity line: points below the identity line have an
-      observed effect larger than the design needed. NHANES replicate count 6,
+      y = observed OR. Points are coloured by three-state label (blue =
+      replicated, grey = uninformative) so the reader can see that replicated
+      pairs cluster at high observed OR and low detectable OR while
+      uninformative pairs cluster near OR = 1 across the whole detectable
+      range. Reference lines are OR = 1 on both axes plus the y = x identity
+      line: points below the identity line have an observed effect larger than
+      the design needed, and the shaded region above it marks that adequately
+      powered area. NHANES replicate count 6,
       KNHANES 5; no contradicted points exist to plot.
     plot_type: scatter
     x_axis: mde_or_80
@@ -65,13 +67,11 @@ panels:
     # omits. The renderer was brought up to the contract, not the reverse.
     reference_line:
       kind: vertical
-      at: 1.5
-      label: "1.5x"
+      at: 1.0
+      label: "OR = 1"
     reference_lines_all:
       - {kind: vertical, at: 1.0, label: "OR = 1"}
       - {kind: horizontal, at: 1.0, label: "OR = 1"}
-      - {kind: vertical, at: 1.5, label: "1.5x"}
-      - {kind: vertical, at: 2.0, label: "2.0x"}
       - {kind: diagonal, at: null, label: "y = x (identity)"}
     annotations:
       - "median MDE-OR 1.337 (NHANES) / 1.159 (KNHANES) at 80% power, two-sided alpha=0.05"
@@ -94,7 +94,7 @@ panels:
 #     sub-decade log axis and renders 1.2 as "1.2 x 10^0").
 # Export spec identical to the shared renderer (180 mm, 600 dpi, svg/pdf/tiff/
 # png, TIFF LZW -- which took this figure's TIFF from 90.9 MB to 0.9 MB).
-renderer: scripts/render_manual_figures.py
+renderer: scripts/render_top_figures.py
 
 backend:
   value: python
@@ -175,8 +175,8 @@ legend:
   font_size_pt: 7
   items:
     - "rule-relevant pairs: NHANES n=17, KNHANES n=13; log-log axes"
-    - "x = minimal OR detectable at 80% power (two-sided alpha=0.05); y = observed OR; grey lines at 1.0 / 1.5 / 2.0 and the identity line"
-    - "points left of the 1.5x line were adequately powered to exclude a 1.5-fold association"
+    - "x = minimal OR detectable at 80% power (two-sided alpha=0.05); y = observed OR; OR = 1 lines on both axes and the identity line"
+    - "points above the identity line had an observed effect larger than the design could detect"
     - "design effect derived per pair from the survey/model CI-width ratio (median 1.07 / 1.26)"
 
 accessibility:

@@ -1,0 +1,170 @@
+{
+ "r01": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 3,
+  "concordant": 2,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r02": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 1,
+  "concordant": 0,
+  "discordant": 0,
+  "precision_epmc": null
+ },
+ "r03": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 5,
+  "concordant": 4,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r04": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 7,
+  "concordant": 6,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r05": {
+  "n_epmc": 24,
+  "n_judged": 23,
+  "etiological": 5,
+  "concordant": 2,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r06": {
+  "n_epmc": 25,
+  "n_judged": 24,
+  "etiological": 4,
+  "concordant": 2,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r07": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 3,
+  "concordant": 2,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r08": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 1,
+  "concordant": 1,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r09": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 2,
+  "concordant": 0,
+  "discordant": 1,
+  "precision_epmc": 0.0
+ },
+ "r10": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 3,
+  "concordant": 1,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r11": {
+  "n_epmc": 24,
+  "n_judged": 24,
+  "etiological": 3,
+  "concordant": 1,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r12": {
+  "n_epmc": 25,
+  "n_judged": 24,
+  "etiological": 2,
+  "concordant": 0,
+  "discordant": 0,
+  "precision_epmc": null
+ },
+ "r13": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 5,
+  "concordant": 3,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r14": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 0,
+  "concordant": 0,
+  "discordant": 0,
+  "precision_epmc": null
+ },
+ "r16": {
+  "n_epmc": 24,
+  "n_judged": 24,
+  "etiological": 12,
+  "concordant": 6,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r17": {
+  "n_epmc": 24,
+  "n_judged": 24,
+  "etiological": 6,
+  "concordant": 2,
+  "discordant": 1,
+  "precision_epmc": 0.667
+ },
+ "r18": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 2,
+  "concordant": 1,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r19": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 3,
+  "concordant": 1,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r20": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 8,
+  "concordant": 3,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r21": {
+  "n_epmc": 25,
+  "n_judged": 23,
+  "etiological": 10,
+  "concordant": 5,
+  "discordant": 0,
+  "precision_epmc": 1.0
+ },
+ "r22": {
+  "n_epmc": 25,
+  "n_judged": 25,
+  "etiological": 2,
+  "concordant": 0,
+  "discordant": 0,
+  "precision_epmc": null
+ }
+}

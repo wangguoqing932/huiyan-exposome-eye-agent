@@ -19,72 +19,53 @@ panels:
     role: primary
     layout_template: hero_schematic_with_quant_row
     layout: full_width_top
-    title: "Trace flow for one case"
+    title: "Seven-step reasoning trace"
     content: >-
-      Horizontal swim-lane diagram: 3 lanes (Rule / KG / LLM). Time flows
-      left → right. Each node is a step with input + output + duration.
+      Horizontal swim-lane diagram with three lanes (Rule Engine, LightRAG KG,
+      LLM Arbiter / Report). Seven logged steps are numbered in execution
+      order: normalise A, normalise B, match r04, cross-cover r03 (rule lane);
+      KG retrieval (KG lane); risk grade and report + trace (arbiter lane).
+      The step list is the logged trace, not a reconstruction, and no latency
+      panel is drawn because per-layer timings were never logged.
+    plot_type: swimlane
     visual_elements:
       - type: swimlane
-        lanes: [Rule Engine, LightRAG KG, LLM Arbiter]
+        lanes: [Rule Engine, LightRAG KG, LLM Arbiter / Report]
         nodes:
-          - lane: Rule Engine
-            label: "Match flags × mechanism"
-            duration_ms: 50
-            output: "3 signals"
-          - lane: LightRAG KG
-            label: "Risk-guided retrieval"
-            duration_ms: 800
-            output: "5 chunks, top-k=5"
-          - lane: LightRAG KG
-            label: "Path extraction"
-            duration_ms: 120
-            output: "2 KG paths"
-          - lane: LLM Arbiter
-            label: "DeepSeek first pass"
-            duration_ms: 2300
-            output: "M (medium)"
-          - lane: LLM Arbiter
-            label: "第二客户端升档（最高严重度档）"
-            duration_ms: 1800
-            output: "H (high, confidence 0.83)"
-        arrows:
-          - from: Rule.out
-            to: KG.in
-          - from: KG.out
-            to: LLM.in
-          - from: LLM.first_pass
-            to: LLM.escalation
-            condition: "if severity high"
+          - {lane: Rule Engine, step: 1, label: "Normalise A"}
+          - {lane: Rule Engine, step: 2, label: "Normalise B"}
+          - {lane: Rule Engine, step: 3, label: "Match r04"}
+          - {lane: Rule Engine, step: 4, label: "Cross-cover r03"}
+          - {lane: LightRAG KG, step: 5, label: "KG retrieval"}
+          - {lane: LLM Arbiter / Report, step: 6, label: "Risk grade"}
+          - {lane: LLM Arbiter / Report, step: 7, label: "Report + trace"}
 
-  - id: panel_b_latency_breakdown
+  - id: panel_b_kg_path
     role: supporting
     layout_template: asymmetric_hero_panel
     layout: bottom_left
-    title: "Latency breakdown"
+    title: "Knowledge-graph path"
     content: >-
-      Stacked horizontal bar: avg time per layer (rule / KG / LLM). Shows
-      where the runtime cost sits (usually LLM).
-    plot_type: stacked_bar
-    x_axis: milliseconds
-    y_axis: phase
-    stacks: [rule_engine, lightrag_kg, llm_arbiter]
-    annotations:
-      - "Median across intval-nhanes cases (n 以 .executor/progress.json 为准)"
+      Chain from HbA1c to PDR through hyperglycaemia, retinal ischaemia, VEGF
+      upregulation and neovascularisation. Rule r04 covers the full chain; the
+      chain is drawn from figure5_paths.csv.
+    plot_type: pathway_chain
+    nodes: [hba1c, hyperglycaemia, retinal_ischaemia, VEGF_upregulation,
+            neovascularisation, dr_pdr]
+    edges_from: outputs/figures/source_data/figure5_paths.csv
 
-  - id: panel_c_path_diversity
+  - id: panel_c_steps_per_layer
     role: supporting
     layout_template: asymmetric_hero_panel
     layout: bottom_right
-    title: "KG path diversity"
+    title: "Steps per layer"
     content: >-
-      Network graph: nodes = entity_a + entity_b + intermediate concepts;
-      edges = extracted paths. Path thickness = retrieval frequency.
-    plot_type: network
-    nodes: [entity_a, entity_b, gene_a, gene_b, pathway_c, disease_d]
-    edges_from: outputs/figures/source_data/figure5_paths.csv
-    layout: spring
-    node_color: type
-    edge_width: 0.5_to_3
+      Count of logged steps per architectural layer: Rule 4, KG 1, Arbiter 2.
+      Derived by grouping figure5_reasoning_trace.csv by layer; it shows which
+      layer carries the reasoning burden without inventing timing data.
+    plot_type: bar
+    x_axis: logged steps
+    y_axis: layer
 
 backend:
   value: python
@@ -141,6 +122,12 @@ color_palette:
 
 source_data:
   csv_path: outputs/figures/source_data/figure5_reasoning_trace.csv
+  secondary_csv:
+    path: outputs/figures/source_data/figure5_paths.csv
+    schema:
+      - column: source_node
+      - column: target_node
+      - column: edge_type
   schema:
     - column: case_id
     - column: step_id

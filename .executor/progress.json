@@ -1,5 +1,5 @@
 {
-  "_updated": "2026-10-19",
+  "_updated": "2026-10-23",
   "_note": "按磁盘实况全量重写（C4 修复：旧值停在各阶段早期）；2026-10-14 R4 复审修正：phase3 引文门 21/21（r22 引文更正）+ phase4 索引实况记录 + phase6 基线重跑文案；R5 修复批次（2026-10-14/15）：P0 数据口径三修复+survey 方差主口径+方向审计第四态+基线公平协议 5-seed 重跑",
   "phases": {
     "phase0": {
@@ -69,7 +69,7 @@
     },
     "phase6": {
       "status": "complete",
-      "note": "基线（R11 修正 gold，5 seeds）：full_system F1=0.522（P0.353/R1.000，确定性）> lightrag 0.392±0.007 > pure_llm 0.335±0.010 > naive_rag 0.080±0.110；McNemar 对 pure_llm/naive_rag 显著、对 lightrag 不显著（0.057–0.092）；bootstrap F1 CI [0.118,0.640]；G2 定格 0.500（R5.2/R5.3 消融）。",
+      "note": "基线双代（2026-10-19 canonical 链 + R17）：qwen 代 80 对 R11 gold full 0.522 / lightrag 0.392 / pure_llm 0.335 / naive_rag 0.080；zhipu GLM-5.3-flash 满血代 159 对 full 0.480 / lightrag 0.186 / pure_llm 0.178 / naive_rag 0.069，McNemar 对全部基线显著（p 3e-11~6e-24）；KNHANES 301 对 full 0.360 > lightrag 0.145 > pure_llm 0.135 > naive_rag 0.094。G2 定格 0.500（R5.2/R5.3 消融）。指标读取口径见 outputs/README_baseline_predictions.md（zhipu 段须 valid=True 且按 (seed,pair) 去重）。",
       "baselines_fixed": "2026-10-14 R5: seed 传入 API + 公平 NaiveRAG + 人读名 prompt + no-evidence 透明解析 + lightrag 内部 fail-loud",
       "streamlit_built": true,
       "has_chat": true,

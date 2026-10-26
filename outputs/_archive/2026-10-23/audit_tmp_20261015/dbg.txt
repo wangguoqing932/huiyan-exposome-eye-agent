@@ -1,0 +1,5 @@
+COLUMNS: ['a_flag', 'b_item', 'predicted', 'rule_ids', 'negative_control', 'direction', 'n', 'n_pos', 'or', 'p', 'status', 'q', 'gold3']
+shape: (320, 13)
+status: {'fit_fail:KeyError': 280, 'underpowered': 40}
+predicted&tested: 0
+has direction: True

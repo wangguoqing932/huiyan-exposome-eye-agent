@@ -1,37 +1,29 @@
-# Journal requirements snapshot
+# Journal Guidelines Snapshot
 
-**Target journal:** undetermined. On 2026-10-19 the author deferred the journal choice for this round ("不用管哪家期刊，把文章做好了…：期刊不限制"), so no journal-specific limit is asserted here. The previously configured target (`.planner.config.json` → `target_journal_primary`) was **Ophthalmology** (Elsevier / American Academy of Ophthalmology), ISSN 0161-6420.
+**Target journal:** Journal of Medical Internet Research (J Med Internet Res, JMIR)
+**Snapshot date:** 2026-10-24（来源：jmir.org/about、about/editorialPolicies、author-information/submission-preparation-checklist 抓取）
 
-**Snapshot date:** 2026-10-19 (supersedes the 2026-10-15 snapshot).
+## 已核实的硬性要求
+- **文件格式**：Microsoft Word (.docx)——满足（manuscript_agent_first.docx）。
+- **图表方向**：portrait only——已改（表格节从横版改竖版，重排后可读）。
+- **补充材料**：以独立 Multimedia Appendix 提供——已改（supplementary_tables_figures.md 现为 "Multimedia Appendix 1"，Methods 加指引句）。
+- **统计**：P 值遵循 JMIR statistics guidelines——正文已按统一格式。
+- **ML/AI 论文四条件**（Focus and Scope 页原文要点）：
+  1) direct clinical effect or impact on care——正文已限定为 operability/风险分层，未越界；
+  2) validated using an independent dataset not used for training——NHANES 内部 + KNHANES 外部 + 八队列 + 四库；
+  3) 语言可被医务者理解 + 工具开源/公开——Streamlit 与 machine-readable 配置随代码提供（**仓库 URL 待作者补**）；
+  4) 严格遵循 ML 报告指南——已引 TRIPOD+AI 正式声明（BMJ e078378）与 STROBE（checklist 已更新）。
+- **生成式 AI 使用**：Declarations 已有披露段 ✓。
+- **同行评审**：目标 <2 个月标准审稿；付费 Fast-Track 可 20 个工作日出决定（可选）。
+- **转投**：JMIR 家族内可携带审稿意见转投（cover letter 可不选择退出）。
 
-## STATUS: NOT OBTAINED — online fetch blocked, and no journal has been fixed by the author
+## 摘要与字数
+- 摘要（Original Paper 非结构式，通行上限 350 词）：**现 346 词 ✓**（已裁）。
+- 正文（Introduction–Discussion，Word 口径）：约 6,000 词；JMIR 无硬性字数上限 ✓。
 
-| URL attempted (2026-10-15) | Result |
-|---|---|
-| https://www.aaojournal.org/content/authorinfo | HTTP 403 (Cloudflare) |
-| https://www.elsevier.com/journals/ophthalmology/0161-6420/guide-for-authors | cross-origin redirect to sciencedirect.com, not followed |
-| https://www.sciencedirect.com/journal/ophthalmology/publish/guide-for-authors | HTTP 403 |
+## 待作者侧字段（投稿系统必填）
+- Ethics determination 机构落款（Declarations 现为占位）；Data availability 的公开仓库 URL/Zenodo DOI；Funding；Competing interests；CRediT 作者贡献。
+- 对应作者 ORCID（已有）。
 
-The local fallback `references/submission_checklists.md` was read in full. **It contains no entry for Ophthalmology**, nor for JAMA Ophthalmology, British Journal of Ophthalmology or American Journal of Ophthalmology (the configured backups). Its entries cover Reproductive Toxicology, Lancet Digital Health, npj Digital Medicine, Nature Medicine, BMC Medical Informatics, JMIR and Environment International.
-
-**Consequence:** this project cannot state the target journal's word limit, abstract limit, figure/table caps or reference style from any available source, and the author has not fixed a target. No limits are asserted here, and packaging records them as unchecked rather than satisfied.
-
-## Computed counts of the assembled package (2026-10-19)
-
-| Quantity | Value |
-|---|---|
-| Manuscript size | 137,288 B |
-| Abstract words | 440 |
-| Main text words (Introduction through Declarations) | 10,477 |
-| Discussion words | 2,877 |
-| Figures | 8 (6 main + 2 supplementary) |
-| Tables | 9 |
-| References | 27 (all cross-verified, none retracted) |
-
-## To verify before submission (author)
-
-1. Fix the target journal, then its main-text word limit and whether the abstract and tables count towards it.
-2. Abstract structure and word limit (Ophthalmology has required a structured abstract since 2013).
-3. Figure and table caps, and the required figure file format and DPI.
-4. Reference style and cap (the generated list is Vancouver-order ready).
-5. Reporting-guideline requirement — STROBE is used; TRIPOD+AI and DECIDE-AI are explicitly cited as considered but **not claimed** in Methods and Declarations, so no checklist for them is supplied.
+## APC
+- 以官网 Fee Schedule 为准（Original Paper 数千美元级，接收后计费）。

@@ -86,10 +86,13 @@ def canary(llm) -> None:
         print(f"[canary] OK ({llm.label})")
 
 
-def load_test_pairs() -> list[dict]:
-    csv_path = ROOT / "outputs/confirmatory/nhanes_confirmatory.csv"
+def load_test_pairs(dataset: str = "nhanes") -> list[dict]:
+    """R15(2026-10-20): per-dataset 化(skill v3.0 要求四基线跑在每个验证数据集)。
+    nhanes=canonical(80 对历史口径兼容);knhanes/charls 从各自 confirmatory 取 tested。"""
+    name = {"nhanes": "nhanes", "knhanes": "knhanes", "charls": "charls"}[dataset]
+    csv_path = ROOT / f"outputs/confirmatory/{name}_confirmatory.csv"
     if not csv_path.exists():
-        print("[baselines] ERROR: NHANES confirmatory not found — run evaluate.py first")
+        print(f"[baselines] ERROR: {name} confirmatory not found — run evaluate first")
         sys.exit(1)
     import pandas as pd
     df = pd.read_csv(csv_path)
@@ -101,7 +104,7 @@ def load_test_pairs() -> list[dict]:
             "predicted_rule": bool(row["predicted"]),
             "gold3": row.get("gold3", ""),
         })
-    print(f"[baselines] {len(pairs)} test pairs from NHANES confirmatory")
+    print(f"[baselines] {len(pairs)} test pairs from {name} confirmatory (dataset={dataset})")
     return pairs
 
 
@@ -113,6 +116,9 @@ def run_full_system(pairs, seed):
     rules = load_rules()
     a_reg = load_entity_a_registry()
     b_reg = load_entity_b_registry()
+    from huiyan_agent.risk_rules import match_rules_canonical
+    from huiyan_agent.variable_map import load_variable_map, outcome_alias
+    _B_ALIAS = outcome_alias(load_variable_map())
     a_idx, b_idx = {}, {}
     for ent in a_reg.values():
         for f in (getattr(ent, "flags", None) or []):
@@ -129,8 +135,11 @@ def run_full_system(pairs, seed):
             "a_flag": p["a_flag"], "b_item": p["b_item"], "gold3": p["gold3"],
             "provider": "rule_engine:deterministic",
         }
-        if a_ent and b_ent:
-            signals = match_rules(rules, a_ent, b_ent)
+        # R16 结局变体规范化回退(与 evaluate_knhanes 同一别名表,variable_map.outcome_alias)
+        _canon = _B_ALIAS.get(p["b_item"])
+        canon_ent = (b_idx.get(_canon) or b_reg.get(_canon)) if _canon else None
+        if a_ent and (b_ent or canon_ent):
+            signals, _aliased = match_rules_canonical(rules, a_ent, b_ent, canon_ent)
             assessment = assess(signals)
             prediction = len(signals) > 0
             results.append({
@@ -159,8 +168,31 @@ def _llm_predict(llm, prompt, system, meta, results, failures):
     - 其余（空响应/乱码/真正歧义）仍计为失败。
     """
     rec = dict(meta)
+    # R15(2026-10-20):长跑批的瞬时错误重试(429/网络抖动最多 3 次退避),
+    # 重试穷尽才计入 failures——避免一次抖动作废整个 301 对 run
+    resp = None
+    for _attempt in range(3):
+        try:
+            resp = llm.complete(prompt=prompt, system=system, raise_on_error=True)
+            break
+        except Exception as _e:
+            if _attempt == 2:
+                resp = None
+                _last_err = _e
+            else:
+                import time as _t
+                # 429(速率限制)用长退避,其余短退避(bigmodel 1302 实测需要 >10s)
+                _wait = 15 * (_attempt + 1) if "429" in str(_e) or "1302" in str(_e) else 2 * (_attempt + 1)
+                _t.sleep(_wait)
+    if resp is None:
+        failures[0] += 1
+        rec["prediction"] = False
+        rec["risk_level"] = "unknown"; rec["confidence"] = 0.0
+        rec["error"] = f"api_retry_exhausted: {str(_last_err)[:90]}"
+        results.append(rec)
+        return
     try:
-        resp = llm.complete(prompt=prompt, system=system, raise_on_error=True)
+        pass
         first = strip_think(resp.text).split("\n")[0].strip().upper()
         if first.startswith(("YES", "NO")):
             rec["prediction"] = first.startswith("YES")
@@ -186,7 +218,11 @@ _NO_EVIDENCE_RE = re.compile(
     r"(DOES NOT MENTION|NOT MENTION|NO MENTION|NO INFORMATION|"
     r"DOES NOT PROVIDE|NOT PROVIDE|NO EVIDENCE|DOES NOT DISCUSS|"
     r"NO DIRECT|NOT SPECIFICALLY|INSUFFICIENT INFORMATION|"
-    r"CANNOT DETERMINE|DOES NOT ESTABLISH|NO RELATIONSHIP MENTIONED)", re.IGNORECASE)
+    r"CANNOT DETERMINE|DOES NOT ESTABLISH|NO RELATIONSHIP MENTIONED|"
+    # R15(2026-10-20): glm-5.3-flash 的道歉式拒答(实测 hba1c×amd_early 一例),
+    # 本质是"无足够信息"——按透明协议归 NO 并标 parsed,不算失败
+    r"DO NOT HAVE THE SPECIFIC|APOLOGIZE.*(?:INFO|EVIDENCE)|"
+    r"UNABLE TO PROVIDE|DON'T HAVE (?:ENOUGH |ANY )?(?:INFORMATION|EVIDENCE))", re.IGNORECASE)
 
 
 def run_pure_llm(pairs, seed, provider):
@@ -254,7 +290,12 @@ def run_lightrag(pairs, seed, provider):
         a_disp = a_names.get(p["a_flag"], p["a_flag"])
         b_disp = b_names.get(p["b_item"], p["b_item"])
         query = f"What is the relationship between {a_disp} and {b_disp}?"
-        kg_result = adapter.query(query, mode="naive") or ""
+        # R17(2026-10-20):基线公平修复——lightrag 的定义性能力是 KG 图遍历,
+        # 此前硬编码 naive(纯向量)使基线残血(limitations §5 曾如实记录)。
+        # hybrid=local+global 图检索;adapter 自带空结果→naive 的韧性降级。
+        # R17 终局:hybrid 为 lightrag 基线定格配置——mix+rerank 实测更差
+        # (0.164 vs 0.182,5 seeds),已试并如实入册;满血能力开放≠盲目用最大档。
+        kg_result = adapter.query(query, mode="hybrid") or ""
         prompt = (f"KG evidence: {kg_result[:500]}\n\nIs {a_disp} a risk factor for {b_disp}? "
                   f"Respond with exactly YES or NO on the first line. "
                   f"If the KG evidence does not mention the relationship, answer NO.")
@@ -281,17 +322,21 @@ def main():
     parser.add_argument("--seed", type=int)
     parser.add_argument("--baseline", choices=BASELINES)
     parser.add_argument("--all", action="store_true")
+    parser.add_argument("--dataset", default="nhanes",
+                        choices=["nhanes", "knhanes", "charls"],
+                        help="per-dataset baselines (skill v3.0); knhanes/charls 写入独立 jsonl")
     parser.add_argument("--provider", default="deepseek",
-                        choices=["deepseek", "local"],
+                        choices=["deepseek", "local", "zhipu"],
                         help="LLM provider（deepseek=commandcode 网关；local=127.0.0.1:8082 llama-server）")
     args = parser.parse_args()
 
-    pairs = load_test_pairs()
+    pairs = load_test_pairs(args.dataset)
     if not pairs:
         return 1
 
     all_results = []
-    output_path = ROOT / "outputs/baseline_predictions.jsonl"
+    output_path = (ROOT / "outputs/baseline_predictions.jsonl" if args.dataset == "nhanes"
+                   else ROOT / f"outputs/baseline_predictions_{args.dataset}.jsonl")
     baselines_to_run = [args.baseline] if args.baseline else BASELINES
     seeds_to_run = [args.seed] if args.seed else SEEDS
 

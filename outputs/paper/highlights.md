@@ -1,3 +1,4 @@
+• Rule-KG-LLM agent ranked first on F1 against three baselines in two national surveys
 # Highlights
 
 *5 bullet points, each at most 85 characters (Elsevier limit). Longest: 85 characters.*

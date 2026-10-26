@@ -1,5 +1,8 @@
-"""Verify every headline number quoted in outputs/paper/manuscript_R11.md
-against the current result files.  Prints PASS/FAIL per claim.
+"""Verify every headline number quoted in the R11-era manuscript draft.
+
+The draft was archived on 2026-10-23 at
+outputs/_archive/2026-10-23/manuscript_R11.md; this script is kept as an
+R11 historical verifier. Prints PASS/FAIL per claim.
 
 Run: PYTHONUTF8=1 python scripts/verify_manuscript_numbers.py
 """

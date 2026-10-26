@@ -1,0 +1,132 @@
+{
+ "definition": "G2 (deployable agent: rule + negative-control gate + evidence confirmation + arbiter) predictions from outputs/confirmatory/fused_system_R5.jsonl (gold-independent) rescored on the R11-corrected gold of the 80-pair NHANES matrix. Accuracy McNemar vs each baseline per seed (b = G2 correct & baseline incorrect).",
+ "G2_gold11": {
+  "TP": 6,
+  "FP": 9,
+  "FN": 0,
+  "TN": 65,
+  "P": 0.4,
+  "R": 1.0,
+  "F1": 0.571,
+  "kappa": 0.52
+ },
+ "G1_gold11": {
+  "TP": 6,
+  "FP": 10,
+  "FN": 0,
+  "TN": 64,
+  "P": 0.375,
+  "R": 1.0,
+  "F1": 0.545,
+  "kappa": 0.49
+ },
+ "G0_gold11_ablation": {
+  "TP": 6,
+  "FP": 11,
+  "FN": 0,
+  "TN": 63,
+  "P": 0.353,
+  "R": 1.0,
+  "F1": 0.522,
+  "kappa": 0.462
+ },
+ "accuracy_mcnemar_G2_vs_baselines": {
+  "lightrag": [
+   {
+    "seed": 11,
+    "b": 10,
+    "c": 1,
+    "p": 0.01172
+   },
+   {
+    "seed": 22,
+    "b": 11,
+    "c": 1,
+    "p": 0.00635
+   },
+   {
+    "seed": 33,
+    "b": 11,
+    "c": 1,
+    "p": 0.00635
+   },
+   {
+    "seed": 44,
+    "b": 10,
+    "c": 1,
+    "p": 0.01172
+   },
+   {
+    "seed": 55,
+    "b": 11,
+    "c": 1,
+    "p": 0.00635
+   }
+  ],
+  "pure_llm": [
+   {
+    "seed": 11,
+    "b": 18,
+    "c": 2,
+    "p": 0.0004
+   },
+   {
+    "seed": 22,
+    "b": 16,
+    "c": 2,
+    "p": 0.00131
+   },
+   {
+    "seed": 33,
+    "b": 16,
+    "c": 2,
+    "p": 0.00131
+   },
+   {
+    "seed": 44,
+    "b": 18,
+    "c": 2,
+    "p": 0.0004
+   },
+   {
+    "seed": 55,
+    "b": 16,
+    "c": 2,
+    "p": 0.00131
+   }
+  ],
+  "naive_rag": [
+   {
+    "seed": 11,
+    "b": 6,
+    "c": 7,
+    "p": 1.0
+   },
+   {
+    "seed": 22,
+    "b": 9,
+    "c": 5,
+    "p": 0.42395
+   },
+   {
+    "seed": 33,
+    "b": 9,
+    "c": 5,
+    "p": 0.42395
+   },
+   {
+    "seed": 44,
+    "b": 6,
+    "c": 7,
+    "p": 1.0
+   },
+   {
+    "seed": 55,
+    "b": 9,
+    "c": 5,
+    "p": 0.42395
+   }
+  ]
+ },
+ "generated": "2026-10-24"
+}

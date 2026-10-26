@@ -6,7 +6,7 @@ The skill's SUBMISSION_FILES list names eight files. Six existed; three did not:
 
   highlights.md          -- Elsevier requires 3-5 bullets, each <= 85 characters
   data_availability.md   -- per-cohort access routes
-  graphical_abstract.svg -- the skill ships a {{placeholder}} scaffold that is
+  graphical_abstract.svg -- the skill ships a placeholder scaffold that is
                             meant to be replaced, not shipped
 
 (manuscript.en.md is not applicable: the manuscript is English-native, so the
@@ -99,10 +99,10 @@ GRAPHICAL_ABSTRACT = """<?xml version="1.0" encoding="UTF-8"?>
   <text x="160" y="122" text-anchor="middle" font-size="14" font-weight="bold"
         fill="#0072B2">1. Rules from the literature</text>
   <text x="60" y="148" font-size="12" fill="#333333">21 exposure-outcome rules</text>
-  <text x="60" y="170" font-size="12" fill="#333333">4 of 21 graded A, later</text>
-  <text x="60" y="188" font-size="12" fill="#333333">regraded after citation</text>
-  <text x="60" y="206" font-size="12" fill="#333333">verification showed the</text>
-  <text x="60" y="224" font-size="12" fill="#333333">grades were not supported</text>
+  <text x="60" y="170" font-size="12" fill="#333333">citation verification</text>
+  <text x="60" y="188" font-size="12" fill="#333333">regraded evidence levels</text>
+  <text x="60" y="206" font-size="12" fill="#333333">to A1 / B15 / C5</text>
+  <text x="60" y="224" font-size="12" fill="#333333">(final grading)</text>
 
   <!-- arrow -->
   <line x1="285" y1="171" x2="325" y2="171" stroke="#4D4D4D" stroke-width="1.5"
@@ -198,7 +198,7 @@ def main() -> int:
     print(f"data_availability.md: {len(DATA_AVAILABILITY):,} B")
 
     (SUB / "graphical_abstract.svg").write_text(GRAPHICAL_ABSTRACT, encoding="utf-8")
-    # The skill's own scaffold ships {{placeholders}}; shipping it unchanged
+    # The skill's own scaffold ships placeholder tokens; shipping it unchanged
     # would put literal braces in front of a reviewer. Verify none survive.
     assert "{{" not in GRAPHICAL_ABSTRACT, "unfilled placeholder in the SVG"
     print(f"graphical_abstract.svg: {len(GRAPHICAL_ABSTRACT):,} B, "

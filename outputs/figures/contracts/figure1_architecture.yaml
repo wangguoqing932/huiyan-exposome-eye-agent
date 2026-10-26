@@ -24,7 +24,7 @@ archetype: schematic_led_composite
 # renderer cannot draw this figure: its three panels declare no plot_type,
 # so it wrote placeholder text and returned, and the 7_1 QC passed that
 # blank page. render_manual_figures.render_figure1 draws it instead.
-renderer: scripts/render_manual_figures.py
+renderer: scripts/render_top_figures.py
 
 panels:
   - id: panel_a_pipeline
@@ -32,9 +32,8 @@ panels:
     layout: full_width_top
     layout_template: hero_schematic_with_quant_row
     content: >-
-      End-to-end pipeline: User input → Entity normalization → Rule engine →
-      Risk-guided LightRAG retrieval → Evidence compression → LLM arbiter →
-      Structured report.
+      End-to-end pipeline: input → entity normalisation → rule engine →
+      LightRAG retrieval → LLM arbiter → structured report with trace.
     visual_elements:
       - type: box
         label: "Entity A + Entity B + Patient factors"
@@ -47,10 +46,10 @@ panels:
         annotation: "21 deterministic rules"
       - type: box
         label: "LightRAG retrieval"
-        annotation: "risk-guided, top-k"
+        annotation: "27,136 nodes; 1,060 evidence chunks"
       - type: box
         label: "LLM Arbiter"
-        annotation: "DeepSeek 主客户端（+DualLLMClient 第二客户端）"
+        annotation: "local Qwen3.8-27B, temperature 0"
       - type: box
         label: "Structured Report"
         position: right
@@ -65,7 +64,7 @@ panels:
     visual_elements:
       - type: layer_diagram
         layers: [rules, kg, llm_arbiter]
-        annotations: ["deterministic", "traceable", "flexible"]
+        annotations: ["deterministic", "evidence-grounded", "bounded"]
 
   - id: panel_c_outputs
     role: supporting

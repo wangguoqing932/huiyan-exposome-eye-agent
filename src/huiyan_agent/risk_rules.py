@@ -331,3 +331,17 @@ def assess(
         confidence=round(total, 3),
         confidence_score=round(total, 3),
     )
+
+
+def match_rules_canonical(rules, a_ent, b_ent, canonical_ent):
+    """R16(2026-10-20):结局变体规范化回退匹配。
+
+    先按原实体匹配;无命中且存在 canonical 实体(同一构念的 canonical 结局,
+    由 variable_map.outcome_alias 解析)时按 canonical 重匹配。返回
+    (signals, aliased):aliased=True 表示本次命中经由变体规范化,审计可辨。
+    """
+    sigs = match_rules(rules, a_ent, b_ent) if b_ent is not None else []
+    if sigs or canonical_ent is None or canonical_ent is b_ent:
+        return sigs, False
+    sigs2 = match_rules(rules, a_ent, canonical_ent)
+    return sigs2, bool(sigs2)

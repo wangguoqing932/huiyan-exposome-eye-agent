@@ -46,6 +46,7 @@ Run: python scripts/render_locked_figures.py            (all six)
 from __future__ import annotations
 
 import argparse
+import sys
 import csv
 import math
 from pathlib import Path
@@ -513,6 +514,11 @@ STEM = {1: "figure1_architecture", 2: "figure2_performance",
 
 
 def main() -> int:
+    print("[DEPRECATED] figures are rendered by scripts/render_top_figures.py; delegating.")
+    import subprocess
+    return subprocess.call([sys.executable, str(ROOT / "scripts" / "render_top_figures.py")])
+
+def _legacy_main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", type=int)
     a = ap.parse_args()

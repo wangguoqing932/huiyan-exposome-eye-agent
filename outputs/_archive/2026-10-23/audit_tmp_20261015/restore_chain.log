@@ -1,0 +1,126 @@
+﻿start 2026-10-15T10:27:28
+##### evaluate_knhanes
+
+============================================================
+KNHANES confirmatory (analysis_plan v1.1)
+============================================================
+frame: n=38426, waves=10
+[audit] 1 A-level pair(s) with OR<1 flagged direction_review (plan §4 standard):
+    current_smoking x cataract_any: OR=0.971 [ns (q=1.00)]
+[metrics] D5: excluded 6 non-judgeable pairs
+{
+  "rule_pairs_tested": 10,
+  "replicated": 2,
+  "contradicted": 0,
+  "uninformative": 8,
+  "separation": 0,
+  "precision_rule": 1.0,
+  "precision_rule_ci95": [
+    0.158,
+    1.0
+  ],
+  "coverage": 0.233,
+  "uncovered_significant": 1,
+  "uncovered_pairs": 33,
+  "negative_control_pairs": 0,
+  "negative_control_outcome": {}
+}
+--> evaluate_knhanes exit=0 3s
+##### evaluate_charls
+
+============================================================
+CHARLS confirmatory (analysis_plan v1.1)
+============================================================
+frame: n=17222
+[audit] 1 A-level pair(s) with OR<1 flagged direction_review (plan §4 standard):
+    current_smoking x cataract_any: OR=0.657 [ns (q=0.82)]
+{
+  "rule_pairs_tested": 4,
+  "replicated": 0,
+  "contradicted": 0,
+  "uninformative": 4,
+  "separation": 0,
+  "precision_rule": null,
+  "precision_rule_ci95": [
+    null,
+    null
+  ],
+  "coverage": 0.308,
+  "uncovered_significant": 0,
+  "uncovered_pairs": 9,
+  "negative_control_pairs": 1,
+  "negative_control_outcome": {
+    "uninformative": 1
+  }
+}
+--> evaluate_charls exit=0 1s
+##### evaluate_charls2015
+
+============================================================
+CHARLS 2015 temporal validation (analysis_plan §16)
+============================================================
+frame: n=19736
+{
+  "rule_pairs_tested": 3,
+  "replicated": 0,
+  "contradicted": 0,
+  "uninformative": 3,
+  "separation": 0,
+  "precision_rule": null,
+  "precision_rule_ci95": [
+    null,
+    null
+  ],
+  "coverage": 0.273,
+  "uncovered_significant": 0,
+  "uncovered_pairs": 8,
+  "negative_control_pairs": 1,
+  "negative_control_outcome": {
+    "uninformative": 1
+  }
+}
+system: {"system_G0": {"TP": 0, "FP": 4, "FN": 0, "P": null, "R": null, "F1": 0.0}, "system_G2": {"TP": 0, "FP": 3, "FN": 0, "P": null, "R": null, "F1": 0.0}}
+--> evaluate_charls2015 exit=0 1s
+##### survey_export
+[export] NHANES judgeable tested pairs: 80
+[export] KNHANES design cols: strata=kstrata, psu=psu, weight=wt_itvex
+[export] KNHANES judgeable tested pairs: 49
+--> survey_export exit=0 7s
+##### survey_R_svyglm
+Rscript.exe : During startup - Warning message:
+所在位置 行:4 字符: 90
++ ... t-File $log -Append -Encoding utf8; $t=Get-Date; & $e @a *>&1 | Out-F ...
++                                                      ~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (During startup - Warning message::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Setting LC_CTYPE=C.UTF-8 failed 
+survey sensitivity: 129 pairs written to outputs/confirmatory/survey_sensitivity_R5.csv
+  fits failed: 0
+  pairs with survey p<0.05: 34
+--> survey_R_svyglm exit=0 14s
+##### apply_survey_var
+[metrics] D5: excluded 18 non-judgeable pairs from denominator
+[metrics] D5: excluded 18 non-judgeable pairs from denominator
+== nhanes headline (survey) ==
+{"rule_pairs_tested": 14, "replicated": 5, "contradicted": 0, "uninformative": 9, "separation": 0, "precision_rule": 1.0, "precision_rule_ci95": [0.478, 1.0], "coverage": 0.23, "uncovered_significant": 2, "uncovered_pairs": 47, "negative_control_pairs": 1, "variance_standard": "survey svyglm (analysis_plan §6, pre-registered)", "note": "R5 2026-10-14: headline labels use survey-design variance (svyglm strata/PSU, scripts/survey_sensitivity_R5.R); the Python freq_weights GLM is retained as sensitivity. q_svy computed over all tested pairs (same BHY denominator as main analysis)."}
+predicted-pair label changes vs freq_weights: 2
+  bmi_high x retinopathy_any: replicated -> uninformative
+  bmi_high x dr_npdr: replicated -> uninformative
+[metrics] D5: excluded 6 non-judgeable pairs from denominator
+[metrics] D5: excluded 6 non-judgeable pairs from denominator
+== knhanes headline (survey) ==
+{"rule_pairs_tested": 10, "replicated": 2, "contradicted": 0, "uninformative": 8, "separation": 0, "precision_rule": 1.0, "precision_rule_ci95": [0.158, 1.0], "coverage": 0.233, "uncovered_significant": 1, "uncovered_pairs": 33, "negative_control_pairs": 0, "variance_standard": "survey svyglm (analysis_plan §6, pre-registered)", "note": "R5 2026-10-14: headline labels use survey-design variance (svyglm strata/PSU, scripts/survey_sensitivity_R5.R); the Python freq_weights GLM is retained as sensitivity. q_svy computed over all tested pairs (same BHY denominator as main analysis)."}
+predicted-pair label changes vs freq_weights: 0
+--> apply_survey_var exit=0 1s
+##### rebuild_deliverables
+[gap] common=48 concordant=29 cov_gap=-0.003
+[tables] performance_matrix / performance_by_dataset / dataset_summary updated
+--> rebuild_deliverables exit=0 0s
+##### paper_tables
+[gen] registry_summary.csv: A=41/18 B=15/15
+[gen] rule_list.csv: 21 rules
+[gen] validation_distribution.csv: ['NHANES', 'KNHANES', 'CHARLS'] rule 前三态 [(np.int64(5), np.int64(0), np.int64(9)), (np.int64(2), np.int64(0), np.int64(8)), (np.int64(0), np.int64(0), np.int64(4))]
+[tables] performance_matrix / performance_by_dataset / dataset_summary 校验通过（写者：rebuild_deliverables_R5.py + make_baseline_summary_R5.py）
+--> paper_tables exit=0 0s
+end 2026-10-15T10:27:56

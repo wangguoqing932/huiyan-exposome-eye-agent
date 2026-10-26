@@ -17,17 +17,19 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
 SEC = ROOT / "outputs" / "paper" / "sections"
 PAPER = ROOT / "outputs" / "paper"
 
 TITLE = (
-    "Even age does not transport: a pooled multi-cohort exposome estimate "
-    "describes no population, in 285,878 participants and 21 "
-    "literature-derived rules"
+    "An explainable rule-knowledge-graph-LLM agent for exposome-eye risk "
+    "stratification: strong benchmarks, operable reports, limited rule "
+    "transportability"
 )
 
 ORDER = [
@@ -47,13 +49,9 @@ ORDER = [
 TABLES = [
     ("table1_registry.md", "Table 1"),
     ("table2_rules.md", "Table 2"),
-    ("table3_performance.md", "Table 3"),
-    ("table4_validation.md", "Table 4"),
-    ("table5_heterogeneity.md", "Table 5"),
-    ("table6_power.md", "Table 6"),
-    ("table7_evidence_audit.md", "Table 7"),
+    ("table3_performance_by_dataset.md", "Table 3"),
+    ("table4_transportability.md", "Table 4"),
 ]
-
 
 def sha(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()[:16]
@@ -70,9 +68,9 @@ def strip_h1(text: str) -> str:
 
 
 def main() -> int:
-    parts = [f"# {TITLE}", "",
-             "**Running title:** Transportability of exposome rules for eye disease",
-             "", "---", ""]
+    body = [f"# {TITLE}", "",
+            "**Running title:** Transportability of exposome rules for eye disease",
+            "", "---", ""]
     manifest = {"assembled_on": str(date.today()), "title": TITLE,
                 "sections": [], "tables": [], "missing": []}
 
@@ -81,25 +79,51 @@ def main() -> int:
         if not fp.exists():
             manifest["missing"].append(key)
             continue
-        body = strip_h1(fp.read_text(encoding="utf-8"))
+        text = strip_h1(fp.read_text(encoding="utf-8"))
         # ALWAYS emit the section heading. An earlier version tested
-        # `body.startswith("#")` to decide whether one was needed; after
+        # `text.startswith("#")` to decide whether one was needed; after
         # strip_h1 the body begins with "## Subsection", which also satisfies
         # that test, so the Methods and Discussion headings silently vanished
         # from the assembled manuscript. The QC caught it.
-        parts += [f"# {heading}", "", body, "", "---", ""]
+        body += [f"# {heading}", "", text, "", "---", ""]
         manifest["sections"].append(
             {"section": key, "bytes": fp.stat().st_size, "sha256_16": sha(fp)})
 
-    lg = PAPER / "figure_legends.md"
+    # Citations live as [Cxxx] codes in the section files. Renumber them in
+    # first-appearance order and render the Vancouver block here, in memory,
+    # so that re-assembly cannot ship uncited codes or drop the References
+    # section. build_references.py documents this as the 7_8 integration point.
+    prose = "\n".join(body).rstrip() + "\n"
+    if "--no-references" not in sys.argv:
+        import build_references as br  # scripts/ is on sys.path
+        pool_path = br.resolve_pool(PAPER / "manuscript.md", None)
+        pool, _schema = br.load_pool(pool_path)
+        raw_dir = br.resolve_raw_dir(PAPER / "manuscript.md", None)
+        br.enrich_pool(pool, br.load_enrichment(raw_dir))
+        processed = br.process_text(prose, pool, max_authors=6,
+                                    audit_comments=True,
+                                    source="assemble_manuscript.py")
+        prose = (processed.text.rstrip() + "\n\n"
+                 + processed.references.rstrip() + "\n\n---\n\n")
+        refs = processed.references.rstrip() + "\n"
+        manifest["sections"].append(
+            {"section": "references", "bytes": len(refs.encode("utf-8")),
+             "sha256_16": hashlib.sha256(refs.encode("utf-8")).hexdigest()[:16]})
+    parts = [prose]
+
+    lg = PAPER / "figure_legends_main.md"
     if lg.exists():
         # KEEP the legends heading. strip_h1 was applied here too, which removed
         # "# Figure Legends" from the assembled manuscript and left the
         # Discussion running straight into the legends with no structural
         # separator -- a journal needs the boundary, and it also made the word
         # count unable to tell prose from legends.
+        # The Chinese mirror in figure_legends.md is an internal reading aid,
+        # not part of the submission manuscript. Keep the assembled paper
+        # English-only.
+        lg_text = lg.read_text(encoding="utf-8").split("# 图例（中文）")[0]
         parts += ["# Figure Legends", "",
-                  strip_h1(lg.read_text(encoding="utf-8")), "", "---", ""]
+                  strip_h1(lg_text), "", "---", ""]
         manifest["sections"].append(
             {"section": "figure_legends", "bytes": lg.stat().st_size,
              "sha256_16": sha(lg)})
@@ -119,6 +143,7 @@ def main() -> int:
 
     out = PAPER / "manuscript.md"
     out.write_text("\n".join(parts).rstrip() + "\n", encoding="utf-8")
+    manifest["assembled_bytes"] = out.stat().st_size
     (PAPER / "manuscript_assembly_manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 

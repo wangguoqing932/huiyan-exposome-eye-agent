@@ -44,7 +44,7 @@ panels:
       OR/SD: HbA1c-retinopathy 1.96 NHANES / 1.98 KNHANES) down to the
       around-null behavioural pairs (serum cotinine-cataract 0.92, BMI-cataract
       1.03 NHANES) and the opposite-direction lipid rows (total cholesterol
-      -retinopathy 0.71 KNHANES). Rows with q<0.05 carry a significance marker.
+      -retinopathy 0.71 KNHANES). Point colour encodes the confirmatory result: brick = q<0.05 and OR>1, teal = q<0.05 and OR<1, grey = not significant; dashed line at OR = 1.
     plot_type: forest
     x_axis: OR per 1 SD (95% CI)
     annotations:

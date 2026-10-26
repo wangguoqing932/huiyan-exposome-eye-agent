@@ -1,104 +1,228 @@
 {
-  "schema_version": "v3.0",
-  "phases": {
-    "7_1": {
-      "status": "confirmed",
-      "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-19",
-      "artifacts": [
-        "outputs/paper/figure_table_qc_report.md"
-      ],
-      "confirmed_at": "2026-10-20",
-      "note": "作者确认：图表 QC 重跑 PASS（8 图契约 / 6 主图+S1S2 / 9 表 / 6 交付 CSV）"
+ "schema_version": "v3.0",
+ "phases": {
+  "7_1": {
+   "status": "awaiting_author_confirmation",
+   "begun_at": "2026-10-15",
+   "submitted_at": "2026-10-23",
+   "artifacts": [
+    "outputs/paper/figure_table_qc_report.md"
+   ],
+   "confirmed_at": "2026-10-20",
+   "note": "R29：主稿表从 10 张减到 4 张（cohorts / rules / performance by dataset / transportability），6 张移入 Supplement；主图从 8 张减到 6 张（S1/S2 移入 Supplement）。待作者复核。",
+   "change_requests": [
+    {
+     "date": "2026-10-23",
+     "note": "R21 合规修复：产物在确认后被修正（figure2 源数据/契约/图例；sections 回写与 7_8 重装配；四库计数更正），按 skill 硬门要求重过作者确认"
     },
-    "7_2": {
-      "status": "confirmed",
-      "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-19",
-      "artifacts": [
-        "outputs/paper/figure_legends.md"
-      ],
-      "confirmed_at": "2026-10-20",
-      "note": "作者确认：图例数字按 R11 更正金标准更新（F1 0.522；A 级复现 0/1）"
+    {
+     "date": "2026-10-23",
+     "note": "R23 作者指令：正文压缩到 6,462 词（方法 3,662→1,687；结果/讨论同步收紧；细节移入 Supplementary S0/S9），图/图例在 R22 修复后未再变，按硬门重新提交待作者复核"
     },
-    "7_3": {
-      "status": "confirmed",
-      "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-19",
-      "artifacts": [
-        "outputs/paper/figure_prompts.md"
-      ],
-      "confirmed_at": "2026-10-20",
-      "note": "作者确认：提示词编号改为 Figure S2，配色覆盖 Figure 1-6 与 S1-S2"
-    },
-    "7_4": {
-      "status": "confirmed",
-      "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-19",
-      "artifacts": [
-        "outputs/paper/sections/results.md"
-      ],
-      "confirmed_at": "2026-10-20",
-      "note": "作者确认：Table 5b 两阶段列改为 Cochran Q（r12 0.0273 / r13 0.0272；one-step 0.141/0.149），Results 重复内联表已删",
-      "change_requests": [
-        {
-          "date": "2026-10-19",
-          "note": "Table 5b 两阶段列取错变量已修（见 docs/AGENT_AUDIT.md §三十六）；等待作者复核 r13/r12 的新表述。"
-        }
-      ]
-    },
-    "7_5": {
-      "status": "confirmed",
-      "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-19",
-      "artifacts": [
-        "outputs/paper/sections/methods.md"
-      ],
-      "confirmed_at": "2026-10-20",
-      "note": "作者确认：Methods 补 Figure 1 / Table 1b 正文引用"
-    },
-    "7_6": {
-      "status": "confirmed",
-      "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-15",
-      "artifacts": [
-        "outputs/paper/sections/introduction.md"
-      ],
-      "confirmed_at": "2026-10-15",
-      "note": "代理确认（AGENT 代为确认）。Introduction 4,834 B，引用 6 条全部来自核验池（池外引用 0）。写作中自查发现并修正了一处规则6违规：初稿写了青光眼'2040年超过1亿人'等具体数字但未取摘要；取回摘要后确认 (1) C016 实为评论而非负担原始文献 (2) C022 摘要不支持'上升最快' (3) C023 无摘要可取，按规则6删去其数字仅按主题引用。另修正 failed_claims 从手工累加改为从条目派生（原列表误含4条已解决项，会导致稿子不引用它手上拥有的文献）。 ｜ 2026-10-19 作者追认此前 AGENT 代理确认（本轮产物未改动）。"
-    },
-    "7_7": {
-      "status": "confirmed",
-      "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-15",
-      "artifacts": [
-        "outputs/paper/sections/discussion.md"
-      ],
-      "confirmed_at": "2026-10-15",
-      "note": "代理确认（AGENT 代为确认）。Discussion 12,522 B / 8 节（含独立 Conclusion 小节）。核心论点：可迁移性不能靠数复现队列数建立；合并不解决方向冲突而是掩盖冲突（r10 合并 OR 0.84 描述的是没有任何一个被研究人群）；约束是测量不是样本量。r10 三种解释逐一定标证据状态：选择性存活（该解释预测保护向随年龄增强，但元回归 p=0.52 未观察到梯度，故未获证实）、未测混杂（E-value 1.46-2.01，强度 1.5-2 的混杂即足够）、真实效应修饰（唯一能支持人群特定规则的，也是本设计最无法检验的）。明确声明不偏好任何一种解释。Limitations 写明'实际达到的独立性'：队列彼此独立且独立于 NHANES/KNHANES/CHARLS，但与产生规则的文献不独立。引用 6 条全部来自核验池，池外 0 处；24 条池内条目已全部被引用。 ｜ 2026-10-19 作者追认此前 AGENT 代理确认（本轮产物未改动）。"
-    },
-    "7_8": {
-      "status": "confirmed",
-      "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-15",
-      "artifacts": [
-        "outputs/paper/manuscript.md"
-      ],
-      "confirmed_at": "2026-10-15",
-      "note": "2026-10-19 重新组装：137,288 B，含 References（27 条，Vancouver 顺序，全部 cross_verified/0 撤稿）、9 张表、8 个图例（6 主 + S1/S2）；装配清单逐源 SHA 与引用编号/范围审计通过（qc_english_manuscript.py 20/20；verify_results_numbers.py 70/70）。"
-    },
-    "7_9": {
-      "status": "awaiting_author_confirmation",
-      "begun_at": "2026-10-15",
-      "submitted_at": "2026-10-19",
-      "artifacts": [
-        "outputs/submission/journal_guidelines_snapshot.md",
-        "outputs/submission/supplementary_material.md",
-        "outputs/submission/supplementary_manifest.json"
-      ],
-      "note": "2026-10-19：7_9 覆盖脚本运行并正确拒绝打包——唯一阻塞项是作者侧：cover_letter.md 仍有 5 处未填字段（[Date]/[Journal name]/[journal]/[Corresponding author]/[Affiliation]）；作者 2026-10-19 明确暂不指定期刊、不提供作者信息。期刊限额如实记为未获取（Ophthalmology 官网 403；本地清单无该刊条目）。旧版 submission 文件已移至 outputs/submission/_superseded_20261019/，避免误投。作者补齐信息后重跑 build_submission_pkg.py 即可生成 zip+manifest。"
+    {
+     "date": "2026-10-23",
+     "note": "R29 作者要求正文 4 表、最多 6 图；表格与图件范围变化，按硬门重新提交"
     }
+   ]
   },
-  "_updated": "2026-10-19",
-  "_note": "2026-10-19 合规修复轮：作者门在 7_1/7_2/7_4/7_5 重新打开，因为对应产物在代理确认后又被修正/重生成；7_9 停在作者侧（目标期刊与通讯作者信息，作者 2026-10-19 明确暂不提供）。全部确认均需作者本人复核后由 author_gate.py 写入。"
+  "7_2": {
+   "status": "awaiting_author_confirmation",
+   "begun_at": "2026-10-15",
+   "submitted_at": "2026-10-23",
+   "artifacts": [
+    "outputs/paper/figure_legends.md"
+   ],
+   "confirmed_at": "2026-10-20",
+   "note": "R29：图例拆为 figure_legends_main.md（Figure 1–6，主稿）与 figure_legends_supp.md（S1/S2，Supplement）；待作者复核。",
+   "change_requests": [
+    {
+     "date": "2026-10-23",
+     "note": "R21 合规修复：产物在确认后被修正（figure2 源数据/契约/图例；sections 回写与 7_8 重装配；四库计数更正），按 skill 硬门要求重过作者确认"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R23 作者指令：正文压缩到 6,462 词（方法 3,662→1,687；结果/讨论同步收紧；细节移入 Supplementary S0/S9），图/图例在 R22 修复后未再变，按硬门重新提交待作者复核"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R29 主图减到 6 张，S1/S2 移入 Supplement；图例拆分后重新提交"
+    }
+   ]
+  },
+  "7_3": {
+   "status": "confirmed",
+   "begun_at": "2026-10-15",
+   "submitted_at": "2026-10-19",
+   "artifacts": [
+    "outputs/paper/figure_prompts.md"
+   ],
+   "confirmed_at": "2026-10-20",
+   "note": "作者确认：提示词编号改为 Figure S2，配色覆盖 Figure 1-6 与 S1-S2"
+  },
+  "7_4": {
+   "status": "awaiting_author_confirmation",
+   "begun_at": "2026-10-15",
+   "submitted_at": "2026-10-23",
+   "artifacts": [
+    "outputs/paper/sections/results.md"
+   ],
+   "confirmed_at": "2026-10-20",
+   "note": "R29：Table 引用重映射——主表 1 cohorts、2 rules、3 performance by dataset、4 transportability；Table 1b/3/4/5b/6/7 改为 Supplementary Tables S1–S6；S1/S2 改为 Supplementary Figures。待作者复核。",
+   "change_requests": [
+    {
+     "date": "2026-10-19",
+     "note": "Table 5b 两阶段列取错变量已修（见 docs/AGENT_AUDIT.md §三十六）；等待作者复核 r13/r12 的新表述。"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R21 合规修复：产物在确认后被修正（figure2 源数据/契约/图例；sections 回写与 7_8 重装配；四库计数更正），按 skill 硬门要求重过作者确认"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R23 作者指令：正文压缩到 6,462 词（方法 3,662→1,687；结果/讨论同步收紧；细节移入 Supplementary S0/S9），图/图例在 R22 修复后未再变，按硬门重新提交待作者复核"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R25 作者指令：叙事改为“agent 强且可用/多数据集优于基线→规则层可转运性教训”；Results 增 KNHANES 系统性能段并调整顺序，按硬门重新提交"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R26 作者反馈：摘要列了五个验证目标和四个层级，Results 必须逐项给出核心结果；已新增总览段并补全界面/追溯与文献逐库数字，按硬门重新提交"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R27 作者要求先读 medical-agent-writer 写作规范；按 imrad_playbook 的 dataset-centric Results 结构重排，补 architecture/development/case/generalization gap/expert-panel 说明，按硬门重新提交"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R29 正文表/图数量调整，Results 的 Table/Figure 引用同步重映射，按硬门重新提交"
+    }
+   ]
+  },
+  "7_5": {
+   "status": "awaiting_author_confirmation",
+   "begun_at": "2026-10-15",
+   "submitted_at": "2026-10-23",
+   "artifacts": [
+    "outputs/paper/sections/methods.md"
+   ],
+   "confirmed_at": "2026-10-20",
+   "note": "R29：Methods 的 Table 7 引用改为 Supplementary Table S6；其余方法学内容未变。待作者复核。",
+   "change_requests": [
+    {
+     "date": "2026-10-23",
+     "note": "R23 作者指令：正文压缩到 6,462 词（方法 3,662→1,687；结果/讨论同步收紧；细节移入 Supplementary S0/S9），图/图例在 R22 修复后未再变，按硬门重新提交待作者复核"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R28 作者要求全文按 skill 重写；Methods 按 imrad_playbook 结构重写，按硬门重新提交"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R29 表格移入 Supplement，Methods 引用同步；重新提交"
+    }
+   ]
+  },
+  "7_6": {
+   "status": "awaiting_author_confirmation",
+   "begun_at": "2026-10-15",
+   "submitted_at": "2026-10-23",
+   "artifacts": [
+    "outputs/paper/sections/introduction.md"
+   ],
+   "confirmed_at": "2026-10-15",
+   "note": "R28 全文重写：Introduction 按 gap→prior art→approach→contribution→outline 五段重写，保留全部核验引用（C016/C021-C023/C020/C018）。待作者复核。",
+   "change_requests": [
+    {
+     "date": "2026-10-23",
+     "note": "R23 作者指令：正文压缩到 6,462 词（方法 3,662→1,687；结果/讨论同步收紧；细节移入 Supplementary S0/S9），图/图例在 R22 修复后未再变，按硬门重新提交待作者复核"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R28 作者要求全文按 skill 重写；Introduction 按 imrad_playbook 五段结构重写，按硬门重新提交"
+    }
+   ]
+  },
+  "7_7": {
+   "status": "awaiting_author_confirmation",
+   "begun_at": "2026-10-15",
+   "submitted_at": "2026-10-23",
+   "artifacts": [
+    "outputs/paper/sections/discussion.md"
+   ],
+   "confirmed_at": "2026-10-15",
+   "note": "R29：Discussion 的 Table 6 引用改为 Supplementary Table S5；其余讨论内容未变。待作者复核。",
+   "change_requests": [
+    {
+     "date": "2026-10-23",
+     "note": "R21 合规修复：产物在确认后被修正（figure2 源数据/契约/图例；sections 回写与 7_8 重装配；四库计数更正），按 skill 硬门要求重过作者确认"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R23 作者指令：正文压缩到 6,462 词（方法 3,662→1,687；结果/讨论同步收紧；细节移入 Supplementary S0/S9），图/图例在 R22 修复后未再变，按硬门重新提交待作者复核"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R25 作者指令：Discussion/Conclusion 按“强 agent→规则层教训”重排；新增 usability 局限，按硬门重新提交"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R28 作者要求全文按 skill 重写；Discussion 按 imrad_playbook 五段+Conclusion 结构重写，按硬门重新提交"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R29 表格移入 Supplement，Discussion 引用同步；重新提交"
+    }
+   ]
+  },
+  "7_8": {
+   "status": "awaiting_author_confirmation",
+   "begun_at": "2026-10-15",
+   "submitted_at": "2026-10-23",
+   "artifacts": [
+    "outputs/paper/manuscript.md"
+   ],
+   "confirmed_at": "2026-10-15",
+   "note": "2026-10-23 R30：95,710 B；正文（builder 口径）9,772 词；abstract 412 词（冻结 sha fa008fdeb7…）；References 27；4 表 + 6 主图；41 页、0 中文；qc 20/20、verify 70/70；栅格预览 PDF 已重建。",
+   "change_requests": [
+    {
+     "date": "2026-10-23",
+     "note": "R25 叙事重构导致装配稿、标题、摘要、Results/Discussion/Conclusion 变化，7_8 重新提交待作者确认"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R26 Results 新增五目标核心结果总览、四层级标注、界面/追溯案例与文献逐库数字；装配稿重新生成，7_8 重新提交待作者确认"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R27 Results dataset-centric 重排导致装配稿变化；7_8 重新提交待作者确认"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R28 Introduction/Methods/Discussion 全文重写导致装配稿变化；7_8 重新提交待作者确认"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R29 正文压缩为 4 表/6 图并重装配；7_8 重新提交待作者确认"
+    },
+    {
+     "date": "2026-10-23",
+     "note": "R30 多视角审稿修正后重新装配；摘要冻结未动"
+    }
+   ]
+  },
+  "7_9": {
+   "status": "awaiting_author_confirmation",
+   "begun_at": "2026-10-15",
+   "submitted_at": "2026-10-19",
+   "artifacts": [
+    "outputs/submission/journal_guidelines_snapshot.md",
+    "outputs/submission/supplementary_material.md",
+    "outputs/submission/supplementary_manifest.json"
+   ],
+   "note": "2026-10-19：7_9 覆盖脚本运行并正确拒绝打包——唯一阻塞项是作者侧：cover_letter.md 仍有 5 处未填字段（[Date]/[Journal name]/[journal]/[Corresponding author]/[Affiliation]）；作者 2026-10-19 明确暂不指定期刊、不提供作者信息。期刊限额如实记为未获取（Ophthalmology 官网 403；本地清单无该刊条目）。旧版 submission 文件已移至 outputs/submission/_superseded_20261019/，避免误投。作者补齐信息后重跑 build_submission_pkg.py 即可生成 zip+manifest。"
+  }
+ },
+ "_updated": "2026-10-23",
+ "_note": "R21（2026-10-23）合规复审：修复 figure2 数据/契约/图例链、恢复 sections→manuscript 溯源、更正四库计数，并按 skill 硬门把 7_1/7_2/7_4/7_7 重新提交作者确认；7_5/7_6/7_8 confirmed，7_9 仍阻塞于作者侧期刊/作者字段。"
 }

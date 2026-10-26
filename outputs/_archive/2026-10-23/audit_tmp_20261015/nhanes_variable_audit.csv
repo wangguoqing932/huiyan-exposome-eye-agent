@@ -1,0 +1,45 @@
+﻿variable,role,found_in_modules,loaded_by_evaluate
+LBXSUA,uric_acid_elevated,BIOPRO,True
+LBXGL,hyperglycemia,NOT FOUND,False
+LBXSGL,hyperglycemia,BIOPRO,True
+DIQ010,hyperglycemia(dx branch),NOT FOUND,False
+LBXGH,hba1c_elevated,GHB,True
+LBXSCH,dyslipidemia,BIOPRO,True
+LBXSTR,dyslipidemia,BIOPRO,True
+LBDHDD,dyslipidemia,NOT FOUND,False
+LBDHDL,dyslipidemia,NOT FOUND,False
+LBDLDL,dyslipidemia,NOT FOUND,False
+LBXCRP,crp_elevated,CRP,True
+BMXBMI,bmi_high,BMX,True
+DR1TVC,low_antioxidant_intake,DR1TOT,True
+DR1TVE,low_antioxidant_intake,NOT FOUND,False
+DR1TLZ,low_antioxidant_intake,DR1TOT,True
+SMQ040,current_smoking,SMQ,True
+SMQ020,current_smoking(ref group),SMQ,True
+ALQ101,alcohol_intake,ALQ,True
+ALQ110,alcohol_intake(alt),ALQ,True
+ALQ120Q,current drinking,ALQ,True
+ALQ120U,current drinking unit,ALQ,True
+ALQ130,current drinking amount,ALQ,True
+LBXBPB,lead_exposure,PBCD,True
+VIQ071,cataract_any,VIQ,True
+VIDRVA,vision_impairment,VIX,True
+VIDLVA,vision_impairment,VIX,True
+OPDURL4,retinopathy_any/dr,OPXRET,True
+OPDUARM,amd_early,OPXRET,True
+OPDUPIGA,amd_early,OPXRET,True
+OPDULARM,amd_late,OPXRET,True
+OPDUGA,amd_late,OPXRET,True
+OPDUEXU,amd_late,OPXRET,True
+OPDDVCDR,glaucoma_suspect_cdr,OPXRET,True
+OPDSVCDR,glaucoma_suspect_cdr,OPXRET,True
+RIDAGEYR,covariate,DEMO,True
+RIAGENDR,covariate,DEMO,True
+RIDRETH1,covariate,DEMO,True
+INDFMPIR,covariate,DEMO,True
+DMDEDUC2,covariate,DEMO,True
+DMDEDUC3,covariate,DEMO,True
+WTMEC2YR,weight,DEMO,True
+SDMVSTRA,design strata,DEMO,True
+SDMVPSU,design PSU,DEMO,True
+LBXVIDMS,"vitamin_d_deficiency (rule r07, NOT implemented)",NOT FOUND,False

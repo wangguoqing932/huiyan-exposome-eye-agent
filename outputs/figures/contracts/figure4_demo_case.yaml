@@ -48,18 +48,17 @@ panels:
     annotations:
       - "Each rule annotated with literature PMID"
 
-  - id: panel_c_evidence_pyramid
+  - id: panel_c_evidence_levels
     role: primary
-    layout_template: dark_image_plate_repeated_views
+    layout_template: asymmetric_hero_panel
     layout: middle_right
-    title: "Evidence pyramid"
+    title: "Evidence levels"
     content: >-
-      Pyramid: top = Level A (regulatory), bottom = Level E (mechanism).
-      Each level shows retrieved chunk count + sample title.
-    plot_type: pyramid_stack
+      Horizontal bars for levels A (regulatory) through E (mechanism), showing
+      the number of retrieved evidence chunks at each level for this case:
+      A 0, B 2, C 1, D 0, E 0.
+    plot_type: bar
     levels: [A, B, C, D, E]
-    counts_from: evidence_chunks
-    sample_titles: true
 
   - id: panel_d_traceability
     role: primary
@@ -120,7 +119,7 @@ color_palette:
     D: "#ff6361"
     E: "#ffa600"   # amber — weakest
   note: >-
-    Evidence pyramid uses sequential viridis-like ramp to imply evidentiary
+    Evidence levels use a teal/navy ramp to imply evidentiary
     strength gradient.
 
 source_data:
@@ -163,7 +162,7 @@ legend:
 accessibility:
   alt_text: >-
     Four-panel case demonstration showing input summary, triggered rule bars,
-    evidence level pyramid, and traceability flow from inputs to final risk.
+    evidence-level bars, and traceability flow from inputs to final risk.
   color_blind_safe: true
 
 disposition: withdrawn

@@ -31,8 +31,8 @@ Percentages are of person-waves with the variable observed. Missingness is repor
 | CRELES | 0.0 | 0.0 | 31.2 | 0.5 | 4.4 | 1.7 | 100.0 | 100.0 |
 
 **Footnotes.**
-* **Frame coverage versus item non-response.** Where a variable is present, its missingness is genuine non-response — SHARE's smoking is 58.0% missing with the column present, while HRS's BMI is 100% missing because the frame carries no BMI column.
+* **Frame coverage versus item non-response.** Where a variable is present, its missingness is genuine non-response, SHARE's smoking is 58.0% missing with the column present, while HRS's BMI is 100% missing because the frame carries no BMI column.
 * **Age in CLHLS is a baseline value repeated across waves**, not a follow-up age: 92.74% of its participants have a single unique age across all their waves, so its mean is not comparable to the others and should not be read as an average age during follow-up. The frame defect is documented in `docs/GAP_ANALYSIS_20IF.md`.
-* **Diabetes is self-reported** in every cohort, so its prevalence reflects diagnosis rates rather than disease prevalence — the mechanism the paper demonstrates with the NHANES comparison.
+* **Diabetes is self-reported** in every cohort, so its prevalence reflects diagnosis rates rather than disease prevalence, the mechanism the paper demonstrates with the NHANES comparison.
 * **Cataract and vision impairment are absent from HRS, KLoSA and MHAS** in these frames, which is why the cohort layer tests only six rules: those cohorts cannot contribute a cataract or vision-impairment cell.
 * The BMI cut-point is 25 kg/m² for the Asian cohorts and 30 kg/m² otherwise, fixed by the prevalence gate before the confirmatory analysis.

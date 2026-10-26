@@ -1,0 +1,7 @@
+{
+ "four_level_accuracy": "N/A——金标准为三态关联标签,无四级风险金标准;强行构造将循环。skill 模板的其余指标(sens/spec/κ)已按原义计算。",
+ "pass_bars": {
+  "phase2": "sens>=0.70, spec>=0.60",
+  "phase3": "sens>=0.70, spec>=0.80"
+ }
+}

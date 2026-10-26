@@ -356,6 +356,9 @@ def main() -> int:
     a_reg = load_entity_a_registry()
     b_reg = load_entity_b_registry()
     a_idx, b_idx = _flag_index(a_reg), _flag_index(b_reg)
+    from huiyan_agent.risk_rules import match_rules_canonical
+    from huiyan_agent.variable_map import load_variable_map, outcome_alias
+    _B_ALIAS = outcome_alias(load_variable_map())
 
     # Covariates: age, age^2, sex + SES (edu / income quintile, present in every wave)
     cov = pd.DataFrame({
@@ -375,11 +378,14 @@ def main() -> int:
         for b_item, ovec in B.items():
             a_ent = a_idx.get(a_flag) or a_reg.get(a_flag)
             b_ent = b_idx.get(b_item) or b_reg.get(b_item)
+            # R16 结局变体规范化回退(variable_map.outcome_alias,构念同测量异)
+            _canon = _B_ALIAS.get(b_item)
+            canon_ent = (b_idx.get(_canon) or b_reg.get(_canon)) if _canon else None
             predicted, rule_ids, is_nc, direction = False, [], False, "risk_up"
-            if a_ent and b_ent:
-                sigs = match_rules(rules, a_ent, b_ent)
+            if a_ent and (b_ent or canon_ent):
+                sigs, aliased = match_rules_canonical(rules, a_ent, b_ent, canon_ent)
                 predicted = len(sigs) > 0
-                rule_ids = [s.rule_id for s in sigs]
+                rule_ids = [(("~" if aliased else "") + s.rule_id) for s in sigs]
                 by_id = {r.id: r for r in rules}
                 hit = [by_id[i] for i in rule_ids if i in by_id]
                 is_nc = any(r.negative_control for r in hit)

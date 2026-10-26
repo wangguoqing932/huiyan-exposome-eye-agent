@@ -1,0 +1,170 @@
+[
+ {
+  "rule": "r02",
+  "pmid": "42887482",
+  "type": "review",
+  "direction": "CONCORDANT",
+  "evidence": "WEAK",
+  "title": "Advancing nanomaterials for treatment of eye disea"
+ },
+ {
+  "rule": "r02",
+  "pmid": "42875224",
+  "type": "其他",
+  "direction": "不明确",
+  "evidence": "推断性",
+  "title": "Metreleptin improves glucose metabolism and hepati"
+ },
+ {
+  "rule": "r02",
+  "pmid": "42874931",
+  "type": "其他",
+  "direction": "不明确",
+  "evidence": "不相关",
+  "title": "Phenylboronate hydrogel for administration route t"
+ },
+ {
+  "rule": "r03",
+  "pmid": "42906788",
+  "type": "其他",
+  "direction": "不明确",
+  "evidence": "该论文是一项回顾性手术结局研究（行25G PPV后的SS-OCTA），未检验HbA1c/高血糖与视网膜病变的关系，因此既不支持也不反驳该观点。",
+  "title": "Quantitative Analysis of Retinal Thickness and Blo"
+ },
+ {
+  "rule": "r03",
+  "pmid": "42903758",
+  "type": "其他",
+  "direction": "不明确",
+  "evidence": "不明确",
+  "title": "Development and Internal Validation of a Risk Pred"
+ },
+ {
+  "rule": "r03",
+  "pmid": "42886725",
+  "type": "etiological",
+  "direction": "UNCLEAR",
+  "evidence": "low — 本研究主要报告早期 NPDR 的**消退**（regression），而主张涉及血糖控制与 DR **发生/进展**的方向虽概念上可兼容（血糖差→进",
+  "title": "Rates of nonproliferative diabetic retinopathy (NP"
+ },
+ {
+  "rule": "r04",
+  "pmid": "42906788",
+  "type": "type",
+  "direction": "DIRECTION",
+  "evidence": "EVIDENCE",
+  "title": "Quantitative Analysis of Retinal Thickness and Blo"
+ },
+ {
+  "rule": "r04",
+  "pmid": "42880465",
+  "type": "etiological",
+  "direction": "UNCLEAR",
+  "evidence": "WEAK",
+  "title": "Choroidal microvascular alterations on ultra-widef"
+ },
+ {
+  "rule": "r12",
+  "pmid": "42874931",
+  "type": "other",
+  "direction": "UNCLEAR",
+  "evidence": "NULL",
+  "title": "Phenylboronate hydrogel for administration route t"
+ },
+ {
+  "rule": "r13",
+  "pmid": "42888551",
+  "type": "其他",
+  "direction": "不明确",
+  "evidence": "无支持",
+  "title": "Presence of lower limb joint arthritis moderates t"
+ },
+ {
+  "rule": "r14",
+  "pmid": "42895906",
+  "type": "other",
+  "direction": "UNCLEAR",
+  "evidence": "该论文为微针给药治疗炎性/免疫介导性眼病的综述，未涉及铅暴露与白内障关系，无法为该声明提供支持或反驳证据。",
+  "title": "Microneedle-based drug delivery for inflammatory a"
+ },
+ {
+  "rule": "r14",
+  "pmid": "42894709",
+  "type": "review",
+  "direction": "UNCLEAR",
+  "evidence": "NULL",
+  "title": "Nd:YAG capsulotomy: an update."
+ },
+ {
+  "rule": "r14",
+  "pmid": "42864320",
+  "type": "other",
+  "direction": "UNCLEAR",
+  "evidence": "This paper examines EPHA2 mutations causing dysosteosclerosis, not lead exposure",
+  "title": "Bi-allelic EPHA2 mutations cause dysosteosclerosis"
+ },
+ {
+  "rule": "r14",
+  "pmid": "42888551",
+  "type": "other",
+  "direction": "UNCLEAR",
+  "evidence": "etiological",
+  "title": "Presence of lower limb joint arthritis moderates t"
+ },
+ {
+  "rule": "r14",
+  "pmid": "42887482",
+  "type": "review",
+  "direction": "UNCLEAR",
+  "evidence": "NULL",
+  "title": "Advancing nanomaterials for treatment of eye disea"
+ },
+ {
+  "rule": "r16",
+  "pmid": "42471134",
+  "type": "type",
+  "direction": "DIRECTION",
+  "evidence": "EVIDENCE",
+  "title": "Ambient air pollution and glaucoma among middle-ag"
+ },
+ {
+  "rule": "r20",
+  "pmid": "42888377",
+  "type": "其他",
+  "direction": "相符",
+  "evidence": "生态学/横断面GBD协变量分析（线性相关），非前瞻性队列；支持吸烟与VI患病率正相关，但证据等级有限，与B/medium偏高的风险升向方向一致。",
+  "title": "Global and Regional Risk Factors for Vision Impair"
+ },
+ {
+  "rule": "r20",
+  "pmid": "42881068",
+  "type": "etiological",
+  "direction": "UNCLEAR",
+  "evidence": "NULL",
+  "title": "Changes in modifiable dementia risk factors and su"
+ },
+ {
+  "rule": "r22",
+  "pmid": "42905300",
+  "type": "review",
+  "direction": "UNCLEAR",
+  "evidence": "该文为GLP-1RA安全性叙述性综述，未直接报告肥胖与DR风险的关联数据，无法支持或反驳该暴露-结局关系。",
+  "title": "Decoding the Safety Profile of GLP-1 Receptor Agon"
+ },
+ {
+  "rule": "r22",
+  "pmid": "42896455",
+  "type": "etiological",
+  "direction": "UNCLEAR",
+  "evidence": "该论文评估的是睡眠时长与 T2DM 微血管并发症（DR）的前瞻关联，未涉及 BMI/肥胖暴露，无法支持或反驳所声称的肥胖-DR 关系。",
+  "title": "Sleep duration and risk of microvascular complicat"
+ },
+ {
+  "rule": "r22",
+  "pmid": "42890826",
+  "type": "type",
+  "direction": "DIRECTION",
+  "evidence": "EVIDENCE",
+  "title": "Semaglutide Use and Risk of Diabetic Retinopathy a"
+ }
+]

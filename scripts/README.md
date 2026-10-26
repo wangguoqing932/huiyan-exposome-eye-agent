@@ -14,7 +14,7 @@
 | run_baselines.py / make_baseline_summary_R5.py / make_baseline_summary_R11_goldcheck.py / make_baseline_bootstrap_ci.py | 基线(需 llama-server:8082 的档标注在 README) |
 | run_fused_system.py | G2 正式融合系统(G3/G4/G5 已归档 docs/archive_g3g4g5/) |
 | literature_validation.py | 文献层(search 需 NCBI,extract 需 LLM) |
-| generate_paper_tables.py / generate_paper_figures.py | 交付表(生成3+校验3)/图(figure3 反伪造跳过) |
+| generate_paper_tables.py / render_top_figures.py | 交付表(生成3+校验3)/8 张论文图(统一风格；旧 renderer 仅转发) |
 | synthetic_regression.py | **M1 合成效应注入回归**(已知真值评估面,pytest 可跑) |
 | build_lightrag_index.py | 索引重建(需 DeepSeek+Ark;索引已冻结 936MB) |
 | fetch_pubmed.py | 证据池增量抓取 |
@@ -29,7 +29,7 @@ agent_audit / agent_full_stack_test / agent_escalation_test(+regression) / agent
 
 ## D. 写作轮次一次性脚本(不动管道)
 
-record_* / verify_* / rebuild_table* / rebuild_all_tables / renumber_figures / render_locked_figures / render_manual_figures / withdraw_blank_figures / refine_figure_legends / fix_* / apply_framing_corrections / disclose_* / correct_* / update_* / extend_citation_pool_intro / fill_chinese_legends / build_citation_pool / assemble_manuscript / assemble_submission_zip / build_submission_package / build_cover_letter / build_supplementary / build_strobe_checklist / qc_english_manuscript / qc_figure_placeholders / image_integrity_screen / figure_inventory_stage0 / retitle_* / write_* / find_guideline_citations / fetch_journal_guidelines / verify_manuscript_numbers / verify_r2_claims / verify_results_numbers / verify_rule_citations*(PubMed 版需联网) / regrade_rules / regrade_cataract_rules / rule_evidence_grade_audit / rule_grade_* / evidence_base_audit / fix_evidence_level_ambiguity / append_ledger_round34 / extract_creles / build_phase7_9_artifacts / build_source_data_* / build_descriptive_table / build_table2 / build_table5b_ipd / make_baseline_* 已列 A。phase5_*.py.bak 为存档。
+record_* / verify_* / build_canonical_predictions / verify_canonical_predictions / build_references_docx / build_manuscript_docx / rebuild_table* / rebuild_all_tables / renumber_figures / render_top_figures / figure_style_top / withdraw_blank_figures / refine_figure_legends / fix_* / apply_framing_corrections / disclose_* / correct_* / update_* / extend_citation_pool_intro / fill_chinese_legends / build_citation_pool / assemble_manuscript / assemble_submission_zip / build_submission_package / build_cover_letter / build_supplementary / build_strobe_checklist / qc_english_manuscript / qc_figure_placeholders / image_integrity_screen / figure_inventory_stage0 / retitle_* / write_* / find_guideline_citations / fetch_journal_guidelines / verify_manuscript_numbers / verify_r2_claims / verify_results_numbers / verify_rule_citations*(PubMed 版需联网) / regrade_rules / regrade_cataract_rules / rule_evidence_grade_audit / rule_grade_* / evidence_base_audit / fix_evidence_level_ambiguity / append_ledger_round34 / extract_creles / build_phase7_9_artifacts / build_source_data_* / build_descriptive_table / build_table2 / build_table5b_ipd / make_baseline_* 已列 A。phase5_*.py.bak 为存档。
 
 ## 纪律
 

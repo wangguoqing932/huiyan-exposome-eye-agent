@@ -48,10 +48,13 @@ def _load(fig_id: str):
 
 
 def _save(fig, fig_id: str) -> None:
-    for ext in ("png", "pdf"):
-        fig.savefig(FIG / f"{fig_id}.{ext}", dpi=600, bbox_inches="tight")
+    for ext in ("png", "pdf", "svg", "tiff"):
+        kw = {"dpi": 600, "bbox_inches": "tight"}
+        if ext == "tiff":
+            kw["pil_kwargs"] = {"compression": "tiff_lzw"}
+        fig.savefig(FIG / f"{fig_id}.{ext}", **kw)
     plt.close(fig)
-    print(f"[render] {fig_id}.png / .pdf")
+    print(f"[render] {fig_id}.png / .pdf / .svg / .tiff")
 
 
 # ── Figure 1 ────────────────────────────────────────────────
@@ -112,48 +115,79 @@ def render_figure2() -> None:
     gs = fig.add_gridspec(2, 2, hspace=0.45, wspace=0.3)
 
     ax = fig.add_subplot(gs[0, 0])
-    v12 = perf[perf.ruleset == "v1.2"] if "ruleset" in perf.columns else perf
-    order = [m for m in ["full_system", "pure_llm", "lightrag", "naive_rag"]
-             if (v12.method == m).any()]
-    means = [v12[v12.method == m].F1.mean() for m in order]
-    stds = [v12[v12.method == m].F1.std() for m in order]
-    x = np.arange(len(order))
-    ax.bar(x, means, yerr=stds, capsize=2, width=0.6, color=C_PRIMARY,
-           ecolor="black", lw=0.6, error_kw={"lw": 0.6})
-    labels = ["full\n(v1.2)" if m == "full_system" else m for m in order]
-    v11_rows = perf[perf.method == "full_system_v1.1_replay"]
-    if len(v11_rows):  # v1.1 双呈义务:回放行存在时画影线柱(R12:源数据缺行时如实省略)
-        v11 = v11_rows.F1.iloc[0]
-        ax.bar([len(order)], [v11], width=0.6, color="white", edgecolor="black",
-               hatch="///", lw=0.8)
-        ax.set_xticks(list(x) + [len(order)])
-        labels.append("v1.1\nreplay")
-    else:
-        ax.set_xticks(list(x))
-    ax.set_xticklabels(labels, fontsize=6)
-    ax.set_ylabel("F1 (mean ± SD, 5 seeds)"); ax.set_ylim(0, 0.6)
-    for xi, m, s in zip(x, means, stds):
-        ax.text(xi, m + s + 0.015, f"{m:.3f}", ha="center", fontsize=5.5)
-    ax.set_title("a  NHANES 80 tested pairs (survey gold)", loc="left",
+    # R17 双代分组柱状:qwen 80 对 + zhipu 159 对,各 4 方法
+    gens = [("v1.2 (qwen, 80-pair gold)", "qwen|80-pair"),
+            ("v1.2 (zhipu GLM-5.3-flash, 159-pair gold)", "zhipu|159-pair")]
+    methods = [m for m in ["full_system", "lightrag", "pure_llm", "naive_rag"]
+               if (perf.method == m).any()]
+    labels = {"full_system": "full", "lightrag": "lightrag",
+              "pure_llm": "pure_llm", "naive_rag": "naive"}
+    xw = 0.19
+    group_x = np.arange(len(gens))
+    colors = [C_PRIMARY, C_SEC, C_TER, C_WARN]
+    xw = 0.19
+    group_x = np.arange(len(methods))
+    gen_colors = [C_PRIMARY, C_TER]
+    gen_labels = [g[1] for g in gens]
+    for gi, (rs_name, rs_label) in enumerate(gens):
+        gen = perf[perf.ruleset == rs_name]
+        if gen.empty:
+            continue
+        offs = (gi - 0.5) * xw * 2
+        vals = []
+        for m in methods:
+            row = gen[gen.method == m]
+            vals.append(float(row.F1_mean.iloc[0]) if len(row) else 0.0)
+        bars = ax.bar(group_x + offs, vals, width=xw, color=gen_colors[gi],
+                      ec="black", lw=0.5, label=rs_label)
+        for xi, v in zip(group_x + offs, vals):
+            if v > 0:
+                ax.text(xi, v + 0.012, f"{v:.2f}", ha="center", fontsize=4.6)
+    ax.set_xticks(group_x)
+    ax.set_xticklabels([labels[m] for m in methods], fontsize=6)
+    ax.set_ylabel("F1 (mean, 5 seeds)")
+    ax.set_ylim(0, 0.55)
+    ax.legend(fontsize=5, loc="upper right", framealpha=0.9)
+    ax.set_title("a  NHANES dual-generation baselines", loc="left",
                  fontsize=8, fontweight="bold")
 
     ax = fig.add_subplot(gs[0, 1])
     recs = [json.loads(l) for l in
             (ROOT / "outputs/baseline_predictions.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
-    fs = [r for r in recs if r["baseline"] == "full_system" and r["seed"] == 11]
+    # Panel b scores the primary (qwen, 80-pair) generation only. Pooling both
+    # generations would count 239 rows per seed and mix two different golds;
+    # the earlier version did exactly that. Gold comes from the R11-corrected
+    # confirmatory table, keyed on (a_flag, b_item).
+    qwen_pairs = {(r["a_flag"], r["b_item"]) for r in recs
+                  if r["baseline"] == "lightrag"
+                  and r["provider"] == "local:qwen3.8-27b"}
+    gold = pd.read_csv(ROOT / "outputs/confirmatory/nhanes_confirmatory.csv",
+                       encoding="utf-8-sig").drop_duplicates(
+                           ["a_flag", "b_item"]).set_index(
+                               ["a_flag", "b_item"])["gold3"].to_dict()
+    fs = {}
+    for r in recs:
+        if (r["baseline"] == "full_system" and r["seed"] == 11
+                and (r["a_flag"], r["b_item"]) in qwen_pairs):
+            fs.setdefault((r["a_flag"], r["b_item"]), r)
     states = ["replicated", "contradicted", "uninformative"]
-    mat = np.array([[sum(1 for r in fs if r["prediction"] and r["gold3"] == s) for s in states],
-                    [sum(1 for r in fs if not r["prediction"] and r["gold3"] == s) for s in states]])
+    mat = np.array([[sum(1 for k, r in fs.items()
+                         if r["prediction"] and gold.get(k, r["gold3"]) == s)
+                     for s in states],
+                    [sum(1 for k, r in fs.items()
+                         if not r["prediction"] and gold.get(k, r["gold3"]) == s)
+                     for s in states]])
     ax.imshow(mat, cmap="Blues", vmin=0, vmax=mat.max())
     for i in range(2):
         for j in range(3):
             ax.text(j, i, str(mat[i, j]), ha="center", va="center", fontsize=7,
                     color="white" if mat[i, j] > mat.max() * 0.6 else "black")
     ax.set_xticks(range(3))
-    ax.set_xticklabels(["replicated\n(5 rule +\n2 uncovered)", "contra-\ndicted", "uninformative"],
+    ax.set_xticklabels(["replicated", "contra-\ndicted", "uninformative"],
                        fontsize=5.5)
     ax.set_yticks(range(2)); ax.set_yticklabels(["predict YES", "predict NO"], fontsize=6)
-    ax.set_title("b  full_system × gold three-state", loc="left", fontsize=8, fontweight="bold")
+    ax.set_title("b  full_system × R11 gold (80 pairs)", loc="left",
+                 fontsize=8, fontweight="bold")
 
     ax = fig.add_subplot(gs[1, 0])
     conf = ROOT / "outputs/confirmatory"
@@ -175,7 +209,10 @@ def render_figure2() -> None:
                  fontweight="bold")
 
     ax = fig.add_subplot(gs[1, 1])
-    kg = [r["kg_chars"] for r in recs if r["baseline"] == "lightrag" and r.get("kg_chars")]
+    kg = [r["kg_chars"] for r in recs
+          if r["baseline"] == "lightrag"
+          and r["provider"] == "local:qwen3.8-27b"
+          and r.get("kg_chars")]
     ax.hist(kg, bins=30, color=C_SEC, ec="black", lw=0.4)
     ax.set_xlabel("retrieved KG context size (chars)", fontsize=6)
     ax.set_ylabel("runs (5 seeds × 80 pairs)", fontsize=6)
@@ -304,6 +341,11 @@ def render_figure5() -> None:
 
 
 def main() -> int:
+    print("[DEPRECATED] figures are rendered by scripts/render_top_figures.py; delegating.")
+    import subprocess
+    return subprocess.call([sys.executable, str(ROOT / "scripts" / "render_top_figures.py")])
+
+def _legacy_main() -> int:
     FIG.mkdir(parents=True, exist_ok=True)
     skip = []
     f3 = SD / "figure3_expert_agreement.csv"

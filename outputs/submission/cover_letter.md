@@ -1,81 +1,23 @@
-# Cover letter
+# Cover Letter
 
-> **DRAFT — the target journal is not yet fixed (author deferred the choice on
-> 2026-10-19).** The bracketed fields must be completed and the journal-specific
-> paragraph adapted before this is sent; packaging is blocked until then, by
-> design. The manuscript is framed for a general-medicine readership; the
-> previously configured target was *Ophthalmology*, which would call for a
-> different emphasis in paragraph 3.
-
-[Date]
-
-The Editors
-**[Journal name]**
+**Journal:** Journal of Medical Internet Research (J Med Internet Res)
+**Article type:** Original Paper
+**Title:** An explainable rule-knowledge-graph-LLM agent for exposome-eye risk stratification: strong benchmarks, operable reports, limited rule transportability
+**Authors:** Guoqing Wang¹,², Xianglong Yi¹,²,* (*corresponding; yixianglong1010@163.com)
 
 Dear Editors,
 
-We submit for your consideration a cross-cohort study of what happens when
-literature-derived exposome rules for eye disease are taken to populations that
-had no part in their construction. Its result is negative in a way we did not
-expect, and we lead with that rather than burying it.
+We submit our Original Paper "An explainable rule-knowledge-graph-LLM agent for exposome-eye risk stratification: strong benchmarks, operable reports, limited rule transportability" for consideration in J Med Internet Res.
 
-**What we did.** We assembled 21 exposure–outcome rules for major eye disease
-from the literature and evaluated them in eight population-based ageing cohorts
-on three continents, using raw source files only, under a three-state standard
-pre-specified before the analysis (replicated / contradicted / uninformative).
-Eighteen of the 168 possible (rule × cohort) cells were feasible, and six rules
-were testable anywhere.
+Why this fits JMIR:
 
-**What we found.** Before testing the rules we ran a positive control on
-associations nobody disputes. Age's association with cataract, pooled across the
-five cohorts that can estimate it, is OR 1.99 per decade with **I² = 99.2%** —
-more heterogeneous than any of the exposure rules, ranging from 1.15 in one
-cohort to 3.14 in another. We then resolved why, using NHANES 2005–2008, which
-measured the same people by self-report and by objective near-vision testing:
-self-reported cataract tracks age at OR 4.27 while objective acuity tracks it at
-1.32. **Self-report is therefore not the weak instrument we assumed it was.** The
-one cohort with a flat gradient is measuring the probability of having been
-diagnosed, and diagnosis tracks access to care.
+1. **A complete, deployable digital-health intervention was benchmarked as such.** Our explainable agent (deterministic rules + LightRAG knowledge graph + a constrained LLM arbiter) was evaluated with its full pipeline on an 80-pair NHANES benchmark (F1 = 0.571 vs LightRAG 0.392, pure LLM 0.335, naive RAG 0.080; accuracy McNemar significant against LightRAG and pure LLM), with the rule layer alone reported as an ablation, on external KNHANES (rule layer 0.360 vs 0.145/0.135/0.094), and with binary-collapsed discrimination metrics (internal sensitivity 1.00, specificity 0.878, PPV 0.400, κ 0.520).
+2. **Validation used independent data not used for development**, per JMIR's ML policy: an internal national survey, an external national survey (KNHANES, 301 pairs), eight ageing cohorts (285,878 participants; 598,386 person-waves) for rule-level transportability under a pre-registered three-state standard, and four literature indexes for directional concordance.
+3. **Written for clinicians, with open tooling.** Every output resolves to a rule, a knowledge-graph path and a source chunk; the same report is rendered in a working Streamlit interface, and the rule/variable definitions ship as machine-readable files with the code.
+4. **Open tooling.** The full pipeline — rules, variable definitions, Streamlit interface and every analysis script — is publicly available at https://github.com/wangguoqing932/huiyan-exposome-eye-agent
+5. **An honest, transferable lesson for digital-health validation.** Fifteen of 21 rules were untestable in the cohorts for measurement reasons and none was robustly transportable where testable; we therefore argue that agent validation must report system-level and rule-level results separately and state which exposures were measured.
 
-**Why we think this belongs in [journal].** The finding is not about eyes. A
-pooled multi-cohort estimate of a self-reported outcome is routinely read as the
-effect to expect in a new setting, and we show that where diagnosis rates differ
-across populations, what is being pooled is a difference in access to care
-dressed as a difference in biology. The safeguard we propose is narrow and
-practicable: report the outcome's prevalence by cohort alongside the pooled
-estimate, and prefer examination-based measurement where the construct allows.
+All content is our own; generative AI assistance is disclosed in the Declarations. The study uses de-identified public data only (ethics statement in the Declarations). Suggested reviewers and any conflicts of interest are declared in the submission metadata.
 
-**Disclosures we want on the record.**
-- **Four items were pre-specified** (the testable rule set, the per-cohort BMI
-  cut-point, the covariate set, the transportability criterion). **Five analyses
-  were added after the primary results were known** — random-effects pooling, the
-  stricter heterogeneity criterion, the regional subgroups, the E-values, and the
-  modality audit — and the manuscript says so where each is used.
-- **A pre-specified variance method was not implemented.** The plan required
-  survey design variance for the cohorts distributing design weights; the frames
-  contain no design variable and an unweighted cluster-robust model was used.
-  This is stated in the Methods, not only in the Limitations.
-- **Two draft figures are rendered as supplementary Figures S1 and S2** and are
-  included in the package. An earlier version of this letter said they were
-  withdrawn and never rendered; that statement was true of the superseded
-  2026-10-15 package and is corrected here.
-- **A blind expert panel was planned and never conducted.** No kappa is reported
-  anywhere, in the manuscript or the supplement.
-
-**Reporting.** The observational analyses follow STROBE and a completed checklist
-is included; the cross-cohort synthesis follows standard meta-analytic reporting
-(REML τ², Cochran's Q, I², prediction intervals). TRIPOD+AI and DECIDE-AI are not
-applicable and are not claimed.
-
-**Data and code.** All sources are third-party surveys requiring their own
-registration or application; the Data availability statement lists each route.
-Analysis code, the audit trail and an archived snapshot with a DOI are provided.
-
-We confirm this work is original, is not under consideration elsewhere, and that
-all authors have approved the submission and declare no competing interests
-beyond those stated in the Declarations section.
-
-Yours sincerely,
-
-[Corresponding author, on behalf of all authors]
-[Affiliation, address, email]
+Sincerely,
+Xianglong Yi (corresponding author), on behalf of all authors

@@ -32,7 +32,7 @@ STEPS = [
     ("回写主口径", [sys.executable, "scripts/apply_survey_variance.py"]),
     ("重建交付物", [sys.executable, "scripts/rebuild_deliverables_R5.py"]),
     ("生成/校验表", [sys.executable, "scripts/generate_paper_tables.py"]),
-    ("渲染图", [sys.executable, "scripts/generate_paper_figures.py"]),
+    ("渲染图", [sys.executable, "scripts/render_top_figures.py"]),
     ("基线 gold 双呈", [sys.executable, "scripts/make_baseline_summary_R11_goldcheck.py"]),
 ]
 BASELINE_STEPS = [

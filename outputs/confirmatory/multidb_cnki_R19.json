@@ -1,0 +1,409 @@
+{
+ "cnki": {
+  "r10": {
+   "n_titles": 2,
+   "n_judged": 2,
+   "concordant": 0,
+   "discordant": 0,
+   "precision_cnki": null,
+   "confidence": "title_level",
+   "detail": [
+    {
+     "title": "已",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "有",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    }
+   ]
+  },
+  "r02": {
+   "n_titles": 14,
+   "n_judged": 14,
+   "concordant": 1,
+   "discordant": 0,
+   "precision_cnki": 1.0,
+   "confidence": "title_level",
+   "detail": [
+    {
+     "title": "医药卫生方针政策与法律法规研究",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "精品科研能力提升专题研修",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "强脉冲光分别联合聚乙烯醇滴眼液与玻璃酸钠滴眼液治疗糖尿病性白内障术后MGD相关干眼的疗效及对泪膜、睑板腺、角膜内皮功能的影响",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "微创玻璃体切割术联合白内障手术治疗增生型糖尿病视网膜病变合并白内障患者的临床效果",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "血清25羟维生素D3水平与不同程度2型糖尿病性白内障的相关性分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "老年白内障患者行超声乳化术后干眼症发病情况及其危险因素分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "一种用于胰岛素笔放大装置的设计与应用",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "北京眼病研究：我国成年人群主要致盲性眼病的疾病负担与相关风险因素",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "影响超声乳化吸除联合人工晶状体植入术后发生前房渗出的因素分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "血清PTX3和TLR4及SDF-1对T2DM合并白内障患者术后并发干眼的预测价值",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "超声乳化白内障吸除联合玻璃体内注药术治疗白内障伴发糖尿病黄斑水肿的效果评价",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "白内障患者经超声乳化联合人工晶体植入术后发生干眼症的列线图预测模型构建",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "个体化护理对白内障术后视力恢复效果的研究",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "白内障患者术后发生干眼症的危险因素分析及风险预测模型构建",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    }
+   ]
+  },
+  "r12": {
+   "n_titles": 14,
+   "n_judged": 14,
+   "concordant": 0,
+   "discordant": 1,
+   "precision_cnki": 0.0,
+   "confidence": "title_level",
+   "detail": [
+    {
+     "title": "医药卫生方针政策与法律法规研究",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "精品科研能力提升专题研修",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "老年性白内障患者生活质量现状及其相关因素：基于网络分析模型",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "超重和肥胖与常见慢性病的关联及多病共存的疾病轨迹分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "糖尿病视网膜病变全视网膜激光光凝术后继续进展的危险因素分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "自贡市老年人群白内障患病状况及影响因素分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "基于一般临床资料与视觉质量评估结果构建初期皮质性白内障发病的Cox比例风险回归预测模型",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "孔源性视网膜脱离临床特征及术后复发相关因素分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "年龄相关性白内障的影响因素分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "每天1杯红酒，可防白内障",
+     "direction": "DISCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "中西部两地50岁及以上人群白内障患病现状与影响因素及服务需求与利用",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "退休职工白内障发病相关因素的临床研究",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "中国共病老年人认知功能现状及其影响因素研究",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "白内障及白内障分级与睡眠质量的人群相关研究",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    }
+   ]
+  },
+  "r13": {
+   "n_titles": 8,
+   "n_judged": 8,
+   "concordant": 2,
+   "discordant": 0,
+   "precision_cnki": 1.0,
+   "confidence": "title_level",
+   "detail": [
+    {
+     "title": "精品科研能力提升专题研修",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "体重指数及腰臀比与年龄相关白内障关系",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "肥胖可能增加患白内障的危险",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "CAJViewer浏览器",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "知网研学（原E-Study）",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "service.cnki.net",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "help@cnki.net",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "网络出版服务许可证网出证(京)字第416号",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    }
+   ]
+  },
+  "r18": {
+   "n_titles": 14,
+   "n_judged": 14,
+   "concordant": 2,
+   "discordant": 0,
+   "precision_cnki": 1.0,
+   "confidence": "title_level",
+   "detail": [
+    {
+     "title": "精品科研能力提升专题研修",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "紫外线暴露评价方法与白内障流行病学研究进展",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "晴空少云状况下紫外辐射强度及指数预报模式",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "推进气象科技创新加快气象事业发展——中国气象学会2004年年会论文集（下册）",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "紫外辐射对人体健康的不良影响",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "抗近紫外辐射无晶体镜的研究",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "臭氧洞的形成、危害及对策",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "河南大学学报(自然科学版)",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "臭氧·紫外辐射·紫外线指数",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "紫外线辐射和白内障的研究",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "紫外辐射增加对人类疾病影响的研究",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "CAJViewer浏览器",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "知网研学（原E-Study）",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "service.cnki.net",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    }
+   ]
+  },
+  "r03": {
+   "n_titles": 14,
+   "n_judged": 14,
+   "concordant": 6,
+   "discordant": 0,
+   "precision_cnki": 1.0,
+   "confidence": "title_level",
+   "detail": [
+    {
+     "title": "年轻人糖尿病视网膜病变的临床特点、危险因子分析及其生物标志物的研究",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "糖尿病患者糖尿病性视网膜病变的护理与预防策略",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "糖化血红蛋白变异指数与2型糖尿病视网膜病变关联性的Meta分析",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "糖尿病患者实施糖化血红蛋白联合血糖检验的价值",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "2型糖尿病患者合并糖尿病视网膜病变相关影响因素研究",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "和血明目片联合羟苯磺酸钙片治疗对早期糖尿病视网膜病变患者糖化血红蛋白水平的影响",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "中西医联合治疗糖尿病视网膜病变的疗效观察",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "HbA1c、LCN2、FGF-21对2型糖尿病患者发生视网膜病变的诊断价值",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "基于列线图模型评估增殖性糖尿病视网膜病变行玻璃体切除术后继发新生血管性青光眼的风险",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "增殖性糖尿病视网膜病变患者玻璃体切割术后再出血的危险因素分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "IGFBP-3、CTRP5、Galectin-3与糖尿病视网膜病变的相关性分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "糖尿病视网膜病变患者的血脂指标与糖化血红蛋白表达情况及其临床检测意义探究",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    },
+    {
+     "title": "糖化血红蛋白、空腹血糖、餐后2 h血糖单一及联合检验诊断糖尿病的价值",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    },
+    {
+     "title": "糖化血红蛋白和超敏C反应蛋白对2型糖尿病性增殖型视网膜病的鉴别诊断价值研究",
+     "direction": "CONCORDANT",
+     "confidence": "title_level"
+    }
+   ]
+  },
+  "r20": {
+   "n_titles": 1,
+   "n_judged": 1,
+   "concordant": 0,
+   "discordant": 0,
+   "precision_cnki": null,
+   "confidence": "title_level",
+   "detail": [
+    {
+     "title": "中国人群视力下降与糖代谢状态的双向关联分析",
+     "direction": "UNCLEAR",
+     "confidence": "title_level"
+    }
+   ]
+  }
+ }
+}

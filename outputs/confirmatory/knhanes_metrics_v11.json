@@ -18,45 +18,22 @@
     0.118,
     0.616
   ],
-  "uncovered_significant": 3,
+  "uncovered_significant": 6,
   "uncovered_pairs": 143,
   "matrix_tested_pairs": 158,
-  "matrix_significant_pairs": 8,
-  "matrix_significant_uncovered": 3,
+  "matrix_significant_pairs": 11,
+  "matrix_significant_uncovered": 6,
   "negative_control_pairs": 1,
   "negative_control_outcome": {
     "uninformative": 1
   },
-  "variance_standard": "survey svyglm (analysis_plan §6, pre-registered)",
-  "sensitivity_freq_weights": {
-    "rule_pairs_tested": 15,
-    "replicated": 6,
-    "contradicted": 0,
-    "uninformative": 9,
-    "separation": 0,
-    "precision_rule": 1.0,
-    "precision_rule_ci95": [
-      0.541,
-      1.0
-    ],
-    "coverage": 0.882,
-    "coverage_definition": "P(tested | rule exists, judgeable, non-negative-control) — R11 fixed; the old formula divided by ALL testable pairs",
-    "coverage_of_full_matrix": 0.095,
-    "rule_relevant_pairs": 17,
-    "precision_binary_uninf_as_fp": 0.4,
-    "precision_binary_ci95": [
-      0.163,
-      0.677
-    ],
-    "uncovered_significant": 6,
-    "uncovered_pairs": 143,
-    "matrix_tested_pairs": 158,
-    "matrix_significant_pairs": 12,
-    "matrix_significant_uncovered": 6,
-    "negative_control_pairs": 1,
-    "negative_control_outcome": {
-      "uninformative": 1
-    }
-  },
-  "note": "R5 2026-10-14: headline labels use survey-design variance (svyglm strata/PSU, scripts/survey_sensitivity_R5.R); the Python freq_weights GLM is retained as sensitivity. q_svy computed over all tested pairs (same BHY denominator as main analysis)."
+  "covariates": [
+    "age",
+    "age2",
+    "sex",
+    "edu",
+    "incm5"
+  ],
+  "frames": "data\\raw\\knhanes_frames_v2",
+  "variable_map": "configs/variable_map.yaml (R11 rebuild)"
 }

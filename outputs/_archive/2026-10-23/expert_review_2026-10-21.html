@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>慧眼系统 · 专家盲评问卷</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;background:#f5f7fa;color:#2c3e50;line-height:1.6;padding:20px}
+.container{max-width:720px;margin:0 auto}
+.header{text-align:center;padding:30px 20px;background:linear-gradient(135deg,#1a5276,#2874a6);color:#fff;border-radius:12px;margin-bottom:24px}
+.header h1{font-size:1.5em;margin-bottom:8px}
+.header p{font-size:.9em;opacity:.85}
+.instructions{background:#fff;border-radius:10px;padding:24px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.instructions h2{font-size:1.1em;color:#1a5276;margin-bottom:12px;border-left:4px solid #2874a6;padding-left:10px}
+.instructions p{font-size:.9em;margin-bottom:8px;color:#555}
+.scale-box{background:#eaf2f8;border-radius:8px;padding:14px;margin-top:12px;font-size:.85em}
+.scale-box strong{color:#1a5276}
+.case{background:#fff;border-radius:10px;padding:24px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid transparent}
+.case:hover{border-left-color:#2874a6}
+.case-num{display:inline-block;background:#2874a6;color:#fff;border-radius:50%;width:28px;height:28px;text-align:center;line-height:28px;font-size:.85em;font-weight:600;margin-bottom:10px}
+.case-body{font-size:.95em;margin-bottom:16px}
+.case-body strong{color:#1a5276}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.78em;margin-left:6px}
+.tag.exposure{background:#e8f6f3;color:#1e8449}
+.tag.disease{background:#fdf2e9;color:#d35400}
+.tag.patient{background:#f4ecf7;color:#7d3c98}
+.q-block{margin-top:14px}
+.q-label{font-size:.85em;font-weight:600;color:#555;margin-bottom:6px}
+.options{display:flex;flex-wrap:wrap;gap:8px}
+.opt{cursor:pointer;padding:8px 14px;border:2px solid #d5dbdb;border-radius:8px;font-size:.88em;transition:all .2s;user-select:none;background:#fff}
+.opt:hover{border-color:#2874a6;background:#eaf2f8}
+.opt.selected{border-color:#2471a3;background:#d4e6f1;color:#1a5276;font-weight:600}
+.opt .key{display:inline-block;width:20px;height:20px;border-radius:4px;background:#d5dbdb;text-align:center;line-height:20px;font-size:.75em;margin-right:4px;font-weight:700}
+.opt.selected .key{background:#2874a6;color:#fff}
+.likert{display:flex;gap:4px;justify-content:space-between}
+.likert .opt{flex:1;text-align:center;padding:8px 4px;font-size:.85em}
+.expert-info{background:#fff;border-radius:10px;padding:24px;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.expert-info input,.expert-info select{width:100%;padding:10px 12px;border:2px solid #d5dbdb;border-radius:8px;font-size:.9em;margin-top:4px}
+.expert-info input:focus,.expert-info select:focus{outline:none;border-color:#2874a6}
+.btn-submit{display:block;width:100%;padding:16px;background:linear-gradient(135deg,#1a5276,#2874a6);color:#fff;border:none;border-radius:10px;font-size:1.05em;font-weight:600;cursor:pointer;margin-top:20px;transition:all .3s}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(40,116,166,.35)}
+.btn-submit:disabled{background:#95a5a6;cursor:not-allowed;transform:none;box-shadow:none}
+.result-box{display:none;background:#fff;border-radius:10px;padding:20px;margin-top:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.result-box h3{color:#1a5276;margin-bottom:10px}
+.result-box textarea{width:100%;height:200px;padding:12px;border:2px solid #d5dbdb;border-radius:8px;font-family:monospace;font-size:.8em;resize:vertical;background:#fdfefe}
+.btn-copy{padding:10px 20px;background:#27ae60;color:#fff;border:none;border-radius:8px;font-size:.9em;cursor:pointer;margin-top:10px}
+.btn-copy:hover{background:#229954}
+.incomplete{color:#e74c3c;font-size:.85em;margin-top:8px;display:none}
+.footer{text-align:center;font-size:.8em;color:#95a5a6;margin-top:30px;padding:20px}
+@media print{.btn-submit,.btn-copy,.result-box,.incomplete{display:none!important}.case{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>慧眼系统 · 专家盲评</h1>
+<p>请根据您的专业知识独立判断以下 10 个临床场景<br>预计用时 10-15 分钟 · 无标准答案对照 · 请勿讨论</p>
+</div>
+
+<div class="instructions">
+<h2>评分说明</h2>
+<p>每个场景描述一个<b>可干预的暴露因素</b>和一个<b>眼科疾病</b>,请回答三个问题:</p>
+<div class="scale-box">
+<strong>问题 A — 该暴露是否为该眼病的已确立风险因素？</strong><br>
+<b>Y</b>(是):证据充分,指南或多个大型研究支持 &nbsp;|&nbsp;
+<b>P</b>(可能):有证据但不完全一致,或证据等级有限 &nbsp;|&nbsp;
+<b>U</b>(不确定):证据不足或矛盾,无法判断 &nbsp;|&nbsp;
+<b>N</b>(否):无证据支持,或已有证据否定<br><br>
+<strong>问题 B — 风险程度(仅当 A 答 Y 或 P)</strong><br>
+<b>H</b>(高):强效应量(OR≥2)或机制明确 &nbsp;|&nbsp;
+<b>M</b>(中):中等效应量或证据基本一致 &nbsp;|&nbsp;
+<b>L</b>(低):弱效应量或证据尚有争议<br><br>
+<strong>问题 C — 此场景作为临床筛查系统的输出,其实用性如何？</strong><br>
+1(无用) — 2(略有参考) — 3(一般) — 4(有参考价值) — 5(非常有用)
+</div>
+</div>
+
+<!-- ─── 案例 1 ─── -->
+<div class="case" id="case1">
+<span class="case-num">1</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">高血糖(空腹血糖≥126 mg/dL)</span><br>
+<strong>疾病:</strong><span class="tag disease">白内障(任何类型)</span><br>
+<strong>背景:</strong><span class="tag patient">65 岁男性,2 型糖尿病 10 年</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="1" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span>
+<span class="opt"><span class="key">P</span>可能</span>
+<span class="opt"><span class="key">U</span>不确定</span>
+<span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度(A 为 Y 或 P 时)</div>
+<div class="options" data-case="1" data-q="B">
+<span class="opt"><span class="key">H</span>高</span>
+<span class="opt"><span class="key">M</span>中</span>
+<span class="opt"><span class="key">L</span>低</span>
+<span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="1" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 案例 2 ─── -->
+<div class="case" id="case2">
+<span class="case-num">2</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">糖化血红蛋白升高(HbA1c≥6.5%)</span><br>
+<strong>疾病:</strong><span class="tag disease">糖尿病视网膜病变(任何期)</span><br>
+<strong>背景:</strong><span class="tag patient">58 岁女性,2 型糖尿病 8 年</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="2" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span><span class="opt"><span class="key">P</span>可能</span><span class="opt"><span class="key">U</span>不确定</span><span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度</div>
+<div class="options" data-case="2" data-q="B">
+<span class="opt"><span class="key">H</span>高</span><span class="opt"><span class="key">M</span>中</span><span class="opt"><span class="key">L</span>低</span><span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="2" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 案例 3 ─── -->
+<div class="case" id="case3">
+<span class="case-num">3</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">当前吸烟(每日或偶尔)</span><br>
+<strong>疾病:</strong><span class="tag disease">白内障(任何类型)</span><br>
+<strong>背景:</strong><span class="tag patient">70 岁男性,吸烟 40 年,每日 20 支</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="3" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span><span class="opt"><span class="key">P</span>可能</span><span class="opt"><span class="key">U</span>不确定</span><span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度</div>
+<div class="options" data-case="3" data-q="B">
+<span class="opt"><span class="key">H</span>高</span><span class="opt"><span class="key">M</span>中</span><span class="opt"><span class="key">L</span>低</span><span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="3" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 案例 4 ─── -->
+<div class="case" id="case4">
+<span class="case-num">4</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">体重超标(BMI≥25 kg/m²)</span><br>
+<strong>疾病:</strong><span class="tag disease">白内障(任何类型)</span><br>
+<strong>背景:</strong><span class="tag patient">62 岁女性,BMI 28</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="4" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span><span class="opt"><span class="key">P</span>可能</span><span class="opt"><span class="key">U</span>不确定</span><span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度</div>
+<div class="options" data-case="4" data-q="B">
+<span class="opt"><span class="key">H</span>高</span><span class="opt"><span class="key">M</span>中</span><span class="opt"><span class="key">L</span>低</span><span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="4" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 案例 5 ─── -->
+<div class="case" id="case5">
+<span class="case-num">5</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">血清尿酸升高(男性>7.0 mg/dL)</span><br>
+<strong>疾病:</strong><span class="tag disease">白内障(任何类型)</span><br>
+<strong>背景:</strong><span class="tag patient">68 岁男性,痛风史,尿酸 8.2 mg/dL</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="5" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span><span class="opt"><span class="key">P</span>可能</span><span class="opt"><span class="key">U</span>不确定</span><span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度</div>
+<div class="options" data-case="5" data-q="B">
+<span class="opt"><span class="key">H</span>高</span><span class="opt"><span class="key">M</span>中</span><span class="opt"><span class="key">L</span>低</span><span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="5" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 案例 6 ─── -->
+<div class="case" id="case6">
+<span class="case-num">6</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">血脂异常(TC≥240 或 TG≥200 或 HDL<40 或 LDL≥160 mg/dL)</span><br>
+<strong>疾病:</strong><span class="tag disease">晚期年龄相关性黄斑变性</span><br>
+<strong>背景:</strong><span class="tag patient">75 岁女性,TC 260,LDL 170</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="6" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span><span class="opt"><span class="key">P</span>可能</span><span class="opt"><span class="key">U</span>不确定</span><span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度</div>
+<div class="options" data-case="6" data-q="B">
+<span class="opt"><span class="key">H</span>高</span><span class="opt"><span class="key">M</span>中</span><span class="opt"><span class="key">L</span>低</span><span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="6" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 案例 7 ─── -->
+<div class="case" id="case7">
+<span class="case-num">7</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">C 反应蛋白升高(hs-CRP>3 mg/L)</span><br>
+<strong>疾病:</strong><span class="tag disease">晚期年龄相关性黄斑变性</span><br>
+<strong>背景:</strong><span class="tag patient">72 岁男性,hs-CRP 4.5 mg/L</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="7" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span><span class="opt"><span class="key">P</span>可能</span><span class="opt"><span class="key">U</span>不确定</span><span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度</div>
+<div class="options" data-case="7" data-q="B">
+<span class="opt"><span class="key">H</span>高</span><span class="opt"><span class="key">M</span>中</span><span class="opt"><span class="key">L</span>低</span><span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="7" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 案例 8 ─── -->
+<div class="case" id="case8">
+<span class="case-num">8</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">血清尿酸升高(男性>7.0 mg/dL)</span><br>
+<strong>疾病:</strong><span class="tag disease">视力损伤(中重度,logMAR>0.5)</span><br>
+<strong>背景:</strong><span class="tag patient">66 岁男性,尿酸 7.5 mg/dL</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="8" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span><span class="opt"><span class="key">P</span>可能</span><span class="opt"><span class="key">U</span>不确定</span><span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度</div>
+<div class="options" data-case="8" data-q="B">
+<span class="opt"><span class="key">H</span>高</span><span class="opt"><span class="key">M</span>中</span><span class="opt"><span class="key">L</span>低</span><span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="8" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 案例 9 ─── -->
+<div class="case" id="case9">
+<span class="case-num">9</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">当前吸烟(每日或偶尔)</span><br>
+<strong>疾病:</strong><span class="tag disease">视力损伤(中重度)</span><br>
+<strong>背景:</strong><span class="tag patient">69 岁女性,吸烟 30 年,每日 15 支</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="9" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span><span class="opt"><span class="key">P</span>可能</span><span class="opt"><span class="key">U</span>不确定</span><span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度</div>
+<div class="options" data-case="9" data-q="B">
+<span class="opt"><span class="key">H</span>高</span><span class="opt"><span class="key">M</span>中</span><span class="opt"><span class="key">L</span>低</span><span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="9" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 案例 10 ─── -->
+<div class="case" id="case10">
+<span class="case-num">10</span>
+<div class="case-body">
+<strong>暴露:</strong><span class="tag exposure">饮酒(过去一年内有饮酒行为)</span><br>
+<strong>疾病:</strong><span class="tag disease">白内障(任何类型)</span><br>
+<strong>背景:</strong><span class="tag patient">64 岁男性,每周饮白酒 3 次,每次 100g</span>
+</div>
+<div class="q-block">
+<div class="q-label">A:已确立风险因素?</div>
+<div class="options" data-case="10" data-q="A">
+<span class="opt"><span class="key">Y</span>是</span><span class="opt"><span class="key">P</span>可能</span><span class="opt"><span class="key">U</span>不确定</span><span class="opt"><span class="key">N</span>否</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">B:风险程度</div>
+<div class="options" data-case="10" data-q="B">
+<span class="opt"><span class="key">H</span>高</span><span class="opt"><span class="key">M</span>中</span><span class="opt"><span class="key">L</span>低</span><span class="opt"><span class="key">—</span>不适用</span>
+</div>
+</div>
+<div class="q-block">
+<div class="q-label">C:实用性(1-5)</div>
+<div class="likert options" data-case="10" data-q="C">
+<span class="opt">1</span><span class="opt">2</span><span class="opt">3</span><span class="opt">4</span><span class="opt">5</span>
+</div>
+</div>
+</div>
+
+<!-- ─── 专家信息 ─── -->
+<div class="expert-info">
+<h2 style="font-size:1.1em;color:#1a5276;margin-bottom:12px;border-left:4px solid #2874a6;padding-left:10px">专家信息(匿名,仅供统计分组)</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div><label style="font-size:.85em;color:#555">专家编号</label><input type="number" id="expert_id" placeholder="如:1" min="1" max="10"></div>
+<div><label style="font-size:.85em;color:#555">从业年限</label><input type="number" id="expert_years" placeholder="如:15" min="1" max="50"></div>
+<div><label style="font-size:.85em;color:#555">职称</label>
+<select id="expert_title"><option value="">请选择</option><option>住院医师</option><option>主治医师</option><option>副主任医师</option><option>主任医师</option><option>教授/研究员</option></select></div>
+<div><label style="font-size:.85em;color:#555">眼科亚专科</label>
+<select id="expert_sub"><option value="">请选择</option><option>白内障</option><option>眼底病/视网膜</option><option>青光眼</option><option>角膜/眼表</option><option>眼视光</option><option>眼科流行病学</option><option>综合眼科</option></select></div>
+</div>
+</div>
+
+<div class="incomplete" id="incomplete">⚠️ 还有未完成的题目,请检查后重新提交。</div>
+<button class="btn-submit" id="btnSubmit" onclick="submitAll()">提交问卷</button>
+
+<div class="result-box" id="resultBox">
+<h3>📋 您的答案已生成</h3>
+<p style="font-size:.85em;color:#555;margin-bottom:10px">请点击"复制 JSON"按钮,将内容粘贴发给研究者。</p>
+<textarea id="resultJson" readonly></textarea>
+<button class="btn-copy" onclick="copyResult()">复制 JSON</button>
+</div>
+
+<div class="footer">
+慧眼(Huiyan)系统 · 专家盲评 · Phase 4<br>
+本问卷不收集个人身份信息 · 结果仅用于统计一致性分析
+</div>
+</div>
+
+<script>
+const answers = {};
+document.querySelectorAll('.options').forEach(group => {
+  const c = group.dataset.case, q = group.dataset.q;
+  if (!answers[c]) answers[c] = {};
+  group.querySelectorAll('.opt').forEach(opt => {
+    opt.addEventListener('click', () => {
+      group.querySelectorAll('.opt').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      const val = opt.querySelector('.key') ? opt.querySelector('.key').textContent.trim() : opt.textContent.trim();
+      answers[c][q] = val;
+    });
+  });
+});
+
+function submitAll() {
+  let incomplete = false;
+  for (let c = 1; c <= 10; c++) {
+    if (!answers[c] || !answers[c].A || answers[c].C === undefined) { incomplete = true; break; }
+  }
+  const eid = document.getElementById('expert_id').value;
+  if (!eid) incomplete = true;
+  document.getElementById('incomplete').style.display = incomplete ? 'block' : 'none';
+  if (incomplete) { document.getElementById('incomplete').scrollIntoView({behavior:'smooth'}); return; }
+
+  const result = { expert_id: parseInt(eid), answers: [] };
+  for (let c = 1; c <= 10; c++) {
+    result.answers.push({
+      case: c,
+      A: answers[c].A || 'U',
+      B: answers[c].B || '—',
+      C: parseInt(answers[c].C) || null
+    });
+  }
+  result.expert_info = {
+    years: parseInt(document.getElementById('expert_years').value) || null,
+    title: document.getElementById('expert_title').value || '',
+    subspecialty: document.getElementById('expert_sub').value || ''
+  };
+  const json = JSON.stringify(result, null, 2);
+  document.getElementById('resultJson').value = json;
+  document.getElementById('resultBox').style.display = 'block';
+  document.getElementById('resultBox').scrollIntoView({behavior:'smooth'});
+}
+
+function copyResult() {
+  const ta = document.getElementById('resultJson');
+  ta.select();
+  try { document.execCommand('copy'); } catch(e) { navigator.clipboard.writeText(ta.value); }
+  alert('已复制到剪贴板,请粘贴发给研究者。');
+}
+</script>
+</body>
+</html>

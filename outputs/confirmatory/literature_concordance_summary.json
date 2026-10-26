@@ -1,0 +1,334 @@
+{
+ "definition": "Rule-level directional concordance per literature index; agreement = same majority direction on shared informative rules. Official counts from multidb_summary_R18.json (PubMed/WoS/EPMC) and cnki_validation_R19.json (CNKI); macro precision = mean of per-rule precision.",
+ "indexes": {
+  "PubMed": {
+   "informative_rules": 21,
+   "macro_precision": 0.89,
+   "rules": {
+    "r01": {
+     "conc": 8,
+     "disc": 3,
+     "dir": "agree",
+     "prec": 0.7272727272727273
+    },
+    "r02": {
+     "conc": 27,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r03": {
+     "conc": 10,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r04": {
+     "conc": 10,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r05": {
+     "conc": 16,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r06": {
+     "conc": 6,
+     "disc": 1,
+     "dir": "agree",
+     "prec": 0.8571428571428571
+    },
+    "r07": {
+     "conc": 7,
+     "disc": 4,
+     "dir": "agree",
+     "prec": 0.6363636363636364
+    },
+    "r08": {
+     "conc": 14,
+     "disc": 5,
+     "dir": "agree",
+     "prec": 0.7368421052631579
+    },
+    "r09": {
+     "conc": 17,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r10": {
+     "conc": 10,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r11": {
+     "conc": 13,
+     "disc": 1,
+     "dir": "agree",
+     "prec": 0.9285714285714286
+    },
+    "r12": {
+     "conc": 0,
+     "disc": 1,
+     "dir": "disagree",
+     "prec": 0.0
+    },
+    "r13": {
+     "conc": 6,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r14": {
+     "conc": 2,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r16": {
+     "conc": 20,
+     "disc": 1,
+     "dir": "agree",
+     "prec": 0.9523809523809523
+    },
+    "r17": {
+     "conc": 21,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r18": {
+     "conc": 21,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r19": {
+     "conc": 1,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r20": {
+     "conc": 8,
+     "disc": 1,
+     "dir": "agree",
+     "prec": 0.8888888888888888
+    },
+    "r21": {
+     "conc": 22,
+     "disc": 1,
+     "dir": "agree",
+     "prec": 0.9565217391304348
+    },
+    "r22": {
+     "conc": 3,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    }
+   }
+  },
+  "WoS": {
+   "informative_rules": 2,
+   "macro_precision": 0.917,
+   "rules": {
+    "r03": {
+     "conc": 4,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r10": {
+     "conc": 10,
+     "disc": 2,
+     "dir": "agree",
+     "prec": 0.8333333333333334
+    }
+   }
+  },
+  "EuropePMC": {
+   "informative_rules": 17,
+   "macro_precision": 0.922,
+   "rules": {
+    "r01": {
+     "conc": 2,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r03": {
+     "conc": 4,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r04": {
+     "conc": 6,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r05": {
+     "conc": 2,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r06": {
+     "conc": 2,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r07": {
+     "conc": 2,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r08": {
+     "conc": 1,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r09": {
+     "conc": 0,
+     "disc": 1,
+     "dir": "disagree",
+     "prec": 0.0
+    },
+    "r10": {
+     "conc": 1,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r11": {
+     "conc": 1,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r13": {
+     "conc": 3,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r16": {
+     "conc": 6,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r17": {
+     "conc": 2,
+     "disc": 1,
+     "dir": "agree",
+     "prec": 0.6666666666666666
+    },
+    "r18": {
+     "conc": 1,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r19": {
+     "conc": 1,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r20": {
+     "conc": 3,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r21": {
+     "conc": 5,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    }
+   }
+  },
+  "CNKI": {
+   "informative_rules": 5,
+   "macro_precision": 0.8,
+   "rules": {
+    "r02": {
+     "conc": 1,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r03": {
+     "conc": 6,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r12": {
+     "conc": 0,
+     "disc": 1,
+     "dir": "disagree",
+     "prec": 0.0
+    },
+    "r13": {
+     "conc": 2,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    },
+    "r18": {
+     "conc": 2,
+     "disc": 0,
+     "dir": "agree",
+     "prec": 1.0
+    }
+   }
+  }
+ },
+ "inter_index_agreement": {
+  "PubMed vs WoS": {
+   "shared": 2,
+   "agree": 2,
+   "disagreements": []
+  },
+  "PubMed vs EuropePMC": {
+   "shared": 17,
+   "agree": 16,
+   "disagreements": [
+    "r09"
+   ]
+  },
+  "PubMed vs CNKI": {
+   "shared": 5,
+   "agree": 5,
+   "disagreements": []
+  },
+  "WoS vs EuropePMC": {
+   "shared": 2,
+   "agree": 2,
+   "disagreements": []
+  },
+  "WoS vs CNKI": {
+   "shared": 1,
+   "agree": 1,
+   "disagreements": []
+  },
+  "EuropePMC vs CNKI": {
+   "shared": 3,
+   "agree": 3,
+   "disagreements": []
+  }
+ },
+ "generated": "2026-10-24"
+}

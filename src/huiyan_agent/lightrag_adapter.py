@@ -303,18 +303,19 @@ class LightRAGAdapter:
                 extra.extend(v for v in vs if v not in extra)
         return question + " " + " ".join(extra[:12]) if extra else question
 
-    def query(self, question: str, mode: str = "hybrid") -> str:
+    def query(self, question: str, mode: str = "hybrid", rerank: bool = False) -> str:
         """Query the index. mode in {local, global, hybrid, naive, mix}.
 
         韧性（Phase 4 实测）：hybrid/local 依赖 keyword-LLM 偶发空输出会传播为
         空检索结果——空响应时自动原模式重试一次，再降级 naive（纯向量，稳定）。
-        查询前做注册表双语扩展（命名空间桥接）。"""
+        查询前做注册表双语扩展（命名空间桥接）。
+        rerank=True 时启用 LightRAG 自带重排(R17:基线公平,开放基线全部能力)。"""
         question = self._expand_bilingual(question)
         self._ensure_init()
-        param = self._QueryParam(mode=mode, enable_rerank=False)
+        param = self._QueryParam(mode=mode, enable_rerank=rerank)
         result = self._run(self.rag.aquery(question, param=param))
         if not (result or "").strip():
-            param = self._QueryParam(mode=mode)
+            param = self._QueryParam(mode=mode, enable_rerank=rerank)
             result = self._run(self.rag.aquery(question, param=param))
         if not (result or "").strip() and mode != "naive":
             param = self._QueryParam(mode="naive")

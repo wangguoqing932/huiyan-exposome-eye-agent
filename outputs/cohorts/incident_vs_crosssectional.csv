@@ -1,0 +1,13 @@
+﻿rule,cohort,exposure,CS_OR,CS,INC_OR,CI,q,INC
+r10,SHARE,current_smoking,1.11,replicated,0.93,"[0.86,1.01]",0.4546,uninformative
+r12,SHARE,alcohol_intake,0.96,uninformative,0.99,"[0.93,1.06]",1.0,uninformative
+r02,SHARE,diabetes,1.75,replicated,1.53,"[1.44,1.62]",0.0,replicated
+r13,SHARE,bmi_high_25,1.15,replicated,1.13,"[1.08,1.18]",0.0,replicated
+r20,SHARE,current_smoking,1.09,replicated,1.09,"[1.02,1.16]",0.0915,uninformative
+r10,KLoSA,current_smoking,-,-,0.97,"[0.77,1.23]",1.0,uninformative
+r02,KLoSA,diabetes,-,-,1.71,"[1.39,2.11]",0.0,replicated
+r13,KLoSA,bmi_high_25,-,-,1.31,"[1.10,1.57]",0.0269,replicated
+r10,CLHLS,current_smoking,0.75,contradicted,0.78,"[0.61,1.00]",0.2805,uninformative
+r12,CLHLS,alcohol_intake,0.81,contradicted,0.92,"[0.73,1.16]",1.0,uninformative
+r02,CLHLS,diabetes,3.59,replicated,3.74,"[1.38,10.10]",0.0695,uninformative
+r20,CLHLS,current_smoking,1.03,uninformative,1.18,"[0.92,1.50]",0.8103,uninformative

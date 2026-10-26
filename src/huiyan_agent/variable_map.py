@@ -117,3 +117,18 @@ def prevalence_gate(rates: dict, refs: dict, dataset: str, source: str = "") -> 
         elif rel > WARN_REL_DEV:
             findings.append(finding)
     return findings
+
+
+def outcome_alias(vm: dict) -> dict[str, str]:
+    """结局测量变体 → canonical 结局 flag(variable_map.outcome_alias 段)。
+
+    语义约定:仅收录【同一疾病构念、不同测量/措辞变体】(如 cataract_dx→
+    cataract_any);不同构念(如 amd_any 同时含早晚期)不映射——由作者在
+    yaml 里逐条裁定并写 rationale。
+    """
+    out = {}
+    for variant, spec in (vm.get("outcome_alias") or {}).items():
+        canon = (spec or {}).get("canonical") if isinstance(spec, dict) else spec
+        if canon:
+            out[str(variant)] = str(canon)
+    return out

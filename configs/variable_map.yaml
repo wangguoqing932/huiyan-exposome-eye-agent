@@ -149,6 +149,13 @@ corrections:
   was: dict 只登记 LBXSGL、LBDHDL;代码实际用 LBXGL/LBDHDD
   fix: 补登 LBXGL/DIQ010/LBDHDD;由 M12 运行时守卫(evaluate.py)强制对齐
   verified_by: M12 check_code_vars
+- id: C19
+  date: '2026-10-20'
+  dataset: MAP
+  domain: outcome_alias
+  was: 规则只按 canonical 结局 flag 匹配,KNHANES 矩阵的测量变体(cataract_dx/retinopathy_selfreport)全部漏判(FN 3/13 阳性)
+  fix: 新增 outcome_alias 段(构念同、测量方式不同的变体→canonical);匹配层规范化回退,命中标注 aliased
+  verified_by: KNHANES FN 结构分析(R16)
 exposures:
   current_smoking:
     concept: 当前吸烟（过去/现在吸烟状态）
@@ -762,3 +769,13 @@ rule_downgrades:
   action: must_leave_headline
   reason: rationale 自述"NHANES 确证(OR≈1.47)方向一致，规则纳入属数据驱动的探索性扩展" —— 即看到内部验证结果后新增，随后又参与内部验证指标。属测试集泄漏。
   options: ① 从 headline 剔除、单独作为探索性发现报告；② 冻结规则集后重跑全部层。
+outcome_alias:
+  cataract_dx:
+    canonical: cataract_any
+    rationale: 同一构念(白内障)的诊断变体(医生曾诊断)——规则按构念发声,测量变体不影响方向语义
+  cataract_lifetime:
+    canonical: cataract_any
+    rationale: 终生曾诊断白内障=构念同 cataract_any
+  retinopathy_selfreport:
+    canonical: retinopathy_any
+    rationale: 自报视网膜病变=构念同 retinopathy_any(分级版)

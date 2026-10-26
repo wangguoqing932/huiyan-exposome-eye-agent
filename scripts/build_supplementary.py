@@ -30,6 +30,11 @@ TAB = ROOT / "outputs" / "tables"
 
 # (heading, source file, why it is supplementary rather than main text)
 ITEMS = [
+    ("S0. Supplementary Methods",
+     ROOT / "docs" / "supplementary_methods.md",
+     "Full operational detail: codebook decoding, gate audits, construct "
+     "substitutions, E-value derivation and the protocol-deviation timeline. "
+     "The main text carries a condensed Methods."),
     ("S1. Variable operationalisation and quality-control log",
      ROOT / "docs" / "cohort_variable_mapping.md",
      "Per-cohort variable maps and every correction applied to them (C19-C69). "
@@ -62,6 +67,10 @@ ITEMS = [
     ("S8. Figure source data",
      ROOT / "outputs" / "figures" / "source_data" / "figure8_cohort_transportability.csv",
      "The single CSV behind Figure 8, so every plotted value is traceable."),
+    ("S9. Exploratory cohort associations",
+     ROOT / "docs" / "supplementary_results.md",
+     "Three exploratory directions that were not pre-registered, reported in full "
+     "so the main text can keep only the confirmatory result."),
 ]
 
 

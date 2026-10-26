@@ -71,7 +71,7 @@ panels:
     stacks: [replicated, uninformative, contradicted]
     x_axis_label: number of cohorts
     annotations:
-      - "13 of the 21 rules cannot be tested at all and therefore have no bar — see the caption"
+      - "15 of the 21 rules cannot be tested at all and therefore have no bar — see the caption"
       - "uninformative is a state, not weak evidence for a direction"
 
   - id: panel_b_odds_ratios
@@ -80,8 +80,9 @@ panels:
     title: "Odds ratio per (rule, cohort) pair, coloured by outcome state"
     content: >-
       Forest plot, one row per pre-registered confirmatory pair (18 rows).
-      Row label = "<state> · <rule> · <cohort>" so that the leading token both
-      names the state and drives the row colour. x = odds ratio. Estimates span
+      Rows are cohort names grouped under a bold rule header; point colour
+      carries the state (blue = replicated, grey = uninformative, brick =
+      contradicted). x = odds ratio. Estimates span
       0.702 (CRELES r10) to 3.589
       (CLHLS r02). Intervals are cluster-robust by person; SHARE is pooled over
       five imputation replicates by Rubin's rules. Rows whose interval crosses 1
@@ -104,7 +105,7 @@ backend:
 # this figure is drawn by the project-local scripts/render_manual_figures.py,
 # which reads THIS contract's source_data CSV. Export spec is identical
 # (180 mm wide, 600 dpi, svg/pdf/tiff/png, TIFF LZW).
-renderer: scripts/render_manual_figures.py
+renderer: scripts/render_top_figures.py
 dependencies:
   - matplotlib >= 3.7
   - numpy
@@ -145,7 +146,7 @@ source_data:
       note: "+1 replicated, 0 uninformative, -1 contradicted"
     - column: three_state
     - column: method
-      note: "'<state> · <rule>' — the forest row label; the leading state token drives the row colour"
+      note: "cohort label per row; bold rule header per group; point colour drives the state"
     - column: dataset
       note: "= cohort; the forest renderer appends it to the row label"
     - column: estimate

@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "name": "Guoqing Wang",
+      "degree": "M.D.",
+      "affiliations": [1, 2],
+      "orcid": "0009-0002-6154-6990",
+      "email": "17690924120@163.com",
+      "corresponding": false
+    },
+    {
+      "name": "Xianglong Yi",
+      "degree": "M.D., Ph.D.",
+      "affiliations": [1, 2],
+      "orcid": "0000-0002-8222-7836",
+      "email": "yixianglong1010@163.com",
+      "corresponding": true
+    }
+  ],
+  "affiliations": [
+    "Department of Ophthalmology, The First Affiliated Hospital of Xinjiang Medical University, Urumqi, Xinjiang, China",
+    "Xinjiang Medical University, Urumqi, Xinjiang, China"
+  ],
+  "corresponding_address": "Department of Ophthalmology, The First Affiliated Hospital of Xinjiang Medical University, No.137 Liyushan South Road, Urumqi, Xinjiang 830054, China",
+  "keywords": [
+    "exposome",
+    "eye disease",
+    "transportability",
+    "measurement",
+    "ageing cohorts",
+    "clinical decision support"
+  ]
+}
