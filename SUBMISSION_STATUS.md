@@ -53,3 +53,30 @@
   3. Step 2 上传 manuscript_agent_first.docx（Main Document）+ cover_letter.docx（Cover Letter）+ Multimedia_Appendix_1.docx（Supplementary File）
   4. Step 3-5 按提示完成
 - 代理已完成：稿子内容/参考文献/开源仓库/cover letter/补充材料——**全部材料就绪，只差人工在网页上做最后几步点击。**
+
+
+## 进展更新（2026-10-27）
+
+**✅ 已完成：**
+- JMIR 预警检查 ✅ 未命中
+- 代码开源 GitHub：https://github.com/wangguoqing932/huiyan-exposome-eye-agent
+- Declarations 全部填完（无 IRB/Funding none/无 COI/CRediT 两作者/GitHub URL）
+- Cover letter 写好
+- JMIR 投稿系统登录成功（17690924120@163.com 自动已有账号）
+- Step 1 完成（Section: Clinical Information and Decision Making, Type: Original Paper）
+- **稿件 ID: 115413**
+- Step 2 部分填好（机构/城市/邮编/国家/电话/标题）
+
+**❌ 需要人工完成：**
+1. Step 2：修正作者名（当前 Wang/Guoqing 互换，应为 Guoqing/Wang）
+2. Step 2：添加第二作者 Yi Xianglong（M.D., Ph.D., Professor, 通讯作者, yixianglong1010@163.com, ORCID 0000-0002-8222-7836, 同一单位）
+3. Step 2：检查 Title 字段是否已填
+4. Step 3：上传 manuscript_agent_first.docx（Main Document）
+5. Step 3：上传 cover_letter.docx（Cover Letter）
+6. Step 3：上传 Multimedia_Appendix_1.docx（Supplementary File）
+7. Step 4-5：确认并提交
+
+**登录信息：** https://www.jmir.org/author
+账号 17690924120@163.com（已自动存在）/ 密码 a215648zxsW@
+**稿件 ID：** 115413
+**投稿 URL：** https://www.jmir.org/author/submit/2?articleId=115413
