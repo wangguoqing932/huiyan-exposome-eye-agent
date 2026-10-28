@@ -96,3 +96,18 @@ G0 F1 由 0.360 掉到 0.294。NHANES 的 `a_flag` 恰为登记表兼容写法�
 3. 证据门（G1/G2）逻辑不变，只改为作用在同一批 G0 命中上；
 4. 该修正为**实现缺陷更正**，不是分析口径变更；更正前所有 G2 数字作废并重算；
 5. 重算后若 G2 仍低于 G0，如实报告；若高于，同样如实报告，且不得据此改主结论。
+
+## P0c · 运行前补充：证据检索必须使用 canonical 结局术语（2026-10-28 追加，仍先于本轮确证计算）
+
+**发现**：证据门的检索查询由 `B_FLAG_TERMS[row["b_item"]]` 构造，而
+`B_FLAG_TERMS` 只收 canonical 结局（`cataract_any`），不含测量变体
+（`cataract_dx`、`cataract_lifetime`、`retinopathy_selfreport`）。变量缺失时查询退化为字面量
+"cataract_dx"，检索不到任何证据 → gate=`no_relevant_evidence` → G2 直接判否。
+KNHANES clean 子集 4 个有规则命中的真阳性全部因此被弃权。
+
+**规定**：
+1. 检索词一律先经 `variable_map.outcome_alias` 归一为 canonical 结局后再取词表；
+2. 该归一**统一作用于所有配对**，不是只对被观察到的失败配对打补丁；
+3. 证据门阈值、检索 top_k、chunk 相关性判据均不变；
+4. 与 P0b 同性质：实现缺陷更正，不是口径变更；更正前所有 G2 数字作废并重算；
+5. 若修正后 G2 在 clean 子集仍无命中，则如实报告"该子集上无可测信号"，不得再改阈值或词表。
