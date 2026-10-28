@@ -2,15 +2,12 @@
 
 **Even age does not transport: a pooled multi-cohort exposome estimate describes no population, in 285,878 participants and 21 literature-derived rules**
 
-Assembled 2026-10-23. Every item below is a generated artefact; the script that produces it is named so the analysis can be reproduced.
-
-**Tables and figures moved out of the main text:** Supplementary Tables S1–S6 and Supplementary Figures S1–S2 are collected in [`supplementary_tables_figures.md`](supplementary_tables_figures.md).
+Assembled 2026-10-29. Every item below is a generated artefact; the script that produces it is named so the analysis can be reproduced.
 
 | Item | Contents | Produced by |
 |---|---|---|
 | S0 | Supplementary Methods | `--` |
 | S1 | Variable operationalisation and quality-control log | `docs/cohort_variable_mapping.md (hand-maintained ledger)` |
-| S2 | Per-pair statistical power in the cohort layer | `scripts/cohort_power.py` |
 | S3 | Between-cohort heterogeneity, full output | `scripts/cohort_heterogeneity.py` |
 | S4 | Leave-one-cohort-out influence analysis | `scripts/cohort_heterogeneity.py` |
 | S5 | Measurement-modality evidence audit, full output | `scripts/evidence_base_audit.py` |
@@ -1432,43 +1429,6 @@ circumstances"（访员问卷）。
 已把该模式写入扫描器的语义否决表。
 
 ---
-```
-
-
-## S2. Per-pair statistical power in the cohort layer
-
-*Why supplementary:* Eighteen rows of n, exposure prevalence, outcome prevalence and MDE-OR. The main text reports the median range and the powered-null count.
-
-```
-# Table 6. Per-pair statistical power in the cohort layer
-
-Minimum detectable odds ratio at 80% power, two-sided alpha = 0.05, computed from the analysed n and
-the observed margins. A pair is a POWERED NULL when its confidence interval excludes its own MDE.
-
-SHARE appears once per pair, not five times: its five imputation replicates are stacked as rows in the
-source release, and counting all five inflated n by exactly 5x, which shrank SE by sqrt(5) and made every
-MDE look better than it is. Replicate 1 is used here, as it is for the prevalence gate.
-
-| cohort | rule_id | n | exposure_prevalence | outcome_prevalence_unexposed | mde_or_80 | observed_or | ci_low | ci_high | three_state | powered_null | null_interpretation |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| CLHLS | r02_hyperglycemia_x_cataract | 16650 | 0.0129 | 0.1607 | 1.6882 | 3.5887 | 2.6244 | 4.9074 | replicated | False | replicated |
-| CLHLS | r10_smoking_x_cataract | 16961 | 0.1572 | 0.1782 | 1.167 | 0.748 | 0.6435 | 0.8694 | contradicted | False | contradicted |
-| CLHLS | r12_alcohol_x_cataract | 8414 | 0.2369 | 0.2107 | 1.1926 | 0.809 | 0.704 | 0.9297 | contradicted | False | contradicted |
-| CLHLS | r20_smoking_x_vi_mod_severe | 13115 | 0.1595 | 0.1394 | 1.2127 | 1.0267 | 0.8736 | 1.2066 | uninformative | False | underpowered_or_indeterminate |
-| CRELES | r02_hyperglycemia_x_cataract | 5086 | 0.1917 | 0.3809 | 1.2281 | 1.3116 | 1.0705 | 1.6069 | uninformative | False | underpowered_or_indeterminate |
-| CRELES | r10_smoking_x_cataract | 3511 | 0.1105 | 0.3987 | 1.3607 | 0.7023 | 0.5021 | 0.9822 | uninformative | True | powered_null |
-| CRELES | r13_bmi_x_cataract | 4883 | 0.2011 | 0.3986 | 1.2267 | 0.9911 | 0.8126 | 1.2087 | uninformative | True | powered_null |
-| ELSA | r10_smoking_x_cataract | 4050 | 0.2138 | 0.2337 | 1.2888 | 0.7675 | 0.6069 | 0.9705 | uninformative | True | powered_null |
-| ELSA | r11_smoking_x_amd_late | 4028 | 0.2133 | 0.0435 | 1.6956 | 0.8586 | 0.5483 | 1.3444 | uninformative | True | powered_null |
-| ELSA | r20_smoking_x_vi_mod_severe | 4546 | 0.2352 | 0.1171 | 1.3563 | 1.4883 | 1.2128 | 1.8263 | replicated | False | replicated |
-| HRS | r20_smoking_x_vi_mod_severe | 28654 | 0.2256 | 0.1808 | 1.1084 | 1.6144 | 1.4682 | 1.7752 | replicated | False | replicated |
-| KLoSA | r20_smoking_x_vi_mod_severe | 40260 | 0.1418 | 0.215 | 1.1023 | 1.1002 | 1.0004 | 1.21 | uninformative | False | underpowered_or_indeterminate |
-| LASI | r02_hyperglycemia_x_cataract | 73204 | 0.121 | 0.1012 | 1.111 | 1.8782 | 1.7646 | 1.9991 | replicated | False | replicated |
-| SHARE | r02_hyperglycemia_x_cataract | 337274 | 0.1364 | 0.0747 | 1.0549 | 1.7539 | 1.6908 | 1.8194 | replicated | False | replicated |
-| SHARE | r10_smoking_x_cataract | 142084 | 0.1715 | 0.0882 | 1.072 | 1.109 | 1.041 | 1.1815 | replicated | False | replicated |
-| SHARE | r12_alcohol_x_cataract | 123478 | 0.167 | 0.0919 | 1.0768 | 0.9628 | 0.8999 | 1.0301 | uninformative | True | powered_null |
-| SHARE | r13_bmi_x_cataract | 337274 | 0.2282 | 0.0822 | 1.0427 | 1.2439 | 1.2008 | 1.2886 | replicated | False | replicated |
-| SHARE | r20_smoking_x_vi_mod_severe | 142229 | 0.1715 | 0.1443 | 1.0577 | 1.0875 | 1.0429 | 1.1339 | replicated | False | replicated |
 ```
 
 
@@ -3920,633 +3880,774 @@ r20_smoking_x_vi_mod_severe,CLHLS,1.2917,1.0534,1.5839,95.2,0.03963
 
 ```
 {
-  "schema_version": "v3.0",
-  "generated_by": "scripts/build_citation_pool.py",
-  "generated_on": "2026-10-15",
-  "rule_note": "kuku-paper-lookup Rules 1/3/4/5/6; entries are live API responses only, DOI cross-confirmed in Crossref+OpenAlex where marked cross_verified",
-  "n_entries": 27,
-  "failed_claims": [
-    "C011",
-    "C012",
-    "C017",
-    "C019",
-    "C024",
-    "C025"
-  ],
-  "entries": [
-    {
-      "pool_id": "C001",
-      "doi": "10.1136/bmj.q824",
-      "title": "TRIPOD+AI: an updated reporting guideline for clinical prediction models",
-      "year": 2024,
-      "journal": "BMJ",
-      "first_author": "Cohen Jérémie F",
-      "url": "https://doi.org/10.1136/bmj.q824",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "TRIPOD+AI reporting guideline for clinical prediction models",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C002",
-      "doi": "10.1038/s41591-021-01229-5",
-      "title": "DECIDE-AI: new reporting guidelines to bridge the development-to-implementation gap in clinical artificial intelligence",
-      "year": 2021,
-      "journal": "Nature Medicine",
-      "first_author": "",
-      "url": "https://doi.org/10.1038/s41591-021-01229-5",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "DECIDE-AI reporting guideline for early-stage clinical AI evaluation",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C003",
-      "doi": "10.1097/ede.0b013e3181577511",
-      "title": "Strengthening the Reporting of Observational Studies in Epidemiology (STROBE)",
-      "year": 2007,
-      "journal": "Epidemiology",
-      "first_author": "Vandenbroucke Jan P.",
-      "url": "https://doi.org/10.1097/ede.0b013e3181577511",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "STROBE reporting guideline for observational studies",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C004",
-      "doi": "10.1214/aos/1013699998",
-      "title": "The control of the false discovery rate in multiple testing under dependency",
-      "year": 2001,
-      "journal": "The Annals of Statistics",
-      "first_author": "Benjamini Yoav",
-      "url": "https://doi.org/10.1214/aos/1013699998",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "Benjamini-Yekutieli procedure for controlling FDR under dependency",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C005",
-      "doi": "10.1093/biomet/26.4.404",
-      "title": "THE USE OF CONFIDENCE OR FIDUCIAL LIMITS ILLUSTRATED IN THE CASE OF THE BINOMIAL",
-      "year": 1934,
-      "journal": "Biometrika",
-      "first_author": "CLOPPER C. J.",
-      "url": "https://doi.org/10.1093/biomet/26.4.404",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "Clopper-Pearson exact binomial confidence interval",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C006",
-      "doi": "10.1093/ije/dyt088",
-      "title": "Data Resource Profile: The Survey of Health, Ageing and Retirement in Europe (SHARE)",
-      "year": 2013,
-      "journal": "International Journal of Epidemiology",
-      "first_author": "Börsch-Supan Axel",
-      "url": "https://doi.org/10.1093/ije/dyt088",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "SHARE cohort: Survey of Health, Ageing and Retirement in Europe",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C007",
-      "doi": "10.1093/ije/dyu067",
-      "title": "Cohort Profile: the Health and Retirement Study (HRS)",
-      "year": 2014,
-      "journal": "International Journal of Epidemiology",
-      "url": "https://doi.org/10.1093/ije/dyu067",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "HRS: Health and Retirement Study cohort profile",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C008",
-      "doi": "10.1093/ije/dys168",
-      "title": "Cohort Profile: The English Longitudinal Study of Ageing",
-      "year": 2012,
-      "journal": "International Journal of Epidemiology",
-      "first_author": "Steptoe A.",
-      "url": "https://doi.org/10.1093/ije/dys168",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "ELSA: English Longitudinal Study of Ageing cohort profile",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C009",
-      "doi": "10.1093/ije/dyab266",
-      "title": "Cohort Profile: The Longitudinal Ageing Study in India (LASI)",
-      "year": 2022,
-      "journal": "International Journal of Epidemiology",
-      "first_author": "Perianayagam Arokiasamy",
-      "url": "https://doi.org/10.1093/ije/dyab266",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "LASI: Longitudinal Ageing Study in India cohort profile",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C010",
-      "doi": "10.1093/ije/dyu263",
-      "title": "Cohort Profile: The Mexican Health and Aging Study (MHAS)",
-      "year": 2015,
-      "journal": "International Journal of Epidemiology",
-      "first_author": "Wong Rebeca",
-      "url": "https://doi.org/10.1093/ije/dyu263",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "MHAS: Mexican Health and Aging Study cohort profile",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C013",
-      "doi": "10.1093/ije/dys203",
-      "title": "Cohort Profile: The China Health and Retirement Longitudinal Study (CHARLS)",
-      "year": 2012,
-      "journal": "International Journal of Epidemiology",
-      "first_author": "Zhao Y.",
-      "url": "https://doi.org/10.1093/ije/dys203",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "CHARLS: China Health and Retirement Longitudinal Study cohort profile",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C014",
-      "doi": "10.1093/ije/dyt228",
-      "title": "Data Resource Profile: The Korea National Health and Nutrition Examination Survey (KNHANES)",
-      "year": 2014,
-      "journal": "International Journal of Epidemiology",
-      "first_author": "Kweon S.",
-      "url": "https://doi.org/10.1093/ije/dyt228",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "KNHANES: Korea National Health and Nutrition Examination Survey",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C015",
-      "doi": "10.1002/9780470316696",
-      "title": "Multiple Imputation for Nonresponse in Surveys",
-      "year": 1987,
-      "journal": "Wiley Series in Probability and Statistics",
-      "first_author": "Rubin Donald B.",
-      "url": "https://doi.org/10.1002/9780470316696",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; no finding asserted",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "Multiple imputation and Rubin's combining rules",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C016",
-      "doi": "10.1016/s2214-109x(21)00008-5",
-      "title": "Rising to the challenge: estimates of the magnitude and causes of vision impairment and blindness",
-      "year": 2021,
-      "journal": "The Lancet Global Health",
-      "url": "https://doi.org/10.1016/s2214-109x(21)00008-5",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": true,
-      "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
-      "used_in_sections": [
-        "introduction"
-      ],
-      "claim_supported": "Magnitude and causes of vision impairment: GBD estimates (Lancet Global Health commentary/analysis)",
-      "added_at_phase": "7_6"
-    },
-    {
-      "pool_id": "C018",
-      "doi": "10.1167/iovs.12-9820",
-      "title": "Smoking and Risk of Age-Related Cataract: A Meta-Analysis",
-      "year": 2012,
-      "journal": "Investigative Opthalmology &amp; Visual Science",
-      "url": "https://doi.org/10.1167/iovs.12-9820",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": true,
-      "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
-      "used_in_sections": [
-        "introduction"
-      ],
-      "claim_supported": "Smoking as a risk factor for age-related cataract",
-      "added_at_phase": "7_6"
-    },
-    {
-      "pool_id": "C020",
-      "doi": "10.1158/1055-9965.epi-05-0456",
-      "title": "Complementing the Genome with an “Exposome”: The Outstanding Challenge of Environmental Exposure Measurement in Molecular Epidemiology",
-      "year": 2005,
-      "journal": "Cancer Epidemiology Biomarkers & Prevention",
-      "url": "https://doi.org/10.1158/1055-9965.epi-05-0456",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": true,
-      "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
-      "used_in_sections": [
-        "introduction"
-      ],
-      "claim_supported": "The exposome concept: complementing the genome with environmental exposure measurement",
-      "added_at_phase": "7_6"
-    },
-    {
-      "pool_id": "C021",
-      "doi": "10.1016/s2214-109x(13)70163-3",
-      "title": "Global prevalence of age-related macular degeneration",
-      "year": 2014,
-      "journal": "The Lancet Global Health",
-      "url": "https://doi.org/10.1016/s2214-109x(13)70163-3",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": true,
-      "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
-      "used_in_sections": [
-        "introduction"
-      ],
-      "claim_supported": "Age-related macular degeneration: prevalence and burden",
-      "added_at_phase": "7_6"
-    },
-    {
-      "pool_id": "C022",
-      "doi": "10.7189/jogh.08.010803",
-      "title": "Prevalence, risk factors and burden of diabetic retinopathy in China: a systematic review and meta-analysis",
-      "year": 2018,
-      "journal": "Journal of Global Health",
-      "url": "https://doi.org/10.7189/jogh.08.010803",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": true,
-      "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
-      "used_in_sections": [
-        "introduction"
-      ],
-      "claim_supported": "Prevalence, risk factors and burden of diabetic retinopathy in China (claim scoped to China)",
-      "added_at_phase": "7_6"
-    },
-    {
-      "pool_id": "C023",
-      "doi": "10.1016/j.ophtha.2014.05.013",
-      "title": "Global Prevalence of Glaucoma and Projections of Glaucoma Burden through 2040",
-      "year": 2014,
-      "journal": "Ophthalmology",
-      "url": "https://doi.org/10.1016/j.ophtha.2014.05.013",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "no abstract available in OpenAlex; Rule 6 -- paper cited for its topic only, no finding asserted",
-      "used_in_sections": [
-        "introduction"
-      ],
-      "claim_supported": "Global prevalence of glaucoma and projections of glaucoma burden through 2040",
-      "added_at_phase": "7_6"
-    },
-    {
-      "pool_id": "C026",
-      "doi": "10.1002/sim.1186",
-      "title": "Quantifying heterogeneity in a meta‐analysis",
-      "year": 2002,
-      "journal": "Statistics in Medicine",
-      "url": "https://doi.org/10.1002/sim.1186",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; cited for topic only",
-      "used_in_sections": [
-        "discussion"
-      ],
-      "claim_supported": "Quantifying heterogeneity in a meta-analysis (the I-squared statistic)",
-      "added_at_phase": "7_7"
-    },
-    {
-      "pool_id": "C027",
-      "doi": "10.1016/j.ajodo.2019.12.011",
-      "title": "Prediction interval in random-effects meta-analysis",
-      "year": 2020,
-      "journal": "American Journal of Orthodontics and Dentofacial Orthopedics",
-      "url": "https://doi.org/10.1016/j.ajodo.2019.12.011",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; cited for topic only",
-      "used_in_sections": [
-        "discussion"
-      ],
-      "claim_supported": "Prediction interval in random-effects meta-analysis: where a new study would be expected to fall",
-      "added_at_phase": "7_7"
-    },
-    {
-      "pool_id": "C028",
-      "doi": "10.1016/s0895-4356(99)00056-6",
-      "title": "Frailty Bias in Comorbidity Risk Adjustments of Community-Dwelling Elderly Populations",
-      "year": 1999,
-      "journal": "Journal of Clinical Epidemiology",
-      "url": "https://doi.org/10.1016/s0895-4356(99)00056-6",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; cited for topic only",
-      "used_in_sections": [
-        "discussion"
-      ],
-      "claim_supported": "Frailty bias in comorbidity risk adjustment of community-dwelling older adults",
-      "added_at_phase": "7_7"
-    },
-    {
-      "pool_id": "C029",
-      "doi": "10.1093/eurheartj/ehae295",
-      "title": "Genetic predictors of traits in elderly subjects: risk of survival bias and reverse causation",
-      "year": 2024,
-      "journal": "European Heart Journal",
-      "url": "https://doi.org/10.1093/eurheartj/ehae295",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; cited for topic only",
-      "used_in_sections": [
-        "discussion"
-      ],
-      "claim_supported": "Survivorship bias in genetic/trait associations estimated in elderly populations",
-      "added_at_phase": "7_7"
-    },
-    {
-      "pool_id": "C030",
-      "doi": "10.1111/dar.13119",
-      "title": "A systematic review of reasons for abstinence from alcohol reported by lifelong abstainers, current abstainers and former problem‐drinkers",
-      "year": 2020,
-      "journal": "Drug and Alcohol Review",
-      "url": "https://doi.org/10.1111/dar.13119",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "crossref",
-        "openalex"
-      ],
-      "retraction_flag": false,
-      "retraction_checked_on": "2026-10-15",
-      "abstract_retrieved": false,
-      "metadata_only_note": "abstract not retrieved; cited for topic only",
-      "used_in_sections": [
-        "discussion"
-      ],
-      "claim_supported": "Systematic review of reasons for abstinence from alcohol (sick-quitter / healthy-abstainer context)",
-      "added_at_phase": "7_7"
-    },
-    {
-      "pool_id": "C031",
-      "doi": "10.18170/DVN/MKB1LF",
-      "title": "The Chinese Longitudinal Healthy Longevity Survey (CLHLS)-Longitudinal Data（1998-2011）",
-      "year": 2015,
-      "journal": "Peking University Opendata Dataverse",
-      "url": "https://doi.org/10.18170/DVN/MKB1LF",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "datacite"
-      ],
-      "resource_type": null,
-      "datacite_state": "findable",
-      "retraction_flag": false,
-      "abstract_retrieved": false,
-      "metadata_only_note": "data deposit; cited as a dataset per DataCite/Force11 practice",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "CLHLS data deposit (Chinese Longitudinal Healthy Longevity Survey, longitudinal data 1998-2011)",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C032",
-      "doi": "10.7910/DVN/7AUOAO",
-      "title": "The Costa Rican Longevity and Healthy Aging Study (CRELES)",
-      "year": 2025,
-      "journal": "Harvard Dataverse",
-      "url": "https://doi.org/10.7910/DVN/7AUOAO",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "datacite"
-      ],
-      "resource_type": "Dataset",
-      "datacite_state": "findable",
-      "retraction_flag": false,
-      "abstract_retrieved": false,
-      "metadata_only_note": "data deposit; cited as a dataset per DataCite/Force11 practice",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "CRELES data deposit (Costa Rican Longevity and Healthy Aging Study, Harvard Dataverse)",
-      "added_at_phase": "7_5"
-    },
-    {
-      "pool_id": "C033",
-      "doi": "10.3886/icpsr26681.v2",
-      "title": "CRELES: Costa Rican Longevity and Healthy Aging Study, 2005 (Costa Rica Estudio de Longevidad y Envejecimiento Saludable)",
-      "year": 2010,
-      "journal": "ICPSR - Interuniversity Consortium for Political and Social Research",
-      "url": "https://doi.org/10.3886/icpsr26681.v2",
-      "verification_status": "cross_verified",
-      "verified_in": [
-        "datacite"
-      ],
-      "resource_type": "Dataset",
-      "datacite_state": "findable",
-      "retraction_flag": false,
-      "abstract_retrieved": false,
-      "metadata_only_note": "data deposit; cited as a dataset per DataCite/Force11 practice",
-      "used_in_sections": [
-        "methods"
-      ],
-      "claim_supported": "CRELES data deposit (ICPSR 26681)",
-      "added_at_phase": "7_5"
-    }
-  ],
-  "not_found_detail": {
-    "C011": "RESOLVED as a data citation: 10.18170/DVN/MKB1LF (see C031).",
-    "C012": "RESOLVED as a data citation: 10.7910/DVN/7AUOAO (see C032).",
-    "KLoSA": "No citable data deposit found in DataCite; cited by provider name only."
+ "schema_version": "v3.0",
+ "generated_by": "scripts/build_citation_pool.py",
+ "generated_on": "2026-10-15",
+ "rule_note": "kuku-paper-lookup Rules 1/3/4/5/6; entries are live API responses only, DOI cross-confirmed in Crossref+OpenAlex where marked cross_verified",
+ "n_entries": 33,
+ "failed_claims": [
+  "C011",
+  "C012",
+  "C017",
+  "C019",
+  "C024",
+  "C025"
+ ],
+ "entries": [
+  {
+   "pool_id": "C001",
+   "doi": "10.1136/bmj.q824",
+   "title": "TRIPOD+AI: an updated reporting guideline for clinical prediction models",
+   "year": 2024,
+   "journal": "BMJ",
+   "first_author": "Cohen Jérémie F",
+   "url": "https://doi.org/10.1136/bmj.q824",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "TRIPOD+AI reporting guideline for clinical prediction models",
+   "added_at_phase": "7_5"
   },
-  "failed_claims_note": "claims for which NO citable source could be verified in Crossref or OpenAlex; the manuscript must not cite these",
-  "rule6_note": "Claims in the manuscript are limited to what the retrieved abstract supports. C023 has no retrievable abstract, so it is cited only as having addressed global glaucoma projections, with no numerical claim attached."
+  {
+   "pool_id": "C002",
+   "doi": "10.1038/s41591-021-01229-5",
+   "title": "DECIDE-AI: new reporting guidelines to bridge the development-to-implementation gap in clinical artificial intelligence",
+   "year": 2021,
+   "journal": "Nature Medicine",
+   "first_author": "",
+   "url": "https://doi.org/10.1038/s41591-021-01229-5",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "DECIDE-AI reporting guideline for early-stage clinical AI evaluation",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C003",
+   "doi": "10.1097/ede.0b013e3181577511",
+   "title": "Strengthening the Reporting of Observational Studies in Epidemiology (STROBE)",
+   "year": 2007,
+   "journal": "Epidemiology",
+   "first_author": "Vandenbroucke Jan P.",
+   "url": "https://doi.org/10.1097/ede.0b013e3181577511",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "STROBE reporting guideline for observational studies",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C004",
+   "doi": "10.1214/aos/1013699998",
+   "title": "The control of the false discovery rate in multiple testing under dependency",
+   "year": 2001,
+   "journal": "The Annals of Statistics",
+   "first_author": "Benjamini Yoav",
+   "url": "https://doi.org/10.1214/aos/1013699998",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "Benjamini-Yekutieli procedure for controlling FDR under dependency",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C005",
+   "doi": "10.1093/biomet/26.4.404",
+   "title": "THE USE OF CONFIDENCE OR FIDUCIAL LIMITS ILLUSTRATED IN THE CASE OF THE BINOMIAL",
+   "year": 1934,
+   "journal": "Biometrika",
+   "first_author": "CLOPPER C. J.",
+   "url": "https://doi.org/10.1093/biomet/26.4.404",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "Clopper-Pearson exact binomial confidence interval",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C006",
+   "doi": "10.1093/ije/dyt088",
+   "title": "Data Resource Profile: The Survey of Health, Ageing and Retirement in Europe (SHARE)",
+   "year": 2013,
+   "journal": "International Journal of Epidemiology",
+   "first_author": "Börsch-Supan Axel",
+   "url": "https://doi.org/10.1093/ije/dyt088",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "SHARE cohort: Survey of Health, Ageing and Retirement in Europe",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C007",
+   "doi": "10.1093/ije/dyu067",
+   "title": "Cohort Profile: the Health and Retirement Study (HRS)",
+   "year": 2014,
+   "journal": "International Journal of Epidemiology",
+   "url": "https://doi.org/10.1093/ije/dyu067",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "HRS: Health and Retirement Study cohort profile",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C008",
+   "doi": "10.1093/ije/dys168",
+   "title": "Cohort Profile: The English Longitudinal Study of Ageing",
+   "year": 2012,
+   "journal": "International Journal of Epidemiology",
+   "first_author": "Steptoe A.",
+   "url": "https://doi.org/10.1093/ije/dys168",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "ELSA: English Longitudinal Study of Ageing cohort profile",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C009",
+   "doi": "10.1093/ije/dyab266",
+   "title": "Cohort Profile: The Longitudinal Ageing Study in India (LASI)",
+   "year": 2022,
+   "journal": "International Journal of Epidemiology",
+   "first_author": "Perianayagam Arokiasamy",
+   "url": "https://doi.org/10.1093/ije/dyab266",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "LASI: Longitudinal Ageing Study in India cohort profile",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C010",
+   "doi": "10.1093/ije/dyu263",
+   "title": "Cohort Profile: The Mexican Health and Aging Study (MHAS)",
+   "year": 2015,
+   "journal": "International Journal of Epidemiology",
+   "first_author": "Wong Rebeca",
+   "url": "https://doi.org/10.1093/ije/dyu263",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "MHAS: Mexican Health and Aging Study cohort profile",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C013",
+   "doi": "10.1093/ije/dys203",
+   "title": "Cohort Profile: The China Health and Retirement Longitudinal Study (CHARLS)",
+   "year": 2012,
+   "journal": "International Journal of Epidemiology",
+   "first_author": "Zhao Y.",
+   "url": "https://doi.org/10.1093/ije/dys203",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "CHARLS: China Health and Retirement Longitudinal Study cohort profile",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C014",
+   "doi": "10.1093/ije/dyt228",
+   "title": "Data Resource Profile: The Korea National Health and Nutrition Examination Survey (KNHANES)",
+   "year": 2014,
+   "journal": "International Journal of Epidemiology",
+   "first_author": "Kweon S.",
+   "url": "https://doi.org/10.1093/ije/dyt228",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "KNHANES: Korea National Health and Nutrition Examination Survey",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C015",
+   "doi": "10.1002/9780470316696",
+   "title": "Multiple Imputation for Nonresponse in Surveys",
+   "year": 1987,
+   "journal": "Wiley Series in Probability and Statistics",
+   "first_author": "Rubin Donald B.",
+   "url": "https://doi.org/10.1002/9780470316696",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; no finding asserted",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "Multiple imputation and Rubin's combining rules",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C016",
+   "doi": "10.1016/s2214-109x(21)00008-5",
+   "title": "Rising to the challenge: estimates of the magnitude and causes of vision impairment and blindness",
+   "year": 2021,
+   "journal": "The Lancet Global Health",
+   "url": "https://doi.org/10.1016/s2214-109x(21)00008-5",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": true,
+   "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
+   "used_in_sections": [
+    "introduction"
+   ],
+   "claim_supported": "Magnitude and causes of vision impairment: GBD estimates (Lancet Global Health commentary/analysis)",
+   "added_at_phase": "7_6"
+  },
+  {
+   "pool_id": "C018",
+   "doi": "10.1167/iovs.12-9820",
+   "title": "Smoking and Risk of Age-Related Cataract: A Meta-Analysis",
+   "year": 2012,
+   "journal": "Investigative Ophthalmology &amp; Visual Science",
+   "url": "https://doi.org/10.1167/iovs.12-9820",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": true,
+   "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
+   "used_in_sections": [
+    "introduction"
+   ],
+   "claim_supported": "Smoking as a risk factor for age-related cataract",
+   "added_at_phase": "7_6"
+  },
+  {
+   "pool_id": "C020",
+   "doi": "10.1158/1055-9965.epi-05-0456",
+   "title": "Complementing the Genome with an “Exposome”: The Outstanding Challenge of Environmental Exposure Measurement in Molecular Epidemiology",
+   "year": 2005,
+   "journal": "Cancer Epidemiology Biomarkers & Prevention",
+   "url": "https://doi.org/10.1158/1055-9965.epi-05-0456",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": true,
+   "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
+   "used_in_sections": [
+    "introduction"
+   ],
+   "claim_supported": "The exposome concept: complementing the genome with environmental exposure measurement",
+   "added_at_phase": "7_6",
+   "first_author": "Benjamini Yoav"
+  },
+  {
+   "pool_id": "C021",
+   "doi": "10.1016/s2214-109x(13)70163-3",
+   "title": "Global prevalence of age-related macular degeneration",
+   "year": 2014,
+   "journal": "The Lancet Global Health",
+   "url": "https://doi.org/10.1016/s2214-109x(13)70163-3",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": true,
+   "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
+   "used_in_sections": [
+    "introduction"
+   ],
+   "claim_supported": "Age-related macular degeneration: prevalence and burden",
+   "added_at_phase": "7_6",
+   "first_author": "Clopper Charles J"
+  },
+  {
+   "pool_id": "C022",
+   "doi": "10.7189/jogh.08.010803",
+   "title": "Prevalence, risk factors and burden of diabetic retinopathy in China: a systematic review and meta-analysis",
+   "year": 2018,
+   "journal": "Journal of Global Health",
+   "url": "https://doi.org/10.7189/jogh.08.010803",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": true,
+   "metadata_only_note": "abstract retrieved from OpenAlex; claims scoped to it",
+   "used_in_sections": [
+    "introduction"
+   ],
+   "claim_supported": "Prevalence, risk factors and burden of diabetic retinopathy in China (claim scoped to China)",
+   "added_at_phase": "7_6"
+  },
+  {
+   "pool_id": "C023",
+   "doi": "10.1016/j.ophtha.2014.05.013",
+   "title": "Global Prevalence of Glaucoma and Projections of Glaucoma Burden through 2040",
+   "year": 2014,
+   "journal": "Ophthalmology",
+   "url": "https://doi.org/10.1016/j.ophtha.2014.05.013",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "no abstract available in OpenAlex; Rule 6 -- paper cited for its topic only, no finding asserted",
+   "used_in_sections": [
+    "introduction"
+   ],
+   "claim_supported": "Global prevalence of glaucoma and projections of glaucoma burden through 2040",
+   "added_at_phase": "7_6"
+  },
+  {
+   "pool_id": "C026",
+   "doi": "10.1002/sim.1186",
+   "title": "Quantifying heterogeneity in a meta‐analysis",
+   "year": 2002,
+   "journal": "Statistics in Medicine",
+   "url": "https://doi.org/10.1002/sim.1186",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; cited for topic only",
+   "used_in_sections": [
+    "discussion"
+   ],
+   "claim_supported": "Quantifying heterogeneity in a meta-analysis (the I-squared statistic)",
+   "added_at_phase": "7_7"
+  },
+  {
+   "pool_id": "C027",
+   "doi": "10.1016/j.ajodo.2019.12.011",
+   "title": "Prediction interval in random-effects meta-analysis",
+   "year": 2020,
+   "journal": "American Journal of Orthodontics and Dentofacial Orthopedics",
+   "url": "https://doi.org/10.1016/j.ajodo.2019.12.011",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; cited for topic only",
+   "used_in_sections": [
+    "discussion"
+   ],
+   "claim_supported": "Prediction interval in random-effects meta-analysis: where a new study would be expected to fall",
+   "added_at_phase": "7_7"
+  },
+  {
+   "pool_id": "C028",
+   "doi": "10.1016/s0895-4356(99)00056-6",
+   "title": "Frailty Bias in Comorbidity Risk Adjustments of Community-Dwelling Elderly Populations",
+   "year": 1999,
+   "journal": "Journal of Clinical Epidemiology",
+   "url": "https://doi.org/10.1016/s0895-4356(99)00056-6",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; cited for topic only",
+   "used_in_sections": [
+    "discussion"
+   ],
+   "claim_supported": "Frailty bias in comorbidity risk adjustment of community-dwelling older adults",
+   "added_at_phase": "7_7"
+  },
+  {
+   "pool_id": "C029",
+   "doi": "10.1093/eurheartj/ehae295",
+   "title": "Genetic predictors of traits in elderly subjects: risk of survival bias and reverse causation",
+   "year": 2024,
+   "journal": "European Heart Journal",
+   "url": "https://doi.org/10.1093/eurheartj/ehae295",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; cited for topic only",
+   "used_in_sections": [
+    "discussion"
+   ],
+   "claim_supported": "Survivorship bias in genetic/trait associations estimated in elderly populations",
+   "added_at_phase": "7_7"
+  },
+  {
+   "pool_id": "C030",
+   "doi": "10.1111/dar.13119",
+   "title": "A systematic review of reasons for abstinence from alcohol reported by lifelong abstainers, current abstainers and former problem‐drinkers",
+   "year": 2020,
+   "journal": "Drug and Alcohol Review",
+   "url": "https://doi.org/10.1111/dar.13119",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref",
+    "openalex"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-15",
+   "abstract_retrieved": false,
+   "metadata_only_note": "abstract not retrieved; cited for topic only",
+   "used_in_sections": [
+    "discussion"
+   ],
+   "claim_supported": "Systematic review of reasons for abstinence from alcohol (sick-quitter / healthy-abstainer context)",
+   "added_at_phase": "7_7"
+  },
+  {
+   "pool_id": "C031",
+   "doi": "10.18170/DVN/MKB1LF",
+   "title": "The Chinese Longitudinal Healthy Longevity Survey (CLHLS)-Longitudinal Data（1998-2011）",
+   "year": 2015,
+   "journal": "Peking University Opendata Dataverse",
+   "url": "https://doi.org/10.18170/DVN/MKB1LF",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "datacite"
+   ],
+   "resource_type": null,
+   "datacite_state": "findable",
+   "retraction_flag": false,
+   "abstract_retrieved": false,
+   "metadata_only_note": "data deposit; cited as a dataset per DataCite/Force11 practice",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "CLHLS data deposit (Chinese Longitudinal Healthy Longevity Survey, longitudinal data 1998-2011)",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C032",
+   "doi": "10.7910/DVN/7AUOAO",
+   "title": "The Costa Rican Longevity and Healthy Aging Study (CRELES)",
+   "year": 2025,
+   "journal": "Harvard Dataverse",
+   "url": "https://doi.org/10.7910/DVN/7AUOAO",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "datacite"
+   ],
+   "resource_type": "Dataset",
+   "datacite_state": "findable",
+   "retraction_flag": false,
+   "abstract_retrieved": false,
+   "metadata_only_note": "data deposit; cited as a dataset per DataCite/Force11 practice",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "CRELES data deposit (Costa Rican Longevity and Healthy Aging Study, Harvard Dataverse)",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C033",
+   "doi": "10.3886/icpsr26681.v2",
+   "title": "CRELES: Costa Rican Longevity and Healthy Aging Study, 2005 (Costa Rica Estudio de Longevidad y Envejecimiento Saludable)",
+   "year": 2010,
+   "journal": "ICPSR - Interuniversity Consortium for Political and Social Research",
+   "url": "https://doi.org/10.3886/icpsr26681.v2",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "datacite"
+   ],
+   "resource_type": "Dataset",
+   "datacite_state": "findable",
+   "retraction_flag": false,
+   "abstract_retrieved": false,
+   "metadata_only_note": "data deposit; cited as a dataset per DataCite/Force11 practice",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "CRELES data deposit (ICPSR 26681)",
+   "added_at_phase": "7_5"
+  },
+  {
+   "pool_id": "C034",
+   "doi": "10.48550/arXiv.2410.05779",
+   "title": "LightRAG: Simple and Fast Retrieval-Augmented Generation",
+   "year": 2024,
+   "journal": "arXiv",
+   "first_author": "Guo Zirui",
+   "url": "https://arxiv.org/abs/2410.05779",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "arxiv",
+    "crossref"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-24",
+   "abstract_retrieved": false,
+   "metadata_only_note": "metadata verified via Crossref/arXiv; no finding asserted beyond citation",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "LightRAG graph-based retrieval-augmented generation framework",
+   "added_at_phase": "7_8",
+   "authors": "Guo Z; Xia L; Yu Y; Ao T; Huang C"
+  },
+  {
+   "pool_id": "C035",
+   "doi": "10.7326/M16-2607",
+   "title": "Sensitivity Analysis in Observational Research: Introducing the E-Value",
+   "year": 2017,
+   "journal": "Annals of Internal Medicine",
+   "first_author": "VanderWeele Tyler J",
+   "url": "https://doi.org/10.7326/M16-2607",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-24",
+   "abstract_retrieved": false,
+   "metadata_only_note": "metadata verified via Crossref/arXiv; no finding asserted beyond citation",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "E-value method for unmeasured confounding sensitivity analysis",
+   "added_at_phase": "7_8",
+   "authors": "VanderWeele TJ; Ding P"
+  },
+  {
+   "pool_id": "C036",
+   "doi": "10.1111/j.1467-985x.2008.00552.x",
+   "title": "A Re-Evaluation of Random-Effects Meta-Analysis",
+   "year": 2009,
+   "journal": "Journal of the Royal Statistical Society Series A",
+   "first_author": "Higgins Julian P T",
+   "url": "https://doi.org/10.1111/j.1467-985x.2008.00552.x",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-24",
+   "abstract_retrieved": false,
+   "metadata_only_note": "metadata verified via Crossref/arXiv; no finding asserted beyond citation",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "Prediction intervals in random-effects meta-analysis",
+   "added_at_phase": "7_8",
+   "authors": "Higgins JPT; Thompson SG; Spiegelhalter DJ"
+  },
+  {
+   "pool_id": "C037",
+   "doi": "10.1007/978-981-287-082-7_55",
+   "title": "Korean Longitudinal Study of Ageing (KLoSA): Overview of Research Design and Contents",
+   "year": 2017,
+   "journal": "Encyclopedia of Geropsychology",
+   "first_author": "Jang Jinkyung",
+   "url": "https://doi.org/10.1007/978-981-287-082-7_55",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-24",
+   "abstract_retrieved": false,
+   "metadata_only_note": "metadata verified via Crossref/arXiv; no finding asserted beyond citation",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "KLoSA cohort design overview",
+   "added_at_phase": "7_8",
+   "authors": "Jang JY"
+  },
+  {
+   "pool_id": "C038",
+   "doi": "10.1136/bmj-2023-078378",
+   "title": "TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods",
+   "year": 2024,
+   "journal": "BMJ",
+   "first_author": "Collins Gary S",
+   "url": "https://doi.org/10.1136/bmj-2023-078378",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-24",
+   "abstract_retrieved": false,
+   "metadata_only_note": "metadata verified via Crossref/arXiv; no finding asserted beyond citation",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "TRIPOD+AI formal statement",
+   "added_at_phase": "7_8",
+   "authors": "Collins GS; Moons KGM; Gatsonis CA; Pencina MJ"
+  },
+  {
+   "pool_id": "C039",
+   "doi": "10.1136/bmj-2022-070904",
+   "title": "Reporting guideline for the early stage clinical evaluation of decision support systems driven by artificial intelligence",
+   "year": 2022,
+   "journal": "BMJ",
+   "first_author": "Vasey Brett",
+   "url": "https://doi.org/10.1136/bmj-2022-070904",
+   "verification_status": "cross_verified",
+   "verified_in": [
+    "crossref"
+   ],
+   "retraction_flag": false,
+   "retraction_checked_on": "2026-10-24",
+   "abstract_retrieved": false,
+   "metadata_only_note": "metadata verified via Crossref/arXiv; no finding asserted beyond citation",
+   "used_in_sections": [
+    "methods"
+   ],
+   "claim_supported": "DECIDE-AI formal reporting guideline",
+   "added_at_phase": "7_8",
+   "authors": "Vasey B; Nagendran M; Campbell D; Comissiong DMG"
+  }
+ ],
+ "not_found_detail": {
+  "C011": "RESOLVED as a data citation: 10.18170/DVN/MKB1LF (see C031).",
+  "C012": "RESOLVED as a data citation: 10.7910/DVN/7AUOAO (see C032).",
+  "KLoSA": "No citable data deposit found in DataCite; cited by provider name only."
+ },
+ "failed_claims_note": "claims for which NO citable source could be verified in Crossref or OpenAlex; the manuscript must not cite these",
+ "rule6_note": "Claims in the manuscript are limited to what the retrieved abstract supports. C023 has no retrievable abstract, so it is cited only as having addressed global glaucoma projections, with no numerical claim attached."
 }
 ```
 

@@ -1,5 +1,5 @@
 {
-  "assembled_on": "2026-10-23",
+  "assembled_on": "2026-10-29",
   "items": [
     {
       "item": "S0. Supplementary Methods",
@@ -17,10 +17,8 @@
     },
     {
       "item": "S2. Per-pair statistical power in the cohort layer",
-      "status": "included",
-      "path": "outputs\\tables\\table6_power.md",
-      "bytes": 3283,
-      "produced_by": "scripts/cohort_power.py"
+      "status": "MISSING",
+      "path": "outputs\\tables\\table6_power.md"
     },
     {
       "item": "S3. Between-cohort heterogeneity, full output",
@@ -54,7 +52,7 @@
       "item": "S7. Verified citation pool",
       "status": "included",
       "path": "outputs\\paper\\citation_pool.json",
-      "bytes": 23632,
+      "bytes": 26779,
       "produced_by": "scripts/build_citation_pool.py, scripts/extend_citation_pool_intro.py"
     },
     {

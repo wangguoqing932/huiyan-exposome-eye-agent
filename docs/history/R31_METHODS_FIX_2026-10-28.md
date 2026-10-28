@@ -113,3 +113,25 @@ JMIR 退稿，意见指向方法学。自查确认三处真实问题（不是措
 但队列面暴露的是**能力缺失**而非性能：没有任何人群条件化证据可用。
 这条已写入 Results（新段）与 Table 3（队列行）、Abstract（一句）。
 **局限声明**：18 个格子的观测状态已随规则层发表，本分析是事后描述性再分析，不是确证。
+
+## 图 2 重做 + 标题改口径（2026-10-29）
+
+原图 2 只画了 NHANES 内部两代基线，而 R31 后的头号结果在外部；审稿人先看图，图与结论错位。
+新图 2（`render_top_figures.py::figure2`，源数据 `build_figure2_source_data.py` → `source_data/figure2_performance.csv`）：
+
+- (a) KNHANES 301 对与 296 个无修订污染对的 F1：agent 0.375/0.211、规则层 0.360/0.200、
+  LightRAG 0.176/0.089、纯 LLM 0.173/0.122、naive 0.120/0.086
+- (b) 474 对的决策来源：无规则 418、证据 ≥B 45、仲裁 6、负对照弃权 3、无相关证据 2
+- (c) 复现配对的来源：NHANES 6 个全部落在修订规则上（0 clean）；KNHANES 18 个中 5 touched / 13 clean
+- (d) 三态分解：agent 与规则层召回同为 0.50、contradicted flag 同为 0.17，只在 uninformative 上有 0.07 vs 0.08 的差
+
+配套：契约 `figure2_performance.yaml` 重写、图注重写、正文 Figure 2 引用从内部段移到外部段（`Figure 2a`）、
+Supplement S7 补 `full agent (G2)` 行并标注旧"证据门变体"已被取代、Multimedia Appendix 用 pandoc 重建。
+
+**标题**改为："An explainable rule-knowledge-graph-LLM agent for exposome-eye risk stratification:
+external gains, a development-informed benchmark, and rules that do not transport"
+（原 "strong benchmarks, operable reports" 与新结果不符）。
+
+**cover letter 事故与修复**：`build_cover_letter.py` 旧版自己拥有正文并在运行时覆盖 `.md`，
+把已写好的 JMIR 信覆盖成 2026-10 的旧草稿。已改为**只读 `.md` 生成 `.docx`**，不再写 `.md`；
+信件按新数字重写（外部 0.375/0.360/0.176/0.173/0.120，296 对 0.211/0.200/…，队列 18 格）。

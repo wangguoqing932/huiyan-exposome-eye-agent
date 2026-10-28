@@ -225,11 +225,13 @@ Gold positive = replicated; predicted positive = flag. Sensitivity/specificity/P
 
 | Generation / matrix | Method | Sensitivity | Specificity | PPV | κ | n |
 |---|---|---|---|---|---|---:|
-| NHANES, Qwen (80) | full system | 1.00 | 0.851 | 0.353 | 0.462 | 80 |
+| NHANES, Qwen (80) | full agent (G2) | 1.00 | 0.878 | 0.400 | 0.520 | 80 |
+| NHANES, Qwen (80) | rule layer (G0) | 1.00 | 0.851 | 0.353 | 0.462 | 80 |
 | NHANES, Qwen (80) | LightRAG | 1.00 | 0.743–0.757 | 0.24–0.25 | 0.303–0.318 | 80 |
 | NHANES, Qwen (80) | pure LLM | 1.00 | 0.662–0.689 | 0.194–0.207 | 0.227–0.250 | 80 |
 | NHANES, Qwen (80) | naive RAG | 0–0.167 | 0.905–0.959 | 0–0.250 | −0.088–0.149 | 80 |
-| NHANES, GLM-5.3-flash (159) | full system | 1.00 | 0.915 | 0.316 | 0.448 | 159 |
+| NHANES, GLM-5.3-flash (159) | full agent (G2) | 1.00 | 0.928 | 0.353 | 0.493 | 159 |
+| NHANES, GLM-5.3-flash (159) | rule layer (G0) | 1.00 | 0.915 | 0.316 | 0.448 | 159 |
 | NHANES, GLM-5.3-flash (159) | LightRAG | 0.833 | 0.706–0.739 | 0.10–0.111 | 0.119–0.139 | 159 |
 | NHANES, GLM-5.3-flash (159) | pure LLM | 1.00 | 0.595–0.693 | 0.088–0.113 | 0.100–0.145 | 159 |
 | NHANES, GLM-5.3-flash (159) | naive RAG | 0–0.167 | 0.954–0.980 | 0–0.250 | −0.042–0.175 | 159 |
@@ -241,7 +243,7 @@ Gold positive = replicated; predicted positive = flag. Sensitivity/specificity/P
 | KNHANES (301) | pure LLM | 0.692–0.769 | 0.576–0.622 | 0.069–0.079 | 0.050–0.071 | 301 |
 | KNHANES (301) | naive RAG | 0.077–0.154 | 0.903–0.938 | 0.034–0.100 | −0.013–0.073 | 301 |
 
-**Evidence-gated variant (post-hoc optimisation test).** Requiring a fired rule to have at least one linked A/B/C evidence chunk keeps NHANES sensitivity at 1.00 while cutting false positives (Qwen: FP 11→9, spec 0.851→0.878, PPV 0.353→0.400, κ 0.462→0.520; GLM: FP 13→11, spec 0.915→0.928, PPV 0.316→0.353, κ 0.448→0.493); externally it trades one true positive for one false positive (sens 0.500→0.444, κ 0.307→0.279). This is consistent with the pre-registered G1/G2 ablation (0.455→0.476→0.500 on judgeable pairs); the deployable classifier is the evidence-gated configuration. Severity tiers alone are weak discriminators (PPV med/high 0.296–0.364 vs low/unknown 0.200–0.333). Source: outputs/confirmatory/gate_optimization_summary.json.
+**Evidence-gated variant (post-hoc optimisation test; superseded by the pre-registered G0/G1/G2 ablation in Table 3 and by the R31 recomputation).** Requiring a fired rule to have at least one linked A/B/C evidence chunk keeps NHANES sensitivity at 1.00 while cutting false positives (Qwen: FP 11→9, spec 0.851→0.878, PPV 0.353→0.400, κ 0.462→0.520; GLM: FP 13→11, spec 0.915→0.928, PPV 0.316→0.353, κ 0.448→0.493); externally that particular variant traded one true positive for one false positive (sens 0.500→0.444, κ 0.307→0.279); the pre-registered G2 arm, recomputed under R31 with outcome variants resolved to canonical terms, keeps sensitivity at 0.500 and removes two false positives (κ 0.307→0.325, Table 3). This is consistent with the pre-registered G1/G2 ablation (0.455→0.476→0.500 on judgeable pairs); the deployable classifier is the evidence-gated configuration. Severity tiers alone are weak discriminators (PPV med/high 0.296–0.364 vs low/unknown 0.200–0.333). Source: outputs/confirmatory/gate_optimization_summary.json.
 
 ## Supplementary Table S8. Literature-layer directional concordance by index
 
