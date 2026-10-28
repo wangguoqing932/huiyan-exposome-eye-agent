@@ -6,42 +6,39 @@
 
 # Abstract
 
-**Background.** Clinical decision support for major eye disease increasingly uses
-multi-layer agents that combine deterministic rules, knowledge-graph retrieval and
-a language model. Such agents are inspectable, but whether they outperform
-general models on common data, and whether their rules hold elsewhere,
-are rarely tested together.
+**Background.** Multi-layer agents that combine deterministic rules, knowledge-graph
+retrieval and a language model are inspectable, but whether they outperform
+general models, and whether their rules hold elsewhere, are rarely tested together.
 
-**Methods.** We built Huiyan, an explainable agent combining 21 rules, a LightRAG
-knowledge graph of 1,060 evidence chunks and an LLM arbiter that grades
-risk and returns a source-linked trace. We evaluated two validation tracks across
-four independence tiers: system-level classification of the deployable agent
-against three baselines (internal NHANES; external KNHANES), and rule-level
-direction under a pre-registered three-state standard (CHARLS; eight ageing cohorts,
-285,878 participants), plus
-independent concordance across four literature indexes.
+**Methods.** Huiyan combines 21 rules, a LightRAG knowledge graph of 1,060 evidence
+chunks and an LLM arbiter that returns a source-linked trace. We evaluated
+system-level classification of the deployable agent against three baselines
+(internal NHANES, which also informed rule development; external KNHANES),
+rule-level direction under a pre-registered three-state standard (CHARLS; eight
+ageing cohorts, 285,878 participants), and concordance across four literature indexes.
 
-**Results.** System track: the deployable agent ranked first on F1 in every
-matrix — 0.571 on NHANES (80 pairs; LightRAG 0.392, pure LLM 0.335, naive RAG
-0.080) and 0.522 on the GLM generation (159 pairs; 0.186, 0.178, 0.069);
-on KNHANES (301 pairs) the rule layer scored 0.360 versus 0.145, 0.135 and 0.094.
-Under a binary collapse the agent reached sensitivity 1.00, specificity 0.878,
-PPV 0.400 and κ 0.520 internally; external sensitivity fell to 0.50. Rule track:
-only 6 of 21 rules were testable in the cohorts; of 18 rule × cohort pairs, 8
-replicated, 8 were uninformative and 2 contradicted; two met the pre-registered
-criterion, but both prediction intervals spanned unity. Literature concordance
-was 0.889 (PubMed, 21 informative rules), 0.916 (Web of Science, 2), 0.922
-(Europe PMC, 17) and 0.800 (CNKI, 5), with 16/17 PubMed–Europe PMC
-cross-index agreement. Every reported case resolved to a rule, a KG path
-and a source chunk (Multimedia Appendix 1).
+**Results.** System track: internally the agent reached F1 0.571 (80 pairs;
+LightRAG 0.392, pure LLM 0.335, naive RAG 0.080) and 0.522 (159 pairs; 0.186,
+0.178, 0.069). That matrix is in-sample: the rule set was revised after the first
+confirmatory run, so recall of 1.000 is a property of that revision (the
+pre-revision set scored 0.111). Externally (KNHANES, 301 pairs) the same agent
+scored 0.312 against 0.145, 0.135 and 0.094, but below its deterministic rule
+layer (0.360): the gates raised precision (0.281 to 0.357) and halved recall
+(0.500 to 0.278). Under a binary collapse, sensitivity was 1.00 internally and
+0.278 externally, with external specificity 0.968 and kappa 0.275. Rule track:
+only 6 of 21 rules were testable in the cohorts; of 18 rule x cohort pairs,
+8 replicated, 8 were uninformative and 2 contradicted; two met the pre-registered
+criterion but both intervals spanned unity. Literature concordance was 0.889
+(PubMed), 0.916 (Web of Science), 0.922 (Europe PMC) and 0.800 (CNKI), with
+16/17 cross-index agreement.
 
-**Conclusions.** An explainable rule-KG-LLM agent can be benchmark-validated and
-operable: it ranked first against LLM and RAG baselines across two national
-surveys and returns a source-linked report through a working interface. Its
-rules, however, were largely untestable elsewhere (15 of 21), and none was
-robustly transportable where testable; the constraint was measurement, not
-sample size. Agent validation should therefore report system-level and rule-level
-results separately, and state which exposures were measured.
+**Conclusions.** The agent outperformed LLM and RAG baselines on two national
+surveys and returned a source-linked report through a working interface, yet on
+independent data it did not outperform its own deterministic rule layer. Its rules
+were largely untestable elsewhere (15 of 21), and none was robustly transportable
+where testable; the constraint was measurement, not sample size. Agent validation
+should report system-level and rule-level results separately, state whether the
+benchmark informed development, and state which exposures were measured.
 
 ---
 
@@ -282,9 +279,13 @@ rule, the KG path and the source chunk (Figure 1). The classification benchmark 
 
 ## Validation overview
 
-The validation returned these core results: the full agent ranked first on F1
-in all three matrices (0.571, 0.522 and 0.360 against 0.080–0.392, 0.069–0.186
-and 0.094–0.145; NHANES runs the deployable G2 agent, KNHANES the rule layer); a worked case resolved every output to a rule, KG path and source chunk (Supplementary Figures S1-S2); in the cohort
+The validation returned these core results: the full agent beat the three
+LLM/RAG baselines on F1 wherever it was run end to end — 0.571 and 0.522
+internally (against 0.080–0.392 and 0.069–0.186) and 0.312 externally (against
+0.094–0.145) — but on the external matrix it finished below the bare rule layer
+(0.360 for the rule layer versus 0.312 for the agent), and the internal matrix is
+in-sample because the rule set was revised after the first confirmatory run; a
+worked case resolved every output to a rule, KG path and source chunk (Supplementary Figures S1-S2); in the cohort
 layer 6 of 21 rules were testable, with 8 of 18 rule × cohort pairs replicated,
 8 uninformative and 2 contradicted; rule direction by tier was NHANES 6/0/10,
 KNHANES 5/0/10, CHARLS 0/0/4, eight cohorts 8/2/8 (replicated/contradicted/
@@ -311,31 +312,32 @@ or late AMD (1.08, q = 0.53) in NHANES, BMI-cataract is significant per SD in
 KNHANES (1.077, 1.034–1.122, q = 0.0014) and null in NHANES (1.030, q = 0.71);
 direction agreed in 19/24 NHANES and 9/10 KNHANES pairs.
 
-At the system level, two generations are reported side by side. The deployable
-full agent (G2: rule layer, negative-control gate, evidence confirmation, LLM
-arbiter) was benchmarked on the primary matrix: on the 80 development-era pairs
-(Qwen3.8-27B baselines, R11-corrected gold) it attained F1 = 0.571 (P 0.400 /
-R 1.000), ahead of LightRAG 0.392 ± 0.007, pure LLM 0.335 ± 0.010 and naive RAG
-0.080 ± 0.110 over five seeds (Figure 2). Accuracy McNemar was significant
-against LightRAG (p = 0.0064–0.0117) and pure LLM (p = 0.0004–0.0013) but not
-naive RAG (p = 0.42–1.00). The ablation localises the gain: bare rule layer 0.522,
-+negative-control gate 0.545, +evidence confirmation and arbiter 0.571; the
-pre-expansion v1.1 rule set scored 0.111 on the earlier R5 gold. The full agent extended the gain to the 159-pair GLM-5.3-flash generation:
-F1 = 0.522 (P 0.353 / R 1.000) versus rule layer 0.480 and baselines 0.186,
-0.178 and 0.069, with accuracy McNemar significant against all three (per-seed
-p < 10⁻⁶). A stronger commercial LLM as a standalone judge produced more,
-not fewer, false positives (precision 0.10). Under a secondary binary collapse
-(gold positive = replicated; predicted positive = flag), the full agent reached
-sensitivity 1.00, specificity 0.878, PPV 0.400 and κ 0.520 — passing the
-pre-registered internal lines (sens ≥ 0.70, spec ≥ 0.60, κ ≥ 0.4); naive RAG's
-near-null flagging (sensitivity 0–0.17, κ ≈ 0) explains its accuracy-McNemar null
-(Supplementary Table S7). Reading the denominators: the full agent flags 17 of 80
-pairs, the baselines 4–31; most
-predicted-positive pairs are uninformative rather than contradicted, so precision
-is low for every method (0.07–0.35) while the full system's recall is 1.000 by
-construction after the v1.2 rule expansion — the pre-expansion v1.1 rule set,
-replayed on the same 80-pair scope under the earlier R5 gold, scored F1 = 0.111
-(P 0.091 / R 0.143).
+At the system level the internal NHANES matrix is reported as in-sample. The
+134-pair development set contributed no independent estimate, and the 80-pair
+matrix was itself used in development: the rule set was revised after the first
+confirmatory run (r02–r04 exposure coverage altered, r22 added; Methods records
+this as test-set fitting), so the recall of 1.000 below is a property of that
+revision, not an out-of-sample estimate. Under the earlier gold the pre-revision
+v1.1 set scored 0.111 (P 0.091 / R 0.143). With that caveat, the deployable full
+agent (G2: rule layer, negative-control gate, evidence confirmation, LLM
+arbiter) attained F1 = 0.571 (P 0.400 / R 1.000) on the 80 pairs (Qwen3.8-27B
+baselines, R11-corrected gold), ahead of LightRAG 0.392 ± 0.007, pure LLM
+0.335 ± 0.010 and naive RAG 0.080 ± 0.110 over five seeds (Figure 2). Accuracy
+McNemar was significant against LightRAG (p = 0.0064–0.0117) and pure LLM
+(p = 0.0004–0.0013) but not naive RAG (p = 0.42–1.00). The ablation localises
+the gain: bare rule layer 0.522, +negative-control gate 0.545, +evidence
+confirmation and arbiter 0.571. The full agent extended the ordering to the
+159-pair GLM-5.3-flash generation: F1 = 0.522 (P 0.353 / R 1.000) versus rule
+layer 0.480 and baselines 0.186, 0.178 and 0.069, with accuracy McNemar
+significant against all three (per-seed p < 10⁻⁶). A stronger commercial LLM as
+a standalone judge produced more, not fewer, false positives (precision 0.10).
+Under a secondary binary collapse (gold positive = replicated; predicted
+positive = flag), the full agent reached sensitivity 1.00, specificity 0.878,
+PPV 0.400 and κ 0.520, every one of which inherits the constructed recall
+(Supplementary Table S7); naive RAG's near-null flagging (sensitivity 0–0.17,
+κ ≈ 0) explains its accuracy-McNemar null. The full agent flags 17 of 80
+pairs against 4–31 for the baselines, and most predicted-positive pairs are
+uninformative rather than contradicted, so precision stays low (0.07–0.35).
 
 ## External validation in KNHANES and CHARLS
 
@@ -347,15 +349,25 @@ conservative precision 0.333, rule testability 0.882; CHARLS had 4 testable
 pairs, all uninformative (declared precision undefined, conservative 0.000), so
 no conclusion is drawn from it alone.
 
-On KNHANES (301 pairs) the benchmark reports the rule layer at F1 = 0.360 (a registry-matched G2 variant scored 0.312; Supplementary Table S7), ahead of
-LightRAG 0.145, pure LLM 0.135 and naive RAG 0.094, with accuracy McNemar
-significant against LightRAG (p = 2.0 × 10⁻¹⁰ to 5.0 × 10⁻⁹) and pure LLM
-(p = 5.8 × 10⁻²⁰ to 1.1 × 10⁻¹⁶) but not naive RAG (p = 0.30–0.88). Under a secondary binary collapse (gold positive = replicated; predicted positive = flag), external sensitivity fell to 0.50 (13 replicated pairs among 301 tests) with specificity 0.919, PPV 0.281 and κ 0.307 — below the pre-registered external sensitivity line (Supplementary Table S7). The internal-to-
-external comparison depends on the metric: rule testability fell 0.007 (16/18 to
-15/17), pre-registered coverage 0.131 versus 0.095, declared-domain precision
-1.00 in both with overlapping wide intervals, and system F1 fell from 0.480 to
-0.360. The system-level gap is therefore not zero, and the rule-level
-transportability test below is the harsher external test.
+On KNHANES the full agent was run end to end on all 301 testable pairs, which
+makes this the only agent-level external estimate. G2 reached F1 = 0.312
+(P 0.357 / R 0.278), above the three baselines (LightRAG 0.145, pure LLM 0.135,
+naive RAG 0.094) but below the deterministic rule layer on the same 301 pairs
+(0.360; P 0.281 / R 0.500). The evidence gates did what they were designed to do
+and no more: they removed 14 false positives at the cost of 4 true positives,
+raising precision from 0.281 to 0.357 and halving recall from 0.500 to 0.278.
+That is a recall cost, and we report the rule layer as the stronger external
+configuration rather than the agent. Accuracy McNemar was significant
+against LightRAG (p = 1.8 × 10⁻¹⁵ to 1.2 × 10⁻¹³) and pure LLM (p = 2.1 × 10⁻²⁵
+to 1.8 × 10⁻²⁰) and, at four of five seeds, against naive RAG
+(p = 5.1 × 10⁻⁴ to 0.087). Under a secondary binary collapse, the agent's
+external sensitivity was 0.278 with specificity 0.968, PPV 0.357 and κ 0.275;
+the rule layer gave sensitivity 0.500, specificity 0.919, PPV 0.281 and κ 0.307
+(Supplementary Table S7). Across metrics the gap is uneven: rule testability
+16/18 to 15/17, pre-registered coverage 0.131 to 0.095, declared-domain
+precision 1.00 in both, system F1 0.571 (in-sample) to 0.312. The system-level
+gap is therefore not zero, and the rule-level transportability test below is the
+harsher external test.
 
 ## Cross-cohort transportability across eight ageing cohorts
 
@@ -486,23 +498,32 @@ to replicate a rule, it usually had the power to do so.
 ## Main finding
 
 Huiyan, benchmarked as a complete deployable agent, ranked first on F1 against
-three LLM/RAG baselines in two backend generations and in a second national
-survey, and returns source-linked, operable reports. Its literature-derived
-rules, however, did not transport: only 6 of 21 rules were testable in eight
-ageing cohorts, and of the two that met the pre-registered criterion, neither
-prediction interval excluded unity. Both statements stand, and the second
-changes how agent validation should be reported.
+three LLM/RAG baselines in both NHANES backend generations and in the independent
+KNHANES survey, and returns source-linked, operable reports. Two qualifications
+belong with that statement. The internal NHANES matrix is in-sample: the rule set
+was revised after the first confirmatory run, so its recall of 1.000 is a property
+of that revision and the honest pre-revision figure is 0.111. And on the
+independent matrix the agent scored below its own deterministic rule layer
+(0.312 versus 0.360), because the gates removed false positives at the cost of
+half the true positives. Its rules also did not transport: only 6 of 21 were
+testable in eight ageing cohorts, and of the two that met the pre-registered
+criterion, neither interval excluded unity. Together these change how agent
+validation should be reported.
 
-## Why the agent performs well
+## Where the performance comes from, and where it reverses
 
-The measured source of the performance is architectural. On the NHANES matrices the deployable full agent scored 0.571 (80 pairs) and
-0.522 (159 pairs, versus rule layer 0.480); the ablation localises the gain:
-rule layer 0.522, +negative-control gate 0.545, +evidence confirmation and
-arbiter 0.571 (on the pre-registered judgeable scope, 0.455 → 0.500). A stronger
-commercial model as a standalone judge produced more, not fewer, false positives
-— so the gain is architectural, not model scale. Every output resolves to a rule, a KG path and a
-source chunk in a working interface; that demonstrates operability, not clinical
-usability or deployment.
+The gain over LLM baselines is architectural, not scale. On the NHANES matrices
+the deployable full agent scored 0.571 (80 pairs) and 0.522 (159 pairs, versus
+rule layer 0.480); the ablation localises the gain: rule layer 0.522,
++negative-control gate 0.545, +evidence confirmation and arbiter 0.571. A
+stronger commercial model as a standalone judge produced more, not fewer, false
+positives. That ordering does not carry over to independent data. On KNHANES the
+same gates raised precision from 0.281 to 0.357 while cutting recall from 0.500
+to 0.278, leaving the agent below the bare rule layer (0.312 versus 0.360): the
+evidence store rarely holds a B-or-better chunk for pairs that a new country's
+data replicates, so the confirmation step abstains exactly where the rule layer
+was right. Every output still resolves to a rule, a KG path and a source chunk;
+that demonstrates operability, not clinical usability or deployment.
 
 ## Why the rules do not transport
 
@@ -577,7 +598,8 @@ result.
 
 Independence is tier-specific and the gap differs by metric: the development set
 contributes no independent estimate; internal-to-external change was 0.007 for
-rule testability and 0.480 to 0.360 for system F1; the eight cohorts are
+rule testability, 0.522 to 0.360 for the rule layer and 0.571 to 0.312 for the
+agent, the internal figure being in-sample; the eight cohorts are
 population-independent but only 18 of 168 cells were feasible; the literature
 layer is index-independent but not source-independent. Estimation relies on
 unweighted cluster-robust variance (the pre-registered survey design could not be
@@ -616,14 +638,18 @@ silently replaced by a proxy and then counted as transported.
 
 We built an explainable rule-KG-LLM agent that ranked first on F1 against LLM and
 RAG baselines in two backend generations and in an independent national survey,
-and that returns a source-linked report through a working interface. Its rules,
-however, did not transport: of 21, six were testable in eight ageing cohorts, and
-on the pre-registered criterion two passed while on a heterogeneity-aware post
-hoc criterion none did. The lesson is not that the agent is weak; it is that an
-agent can be strong, operable and better than general LLMs while its rules fail
-outside the data that produced them. Agent validation should report rule-level
-transportability alongside aggregate performance, and state which exposures were
-actually measured.
+and that returns a source-linked report through a working interface. That ranking
+holds against general models, not against the agent's own deterministic rule
+layer: in the independent survey the gates bought precision with recall and the
+agent finished below the rules (0.312 versus 0.360), while the internal benchmark
+that produced its best score was in-sample. Its rules, moreover, did not
+transport: of 21, six were testable in eight ageing cohorts, and on the
+pre-registered criterion two passed while on a heterogeneity-aware post hoc
+criterion none did. The lesson is not that the agent is weak; it is that an agent
+can beat general LLMs, be operable, and still add nothing over its own rules
+outside the data that produced them. Agent validation should therefore report
+the rule layer and the full system separately, say whether the benchmark informed
+development, and state which exposures were actually measured.
 
 ---
 
@@ -921,16 +947,27 @@ Participants are counted once per cohort. Person-waves count each person once pe
 
 # Table 3
 
-| Dataset (role) | Full system F1 (rule layer) | LightRAG | Pure LLM | Naive RAG | Rule-relevant pairs (R/C/U) | Notes |
-|---|---:|---:|---:|---:|---|---|
-| NHANES, Qwen (internal) | 0.571 (full agent) | 0.392 | 0.335 | 0.080 | 16 (6/0/10) | 80 pairs; rule-layer ablation 0.522, NC-gated 0.545 |
-| NHANES, GLM-5.3-flash (internal) | 0.522 (full agent) | 0.186 | 0.178 | 0.069 | 16 (6/0/10) | 159 pairs; rule-layer ablation 0.480 |
-| KNHANES (external, site) | 0.360 | 0.145 | 0.135 | 0.094 | 15 (5/0/10) | 301 pairs |
-| CHARLS (external, site) | not assessed | not assessed | not assessed | not assessed | 4 (0/0/4) | 14 pairs; direction check only |
-| Eight ageing cohorts (external, population) | not assessed | not assessed | not assessed | not assessed | 18 (8/2/8) | 6 of 21 rules testable; 18 of 168 cells feasible |
-| Literature indexes (independent) | not applicable | not applicable | not applicable | not applicable | — | 0.800–0.922 (4 indexes) |
+| Dataset (role) | Full agent F1 (G2) | Rule layer F1 (G0) | LightRAG | Pure LLM | Naive RAG | Rule-relevant pairs (R/C/U) | Notes |
+|---|---:|---:|---:|---:|---:|---|---|
+| NHANES, Qwen (internal, **in-sample**) | 0.571 | 0.522 | 0.392 | 0.335 | 0.080 | 16 (6/0/10) | 80 pairs; G1 0.545; recall 1.000 constructed by the v1.2 rule revision |
+| NHANES, GLM-5.3-flash (internal, **in-sample**) | 0.522 | 0.480 | 0.186 | 0.178 | 0.069 | 16 (6/0/10) | 159 pairs; same in-sample caveat |
+| KNHANES (external, site) | **0.312** | 0.360 | 0.145 | 0.135 | 0.094 | 15 (5/0/10) | 301 pairs; agent ran end to end; gates raise precision 0.281→0.357 and halve recall 0.500→0.278 |
+| CHARLS (external, site) | not assessed | not assessed | not assessed | not assessed | not assessed | 4 (0/0/4) | 14 pairs; rule-level direction only |
+| Eight ageing cohorts (external, population) | not assessed | not assessed | not assessed | not assessed | not assessed | 18 (8/2/8) | 6 of 21 rules testable; 18 of 168 cells feasible |
+| Literature indexes (independent) | not applicable | not applicable | not applicable | not applicable | not applicable | — | 0.800–0.922 (4 indexes) |
 
-**Notes.** System-level F1 was measured only where the three baselines were run (NHANES, two generations; KNHANES). CHARLS and the eight cohorts were evaluated at the rule level, so “not assessed” indicates a different validation target, not a missing result. R/C/U order is replicated/contradicted/uninformative rule-relevant pairs. Full-agent F1 is the deployable G2 configuration on the primary matrix; KNHANES reports the rule layer; on GLM-5.3-flash the full agent scored 0.522 versus rule layer 0.480. The arbiter affects the report and risk grade. The literature layer reports index-level precision, not F1: PubMed 0.889, Web of Science 0.916, Europe PMC 0.922 and CNKI 0.800.
+**Notes.** System-level F1 was measured wherever the three baselines were run,
+which is NHANES (two generations) and KNHANES. The NHANES matrix is labeled
+in-sample because the rule set was revised after the first confirmatory run; its
+recall of 1.000 is a property of that revision (the pre-revision v1.1 set scored
+0.111 on the same scope under the earlier gold), so its F1 is not an
+out-of-sample estimate. KNHANES is the only external matrix on which the full
+agent ran end to end; there the agent beats all three baselines but not its own
+deterministic rule layer. CHARLS and the eight cohorts were evaluated at the rule
+level, so "not assessed" indicates a different validation target, not a missing
+result. R/C/U order is replicated/contradicted/uninformative rule-relevant pairs.
+The literature layer reports index-level precision, not F1: PubMed 0.889, Web of
+Science 0.916, Europe PMC 0.922 and CNKI 0.800.
 
 ---
 

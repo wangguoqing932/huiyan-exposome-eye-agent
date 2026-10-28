@@ -3,8 +3,15 @@
 **期刊**：Journal of Medical Internet Research (J Med Internet Res)
 **文章类型**：Original Paper（Section: Clinical Information and Decision Making）
 **稿件编号**：**115413**
-**状态**：**已于 2026-10-27 在线提交完成**（Submission Completed；工作台显示日期 2026-10-27、Unassigned，等待编辑分派）
+**状态**：2026-10-27 提交（Submission Completed, articleId 115413）→ **已退稿，理由为方法学问题** → 2026-10-28 完成 R31 方法学修复（见 `docs/history/R31_METHODS_FIX_2026-10-28.md`）；待选下一家期刊
 **预警名单核查**：2026-10-24，check_warning_journal.py（刊名 + ISSN 1438-8871 双查）——未命中 2020–2026 任何年度预警名单
+
+## R31 修复后的主结果（2026-10-28）
+
+- **外部（KNHANES 301 对，同一 gold3）**：全智能体 G2 F1 **0.312**（P 0.357 / R 0.278）；规则层 G0 **0.360**（P 0.281 / R 0.500）；基线 LightRAG 0.145、pure LLM 0.135、naive RAG 0.094
+- **外部结论**：agent 胜过三个 LLM/RAG 基线，但**低于自身确定性规则层**（证据门提精度、砍召回）
+- **内部（NHANES 80/159）**：G2 0.571 / 0.522，标 **in-sample**（规则在首次确证后修订，R=1.000 为构造值；修订前 v1.1 = 0.111）
+- 重跑可复现：2026-10-28 与 2026-10-15 逐位一致（`outputs/confirmatory/g2_rerun_20261028.json`）
 
 ## 稿件
 - 主稿：outputs/paper/manuscript_agent_first.docx / .pdf（37 页，4 表 + 6 主图，正文 5,988 词 Word 口径，摘要 346 词 ≤350，portrait，0 中文）

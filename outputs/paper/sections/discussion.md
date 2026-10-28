@@ -3,23 +3,32 @@
 ## Main finding
 
 Huiyan, benchmarked as a complete deployable agent, ranked first on F1 against
-three LLM/RAG baselines in two backend generations and in a second national
-survey, and returns source-linked, operable reports. Its literature-derived
-rules, however, did not transport: only 6 of 21 rules were testable in eight
-ageing cohorts, and of the two that met the pre-registered criterion, neither
-prediction interval excluded unity. Both statements stand, and the second
-changes how agent validation should be reported.
+three LLM/RAG baselines in both NHANES backend generations and in the independent
+KNHANES survey, and returns source-linked, operable reports. Two qualifications
+belong with that statement. The internal NHANES matrix is in-sample: the rule set
+was revised after the first confirmatory run, so its recall of 1.000 is a property
+of that revision and the honest pre-revision figure is 0.111. And on the
+independent matrix the agent scored below its own deterministic rule layer
+(0.312 versus 0.360), because the gates removed false positives at the cost of
+half the true positives. Its rules also did not transport: only 6 of 21 were
+testable in eight ageing cohorts, and of the two that met the pre-registered
+criterion, neither interval excluded unity. Together these change how agent
+validation should be reported.
 
-## Why the agent performs well
+## Where the performance comes from, and where it reverses
 
-The measured source of the performance is architectural. On the NHANES matrices the deployable full agent scored 0.571 (80 pairs) and
-0.522 (159 pairs, versus rule layer 0.480); the ablation localises the gain:
-rule layer 0.522, +negative-control gate 0.545, +evidence confirmation and
-arbiter 0.571 (on the pre-registered judgeable scope, 0.455 → 0.500). A stronger
-commercial model as a standalone judge produced more, not fewer, false positives
-— so the gain is architectural, not model scale. Every output resolves to a rule, a KG path and a
-source chunk in a working interface; that demonstrates operability, not clinical
-usability or deployment.
+The gain over LLM baselines is architectural, not scale. On the NHANES matrices
+the deployable full agent scored 0.571 (80 pairs) and 0.522 (159 pairs, versus
+rule layer 0.480); the ablation localises the gain: rule layer 0.522,
++negative-control gate 0.545, +evidence confirmation and arbiter 0.571. A
+stronger commercial model as a standalone judge produced more, not fewer, false
+positives. That ordering does not carry over to independent data. On KNHANES the
+same gates raised precision from 0.281 to 0.357 while cutting recall from 0.500
+to 0.278, leaving the agent below the bare rule layer (0.312 versus 0.360): the
+evidence store rarely holds a B-or-better chunk for pairs that a new country's
+data replicates, so the confirmation step abstains exactly where the rule layer
+was right. Every output still resolves to a rule, a KG path and a source chunk;
+that demonstrates operability, not clinical usability or deployment.
 
 ## Why the rules do not transport
 
@@ -94,7 +103,8 @@ result.
 
 Independence is tier-specific and the gap differs by metric: the development set
 contributes no independent estimate; internal-to-external change was 0.007 for
-rule testability and 0.480 to 0.360 for system F1; the eight cohorts are
+rule testability, 0.522 to 0.360 for the rule layer and 0.571 to 0.312 for the
+agent, the internal figure being in-sample; the eight cohorts are
 population-independent but only 18 of 168 cells were feasible; the literature
 layer is index-independent but not source-independent. Estimation relies on
 unweighted cluster-robust variance (the pre-registered survey design could not be
@@ -133,11 +143,15 @@ silently replaced by a proxy and then counted as transported.
 
 We built an explainable rule-KG-LLM agent that ranked first on F1 against LLM and
 RAG baselines in two backend generations and in an independent national survey,
-and that returns a source-linked report through a working interface. Its rules,
-however, did not transport: of 21, six were testable in eight ageing cohorts, and
-on the pre-registered criterion two passed while on a heterogeneity-aware post
-hoc criterion none did. The lesson is not that the agent is weak; it is that an
-agent can be strong, operable and better than general LLMs while its rules fail
-outside the data that produced them. Agent validation should report rule-level
-transportability alongside aggregate performance, and state which exposures were
-actually measured.
+and that returns a source-linked report through a working interface. That ranking
+holds against general models, not against the agent's own deterministic rule
+layer: in the independent survey the gates bought precision with recall and the
+agent finished below the rules (0.312 versus 0.360), while the internal benchmark
+that produced its best score was in-sample. Its rules, moreover, did not
+transport: of 21, six were testable in eight ageing cohorts, and on the
+pre-registered criterion two passed while on a heterogeneity-aware post hoc
+criterion none did. The lesson is not that the agent is weak; it is that an agent
+can beat general LLMs, be operable, and still add nothing over its own rules
+outside the data that produced them. Agent validation should therefore report
+the rule layer and the full system separately, say whether the benchmark informed
+development, and state which exposures were actually measured.

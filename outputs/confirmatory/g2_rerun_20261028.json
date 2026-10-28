@@ -1,0 +1,128 @@
+{
+  "definition": "Rerun of the pre-registered G0/G1/G2 fused system on 2026-10-28 with llama-server online, to test reproducibility of the agent-level numbers after the 2026-10-27 run produced an invalid NHANES arm (arbiter service down).",
+  "run_date": "2026-10-28",
+  "arbiter": "local qwen3.8-27b, thinking disabled, temp=0.0, seed=20261015",
+  "reproduced": {
+    "nhanes_judgeable": {
+      "G0": 0.522,
+      "G1": 0.545,
+      "G2": 0.571
+    },
+    "knhanes_judgeable": {
+      "G0": 0.37,
+      "G1": 0.385,
+      "G2": 0.4
+    }
+  },
+  "knhanes_full_matrix_301": {
+    "gold_positives": 18,
+    "G0": {
+      "TP": 9,
+      "FP": 23,
+      "FN": 9,
+      "TN": 260,
+      "P": 0.281,
+      "R": 0.5,
+      "F1": 0.36
+    },
+    "G1": {
+      "TP": 5,
+      "FP": 10,
+      "FN": 13,
+      "TN": 273,
+      "P": 0.333,
+      "R": 0.278,
+      "F1": 0.303
+    },
+    "G2": {
+      "TP": 5,
+      "FP": 9,
+      "FN": 13,
+      "TN": 274,
+      "P": 0.357,
+      "R": 0.278,
+      "F1": 0.312
+    },
+    "binary_collapse_G2": {
+      "sensitivity": 0.278,
+      "specificity": 0.968,
+      "ppv": 0.357,
+      "kappa": 0.275
+    },
+    "binary_collapse_G0": {
+      "sensitivity": 0.5,
+      "specificity": 0.919,
+      "ppv": 0.281,
+      "kappa": 0.307
+    }
+  },
+  "mcnemar_accuracy_G2_vs_baselines_301": {
+    "lightrag": {
+      "b": [
+        72,
+        68,
+        71,
+        72,
+        69
+      ],
+      "c": [
+        6,
+        7,
+        6,
+        6,
+        7
+      ],
+      "p_range": [
+        1.8e-15,
+        1.2e-13
+      ]
+    },
+    "pure_llm": {
+      "b": [
+        108,
+        109,
+        115,
+        101,
+        106
+      ],
+      "c": [
+        12,
+        11,
+        8,
+        13,
+        10
+      ],
+      "p_range": [
+        2.1e-25,
+        1.8e-20
+      ]
+    },
+    "naive_rag": {
+      "b": [
+        28,
+        23,
+        27,
+        25,
+        19
+      ],
+      "c": [
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "p_range": [
+        0.00051,
+        0.087
+      ],
+      "note": "significant at four of five seeds"
+    }
+  },
+  "invalidates": {
+    "file": "outputs/confirmatory/g2_full_matrix_all.json",
+    "reason": "its NHANES arms report TP=0 (all-negative), produced while llama-server was down: every arbiter-dependent gate fell through to arbiter_error and defaulted to negative. superseded by the 2026-10-28 rerun and by fused_system_R5.jsonl.",
+    "knhanes_arm_of_that_file": "0.312 confirmed; identical to the rerun"
+  },
+  "reading": "The agent is reproducible but not transportable: on independent KNHANES data G2 is below its own deterministic rule layer (0.312 vs 0.360) because the evidence gates trade recall for precision. The NHANES matrix is in-sample and its recall of 1.000 is constructed by the post-confirmatory rule revision."
+}

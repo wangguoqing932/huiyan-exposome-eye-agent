@@ -23,9 +23,13 @@ rule, the KG path and the source chunk (Figure 1). The classification benchmark 
 
 ## Validation overview
 
-The validation returned these core results: the full agent ranked first on F1
-in all three matrices (0.571, 0.522 and 0.360 against 0.080–0.392, 0.069–0.186
-and 0.094–0.145; NHANES runs the deployable G2 agent, KNHANES the rule layer); a worked case resolved every output to a rule, KG path and source chunk (Supplementary Figures S1-S2); in the cohort
+The validation returned these core results: the full agent beat the three
+LLM/RAG baselines on F1 wherever it was run end to end — 0.571 and 0.522
+internally (against 0.080–0.392 and 0.069–0.186) and 0.312 externally (against
+0.094–0.145) — but on the external matrix it finished below the bare rule layer
+(0.360 for the rule layer versus 0.312 for the agent), and the internal matrix is
+in-sample because the rule set was revised after the first confirmatory run; a
+worked case resolved every output to a rule, KG path and source chunk (Supplementary Figures S1-S2); in the cohort
 layer 6 of 21 rules were testable, with 8 of 18 rule × cohort pairs replicated,
 8 uninformative and 2 contradicted; rule direction by tier was NHANES 6/0/10,
 KNHANES 5/0/10, CHARLS 0/0/4, eight cohorts 8/2/8 (replicated/contradicted/
@@ -52,31 +56,32 @@ or late AMD (1.08, q = 0.53) in NHANES, BMI-cataract is significant per SD in
 KNHANES (1.077, 1.034–1.122, q = 0.0014) and null in NHANES (1.030, q = 0.71);
 direction agreed in 19/24 NHANES and 9/10 KNHANES pairs.
 
-At the system level, two generations are reported side by side. The deployable
-full agent (G2: rule layer, negative-control gate, evidence confirmation, LLM
-arbiter) was benchmarked on the primary matrix: on the 80 development-era pairs
-(Qwen3.8-27B baselines, R11-corrected gold) it attained F1 = 0.571 (P 0.400 /
-R 1.000), ahead of LightRAG 0.392 ± 0.007, pure LLM 0.335 ± 0.010 and naive RAG
-0.080 ± 0.110 over five seeds (Figure 2). Accuracy McNemar was significant
-against LightRAG (p = 0.0064–0.0117) and pure LLM (p = 0.0004–0.0013) but not
-naive RAG (p = 0.42–1.00). The ablation localises the gain: bare rule layer 0.522,
-+negative-control gate 0.545, +evidence confirmation and arbiter 0.571; the
-pre-expansion v1.1 rule set scored 0.111 on the earlier R5 gold. The full agent extended the gain to the 159-pair GLM-5.3-flash generation:
-F1 = 0.522 (P 0.353 / R 1.000) versus rule layer 0.480 and baselines 0.186,
-0.178 and 0.069, with accuracy McNemar significant against all three (per-seed
-p < 10⁻⁶). A stronger commercial LLM as a standalone judge produced more,
-not fewer, false positives (precision 0.10). Under a secondary binary collapse
-(gold positive = replicated; predicted positive = flag), the full agent reached
-sensitivity 1.00, specificity 0.878, PPV 0.400 and κ 0.520 — passing the
-pre-registered internal lines (sens ≥ 0.70, spec ≥ 0.60, κ ≥ 0.4); naive RAG's
-near-null flagging (sensitivity 0–0.17, κ ≈ 0) explains its accuracy-McNemar null
-(Supplementary Table S7). Reading the denominators: the full agent flags 17 of 80
-pairs, the baselines 4–31; most
-predicted-positive pairs are uninformative rather than contradicted, so precision
-is low for every method (0.07–0.35) while the full system's recall is 1.000 by
-construction after the v1.2 rule expansion — the pre-expansion v1.1 rule set,
-replayed on the same 80-pair scope under the earlier R5 gold, scored F1 = 0.111
-(P 0.091 / R 0.143).
+At the system level the internal NHANES matrix is reported as in-sample. The
+134-pair development set contributed no independent estimate, and the 80-pair
+matrix was itself used in development: the rule set was revised after the first
+confirmatory run (r02–r04 exposure coverage altered, r22 added; Methods records
+this as test-set fitting), so the recall of 1.000 below is a property of that
+revision, not an out-of-sample estimate. Under the earlier gold the pre-revision
+v1.1 set scored 0.111 (P 0.091 / R 0.143). With that caveat, the deployable full
+agent (G2: rule layer, negative-control gate, evidence confirmation, LLM
+arbiter) attained F1 = 0.571 (P 0.400 / R 1.000) on the 80 pairs (Qwen3.8-27B
+baselines, R11-corrected gold), ahead of LightRAG 0.392 ± 0.007, pure LLM
+0.335 ± 0.010 and naive RAG 0.080 ± 0.110 over five seeds (Figure 2). Accuracy
+McNemar was significant against LightRAG (p = 0.0064–0.0117) and pure LLM
+(p = 0.0004–0.0013) but not naive RAG (p = 0.42–1.00). The ablation localises
+the gain: bare rule layer 0.522, +negative-control gate 0.545, +evidence
+confirmation and arbiter 0.571. The full agent extended the ordering to the
+159-pair GLM-5.3-flash generation: F1 = 0.522 (P 0.353 / R 1.000) versus rule
+layer 0.480 and baselines 0.186, 0.178 and 0.069, with accuracy McNemar
+significant against all three (per-seed p < 10⁻⁶). A stronger commercial LLM as
+a standalone judge produced more, not fewer, false positives (precision 0.10).
+Under a secondary binary collapse (gold positive = replicated; predicted
+positive = flag), the full agent reached sensitivity 1.00, specificity 0.878,
+PPV 0.400 and κ 0.520, every one of which inherits the constructed recall
+(Supplementary Table S7); naive RAG's near-null flagging (sensitivity 0–0.17,
+κ ≈ 0) explains its accuracy-McNemar null. The full agent flags 17 of 80
+pairs against 4–31 for the baselines, and most predicted-positive pairs are
+uninformative rather than contradicted, so precision stays low (0.07–0.35).
 
 ## External validation in KNHANES and CHARLS
 
@@ -88,15 +93,25 @@ conservative precision 0.333, rule testability 0.882; CHARLS had 4 testable
 pairs, all uninformative (declared precision undefined, conservative 0.000), so
 no conclusion is drawn from it alone.
 
-On KNHANES (301 pairs) the benchmark reports the rule layer at F1 = 0.360 (a registry-matched G2 variant scored 0.312; Supplementary Table S7), ahead of
-LightRAG 0.145, pure LLM 0.135 and naive RAG 0.094, with accuracy McNemar
-significant against LightRAG (p = 2.0 × 10⁻¹⁰ to 5.0 × 10⁻⁹) and pure LLM
-(p = 5.8 × 10⁻²⁰ to 1.1 × 10⁻¹⁶) but not naive RAG (p = 0.30–0.88). Under a secondary binary collapse (gold positive = replicated; predicted positive = flag), external sensitivity fell to 0.50 (13 replicated pairs among 301 tests) with specificity 0.919, PPV 0.281 and κ 0.307 — below the pre-registered external sensitivity line (Supplementary Table S7). The internal-to-
-external comparison depends on the metric: rule testability fell 0.007 (16/18 to
-15/17), pre-registered coverage 0.131 versus 0.095, declared-domain precision
-1.00 in both with overlapping wide intervals, and system F1 fell from 0.480 to
-0.360. The system-level gap is therefore not zero, and the rule-level
-transportability test below is the harsher external test.
+On KNHANES the full agent was run end to end on all 301 testable pairs, which
+makes this the only agent-level external estimate. G2 reached F1 = 0.312
+(P 0.357 / R 0.278), above the three baselines (LightRAG 0.145, pure LLM 0.135,
+naive RAG 0.094) but below the deterministic rule layer on the same 301 pairs
+(0.360; P 0.281 / R 0.500). The evidence gates did what they were designed to do
+and no more: they removed 14 false positives at the cost of 4 true positives,
+raising precision from 0.281 to 0.357 and halving recall from 0.500 to 0.278.
+That is a recall cost, and we report the rule layer as the stronger external
+configuration rather than the agent. Accuracy McNemar was significant
+against LightRAG (p = 1.8 × 10⁻¹⁵ to 1.2 × 10⁻¹³) and pure LLM (p = 2.1 × 10⁻²⁵
+to 1.8 × 10⁻²⁰) and, at four of five seeds, against naive RAG
+(p = 5.1 × 10⁻⁴ to 0.087). Under a secondary binary collapse, the agent's
+external sensitivity was 0.278 with specificity 0.968, PPV 0.357 and κ 0.275;
+the rule layer gave sensitivity 0.500, specificity 0.919, PPV 0.281 and κ 0.307
+(Supplementary Table S7). Across metrics the gap is uneven: rule testability
+16/18 to 15/17, pre-registered coverage 0.131 to 0.095, declared-domain
+precision 1.00 in both, system F1 0.571 (in-sample) to 0.312. The system-level
+gap is therefore not zero, and the rule-level transportability test below is the
+harsher external test.
 
 ## Cross-cohort transportability across eight ageing cohorts
 
