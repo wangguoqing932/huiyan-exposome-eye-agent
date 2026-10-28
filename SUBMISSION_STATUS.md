@@ -1,6 +1,6 @@
 # SUBMISSION_STATUS.md — 慧眼（huiyan）
 
-**期刊**：Journal of Medical Internet Research (J Med Internet Res)
+**期刊**：Journal of Medical Internet Research (J Med Internet Res)（被拒后已按 R31 重写，待定回投或换刊）
 **文章类型**：Original Paper（Section: Clinical Information and Decision Making）
 **稿件编号**：**115413**
 **状态**：2026-10-27 提交（Submission Completed, articleId 115413）→ **已退稿，理由为方法学问题** → 2026-10-28 完成 R31 方法学修复（见 `docs/history/R31_METHODS_FIX_2026-10-28.md`）；待选下一家期刊

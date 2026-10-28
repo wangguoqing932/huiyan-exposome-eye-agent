@@ -68,8 +68,8 @@ rule that the revision touched, leaving zero contamination-free positives. Its r
 For completeness the numbers are: deployable full agent F1 = 0.571 (P 0.400 /
 R 1.000) on the 80 pairs (Qwen3.8-27B baselines, R11-corrected gold), ahead of
 LightRAG 0.392 ± 0.007, pure LLM 0.335 ± 0.010 and naive RAG 0.080 ± 0.110 over
-five seeds (Figure 2); under the earlier gold the pre-revision v1.1 set scored
-0.111 (P 0.091 / R 0.143). Accuracy
+five seeds; under the earlier gold the pre-revision v1.1 set scored 0.111
+(P 0.091 / R 0.143). Accuracy
 McNemar was significant against LightRAG (p = 0.0064–0.0117) and pure LLM
 (p = 0.0004–0.0013) but not naive RAG (p = 0.42–1.00). The ablation localises
 the gain: bare rule layer 0.522, +negative-control gate 0.545, +evidence
@@ -101,7 +101,7 @@ makes this the only agent-level external estimate, and it is also the only one
 that can be split into pairs the rule revision touched and pairs it did not.
 On all 301 pairs the agent reached F1 = 0.375 (P 0.300 / R 0.500), against its own
 deterministic rule layer at 0.360 (P 0.281 / R 0.500) and the three baselines at
-0.176 (LightRAG), 0.173 (pure LLM) and 0.120 (naive RAG). Accuracy McNemar was significant against all three baselines before and after
+0.176 (LightRAG), 0.173 (pure LLM) and 0.120 (naive RAG; Figure 2a). Accuracy McNemar was significant against all three baselines before and after
 Benjamini-Hochberg correction over the 15 tests per matrix (q < 0.001 in every
 case), but that test is dominated by the 277 uninformative pairs, on which
 abstention earns credit; F1 is the declared metric and accuracy is secondary.

@@ -196,142 +196,127 @@ def figure1() -> None:
 # Figure 2 — performance
 # --------------------------------------------------------------------------- #
 def figure2() -> None:
-    perf = rows_of("figure2_performance.csv")
-    methods = ["full_system", "lightrag", "pure_llm", "naive_rag"]
-    gens = [("v1.2 (qwen, 80-pair gold)", "Qwen · 80 pairs", S.NAVY),
-            ("v1.2 (zhipu GLM-5.3-flash, 159-pair gold)",
-             "GLM-5.3-flash · 159 pairs", S.AMBER)]
-    fig = plt.figure(figsize=(S.FULL, 140 * S.MM))
-    gs = fig.add_gridspec(2, 2, left=0.085, right=0.985, top=0.94,
-                          bottom=0.075, hspace=0.38, wspace=0.28,
+    """Figure 2 (R31): external level, gate mechanism, provenance, state decomposition."""
+    rows = rows_of("figure2_performance.csv")
+    fig = plt.figure(figsize=(S.FULL, 138 * S.MM))
+    gs = fig.add_gridspec(2, 2, left=0.085, right=0.985, top=0.92,
+                          bottom=0.085, hspace=0.52, wspace=0.30,
                           width_ratios=[1.12, 1.0])
 
-    # (a) grouped bars
+    def vals(panel, group, series):
+        for r in rows:
+            if r["panel"] == panel and r["group"] == group and r["series"] == series:
+                return float(r["value"])
+        raise KeyError((panel, group, series))
+
+    # (a) external F1 by method, two scopes
     ax = fig.add_subplot(gs[0, 0])
+    methods = ["agent (G2)", "rule layer (G0)", "LightRAG", "pure LLM", "naive RAG"]
+    scopes = [("301 pairs", S.NAVY, "All 301 pairs"),
+              ("296 revision-free pairs", S.AMBER, "296 revision-free pairs")]
     x = np.arange(len(methods))
-    bw = 0.34
-    canonical = [json.loads(l) for l in CANON.read_text(encoding="utf-8").splitlines()
-                 if l.strip()]
-
-    def seed_sd(generation: str, baseline: str) -> float:
-        sub = [r for r in canonical if r["generation"] == generation
-               and r["baseline"] == baseline]
-        per: dict[int, list[int]] = defaultdict(lambda: [0, 0, 0])
-        for r in sub:
-            tp, fp, fn = per[r["seed"]]
-            if r["prediction"] and r["gold3"] == "replicated":
-                tp += 1
-            elif r["prediction"]:
-                fp += 1
-            elif r["gold3"] == "replicated":
-                fn += 1
-            per[r["seed"]] = [tp, fp, fn]
-        scores = []
-        for tp, fp, fn in per.values():
-            p = tp / (tp + fp) if tp + fp else 0.0
-            rr = tp / (tp + fn) if tp + fn else 0.0
-            scores.append(2 * p * rr / (p + rr) if p + rr else 0.0)
-        return float(np.std(scores, ddof=1)) if len(scores) > 1 else 0.0
-
-    for gi, (rs, lab, col) in enumerate(gens):
-        generation = "qwen-80pair" if rs.startswith("v1.2 (qwen") else "zhipu-159pair"
-        vals, sds = [], []
-        for m in methods:
-            hit = [r for r in perf if r["method"] == m and r["ruleset"] == rs]
-            vals.append(float(hit[0]["F1_mean"]) if hit else 0.0)
-            sds.append(seed_sd(generation, m))
-        offs = (gi - 0.5) * bw
-        bars = ax.bar(x + offs, vals, bw, color=col, edgecolor="white",
-                      linewidth=0.6, label=lab, zorder=2)
-        ax.errorbar(x + offs, vals, yerr=sds, fmt="none", ecolor="#4A4F57",
-                    elinewidth=0.8, capsize=2.2, zorder=4)
-        for xi, v in zip(x + offs, vals):
-            ax.text(xi, v + 0.012, f"{v:.2f}", ha="center", va="bottom",
-                    fontsize=7.0, color="#222222")
+    bw = 0.36
+    for gi, (sc, col, lab) in enumerate(scopes):
+        v = [vals("a", m, sc) for m in methods]
+        ax.bar(x + (gi - 0.5) * bw, v, bw, color=col, edgecolor="white",
+               linewidth=0.6, label=lab, zorder=2)
+        for xi, vi in zip(x + (gi - 0.5) * bw, v):
+            ax.text(xi, vi + 0.008, f"{vi:.3f}", ha="center", va="bottom", fontsize=6.0)
     ax.set_xticks(x)
-    ax.set_xticklabels([S.METHOD_LABEL[m] for m in methods], fontsize=7.6)
-    ax.set_ylabel("F1 (mean of 5 seeds)")
-    ax.set_ylim(0, 0.62)
+    ax.set_xticklabels(["Agent", "Rules", "LightRAG", "Pure LLM", "Naive RAG"],
+                       fontsize=7.4)
+    ax.set_ylabel("F1 on KNHANES pairs")
+    ax.set_ylim(0, 0.46)
     S.clean(ax, "y")
-    ax.legend(loc="upper right", bbox_to_anchor=(1.0, 1.02), ncol=1,
-              handlelength=1.2)
-    S.panel(ax, "a", "Performance, two baseline generations")
+    ax.legend(loc="upper right", handlelength=1.2)
+    S.panel(ax, "a", "External F1, with and without revision-touched pairs")
 
-    # (b) confusion matrix from the canonical qwen 80-pair rows
+    # (b) gate decisions
     ax = fig.add_subplot(gs[0, 1])
-    rows = [json.loads(l) for l in CANON.read_text(encoding="utf-8").splitlines()
-            if l.strip()]
-    fs = [r for r in rows if r["generation"] == "qwen-80pair"
-          and r["baseline"] == "full_system" and r["seed"] == 11]
-    states = ["replicated", "contradicted", "uninformative"]
-    mat = np.array([[sum(1 for r in fs if r["prediction"] and r["gold3"] == s)
-                     for s in states],
-                    [sum(1 for r in fs if not r["prediction"] and r["gold3"] == s)
-                     for s in states]])
-    from matplotlib.colors import LinearSegmentedColormap
-    navy_ramp = LinearSegmentedColormap.from_list("huiyan_navy",
-                                                  ["#FFFFFF", S.NAVY])
-    im = ax.imshow(mat, cmap=navy_ramp, vmin=0, vmax=20, aspect="auto")
-    for i in range(2):
-        for j in range(3):
-            ax.text(j, i, str(mat[i, j]), ha="center", va="center",
-                    fontsize=9.5, color="white" if mat[i, j] > 15
-                    else "#222222", fontweight="bold")
-    ax.set_xticks(range(3))
-    ax.set_xticklabels(["Replicated", "Contradicted", "Uninformative"],
-                       fontsize=7.2)
-    ax.set_yticks(range(2))
-    ax.set_yticklabels(["Predict YES", "Predict NO"], fontsize=7.6)
-    ax.tick_params(length=0)
-    S.panel(ax, "b", "Full system × R11 gold (80 pairs)")
-
-    # (c) dumbbell coverage / precision
-    ax = fig.add_subplot(gs[1, 0])
-    nm = json.loads((ROOT / "outputs/confirmatory/nhanes_metrics_v11.json")
-                    .read_text(encoding="utf-8"))
-    km = json.loads((ROOT / "outputs/confirmatory/knhanes_metrics_v11.json")
-                    .read_text(encoding="utf-8"))
-    metrics = [("coverage", "Coverage"), ("precision_rule", "Declared precision")]
-    yy = np.arange(len(metrics))
-    bh = 0.30
-    for off, vals, col, lab in [(-bh / 2 - 0.02, [nm[k] for k, _ in metrics],
-                                 S.NAVY, "NHANES"),
-                                (bh / 2 + 0.02, [km[k] for k, _ in metrics],
-                                 S.AMBER, "KNHANES")]:
-        ax.barh(yy + off, vals, bh, color=col, edgecolor="white", lw=0.6,
-                label=lab, zorder=2)
-        for yv, v in zip(yy + off, vals):
-            ax.text(v + 0.004, yv, f"{v:.3f}", va="center", fontsize=7.0,
-                    color="#333333")
-            ax.text(0.012, yv, lab, va="center", fontsize=6.4, color="white")
-    ax.set_yticks(yy); ax.set_yticklabels([m[1] for m in metrics], fontsize=7.6)
-    ax.set_xlim(0, 1.16); ax.set_xlabel("Proportion")
+    gates = [(r["group"], float(r["value"])) for r in rows if r["panel"] == "b"]
+    gates = sorted(gates, key=lambda kv: kv[1])
+    labels = [g for g, _ in gates]
+    v = [n for _, n in gates]
+    cols = []
+    for g in labels:
+        if g.startswith("no rule"):
+            cols.append("#C9C9C9")
+        elif g.startswith("evidence"):
+            cols.append(S.NAVY)
+        elif g.startswith("LLM"):
+            cols.append(S.AMBER)
+        else:
+            cols.append("#8C8C8C")
+    ax.barh(range(len(v)), v, color=cols, edgecolor="white", linewidth=0.6, height=0.62, zorder=2)
+    for i, vi in enumerate(v):
+        ax.text(vi + 6, i, f"{int(vi)}", va="center", fontsize=6.6)
+    ax.set_yticks(range(len(labels)))
+    def _short(l: str) -> str:
+        if l.startswith("no rule"):
+            return "no rule"
+        if l.startswith("evidence"):
+            return "evidence ≥ B"
+        if l.startswith("LLM"):
+            return "arbiter: yes"
+        if l.startswith("negative"):
+            return "negative control"
+        return "no evidence"
+    ax.set_yticklabels([_short(l) for l in labels], fontsize=6.8)
+    _ = labels
+    ax.set_xlim(0, 490)
+    ax.set_xlabel("Pairs in the fused run (n = 474)")
     S.clean(ax, "x")
-    S.panel(ax, "c", "Internal vs external rule layer")
+    S.panel(ax, "b", "Who decides: gates, not the language model")
 
-    # (d) context size
+    # (c) replicated pairs by provenance
+    ax = fig.add_subplot(gs[1, 0])
+    groups = ["NHANES (development)", "KNHANES (external)"]
+    touched = [vals("c", g, "touched by revision") for g in groups]
+    clean = [vals("c", g, "clean") for g in groups]
+    ypos = np.arange(len(groups))[::-1]
+    ax.barh(ypos, touched, color=S.BRICK, edgecolor="white", linewidth=0.6,
+            height=0.48, label="On a revised rule", zorder=2)
+    ax.barh(ypos, clean, left=touched, color=S.TEAL, edgecolor="white", linewidth=0.6,
+            height=0.48, label="On an untouched rule", zorder=2)
+    for y, tv, cv in zip(ypos, touched, clean):
+        if tv:
+            ax.text(tv / 2, y, f"{int(tv)}", ha="center", va="center", color="white", fontsize=7.0)
+        if cv:
+            ax.text(tv + cv / 2, y, f"{int(cv)}", ha="center", va="center", color="white", fontsize=7.0)
+        if cv == 0:
+            ax.text(tv + 0.4, y, "all touched", va="center", fontsize=6.4, color="#555555")
+    ax.set_yticks(ypos)
+    ax.set_yticklabels(["NHANES (development)", "KNHANES (external)"], fontsize=6.8)
+    ax.set_xlim(0, 22)
+    ax.set_xlabel("Replicated pairs")
+    S.clean(ax, "x")
+    ax.legend(loc="upper right", handlelength=1.2, fontsize=6.2)
+    S.panel(ax, "c", "Where the positives come from")
+
+    # (d) three-state decomposition
     ax = fig.add_subplot(gs[1, 1])
-    kg = [r.get("kg_chars") for r in rows
-          if r["generation"] == "qwen-80pair" and r["baseline"] == "lightrag"
-          and r.get("kg_chars")]
-    ax.hist(kg, bins=24, color=S.TEAL, edgecolor="white", linewidth=0.5,
-            zorder=2)
-    mean = float(np.mean(kg)) if kg else 0
-    ax.axvline(mean, color=S.NAVY, lw=0.9, ls=(0, (4, 2)), zorder=3)
-    ax.text(0.97, 0.95, f"Mean {mean:,.0f} chars", transform=ax.transAxes,
-            ha="right", va="top", fontsize=7.0, color=S.NAVY,
-            bbox=dict(facecolor="white", edgecolor="none", pad=1.5))
-    ax.set_xlabel("Retrieved KG context (characters)")
-    ax.set_ylabel("Runs (5 seeds × 80 pairs)")
-    ax.set_ylim(0, ax.get_ylim()[1] * 1.12)
+    metrics = ["recall on replicated", "flag rate on contradicted", "flag rate on uninformative"]
+    labels = ["Replicated", "Contradicted", "Uninformative"]
+    arms = [("G0", S.NAVY, "Rule layer (G0)"), ("G2", S.AMBER, "Agent (G2)")]
+    x = np.arange(len(metrics))
+    bw = 0.36
+    for gi, (arm, col, lab) in enumerate(arms):
+        v = [vals("d", m, arm) for m in metrics]
+        ax.bar(x + (gi - 0.5) * bw, v, bw, color=col, edgecolor="white",
+               linewidth=0.6, label=lab, zorder=2)
+        for xi, vi in zip(x + (gi - 0.5) * bw, v):
+            ax.text(xi, vi + 0.012, f"{vi:.2f}", ha="center", va="bottom", fontsize=6.6)
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, fontsize=7.0)
+    ax.set_ylim(0, 0.62)
+    ax.set_ylabel("Proportion of pairs")
     S.clean(ax, "y")
-    S.panel(ax, "d", "LightRAG context size")
+    ax.legend(loc="upper right", handlelength=1.2, ncol=1)
+    S.panel(ax, "d", "Three-state decomposition (KNHANES 301)")
+
     save(fig, "figure2_performance")
 
 
-# --------------------------------------------------------------------------- #
-# Figure 3 — rule evaluation
-# --------------------------------------------------------------------------- #
 def figure3() -> None:
     rows = rows_of("figure3_rule_evaluation.csv")
     metrics = [

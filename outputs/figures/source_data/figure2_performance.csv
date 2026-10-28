@@ -1,9 +1,26 @@
-﻿method,ruleset,dataset,dataset_id,dataset_role,F1_mean,P_mean,R_mean,n_seeds
-full_system,"v1.2 (qwen, 80-pair gold)",NHANES,intval-nhanes,internal_validation,0.522,0.353,1.0,5
-pure_llm,"v1.2 (qwen, 80-pair gold)",NHANES,intval-nhanes,internal_validation,0.3355,0.2015,1.0,5
-naive_rag,"v1.2 (qwen, 80-pair gold)",NHANES,intval-nhanes,internal_validation,0.08,0.1,0.0667,5
-lightrag,"v1.2 (qwen, 80-pair gold)",NHANES,intval-nhanes,internal_validation,0.3923,0.244,1.0,5
-full_system,"v1.2 (zhipu GLM-5.3-flash, 159-pair gold)",NHANES,intval-nhanes,internal_validation,0.48,0.3158,1.0,5
-lightrag,"v1.2 (zhipu GLM-5.3-flash, 159-pair gold)",NHANES,intval-nhanes,internal_validation,0.1861,0.1047,0.8333,5
-pure_llm,"v1.2 (zhipu GLM-5.3-flash, 159-pair gold)",NHANES,intval-nhanes,internal_validation,0.1782,0.0978,1.0,5
-naive_rag,"v1.2 (zhipu GLM-5.3-flash, 159-pair gold)",NHANES,intval-nhanes,internal_validation,0.0686,0.075,0.0667,5
+﻿panel,group,series,value,n,detail
+a,agent (G2),301 pairs,0.375,301,P 0.300 / R 0.500
+a,rule layer (G0),301 pairs,0.36,301,P 0.281 / R 0.500
+a,LightRAG,301 pairs,0.1763,301,range 0.170-0.192 over 5 seeds
+a,pure LLM,301 pairs,0.1729,301,range 0.134-0.191 over 5 seeds
+a,naive RAG,301 pairs,0.1201,301,range 0.085-0.158 over 5 seeds
+a,agent (G2),296 revision-free pairs,0.2105,296,P 0.160 / R 0.308
+a,rule layer (G0),296 revision-free pairs,0.2,296,P 0.148 / R 0.308
+a,LightRAG,296 revision-free pairs,0.089,296,range 0.083-0.106 over 5 seeds
+a,pure LLM,296 revision-free pairs,0.1223,296,range 0.086-0.142 over 5 seeds
+a,naive RAG,296 revision-free pairs,0.0862,296,range 0.049-0.125 over 5 seeds
+b,no rule fires,474 pairs,418.0,474,88.2%
+b,evidence >= B confirms,474 pairs,45.0,474,9.5%
+b,LLM arbiter: yes,474 pairs,6.0,474,1.3%
+b,negative-control abstain,474 pairs,3.0,474,0.6%
+b,no relevant evidence,474 pairs,2.0,474,0.4%
+c,NHANES (development),touched by revision,6.0,6,all 6 replicated pairs; 0 clean
+c,NHANES (development),clean,0.0,6,no contamination-free positive
+c,KNHANES (external),touched by revision,5.0,18,5 replicated pairs on revised rules
+c,KNHANES (external),clean,13.0,18,13 of 18 replicated pairs untouched
+d,recall on replicated,G0,0.5,18,higher is better
+d,flag rate on contradicted,G0,0.1667,6,lower is better
+d,flag rate on uninformative,G0,0.0794,277,lower is better
+d,recall on replicated,G2,0.5,18,higher is better
+d,flag rate on contradicted,G2,0.1667,6,lower is better
+d,flag rate on uninformative,G2,0.0722,277,lower is better

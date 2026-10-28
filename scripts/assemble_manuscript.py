@@ -28,8 +28,8 @@ PAPER = ROOT / "outputs" / "paper"
 
 TITLE = (
     "An explainable rule-knowledge-graph-LLM agent for exposome-eye risk "
-    "stratification: strong benchmarks, operable reports, limited rule "
-    "transportability"
+    "stratification: external gains, a development-informed benchmark, and "
+    "rules that do not transport"
 )
 
 ORDER = [
