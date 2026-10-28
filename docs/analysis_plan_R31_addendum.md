@@ -80,3 +80,19 @@ TP/FP/FN/TN、precision、recall、F1（5 seeds 各自计算后给均值与范�
 
 **说明**：论文此前报告的基线数字（LightRAG 0.145 / pure LLM 0.135 / naive RAG 0.094）
 使用了"解析失败即阴性"的旧处置，属错误处置；本节更正后全部重算，旧值作废并在论文中更新。
+
+## P0b · 运行前补充：G0 的单一来源（2026-10-28 追加，仍先于本轮确证计算）
+
+**发现**：`scripts/run_fused_system.py` 自行调用 `match_rules`，用登记表实体键匹配
+（`serum_uric_acid`、`cataract_any`…），而确证 CSV 的 `a_flag`/`b_item` 使用概念名与测量变体
+（`hyperglycemia`、`bmi_high`、`cataract_dx`、`retinopathy_selfreport`…）。结果：
+KNHANES 301 对中 16 对规则命中在 harness 内被漏判（G0 阳性 16 vs 确证 32），
+G0 F1 由 0.360 掉到 0.294。NHANES 的 `a_flag` 恰为登记表兼容写法，故不受影响，
+这正是此前只看到"外部不一致"的原因。
+
+**规定**：
+1. G0 一律取确证 CSV 的 `predicted` 列（与 headline 规则层同一实现、同一 gold）；
+2. 规则 ID 与负对照标记取同表 `rule_ids`、`negative_control` 列；
+3. 证据门（G1/G2）逻辑不变，只改为作用在同一批 G0 命中上；
+4. 该修正为**实现缺陷更正**，不是分析口径变更；更正前所有 G2 数字作废并重算；
+5. 重算后若 G2 仍低于 G0，如实报告；若高于，同样如实报告，且不得据此改主结论。
