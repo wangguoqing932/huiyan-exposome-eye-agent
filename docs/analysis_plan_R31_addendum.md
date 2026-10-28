@@ -66,3 +66,17 @@ TP/FP/FN/TN、precision、recall、F1（5 seeds 各自计算后给均值与范�
 - 文件：`docs/analysis_plan_R31_addendum.md`
 - 生成时间（本地）：2026-10-28
 - sha256：见同目录 `analysis_plan_R31_addendum.sha256`（由 `sha256sum` 生成，先于运行）
+
+## P0 · 运行前补充：基线解析失败的处置（2026-10-28 追加，仍先于任何 R31 确证计算）
+
+`outputs/baseline_predictions_knhanes.jsonl` 中同一 `(baseline, seed, cell)` 可出现多条记录，
+差异在 `valid` 字段（`parsed='yes_no'` 但模型输出无法解析时 `valid=false`）。
+
+**规定**：
+1. 只采用 `valid=true` 的记录作为该 cell 的预测；
+2. 解析失败**不是阴性**，属缺失数据；若某 cell 在该 seed 下全部解析失败，则从该 seed 的指标中剔除，
+   并报告剔除数量与占比；
+3. 同一 `(baseline, seed, cell)` 若存在两条以上 `valid=true` 且互相矛盾，视为数据错误，停止分析并报告。
+
+**说明**：论文此前报告的基线数字（LightRAG 0.145 / pure LLM 0.135 / naive RAG 0.094）
+使用了"解析失败即阴性"的旧处置，属错误处置；本节更正后全部重算，旧值作废并在论文中更新。
