@@ -111,3 +111,36 @@ KNHANES clean 子集 4 个有规则命中的真阳性全部因此被弃权。
 3. 证据门阈值、检索 top_k、chunk 相关性判据均不变；
 4. 与 P0b 同性质：实现缺陷更正，不是口径变更；更正前所有 G2 数字作废并重算；
 5. 若修正后 G2 在 clean 子集仍无命中，则如实报告"该子集上无可测信号"，不得再改阈值或词表。
+
+## P6 · 队列层 agent 级评估（预注册，2026-10-28，先于任何队列层 agent 运行）
+
+**动机**：目前只有 KNHANES 一个国家有 agent 级外部评估；CHARLS 2011/2015 两个波次
+均为 0 replicated，无法提供判别力。八个老龄化队列有 18 个预注册确证格子
+（8 replicated / 2 contradicted / 8 uninformative，见 `outputs/cohorts/cohort_rule_results.csv`），
+可把队列层从"规则级"提升为"agent 级"。
+
+**单元**：预注册确证 18 个（rule × cohort）格子。
+**预测目标**：该格子的三态标签是否为 `replicated`。
+
+**三条臂（先固定）**：
+1. **G0 = "假定可转运"**：规则存在即预测 replicated（18/18）。这是规则层在没有队列信息时的
+   唯一可说之事，作为下限/上限参照。
+2. **G2 = 人群条件化证据门**：查询 = 暴露词 + 结局词 + 队列所在国家/地区词；
+   相关性 = chunk 同时含暴露词与结局词 **且** 含该人群词；无相关证据 → 判"不 replicate"；
+   最佳证据 ≥ B → 判 replicate；仅 C/D/E → arbiter（提示词见下）YES → replicate，否则不。
+3. **LLM-only**：单次调用提问"在 <population> 人群中，<exposure> 是否增加 <outcome>？"
+   （同一提示词模板，temp 0，seed 20261015），YES → replicate。
+
+**词表映射（显式，固定）**：
+- diabetes → A_FLAG_TERMS['hyperglycemia']；smoking → ['current_smoking']；
+  bmi → ['bmi_high']；alcohol → ['alcohol_intake']
+- cataract_any → ['cataract']；amd_late → ['age-related macular degeneration']；
+  vi_mod_severe → ['vision impairment', 'visual impairment']
+**人群词**：HRS=United States，ELSA=England，SHARE=Europe，KLoSA=Korea，LASI=India，
+MHAS=Mexico，CLHLS=China，CRELES=Costa Rica（另接受 USA/US、UK/Britain 等同义写法）。
+
+**指标**：recall(replicated)、flag rate(contradicted)、flag rate(uninformative)、
+precision、F1、accuracy；不做阈值调参，不因结果改提示词。
+
+**必须声明的局限**：18 个格子的观测状态已随规则层发表，本分析属**事后**的 agent 级再分析，
+只能作描述性比较，不能称确证；其价值在于回答"agent 在无配对级数据时能否判断规则是否转运"。
