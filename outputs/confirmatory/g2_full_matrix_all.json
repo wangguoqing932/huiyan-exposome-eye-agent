@@ -1,206 +1,210 @@
 {
- "definition": "G0/G1/G2 full-matrix rerun with live llama-server (2026-10-27); predictions from run_fused_system.py harness; NHANES scored against R11 (80-pair qwen) and zhipu-generation (159-pair) gold; KNHANES against survey-variance gold3 from confirmatory CSV",
- "generated": "2026-10-27",
- "nhanes_qwen_80_r11gold": {
-  "G0": {
-   "TP": 0,
-   "FP": 17,
-   "FN": 0,
-   "TN": 63,
-   "P": 0.0,
-   "R": 0,
-   "F1": 0.0,
-   "kappa": 0.0
+  "definition": "G0/G1/G2 full-matrix rerun with live llama-server (2026-10-27); predictions from run_fused_system.py harness; NHANES scored against R11 (80-pair qwen) and zhipu-generation (159-pair) gold; KNHANES against survey-variance gold3 from confirmatory CSV",
+  "generated": "2026-10-27",
+  "nhanes_qwen_80_r11gold": {
+    "G0": {
+      "TP": 0,
+      "FP": 17,
+      "FN": 0,
+      "TN": 63,
+      "P": 0.0,
+      "R": 0,
+      "F1": 0.0,
+      "kappa": 0.0
+    },
+    "G1": {
+      "TP": 0,
+      "FP": 16,
+      "FN": 0,
+      "TN": 64,
+      "P": 0.0,
+      "R": 0,
+      "F1": 0.0,
+      "kappa": 0.0
+    },
+    "G2": {
+      "TP": 0,
+      "FP": 15,
+      "FN": 0,
+      "TN": 65,
+      "P": 0.0,
+      "R": 0,
+      "F1": 0.0,
+      "kappa": 0.0
+    }
   },
-  "G1": {
-   "TP": 0,
-   "FP": 16,
-   "FN": 0,
-   "TN": 64,
-   "P": 0.0,
-   "R": 0,
-   "F1": 0.0,
-   "kappa": 0.0
+  "nhanes_glm_159_gold": {
+    "G0": {
+      "TP": 0,
+      "FP": 19,
+      "FN": 0,
+      "TN": 140,
+      "P": 0.0,
+      "R": 0,
+      "F1": 0.0,
+      "kappa": 0.0
+    },
+    "G1": {
+      "TP": 0,
+      "FP": 18,
+      "FN": 0,
+      "TN": 141,
+      "P": 0.0,
+      "R": 0,
+      "F1": 0.0,
+      "kappa": 0.0
+    },
+    "G2": {
+      "TP": 0,
+      "FP": 17,
+      "FN": 0,
+      "TN": 142,
+      "P": 0.0,
+      "R": 0,
+      "F1": 0.0,
+      "kappa": 0.0
+    }
   },
-  "G2": {
-   "TP": 0,
-   "FP": 15,
-   "FN": 0,
-   "TN": 65,
-   "P": 0.0,
-   "R": 0,
-   "F1": 0.0,
-   "kappa": 0.0
-  }
- },
- "nhanes_glm_159_gold": {
-  "G0": {
-   "TP": 0,
-   "FP": 19,
-   "FN": 0,
-   "TN": 140,
-   "P": 0.0,
-   "R": 0,
-   "F1": 0.0,
-   "kappa": 0.0
+  "knhanes_301_gold": {
+    "G0": {
+      "TP": 5,
+      "FP": 11,
+      "FN": 13,
+      "TN": 272,
+      "P": 0.312,
+      "R": 0.278,
+      "F1": 0.294,
+      "kappa": 0.252
+    },
+    "G1": {
+      "TP": 5,
+      "FP": 10,
+      "FN": 13,
+      "TN": 273,
+      "P": 0.333,
+      "R": 0.278,
+      "F1": 0.303,
+      "kappa": 0.263
+    },
+    "G2": {
+      "TP": 5,
+      "FP": 9,
+      "FN": 13,
+      "TN": 274,
+      "P": 0.357,
+      "R": 0.278,
+      "F1": 0.312,
+      "kappa": 0.275
+    }
   },
-  "G1": {
-   "TP": 0,
-   "FP": 18,
-   "FN": 0,
-   "TN": 141,
-   "P": 0.0,
-   "R": 0,
-   "F1": 0.0,
-   "kappa": 0.0
+  "gate_distribution": {
+    "nc_abstain": 3,
+    "no_rule": 434,
+    "arbiter_yes": 3,
+    "evidence_Bplus": 32,
+    "no_relevant_evidence": 2
   },
-  "G2": {
-   "TP": 0,
-   "FP": 17,
-   "FN": 0,
-   "TN": 142,
-   "P": 0.0,
-   "R": 0,
-   "F1": 0.0,
-   "kappa": 0.0
-  }
- },
- "knhanes_301_gold": {
-  "G0": {
-   "TP": 5,
-   "FP": 11,
-   "FN": 13,
-   "TN": 272,
-   "P": 0.312,
-   "R": 0.278,
-   "F1": 0.294,
-   "kappa": 0.252
+  "nhanes_glm159_g2_vs_baselines_mcnemar": {
+    "lightrag": [
+      {
+        "seed": 11,
+        "b": 10,
+        "c": 108,
+        "p": 0.0
+      },
+      {
+        "seed": 22,
+        "b": 10,
+        "c": 107,
+        "p": 0.0
+      },
+      {
+        "seed": 33,
+        "b": 10,
+        "c": 111,
+        "p": 0.0
+      },
+      {
+        "seed": 44,
+        "b": 10,
+        "c": 109,
+        "p": 0.0
+      },
+      {
+        "seed": 55,
+        "b": 10,
+        "c": 106,
+        "p": 0.0
+      }
+    ],
+    "pure_llm": [
+      {
+        "seed": 11,
+        "b": 10,
+        "c": 99,
+        "p": 0.0
+      },
+      {
+        "seed": 22,
+        "b": 10,
+        "c": 92,
+        "p": 0.0
+      },
+      {
+        "seed": 33,
+        "b": 10,
+        "c": 95,
+        "p": 0.0
+      },
+      {
+        "seed": 44,
+        "b": 9,
+        "c": 89,
+        "p": 0.0
+      },
+      {
+        "seed": 55,
+        "b": 9,
+        "c": 104,
+        "p": 0.0
+      }
+    ],
+    "naive_rag": [
+      {
+        "seed": 11,
+        "b": 9,
+        "c": 139,
+        "p": 0.0
+      },
+      {
+        "seed": 22,
+        "b": 9,
+        "c": 139,
+        "p": 0.0
+      },
+      {
+        "seed": 33,
+        "b": 8,
+        "c": 139,
+        "p": 0.0
+      },
+      {
+        "seed": 44,
+        "b": 9,
+        "c": 138,
+        "p": 0.0
+      },
+      {
+        "seed": 55,
+        "b": 8,
+        "c": 142,
+        "p": 0.0
+      }
+    ]
   },
-  "G1": {
-   "TP": 5,
-   "FP": 10,
-   "FN": 13,
-   "TN": 273,
-   "P": 0.333,
-   "R": 0.278,
-   "F1": 0.303,
-   "kappa": 0.263
-  },
-  "G2": {
-   "TP": 5,
-   "FP": 9,
-   "FN": 13,
-   "TN": 274,
-   "P": 0.357,
-   "R": 0.278,
-   "F1": 0.312,
-   "kappa": 0.275
-  }
- },
- "gate_distribution": {
-  "nc_abstain": 3,
-  "no_rule": 434,
-  "arbiter_yes": 3,
-  "evidence_Bplus": 32,
-  "no_relevant_evidence": 2
- },
- "nhanes_glm159_g2_vs_baselines_mcnemar": {
-  "lightrag": [
-   {
-    "seed": 11,
-    "b": 10,
-    "c": 108,
-    "p": 0.0
-   },
-   {
-    "seed": 22,
-    "b": 10,
-    "c": 107,
-    "p": 0.0
-   },
-   {
-    "seed": 33,
-    "b": 10,
-    "c": 111,
-    "p": 0.0
-   },
-   {
-    "seed": 44,
-    "b": 10,
-    "c": 109,
-    "p": 0.0
-   },
-   {
-    "seed": 55,
-    "b": 10,
-    "c": 106,
-    "p": 0.0
-   }
-  ],
-  "pure_llm": [
-   {
-    "seed": 11,
-    "b": 10,
-    "c": 99,
-    "p": 0.0
-   },
-   {
-    "seed": 22,
-    "b": 10,
-    "c": 92,
-    "p": 0.0
-   },
-   {
-    "seed": 33,
-    "b": 10,
-    "c": 95,
-    "p": 0.0
-   },
-   {
-    "seed": 44,
-    "b": 9,
-    "c": 89,
-    "p": 0.0
-   },
-   {
-    "seed": 55,
-    "b": 9,
-    "c": 104,
-    "p": 0.0
-   }
-  ],
-  "naive_rag": [
-   {
-    "seed": 11,
-    "b": 9,
-    "c": 139,
-    "p": 0.0
-   },
-   {
-    "seed": 22,
-    "b": 9,
-    "c": 139,
-    "p": 0.0
-   },
-   {
-    "seed": 33,
-    "b": 8,
-    "c": 139,
-    "p": 0.0
-   },
-   {
-    "seed": 44,
-    "b": 9,
-    "c": 138,
-    "p": 0.0
-   },
-   {
-    "seed": 55,
-    "b": 8,
-    "c": 142,
-    "p": 0.0
-   }
-  ]
- },
- "note": "NHANES-159: G2 0.522 vs rule-layer 0.480 (full agent beats rule layer on GLM generation). KNHANES harness G2 0.312 uses a narrower registry-matched subset than the benchmark full_system (0.360) and is not directly comparable; benchmark rule-layer remains the KNHANES result."
+  "note": "NHANES-159: G2 0.522 vs rule-layer 0.480 (full agent beats rule layer on GLM generation). KNHANES harness G2 0.312 uses a narrower registry-matched subset than the benchmark full_system (0.360) and is not directly comparable; benchmark rule-layer remains the KNHANES result.",
+  "INVALID": true,
+  "invalid_reason": "The NHANES arms report TP=0 because the arbiter service was down during this run (every arbiter-dependent gate fell through to arbiter_error and defaulted to negative). Do not cite the NHANES rows from this file.",
+  "superseded_by": "outputs/confirmatory/fused_system_R5.jsonl (canonical) and g2_rerun_20261028.json",
+  "knhanes_arm_status": "valid; 0.312 reproduced in the 2026-10-28 rerun, but the 0.312 figure is itself superseded by the P0/P0b/P0c-corrected run (0.375)"
 }
