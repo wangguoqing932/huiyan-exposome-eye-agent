@@ -221,7 +221,7 @@ The outcome-side entries are the actionable ones. No cohort in this layer has fu
 
 ## Supplementary Table S7. Binary-collapsed discrimination metrics (secondary analysis)
 
-Gold positive = replicated; predicted positive = flag. Sensitivity/specificity/PPV and Cohen's κ on the full tested matrix, per-seed range across five seeds. Source: outputs/confirmatory/discriminability_summary.json (includes the rule-relevant headline subset), with the KNHANES full-agent row recomputed from fused_system_R5.jsonl. Caveat: uninformative pairs are treated as non-positive, which the three-state standard rejects; reported as a secondary collapse only. All NHANES rows are in-sample (the rule set was revised after the first confirmatory run), so their sensitivity of 1.00 is constructed, not earned.
+Gold positive = replicated; predicted positive = flag. Sensitivity/specificity/PPV and Cohen's κ on the full tested matrix, per-seed range across five seeds. Source: outputs/confirmatory/discriminability_summary.json (includes the rule-relevant headline subset), with the KNHANES full-agent row recomputed from fused_system_R5.jsonl. Caveat: uninformative pairs are treated as non-positive, which the three-state standard rejects; reported as a secondary collapse only. All NHANES rows are development descriptions: every replicated pair is covered by a rule the post-confirmatory revision touched, so their sensitivity of 1.00 is constructed, not earned. Baseline rows were recomputed with failed parses treated as missing, not negative (R31 addendum P0).
 
 | Generation / matrix | Method | Sensitivity | Specificity | PPV | κ | n |
 |---|---|---|---|---|---|---:|
@@ -233,8 +233,10 @@ Gold positive = replicated; predicted positive = flag. Sensitivity/specificity/P
 | NHANES, GLM-5.3-flash (159) | LightRAG | 0.833 | 0.706–0.739 | 0.10–0.111 | 0.119–0.139 | 159 |
 | NHANES, GLM-5.3-flash (159) | pure LLM | 1.00 | 0.595–0.693 | 0.088–0.113 | 0.100–0.145 | 159 |
 | NHANES, GLM-5.3-flash (159) | naive RAG | 0–0.167 | 0.954–0.980 | 0–0.250 | −0.042–0.175 | 159 |
-| KNHANES (301) | full agent (G2) | 0.278 | 0.968 | 0.357 | 0.275 | 301 |
+| KNHANES (301) | full agent (G2) | 0.500 | 0.926 | 0.300 | 0.325 | 301 |
 | KNHANES (301) | rule layer (G0) | 0.500 | 0.919 | 0.281 | 0.307 | 301 |
+| KNHANES, revision-free (296) | full agent (G2) | 0.308 | 0.922 | 0.154 | 0.156 | 296 |
+| KNHANES, revision-free (296) | rule layer (G0) | 0.308 | 0.919 | 0.148 | 0.150 | 296 |
 | KNHANES (301) | LightRAG | 0.538–0.615 | 0.719–0.736 | 0.08–0.092 | 0.069–0.092 | 301 |
 | KNHANES (301) | pure LLM | 0.692–0.769 | 0.576–0.622 | 0.069–0.079 | 0.050–0.071 | 301 |
 | KNHANES (301) | naive RAG | 0.077–0.154 | 0.903–0.938 | 0.034–0.100 | −0.013–0.073 | 301 |

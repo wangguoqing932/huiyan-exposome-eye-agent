@@ -141,10 +141,8 @@ contain no weight, strata or PSU variable (SHARE's country field is empty in all
 on unweighted cluster-robust variance. The rule set was modified after the first
 confirmatory run: the 20-rule v1.1 set became the 21-rule v1.2 set (exposure
 cross-coverage of r02/r03/r04 altered; r22 added) and the confirmatory analysis was
-re-run. The pre-registration records this as test-set fitting and states that the
-resulting recall of 1.000 is constructed rather than earned; internal-layer
-precision is reported for completeness and is not load-bearing for the
-cohort-layer conclusions. No pre-run version-control snapshot exists; the
+re-run. The pre-registration records this as test-set fitting; the resulting recall of
+1.000 is constructed, not earned. No pre-run version-control snapshot exists; the
 timeline is documented in Supplementary Methods.
 
 Analyses used Python 3.10 (pandas, statsmodels, SciPy) and R 4.6.1 (survey).

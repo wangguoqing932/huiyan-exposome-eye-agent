@@ -4,8 +4,8 @@
   "sections": [
     {
       "section": "abstract",
-      "bytes": 2371,
-      "sha256_16": "08ae610e6b140d46"
+      "bytes": 2555,
+      "sha256_16": "4065259a08ea6412"
     },
     {
       "section": "introduction",
@@ -14,18 +14,18 @@
     },
     {
       "section": "methods",
-      "bytes": 12996,
-      "sha256_16": "7cb084bb9426db13"
+      "bytes": 12860,
+      "sha256_16": "1763604d91b3c2c2"
     },
     {
       "section": "results",
-      "bytes": 15904,
-      "sha256_16": "4c095fcf24ef2582"
+      "bytes": 16612,
+      "sha256_16": "f7f7f5068e1f279a"
     },
     {
       "section": "discussion",
-      "bytes": 10367,
-      "sha256_16": "163bf5f5e43b3772"
+      "bytes": 10839,
+      "sha256_16": "1413ee44f741734e"
     },
     {
       "section": "declarations",
@@ -59,8 +59,8 @@
     {
       "table": "Table 3",
       "file": "table3_performance_by_dataset.md",
-      "bytes": 2183,
-      "sha256_16": "6ee4a34ce95ef0dc"
+      "bytes": 2684,
+      "sha256_16": "40cedbdb80b03934"
     },
     {
       "table": "Table 4",
@@ -70,5 +70,5 @@
     }
   ],
   "missing": [],
-  "assembled_bytes": 88421
+  "assembled_bytes": 90150
 }

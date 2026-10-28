@@ -4,18 +4,22 @@
 
 Huiyan, benchmarked as a complete deployable agent, ranked first on F1 against
 three LLM/RAG baselines in both NHANES backend generations and in the independent
-KNHANES survey, and returns source-linked, operable reports. Two qualifications
-belong with that statement. The internal NHANES matrix is in-sample: the rule set
-was revised after the first confirmatory run, so its recall of 1.000 is a property
-of that revision and the honest pre-revision figure is 0.111. And on the
-independent matrix the agent scored below its own deterministic rule layer
-(0.312 versus 0.360), because the gates removed false positives at the cost of
-half the true positives. Its rules also did not transport: only 6 of 21 were
-testable in eight ageing cohorts, and of the two that met the pre-registered
-criterion, neither interval excluded unity. Together these change how agent
-validation should be reported.
+KNHANES survey, and returns source-linked, operable reports. It also edged past
+its own deterministic rule layer on independent data (0.375 versus 0.360), which
+is the comparison that matters if the claim is about the agent rather than about
+rules. Three qualifications belong with that statement. The internal NHANES
+matrix is development, not validation: all 6 of its replicated pairs are covered
+by rules the revision touched, so it holds zero contamination-free positives and
+its recall of 1.000 measures the revision. The external margin is precision, not
+recall: agent and rule layer both recall 0.500, and the gate removes 2 of 23 false
+positives. And when the 5 revised pairs are removed every method loses about two
+thirds of its F1; the agent keeps the lead (0.211 versus 0.200, 0.122, 0.089 and
+0.086) but at a level that no longer supports a deployment claim.
+Its rules also did not transport: only 6 of 21 were testable in eight ageing
+cohorts, and of the two that met the pre-registered criterion, neither interval
+excluded unity. Together these change how agent validation should be reported.
 
-## Where the performance comes from, and where it reverses
+## Where the performance comes from
 
 The gain over LLM baselines is architectural, not scale. On the NHANES matrices
 the deployable full agent scored 0.571 (80 pairs) and 0.522 (159 pairs, versus
@@ -26,13 +30,13 @@ positives, and swapping the arbiter itself for GLM-5.3-flash left every one of t
 474 predictions unchanged: the arbiter decides 3 cells, the remaining 471 being
 settled by the rule layer, the negative-control gate or the evidence-B+ gate. The
 measured gain therefore belongs to the rule and gate layers, not to the language
-model. That ordering does not carry over to independent data. On KNHANES the
-same gates raised precision from 0.281 to 0.357 while cutting recall from 0.500
-to 0.278, leaving the agent below the bare rule layer (0.312 versus 0.360): the
-evidence store rarely holds a B-or-better chunk for pairs that a new country's
-data replicates, so the confirmation step abstains exactly where the rule layer
-was right. Every output still resolves to a rule, a KG path and a source chunk;
-that demonstrates operability, not clinical usability or deployment.
+model. On external data the same structure holds with a smaller amplitude: the
+gate removes 2 of 23 false positives and loses no true positive, so precision
+rises from 0.281 to 0.300 while recall stays at 0.500. That is a precision
+instrument, not a recall instrument, and a system meant to decide which pairs
+deserve review should be judged on both. Every output still resolves to a rule, a
+KG path and a source chunk; that demonstrates operability, not clinical usability
+or deployment.
 
 ## Why the rules do not transport
 
@@ -106,9 +110,10 @@ result.
 ## Limitations
 
 Independence is tier-specific and the gap differs by metric: the development set
-contributes no independent estimate; internal-to-external change was 0.007 for
-rule testability, 0.522 to 0.360 for the rule layer and 0.571 to 0.312 for the
-agent, the internal figure being in-sample; the eight cohorts are
+contributes no independent estimate (and, on the audit above, no
+contamination-free positives either); internal-to-external change was 0.007 for
+rule testability, 0.522 to 0.360 for the rule layer and 0.571 to 0.375 for the
+agent, falling to 0.211 on the 296 revision-free pairs; the eight cohorts are
 population-independent but only 18 of 168 cells were feasible; the literature
 layer is index-independent but not source-independent. Estimation relies on
 unweighted cluster-robust variance (the pre-registered survey design could not be
@@ -148,14 +153,15 @@ silently replaced by a proxy and then counted as transported.
 We built an explainable rule-KG-LLM agent that ranked first on F1 against LLM and
 RAG baselines in two backend generations and in an independent national survey,
 and that returns a source-linked report through a working interface. That ranking
-holds against general models, not against the agent's own deterministic rule
-layer: in the independent survey the gates bought precision with recall and the
-agent finished below the rules (0.312 versus 0.360), while the internal benchmark
-that produced its best score was in-sample. Its rules, moreover, did not
+holds against general models and, narrowly, against the agent's own deterministic
+rule layer (0.375 versus 0.360); the margin is precision and disappears when the
+pairs that informed development are removed (0.211, still ahead of 0.200 and of
+0.086-0.122 for the baselines), while the internal benchmark that produced its
+best score contains no contamination-free positive. Its rules, moreover, did not
 transport: of 21, six were testable in eight ageing cohorts, and on the
 pre-registered criterion two passed while on a heterogeneity-aware post hoc
 criterion none did. The lesson is not that the agent is weak; it is that an agent
-can beat general LLMs, be operable, and still add nothing over its own rules
-outside the data that produced them. Agent validation should therefore report
-the rule layer and the full system separately, say whether the benchmark informed
+can beat general LLMs and its own rules and still owe most of its external F1 to
+pairs its development had already seen. Agent validation should therefore report
+the rule layer and the full system separately, name the pairs that informed
 development, and state which exposures were actually measured.

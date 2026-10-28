@@ -90,9 +90,9 @@
   },
   "gate_distribution": {
     "nc_abstain": 3,
-    "no_rule": 434,
-    "arbiter_yes": 3,
-    "evidence_Bplus": 32,
+    "no_rule": 418,
+    "arbiter_yes": 6,
+    "evidence_Bplus": 45,
     "no_relevant_evidence": 2
   },
   "records": 474

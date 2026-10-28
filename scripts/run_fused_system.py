@@ -38,6 +38,10 @@ from scipy import stats as st
 # literature-standard search terms (same thesaurus as plan §12 / literature_validation.py —
 # registry names carry operationalization suffixes that never match corpus text)
 from literature_validation import A_FLAG_TERMS, B_FLAG_TERMS
+from huiyan_agent.variable_map import outcome_alias
+import yaml as _yaml
+_VM = _yaml.safe_load((ROOT / "configs" / "variable_map.yaml").read_text(encoding="utf-8"))
+B_ALIAS = outcome_alias(_VM)
 
 OUTJ = ROOT / "outputs/confirmatory/fused_system_R5.jsonl"
 OUTS = ROOT / "outputs/confirmatory/fused_system_summary.json"
@@ -82,12 +86,15 @@ def main() -> int:
         judgeable = get_judgeable_b_items(key)
         rows = []
         for _, row in tested.iterrows():
-            a_ent = a_idx.get(row["a_flag"])
-            b_ent = b_idx.get(row["b_item"])
-            sigs = match_rules(rules, a_ent, b_ent) if (a_ent and b_ent) else []
-            hit_ids = [s.rule_id for s in sigs]
-            is_nc = any(by_id[i].negative_control for i in hit_ids if i in by_id)
-            g0 = len(hit_ids) > 0
+            # R31 P0b: G0 must be the confirmatory rule layer itself (CSV `predicted`),
+            # not a re-implementation keyed on registry names — the CSVs use concept
+            # names and outcome variants (hyperglycemia, cataract_dx, ...) that the
+            # registry does not carry, which silently dropped 16/32 KNHANES hits.
+            hit_ids = [s.strip() for s in str(row.get("rule_ids") or "").split(";")
+                       if s.strip() and not s.strip().startswith("~")]
+            is_nc = bool(row.get("negative_control")) or any(
+                by_id[i].negative_control for i in hit_ids if i in by_id)
+            g0 = bool(row.get("predicted"))
             g1 = g0 and not is_nc
             g2, gate, arb_note = False, "no_rule", ""
             if not g0:
@@ -95,8 +102,13 @@ def main() -> int:
             elif is_nc:
                 gate = "nc_abstain"
             else:
+                # R31 P0c: outcome variants (cataract_dx, retinopathy_selfreport, ...)
+                # must resolve to the canonical outcome before the term lookup; without
+                # this the query degenerates to the literal item code, retrieves nothing,
+                # and the gate abstains on true positives.
+                b_key = B_ALIAS.get(str(row["b_item"]), row["b_item"])
                 a_terms = A_FLAG_TERMS.get(row["a_flag"], [a_name.get(row["a_flag"], row["a_flag"])])
-                b_terms = B_FLAG_TERMS.get(row["b_item"], [b_name.get(row["b_item"], row["b_item"])])
+                b_terms = B_FLAG_TERMS.get(b_key, [b_name.get(b_key, b_key)])
                 query = " ".join(a_terms[:2] + b_terms[:2])
                 evs = store.retrieve(query, top_k=5)
                 a_tok = a_terms[0].lower().split()[-1]
