@@ -1,0 +1,68 @@
+# R31 分析计划附录（预注册）· 2026-10-28
+
+> 本附录在任何 R31 确证计算运行之前落盘并计算 sha256；落盘后的分析口径不得改动，
+> 任何偏离按 `docs/analysis_plan.md` §0 模式记录。目的：把"内部矩阵是样本内"这一事实
+> 转成可检验、可复核的分析，而不是靠措辞。
+
+## 背景（事实陈述，不含推断）
+
+1. 首次确证运行于 2026-10-11 20:59（v1.1，20 条规则）。2026-10-12 07:12 规则被修改
+   （r02/r03/r04 暴露交叉覆盖；新增 r22），随后在同一批配对矩阵上重跑（v1.2，21 条规则）。
+   `docs/analysis_plan.md` §0 将此事定性为 test-set fitting，并写明"R=1.000 是构造的，
+   不是性能提升"。
+2. 受修订影响的配对判定规则（本附录预先固定，不随结果调整）：
+   `rule_ids` 字段包含 `r02_`、`r03_`、`r04_` 或 `r22_` 任一项的配对 = **touched**；
+   其余 = **clean**。
+3. 单元 =（暴露 flag × 结局条目）配对；gold = 三态（replicated / contradicted / uninformative）
+   在 survey 方差口径下的现用版本；预测 = 部署配置 G2 的二值 flag。
+
+## P1 · 内部矩阵的定位（描述性，无检验）
+
+对 NHANES 矩阵逐条列出 replicated 配对，并统计其中被 touched 规则覆盖的比例。
+**判据**：若全部 replicated 配对均为 touched，则内部 F1 不得作为任何外推性能的估计报告，
+只能作为"系统在开发矩阵上的拟合程度"描述，且该描述必须与 touched 比例同时出现。
+
+## P2 · 不受修订污染的估计（确证性，主）
+
+范围：**KNHANES 301 对中的 clean 子集**（即排除 touched 配对）。
+理由：KNHANES 从未参与规则修订，clean 子集同时满足"外部数据"与"与修订无关"两个条件，
+是本项目唯一同时满足两者的估计面。
+
+报告：G2、G1、G0 与三个基线（LightRAG / pure LLM / naive RAG）在 clean 子集上的
+TP/FP/FN/TN、precision、recall、F1（5 seeds 各自计算后给均值与范围）。
+**判据（先固定）**：以 G2 与 G0 的 F1 差值描述"agent 是否胜过自身规则层"；
+不设显著性通过线，如实报告；若 n 过小（clean 子集 replicated < 5），只作描述并明示功效不足。
+
+## P3 · 三态分解（替代"uninformative 当阴性"的单一折叠）
+
+对 KNHANES 全 301 与 clean 子集，分别报告：
+- **recall_replicated** = 被 flag 的 replicated / 全部 replicated
+- **flag_rate_contradicted** = 被 flag 的 contradicted / 全部 contradicted（越低越好）
+- **flag_rate_uninformative** = 被 flag 的 uninformative / 全部 uninformative（越低越好）
+- 以及已声明的二值折叠 F1（保留，但降为次要）
+
+理由：三态标准下 uninformative 既非阳性也非阴性；把它算作阴性会使 precision 无法解释。
+分解式指标不需要把 uninformative 归入任一类。
+
+## P4 · 多重比较
+
+对每个数据集，把 G2 与三个基线 × 5 seeds 的准确性 McNemar 精确 p 视为一个家族（15 个检验），
+用 Benjamini-Hochberg 校正，报告 q 值。原始 p 与 q 同时给出。
+
+## P5 · 不变项
+
+- 规则集（v1.2，21 条）、三态定义、survey 方差口径、阈值、seed 列表 [11,22,33,44,55] 均不变。
+- 不新增规则、不调门控、不换 arbiter 后端、不重选阈值。
+- 任何"更好看"的变体一律标 exploratory，不进主结果。
+
+## 输出
+
+- `outputs/confirmatory/r31_holdout.json`（P1/P2/P3/P4 全部数字）
+- 论文侧：Results 增补 clean 子集结果与三态分解；Table 3 增列 clean 子集行或脚注；
+  Abstract 只在 P2 有可报告数字时引用，否则不引用。
+
+## 落盘记录
+
+- 文件：`docs/analysis_plan_R31_addendum.md`
+- 生成时间（本地）：2026-10-28
+- sha256：见同目录 `analysis_plan_R31_addendum.sha256`（由 `sha256sum` 生成，先于运行）
