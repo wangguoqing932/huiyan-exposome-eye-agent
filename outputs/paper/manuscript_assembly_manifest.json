@@ -24,8 +24,8 @@
     },
     {
       "section": "discussion",
-      "bytes": 10041,
-      "sha256_16": "57f2f3ee77b2ac5b"
+      "bytes": 10367,
+      "sha256_16": "163bf5f5e43b3772"
     },
     {
       "section": "declarations",
@@ -70,5 +70,5 @@
     }
   ],
   "missing": [],
-  "assembled_bytes": 88095
+  "assembled_bytes": 88421
 }

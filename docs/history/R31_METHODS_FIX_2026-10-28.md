@@ -50,3 +50,15 @@ JMIR 退稿，意见指向方法学。自查确认三处真实问题（不是措
 2. **真正的留出集仍不存在**：本轮只是把内部降级为 in-sample 并如实标注，没有做出"规则修订未使用过"的独立矩阵。若审稿人继续追这一点，唯一干净的解法是切出未参与修订的暴露族/结局族重跑。
 3. **外部只有 KNHANES 一个国家**：CHARLS 与八队列仍是规则层。
 4. **合著者/作者门**：7_1–7_8 的作者确认仍未回收。
+
+## 附：arbiter 后端替换测试（2026-10-28 追加）
+
+问题：本地 qwen 换成 glm-5.3-flash 能不能改善外部表现？
+
+- 做法：同一 harness、同一温度/种子，只改 `HUIYAN_LLM_PROVIDER=zhipu`
+- 先验证两个后端都真连通：zhipu → `glm-5.3-flash`，local → `qwen3.8-27b`，都返回正常
+- 结果：**474 对预测逐字节相同**（jsonl sha256 前缀同为 `2171692f7d3bfeb7`）
+- 原因：gate 分布显示 **arbiter 只决定 3 对**（且都是 hyperglycemia × cataract，两个模型都答 YES）；其余 471 对由规则层（434）、证据 B+ 门（32）、负对照门（3）、无相关证据（2）决定
+- 结论：**换模型不是杠杆**。外部差距（G2 0.312 < 规则层 0.360）来自证据门弃权，不来自模型。要让 LLM 起作用，必须把更多判定交给它（协议变更、需预注册），而 standalone LLM 臂已证明那条路精度只有 0.10
+- 证据落盘：`outputs/confirmatory/arbiter_backend_swap_20261028.json`、`fused_system_R5_zhipu.jsonl`
+- 论文侧：Discussion "Where the performance comes from" 加一句（arbiter 决定 3/474、换 GLM 预测不变，增益属于规则与门控层）

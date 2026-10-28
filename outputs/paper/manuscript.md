@@ -517,7 +517,11 @@ the deployable full agent scored 0.571 (80 pairs) and 0.522 (159 pairs, versus
 rule layer 0.480); the ablation localises the gain: rule layer 0.522,
 +negative-control gate 0.545, +evidence confirmation and arbiter 0.571. A
 stronger commercial model as a standalone judge produced more, not fewer, false
-positives. That ordering does not carry over to independent data. On KNHANES the
+positives, and swapping the arbiter itself for GLM-5.3-flash left every one of the
+474 predictions unchanged: the arbiter decides 3 cells, the remaining 471 being
+settled by the rule layer, the negative-control gate or the evidence-B+ gate. The
+measured gain therefore belongs to the rule and gate layers, not to the language
+model. That ordering does not carry over to independent data. On KNHANES the
 same gates raised precision from 0.281 to 0.357 while cutting recall from 0.500
 to 0.278, leaving the agent below the bare rule layer (0.312 versus 0.360): the
 evidence store rarely holds a B-or-better chunk for pairs that a new country's

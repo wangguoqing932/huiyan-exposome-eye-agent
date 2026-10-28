@@ -1,0 +1,42 @@
+{
+  "test": "arbiter backend swap (qwen3.8-27b local -> glm-5.3-flash, Zhipu API)",
+  "date": "2026-10-28",
+  "question": "does replacing the local arbiter model change the benchmark?",
+  "protocol": "same harness, same gates, same temperature (0.0) and seed (20261015); only HUIYAN_LLM_PROVIDER changed from local to zhipu",
+  "backend_verified": {
+    "zhipu_model": "glm-5.3-flash",
+    "local_model": "qwen3.8-27b",
+    "both_reachable": true
+  },
+  "result": {
+    "predictions_identical": true,
+    "sha256_prefix_qwen": "2171692f7d3bfeb7",
+    "sha256_prefix_zhipu": "2171692f7d3bfeb7",
+    "metrics_unchanged": {
+      "nhanes_G2_F1": 0.571,
+      "knhanes_G2_F1_judgeable": 0.4,
+      "knhanes_G2_F1_301": 0.312
+    }
+  },
+  "why": {
+    "gate_distribution_over_474_pairs": {
+      "no_rule": 434,
+      "evidence_Bplus": 32,
+      "nc_abstain": 3,
+      "arbiter_yes": 3,
+      "no_relevant_evidence": 2
+    },
+    "arbiter_decided_pairs": 3,
+    "arbiter_decided_detail": [
+      "NHANES hyperglycemia x cataract_any (gold replicated) -> YES",
+      "KNHANES hyperglycemia x cataract_any (gold replicated) -> YES",
+      "CHARLS hyperglycemia x cataract_any (gold uninformative) -> YES"
+    ],
+    "interpretation": "the arbiter touches 3 of 474 cells; every other decision is taken by the deterministic rule layer, the negative-control gate or the evidence-B+ gate. The model is therefore not a lever on benchmark performance, and the G2-vs-G0 difference belongs to the evidence gate, not to the LLM."
+  },
+  "implication": "Switching to a stronger or commercial model cannot rescue the external gap (G2 0.312 < rule layer 0.360). To make the LLM matter, the gate would have to hand it more decisions (e.g. arbitrate all rule hits without B+ evidence), which is a protocol change and would need pre-registration; the standalone-LLM arm already showed that path degrades precision (0.10).",
+  "files": {
+    "canonical_qwen_run": "outputs/confirmatory/fused_system_R5.jsonl",
+    "zhipu_copy": "outputs/confirmatory/fused_system_R5_zhipu.jsonl"
+  }
+}
