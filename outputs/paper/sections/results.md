@@ -64,8 +64,7 @@ independent estimate, and the 80-pair matrix was itself used in development: the
 rule set was revised after the first confirmatory run (r02–r04 exposure coverage
 altered, r22 added; Methods records this as test-set fitting). The audit is
 decisive: of the 159-pair matrix's 6 replicated pairs, all 6 are covered by a
-rule that the revision touched, leaving zero contamination-free positives. The matrix therefore supports no out-of-sample estimate; its recall of 1.000
-measures the revision.
+rule that the revision touched, leaving zero contamination-free positives. Its recall of 1.000 therefore measures the revision.
 For completeness the numbers are: deployable full agent F1 = 0.571 (P 0.400 /
 R 1.000) on the 80 pairs (Qwen3.8-27B baselines, R11-corrected gold), ahead of
 LightRAG 0.392 ± 0.007, pure LLM 0.335 ± 0.010 and naive RAG 0.080 ± 0.110 over
@@ -131,6 +130,23 @@ were testable; 15 required measurements absent in every cohort (five fundus
 imaging, one tonometry or disc grading, three geocoded exposure, three blood
 assays, two dietary indices, one lipid panel). Across 18 rule × cohort pairs
 (Figure 6): 8 replicated, 8 uninformative, 2 contradicted.
+
+The same 18 cells were then put to the agent, which makes this the second
+external surface on which the full system is evaluated and the only one that asks
+about transport rather than association. The question is whether a rule replicates
+in a named population. Assuming transport — the rule layer's only available
+answer, since it carries no cohort information — flags all 18 cells: recall 1.00
+on the 8 replicated cells, but both contradicted and all 8 uninformative cells are
+flagged too (precision 0.444, F1 0.615). The population-conditioned evidence gate
+(query = exposure + outcome + country, requiring a chunk that names that
+population) found such evidence for none of the 18 cells and flagged none: recall
+0, precision undefined, accuracy 0.556 from abstention alone. A plain LLM asked
+the same question in one sentence did better than either (F1 0.667; 6 of 8
+replicated cells flagged, 4 false positives), but it endorsed 1 of the 2
+contradicted cells — CLHLS smoking × cataract — which is exactly the failure the
+rule layer was designed to prevent. The agent's evidence machinery is a
+within-cohort retrieval tool and does not become a transport predictor by being
+pointed at a population name.
 
 Two rules met the pre-registered criterion. r02 (self-reported diabetes as proxy
 for hyperglycaemia) replicated in three of four testable cohorts — LASI 1.88

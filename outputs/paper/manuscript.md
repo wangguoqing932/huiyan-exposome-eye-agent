@@ -6,41 +6,39 @@
 
 # Abstract
 
-**Background.** Multi-layer agents that combine deterministic rules, knowledge-graph
+**Background.** Multi-layer agents combining deterministic rules, knowledge-graph
 retrieval and a language model are inspectable, but whether they outperform
-general models, and whether their rules hold elsewhere, are rarely tested together.
+general models and whether their rules hold elsewhere are rarely tested together.
 
 **Methods.** Huiyan combines 21 rules, a LightRAG knowledge graph of 1,060 evidence
-chunks and an LLM arbiter that returns a source-linked trace. We evaluated
-system-level classification against three baselines (internal NHANES, which also
-informed rule development; external KNHANES), rule-level direction under a
-pre-registered three-state standard (CHARLS; eight ageing cohorts, 285,878
-participants), and concordance across four literature indexes. We additionally
-audited which evaluation pairs the post-confirmatory rule revision had touched and
-repeated the external comparison on the untouched subset.
+chunks and an LLM arbiter that returns a source-linked trace. We evaluated system-level classification
+against three baselines (NHANES, which also informed rule development; KNHANES), rule-level direction under a pre-registered
+three-state standard (CHARLS; eight cohorts, 285,878 participants), and
+concordance across four literature indexes. We audited which pairs the rule revision had
+touched, repeated the external comparison without them, and asked the agent
+whether each of 18 cohort cells would replicate.
 
-**Results.** The internal matrix contained no replicated pair that the rule
-revision had not touched (0 of 6), so it yields no out-of-sample estimate and is
-reported only as a development description (agent F1 0.571 versus rule layer
-0.522). Externally, on 301 KNHANES pairs the agent scored 0.375 against 0.360 for
-its own deterministic rule layer and 0.176, 0.173 and 0.120 for LightRAG, a pure
-LLM and naive RAG. On the 296 pairs untouched by the revision the ordering held
-but the level collapsed: 0.211, 0.200, 0.122, 0.089 and 0.086. The agent's
-advantage is precision, not recall: it flags 30 of 301 pairs, 9 of them correctly,
-and its recall on replicated pairs is 0.500 with a 16.7% flag rate on contradicted
-and 7.2% on uninformative pairs. Rule track: only 6 of 21 rules were testable in
-the cohorts; of 18 rule x cohort pairs, 8 replicated, 8 were uninformative and 2
-contradicted; two met the pre-registered criterion, but both prediction intervals
-spanned unity. Literature concordance was 0.889 (PubMed), 0.916 (Web of Science),
-0.922 (Europe PMC) and 0.800 (CNKI), with 16/17 cross-index agreement.
+**Results.** The internal matrix had no replicated pair untouched by the revision
+(0 of 6), so it yields no out-of-sample estimate (agent 0.571 versus rule
+layer 0.522; development only). Externally, on 301 KNHANES pairs it scored 0.375
+against 0.360 for its own rule layer and 0.176, 0.173, 0.120 for LightRAG, a pure
+LLM and naive RAG. On the 296 untouched pairs the ordering held
+but levels collapsed to 0.211, 0.200, 0.122, 0.089 and 0.086; the agent's gain is
+precision, not recall (recall 0.500 either way). On 18 cohort cells, assuming transport
+gave 0.615, the evidence gate flagged none, and a plain LLM reached 0.667 but
+endorsed 1 of 2 contradicted cells. Rule track: 6 of 21 rules were
+cohort-testable; of 18 rule x cohort pairs 8 replicated, 8 were uninformative and
+2 contradicted; two met the pre-registered criterion but both intervals spanned
+unity. Literature concordance: 0.889 (PubMed), 0.916 (Web of Science), 0.922 (Europe
+PMC), 0.800 (CNKI); 16/17 index agreement.
 
-**Conclusions.** The agent outperformed LLM and RAG baselines, and narrowly its own
-rule layer, on external data, but only a fifth of its external F1 survives when
-the pairs that informed development are removed. Its rules were largely untestable
-elsewhere (15 of 21), and none was robustly transportable where testable; the
-constraint was measurement, not sample size. Agent validation should report
-system-level and rule-level results separately, disclose which pairs informed
-development, and state which exposures were measured.
+**Conclusions.** The agent beat LLM and RAG baselines, and narrowly its rule layer,
+externally; only a fifth of that F1 survives removing the pairs
+that informed development, and its evidence machinery does not transfer to
+population-level questions. Its rules were largely untestable elsewhere (15 of 21) and none was robustly
+transportable where testable; the constraint was measurement, not sample size. Agent validation should report system- and rule-level
+results separately, disclose which pairs informed development, and
+state which exposures were measured.
 
 ---
 
@@ -320,8 +318,7 @@ independent estimate, and the 80-pair matrix was itself used in development: the
 rule set was revised after the first confirmatory run (r02–r04 exposure coverage
 altered, r22 added; Methods records this as test-set fitting). The audit is
 decisive: of the 159-pair matrix's 6 replicated pairs, all 6 are covered by a
-rule that the revision touched, leaving zero contamination-free positives. The matrix therefore supports no out-of-sample estimate; its recall of 1.000
-measures the revision.
+rule that the revision touched, leaving zero contamination-free positives. Its recall of 1.000 therefore measures the revision.
 For completeness the numbers are: deployable full agent F1 = 0.571 (P 0.400 /
 R 1.000) on the 80 pairs (Qwen3.8-27B baselines, R11-corrected gold), ahead of
 LightRAG 0.392 ± 0.007, pure LLM 0.335 ± 0.010 and naive RAG 0.080 ± 0.110 over
@@ -387,6 +384,23 @@ were testable; 15 required measurements absent in every cohort (five fundus
 imaging, one tonometry or disc grading, three geocoded exposure, three blood
 assays, two dietary indices, one lipid panel). Across 18 rule × cohort pairs
 (Figure 6): 8 replicated, 8 uninformative, 2 contradicted.
+
+The same 18 cells were then put to the agent, which makes this the second
+external surface on which the full system is evaluated and the only one that asks
+about transport rather than association. The question is whether a rule replicates
+in a named population. Assuming transport — the rule layer's only available
+answer, since it carries no cohort information — flags all 18 cells: recall 1.00
+on the 8 replicated cells, but both contradicted and all 8 uninformative cells are
+flagged too (precision 0.444, F1 0.615). The population-conditioned evidence gate
+(query = exposure + outcome + country, requiring a chunk that names that
+population) found such evidence for none of the 18 cells and flagged none: recall
+0, precision undefined, accuracy 0.556 from abstention alone. A plain LLM asked
+the same question in one sentence did better than either (F1 0.667; 6 of 8
+replicated cells flagged, 4 false positives), but it endorsed 1 of the 2
+contradicted cells — CLHLS smoking × cataract — which is exactly the failure the
+rule layer was designed to prevent. The agent's evidence machinery is a
+within-cohort retrieval tool and does not become a transport predictor by being
+pointed at a population name.
 
 Two rules met the pre-registered criterion. r02 (self-reported diabetes as proxy
 for hyperglycaemia) replicated in three of four testable cohorts — LASI 1.88
@@ -619,8 +633,8 @@ rule testability, 0.522 to 0.360 for the rule layer and 0.571 to 0.375 for the
 agent, falling to 0.211 on the 296 revision-free pairs; the eight cohorts are
 population-independent but only 18 of 168 cells were feasible; the literature
 layer is index-independent but not source-independent. Estimation relies on
-unweighted cluster-robust variance (the pre-registered survey design could not be
-implemented) on anti-conservative exact tests over non-independent pairs, and on
+unweighted cluster-robust variance on anti-conservative exact tests over
+non-independent pairs, and on
 an internal-layer F1 that is an upper bound after test-set fitting. Cataract
 outcomes were self-reported in every layer, with examination-based NHANES
 measures limited to retinal grading and visual acuity; glaucoma was tested only
@@ -972,7 +986,7 @@ Participants are counted once per cohort. Person-waves count each person once pe
 | KNHANES (external, site) | **0.375** | 0.360 | 0.176 | 0.173 | 0.120 | 15 (5/0/10) | 301 pairs; agent ran end to end; gate removes 2 of 23 false positives, recall unchanged at 0.500 |
 | KNHANES, revision-free subset (external) | **0.211** | 0.200 | 0.089 | 0.122 | 0.086 | 13 replicated of 296 pairs | 5 pairs whose rules were revised are removed; every method loses about two thirds of its F1 |
 | CHARLS (external, site) | not assessed | not assessed | not assessed | not assessed | not assessed | 4 (0/0/4) | 14 pairs; rule-level direction only |
-| Eight ageing cohorts (external, population) | not assessed | not assessed | not assessed | not assessed | not assessed | 18 (8/2/8) | 6 of 21 rules testable; 18 of 168 cells feasible |
+| Eight ageing cohorts (external, population) | 0.000 (18 cells) | 0.615 (assume transport) | — | 0.667 (plain LLM) | — | 18 (8/2/8) | 6 of 21 rules testable; 18 of 168 cells feasible; cell-level task = will this rule replicate in this population; the population-conditioned gate found no population-specific evidence for any cell |
 | Literature indexes (independent) | not applicable | not applicable | not applicable | not applicable | not applicable | — | 0.800–0.922 (4 indexes) |
 
 **Notes.** Baselines were recomputed under the pre-registered rule that a failed
@@ -984,9 +998,10 @@ of its replicated pairs are covered by rules revised after the first confirmator
 run; with zero contamination-free positives it cannot support an out-of-sample
 estimate. KNHANES is the only external matrix on which the full agent ran end to
 end; there it edges past its own rule layer, and the ordering — but not the level
-— survives removal of the 5 revised pairs. CHARLS and the eight cohorts were
-evaluated at the rule level, so "not assessed" indicates a different validation
-target, not a missing result. R/C/U order is replicated/contradicted/uninformative
+— survives removal of the 5 revised pairs. CHARLS was evaluated at the rule level only, so "not assessed" there
+indicates a different validation target, not a missing result; the eight cohorts
+are reported both at the rule level (Fig 6) and, for the 18 cells, at the agent
+level. R/C/U order is replicated/contradicted/uninformative
 rule-relevant pairs. The literature layer reports index-level precision, not F1:
 PubMed 0.889, Web of Science 0.916, Europe PMC 0.922 and CNKI 0.800.
 

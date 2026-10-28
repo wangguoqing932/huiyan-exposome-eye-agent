@@ -116,8 +116,8 @@ rule testability, 0.522 to 0.360 for the rule layer and 0.571 to 0.375 for the
 agent, falling to 0.211 on the 296 revision-free pairs; the eight cohorts are
 population-independent but only 18 of 168 cells were feasible; the literature
 layer is index-independent but not source-independent. Estimation relies on
-unweighted cluster-robust variance (the pre-registered survey design could not be
-implemented) on anti-conservative exact tests over non-independent pairs, and on
+unweighted cluster-robust variance on anti-conservative exact tests over
+non-independent pairs, and on
 an internal-layer F1 that is an upper bound after test-set fitting. Cataract
 outcomes were self-reported in every layer, with examination-based NHANES
 measures limited to retinal grading and visual acuity; glaucoma was tested only

@@ -1,11 +1,11 @@
 {
-  "assembled_on": "2026-10-28",
+  "assembled_on": "2026-10-29",
   "title": "An explainable rule-knowledge-graph-LLM agent for exposome-eye risk stratification: strong benchmarks, operable reports, limited rule transportability",
   "sections": [
     {
       "section": "abstract",
-      "bytes": 2555,
-      "sha256_16": "4065259a08ea6412"
+      "bytes": 2441,
+      "sha256_16": "9f0549da847a9425"
     },
     {
       "section": "introduction",
@@ -19,13 +19,13 @@
     },
     {
       "section": "results",
-      "bytes": 16612,
-      "sha256_16": "f7f7f5068e1f279a"
+      "bytes": 17798,
+      "sha256_16": "3729b6c55bb1e59a"
     },
     {
       "section": "discussion",
-      "bytes": 10839,
-      "sha256_16": "1413ee44f741734e"
+      "bytes": 10779,
+      "sha256_16": "0017b4f2071dbdbb"
     },
     {
       "section": "declarations",
@@ -59,8 +59,8 @@
     {
       "table": "Table 3",
       "file": "table3_performance_by_dataset.md",
-      "bytes": 2684,
-      "sha256_16": "40cedbdb80b03934"
+      "bytes": 2928,
+      "sha256_16": "881c0f65ddb180e8"
     },
     {
       "table": "Table 4",
@@ -70,5 +70,5 @@
     }
   ],
   "missing": [],
-  "assembled_bytes": 90150
+  "assembled_bytes": 91406
 }
